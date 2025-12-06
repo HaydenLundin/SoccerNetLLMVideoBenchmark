@@ -52,16 +52,6 @@ if HF_TOKEN: login(token=HF_TOKEN)
 
 print(f"🤖 [GPU {args.gpu_id}] Loading Qwen 7B (BnB 4-bit)...")
 
-output_filename = os.path.join(BASE_DIR, f"partial_results_vid_qwen7b_vid{args.video_index}_gpu{args.gpu_id}.json")
-# ============================================================================
-# MODEL SETUP (7B + 4-BIT QUANTIZATION)
-# ============================================================================
-
-HF_TOKEN = os.getenv('HF_TOKEN')
-if HF_TOKEN: login(token=HF_TOKEN)
-
-print(f"🤖 [GPU {args.gpu_id}] Loading Qwen 7B (BnB 4-bit)...")
-
 # 1. Define 4-bit Configuration
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
