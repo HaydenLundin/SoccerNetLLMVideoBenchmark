@@ -41,7 +41,7 @@ do
     python $HOME/soccer_project/merge_results.py --video_index $i
 
     # 4. Clean up partial files (Optional, saves inode space)
-    rm $HOME/soccer_project/partial_results_vid${i}_gpu*.json
+    rm $HOME/soccer_project/partial_results_qwen7b_vid${i}_gpu*.json
 
     echo "✅ Video $i Complete."
 done
