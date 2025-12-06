@@ -8,6 +8,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --gres=gpu:TitanRTX:4      # Request all 4 GPUs
 #SBATCH --output=swarm_%j.log
+#SBATCH --exclusive
 
 module load python/3.12.3
 module load ffmpeg
