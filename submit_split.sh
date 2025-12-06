@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
-#SBATCH --time=01:00:00
+#SBATCH --time=24:00:00
 #SBATCH --gres=gpu:TitanRTX:4      # Request all 4 GPUs
 #SBATCH --output=swarm_%j.log
 #SBATCH --exclusive
