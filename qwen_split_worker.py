@@ -42,7 +42,7 @@ my_end_time = my_start_time + slice_duration
 device_id = f"cuda:{args.gpu_id}"
 print(f"👷 [GPU {args.gpu_id}] Timeline: {my_start_time:.1f}s to {my_end_time:.1f}s")
 
-output_filename = os.path.join(BASE_DIR, f"partial_results_vid_qwen7b_vid{args.video_index}_gpu{args.gpu_id}.json")
+output_filename = os.path.join(BASE_DIR, f"partial_results_qwen7b_vid{args.video_index}_gpu{args.gpu_id}.json")
 # ============================================================================
 # MODEL SETUP (7B + 4-BIT QUANTIZATION)
 # ============================================================================
