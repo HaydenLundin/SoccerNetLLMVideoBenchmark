@@ -11,8 +11,9 @@ parser.add_argument("--debug", action="store_true", help="Show detailed deduplic
 args = parser.parse_args()
 
 # CONFIG
-INPUT_PATTERN = f"/users/hlundin/soccer_project/partial_results_qwen7b_vid{args.video_index}_gpu*.json"
-OUTPUT_FILE = f"final_predictions_qwen7b_video_{args.video_index}.json"
+PROJECT_DIR = "/users/hlundin/soccer_project"
+INPUT_PATTERN = f"{PROJECT_DIR}/partial_results_qwen7b_vid{args.video_index}_gpu*.json"
+OUTPUT_FILE = f"{PROJECT_DIR}/final_predictions_qwen7b_video_{args.video_index}.json"
 DEDUP_WINDOW = 3.0  # seconds
 
 print(f"🔍 Merging results for Video Index {args.video_index}...")
