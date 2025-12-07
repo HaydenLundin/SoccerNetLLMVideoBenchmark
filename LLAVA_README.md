@@ -9,9 +9,18 @@ This pipeline processes soccer videos using **LLaVA-NeXT-Video-7B**, a state-of-
 - **Model**: `llava-hf/LLaVA-NeXT-Video-7B-hf`
 - **Size**: 7B parameters
 - **Quantization**: 4-bit (BitsAndBytes NF4)
-- **VRAM per GPU**: ~11GB
+- **VRAM per GPU**: ~11GB (with optimizations)
 - **Specialization**: Video understanding and temporal reasoning
 - **Perfect for**: Event detection in sequential video frames
+
+### Memory Optimizations
+
+To fit on Titan RTX 24GB GPUs, the pipeline uses:
+- **1 FPS** sampling (instead of 5 FPS)
+- **Max 4 frames** per inference window
+- **384x384 pixel** max image size
+- **OOM error handling** with automatic skip and retry
+- **Aggressive memory cleanup** after each window
 
 ### Why LLaVA-NeXT-Video?
 
@@ -24,11 +33,15 @@ This pipeline processes soccer videos using **LLaVA-NeXT-Video-7B**, a state-of-
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 1. Copy Scripts to Project Directory
 
 ```bash
-# The model should work with existing dependencies, but if needed:
-pip install transformers accelerate torch pillow bitsandbytes
+# Run the setup script to copy files
+bash setup_llava.sh
+
+# Or manually:
+cp llava_split_worker.py ~/soccer_project/
+cp merge_results_llava.py ~/soccer_project/
 ```
 
 ### 2. Set HuggingFace Token
@@ -101,17 +114,18 @@ Video 0 (50 min match)
 ### Temporal Processing
 
 Each GPU processes its time slice with:
-- **3-second windows** at 5 FPS (15 frames per window)
+- **4-second windows** at 1 FPS (4 frames per window, max VRAM-safe limit)
 - **2-second step** (50% overlap to catch events at boundaries)
-- **Frames processed as video sequence** (not independent images)
+- **Images resized to 384x384** (maintains aspect ratio)
+- **Frames processed as video sequence** (temporal understanding preserved)
 
 Example for GPU 0 (0-750s):
 ```
-Window 1: 0-3s    (15 frames)
-Window 2: 2-5s    (15 frames, overlaps 1s with Window 1)
-Window 3: 4-7s    (15 frames, overlaps 1s with Window 2)
+Window 1: 0-4s    (4 frames at 1 FPS)
+Window 2: 2-6s    (4 frames, overlaps 2s with Window 1)
+Window 3: 4-8s    (4 frames, overlaps 2s with Window 2)
 ...
-Window 374: 747-750s
+Window 374: 748-750s (partial window)
 ```
 
 ---
@@ -203,10 +217,23 @@ python -c "from transformers import LlavaNextVideoForConditionalGeneration; Llav
 
 ### VRAM Issues
 
-If you get OOM (Out of Memory) errors:
-1. Check GPU memory: `nvidia-smi`
-2. Reduce FPS in `llava_split_worker.py` (line 22): `FPS = 3.0` instead of `5.0`
-3. Reduce window size (line 23): `WINDOW_SECONDS = 2.0` instead of `3.0`
+The script is already optimized for 24GB GPUs. If you still get OOM errors:
+
+1. **Check GPU memory**: `nvidia-smi`
+
+2. **Reduce frames per window** in `~/soccer_project/llava_split_worker.py`:
+   ```python
+   FRAMES_PER_WINDOW = 2  # Change from 4 to 2 (line 23)
+   ```
+
+3. **Reduce image size**:
+   ```python
+   MAX_IMAGE_SIZE = 256  # Change from 384 to 256 (line 27)
+   ```
+
+4. **The script auto-skips OOM windows** - Check log for `⚠️ OOM at` messages
+
+5. **If persistent**, reduce TARGET_DURATION to process shorter segments
 
 ### Empty Results
 
