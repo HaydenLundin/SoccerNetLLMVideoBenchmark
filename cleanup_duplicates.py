@@ -1,47 +1,59 @@
+#!/usr/bin/env python3
+"""
+Cleanup/Deduplicate Already-Merged Result Files
+
+This script takes already-merged prediction files and removes duplicates.
+Use this for cleaning up files that were merged with the old script.
+
+Usage:
+    python cleanup_duplicates.py --input final_predictions_qwen7b_video_0.json
+    python cleanup_duplicates.py --input final_predictions_qwen7b_video_0.json --output cleaned_video_0.json
+    python cleanup_duplicates.py --input final_predictions_qwen7b_video_0.json --inplace --debug
+"""
+
 import json
-import glob
-import os
 import argparse
 import re
+import os
 
-#Argument parser
-parser = argparse.ArgumentParser()
-parser.add_argument("--video_index", type=int, required=True)
+# Argument parser
+parser = argparse.ArgumentParser(description="Deduplicate already-merged event detection results")
+parser.add_argument("--input", type=str, required=True, help="Input JSON file to clean")
+parser.add_argument("--output", type=str, help="Output file (default: adds '_cleaned' suffix)")
+parser.add_argument("--inplace", action="store_true", help="Overwrite input file with cleaned version")
 parser.add_argument("--debug", action="store_true", help="Show detailed deduplication info")
+parser.add_argument("--window", type=float, default=3.0, help="Deduplication time window in seconds (default: 3.0)")
 args = parser.parse_args()
 
-# CONFIG
-INPUT_PATTERN = f"/users/hlundin/soccer_project/partial_results_qwen7b_vid{args.video_index}_gpu*.json"
-OUTPUT_FILE = f"final_predictions_qwen7b_video_{args.video_index}.json"
-DEDUP_WINDOW = 3.0  # seconds
+# Determine output file
+if args.inplace:
+    output_file = args.input
+elif args.output:
+    output_file = args.output
+else:
+    # Add '_cleaned' before extension
+    base, ext = os.path.splitext(args.input)
+    output_file = f"{base}_cleaned{ext}"
 
-print(f"🔍 Merging results for Video Index {args.video_index}...")
+print(f"🧹 Cleaning up duplicates from: {args.input}")
+print(f"   Time window: {args.window}s")
 
-all_events = []
-
-# 1. Load all partial files
-print("📂 Loading partial files...")
-files = sorted(glob.glob(INPUT_PATTERN))
-if not files:
-    print(f"❌ No files found matching pattern: {INPUT_PATTERN}")
+# 1. Load the file
+try:
+    with open(args.input, 'r') as f:
+        all_events = json.load(f)
+    print(f"📂 Loaded {len(all_events)} events")
+except FileNotFoundError:
+    print(f"❌ File not found: {args.input}")
+    exit(1)
+except json.JSONDecodeError as e:
+    print(f"❌ Invalid JSON: {e}")
     exit(1)
 
-for f in files:
-    try:
-        with open(f, 'r') as json_file:
-            data = json.load(json_file)
-            all_events.extend(data)
-            print(f"   Loaded {len(data)} events from {os.path.basename(f)}")
-    except Exception as e:
-        print(f"   ❌ Error loading {f}: {e}")
+# 2. Sort by time (in case not already sorted)
+all_events.sort(key=lambda x: x.get('time', 0))
 
-# 2. Sort by Time
-print(f"🔄 Sorting {len(all_events)} total detections...")
-all_events.sort(key=lambda x: x['time'])
-
-# 3. Enhanced Deduplication
-print(f"🧹 Deduplicating events (window: {DEDUP_WINDOW}s)...")
-
+# 3. Deduplication functions
 def parse_event_data(raw_text):
     """
     Parse LLM output to extract event info.
@@ -57,7 +69,6 @@ def parse_event_data(raw_text):
     events = []
 
     # Try to find JSON objects (with single or double quotes)
-    # Pattern matches {...} structures
     json_pattern = r'\{[^{}]*\}'
     matches = re.findall(json_pattern, str(raw_text))
 
@@ -84,7 +95,7 @@ def events_are_duplicate(event1, event2, time_diff):
     Check if two events are duplicates.
     Same label + within time window = duplicate
     """
-    if time_diff > DEDUP_WINDOW:
+    if time_diff > args.window:
         return False
 
     # Parse both events
@@ -103,7 +114,7 @@ def events_are_duplicate(event1, event2, time_diff):
 
     return label1 == label2
 
-# Deduplicate
+# 4. Deduplicate
 final_events = []
 duplicates_removed = 0
 parsing_failures = 0
@@ -113,9 +124,9 @@ for current in all_events:
 
     # Check against all events in the recent time window
     for recent in reversed(final_events[-10:]):  # Check last 10 events for efficiency
-        time_diff = abs(current['time'] - recent['time'])
+        time_diff = abs(current.get('time', 0) - recent.get('time', 0))
 
-        if time_diff > DEDUP_WINDOW:
+        if time_diff > args.window:
             break  # Events are sorted, so we can stop checking
 
         try:
@@ -132,27 +143,32 @@ for current in all_events:
             parsing_failures += 1
             if args.debug:
                 print(f"   ⚠️ Error comparing events: {e}")
-            # If we can't parse, keep it to be safe
             continue
 
     if not is_duplicate:
         final_events.append(current)
 
-print(f"✅ Merged {len(all_events)} -> {len(final_events)} unique events")
-print(f"   Removed {duplicates_removed} duplicates")
+# 5. Report results
+print(f"✅ Cleaned {len(all_events)} -> {len(final_events)} unique events")
+print(f"   Removed {duplicates_removed} duplicates ({duplicates_removed/len(all_events)*100:.1f}%)")
 if parsing_failures > 0:
     print(f"   ⚠️ {parsing_failures} parsing failures (kept events to be safe)")
 
-# 4. Save
-with open(OUTPUT_FILE, 'w') as f:
+# 6. Save
+with open(output_file, 'w') as f:
     json.dump(final_events, f, indent=2)
-print(f"💾 Saved to {OUTPUT_FILE}")
 
-# 5. Optional: Show sample of what we kept
+if args.inplace:
+    print(f"💾 Overwrote {output_file}")
+else:
+    print(f"💾 Saved to {output_file}")
+
+# 7. Optional: Show sample of what we kept
 if args.debug and final_events:
-    print(f"\n📊 Sample of merged events:")
-    for event in final_events[:5]:
+    print(f"\n📊 Sample of cleaned events:")
+    for event in final_events[:10]:
         parsed = parse_event_data(event.get('raw', ''))
         if parsed:
             label = parsed[0].get('label', 'UNKNOWN')
-            print(f"   {event['time']:.1f}s: {label}")
+            team = parsed[0].get('team', '?')
+            print(f"   {event['time']:6.1f}s: {label:20s} ({team})")
