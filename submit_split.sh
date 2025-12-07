@@ -15,7 +15,15 @@ module load ffmpeg
 source $HOME/soccer_project/venv/bin/activate
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export HF_TOKEN="YOUR_TOKEN" 
+
+# Set HuggingFace token (replace YOUR_TOKEN with actual token, or set in environment)
+if [ -z "$HF_TOKEN" ] || [ "$HF_TOKEN" = "YOUR_TOKEN" ]; then
+    echo "⚠️ WARNING: HF_TOKEN not set or is placeholder"
+    echo "   Set your token: export HF_TOKEN='your_actual_token' before running sbatch"
+    echo "   Or edit this script on line 18 and replace YOUR_TOKEN with your token"
+    echo "   Continuing anyway (may fail if model requires authentication)..."
+    echo ""
+fi 
 
 # Update time limit to handle multiple videos (e.g., 12 hours)
 # #SBATCH --time=12:00:00

@@ -25,7 +25,15 @@ module load ffmpeg
 source $HOME/soccer_project/venv/bin/activate
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export HF_TOKEN="YOUR_TOKEN"
+
+# Set HuggingFace token (replace YOUR_TOKEN with actual token, or set in environment)
+if [ -z "$HF_TOKEN" ] || [ "$HF_TOKEN" = "YOUR_TOKEN" ]; then
+    echo "⚠️ WARNING: HF_TOKEN not set or is placeholder"
+    echo "   Set your token: export HF_TOKEN='your_actual_token'"
+    echo "   Or edit this script and replace YOUR_TOKEN"
+    echo "   Continuing anyway (may fail if model requires authentication)..."
+    echo ""
+fi
 
 # Parse arguments (default: 17 to 39)
 START_VIDEO=${1:-17}
@@ -81,15 +89,20 @@ do
 
     # Verify merge succeeded
     if [ -f "$MERGED_FILE" ]; then
-        echo "✅ Merge successful - cleaning up partial files"
-        rm $HOME/soccer_project/partial_results_qwen7b_vid${i}_gpu*.json
+        # Check if file has events
+        EVENT_COUNT=$(python -c "import json; print(len(json.load(open('$MERGED_FILE'))))" 2>/dev/null || echo "0")
 
-        # Show event count
-        EVENT_COUNT=$(python -c "import json; print(len(json.load(open('$MERGED_FILE'))))")
-        echo "   📊 Final: $EVENT_COUNT events detected"
+        if [ "$EVENT_COUNT" -gt 0 ]; then
+            echo "✅ Merge successful - cleaning up partial files"
+            rm $HOME/soccer_project/partial_results_qwen7b_vid${i}_gpu*.json 2>/dev/null
+            echo "   📊 Final: $EVENT_COUNT events detected"
+        else
+            echo "⚠️ Merge created empty file - keeping partial files for debugging"
+            echo "   This video may need manual investigation"
+        fi
     else
         echo "❌ Merge failed - keeping partial files for debugging"
-        exit 1
+        echo "   Continuing to next video..."
     fi
 
     echo "✅ Video $i complete ($(date))"
