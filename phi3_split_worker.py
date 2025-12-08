@@ -49,7 +49,12 @@ output_filename = os.path.join(BASE_DIR, f"partial_results_phi3_vid{args.video_i
 # ============================================================================
 
 HF_TOKEN = os.getenv('HF_TOKEN')
-if HF_TOKEN: login(token=HF_TOKEN)
+if HF_TOKEN:
+    try:
+        login(token=HF_TOKEN)
+    except Exception as e:
+        print(f"⚠️ [GPU {args.gpu_id}] HF login failed (rate limit?): {e}")
+        print(f"   Continuing anyway - model will use cached files or public access")
 
 print(f"🤖 [GPU {args.gpu_id}] Loading Phi-3.5-Vision 4.2B (BnB 4-bit, {int(FPS*WINDOW_SECONDS)} frames/window)...")
 
@@ -169,7 +174,6 @@ while current_time < my_end_time:
             **inputs,
             max_new_tokens=256,
             do_sample=False,
-            temperature=0.0,
             repetition_penalty=1.2  # Prevent hallucination loops
         )
 
