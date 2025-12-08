@@ -164,40 +164,33 @@ while current_time < my_end_time:
     ]
     prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
-    # Process with OOM handling
-    try:
-        inputs = processor(images=images, text=prompt, return_tensors="pt")
-        inputs = {k: v.to(model.device) if isinstance(v, torch.Tensor) else v for k, v in inputs.items()}
+    # Process - let OOM errors fail the job
+    inputs = processor(images=images, text=prompt, return_tensors="pt")
+    inputs = {k: v.to(model.device) if isinstance(v, torch.Tensor) else v for k, v in inputs.items()}
 
-        with torch.no_grad():
-            output_ids = model.generate(**inputs, max_new_tokens=256, do_sample=False)
+    with torch.no_grad():
+        output_ids = model.generate(**inputs, max_new_tokens=256, do_sample=False)
 
-        result = processor.decode(output_ids[0], skip_special_tokens=True)
-        # Extract assistant's response (after [/INST])
-        if "[/INST]" in result:
-            result = result.split("[/INST]")[-1].strip()
+    result = processor.decode(output_ids[0], skip_special_tokens=True)
+    # Extract assistant's response (after [/INST])
+    if "[/INST]" in result:
+        result = result.split("[/INST]")[-1].strip()
 
-        if "None" not in result and result:
-            print(f"⚡ [GPU {args.gpu_id}] {current_time:.1f}s: {result}")
-            events_found.append({"time": current_time, "raw": result})
+    if "None" not in result and result:
+        print(f"⚡ [GPU {args.gpu_id}] {current_time:.1f}s: {result}")
+        events_found.append({"time": current_time, "raw": result})
 
-            # Incremental Save
-            try:
-                with open(output_filename, "w") as f:
-                    json.dump(events_found, f, indent=2)
-            except Exception as e:
-                print(f"⚠️ Save failed: {e}")
+        # Incremental Save
+        try:
+            with open(output_filename, "w") as f:
+                json.dump(events_found, f, indent=2)
+        except Exception as e:
+            print(f"⚠️ Save failed: {e}")
 
-        del inputs, output_ids
-    except torch.cuda.OutOfMemoryError as e:
-        print(f"⚠️ [GPU {args.gpu_id}] OOM at {current_time:.1f}s - skipping window")
-    except Exception as e:
-        print(f"⚠️ [GPU {args.gpu_id}] Error at {current_time:.1f}s: {e}")
-    finally:
-        # Clean up images and memory
-        del images
-        torch.cuda.empty_cache()
-        shutil.rmtree(Path(frames[0]).parent, ignore_errors=True)
+    # Clean up
+    del inputs, output_ids, images
+    torch.cuda.empty_cache()
+    shutil.rmtree(Path(frames[0]).parent, ignore_errors=True)
 
     current_time += STEP_SECONDS
 
