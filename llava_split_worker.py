@@ -7,7 +7,7 @@ import torch
 import argparse
 from pathlib import Path
 from PIL import Image
-from transformers import LlavaNextVideoProcessor, LlavaNextVideoForConditionalGeneration, BitsAndBytesConfig
+from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration, BitsAndBytesConfig
 from huggingface_hub import login
 
 # ============================================================================
@@ -18,13 +18,11 @@ BASE_DIR = os.path.join(os.environ['HOME'], "soccer_project")
 VIDEO_DIR = os.path.join(BASE_DIR, "raw_data")
 TEMP_FRAME_DIR = os.path.join(BASE_DIR, "temp_frames")
 
-# MEMORY OPTIMIZED SETTINGS (Fits in ~11GB VRAM on Titan RTX)
-FPS = 1.0              # 1 FPS - LLaVA-NeXT-Video needs fewer frames than Qwen
-FRAMES_PER_WINDOW = 4  # Max 4 frames per inference (critical for VRAM)
-WINDOW_SECONDS = 4.0   # 4s window = 4 frames at 1 FPS
-STEP_SECONDS = 2.0     # 50% Overlap to catch split events
+# QWEN-MATCHED SETTINGS (For fair comparison)
+FPS = 5.0              # Match Qwen's 5 FPS
+WINDOW_SECONDS = 3.0   # Match Qwen's 3s window = 15 frames
+STEP_SECONDS = 2.0     # Match Qwen's 2s step (50% overlap)
 TARGET_DURATION = 3000  # Process first 50 mins (full match half)
-MAX_IMAGE_SIZE = 384   # Resize images to 384x384 max (saves VRAM)
 
 # ============================================================================
 # WORKER SETUP
@@ -53,24 +51,24 @@ output_filename = os.path.join(BASE_DIR, f"partial_results_llava_vid{args.video_
 HF_TOKEN = os.getenv('HF_TOKEN')
 if HF_TOKEN: login(token=HF_TOKEN)
 
-print(f"🤖 [GPU {args.gpu_id}] Loading LLaVA-NeXT-Video 7B (BnB 4-bit, max {FRAMES_PER_WINDOW} frames)...")
+print(f"🤖 [GPU {args.gpu_id}] Loading LLaVA-v1.6-Mistral 7B (BnB 4-bit, {int(FPS*WINDOW_SECONDS)} frames/window)...")
 
-# 1. Define 4-bit Configuration
+# 1. Define 4-bit Configuration (same as Qwen)
 bnb_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.float16
 )
 
-# 2. Load LLaVA-NeXT-Video model
-model = LlavaNextVideoForConditionalGeneration.from_pretrained(
-    "llava-hf/LLaVA-NeXT-Video-7B-hf",
+# 2. Load LLaVA-NeXT model (non-Video variant - processes frames independently like Qwen)
+model = LlavaNextForConditionalGeneration.from_pretrained(
+    "llava-hf/llava-v1.6-mistral-7b-hf",
     quantization_config=bnb_config,
     device_map=device_id
 )
 
-processor = LlavaNextVideoProcessor.from_pretrained(
-    "llava-hf/LLaVA-NeXT-Video-7B-hf"
+processor = LlavaNextProcessor.from_pretrained(
+    "llava-hf/llava-v1.6-mistral-7b-hf"
 )
 
 # ============================================================================
@@ -96,21 +94,31 @@ def get_match_context(video_path):
     if not frames: return "Home (Left), Away (Right)"
 
     image = Image.open(frames[0]).convert('RGB')
-    # Resize to prevent OOM
-    image.thumbnail((MAX_IMAGE_SIZE, MAX_IMAGE_SIZE), Image.Resampling.LANCZOS)
 
-    prompt = "USER: <image>\nIdentify the HOME team (left) and AWAY team (right) names and colors from the scoreboard.\nASSISTANT:"
+    # LLaVA-v1.6 prompt format
+    conversation = [
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": "Identify the HOME team (left) and AWAY team (right) names and colors from the scoreboard."},
+                {"type": "image"},
+            ],
+        },
+    ]
+    prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
     try:
-        inputs = processor(text=prompt, images=image, return_tensors="pt", padding=True)
+        inputs = processor(images=image, text=prompt, return_tensors="pt")
         inputs = {k: v.to(model.device) if isinstance(v, torch.Tensor) else v for k, v in inputs.items()}
 
         with torch.no_grad():
             output_ids = model.generate(**inputs, max_new_tokens=128)
 
         result = processor.decode(output_ids[0], skip_special_tokens=True)
-        # Extract assistant's response
-        result = result.split("ASSISTANT:")[-1].strip()
+        # Extract assistant's response (after [/INST])
+        if "[/INST]" in result:
+            result = result.split("[/INST]")[-1].strip()
+
     except Exception as e:
         print(f"⚠️ Failed to get match context: {e}")
         result = "Home (Left), Away (Right)"
@@ -142,42 +150,32 @@ while current_time < my_end_time:
     frames = extract_clip_frames(TEST_VIDEO, current_time, WINDOW_SECONDS, FPS)
     if not frames: break
 
-    # CRITICAL: Limit to max frames and resize to prevent OOM
-    frames = frames[:FRAMES_PER_WINDOW]  # Only take first N frames
-    images = []
-    for f in frames:
-        img = Image.open(f).convert('RGB')
-        # Resize to max dimension while maintaining aspect ratio
-        img.thumbnail((MAX_IMAGE_SIZE, MAX_IMAGE_SIZE), Image.Resampling.LANCZOS)
-        images.append(img)
+    # Load all frames (same as Qwen: 15 frames at 5 FPS)
+    images = [Image.open(f).convert('RGB') for f in frames]
 
-    # LLaVA-style prompt with video frames
-    prompt = (
-        f"USER: <image>\n"
-        f"Context: {match_context}\n\n"
-        f"Analyze this {len(images)}-frame soccer clip. "
-        f"Detect ANY of these 17 soccer events:\n"
-        "- Goals/Shots: Goal, Shot on target, Shot off target\n"
-        "- Fouls/Cards: Foul, Yellow card, Red card, Offside\n"
-        "- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n"
-        "- Other: Substitution, Ball out of play, Clearance\n\n"
-        "For EACH event detected, output a JSON object:\n"
-        "{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}\n"
-        "If nothing significant happens, output: None\n"
-        "ASSISTANT:"
-    )
+    # LLaVA-v1.6 conversation format with multiple images
+    conversation = [
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": f"Context: {match_context}\n\nAnalyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip. Detect ANY of these 17 soccer events:\n- Goals/Shots: Goal, Shot on target, Shot off target\n- Fouls/Cards: Foul, Yellow card, Red card, Offside\n- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n- Other: Substitution, Ball out of play, Clearance\n\nFor EACH event detected, output a JSON object:\n{{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}}\nIf nothing significant happens, output: None"},
+            ] + [{"type": "image"} for _ in images],
+        },
+    ]
+    prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
-    # Process with strict memory limits
+    # Process with OOM handling
     try:
-        inputs = processor(text=prompt, images=images, return_tensors="pt", padding=True)
+        inputs = processor(images=images, text=prompt, return_tensors="pt")
         inputs = {k: v.to(model.device) if isinstance(v, torch.Tensor) else v for k, v in inputs.items()}
 
         with torch.no_grad():
             output_ids = model.generate(**inputs, max_new_tokens=256, do_sample=False)
 
         result = processor.decode(output_ids[0], skip_special_tokens=True)
-        # Extract assistant's response
-        result = result.split("ASSISTANT:")[-1].strip()
+        # Extract assistant's response (after [/INST])
+        if "[/INST]" in result:
+            result = result.split("[/INST]")[-1].strip()
 
         if "None" not in result and result:
             print(f"⚡ [GPU {args.gpu_id}] {current_time:.1f}s: {result}")
@@ -193,6 +191,8 @@ while current_time < my_end_time:
         del inputs, output_ids
     except torch.cuda.OutOfMemoryError as e:
         print(f"⚠️ [GPU {args.gpu_id}] OOM at {current_time:.1f}s - skipping window")
+    except Exception as e:
+        print(f"⚠️ [GPU {args.gpu_id}] Error at {current_time:.1f}s: {e}")
     finally:
         # Clean up images and memory
         del images
