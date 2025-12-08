@@ -7,11 +7,11 @@ import torch
 import argparse
 from pathlib import Path
 from PIL import Image
-from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration, BitsAndBytesConfig
+from transformers import AutoProcessor, Idefics2ForConditionalGeneration, BitsAndBytesConfig
 from huggingface_hub import login
 
 # ============================================================================
-# CONFIGURATION - TITAN RTX SAFE MODE
+# CONFIGURATION - TITAN RTX OPTIMIZED
 # ============================================================================
 
 BASE_DIR = os.path.join(os.environ['HOME'], "soccer_project")
@@ -42,16 +42,16 @@ my_end_time = my_start_time + slice_duration
 device_id = f"cuda:{args.gpu_id}"
 print(f"👷 [GPU {args.gpu_id}] Timeline: {my_start_time:.1f}s to {my_end_time:.1f}s")
 
-output_filename = os.path.join(BASE_DIR, f"partial_results_llava_vid{args.video_index}_gpu{args.gpu_id}.json")
+output_filename = os.path.join(BASE_DIR, f"partial_results_idefics2_vid{args.video_index}_gpu{args.gpu_id}.json")
 
 # ============================================================================
-# MODEL SETUP (LLaVA-NeXT-Video 7B + 4-BIT QUANTIZATION)
+# MODEL SETUP (Idefics2-8B + 4-BIT QUANTIZATION)
 # ============================================================================
 
 HF_TOKEN = os.getenv('HF_TOKEN')
 if HF_TOKEN: login(token=HF_TOKEN)
 
-print(f"🤖 [GPU {args.gpu_id}] Loading LLaVA-v1.6-Mistral 7B (BnB 4-bit, {int(FPS*WINDOW_SECONDS)} frames/window)...")
+print(f"🤖 [GPU {args.gpu_id}] Loading Idefics2-8B (BnB 4-bit, {int(FPS*WINDOW_SECONDS)} frames/window)...")
 
 # 1. Define 4-bit Configuration (same as Qwen)
 bnb_config = BitsAndBytesConfig(
@@ -60,15 +60,16 @@ bnb_config = BitsAndBytesConfig(
     bnb_4bit_compute_dtype=torch.float16
 )
 
-# 2. Load LLaVA-NeXT model (non-Video variant - processes frames independently like Qwen)
-model = LlavaNextForConditionalGeneration.from_pretrained(
-    "llava-hf/llava-v1.6-mistral-7b-hf",
+# 2. Load Idefics2-8B model (optimized for multi-image tasks)
+model = Idefics2ForConditionalGeneration.from_pretrained(
+    "HuggingFaceM4/idefics2-8b",
     quantization_config=bnb_config,
-    device_map=device_id
+    device_map=device_id,
+    torch_dtype=torch.float16
 )
 
-processor = LlavaNextProcessor.from_pretrained(
-    "llava-hf/llava-v1.6-mistral-7b-hf"
+processor = AutoProcessor.from_pretrained(
+    "HuggingFaceM4/idefics2-8b"
 )
 
 # ============================================================================
@@ -95,29 +96,29 @@ def get_match_context(video_path):
 
     image = Image.open(frames[0]).convert('RGB')
 
-    # LLaVA-v1.6 prompt format
-    conversation = [
+    # Idefics2 format: text with <image> placeholder
+    messages = [
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": "Identify the HOME team (left) and AWAY team (right) names and colors from the scoreboard."},
                 {"type": "image"},
-            ],
-        },
+                {"type": "text", "text": "Identify the HOME team (left) and AWAY team (right) names and colors from the scoreboard."},
+            ]
+        }
     ]
-    prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
     try:
-        inputs = processor(images=image, text=prompt, return_tensors="pt")
+        prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
+        inputs = processor(text=prompt, images=[image], return_tensors="pt")
         inputs = {k: v.to(model.device) if isinstance(v, torch.Tensor) else v for k, v in inputs.items()}
 
         with torch.no_grad():
             output_ids = model.generate(**inputs, max_new_tokens=128)
 
-        result = processor.decode(output_ids[0], skip_special_tokens=True)
-        # Extract assistant's response (after [/INST])
-        if "[/INST]" in result:
-            result = result.split("[/INST]")[-1].strip()
+        result = processor.batch_decode(output_ids, skip_special_tokens=True)[0]
+        # Extract after assistant marker
+        if "Assistant:" in result:
+            result = result.split("Assistant:")[-1].strip()
 
     except Exception as e:
         print(f"⚠️ Failed to get match context: {e}")
@@ -153,28 +154,32 @@ while current_time < my_end_time:
     # Load all frames (same as Qwen: 15 frames at 5 FPS)
     images = [Image.open(f).convert('RGB') for f in frames]
 
-    # LLaVA-v1.6 conversation format with multiple images
-    conversation = [
+    # Idefics2 format: multiple <image> tokens
+    image_tokens = " ".join(["<image>"] * len(images))
+    text = f"{image_tokens}\n\nContext: {match_context}\n\nAnalyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip. Detect ANY of these 17 soccer events:\n- Goals/Shots: Goal, Shot on target, Shot off target\n- Fouls/Cards: Foul, Yellow card, Red card, Offside\n- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n- Other: Substitution, Ball out of play, Clearance\n\nFor EACH event detected, output a JSON object:\n{{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}}\nIf nothing significant happens, output: None"
+
+    messages = [
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": f"Context: {match_context}\n\nAnalyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip. Detect ANY of these 17 soccer events:\n- Goals/Shots: Goal, Shot on target, Shot off target\n- Fouls/Cards: Foul, Yellow card, Red card, Offside\n- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n- Other: Substitution, Ball out of play, Clearance\n\nFor EACH event detected, output a JSON object:\n{{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}}\nIf nothing significant happens, output: None"},
-            ] + [{"type": "image"} for _ in images],
-        },
+                *[{"type": "image"} for _ in images],
+                {"type": "text", "text": text},
+            ]
+        }
     ]
-    prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
-    # Process - let OOM errors fail the job
-    inputs = processor(images=images, text=prompt, return_tensors="pt")
+    # Process - OOM will fail the job
+    prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
+    inputs = processor(text=prompt, images=images, return_tensors="pt")
     inputs = {k: v.to(model.device) if isinstance(v, torch.Tensor) else v for k, v in inputs.items()}
 
     with torch.no_grad():
         output_ids = model.generate(**inputs, max_new_tokens=256, do_sample=False)
 
-    result = processor.decode(output_ids[0], skip_special_tokens=True)
-    # Extract assistant's response (after [/INST])
-    if "[/INST]" in result:
-        result = result.split("[/INST]")[-1].strip()
+    result = processor.batch_decode(output_ids, skip_special_tokens=True)[0]
+    # Extract after assistant marker
+    if "Assistant:" in result:
+        result = result.split("Assistant:")[-1].strip()
 
     if "None" not in result and result:
         print(f"⚡ [GPU {args.gpu_id}] {current_time:.1f}s: {result}")
