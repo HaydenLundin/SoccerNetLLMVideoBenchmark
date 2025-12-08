@@ -1,0 +1,3802 @@
+[
+  {
+    "time": 0.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white kicks the ball towards the goal but misses\"\n}\n```"
+  },
+  {
+    "time": 2.0,
+    "raw": "```json\n{\n  \"label\": \"Set Pieces\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Free-kick\"\n}\n```"
+  },
+  {
+    "time": 6.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 8.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 12.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 14.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 16.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from home team fouls the player from away team\"\n}\n```"
+  },
+  {
+    "time": 18.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 20.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 22.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 26.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 28.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 32.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 34.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 36.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 21 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 38.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 40.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 42.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 46.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 50.0,
+    "raw": "```json\n{\n  \"label\": \"Ball out of play\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Ball goes out of play\"\n}\n```"
+  },
+  {
+    "time": 52.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 54.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 58.0,
+    "raw": "```json\n{\"label\": \"Free-kick\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player in blue kicks the ball\"}\n```"
+  },
+  {
+    "time": 62.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 64.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 66.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 68.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 72.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 76.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 78.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 84.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 86.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 23 from home team kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 88.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 90.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 92.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 96.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 100.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 102.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in red uniform runs past the camera\"\n}\n```"
+  },
+  {
+    "time": 104.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player runs towards the ball\"\n}\n```"
+  },
+  {
+    "time": 110.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 112.0,
+    "raw": "```json\n{\n  \"label\": \"Set Pieces\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Free-kick\"\n}\n```"
+  },
+  {
+    "time": 114.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 118.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 122.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 124.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 128.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 130.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 132.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 134.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player from home team pushes opponent\"}\n```"
+  },
+  {
+    "time": 138.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 140.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player walks\"\n}\n```"
+  },
+  {
+    "time": 144.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player looks around the field\"\n}\n```"
+  },
+  {
+    "time": 146.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"kick-off\"}\n]\n```"
+  },
+  {
+    "time": 148.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in red jersey takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 150.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 154.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 156.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 20 challenges player 8\"}\n]\n```"
+  },
+  {
+    "time": 160.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player looks to the side\"\n}\n```"
+  },
+  {
+    "time": 162.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team appears to be fouled\"\n}\n```"
+  },
+  {
+    "time": 164.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"ball out of play\"}\n]\n```"
+  },
+  {
+    "time": 166.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls an opponent\"\n}\n```"
+  },
+  {
+    "time": 170.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 174.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 176.0,
+    "raw": "```json\n{\"label\": \"Free-kick\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player takes free-kick\"}\n```"
+  },
+  {
+    "time": 180.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 182.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 186.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 188.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 192.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the ball\"\n}\n```"
+  },
+  {
+    "time": 194.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 198.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.89, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 200.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 204.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 206.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 208.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 210.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 214.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 218.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 222.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 226.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 228.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 2 from the home team fouls player 18 from the away team\"}\n```"
+  },
+  {
+    "time": 230.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 232.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 234.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 238.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 240.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 242.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 246.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 250.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"man Y puts hand on mouth\"}\n]\n```"
+  },
+  {
+    "time": 252.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Man in suit interacts with crowd\"\n}\n```"
+  },
+  {
+    "time": 254.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Man in suit pushes away\"\n}\n```"
+  },
+  {
+    "time": 256.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Man adjusts coat\"\n}\n```"
+  },
+  {
+    "time": 258.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot on target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in white jersey takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 260.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 262.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 266.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 268.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 272.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 274.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Goalkeeper challenges player\"\n}\n```"
+  },
+  {
+    "time": 278.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"ball is in the air\"}\n]\n```"
+  },
+  {
+    "time": 280.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 284.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 286.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"kick-off\"}\n]\n```"
+  },
+  {
+    "time": 288.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team fouls the player from home team\"}\n```"
+  },
+  {
+    "time": 290.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 292.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team fouls player from home team\"}\n]\n```"
+  },
+  {
+    "time": 294.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 298.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.89, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 300.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 306.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 310.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 312.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white dribbles the ball and takes a shot that misses the goal\"\n}\n```"
+  },
+  {
+    "time": 316.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 320.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 324.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey moves past the camera\"\n}\n```"
+  },
+  {
+    "time": 326.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 328.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Players are shown on the screen\"}\n```"
+  },
+  {
+    "time": 332.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 334.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 336.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 340.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 342.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 26 fouls player 11\"}\n]\n```"
+  },
+  {
+    "time": 344.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 346.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 350.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player BUR player 20 fouls player CHE player 5\"}\n```"
+  },
+  {
+    "time": 352.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player walks away from the camera\"\n}\n```"
+  },
+  {
+    "time": 354.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball towards the goal\"}\n```"
+  },
+  {
+    "time": 356.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 358.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot but misses\"}\n```"
+  },
+  {
+    "time": 362.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 364.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 366.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 368.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 372.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 376.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 378.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 382.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 386.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 390.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 392.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 394.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 396.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team fouls player from away team\"\n}\n```"
+  },
+  {
+    "time": 398.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls the player from home team\"}\n```"
+  },
+  {
+    "time": 402.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 406.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 20 fouls player 16\"}\n]\n```"
+  },
+  {
+    "time": 408.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 412.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 414.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 416.0,
+    "raw": "```json\n{\n  \"label\": \"Set Pieces\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Free-kick\"\n}\n```"
+  },
+  {
+    "time": 418.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 420.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 424.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 21 from BUR fouls player 10 from CHE\"}\n```"
+  },
+  {
+    "time": 426.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player walks towards the field\"\n}\n```"
+  },
+  {
+    "time": 428.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player claps hands\"}\n```"
+  },
+  {
+    "time": 432.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player picks up the ball\"}\n```"
+  },
+  {
+    "time": 436.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 fouls player 10\"}\n]\n```"
+  },
+  {
+    "time": 440.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 446.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 448.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 450.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 454.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 458.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls opponent\"\n}\n```"
+  },
+  {
+    "time": 460.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"player moves\"}\n```"
+  },
+  {
+    "time": 462.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 25 fouls player 21\"}\n]\n```"
+  },
+  {
+    "time": 464.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 466.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 470.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 21 from away is fouled by player 4 from home\"}\n```"
+  },
+  {
+    "time": 474.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in maroon jersey\"\n}\n```"
+  },
+  {
+    "time": 478.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player from away team pushes player from home team\"}\n```"
+  },
+  {
+    "time": 480.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team pushes player from home team\"}\n```"
+  },
+  {
+    "time": 482.0,
+    "raw": "```json\n{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Ball goes out of play\"}\n```"
+  },
+  {
+    "time": 484.0,
+    "raw": "```json\n{\n  \"label\": \"Free-kick\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a free-kick\"\n}\n```"
+  },
+  {
+    "time": 486.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 490.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 492.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 496.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 498.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 500.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 504.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 508.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 510.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 514.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 518.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 522.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Diego Costa pushes player\"}\n]\n```"
+  },
+  {
+    "time": 524.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player from away team pushes player from home team\"}\n```"
+  },
+  {
+    "time": 526.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player X pushes player Y\"}\n]\n```"
+  },
+  {
+    "time": 528.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"home\"}\n]\n```"
+  },
+  {
+    "time": 532.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 534.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.89, \"details\": \"Player scores\"}\n```"
+  },
+  {
+    "time": 536.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 538.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Trippier scores\"}\n]\n```"
+  },
+  {
+    "time": 540.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player runs towards the ball\"\n}\n```"
+  },
+  {
+    "time": 544.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 546.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team is running\"}\n```"
+  },
+  {
+    "time": 548.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player runs\"}\n```"
+  },
+  {
+    "time": 550.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 552.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player walks towards the field\"\n}\n```"
+  },
+  {
+    "time": 554.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 558.0,
+    "raw": "```json\n{\n  \"label\": \"Set Pieces\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Corner\"\n}\n```"
+  },
+  {
+    "time": 560.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Goalkeeper makes a save\"}\n```"
+  },
+  {
+    "time": 564.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 568.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 572.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"man Y touches the ball\"}\n]\n```"
+  },
+  {
+    "time": 574.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Man in suit walks away from the camera\"\n}\n```"
+  },
+  {
+    "time": 578.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"man Y raises his hand\"}\n]\n```"
+  },
+  {
+    "time": 582.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team appears to have committed a foul\"\n}\n```"
+  },
+  {
+    "time": 586.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 590.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 594.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 596.0,
+    "raw": "```json\n{\n  \"label\": \"Free-kick\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a free-kick\"\n}\n```"
+  },
+  {
+    "time": 598.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 600.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 604.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team fouls an opponent\"\n}\n```"
+  },
+  {
+    "time": 606.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team commits a foul\"\n}\n```"
+  },
+  {
+    "time": 612.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 616.0,
+    "raw": "```json\n{\"label\": \"Throw-in\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player throws the ball in\"}\n```"
+  },
+  {
+    "time": 620.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player A adjusts his hair\"}\n```"
+  },
+  {
+    "time": 622.0,
+    "raw": "```json\n{\"label\": \"Kick-off\", \"team\": \"away\"}\n```"
+  },
+  {
+    "time": 624.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 626.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 628.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 632.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 634.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 8 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 636.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 fouls player 5\"}\n]\n```"
+  },
+  {
+    "time": 638.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 642.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 646.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white shirt fouls player in blue shirt\"\n}\n```"
+  },
+  {
+    "time": 650.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul\"\n}\n```"
+  },
+  {
+    "time": 652.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul against player in maroon\"\n}\n```"
+  },
+  {
+    "time": 656.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player 25 fouls player 19\"}\n```"
+  },
+  {
+    "time": 658.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 660.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 25 from away team is fouled\"}\n```"
+  },
+  {
+    "time": 664.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player B is fouled by Player A\"}\n```"
+  },
+  {
+    "time": 668.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 672.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 674.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 680.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 682.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 684.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 686.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 688.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 692.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box\"\n}\n```"
+  },
+  {
+    "time": 696.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls an opponent\"\n}\n```"
+  },
+  {
+    "time": 700.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 702.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Coach walks towards the field\"\n}\n```"
+  },
+  {
+    "time": 704.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"man Y fouls man X\"}\n]\n```"
+  },
+  {
+    "time": 706.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Goalkeeper makes a save\"}\n```"
+  },
+  {
+    "time": 708.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Goalkeeper watches the ball\"\n}\n```"
+  },
+  {
+    "time": 712.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Goalkeeper Heaton fouls player\"\n}\n```"
+  },
+  {
+    "time": 714.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 718.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 720.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 724.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 728.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 732.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 734.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 738.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 740.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 744.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 748.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 752.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 754.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team fouls the player from away team\"\n}\n```"
+  },
+  {
+    "time": 756.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 760.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 764.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team fouls the player from away team\"\n}\n```"
+  },
+  {
+    "time": 766.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 768.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 770.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 774.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 776.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 780.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 782.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 784.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 786.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 788.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 790.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 794.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 796.0,
+    "raw": "```json\n[\n\t{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Players celebrate\"}\n]\n```"
+  },
+  {
+    "time": 800.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Players celebrate a goal\"\n}\n```"
+  },
+  {
+    "time": 806.0,
+    "raw": "```json\n{\"label\": \"Shot on target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot towards the goal\"}\n```"
+  },
+  {
+    "time": 808.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 812.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 814.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 816.0,
+    "raw": "```json\n{\n  \"label\": \"Shot on target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot towards the goal\"\n}\n```"
+  },
+  {
+    "time": 818.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 822.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 826.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 828.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Goal by Chelsea\"}\n]\n```"
+  },
+  {
+    "time": 830.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 10 from home kicks the ball away\"}\n]\n```"
+  },
+  {
+    "time": 834.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player scores goal\"}\n]\n```"
+  },
+  {
+    "time": 836.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 838.0,
+    "raw": "```json\n{\"label\": \"Yellow card\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player 15 receives yellow card\"}\n```"
+  },
+  {
+    "time": 840.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player A pushes player B\"}\n]\n```"
+  },
+  {
+    "time": 842.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player looks around the field\"\n}\n```"
+  },
+  {
+    "time": 844.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 20 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 846.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Chelsea scores\"}\n]\n```"
+  },
+  {
+    "time": 848.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from Burnley takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 852.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in white dribbles the ball\"}\n]\n```"
+  },
+  {
+    "time": 856.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 860.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 862.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 864.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 866.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 870.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Goalkeeper blocks the ball\"}\n```"
+  },
+  {
+    "time": 874.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 878.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player X fouls player Y\"}\n]\n```"
+  },
+  {
+    "time": 880.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 882.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 886.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 888.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 890.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 892.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.89, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 894.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player X fouls player Y\"}\n```"
+  },
+  {
+    "time": 898.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team pushes player from home team\"}\n```"
+  },
+  {
+    "time": 900.0,
+    "raw": "```json\n[\n\t{\"label\": \"Set Pieces\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Free-kick\"}\n]\n```"
+  },
+  {
+    "time": 902.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in white jersey takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 904.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 906.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 908.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player scores\"}\n```"
+  },
+  {
+    "time": 910.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player scores\"}\n```"
+  },
+  {
+    "time": 912.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 914.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 916.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 920.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 924.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 926.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 928.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 932.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 934.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 938.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 940.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 942.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 944.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 948.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 950.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Diego Costa is fouled\"}\n```"
+  },
+  {
+    "time": 952.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player adjusts his gloves\"}\n```"
+  },
+  {
+    "time": 954.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"man Y raises his hand\"}\n]\n```"
+  },
+  {
+    "time": 958.0,
+    "raw": "```json\n[\n\t{\"label\": \"Free-kick\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 5 takes a free-kick\"}\n]\n```"
+  },
+  {
+    "time": 960.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the ball\"\n}\n```"
+  },
+  {
+    "time": 962.0,
+    "raw": "```json\n{\n  \"label\": \"Corner\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes corner kick\"\n}\n```"
+  },
+  {
+    "time": 966.0,
+    "raw": "```json\n{\n  \"label\": \"Corner\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes corner kick\"\n}\n```"
+  },
+  {
+    "time": 968.0,
+    "raw": "```json\n{\"label\": \"Corner\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Corner taken\"}\n```"
+  },
+  {
+    "time": 970.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 972.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 974.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player X fouls player Y\"}\n]\n```"
+  },
+  {
+    "time": 976.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Goalkeeper holds the ball\"\n}\n```"
+  },
+  {
+    "time": 978.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Goalkeeper throws the ball\"}\n```"
+  },
+  {
+    "time": 980.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box\"\n}\n```"
+  },
+  {
+    "time": 984.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 986.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 990.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 992.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 994.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 998.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1000.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1004.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1006.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1008.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1010.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Trippier pushes player\"}\n]\n```"
+  },
+  {
+    "time": 1014.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player X pushes player Y\"}\n]\n```"
+  },
+  {
+    "time": 1018.0,
+    "raw": "```json\n[\n\t{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Players walk\"}\n]\n```"
+  },
+  {
+    "time": 1020.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 21 from home team fouls player 5 from away team\"}\n]\n```"
+  },
+  {
+    "time": 1022.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"player 21 from home fouls player 5 from away\"}\n]\n```"
+  },
+  {
+    "time": 1026.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 1028.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 1030.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1032.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 1034.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 11 challenges player 5\"}\n]\n```"
+  },
+  {
+    "time": 1036.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player from home team is fouled\"}\n```"
+  },
+  {
+    "time": 1038.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player X pushes player Y\"}\n]\n```"
+  },
+  {
+    "time": 1042.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team pushes opponent\"}\n```"
+  },
+  {
+    "time": 1046.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1050.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1052.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1054.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1056.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1058.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls a player from home team\"\n}\n```"
+  },
+  {
+    "time": 1060.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1062.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1064.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1066.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1068.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1072.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1074.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1076.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1082.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1084.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1088.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1092.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1096.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1098.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 1102.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player looks down and smiles\"\n}\n```"
+  },
+  {
+    "time": 1104.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"kick-off\"}\n]\n```"
+  },
+  {
+    "time": 1106.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1108.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1110.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1112.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1114.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1118.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 fouls player 16\"}\n]\n```"
+  },
+  {
+    "time": 1122.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Goalkeeper makes a save\"}\n]\n```"
+  },
+  {
+    "time": 1126.0,
+    "raw": "```json\n[\n\t{\"label\": \"Set Pieces\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Free-kick\"}\n]\n```"
+  },
+  {
+    "time": 1128.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot but misses\"}\n```"
+  },
+  {
+    "time": 1132.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1134.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1136.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 1138.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1140.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1144.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1148.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in maroon jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1152.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white shirt fouls player in blue shirt\"\n}\n```"
+  },
+  {
+    "time": 1154.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1158.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1160.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1164.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1168.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1172.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 57 takes a shot but misses\"}\n]\n```"
+  },
+  {
+    "time": 1174.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1176.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1180.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1184.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1186.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1192.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 1194.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 1196.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Premier League logo\"}\n```"
+  },
+  {
+    "time": 1198.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 1200.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 fouls player 37\"}\n]\n```"
+  },
+  {
+    "time": 1204.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 fouls player 37\"}\n]\n```"
+  },
+  {
+    "time": 1208.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player walks\"}\n```"
+  },
+  {
+    "time": 1210.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team pushes player from home team\"}\n```"
+  },
+  {
+    "time": 1216.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 20 fouls player 14\"}\n]\n```"
+  },
+  {
+    "time": 1220.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1224.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1226.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1228.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1230.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1232.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 from BUR fouls player 3 from CHE\"}\n]\n```"
+  },
+  {
+    "time": 1236.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1238.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1242.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1246.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1250.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1252.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul against player in maroon\"\n}\n```"
+  },
+  {
+    "time": 1256.0,
+    "raw": "```json\n{\n  \"label\": \"Free-kick\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a free-kick\"\n}\n```"
+  },
+  {
+    "time": 1258.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1262.0,
+    "raw": "```json\n[\n\t{\"label\": \"Set Pieces\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"corner\"}\n]\n```"
+  },
+  {
+    "time": 1264.0,
+    "raw": "```json\n{\"label\": \"Set Pieces\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Corner\"}\n```"
+  },
+  {
+    "time": 1266.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"kick-off\"}\n]\n```"
+  },
+  {
+    "time": 1268.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1270.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1274.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1276.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1280.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1282.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1284.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1286.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white attempts a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1288.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1290.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1294.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1296.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1298.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1300.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white attempts a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1302.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1306.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1308.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1310.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1312.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Barnes fouls the player in blue\"}\n]\n```"
+  },
+  {
+    "time": 1316.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 5 fouls player 11\"}\n]\n```"
+  },
+  {
+    "time": 1320.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1322.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 1324.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls opponent\"\n}\n```"
+  },
+  {
+    "time": 1328.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player in blue shirt pushes player in maroon shirt\"}\n```"
+  },
+  {
+    "time": 1332.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 1334.0,
+    "raw": "```json\n{\"label\": \"Ball out of play\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Goalkeeper holds the ball\"}\n```"
+  },
+  {
+    "time": 1336.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Goalkeeper prepares to throw the ball\"\n}\n```"
+  },
+  {
+    "time": 1338.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 500 fouls player 200\"}\n]\n```"
+  },
+  {
+    "time": 1342.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 21 from away fouls player 5 from home\"}\n]\n```"
+  },
+  {
+    "time": 1346.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1348.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1350.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1354.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 1356.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team fouls the player from home team\"}\n```"
+  },
+  {
+    "time": 1358.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1360.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1362.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 1364.0,
+    "raw": "```json\n{\n  \"label\": \"Shot on target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot towards the goal\"\n}\n```"
+  },
+  {
+    "time": 1366.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1370.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1374.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in white shirt takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1378.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1380.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1384.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 1386.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1388.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1390.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1394.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1398.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1400.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 23 takes a shot but misses\"}\n]\n```"
+  },
+  {
+    "time": 1402.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot on target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 4 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1404.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 20 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1408.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1412.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1416.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1418.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1420.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1424.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1426.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1428.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1430.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1432.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1436.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1440.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.89, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 1442.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 1446.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"kick-off\"}\n]\n```"
+  },
+  {
+    "time": 1448.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1452.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1458.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 1462.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 1464.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1466.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot on target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1468.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1470.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1472.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1474.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1476.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1480.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 1484.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1488.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1490.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1494.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1496.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1500.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1504.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1506.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1510.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in red kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 1514.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 1516.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 21 fouls player 57\"}\n]\n```"
+  },
+  {
+    "time": 1520.0,
+    "raw": "```json\n{\"label\": \"Set Pieces\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Premier League logo\"}\n```"
+  },
+  {
+    "time": 1522.0,
+    "raw": "```json\n{\"label\": \"Shot on target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player in blue takes a shot\"}\n```"
+  },
+  {
+    "time": 1524.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1526.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1530.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1532.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 1534.0,
+    "raw": "```json\n[\n\t{\"label\": \"Kick-off\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"kick-off\"}\n]\n```"
+  },
+  {
+    "time": 1536.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 1540.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player looks to the side\"}\n```"
+  },
+  {
+    "time": 1544.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls an opponent\"\n}\n```"
+  },
+  {
+    "time": 1548.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1552.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1556.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1558.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1560.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1564.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1566.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 25 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1570.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1572.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1576.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1578.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1580.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul\"\n}\n```"
+  },
+  {
+    "time": 1582.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1586.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1590.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1594.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1596.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1600.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1604.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1608.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1612.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1616.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1618.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1622.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1626.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1628.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 1630.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 27 fouls player 8\"}\n]\n```"
+  },
+  {
+    "time": 1634.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n```"
+  },
+  {
+    "time": 1636.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1638.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1642.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1646.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1648.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1650.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1652.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1654.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1658.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Goalkeeper makes a save\"}\n]\n```"
+  },
+  {
+    "time": 1660.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1664.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1668.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1672.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1674.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team commits a foul\"\n}\n```"
+  },
+  {
+    "time": 1676.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1680.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 1682.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1686.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1688.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1692.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1696.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1698.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1700.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1702.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1706.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1708.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1712.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 1714.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1716.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1718.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1722.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1726.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1728.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player in blue kicks the ball away from player in red\"}\n```"
+  },
+  {
+    "time": 1732.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Diego Costa scores\"}\n]\n```"
+  },
+  {
+    "time": 1734.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Diego Costa is fouled by an opponent\"\n}\n```"
+  },
+  {
+    "time": 1736.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Diego Costa looks around the field\"\n}\n```"
+  },
+  {
+    "time": 1738.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Diego Costa is fouled\"}\n]\n```"
+  },
+  {
+    "time": 1740.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 29 from away fouls player 19\"}\n```"
+  },
+  {
+    "time": 1744.0,
+    "raw": "```json\n[\n\t{\"label\": \"Premier League\", \"team\": \"none\", \"confidence\": 0.9, \"details\": \"Premier League logo\"}\n]\n```"
+  },
+  {
+    "time": 1746.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 fouls player 9\"}\n]\n```"
+  },
+  {
+    "time": 1748.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1752.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1756.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1760.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1762.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul\"\n}\n```"
+  },
+  {
+    "time": 1766.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1768.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1770.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1772.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1774.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1778.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1780.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1784.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1788.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white shirt takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1790.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1792.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 25 fouls player 18\"}\n]\n```"
+  },
+  {
+    "time": 1794.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player X pushes player Y\"}\n```"
+  },
+  {
+    "time": 1798.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player BUR 20 is fouled\"}\n```"
+  },
+  {
+    "time": 1802.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 tackles player 30\"}\n]\n```"
+  },
+  {
+    "time": 1804.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue falls to the ground after being tackled by Player in maroon\"\n}\n```"
+  },
+  {
+    "time": 1808.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player from home team is fouled\"}\n```"
+  },
+  {
+    "time": 1810.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 1812.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot but misses\"}\n```"
+  },
+  {
+    "time": 1814.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 10 from the away team fouls Player 15\"}\n```"
+  },
+  {
+    "time": 1818.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 1822.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1824.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1826.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1828.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1832.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1834.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1836.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1838.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team pushes player from home team\"}\n```"
+  },
+  {
+    "time": 1842.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Diego Costa looks around the field\"\n}\n```"
+  },
+  {
+    "time": 1844.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"man Yells at player\"}\n]\n```"
+  },
+  {
+    "time": 1846.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Coach gestures with hands\"\n}\n```"
+  },
+  {
+    "time": 1848.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team is pushed\"}\n```"
+  },
+  {
+    "time": 1850.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in red jersey enters the frame\"\n}\n```"
+  },
+  {
+    "time": 1852.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 20 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 1854.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1858.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1860.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1864.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1866.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1870.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1872.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1876.0,
+    "raw": "```json\n{\n  \"label\": \"Shot on target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot towards the goal\"\n}\n```"
+  },
+  {
+    "time": 1878.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1882.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1884.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Goal by Chelsea\"}\n]\n```"
+  },
+  {
+    "time": 1886.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1890.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1892.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in white attempts a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 1894.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1898.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1900.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1902.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1906.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1908.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1910.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1914.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1918.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1920.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1922.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1924.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1928.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 1930.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul against player in maroon\"\n}\n```"
+  },
+  {
+    "time": 1932.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul against player in maroon\"\n}\n```"
+  },
+  {
+    "time": 1934.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 1936.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1940.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1944.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1946.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1948.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1952.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1958.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1960.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1962.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 1964.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 1968.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 1970.0,
+    "raw": "```json\n{\"label\": \"Shot on target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot at goal\"}\n```"
+  },
+  {
+    "time": 1972.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1974.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 1980.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 1984.0,
+    "raw": "```json\n[\n\t{\"label\": \"Set Pieces\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"corner\"}\n]\n```"
+  },
+  {
+    "time": 1986.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player kicks the ball but misses\"}\n]\n```"
+  },
+  {
+    "time": 1988.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 1990.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 1994.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 1996.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player looks up and speaks\"\n}\n```"
+  },
+  {
+    "time": 1998.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 19 from the away team appears to have committed a foul\"}\n```"
+  },
+  {
+    "time": 2002.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n]\n```"
+  },
+  {
+    "time": 2006.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team appears to have committed a foul\"\n}\n```"
+  },
+  {
+    "time": 2010.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 20 fouls player 2\"}\n]\n```"
+  },
+  {
+    "time": 2014.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls a player from home team\"\n}\n```"
+  },
+  {
+    "time": 2016.0,
+    "raw": "```json\n{\n  \"label\": \"Free-kick\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a free-kick\"\n}\n```"
+  },
+  {
+    "time": 2020.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 2022.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2026.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2028.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player scores\"}\n```"
+  },
+  {
+    "time": 2030.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2032.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Goalkeeper blocks the ball\"}\n```"
+  },
+  {
+    "time": 2036.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 20 takes a shot from distance\"}\n]\n```"
+  },
+  {
+    "time": 2040.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2044.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2046.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2048.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2052.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2056.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Barnes (BUR) pushes the ball away\"}\n]\n```"
+  },
+  {
+    "time": 2058.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n```"
+  },
+  {
+    "time": 2060.0,
+    "raw": "```json\n{\"label\": \"Free-kick\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team takes a free-kick\"}\n```"
+  },
+  {
+    "time": 2062.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 2066.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2068.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2072.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2076.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2078.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2082.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player X fouls player Y\"}\n]\n```"
+  },
+  {
+    "time": 2084.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 20 fouls player 9\"}\n]\n```"
+  },
+  {
+    "time": 2086.0,
+    "raw": "```json\n{\"label\": \"Shot on target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player takes a shot at goal\"}\n```"
+  },
+  {
+    "time": 2090.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 25 from away fouls player 10 from home\"}\n```"
+  },
+  {
+    "time": 2094.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 3 kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2096.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 2098.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Goalkeeper catches the ball\"}\n```"
+  },
+  {
+    "time": 2100.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Goalkeeper prepares to throw the ball\"}\n```"
+  },
+  {
+    "time": 2102.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2104.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2106.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2108.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2112.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2116.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue commits foul against player in red\"\n}\n```"
+  },
+  {
+    "time": 2118.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2120.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2122.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2126.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2128.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2132.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2134.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in white dribbles the ball and takes a shot towards the goal\"}\n```"
+  },
+  {
+    "time": 2138.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2142.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player from home team kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2146.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2150.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2154.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2156.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the ball\"\n}\n```"
+  },
+  {
+    "time": 2158.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player looks at the camera\"}\n```"
+  },
+  {
+    "time": 2160.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team fouls opponent\"}\n```"
+  },
+  {
+    "time": 2162.0,
+    "raw": "```json\n[\n\t{\"label\": \"Yellow card\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Referee shows yellow card\"}\n]\n```"
+  },
+  {
+    "time": 2166.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 fouls player 15\"}\n]\n```"
+  },
+  {
+    "time": 2168.0,
+    "raw": "```json\n{\"label\": \"Shot on target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue takes a shot towards the goal\"}\n```"
+  },
+  {
+    "time": 2170.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2172.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 2174.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 2178.0,
+    "raw": "```json\n{\"label\": \"Offside\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team is in an offside position\"}\n```"
+  },
+  {
+    "time": 2180.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the ball\"\n}\n```"
+  },
+  {
+    "time": 2182.0,
+    "raw": "```json\n{\n  \"label\": \"Offside\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is in an offside position\"\n}\n```"
+  },
+  {
+    "time": 2184.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Goal scored by player in green jersey\"}\n```"
+  },
+  {
+    "time": 2186.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 2190.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2192.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2194.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2196.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 2198.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2200.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 2204.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in white jersey takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2206.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2208.0,
+    "raw": "```json\n{\n  \"label\": \"Shot on target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot towards the goal\"\n}\n```"
+  },
+  {
+    "time": 2210.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 25 is fouled by player 16\"}\n```"
+  },
+  {
+    "time": 2214.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 fouls player 5\"}\n]\n```"
+  },
+  {
+    "time": 2218.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 5 fouls player 30\"}\n]\n```"
+  },
+  {
+    "time": 2222.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 5 fouls player 30\"}\n]\n```"
+  },
+  {
+    "time": 2226.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player BUR 20 challenges player CHE 18\"}\n]\n```"
+  },
+  {
+    "time": 2228.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player wipes nose\"}\n```"
+  },
+  {
+    "time": 2230.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"man Y touches man X's arm\"}\n]\n```"
+  },
+  {
+    "time": 2234.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Medical staff attending to player\"\n}\n```"
+  },
+  {
+    "time": 2236.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player X pushes player Y\"}\n]\n```"
+  },
+  {
+    "time": 2240.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 26 fouls player 3\"}\n]\n```"
+  },
+  {
+    "time": 2244.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 26 fouls player 2\"}\n]\n```"
+  },
+  {
+    "time": 2246.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player drinks water\"}\n```"
+  },
+  {
+    "time": 2250.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player X kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2254.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 10 kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2256.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue kicks the ball away from player in maroon\"\n}\n```"
+  },
+  {
+    "time": 2258.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Goalkeeper makes a save\"}\n]\n```"
+  },
+  {
+    "time": 2260.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 25 fouls player 19\"}\n]\n```"
+  },
+  {
+    "time": 2262.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue attempts a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2266.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 2268.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player 2 points at the referee\"}\n```"
+  },
+  {
+    "time": 2270.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue jersey interacts with another player\"\n}\n```"
+  },
+  {
+    "time": 2272.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 2274.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 2276.0,
+    "raw": "```json\n{\n  \"label\": \"Other\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player looks around the field\"\n}\n```"
+  },
+  {
+    "time": 2280.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team touches his ear\"}\n```"
+  },
+  {
+    "time": 2284.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player from away team is fouled\"}\n```"
+  },
+  {
+    "time": 2286.0,
+    "raw": "```json\n{\"label\": \"Substitution\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player in blue jersey is substituted\"}\n```"
+  },
+  {
+    "time": 2288.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team is being spoken to by the referee\"\n}\n```"
+  },
+  {
+    "time": 2290.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"ball out of play\"}\n]\n```"
+  },
+  {
+    "time": 2292.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls a player from home team\"\n}\n```"
+  },
+  {
+    "time": 2296.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 2300.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2304.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2306.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2310.0,
+    "raw": "```json\n{\n  \"label\": \"Set Pieces\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Free-kick\"\n}\n```"
+  },
+  {
+    "time": 2312.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2314.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2318.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2324.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2326.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2330.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2332.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2336.0,
+    "raw": "```json\n{\"label\": \"Set Pieces\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Free-kick\"}\n```"
+  },
+  {
+    "time": 2338.0,
+    "raw": "```json\n{\"label\": \"Throw-in\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player throws the ball in\"}\n```"
+  },
+  {
+    "time": 2340.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player holding ball\"}\n```"
+  },
+  {
+    "time": 2342.0,
+    "raw": "```json\n[\n\t{\"label\": \"Free-kick\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 20 takes free-kick\"}\n]\n```"
+  },
+  {
+    "time": 2344.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player in blue kicks the ball away\"}\n```"
+  },
+  {
+    "time": 2346.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in white shirt fouls player in blue shirt\"}\n]\n```"
+  },
+  {
+    "time": 2348.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 21 fouls player 2\"}\n]\n```"
+  },
+  {
+    "time": 2352.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"man Yells at referee\"}\n]\n```"
+  },
+  {
+    "time": 2356.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 2360.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2364.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 2368.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 23 fouls player 16\"}\n]\n```"
+  },
+  {
+    "time": 2372.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player from home team fouls player from away team\"}\n```"
+  },
+  {
+    "time": 2374.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 3 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 2378.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2382.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2386.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2390.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2392.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2396.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2398.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 20 fouls player 8\"}\n]\n```"
+  },
+  {
+    "time": 2402.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 21 is lying on the ground\"}\n]\n```"
+  },
+  {
+    "time": 2404.0,
+    "raw": "```json\n[\n\t{\"label\": \"Yellow card\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Referee shows yellow card\"}\n]\n```"
+  },
+  {
+    "time": 2406.0,
+    "raw": "```json\n[\n\t{\"label\": \"Yellow card\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"to player 25\"}\n]\n```"
+  },
+  {
+    "time": 2408.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player B is fouled by Player A\"}\n```"
+  },
+  {
+    "time": 2410.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"ball is shown\"}\n]\n```"
+  },
+  {
+    "time": 2412.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 21 kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2414.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player 21 fouls player 6\"}\n]\n```"
+  },
+  {
+    "time": 2418.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"player 51 blocks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2422.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n```"
+  },
+  {
+    "time": 2424.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player in blue jersey\"\n}\n```"
+  },
+  {
+    "time": 2428.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2430.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2434.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 25 fouls player 21\"}\n]\n```"
+  },
+  {
+    "time": 2438.0,
+    "raw": "```json\n{\n  \"label\": \"Shot on target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot towards the goal\"\n}\n```"
+  },
+  {
+    "time": 2440.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2444.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n```"
+  },
+  {
+    "time": 2446.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2450.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2452.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2454.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2458.0,
+    "raw": "```json\n[\n\t{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player scores\"}\n]\n```"
+  },
+  {
+    "time": 2460.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2462.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2466.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2470.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player 26 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 2472.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2474.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2476.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2480.0,
+    "raw": "```json\n{\n  \"label\": \"Shot on target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot towards the goal\"\n}\n```"
+  },
+  {
+    "time": 2482.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2486.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2490.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2492.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 25 takes a shot\"}\n]\n```"
+  },
+  {
+    "time": 2494.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in white jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2498.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2500.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2502.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2506.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2510.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2512.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player in blue kicks the ball\"}\n]\n```"
+  },
+  {
+    "time": 2514.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2518.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2520.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2524.0,
+    "raw": "```json\n{\n  \"label\": \"Goal\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player scores a goal\"\n}\n```"
+  },
+  {
+    "time": 2528.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team is fouled\"\n}\n```"
+  },
+  {
+    "time": 2530.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player looks at the camera\"}\n```"
+  },
+  {
+    "time": 2534.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Goal scored by player in white jersey\"}\n```"
+  },
+  {
+    "time": 2538.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"player X pushes player Y\"}\n]\n```"
+  },
+  {
+    "time": 2540.0,
+    "raw": "```json\n[\n\t{\"label\": \"Corner\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"corner from the right side\"}\n]\n```"
+  },
+  {
+    "time": 2542.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player scores goal\"}\n```"
+  },
+  {
+    "time": 2544.0,
+    "raw": "```json\n{\"label\": \"Goal\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player scores\"}\n```"
+  },
+  {
+    "time": 2546.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2548.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2550.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 2552.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2554.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2558.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2562.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2566.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot from outside the box but misses\"\n}\n```"
+  },
+  {
+    "time": 2570.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2574.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2578.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2580.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 2584.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2588.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2592.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.8,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2594.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2596.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2598.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls player from home team\"\n}\n```"
+  },
+  {
+    "time": 2600.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls the player from home team\"}\n```"
+  },
+  {
+    "time": 2604.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Trippier fouls Filipe Luis\"}\n]\n```"
+  },
+  {
+    "time": 2606.0,
+    "raw": "```json\n{\"label\": \"Free-kick\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player 8 takes a free-kick\"}\n```"
+  },
+  {
+    "time": 2608.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2610.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in red jersey takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2614.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2618.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2622.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2624.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2626.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from home team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2628.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2630.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player 20 is fouled by Player 19\"}\n]\n```"
+  },
+  {
+    "time": 2634.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses\"\n}\n```"
+  },
+  {
+    "time": 2636.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2640.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2642.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.8, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2644.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2646.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2650.0,
+    "raw": "```json\n[\n\t{\"label\": \"Shot off target\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player takes a shot from outside the box\"}\n]\n```"
+  },
+  {
+    "time": 2654.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player A is fouled by Player B\"}\n```"
+  },
+  {
+    "time": 2658.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player kicks the ball but misses\"}\n```"
+  },
+  {
+    "time": 2660.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2662.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.8, \"details\": \"Player 25 fouls player 19\"}\n]\n```"
+  },
+  {
+    "time": 2664.0,
+    "raw": "```json\n[\n\t{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Ball goes out of play\"}\n]\n```"
+  },
+  {
+    "time": 2666.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2668.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the player from home team\"\n}\n```"
+  },
+  {
+    "time": 2672.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player from away team fouls player from home team\"}\n]\n```"
+  },
+  {
+    "time": 2674.0,
+    "raw": "```json\n{\n  \"label\": \"Substitution\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player X is substituted by Player Y\"\n}\n```"
+  },
+  {
+    "time": 2676.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"player looks at the field\"}\n```"
+  },
+  {
+    "time": 2678.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.94, \"details\": \"Player from away team pushes opponent\"}\n```"
+  },
+  {
+    "time": 2682.0,
+    "raw": "```json\n{\"label\": \"Other\", \"team\": \"home\", \"confidence\": 0.9, \"details\": \"Player looks around\"}\n```"
+  },
+  {
+    "time": 2684.0,
+    "raw": "```json\n{\"label\": \"Foul\", \"team\": \"home\", \"confidence\": 0.94, \"details\": \"Player from home team is fouled\"}\n```"
+  },
+  {
+    "time": 2686.0,
+    "raw": "```json\n{\"label\": \"Ball out of play\", \"team\": \"home\", \"confidence\": 0.96, \"details\": \"Ball goes out of play\"}\n```"
+  },
+  {
+    "time": 2688.0,
+    "raw": "```json\n{\"label\": \"Shot off target\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"Player takes a shot but misses the goal\"}\n```"
+  },
+  {
+    "time": 2690.0,
+    "raw": "```json\n{\n  \"label\": \"Foul\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team fouls the opponent\"\n}\n```"
+  },
+  {
+    "time": 2692.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"away\",\n  \"confidence\": 0.9,\n  \"details\": \"Player from away team takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2696.0,
+    "raw": "```json\n{\n  \"label\": \"Shot off target\",\n  \"team\": \"home\",\n  \"confidence\": 0.9,\n  \"details\": \"Player in blue takes a shot but misses the goal\"\n}\n```"
+  },
+  {
+    "time": 2698.0,
+    "raw": "```json\n[\n\t{\"label\": \"Foul\", \"team\": \"away\", \"confidence\": 0.9, \"details\": \"by player BUR 24\"}\n]\n```"
+  }
+]
