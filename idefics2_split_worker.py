@@ -154,9 +154,8 @@ while current_time < my_end_time:
     # Load all frames (same as Qwen: 15 frames at 5 FPS)
     images = [Image.open(f).convert('RGB') for f in frames]
 
-    # Idefics2 format: multiple <image> tokens
-    image_tokens = " ".join(["<image>"] * len(images))
-    text = f"{image_tokens}\n\nContext: {match_context}\n\nAnalyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip. Detect ANY of these 17 soccer events:\n- Goals/Shots: Goal, Shot on target, Shot off target\n- Fouls/Cards: Foul, Yellow card, Red card, Offside\n- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n- Other: Substitution, Ball out of play, Clearance\n\nFor EACH event detected, output a JSON object:\n{{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}}\nIf nothing significant happens, output: None"
+    # Idefics2 format: text without <image> tokens (processor adds them from message structure)
+    text = f"Context: {match_context}\n\nAnalyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip. Detect ANY of these 17 soccer events:\n- Goals/Shots: Goal, Shot on target, Shot off target\n- Fouls/Cards: Foul, Yellow card, Red card, Offside\n- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n- Other: Substitution, Ball out of play, Clearance\n\nFor EACH event detected, output a JSON object:\n{{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}}\nIf nothing significant happens, output: None"
 
     messages = [
         {
