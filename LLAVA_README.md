@@ -1,34 +1,49 @@
-# LLaVA-NeXT-Video Pipeline
+# LLaVA Pipeline (v1.6-Mistral-7B)
 
 ## Overview
 
-This pipeline processes soccer videos using **LLaVA-NeXT-Video-7B**, a state-of-the-art vision-language model specifically designed for video understanding. It runs in parallel across 4 GPUs for efficient processing.
+This pipeline processes soccer videos using **LLaVA-v1.6-Mistral-7B**, a powerful vision-language model that processes frames independently. It runs in parallel across 4 GPUs for efficient processing.
 
 ### Model Details
 
-- **Model**: `llava-hf/LLaVA-NeXT-Video-7B-hf`
+- **Model**: `llava-hf/llava-v1.6-mistral-7b-hf`
 - **Size**: 7B parameters
 - **Quantization**: 4-bit (BitsAndBytes NF4)
-- **VRAM per GPU**: ~11GB
-- **Specialization**: Video understanding and temporal reasoning
-- **Perfect for**: Event detection in sequential video frames
+- **VRAM per GPU**: ~11GB (same as Qwen)
+- **Architecture**: Processes frames independently (like Qwen)
+- **Perfect for**: Multi-frame event detection with consistent memory usage
 
-### Why LLaVA-NeXT-Video?
+### Settings (Matched to Qwen for Fair Comparison)
 
-1. **Video-native architecture** - Designed to understand temporal sequences
-2. **Efficient memory usage** - 7B model fits comfortably with 4-bit quantization
-3. **Strong visual reasoning** - Excellent at detecting nuanced soccer events
-4. **Different perspective** - Complements Qwen's detections for ensemble analysis
+- **5 FPS** - Same as Qwen
+- **3 second window** - 15 frames per inference
+- **2 second step** - 50% overlap
+- **Same quantization** - 4-bit NF4
+- **Same resolution** - Processor handles image sizing
+
+### Why LLaVA-v1.6-Mistral?
+
+1. **Frame-independent processing** - Like Qwen, processes each frame separately
+2. **Proven memory footprint** - Fits in ~11GB with 15 frames
+3. **Multi-image support** - Can analyze up to 15 frames in one prompt
+4. **Strong visual reasoning** - Excellent at detecting nuanced soccer events
+5. **Fair comparison** - Same settings as Qwen for apple-to-apple results
+
+**Note**: We switched from LLaVA-NeXT-Video (which has cross-frame attention) to LLaVA-v1.6 (frame-independent) because the Video variant required 284GB VRAM with 15 frames due to its temporal attention mechanism.
 
 ---
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 1. Copy Scripts to Project Directory
 
 ```bash
-# The model should work with existing dependencies, but if needed:
-pip install transformers accelerate torch pillow bitsandbytes
+# Run the setup script to copy files
+bash setup_llava.sh
+
+# Or manually:
+cp llava_split_worker.py ~/soccer_project/
+cp merge_results_llava.py ~/soccer_project/
 ```
 
 ### 2. Set HuggingFace Token
@@ -101,17 +116,18 @@ Video 0 (50 min match)
 ### Temporal Processing
 
 Each GPU processes its time slice with:
-- **3-second windows** at 5 FPS (15 frames per window)
+- **3-second windows** at 5 FPS (15 frames per window - same as Qwen)
 - **2-second step** (50% overlap to catch events at boundaries)
-- **Frames processed as video sequence** (not independent images)
+- **Frames processed independently** but analyzed together in one prompt
+- **Processor auto-handles** image resolution
 
 Example for GPU 0 (0-750s):
 ```
-Window 1: 0-3s    (15 frames)
+Window 1: 0-3s    (15 frames at 5 FPS)
 Window 2: 2-5s    (15 frames, overlaps 1s with Window 1)
 Window 3: 4-7s    (15 frames, overlaps 1s with Window 2)
 ...
-Window 374: 747-750s
+Window 375: 748-751s (partial window)
 ```
 
 ---
@@ -198,15 +214,20 @@ Use both models to:
 If the model fails to download:
 ```bash
 # Pre-download the model
-python -c "from transformers import LlavaNextVideoForConditionalGeneration; LlavaNextVideoForConditionalGeneration.from_pretrained('llava-hf/LLaVA-NeXT-Video-7B-hf')"
+python -c "from transformers import LlavaNextForConditionalGeneration; LlavaNextForConditionalGeneration.from_pretrained('llava-hf/llava-v1.6-mistral-7b-hf')"
 ```
 
 ### VRAM Issues
 
-If you get OOM (Out of Memory) errors:
-1. Check GPU memory: `nvidia-smi`
-2. Reduce FPS in `llava_split_worker.py` (line 22): `FPS = 3.0` instead of `5.0`
-3. Reduce window size (line 23): `WINDOW_SECONDS = 2.0` instead of `3.0`
+The script uses the same settings as Qwen (15 frames, 5 FPS) and should fit comfortably in 24GB.
+
+If you get OOM errors:
+
+1. **Check GPU memory**: `nvidia-smi`
+2. **The script auto-skips OOM windows** - Check log for `⚠️ OOM at` messages
+3. **If persistent**, it may indicate a different issue - check the error logs
+
+The model processes frames independently (not with cross-frame attention), so memory usage is predictable and similar to Qwen.
 
 ### Empty Results
 
@@ -248,16 +269,17 @@ ls ~/soccer_project/final_predictions_llava_video_*.json
 
 ## Model Comparison Chart
 
-| Feature | Qwen 2.5-VL 7B | LLaVA-NeXT-Video 7B |
-|---------|----------------|---------------------|
-| **Architecture** | Unified vision-language | Video-specialized |
-| **Training** | Images + some video | Extensive video datasets |
-| **Temporal reasoning** | Good | Excellent |
+| Feature | Qwen 2.5-VL 7B | LLaVA-v1.6-Mistral 7B |
+|---------|----------------|----------------------|
+| **Architecture** | Frame-independent | Frame-independent |
+| **Training** | Images + some video | Images |
+| **Frames per window** | 15 (5 FPS × 3s) | 15 (5 FPS × 3s) |
 | **Memory usage** | ~11GB (4-bit) | ~11GB (4-bit) |
 | **Speed** | Fast | Fast |
-| **Best for** | General vision + text | Video understanding |
+| **Base LLM** | Qwen 2.5 | Mistral 7B |
+| **Best for** | General vision + text | Multi-image analysis |
 
-Both models complement each other - use results from both for comprehensive event detection!
+Both models use the same settings for fair comparison. Combining results enables ensemble predictions and confidence scoring!
 
 ---
 
