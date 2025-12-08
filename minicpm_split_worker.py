@@ -1,10 +1,22 @@
 import os
 import sys
+import argparse
+
+# Parse args FIRST to get GPU ID before importing torch
+parser = argparse.ArgumentParser()
+parser.add_argument("--gpu_id", type=int, required=True)
+parser.add_argument("--num_workers", type=int, default=4)
+parser.add_argument("--video_index", type=int, default=0, help="Index of video to process")
+args = parser.parse_args()
+
+# CRITICAL: Set CUDA_VISIBLE_DEVICES BEFORE importing torch
+# This isolates each worker to only see its assigned GPU
+os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu_id)
+
 import json
 import subprocess
 import shutil
 import torch
-import argparse
 from pathlib import Path
 from PIL import Image
 from transformers import AutoModel, AutoTokenizer
@@ -28,18 +40,14 @@ TARGET_DURATION = 3000  # Process first 50 mins (full match half)
 # WORKER SETUP
 # ============================================================================
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--gpu_id", type=int, required=True)
-parser.add_argument("--num_workers", type=int, default=4)
-parser.add_argument("--video_index", type=int, default=0, help="Index of video to process")
-args = parser.parse_args()
-
 # Calculate Time Slice for this GPU
 slice_duration = TARGET_DURATION / args.num_workers
 my_start_time = args.gpu_id * slice_duration
 my_end_time = my_start_time + slice_duration
 
-device_id = f"cuda:{args.gpu_id}"
+# After CUDA_VISIBLE_DEVICES is set, the only visible GPU is cuda:0
+device_id = "cuda:0"
+
 print(f"👷 [GPU {args.gpu_id}] Timeline: {my_start_time:.1f}s to {my_end_time:.1f}s")
 
 output_filename = os.path.join(BASE_DIR, f"partial_results_minicpm_vid{args.video_index}_gpu{args.gpu_id}.json")
