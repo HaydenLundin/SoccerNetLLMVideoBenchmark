@@ -148,18 +148,22 @@ while current_time < my_end_time:
     # Load all frames (same as Qwen: 15 frames at 5 FPS)
     images = [Image.open(f).convert('RGB') for f in frames]
 
-    # Build prompt
+    # Build prompt - STRICT JSON OUTPUT FORMAT
     prompt = (
         f"Context: {match_context}\n\n"
-        f"Analyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip. "
-        f"Detect ANY of these 17 soccer events:\n"
-        "- Goals/Shots: Goal, Shot on target, Shot off target\n"
-        "- Fouls/Cards: Foul, Yellow card, Red card, Offside\n"
-        "- Set Pieces: Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick\n"
-        "- Other: Substitution, Ball out of play, Clearance\n\n"
-        "For EACH event detected, output a JSON object:\n"
-        "{'label': 'EVENT_TYPE', 'team': 'home' OR 'away', 'confidence': 0.0-1.0, 'details': 'brief description'}\n"
-        "If nothing significant happens, output: None"
+        f"Analyze these {len(images)} frames from a {WINDOW_SECONDS}s soccer clip.\n\n"
+        "TASK: Detect soccer events from this list ONLY:\n"
+        "Goal, Shot on target, Shot off target, Foul, Yellow card, Red card, Offside, "
+        "Corner, Free-kick, Penalty, Throw-in, Kick-off, Goal kick, Substitution, Ball out of play, Clearance\n\n"
+        "OUTPUT FORMAT: You MUST output ONLY valid JSON. No explanations, no markdown, no bullet points.\n"
+        "For each event, output exactly this format on one line:\n"
+        '{"label": "EVENT_NAME", "team": "home", "confidence": 0.85, "details": "brief description"}\n\n'
+        "RULES:\n"
+        '- "team" MUST be exactly "home" or "away" (not team names)\n'
+        '- "label" MUST be one of the 16 events listed above\n'
+        "- Output one JSON object per line\n"
+        "- If no events detected, output exactly: None\n\n"
+        "OUTPUT:"
     )
 
     # MiniCPM-V format: images + question in content list
