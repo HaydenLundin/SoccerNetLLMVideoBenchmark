@@ -41,36 +41,59 @@ This project evaluates **15+ open-source and API-based Vision-Language Models** 
 
 ```
 SoccerNetLLMVideoBenchmark/
-├── Worker Scripts (Inference)
+├── README.md
+│
+├── workers/                    # HPC Inference Scripts
 │   ├── qwen_split_worker.py        # Qwen 2.5-VL 7B inference
 │   ├── llava_split_worker.py       # LLaVA-v1.6 inference
 │   ├── phi3_split_worker.py        # Phi-3.5-Vision inference
+│   ├── phi3_split_worker_gcloud.py # Phi-3.5 for Google Cloud
 │   ├── idefics2_split_worker.py    # IDEFICS2-8B inference
 │   └── minicpm_split_worker.py     # MiniCPM-V 2.6 inference
 │
-├── Merge & Deduplication
+├── slurm/                      # SLURM Job Orchestration
+│   ├── submit_*.sh                 # Job submission scripts
+│   ├── setup_*.sh                  # Environment setup scripts
+│   └── run_minicpm.sh              # MiniCPM runner
+│
+├── processing/                 # Data Processing & Cleanup
 │   ├── merge_results.py            # Generic merge with deduplication
 │   ├── merge_results_*.py          # Model-specific merge scripts
 │   ├── deduplicate_qwen.py         # Advanced multi-strategy parser
-│   └── cleanup_*.py                # Cleanup scripts
-│
-├── Orchestration (SLURM)
-│   ├── submit_*.sh                 # SLURM job submission scripts
-│   └── setup_*.sh                  # Environment setup scripts
-│
-├── Utilities
+│   ├── cleanup_*.py                # Cleanup scripts
 │   └── download_batch.py           # SoccerNet dataset downloader
 │
-├── Results
-│   ├── qwenjson/                   # Qwen model results (21 videos)
-│   └── phi3.5/                     # Phi-3.5 results
+├── colab/                      # Google Colab Notebooks
+│   ├── annotation_pipeline.py      # Local VLM annotation (A100)
+│   ├── openrouter_pipeline.py      # 6-model OpenRouter pipeline
+│   ├── video_download.py           # Video download + annotation
+│   ├── colab_analysis.py           # Results analysis
+│   ├── gemini_api_quota.py         # Gemini API quota check
+│   ├── gpu_cleanup.py              # GPU memory cleanup
+│   └── utilities/
+│       ├── awq_install.sh          # AWQ installation
+│       ├── install_soccernet.py    # SoccerNet setup
+│       └── google_drive_check*.py  # Drive verification
 │
-└── Documentation
-    ├── RETROSPECTIVE_REPORT.md     # Technical report & lessons learned
-    ├── LLAVA_README.md             # LLaVA pipeline docs
-    ├── IDEFICS2_README.md          # IDEFICS2 pipeline docs
-    ├── DEDUPLICATION_README.md     # Deduplication strategy
-    └── RESTART_README.md           # Resumable processing docs
+├── model_tests/                # Model Test Scripts
+│   ├── pixtral_12b_test.py         # Pixtral-12B validation
+│   ├── llama_11b_vision_test.py    # Llama 3.2 11B test
+│   ├── phi4_test.py                # Microsoft Phi-4 test
+│   └── qwen_32b_awq_test.py        # Qwen 32B AWQ test
+│
+├── docs/                       # Documentation
+│   ├── RETROSPECTIVE_REPORT.md     # Technical report & lessons
+│   ├── LLAVA_README.md             # LLaVA pipeline docs
+│   ├── IDEFICS2_README.md          # IDEFICS2 pipeline docs
+│   ├── DEDUPLICATION_README.md     # Deduplication strategy
+│   ├── RESTART_README.md           # Resumable processing docs
+│   └── TOKEN_FIX.md                # HuggingFace token guide
+│
+└── results/                    # Benchmark Results
+    ├── qwen/                       # Qwen model results (21 videos)
+    │   └── final_predictions_qwen7b_video_*.json
+    └── phi3/                       # Phi-3.5 results
+        └── final_predictions_phi3.5_video_*.json
 ```
 
 ## Requirements
@@ -122,7 +145,7 @@ export HF_TOKEN=your_huggingface_token
 
 4. Download SoccerNet dataset:
 ```bash
-python download_batch.py --batch 0  # Downloads first 20 videos
+python processing/download_batch.py --batch 0  # Downloads first 20 videos
 ```
 
 ## Usage
@@ -131,28 +154,37 @@ python download_batch.py --batch 0  # Downloads first 20 videos
 
 ```bash
 # Process a single video with Qwen model
-python qwen_split_worker.py --video_id 0 --gpu_id 0 --start 0 --end 750
+python workers/qwen_split_worker.py --video_id 0 --gpu_id 0 --start 0 --end 750
 ```
 
 ### Batch Processing (SLURM)
 
 ```bash
 # Submit batch job for multiple videos
-sbatch submit_qwen.sh
+sbatch slurm/submit_qwen.sh
 ```
 
 ### Merge Results
 
 ```bash
 # Merge partial results from multiple GPUs
-python merge_results_qwen.py --video_id 0
+python processing/merge_results.py --video_id 0
 ```
 
 ### Deduplicate Events
 
 ```bash
 # Remove duplicate events with advanced parsing
-python deduplicate_qwen.py --input qwenjson/ --debug
+python processing/deduplicate_qwen.py --input results/qwen/ --debug
+```
+
+### Google Colab Processing
+
+```python
+# Run the annotation pipeline in Colab
+# 1. Upload colab/annotation_pipeline.py to Colab
+# 2. Set your HF_TOKEN in Colab secrets
+# 3. Execute the notebook cells
 ```
 
 ## Processing Pipeline
@@ -191,10 +223,10 @@ The models detect 17 soccer event types:
 ### Parallelization Strategy
 
 ```
-GPU 0 → Process 0-750s     ┐
-GPU 1 → Process 750-1500s  ├→ Merge & Deduplicate → Final Results
-GPU 2 → Process 1500-2250s │
-GPU 3 → Process 2250-3000s ┘
+GPU 0 -> Process 0-750s     \
+GPU 1 -> Process 750-1500s   |-> Merge & Deduplicate -> Final Results
+GPU 2 -> Process 1500-2250s  |
+GPU 3 -> Process 2250-3000s /
 ```
 
 ### JSON Parsing Strategies
@@ -202,23 +234,24 @@ GPU 3 → Process 2250-3000s ┘
 The deduplication system uses 5 fallback strategies:
 1. Direct JSON parse
 2. Regex extraction of `{...}` patterns
-3. Single quotes → double quotes conversion
+3. Single quotes -> double quotes conversion
 4. Python `ast.literal_eval` for dict syntax
 5. Similarity matching for near-duplicates
 
 ## Results
 
 - **Qwen2.5-VL-7B**: 21 videos processed, ~900 events per 50-minute half
-- **Deduplication**: 49.4% reduction (176 → 89 events average)
+- **Deduplication**: 49.4% reduction (176 -> 89 events average)
 - **Processing Time**: 3-5 minutes per video with 4 GPUs
 
 ## Documentation
 
-- [RETROSPECTIVE_REPORT.md](RETROSPECTIVE_REPORT.md) - Comprehensive technical report
-- [LLAVA_README.md](LLAVA_README.md) - LLaVA pipeline documentation
-- [IDEFICS2_README.md](IDEFICS2_README.md) - IDEFICS2 pipeline documentation
-- [DEDUPLICATION_README.md](DEDUPLICATION_README.md) - Deduplication strategy
-- [RESTART_README.md](RESTART_README.md) - Resumable processing workflow
+- [Technical Retrospective](docs/RETROSPECTIVE_REPORT.md) - Comprehensive lessons learned
+- [LLaVA Pipeline](docs/LLAVA_README.md) - LLaVA-specific documentation
+- [IDEFICS2 Pipeline](docs/IDEFICS2_README.md) - IDEFICS2-specific documentation
+- [Deduplication Strategy](docs/DEDUPLICATION_README.md) - Event deduplication approach
+- [Resumable Processing](docs/RESTART_README.md) - Checkpoint and restart workflow
+- [Token Setup](docs/TOKEN_FIX.md) - HuggingFace token configuration
 
 ## Contributing
 
