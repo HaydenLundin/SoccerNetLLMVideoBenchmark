@@ -1,0 +1,15 @@
+capstone_archive/
+__pycache__/
+.venv/
+.env
+*.mkv
+*.mp4
+*.pyc
+
+# Local scratch and temporary test runs
+scratch/
+test_slices/
+gate2_raw_video/
+test_eval_synthetic_predictions/
+test_eval_ground_truth/
+

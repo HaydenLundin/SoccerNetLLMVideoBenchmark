@@ -1,0 +1,1347 @@
+[
+  {
+    "model_key": "qwen3.5-4b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.287,
+    "load_reserved_gib": 3.33,
+    "peak_allocated_gib": 3.816,
+    "peak_reserved_gib": 3.986,
+    "wall_clock_sec": 27.409,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Arsenal player takes a direct free-kick from the edge of the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The ball hits the crossbar and bounces off into the net for a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:06\",\n    \"commentary\": \"The referee blows the whistle to signal the goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"Arsenal player and Manchester United player shake hands after the goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Arsenal player takes a direct free-kick from the edge of the penalty area.",
+        "label": "Direct free-kick",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:02",
+        "commentary": "The ball hits the crossbar and bounces off into the net for a goal.",
+        "label": "Goal",
+        "confidence": 0.98,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "The referee blows the whistle to signal the goal.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "Arsenal player and Manchester United player shake hands after the goal.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "Qwen3.5-4B",
+    "track": 1
+  },
+  {
+    "model_key": "qwen3.5-4b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.287,
+    "load_reserved_gib": 3.33,
+    "peak_allocated_gib": 4.433,
+    "peak_reserved_gib": 4.643,
+    "wall_clock_sec": 28.217,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "```json\n[\n  {\"timestamp\": \"00:00\", \"commentary\": \"Arsenal player Koke takes a direct free-kick from the edge of the penalty area.\", \"label\": \"Direct free-kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:05\", \"commentary\": \"The ball is struck towards the goal and deflects off the crossbar into the net.\", \"label\": \"Goal\", \"confidence\": 0.98, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:10\", \"commentary\": \"Arsenal player Koke reacts with a smile after scoring the goal.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:15\", \"commentary\": \"Manchester United player Paul Pogba raises his arms to the crowd in celebration.\", \"label\": \"Goal\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:20\", \"commentary\": \"Replay view showing the trajectory of the free-kick and the goal.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"replay\"}\n]\n```\n",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Arsenal player Koke takes a direct free-kick from the edge of the penalty area.",
+        "label": "Direct free-kick",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:05",
+        "commentary": "The ball is struck towards the goal and deflects off the crossbar into the net.",
+        "label": "Goal",
+        "confidence": 0.98,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "Arsenal player Koke reacts with a smile after scoring the goal.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "Manchester United player Paul Pogba raises his arms to the crowd in celebration.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:20",
+        "commentary": "Replay view showing the trajectory of the free-kick and the goal.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "replay"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.03,
+    "passed": true,
+    "model_name": "Qwen3.5-4B",
+    "track": 1
+  },
+  {
+    "model_key": "qwen3.5-4b",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.287,
+    "load_reserved_gib": 3.33,
+    "peak_allocated_gib": 6.386,
+    "peak_reserved_gib": 7.068,
+    "wall_clock_sec": 40.86,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "```json\n[\n  {\"timestamp\": \"00:00\", \"commentary\": \"Arsenal player takes a direct free-kick from the edge of the penalty area.\", \"label\": \"Direct free-kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:02\", \"commentary\": \"The ball is struck towards the goal and deflects off the crossbar into the net.\", \"label\": \"Goal\", \"confidence\": 0.98, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:06\", \"commentary\": \"Arsenal player Koscielny is shown reacting to the goal.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:10\", \"commentary\": \"Arsenal player Koscielny and Manchester United player Marouane Fellain are shown standing on the pitch.\", \"label\": \"Goal\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:14\", \"commentary\": \"Manchester United player Paul Pogba raises his arms to the crowd.\", \"label\": \"Goal\", \"confidence\": 0.80, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:19\", \"commentary\": \"Manchester United player Paul Pogba is shown from behind.\", \"label\": \"Goal\", \"confidence\": 0.80, \"visibility\": \"visible\"},\n  {\"timestamp\": \"00:20\", \"commentary\": \"Manchester United player Paul Pogba is shown from behind.\", \"label\": \"Goal\", \"confidence\": 0.80, \"visibility\": \"visible\"},\n  {\"timestamp\": \"",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Arsenal player takes a direct free-kick from the edge of the penalty area.",
+        "label": "Direct free-kick",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:02",
+        "commentary": "The ball is struck towards the goal and deflects off the crossbar into the net.",
+        "label": "Goal",
+        "confidence": 0.98,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "Arsenal player Koscielny is shown reacting to the goal.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "Arsenal player Koscielny and Manchester United player Marouane Fellain are shown standing on the pitch.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:14",
+        "commentary": "Manchester United player Paul Pogba raises his arms to the crowd.",
+        "label": "Goal",
+        "confidence": 0.8,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:19",
+        "commentary": "Manchester United player Paul Pogba is shown from behind.",
+        "label": "Goal",
+        "confidence": 0.8,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:20",
+        "commentary": "Manchester United player Paul Pogba is shown from behind.",
+        "label": "Goal",
+        "confidence": 0.8,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.45,
+    "passed": true,
+    "model_name": "Qwen3.5-4B",
+    "track": 1
+  },
+  {
+    "model_key": "internvl3.5-2b",
+    "precision": "bf16",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.374,
+    "load_reserved_gib": 4.395,
+    "peak_allocated_gib": 7.883,
+    "peak_reserved_gib": 9.064,
+    "wall_clock_sec": 23.411,
+    "schema_valid": true,
+    "shared_memory_spill": true,
+    "verdict": "OOM_FAIL",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"Players are positioned for a free kick near the goal.\", \"label\": \"Free kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:01\", \"commentary\": \"The ball is kicked towards the goal area.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:02\", \"commentary\": \"The ball crosses the goal line, resulting in a goal.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:03\", \"commentary\": \"Players react to the goal, with one player in yellow celebrating.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:04\", \"commentary\": \"Players from both teams are seen on the field, with the crowd in the background.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:01",
+        "commentary": "The ball is kicked towards the goal area.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:02",
+        "commentary": "The ball crosses the goal line, resulting in a goal.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:03",
+        "commentary": "Players react to the goal, with one player in yellow celebrating.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:04",
+        "commentary": "Players from both teams are seen on the field, with the crowd in the background.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": false,
+    "model_name": "InternVL3.5-2B",
+    "track": 1
+  },
+  {
+    "model_key": "smolvlm2-2.2b",
+    "precision": "bf16",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.185,
+    "load_reserved_gib": 4.205,
+    "peak_allocated_gib": 4.679,
+    "peak_reserved_gib": 4.764,
+    "wall_clock_sec": 11.723,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": " {\"timestamp\": \"00:05\", \"commentary\": \"Player takes a corner kick into the box.\", \"label\": \"Corner\", \"confidence\": 0.90, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:06\", \"commentary\": \"Player takes a shot on goal from the corner kick.\", \"label\": \"Goal\", \"confidence\": 0.85, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:07\", \"commentary\": \"Goalkeeper makes a save, but the ball goes into the net.\", \"label\": \"Goal\", \"confidence\": 0.85, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:08\", \"commentary\": \"Player in yellow jersey celebrates the goal.\", \"label\": \"Goal\", \"confidence\": 0.85, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:09\", \"commentary\": \"Player in red jersey attempts a tackle but misses.\", \"label\": \"Offside\", \"confidence\": 0.80, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:10\", \"commentary\": \"Player in red jersey attempts a shot on goal but misses.\", \"label\": \"Shots off target\", \"confidence\": 0.75, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:11\", \"commentary\": \"Player in red jersey attempts a shot on goal but misses.\", \"label\": \"Shots off target\", \"confidence\": 0.75, \"visibility\": \"visible\"}\n\n{\"timestamp\": \"00:12\", \"commentary\": \"Player in red jersey attempts a shot",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:05",
+        "commentary": "Player takes a corner kick into the box.",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "Player takes a shot on goal from the corner kick.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:07",
+        "commentary": "Goalkeeper makes a save, but the ball goes into the net.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:08",
+        "commentary": "Player in yellow jersey celebrates the goal.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:09",
+        "commentary": "Player in red jersey attempts a tackle but misses.",
+        "label": "Offside",
+        "confidence": 0.8,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "Player in red jersey attempts a shot on goal but misses.",
+        "label": "Shots off target",
+        "confidence": 0.75,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:11",
+        "commentary": "Player in red jersey attempts a shot on goal but misses.",
+        "label": "Shots off target",
+        "confidence": 0.75,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "SmolVLM2-2.2B",
+    "track": 1
+  },
+  {
+    "model_key": "smolvlm2-2.2b",
+    "precision": "bf16",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.185,
+    "load_reserved_gib": 4.205,
+    "peak_allocated_gib": 5.054,
+    "peak_reserved_gib": 5.131,
+    "wall_clock_sec": 13.525,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": " {\"timestamp\":\"00:05\",\"commentary\":\"Player takes a corner kick into the box.\",\"label\":\"Corner\",\"confidence\":0.90,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:06\",\"commentary\":\"Player takes a shot on goal.\",\"label\":\"Goal\",\"confidence\":0.85,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:07\",\"commentary\":\"Player takes a free kick.\",\"label\":\"Free kick\",\"confidence\":0.80,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:08\",\"commentary\":\"Player takes a penalty kick.\",\"label\":\"Penalty\",\"confidence\":0.75,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:09\",\"commentary\":\"Player takes a throw-in.\",\"label\":\"Throw-in\",\"confidence\":0.70,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:10\",\"commentary\":\"Player takes a shot on goal.\",\"label\":\"Goal\",\"confidence\":0.65,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:11\",\"commentary\":\"Player takes a free kick.\",\"label\":\"Free kick\",\"confidence\":0.60,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:12\",\"commentary\":\"Player takes a penalty kick.\",\"label\":\"Penalty\",\"confidence\":0.55,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:13\",\"commentary\":\"Player takes a throw-in.\",\"label\":\"Throw-in\",\"confidence\":0.50,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:14\",\"commentary\":\"Player takes a shot on goal.\",\"label\":\"Goal\",\"confidence\":0.45,\"visibility",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:05",
+        "commentary": "Player takes a corner kick into the box.",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "Player takes a shot on goal.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:08",
+        "commentary": "Player takes a penalty kick.",
+        "label": "Penalty",
+        "confidence": 0.75,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:09",
+        "commentary": "Player takes a throw-in.",
+        "label": "Throw-in",
+        "confidence": 0.7,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "Player takes a shot on goal.",
+        "label": "Goal",
+        "confidence": 0.65,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "Player takes a penalty kick.",
+        "label": "Penalty",
+        "confidence": 0.55,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:13",
+        "commentary": "Player takes a throw-in.",
+        "label": "Throw-in",
+        "confidence": 0.5,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.15,
+    "passed": true,
+    "model_name": "SmolVLM2-2.2B",
+    "track": 1
+  },
+  {
+    "model_key": "smolvlm2-2.2b",
+    "precision": "bf16",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.185,
+    "load_reserved_gib": 4.205,
+    "peak_allocated_gib": 5.81,
+    "peak_reserved_gib": 6.061,
+    "wall_clock_sec": 17.731,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": " {\"timestamp\":\"00:05\",\"commentary\":\"Player takes a corner kick into the box.\",\"label\":\"Corner\",\"confidence\":0.90,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:06\",\"commentary\":\"Player takes a shot on goal.\",\"label\":\"Goal\",\"confidence\":0.85,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:07\",\"commentary\":\"Player takes a free kick.\",\"label\":\"Free kick\",\"confidence\":0.80,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:08\",\"commentary\":\"Player takes a penalty kick.\",\"label\":\"Penalty\",\"confidence\":0.75,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:09\",\"commentary\":\"Player takes a shot on goal.\",\"label\":\"Goal\",\"confidence\":0.70,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:10\",\"commentary\":\"Player takes a free kick.\",\"label\":\"Free kick\",\"confidence\":0.65,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:11\",\"commentary\":\"Player takes a penalty kick.\",\"label\":\"Penalty\",\"confidence\":0.60,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:12\",\"commentary\":\"Player takes a shot on goal.\",\"label\":\"Goal\",\"confidence\":0.55,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:13\",\"commentary\":\"Player takes a free kick.\",\"label\":\"Free kick\",\"confidence\":0.50,\"visibility\":\"visible\"}\n\n{\"timestamp\":\"00:14\",\"commentary\":\"Player takes a penalty kick.\",\"label\":\"Penalty\",\"confidence\":0.45,\"visibility\":\"visible\"}\n\n{\"",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:05",
+        "commentary": "Player takes a corner kick into the box.",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "Player takes a shot on goal.",
+        "label": "Goal",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:08",
+        "commentary": "Player takes a penalty kick.",
+        "label": "Penalty",
+        "confidence": 0.75,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:09",
+        "commentary": "Player takes a shot on goal.",
+        "label": "Goal",
+        "confidence": 0.7,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:11",
+        "commentary": "Player takes a penalty kick.",
+        "label": "Penalty",
+        "confidence": 0.6,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "Player takes a shot on goal.",
+        "label": "Goal",
+        "confidence": 0.55,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:14",
+        "commentary": "Player takes a penalty kick.",
+        "label": "Penalty",
+        "confidence": 0.45,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.31,
+    "passed": true,
+    "model_name": "SmolVLM2-2.2B",
+    "track": 1
+  },
+  {
+    "model_key": "gemma-4-e4b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 0.0,
+    "load_reserved_gib": 0.0,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. ",
+    "passed": false,
+    "model_name": "Gemma 4 E4B",
+    "track": 1
+  },
+  {
+    "model_key": "gemma-4-e4b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 0.0,
+    "load_reserved_gib": 0.0,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. ",
+    "passed": false,
+    "model_name": "Gemma 4 E4B",
+    "track": 1
+  },
+  {
+    "model_key": "gemma-4-e4b",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 0.0,
+    "load_reserved_gib": 0.0,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. ",
+    "passed": false,
+    "model_name": "Gemma 4 E4B",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "bf16",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.422,
+    "load_reserved_gib": 2.438,
+    "peak_allocated_gib": 3.211,
+    "peak_reserved_gib": 3.758,
+    "wall_clock_sec": 17.343,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A player in red attempts a shot at the goal, surrounded by yellow team defenders.\", \"label\": \"Shots on target\", \"confidence\": 0.85, \"visibility\": \"visible\"}], {\"timestamp\": \"00:05\", \"commentary\": \"A player in red scores a goal, as indicated by the celebration and crowd reaction.\", \"label\": \"Goal\", \"confidence\": 1.0, \"visibility\": \"visible\"}], {\"timestamp\": \"00:10\", \"commentary\": \"A player in red is seen celebrating near the sideline with the crowd in the background.\", \"label\": \"Yellow card\", \"confidence\": 0.70, \"visibility\": \"visible\"}], {\"timestamp\": \"00:15\", \"commentary\": \"The play continues with multiple players moving around the ball, indicating active gameplay.\", \"label\": \"Ball out of play\", \"confidence\": 0.60, \"visibility\": \"visible\"}], {\"timestamp\": \"00:20\", \"commentary\": \"A free-kick situation is set up with players positioning themselves for the kick.\", \"label\": \"Free-kick\", \"confidence\": 0.80, \"visibility\": \"visible\"}], {\"timestamp\": \"00:25\", \"commentary\": \"A player in red takes a shot at the goal, leading to a defensive response.\", \"label\": \"Shots on target\", \"confidence\": 0.75, \"visibility\": \"visible\"}], {\"timestamp\": \"00:30\", \"commentary\": \"The ball is headed towards the goal, resulting in a scramble for the goal.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A player in red attempts a shot at the goal, surrounded by yellow team defenders.",
+        "label": "Shots on target",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "bf16",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.422,
+    "load_reserved_gib": 2.438,
+    "peak_allocated_gib": 3.776,
+    "peak_reserved_gib": 4.871,
+    "wall_clock_sec": 14.025,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A player in a yellow jersey attempts a shot at the goal, facing a defensive wall.\", \"label\": \"Shots on target\", \"confidence\": 0.85, \"visibility\": \"visible\"}], {\"timestamp\": \"00:06\", \"commentary\": \"A player in red celebrates a goal, with the crowd reacting enthusiastically.\", \"label\": \"Goal\", \"confidence\": 1.0, \"visibility\": \"visible\"}], {\"timestamp\": \"00:12\", \"commentary\": \"An attacking play leads to a scramble near the goalpost, resulting in a free kick.\", \"label\": \"Free kick\", \"confidence\": 0.90, \"visibility\": \"visible\"}], {\"timestamp\": \"00:18\", \"commentary\": \"A player in red takes a shot, and the ball hits the back of the net.\", \"label\": \"Goal\", \"confidence\": 1.0, \"visibility\": \"visible\"}], {\"timestamp\": \"00:24\", \"commentary\": \"The team in red continues to advance the ball down the field, pushing for a scoring opportunity.\", \"label\": \"Ball out of play\", \"confidence\": 0.70, \"visibility\": \"visible\"}]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A player in a yellow jersey attempts a shot at the goal, facing a defensive wall.",
+        "label": "Shots on target",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "latency_scaling_ratio": 0.81,
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "bf16",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.422,
+    "load_reserved_gib": 2.438,
+    "peak_allocated_gib": 4.907,
+    "peak_reserved_gib": 8.496,
+    "wall_clock_sec": 6.797,
+    "schema_valid": false,
+    "shared_memory_spill": true,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"The game is in progress with players positioning themselves for an attack.}, \"label\": \"none\", \"confidence\": 0.0, \"visibility\": \"visible\"}]",
+    "error": "Array parse error: Expecting ',' delimiter: line 1 column 118 (char 117)",
+    "parsed_events": [],
+    "latency_scaling_ratio": 0.48,
+    "passed": false,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 1.039,
+    "load_reserved_gib": 1.287,
+    "peak_allocated_gib": 1.828,
+    "peak_reserved_gib": 2.6,
+    "wall_clock_sec": 26.217,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "{\"timestamp\": \"00:21\", \"commentary\": \"A player in a red jersey takes a shot at the goal, but the goalkeeper blocks the ball.\", \"label\": \"Shoot\", \"confidence\": 0.50}, {\"timestamp\": \"00:32\", \"commentary\": \"A player in a red jersey scores a goal, as the ball passes into the net.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:43\", \"commentary\": \"The player in the red jersey is celebrated by the team, while the opposing players react.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:54\", \"commentary\": \"A player in a yellow jersey is shown celebrating, while another player in red stands nearby.\", \"label\": \"Substitution\", \"confidence\": 0.80}, {\"timestamp\": \"01:05\", \"commentary\": \"The game continues with players moving around the penalty area.\", \"label\": \"Indirect free-kick\", \"confidence\": 0.70}, {\"timestamp\": \"01:16\", \"commentary\": \"The player in the red jersey attempts a shot, but the ball is blocked.\", \"label\": \"Shots off target\", \"confidence\": 0.90}, {\"timestamp\": \"01:27\", \"commentary\": \"The player in the yellow jersey is seen celebrating the goal.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"01:38\", \"commentary\": \"The game progresses with players positioning themselves for the next set of plays.\", \"label\": \"Indirect free-kick\", \"confidence\": 0.70}, {\"timestamp\": \"01:4",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:32",
+        "commentary": "A player in a red jersey scores a goal, as the ball passes into the net.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:43",
+        "commentary": "The player in the red jersey is celebrated by the team, while the opposing players react.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:54",
+        "commentary": "A player in a yellow jersey is shown celebrating, while another player in red stands nearby.",
+        "label": "Substitution",
+        "confidence": 0.8,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:05",
+        "commentary": "The game continues with players moving around the penalty area.",
+        "label": "Indirect free-kick",
+        "confidence": 0.7,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:16",
+        "commentary": "The player in the red jersey attempts a shot, but the ball is blocked.",
+        "label": "Shots off target",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:27",
+        "commentary": "The player in the yellow jersey is seen celebrating the goal.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:38",
+        "commentary": "The game progresses with players positioning themselves for the next set of plays.",
+        "label": "Indirect free-kick",
+        "confidence": 0.7,
+        "visibility": "visible"
+      }
+    ],
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 1.039,
+    "load_reserved_gib": 1.287,
+    "peak_allocated_gib": 2.392,
+    "peak_reserved_gib": 3.645,
+    "wall_clock_sec": 27.769,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A player in a red jersey takes a shot at the goal, with players from the opposing side attempting to block the play.\", \"label\": \"Shots on target\", \"confidence\": 0.95}, {\"timestamp\": \"00:15\", \"commentary\": \"A player in red celebrates a goal, raising his arms in victory, while the opposing team reacts to the score.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:25\", \"commentary\": \"The red team continues to press the play, with players moving into the penalty area, while the yellow team defenses.\", \"label\": \"Indirect free-kick\", \"confidence\": 0.85}, {\"timestamp\": \"00:30\", \"commentary\": \"A player in red is shown celebrating a successful play, with the crowd visible in the background.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:40\", \"commentary\": \"The red team makes a counter-attack, with players positioning themselves for an offensive move.\", \"label\": \"Shots on target\", \"confidence\": 0.90}, {\"timestamp\": \"00:50\", \"commentary\": \"The yellow team attempts to block the shot, with the goalkeeper ready to intervene.\", \"label\": \"Clearance\", \"confidence\": 0.85}, {\"timestamp\": \"01:00\", \"commentary\": \"The red team scores a goal, leading to increased player enthusiasm and fan reactions.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"01:10\", \"commentary\": \"Player number 18 is seen celebrating the",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A player in a red jersey takes a shot at the goal, with players from the opposing side attempting to block the play.",
+        "label": "Shots on target",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "A player in red celebrates a goal, raising his arms in victory, while the opposing team reacts to the score.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:25",
+        "commentary": "The red team continues to press the play, with players moving into the penalty area, while the yellow team defenses.",
+        "label": "Indirect free-kick",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:30",
+        "commentary": "A player in red is shown celebrating a successful play, with the crowd visible in the background.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:40",
+        "commentary": "The red team makes a counter-attack, with players positioning themselves for an offensive move.",
+        "label": "Shots on target",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:50",
+        "commentary": "The yellow team attempts to block the shot, with the goalkeeper ready to intervene.",
+        "label": "Clearance",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:00",
+        "commentary": "The red team scores a goal, leading to increased player enthusiasm and fan reactions.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      }
+    ],
+    "latency_scaling_ratio": 1.06,
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 1.039,
+    "load_reserved_gib": 1.287,
+    "peak_allocated_gib": 3.523,
+    "peak_reserved_gib": 7.381,
+    "wall_clock_sec": 29.718,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"The soccer match is in progress, with players from two teams positioned around the goal area.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp\": \"00:21\", \"commentary\": \"A player in a red jersey takes a shot near the goal, leading to a scramble for the ball.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"00:35\", \"commentary\": \"The red team's player attempts a shot, leading to a scramble near the goalpost.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"00:48\", \"commentary\": \"A player in a yellow jersey is shown with a focused expression, indicating a critical moment in the game.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp\": \"01:02\", \"commentary\": \"The red team regains possession after a pass, initiating a counter-attack.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp\": \"01:15\", \"commentary\": \"The player in red attempts a shot, resulting in a scramble for the ball.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"01:28\", \"commentary\": \"The red team's player is seen celebrating a goal, with arms raised in triumph.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"01:41\", \"commentary\": \"The game continues with both teams actively moving and positioning themselves for the next phase of play.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:21",
+        "commentary": "A player in a red jersey takes a shot near the goal, leading to a scramble for the ball.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:35",
+        "commentary": "The red team's player attempts a shot, leading to a scramble near the goalpost.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:15",
+        "commentary": "The player in red attempts a shot, resulting in a scramble for the ball.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:28",
+        "commentary": "The red team's player is seen celebrating a goal, with arms raised in triumph.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "latency_scaling_ratio": 1.07,
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "internvl3.5-2b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.079,
+    "load_reserved_gib": 2.135,
+    "peak_allocated_gib": 5.628,
+    "peak_reserved_gib": 6.773,
+    "wall_clock_sec": 24.859,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"A player in a yellow and blue jersey prepares to take a free kick. The ball is in play near the goal area.\", \"label\": \"Free kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:01\", \"commentary\": \"The player in the yellow and blue jersey takes the free kick, sending the ball into the penalty area. The goalkeeper in orange is ready to defend.\", \"label\": \"Free kick\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:02\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is diving to make a save.\", \"label\": \"Ball out of play\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:03\", \"commentary\": \"The ball is near the goal line, and the goalkeeper is attempting to save it. The crowd is watching intently.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:04\", \"commentary\": \"The ball has crossed the goal line, resulting in a goal for the team in yellow and blue. The crowd is cheering.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:02",
+        "commentary": "The ball is in the air, heading towards the goal. The goalkeeper is diving to make a save.",
+        "label": "Ball out of play",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:03",
+        "commentary": "The ball is near the goal line, and the goalkeeper is attempting to save it. The crowd is watching intently.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:04",
+        "commentary": "The ball has crossed the goal line, resulting in a goal for the team in yellow and blue. The crowd is cheering.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "InternVL3.5-2B",
+    "track": 1
+  },
+  {
+    "model_key": "internvl3.5-2b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.079,
+    "load_reserved_gib": 2.135,
+    "peak_allocated_gib": 13.771,
+    "peak_reserved_gib": 17.041,
+    "wall_clock_sec": 149.995,
+    "schema_valid": true,
+    "shared_memory_spill": true,
+    "verdict": "OOM_FAIL",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"Players from both teams are positioned for a free kick. The ball is in play near the goal area.\", \"label\": \"Free kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:02\", \"commentary\": \"A player from Arsenal prepares to take the free kick. The ball is in the air, heading towards the goal.\", \"label\": \"Free kick\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:04\", \"commentary\": \"The ball is in the air, approaching the goal area. The goalkeeper is ready to defend.\", \"label\": \"Ball out of play\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:06\", \"commentary\": \"The ball is near the goal line. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:08\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:10\", \"commentary\": \"The ball is near the goal line. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:12\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:14\", \"commentary\": \"The ball is near the goal line. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:16\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:04",
+        "commentary": "The ball is in the air, approaching the goal area. The goalkeeper is ready to defend.",
+        "label": "Ball out of play",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "The ball is near the goal line. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:08",
+        "commentary": "The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "The ball is near the goal line. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:14",
+        "commentary": "The ball is near the goal line. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 6.03,
+    "passed": false,
+    "model_name": "InternVL3.5-2B",
+    "track": 1
+  },
+  {
+    "model_key": "gemma-4-e2b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 0.0,
+    "load_reserved_gib": 0.0,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. ",
+    "passed": false,
+    "model_name": "Gemma 4 E2B",
+    "track": 1
+  },
+  {
+    "model_key": "gemma-4-e2b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 0.0,
+    "load_reserved_gib": 0.0,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. ",
+    "passed": false,
+    "model_name": "Gemma 4 E2B",
+    "track": 1
+  },
+  {
+    "model_key": "gemma-4-e2b",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 0.0,
+    "load_reserved_gib": 0.0,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "Some modules are dispatched on the CPU or the disk. Make sure you have enough GPU RAM to fit the quantized model. If you want to dispatch the model on the CPU or the disk while keeping these modules in 32-bit, you need to set `llm_int8_enable_fp32_cpu_offload=True` and pass a custom `device_map` to `from_pretrained`. Check https://huggingface.co/docs/transformers/main/en/main_classes/quantization#offload-between-cpu-and-gpu for more details. ",
+    "passed": false,
+    "model_name": "Gemma 4 E2B",
+    "track": 1
+  },
+  {
+    "model_key": "lfm2.5-vl-3b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.008,
+    "load_reserved_gib": 2.031,
+    "peak_allocated_gib": 3.502,
+    "peak_reserved_gib": 3.887,
+    "wall_clock_sec": 10.298,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:05\", \"commentary\": \"A soccer player in a red jersey is seen throwing the ball over the goal post, indicating a potential shot on target.\", \"label\": \"Shots on target\", \"confidence\": 0.95, \"visibility\": \"visible\"}, {\"timestamp\": \"00:12\", \"commentary\": \"A player in a yellow jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.\", \"label\": \"Shots off target\", \"confidence\": 0.85, \"visibility\": \"visible\"}, {\"timestamp\": \"00:20\", \"commentary\": \"A player in a blue jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.\", \"label\": \"Shots off target\", \"confidence\": 0.90, \"visibility\": \"visible\"}, {\"timestamp\": \"00:30\", \"commentary\": \"A player in a red jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.\", \"label\": \"Shots off target\", \"confidence\": 0.95, \"visibility\": \"visible\"}]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:05",
+        "commentary": "A soccer player in a red jersey is seen throwing the ball over the goal post, indicating a potential shot on target.",
+        "label": "Shots on target",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "A player in a yellow jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.",
+        "label": "Shots off target",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 2,
+    "passed": true,
+    "model_name": "LFM2.5-VL-3B",
+    "track": 2
+  },
+  {
+    "model_key": "lfm2.5-vl-3b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.008,
+    "load_reserved_gib": 2.031,
+    "peak_allocated_gib": 6.49,
+    "peak_reserved_gib": 7.246,
+    "wall_clock_sec": 15.787,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Clear\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:05\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:10\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:15\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:20\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Clear\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:25\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:30\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Clearance",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:05",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:20",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Clearance",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:25",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:30",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.53,
+    "passed": true,
+    "model_name": "LFM2.5-VL-3B",
+    "track": 2
+  },
+  {
+    "model_key": "lfm2.5-vl-3b",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.008,
+    "load_reserved_gib": 2.031,
+    "peak_allocated_gib": 17.24,
+    "peak_reserved_gib": 18.67,
+    "wall_clock_sec": 81.325,
+    "schema_valid": false,
+    "shared_memory_spill": true,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "[{\"timestamp\": \"0.0\", \"commentary\": \"A soccer ball is spinning in the air, the ball is perfectly centered, the image is clear\", \"label\": \"Clear\", \"confidence\": 0.9}, {\"timestamp\": \"0.0\", \"commentary\": \"A soccer ball is spinning in the air, the ball is perfectly centered, the image is clear\", \"label\": \"Clear\"}, {\"timestamp\": \"0.0\", \"commentary\": \"A soccer ball is spinning in the air, the ball is perfectly centered, the image is clear\", \"label\": \"Clear\"}]",
+    "error": "No valid within-bounds SpottedEvent detected (out_of_bounds_drops=6).",
+    "parsed_events": [],
+    "out_of_bounds_drops": 6,
+    "latency_scaling_ratio": 5.15,
+    "passed": false,
+    "model_name": "LFM2.5-VL-3B",
+    "track": 2
+  },
+  {
+    "model_key": "ministral-3-3b",
+    "precision": "fp8",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.352,
+    "load_reserved_gib": 4.354,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "finegrained-fp8 kernel unavailable: `kernels` is either not installed or uses an incompatible version. Please install a compatible version (0.17.0 <= version < 0.18.0), e.g. `pip install kernels==0.17.0`",
+    "passed": false,
+    "model_name": "Ministral 3 3B",
+    "track": 2
+  },
+  {
+    "model_key": "ministral-3-3b",
+    "precision": "fp8",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.352,
+    "load_reserved_gib": 4.354,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "finegrained-fp8 kernel unavailable: `kernels` is either not installed or uses an incompatible version. Please install a compatible version (0.17.0 <= version < 0.18.0), e.g. `pip install kernels==0.17.0`",
+    "passed": false,
+    "model_name": "Ministral 3 3B",
+    "track": 2
+  },
+  {
+    "model_key": "ministral-3-3b",
+    "precision": "fp8",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 4.352,
+    "load_reserved_gib": 4.354,
+    "peak_allocated_gib": 0.0,
+    "peak_reserved_gib": 0.0,
+    "wall_clock_sec": 0.0,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "ERROR",
+    "raw_output": null,
+    "error": "finegrained-fp8 kernel unavailable: `kernels` is either not installed or uses an incompatible version. Please install a compatible version (0.17.0 <= version < 0.18.0), e.g. `pip install kernels==0.17.0`",
+    "passed": false,
+    "model_name": "Ministral 3 3B",
+    "track": 2
+  },
+  {
+    "model_key": "moondream2",
+    "precision": "bf16",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.594,
+    "load_reserved_gib": 3.611,
+    "peak_allocated_gib": 4.138,
+    "peak_reserved_gib": 4.34,
+    "wall_clock_sec": 3.086,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"Brief description of the action...\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "Brief description of the action...",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "Moondream2",
+    "track": 3
+  },
+  {
+    "model_key": "moondream2",
+    "precision": "bf16",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.594,
+    "load_reserved_gib": 3.611,
+    "peak_allocated_gib": 4.138,
+    "peak_reserved_gib": 4.34,
+    "wall_clock_sec": 3.98,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:30",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.29,
+    "passed": true,
+    "model_name": "Moondream2",
+    "track": 3
+  },
+  {
+    "model_key": "moondream2",
+    "precision": "bf16",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.594,
+    "load_reserved_gib": 3.611,
+    "peak_allocated_gib": 4.138,
+    "peak_reserved_gib": 4.34,
+    "wall_clock_sec": 3.394,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"01:00\",\n    \"commentary\": \"Brief description of the action...\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:00",
+        "commentary": "Brief description of the action...",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 0.85,
+    "passed": true,
+    "model_name": "Moondream2",
+    "track": 3
+  },
+  {
+    "model_key": "qwen2.5-vl-7b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 5.816,
+    "load_reserved_gib": 5.922,
+    "peak_allocated_gib": 6.663,
+    "peak_reserved_gib": 6.812,
+    "wall_clock_sec": 7.773,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"Players are positioned near the goal area, preparing for a set piece.\", \"label\": \"Corner\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:05\", \"commentary\": \"The ball is kicked into the penalty area but does not result in a goal.\", \"label\": \"Shots off target\", \"confidence\": 0.80, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Players are positioned near the goal area, preparing for a set piece.",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:05",
+        "commentary": "The ball is kicked into the penalty area but does not result in a goal.",
+        "label": "Shots off target",
+        "confidence": 0.8,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "Qwen2.5-VL-7B",
+    "track": 4
+  },
+  {
+    "model_key": "qwen2.5-vl-7b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 5.816,
+    "load_reserved_gib": 5.922,
+    "peak_allocated_gib": 7.971,
+    "peak_reserved_gib": 8.236,
+    "wall_clock_sec": 46.53,
+    "schema_valid": true,
+    "shared_memory_spill": true,
+    "verdict": "OOM_FAIL",
+    "raw_output": "[\n\t{\"timestamp\": \"00:00\", \"commentary\": \"Players are positioned on the field, preparing for a kick-off.\", \"label\": \"Kick-off\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n\t{\"timestamp\": \"00:06\", \"commentary\": \"A player in yellow kicks the ball towards the goal.\", \"label\": \"Direct free-kick\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n\t{\"timestamp\": \"00:12\", \"commentary\": \"The ball is kicked into the goal.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Players are positioned on the field, preparing for a kick-off.",
+        "label": "Kick-off",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "A player in yellow kicks the ball towards the goal.",
+        "label": "Direct free-kick",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "The ball is kicked into the goal.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 5.99,
+    "passed": false,
+    "model_name": "Qwen2.5-VL-7B",
+    "track": 4
+  }
+]

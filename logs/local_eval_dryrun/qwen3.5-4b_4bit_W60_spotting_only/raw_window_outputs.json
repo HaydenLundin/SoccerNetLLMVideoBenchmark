@@ -1,0 +1,100 @@
+[
+  {
+    "chunk_index": 0,
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "{\"timestamp\":\"00:15\",\"label\":\"Corner\",\"confidence\":0.88,\"visibility\":\"visible\",\"commentary\":\"\"}",
+    "is_dry_run": true
+  }
+]

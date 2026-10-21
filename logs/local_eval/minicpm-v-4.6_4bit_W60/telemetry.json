@@ -1,0 +1,65 @@
+{
+  "model": "minicpm-v-4.6",
+  "precision": "4bit",
+  "total_windows": 1,
+  "total_events_spotted": 2,
+  "total_inference_time_sec": 27.78,
+  "avg_window_latency_sec": 27.783,
+  "stitching": {
+    "total_raw_events": 2,
+    "out_of_bounds_drops": 0,
+    "valid_bounded_events": 2,
+    "nms_suppressed_events": 0,
+    "final_kept_events": 2,
+    "macro_overlap_zones": [
+      [
+        582043,
+        615083
+      ],
+      [
+        1164723,
+        1197163
+      ],
+      [
+        1753403,
+        1779843
+      ],
+      [
+        2335643,
+        2368563
+      ]
+    ],
+    "overlap_radius_ms": 5000
+  },
+  "window_diagnostics": [
+    {
+      "chunk_index": 1,
+      "window_index": 0,
+      "start_sec": 0.0,
+      "end_sec": 60.0,
+      "duration_sec": 60,
+      "elapsed_sec": 27.783,
+      "status": "SUCCESS",
+      "strategy_used": "json_array",
+      "candidates_found": 4,
+      "valid_kept": 2,
+      "out_of_bounds_drops": 0,
+      "invalid_enum_drops": 2,
+      "syntax_error": false,
+      "dropped_timestamps": [],
+      "dropped_labels": [
+        "None",
+        "None"
+      ]
+    }
+  ],
+  "diagnostic_summary": {
+    "total_windows": 1,
+    "total_candidates_found": 4,
+    "total_valid_kept_pre_nms": 2,
+    "total_out_of_bounds_drops": 0,
+    "total_invalid_enum_drops": 2,
+    "total_syntax_errors": 0,
+    "total_empty_outputs": 0
+  }
+}

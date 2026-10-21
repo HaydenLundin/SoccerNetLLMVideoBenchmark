@@ -1,0 +1,135 @@
+[
+  {
+    "model_key": "lfm2.5-vl-3b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.008,
+    "load_reserved_gib": 2.031,
+    "peak_allocated_gib": 3.502,
+    "peak_reserved_gib": 3.887,
+    "wall_clock_sec": 10.298,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:05\", \"commentary\": \"A soccer player in a red jersey is seen throwing the ball over the goal post, indicating a potential shot on target.\", \"label\": \"Shots on target\", \"confidence\": 0.95, \"visibility\": \"visible\"}, {\"timestamp\": \"00:12\", \"commentary\": \"A player in a yellow jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.\", \"label\": \"Shots off target\", \"confidence\": 0.85, \"visibility\": \"visible\"}, {\"timestamp\": \"00:20\", \"commentary\": \"A player in a blue jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.\", \"label\": \"Shots off target\", \"confidence\": 0.90, \"visibility\": \"visible\"}, {\"timestamp\": \"00:30\", \"commentary\": \"A player in a red jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.\", \"label\": \"Shots off target\", \"confidence\": 0.95, \"visibility\": \"visible\"}]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:05",
+        "commentary": "A soccer player in a red jersey is seen throwing the ball over the goal post, indicating a potential shot on target.",
+        "label": "Shots on target",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "A player in a yellow jersey is seen intercepting the ball near the goal post, indicating a potential shot on target.",
+        "label": "Shots off target",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 2,
+    "passed": true,
+    "model_name": "LFM2.5-VL-3B",
+    "track": 2
+  },
+  {
+    "model_key": "lfm2.5-vl-3b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.008,
+    "load_reserved_gib": 2.031,
+    "peak_allocated_gib": 6.49,
+    "peak_reserved_gib": 7.246,
+    "wall_clock_sec": 15.787,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Clear\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:05\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:10\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:15\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:20\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Clear\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:25\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}, {\"timestamp\": \"00:30\", \"commentary\": \"A soccer player is crossing the ball, which is in the center of the image, with a high confidence level\", \"label\": \"Corner\", \"visibility\": \"visible\"}]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Clearance",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:05",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:20",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Clearance",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:25",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:30",
+        "commentary": "A soccer player is crossing the ball, which is in the center of the image, with a high confidence level",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.53,
+    "passed": true,
+    "model_name": "LFM2.5-VL-3B",
+    "track": 2
+  },
+  {
+    "model_key": "lfm2.5-vl-3b",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.008,
+    "load_reserved_gib": 2.031,
+    "peak_allocated_gib": 17.24,
+    "peak_reserved_gib": 18.67,
+    "wall_clock_sec": 81.325,
+    "schema_valid": false,
+    "shared_memory_spill": true,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "[{\"timestamp\": \"0.0\", \"commentary\": \"A soccer ball is spinning in the air, the ball is perfectly centered, the image is clear\", \"label\": \"Clear\", \"confidence\": 0.9}, {\"timestamp\": \"0.0\", \"commentary\": \"A soccer ball is spinning in the air, the ball is perfectly centered, the image is clear\", \"label\": \"Clear\"}, {\"timestamp\": \"0.0\", \"commentary\": \"A soccer ball is spinning in the air, the ball is perfectly centered, the image is clear\", \"label\": \"Clear\"}]",
+    "error": "No valid within-bounds SpottedEvent detected (out_of_bounds_drops=6).",
+    "parsed_events": [],
+    "out_of_bounds_drops": 6,
+    "latency_scaling_ratio": 5.15,
+    "passed": false,
+    "model_name": "LFM2.5-VL-3B",
+    "track": 2
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "model": "moondream2",
+  "precision": "bf16",
+  "total_windows": 14,
+  "total_events_spotted": 0,
+  "total_inference_time_sec": 304.68,
+  "avg_window_latency_sec": 21.763,
+  "stitching": {
+    "total_raw_events": 0,
+    "out_of_bounds_drops": 0,
+    "valid_bounded_events": 0,
+    "nms_suppressed_events": 0,
+    "final_kept_events": 0
+  }
+}

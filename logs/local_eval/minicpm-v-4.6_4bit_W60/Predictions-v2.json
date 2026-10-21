@@ -1,0 +1,21 @@
+{
+  "UrlLocal": "england_epl/2014-2015/2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal/",
+  "predictions": [
+    {
+      "gameTime": "1 - 09:51",
+      "label": "Shots on target",
+      "position": 591043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 10:00",
+      "label": "Goal",
+      "position": 600043,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    }
+  ]
+}

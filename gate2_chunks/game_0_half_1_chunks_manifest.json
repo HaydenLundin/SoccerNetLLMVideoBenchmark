@@ -1,0 +1,72 @@
+{
+  "game_id": 0,
+  "half": 1,
+  "total_duration_sec": 2700.003,
+  "chunks": [
+    {
+      "game_id": 0,
+      "half": 1,
+      "chunk_index": 0,
+      "filename": "game_0_half_1_chunk_00.mp4",
+      "relative_path": "gate2_chunks\\game_0_half_1_chunk_00.mp4",
+      "requested_start_sec": 0.0,
+      "actual_start_sec": 0.0,
+      "actual_start_ms": 0,
+      "keyframe_drift_sec": 0.0,
+      "duration_sec": 615.083,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 0,
+      "half": 1,
+      "chunk_index": 1,
+      "filename": "game_0_half_1_chunk_01.mp4",
+      "relative_path": "gate2_chunks\\game_0_half_1_chunk_01.mp4",
+      "requested_start_sec": 585.0,
+      "actual_start_sec": 582.043,
+      "actual_start_ms": 582043,
+      "keyframe_drift_sec": 2.957,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 0,
+      "half": 1,
+      "chunk_index": 2,
+      "filename": "game_0_half_1_chunk_02.mp4",
+      "relative_path": "gate2_chunks\\game_0_half_1_chunk_02.mp4",
+      "requested_start_sec": 1170.0,
+      "actual_start_sec": 1164.723,
+      "actual_start_ms": 1164723,
+      "keyframe_drift_sec": 5.277,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 0,
+      "half": 1,
+      "chunk_index": 3,
+      "filename": "game_0_half_1_chunk_03.mp4",
+      "relative_path": "gate2_chunks\\game_0_half_1_chunk_03.mp4",
+      "requested_start_sec": 1755.0,
+      "actual_start_sec": 1753.403,
+      "actual_start_ms": 1753403,
+      "keyframe_drift_sec": 1.597,
+      "duration_sec": 615.16,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 0,
+      "half": 1,
+      "chunk_index": 4,
+      "filename": "game_0_half_1_chunk_04.mp4",
+      "relative_path": "gate2_chunks\\game_0_half_1_chunk_04.mp4",
+      "requested_start_sec": 2340.0,
+      "actual_start_sec": 2335.643,
+      "actual_start_ms": 2335643,
+      "keyframe_drift_sec": 4.357,
+      "duration_sec": 364.36,
+      "is_final_chunk": true
+    }
+  ]
+}

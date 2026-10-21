@@ -1,0 +1,342 @@
+[
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "bf16",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.422,
+    "load_reserved_gib": 2.438,
+    "peak_allocated_gib": 3.211,
+    "peak_reserved_gib": 3.758,
+    "wall_clock_sec": 17.343,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A player in red attempts a shot at the goal, surrounded by yellow team defenders.\", \"label\": \"Shots on target\", \"confidence\": 0.85, \"visibility\": \"visible\"}], {\"timestamp\": \"00:05\", \"commentary\": \"A player in red scores a goal, as indicated by the celebration and crowd reaction.\", \"label\": \"Goal\", \"confidence\": 1.0, \"visibility\": \"visible\"}], {\"timestamp\": \"00:10\", \"commentary\": \"A player in red is seen celebrating near the sideline with the crowd in the background.\", \"label\": \"Yellow card\", \"confidence\": 0.70, \"visibility\": \"visible\"}], {\"timestamp\": \"00:15\", \"commentary\": \"The play continues with multiple players moving around the ball, indicating active gameplay.\", \"label\": \"Ball out of play\", \"confidence\": 0.60, \"visibility\": \"visible\"}], {\"timestamp\": \"00:20\", \"commentary\": \"A free-kick situation is set up with players positioning themselves for the kick.\", \"label\": \"Free-kick\", \"confidence\": 0.80, \"visibility\": \"visible\"}], {\"timestamp\": \"00:25\", \"commentary\": \"A player in red takes a shot at the goal, leading to a defensive response.\", \"label\": \"Shots on target\", \"confidence\": 0.75, \"visibility\": \"visible\"}], {\"timestamp\": \"00:30\", \"commentary\": \"The ball is headed towards the goal, resulting in a scramble for the goal.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A player in red attempts a shot at the goal, surrounded by yellow team defenders.",
+        "label": "Shots on target",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "bf16",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.422,
+    "load_reserved_gib": 2.438,
+    "peak_allocated_gib": 3.776,
+    "peak_reserved_gib": 4.871,
+    "wall_clock_sec": 14.025,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A player in a yellow jersey attempts a shot at the goal, facing a defensive wall.\", \"label\": \"Shots on target\", \"confidence\": 0.85, \"visibility\": \"visible\"}], {\"timestamp\": \"00:06\", \"commentary\": \"A player in red celebrates a goal, with the crowd reacting enthusiastically.\", \"label\": \"Goal\", \"confidence\": 1.0, \"visibility\": \"visible\"}], {\"timestamp\": \"00:12\", \"commentary\": \"An attacking play leads to a scramble near the goalpost, resulting in a free kick.\", \"label\": \"Free kick\", \"confidence\": 0.90, \"visibility\": \"visible\"}], {\"timestamp\": \"00:18\", \"commentary\": \"A player in red takes a shot, and the ball hits the back of the net.\", \"label\": \"Goal\", \"confidence\": 1.0, \"visibility\": \"visible\"}], {\"timestamp\": \"00:24\", \"commentary\": \"The team in red continues to advance the ball down the field, pushing for a scoring opportunity.\", \"label\": \"Ball out of play\", \"confidence\": 0.70, \"visibility\": \"visible\"}]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A player in a yellow jersey attempts a shot at the goal, facing a defensive wall.",
+        "label": "Shots on target",
+        "confidence": 0.85,
+        "visibility": "visible"
+      }
+    ],
+    "latency_scaling_ratio": 0.81,
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "bf16",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.422,
+    "load_reserved_gib": 2.438,
+    "peak_allocated_gib": 4.907,
+    "peak_reserved_gib": 8.496,
+    "wall_clock_sec": 6.797,
+    "schema_valid": false,
+    "shared_memory_spill": true,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"The game is in progress with players positioning themselves for an attack.}, \"label\": \"none\", \"confidence\": 0.0, \"visibility\": \"visible\"}]",
+    "error": "Array parse error: Expecting ',' delimiter: line 1 column 118 (char 117)",
+    "parsed_events": [],
+    "latency_scaling_ratio": 0.48,
+    "passed": false,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 1.039,
+    "load_reserved_gib": 1.287,
+    "peak_allocated_gib": 1.828,
+    "peak_reserved_gib": 2.6,
+    "wall_clock_sec": 26.217,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "{\"timestamp\": \"00:21\", \"commentary\": \"A player in a red jersey takes a shot at the goal, but the goalkeeper blocks the ball.\", \"label\": \"Shoot\", \"confidence\": 0.50}, {\"timestamp\": \"00:32\", \"commentary\": \"A player in a red jersey scores a goal, as the ball passes into the net.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:43\", \"commentary\": \"The player in the red jersey is celebrated by the team, while the opposing players react.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:54\", \"commentary\": \"A player in a yellow jersey is shown celebrating, while another player in red stands nearby.\", \"label\": \"Substitution\", \"confidence\": 0.80}, {\"timestamp\": \"01:05\", \"commentary\": \"The game continues with players moving around the penalty area.\", \"label\": \"Indirect free-kick\", \"confidence\": 0.70}, {\"timestamp\": \"01:16\", \"commentary\": \"The player in the red jersey attempts a shot, but the ball is blocked.\", \"label\": \"Shots off target\", \"confidence\": 0.90}, {\"timestamp\": \"01:27\", \"commentary\": \"The player in the yellow jersey is seen celebrating the goal.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"01:38\", \"commentary\": \"The game progresses with players positioning themselves for the next set of plays.\", \"label\": \"Indirect free-kick\", \"confidence\": 0.70}, {\"timestamp\": \"01:4",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:32",
+        "commentary": "A player in a red jersey scores a goal, as the ball passes into the net.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:43",
+        "commentary": "The player in the red jersey is celebrated by the team, while the opposing players react.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:54",
+        "commentary": "A player in a yellow jersey is shown celebrating, while another player in red stands nearby.",
+        "label": "Substitution",
+        "confidence": 0.8,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:05",
+        "commentary": "The game continues with players moving around the penalty area.",
+        "label": "Indirect free-kick",
+        "confidence": 0.7,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:16",
+        "commentary": "The player in the red jersey attempts a shot, but the ball is blocked.",
+        "label": "Shots off target",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:27",
+        "commentary": "The player in the yellow jersey is seen celebrating the goal.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:38",
+        "commentary": "The game progresses with players positioning themselves for the next set of plays.",
+        "label": "Indirect free-kick",
+        "confidence": 0.7,
+        "visibility": "visible"
+      }
+    ],
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 1.039,
+    "load_reserved_gib": 1.287,
+    "peak_allocated_gib": 2.392,
+    "peak_reserved_gib": 3.645,
+    "wall_clock_sec": 27.769,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"A player in a red jersey takes a shot at the goal, with players from the opposing side attempting to block the play.\", \"label\": \"Shots on target\", \"confidence\": 0.95}, {\"timestamp\": \"00:15\", \"commentary\": \"A player in red celebrates a goal, raising his arms in victory, while the opposing team reacts to the score.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:25\", \"commentary\": \"The red team continues to press the play, with players moving into the penalty area, while the yellow team defenses.\", \"label\": \"Indirect free-kick\", \"confidence\": 0.85}, {\"timestamp\": \"00:30\", \"commentary\": \"A player in red is shown celebrating a successful play, with the crowd visible in the background.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"00:40\", \"commentary\": \"The red team makes a counter-attack, with players positioning themselves for an offensive move.\", \"label\": \"Shots on target\", \"confidence\": 0.90}, {\"timestamp\": \"00:50\", \"commentary\": \"The yellow team attempts to block the shot, with the goalkeeper ready to intervene.\", \"label\": \"Clearance\", \"confidence\": 0.85}, {\"timestamp\": \"01:00\", \"commentary\": \"The red team scores a goal, leading to increased player enthusiasm and fan reactions.\", \"label\": \"Goal\", \"confidence\": 1.0}, {\"timestamp\": \"01:10\", \"commentary\": \"Player number 18 is seen celebrating the",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "A player in a red jersey takes a shot at the goal, with players from the opposing side attempting to block the play.",
+        "label": "Shots on target",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "A player in red celebrates a goal, raising his arms in victory, while the opposing team reacts to the score.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:25",
+        "commentary": "The red team continues to press the play, with players moving into the penalty area, while the yellow team defenses.",
+        "label": "Indirect free-kick",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:30",
+        "commentary": "A player in red is shown celebrating a successful play, with the crowd visible in the background.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:40",
+        "commentary": "The red team makes a counter-attack, with players positioning themselves for an offensive move.",
+        "label": "Shots on target",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:50",
+        "commentary": "The yellow team attempts to block the shot, with the goalkeeper ready to intervene.",
+        "label": "Clearance",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:00",
+        "commentary": "The red team scores a goal, leading to increased player enthusiasm and fan reactions.",
+        "label": "Goal",
+        "confidence": 1.0,
+        "visibility": "visible"
+      }
+    ],
+    "latency_scaling_ratio": 1.06,
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "minicpm-v-4.6",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 1.039,
+    "load_reserved_gib": 1.287,
+    "peak_allocated_gib": 3.523,
+    "peak_reserved_gib": 7.381,
+    "wall_clock_sec": 29.718,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[{\"timestamp\": \"00:00\", \"commentary\": \"The soccer match is in progress, with players from two teams positioned around the goal area.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp\": \"00:21\", \"commentary\": \"A player in a red jersey takes a shot near the goal, leading to a scramble for the ball.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"00:35\", \"commentary\": \"The red team's player attempts a shot, leading to a scramble near the goalpost.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"00:48\", \"commentary\": \"A player in a yellow jersey is shown with a focused expression, indicating a critical moment in the game.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp\": \"01:02\", \"commentary\": \"The red team regains possession after a pass, initiating a counter-attack.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp\": \"01:15\", \"commentary\": \"The player in red attempts a shot, resulting in a scramble for the ball.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"01:28\", \"commentary\": \"The red team's player is seen celebrating a goal, with arms raised in triumph.\", \"label\": \"Goal\", \"confidence\": 0.95}, {\"timestamp\": \"01:41\", \"commentary\": \"The game continues with both teams actively moving and positioning themselves for the next phase of play.\", \"label\": \"none\", \"confidence\": 0.0}, {\"timestamp",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:21",
+        "commentary": "A player in a red jersey takes a shot near the goal, leading to a scramble for the ball.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:35",
+        "commentary": "The red team's player attempts a shot, leading to a scramble near the goalpost.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:15",
+        "commentary": "The player in red attempts a shot, resulting in a scramble for the ball.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:28",
+        "commentary": "The red team's player is seen celebrating a goal, with arms raised in triumph.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "latency_scaling_ratio": 1.07,
+    "passed": true,
+    "model_name": "MiniCPM-V 4.6",
+    "track": 1
+  },
+  {
+    "model_key": "qwen3.5-4b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.287,
+    "load_reserved_gib": 3.33,
+    "peak_allocated_gib": 4.318,
+    "peak_reserved_gib": 4.664,
+    "wall_clock_sec": 33.959,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "The user wants me to identify soccer events from a video clip.\n\n**Video Analysis:**\n1.  **00:00 - 00:03**: The video starts with a wide shot of a penalty kick. A player in a yellow jersey (Arsenal) is taking the penalty. The goalkeeper (in red/orange) dives to his right. The ball goes into the net.\n2.  **00:03 - 00:05**: Close-up of the penalty taker (Alexandre Lacazette) looking focused.\n3.  **00:05 - 00:07**: Wide shot showing the goal being scored. The ball is in the net.\n4.  **00:07 - 00:09**: Close-up of a Manchester United player (Paul Pogba) looking disappointed.\n5.  **00:09 - 00:11**: Another player (Anthony Martial) walking away.\n6.  **00:11 - 00:13**: Replay of the penalty kick from a different angle. The taker shoots, the keeper dives, and the ball goes in.\n7.  **00:13 - 00:15**: Close-up of the taker again.\n8.  **00:15 - 00:17**: Replay from behind the goal. The ball goes into the top corner.\n9.  **00:17 - 00:19**: Close-up of the taker celebrating/reacting.\n10. **00:19 - 00:21**: Replay from the side. The ball goes into the net.\n11. **00:21 - 00",
+    "error": "No valid SpottedEvent detected in output.",
+    "parsed_events": [],
+    "passed": false,
+    "model_name": "Qwen3.5-4B",
+    "track": 1
+  },
+  {
+    "model_key": "qwen3.5-4b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.287,
+    "load_reserved_gib": 3.33,
+    "peak_allocated_gib": 6.004,
+    "peak_reserved_gib": 6.639,
+    "wall_clock_sec": 39.439,
+    "schema_valid": false,
+    "shared_memory_spill": false,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "The user wants me to identify soccer events from a video clip.\n\n**Video Analysis:**\n1.  **00:00 - 00:03**: The video starts with a wide shot of a penalty kick. A player in a yellow jersey (Arsenal) is taking the penalty. The goalkeeper (in red/orange) dives to his right. The ball goes into the net.\n2.  **00:03 - 00:05**: Close-up of the penalty taker, Kossog (Arsenal #6). He looks disappointed or focused.\n3.  **00:05 - 00:08**: Another close-up of Kossog.\n4.  **00:08 - 00:10**: A player in a red jersey (Man Utd #18, likely Anderson) is shown. He raises his arms, possibly celebrating or acknowledging the crowd.\n5.  **00:10 - 00:12**: The player in red (#18) turns around.\n6.  **00:12 - 00:14**: Replay of the penalty kick from a different angle. The ball goes into the net.\n7.  **00:14 - 00:16**: Replay continues.\n8.  **00:16 - 00:18**: Replay continues.\n9.  **00:18 - 00:20**: Replay continues.\n10. **00:20 - 00:22**: Replay continues.\n11. **00:22 - 00:24**: Replay continues.\n12. **00:24 - 00:",
+    "error": "No valid SpottedEvent detected in output.",
+    "parsed_events": [],
+    "latency_scaling_ratio": 1.16,
+    "passed": false,
+    "model_name": "Qwen3.5-4B",
+    "track": 1
+  },
+  {
+    "model_key": "qwen3.5-4b",
+    "precision": "4bit",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.287,
+    "load_reserved_gib": 3.33,
+    "peak_allocated_gib": 11.814,
+    "peak_reserved_gib": 12.822,
+    "wall_clock_sec": 86.077,
+    "schema_valid": false,
+    "shared_memory_spill": true,
+    "verdict": "PARSE_FAIL",
+    "raw_output": "The user wants me to identify soccer events from the provided video frames.\n\n**Video Analysis:**\n1.  **Frames 1-5:** Show a free-kick situation. The ball is being kicked. A player in yellow (Arsenal) is near the ball. The ball goes towards the goal. The goalkeeper (in orange) dives but doesn't reach it. The ball goes into the net. This looks like a goal.\n2.  **Frames 6-9:** Show the aftermath of the goal. Players are reacting.\n3.  **Frames 10-13:** Close-up of players. A Manchester United player (Murphy?) and an Arsenal player (Koscielnik) are talking.\n4.  **Frames 14-19:** A Manchester United player (number 18, likely Wayne Rooney or similar era player) is celebrating, raising his arms. This confirms a goal.\n5.  **Frames 20-25:** Replay of the goal. The ball is kicked from the corner area. It curves into the top corner. The goalkeeper dives but misses.\n6.  **Frames 26-29:** Close-up of a Manchester United player (looks like Alex Oxlade-Chamberlain or similar) looking disappointed.\n7.  **Frames 30-31:** Replay of the goal again.\n8.  **Frames 32-35:** Replay of the goal again.\n9.  **Frames 36-39:** Replay of the goal again.\n10. **Frames 40-43:** Replay of the goal again.\n11. **Frames 44-47:** Replay of the goal again.\n12. **Frames 48-51:** Replay of the goal again.\n",
+    "error": "No valid SpottedEvent detected in output.",
+    "parsed_events": [],
+    "latency_scaling_ratio": 2.18,
+    "passed": false,
+    "model_name": "Qwen3.5-4B",
+    "track": 1
+  }
+]

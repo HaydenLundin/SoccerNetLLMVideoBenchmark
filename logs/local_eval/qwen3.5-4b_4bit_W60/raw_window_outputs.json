@@ -1,0 +1,86 @@
+[
+  {
+    "chunk_index": 0,
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"The Arsenal goalkeeper kicks the ball out from his goal area to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"A Manchester United player attempts a long-range shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"Alexis Sanchez receives the ball and takes a shot from outside the box.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:23\",\n    \"commentary\": \"The ball is kicked into the air and crosses the goal line into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:51\",\n    \"commentary\": \"The ball crosses the sideline, resulting in a throw-in for the team in red.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"Arsenal player Alexis Sanchez attempts a shot from outside the box which is blocked by Manchester United defenders.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Manchester United player challenges an Arsenal player near the penalty area.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:37\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Manchester United player challenges an Arsenal player in the midfield.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"A Manchester United player in red is fouled by a Newcastle player in yellow while attempting to dribble forward.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:36\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Manchester United player is challenged by a Newcastle defender.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee is standing on the pitch with the ball at his feet, preparing to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"A Manchester United player receives a pass and dribbles the ball forward.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:21\",\n    \"commentary\": \"The Manchester United player attempts a shot on goal which is blocked by the defending player.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a player from the yellow team is brought down.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"A Manchester United player in red is fouled by a Hull City defender in yellow as they challenge for the ball near the sideline.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"A Manchester United player shoots the ball into the net to score a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:33\",\n    \"commentary\": \"A Manchester United player takes a direct free-kick from the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"Arsenal player takes a throw-in from the sideline to restart play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"Manchester United player shoots the ball into the net for a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A Manchester United player takes a free-kick from the edge of the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:21\",\n    \"commentary\": \"A Manchester United player takes a corner kick from the corner flag.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n"
+  }
+]

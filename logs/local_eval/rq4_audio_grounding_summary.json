@@ -1,0 +1,267 @@
+{
+  "timestamp": "2026-10-21 14:42:47",
+  "acoustic_signals": {
+    "total_whistle_peaks_detected": 55,
+    "total_crowd_roars_detected": 104,
+    "sample_whistle_peaks": [
+      {
+        "time_sec": 124.0,
+        "match_time": "1 - 02:04",
+        "z_score": 5.39
+      },
+      {
+        "time_sec": 224.5,
+        "match_time": "1 - 03:44",
+        "z_score": 5.86
+      },
+      {
+        "time_sec": 289.5,
+        "match_time": "1 - 04:49",
+        "z_score": 4.21
+      },
+      {
+        "time_sec": 379.5,
+        "match_time": "1 - 06:19",
+        "z_score": 4.57
+      },
+      {
+        "time_sec": 422.0,
+        "match_time": "1 - 07:02",
+        "z_score": 4.25
+      },
+      {
+        "time_sec": 462.5,
+        "match_time": "1 - 07:42",
+        "z_score": 4.41
+      },
+      {
+        "time_sec": 488.5,
+        "match_time": "1 - 08:08",
+        "z_score": 4.42
+      },
+      {
+        "time_sec": 508.0,
+        "match_time": "1 - 08:28",
+        "z_score": 5.44
+      },
+      {
+        "time_sec": 622.5,
+        "match_time": "1 - 10:22",
+        "z_score": 6.44
+      },
+      {
+        "time_sec": 666.5,
+        "match_time": "1 - 11:06",
+        "z_score": 4.6
+      },
+      {
+        "time_sec": 709.0,
+        "match_time": "1 - 11:49",
+        "z_score": 5.76
+      },
+      {
+        "time_sec": 755.0,
+        "match_time": "1 - 12:35",
+        "z_score": 4.17
+      },
+      {
+        "time_sec": 791.5,
+        "match_time": "1 - 13:11",
+        "z_score": 4.73
+      },
+      {
+        "time_sec": 852.5,
+        "match_time": "1 - 14:12",
+        "z_score": 4.29
+      },
+      {
+        "time_sec": 902.5,
+        "match_time": "1 - 15:02",
+        "z_score": 6.8
+      }
+    ],
+    "sample_crowd_roars": [
+      {
+        "time_sec": 89.5,
+        "match_time": "1 - 01:29",
+        "surge_db": 6.24
+      },
+      {
+        "time_sec": 112.0,
+        "match_time": "1 - 01:52",
+        "surge_db": 5.29
+      },
+      {
+        "time_sec": 147.0,
+        "match_time": "1 - 02:27",
+        "surge_db": 5.46
+      },
+      {
+        "time_sec": 165.0,
+        "match_time": "1 - 02:45",
+        "surge_db": 5.14
+      },
+      {
+        "time_sec": 255.5,
+        "match_time": "1 - 04:15",
+        "surge_db": 5.34
+      },
+      {
+        "time_sec": 283.5,
+        "match_time": "1 - 04:43",
+        "surge_db": 5.22
+      },
+      {
+        "time_sec": 302.5,
+        "match_time": "1 - 05:02",
+        "surge_db": 7.11
+      },
+      {
+        "time_sec": 339.5,
+        "match_time": "1 - 05:39",
+        "surge_db": 7.42
+      },
+      {
+        "time_sec": 355.0,
+        "match_time": "1 - 05:55",
+        "surge_db": 5.68
+      },
+      {
+        "time_sec": 416.5,
+        "match_time": "1 - 06:56",
+        "surge_db": 5.62
+      },
+      {
+        "time_sec": 495.0,
+        "match_time": "1 - 08:15",
+        "surge_db": 6.38
+      },
+      {
+        "time_sec": 514.0,
+        "match_time": "1 - 08:34",
+        "surge_db": 7.15
+      },
+      {
+        "time_sec": 526.0,
+        "match_time": "1 - 08:46",
+        "surge_db": 8.58
+      },
+      {
+        "time_sec": 546.0,
+        "match_time": "1 - 09:06",
+        "surge_db": 6.46
+      },
+      {
+        "time_sec": 564.5,
+        "match_time": "1 - 09:24",
+        "surge_db": 9.14
+      }
+    ]
+  },
+  "records": [
+    {
+      "model": "Qwen3.5-4B Solo (Half 1)",
+      "raw_count": 94,
+      "grounded_count": 45,
+      "pruned_count": 49,
+      "audit": {
+        "initial_count": 94,
+        "whistle_confirmed": 11,
+        "whistle_penalized": 49,
+        "goals_confirmed": 5,
+        "goals_pruned": 7,
+        "shots_pruned": 0,
+        "fouls_pruned": 42,
+        "final_count": 45
+      },
+      "base_tight_mAP": 0.05196396740514388,
+      "grounded_tight_mAP": 0.054255793226381466,
+      "base_loose_mAP": 0.10507095400143526,
+      "grounded_loose_mAP": 0.10710581753362504,
+      "base_active_loose_mAP": 0.1488505181687,
+      "grounded_active_loose_mAP": 0.15173324150596879,
+      "goal_ap_before": 0.15909090909090914,
+      "goal_ap_after": 0.1727272727272727,
+      "foul_ap_before": 0.16292798110979925,
+      "foul_ap_after": 0.18388429752066118
+    },
+    {
+      "model": "MiniCPM-V 4.6 Solo (Half 1)",
+      "raw_count": 267,
+      "grounded_count": 155,
+      "pruned_count": 112,
+      "audit": {
+        "initial_count": 267,
+        "whistle_confirmed": 9,
+        "whistle_penalized": 59,
+        "goals_confirmed": 25,
+        "goals_pruned": 47,
+        "shots_pruned": 0,
+        "fouls_pruned": 57,
+        "final_count": 163
+      },
+      "base_tight_mAP": 0.012624140565317033,
+      "grounded_tight_mAP": 0.0,
+      "base_loose_mAP": 0.05528084789572371,
+      "grounded_loose_mAP": 0.02702155242262194,
+      "base_active_loose_mAP": 0.07831453451894192,
+      "grounded_active_loose_mAP": 0.03828053259871442,
+      "goal_ap_before": 0.012516469038208173,
+      "goal_ap_after": 0.0,
+      "foul_ap_before": 0.2307162534435262,
+      "foul_ap_after": 0.03719008264462809
+    },
+    {
+      "model": "3-Model Specialist Ensemble (Raw Gate)",
+      "raw_count": 175,
+      "grounded_count": 117,
+      "pruned_count": 58,
+      "audit": {
+        "initial_count": 175,
+        "whistle_confirmed": 6,
+        "whistle_penalized": 60,
+        "goals_confirmed": 5,
+        "goals_pruned": 5,
+        "shots_pruned": 0,
+        "fouls_pruned": 53,
+        "final_count": 117
+      },
+      "base_tight_mAP": 0.053399159951928114,
+      "grounded_tight_mAP": 0.051928571716633995,
+      "base_loose_mAP": 0.14734731775861062,
+      "grounded_loose_mAP": 0.1206370330937805,
+      "base_active_loose_mAP": 0.20874203349136508,
+      "grounded_active_loose_mAP": 0.1709024635495224,
+      "goal_ap_before": 0.1727272727272727,
+      "goal_ap_after": 0.1727272727272727,
+      "foul_ap_before": 0.18526170798898073,
+      "foul_ap_after": 0.028925619834710745
+    },
+    {
+      "model": "3-Model Specialist + Synchronized Selective Gate",
+      "raw_count": 175,
+      "grounded_count": 170,
+      "pruned_count": 5,
+      "audit": {
+        "initial_count": 175,
+        "whistle_confirmed": 6,
+        "whistle_penalized": 44,
+        "goals_confirmed": 5,
+        "goals_pruned": 5,
+        "shots_pruned": 0,
+        "fouls_pruned": 0,
+        "final_count": 170
+      },
+      "base_tight_mAP": 0.053399159951928114,
+      "grounded_tight_mAP": 0.053399159951928114,
+      "base_loose_mAP": 0.14734731775861062,
+      "grounded_loose_mAP": 0.14564581070951,
+      "base_active_loose_mAP": 0.20874203349136508,
+      "grounded_active_loose_mAP": 0.20633156517180584,
+      "goal_ap_before": 0.1727272727272727,
+      "goal_ap_after": 0.1727272727272727,
+      "foul_ap_before": 0.18526170798898073,
+      "foul_ap_after": 0.15633608815426994
+    }
+  ]
+}

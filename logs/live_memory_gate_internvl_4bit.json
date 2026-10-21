@@ -1,0 +1,112 @@
+[
+  {
+    "model_key": "internvl3.5-2b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.079,
+    "load_reserved_gib": 2.135,
+    "peak_allocated_gib": 5.628,
+    "peak_reserved_gib": 6.773,
+    "wall_clock_sec": 24.859,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"A player in a yellow and blue jersey prepares to take a free kick. The ball is in play near the goal area.\", \"label\": \"Free kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:01\", \"commentary\": \"The player in the yellow and blue jersey takes the free kick, sending the ball into the penalty area. The goalkeeper in orange is ready to defend.\", \"label\": \"Free kick\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:02\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is diving to make a save.\", \"label\": \"Ball out of play\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:03\", \"commentary\": \"The ball is near the goal line, and the goalkeeper is attempting to save it. The crowd is watching intently.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:04\", \"commentary\": \"The ball has crossed the goal line, resulting in a goal for the team in yellow and blue. The crowd is cheering.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:02",
+        "commentary": "The ball is in the air, heading towards the goal. The goalkeeper is diving to make a save.",
+        "label": "Ball out of play",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:03",
+        "commentary": "The ball is near the goal line, and the goalkeeper is attempting to save it. The crowd is watching intently.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:04",
+        "commentary": "The ball has crossed the goal line, resulting in a goal for the team in yellow and blue. The crowd is cheering.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "InternVL3.5-2B",
+    "track": 1
+  },
+  {
+    "model_key": "internvl3.5-2b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 2.079,
+    "load_reserved_gib": 2.135,
+    "peak_allocated_gib": 13.771,
+    "peak_reserved_gib": 17.041,
+    "wall_clock_sec": 149.995,
+    "schema_valid": true,
+    "shared_memory_spill": true,
+    "verdict": "OOM_FAIL",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"Players from both teams are positioned for a free kick. The ball is in play near the goal area.\", \"label\": \"Free kick\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:02\", \"commentary\": \"A player from Arsenal prepares to take the free kick. The ball is in the air, heading towards the goal.\", \"label\": \"Free kick\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:04\", \"commentary\": \"The ball is in the air, approaching the goal area. The goalkeeper is ready to defend.\", \"label\": \"Ball out of play\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:06\", \"commentary\": \"The ball is near the goal line. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:08\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:10\", \"commentary\": \"The ball is near the goal line. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:12\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:14\", \"commentary\": \"The ball is near the goal line. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.95, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:16\", \"commentary\": \"The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:04",
+        "commentary": "The ball is in the air, approaching the goal area. The goalkeeper is ready to defend.",
+        "label": "Ball out of play",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "The ball is near the goal line. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:08",
+        "commentary": "The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:10",
+        "commentary": "The ball is near the goal line. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "The ball is in the air, heading towards the goal. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:14",
+        "commentary": "The ball is near the goal line. The goalkeeper is ready to make a save.",
+        "label": "Goal",
+        "confidence": 0.95,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 6.03,
+    "passed": false,
+    "model_name": "InternVL3.5-2B",
+    "track": 1
+  }
+]

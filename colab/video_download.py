@@ -28,8 +28,7 @@ USAGE:
 # Which batch are you downloading? (1, 2, 3, 4, or 5)
 BATCH_NUMBER = 1
 
-# Your NDA password
-NDA_PASSWORD = "s0cc3rn3t"
+# NDA password is read from the Colab secret SOCCERNET_NDA_PASSWORD (key icon in sidebar)
 
 # Resolution
 RESOLUTION = "720p"
@@ -665,8 +664,9 @@ print(f"104 EPL GAMES DOWNLOADER + LLM ANNOTATION - BATCH {BATCH_NUMBER}/5")
 print("="*80)
 
 # Check password
-if NDA_PASSWORD == "YOUR_PASSWORD_HERE":
-    print("❌ ERROR: Set your NDA_PASSWORD first!")
+NDA_PASSWORD = userdata.get("SOCCERNET_NDA_PASSWORD")
+if not NDA_PASSWORD:
+    print("❌ ERROR: Add the SOCCERNET_NDA_PASSWORD Colab secret first!")
     exit()
 
 # Mount Google Drive

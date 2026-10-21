@@ -1,0 +1,965 @@
+[
+  {
+    "chunk_index": 0,
+    "window_index": 0,
+    "slice": "0.0s - 30.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball to the right side of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball in his right hand and throwing it to the left side of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball in his right hand and throwing it to the left side of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball in his right hand and throwing it to the left side of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball in his right hand and throwing it to the left side of the frame.\", \"label\": \"OfficialSoccerNetClass\"}]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 1,
+    "slice": "20.0s - 50.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball, ball is in the center of the frame, no obstruction.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"Player is holding a soccer ball, ball is in the center of the frame, no obstruction.\",\n    \"label\": \"Ball out of play\"\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 2,
+    "slice": "40.0s - 70.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing a ball.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 3,
+    "slice": "60.0s - 90.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it across the field of play.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 4,
+    "slice": "80.0s - 110.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 5,
+    "slice": "100.0s - 130.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle from the left side of the image, throwing a ball to the right side of the image.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.85\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 6,
+    "slice": "120.0s - 150.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 7,
+    "slice": "140.0s - 170.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 8,
+    "slice": "160.0s - 190.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the frame, throwing a ball to the right side of the frame.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 9,
+    "slice": "180.0s - 210.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball in the center of the frame, dribbling it across the field of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 10,
+    "slice": "200.0s - 230.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the left side of the screen.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 11,
+    "slice": "220.0s - 250.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball in the air.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 12,
+    "slice": "240.0s - 270.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 13,
+    "slice": "260.0s - 290.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it across the field of play.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 14,
+    "slice": "280.0s - 310.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the image, throwing the ball to the right side of the image.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 15,
+    "slice": "300.0s - 330.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the left of the ball, throwing it out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 16,
+    "slice": "320.0s - 350.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 18, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \""
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 17,
+    "slice": "340.0s - 370.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 18,
+    "slice": "360.0s - 390.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 19,
+    "slice": "380.0s - 410.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 20,
+    "slice": "400.0s - 430.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball in the center of the frame, ball is in focus.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 21,
+    "slice": "420.0s - 450.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 22,
+    "slice": "440.0s - 470.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 23,
+    "slice": "460.0s - 490.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Man is holding a soccer ball, ball is in the center of the frame, no interference.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 24,
+    "slice": "480.0s - 510.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, which is the center of the play area.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A person is throwing a soccer ball, which is the center of the play area.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 25,
+    "slice": "500.0s - 530.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\"\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 26,
+    "slice": "520.0s - 550.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it with their right hand while the ball is in mid-air, the player is wearing a yellow jersey.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 27,
+    "slice": "540.0s - 570.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the ball from the center circle to the right side of the image.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 28,
+    "slice": "560.0s - 590.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it across the field of play.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 29,
+    "slice": "580.0s - 610.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]"
+  },
+  {
+    "chunk_index": 0,
+    "window_index": 30,
+    "slice": "600.0s - 615.1s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player crosses the center circle to throw the ball in from the sideline\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]"
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 0,
+    "slice": "0.0s - 30.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle from the left side of the image, throwing a ball at the center of the image.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 1,
+    "slice": "20.0s - 50.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 2,
+    "slice": "40.0s - 70.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 3,
+    "slice": "60.0s - 90.0s",
+    "raw_output": "[{\"image_id\": 1, \"label\": \"Shots on target\", \"timestamp\": \"00:00\"}, {\"image_id\": 2, \"label\": \"Clearance\"}, {\"image_id\": 3, \"label\": \"Shots on target\"}, {\"image_id\": 4, \"label\": \"Shots on target\"}, {\"image_id\": 5, \"label\": \"Shots on target\"}, {\"image_id\": 6, \"label\": \"Shots on target\"}, {\"image_id\": 7, \"label\": \"Clearance\"}, {\"image_id\": 8, \"label\": \"Shots off target\"}, {\"image_id\": 9, \"label\": \"Shots off target\"}, {\"image_id\": 10, \"label\": \"Shots on target\"}, {\"image_id\": 11, \"label\": \"Shots off target\"}, {\"image_id\": 12, \"label\": \"Shots off target\"}, {\"image_id\": 13, \"label\": \"Shots on target\"}, {\"image_id\": 14, \"label\": \"Shots off target\"}, {\"image_id\": 15, \"label\": \"Shots off target\"}, {\"image_id\": 16, \"label\": \"Shots on target\"}, {\"image_id\": 17, \"label\": \"Shots off target\"}, {\"image_id\": 18, \"label\": \"Shots on target\"}, {\"image_id\": 19, \"label\": \"Shots off target\"}, {\"image_id\": 20, \"label\": \"Shots off target\"}, {\"image_id\": 21, \"label\": \"Shots off target\"}, {\"image_id\": 22, \"label\": \"Shots off target\"}, {\"image_id\": 23, \"label\": \"Shots off target\"}, {\"image_id\": 24, \"label\": \"Shots off target\"}, {\"image_id\": 25, \"label\": \"Shots on target\"}, {\"image_id\": 26, \"label\": \"Shots on target\"}, {\"image_id\": 27, \"label\": \"Shots off target\"}, {\"image_id\": 28, \"label\": \"Shots off target\"}, {\"image_id\": 29, \"label\": \"Shots on target\"}, {\"image_id\": 30, \"label\": \"Shots off target\"}, {\"image_id\": 31, \"label\": \"Shots off target\"}, {\"image_id\": 32, \"label\": \"Shots off target\"}, {\"image_id\": 33, \"label\": \"Shots off target\"}, {\"image_id\": 34, \"label\": \"Shots off target\"}, {\"image_id\": 35, \"label\": \"Shots off target\"}, {\"image_id\": 36, \"label\": \"Shots off target\"}, {\"image_id\": 37, \"label\": \"Shots off target\"}, {\"image_id\": 38, \"label\": \"Shots off target\"}, {\"image_id\": 39, \"label\": \"Shots off target\"}, {\"image_id\": 40, \"label\": \"Shots off target\"}, {\"image_id\": 41, \"label\": \"Shots off target\"}, {\"image_id\": 42, \"label\": \"Shots on target\"}, {\"image_id\": 43, \"label\": \"Shots off target\"}, {\"image_id\": 44, \"label\": \"Shots off target\"}, {\"image_id\": 45, \"label\": \"Shots off target\"}, {\"image_id\": 46, \"label\": \"Shots off target\"}, {\"image_id\": 47, \"label\": \"Shots off target\"}, {\"image_id\": 48, \"label\": \"Sh",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 4,
+    "slice": "80.0s - 110.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is standing in the center of the image, holding a soccer ball.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 5,
+    "slice": "100.0s - 130.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the left side of the image.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 6,
+    "slice": "120.0s - 150.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 7,
+    "slice": "140.0s - 170.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 8,
+    "slice": "160.0s - 190.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, dribbling it across the field of play, and the ball is completely in the center circle.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 9,
+    "slice": "180.0s - 210.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing a ball.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 10,
+    "slice": "200.0s - 230.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it with a stick.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]\n```",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 11,
+    "slice": "220.0s - 250.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the image, throwing the ball to the right side of the image.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 12,
+    "slice": "240.0s - 270.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the left of the ball, throwing it out of the play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 13,
+    "slice": "260.0s - 290.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 14,
+    "slice": "280.0s - 310.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\", \"confidence\": 0.95}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\":",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 15,
+    "slice": "300.0s - 330.0s",
+    "raw_output": "[{\"image_id\": 0, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 1, \"timestamp\": \"00:25\", \"commentary\": \"A man is crossing the center circle from the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the top of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the bottom of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the top of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the bottom of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the top of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the bottom of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is crossing the center circle from the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 16,
+    "slice": "320.0s - 350.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 17,
+    "slice": "340.0s - 370.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the side line.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.9\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 18,
+    "slice": "360.0s - 390.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 19,
+    "slice": "380.0s - 410.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 20,
+    "slice": "400.0s - 430.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left to the right side of the image, throwing a ball.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 21,
+    "slice": "420.0s - 450.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the image to the right side of the image.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 22,
+    "slice": "440.0s - 470.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left to the right, throwing the ball to the right.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 23,
+    "slice": "460.0s - 490.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is standing in the center of the image, holding a soccer ball.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A person is throwing a soccer ball in the air.\",\n    \"label\": \"Ball out of play\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 24,
+    "slice": "480.0s - 510.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 25,
+    "slice": "500.0s - 530.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 26,
+    "slice": "520.0s - 550.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 27,
+    "slice": "540.0s - 570.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right side of the image, throwing a ball.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 28,
+    "slice": "560.0s - 590.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the ball from the center circle to the right side of the image, throwing the ball out of the play area.\",\n    \"label\": \"Throw-in\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 29,
+    "slice": "580.0s - 610.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 18, \"timestamp\": \"00:00\", \"commentary\": \"A man is holding a ball in the center of the image.\", \"label",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "window_index": 30,
+    "slice": "600.0s - 615.1s",
+    "raw_output": "[]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 0,
+    "slice": "0.0s - 30.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.9\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 1,
+    "slice": "20.0s - 50.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\", \"confidence\": 0.95}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the right side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a football\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 2,
+    "slice": "40.0s - 70.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 3,
+    "slice": "60.0s - 90.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 4,
+    "slice": "80.0s - 110.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 5,
+    "slice": "100.0s - 130.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 6,
+    "slice": "120.0s - 150.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 7,
+    "slice": "140.0s - 170.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a golden baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\", \"confidence\": 0.95}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A woman is holding a golden baseball and preparing to throw it towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is throwing a golden baseball towards the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 8,
+    "slice": "160.0s - 190.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A person holds a camera with a camera and a ball in their hand, the ball is in the center of the frame.\", \"label\": \"OfficialSoccerNet",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 9,
+    "slice": "180.0s - 210.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to throw the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 10,
+    "slice": "200.0s - 230.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 11,
+    "slice": "220.0s - 250.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the left of the ball, throwing it out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 12,
+    "slice": "240.0s - 270.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\", \"confidence\": 0.95}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball\", \"label\": \"Official",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 13,
+    "slice": "260.0s - 290.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the left side of the image, holding a baseball bat horizontally in front of him. The ball is in the air, just about to be hit by the bat. The ball is in the center of the image, and the man is on the left side of the image. The ball is in the center of the image, and the man is on the left side of the image. The man is wearing a baseball cap.\", \"label\": \"Ball out of play\", \"confidence\": 0.95}]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 14,
+    "slice": "280.0s - 310.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A soccer player is captured mid-action, kicking a soccer ball with a focused expression, clearly visible in the center of the frame.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 15,
+    "slice": "300.0s - 330.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it across the field of play.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 16,
+    "slice": "320.0s - 350.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, which is a clear focal point of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 17,
+    "slice": "340.0s - 370.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\", \"confidence\": 0.95}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A woman is crossing the center circle to throw a ball at a person\", \"label\": \"Official",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 18,
+    "slice": "360.0s - 390.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing a ball.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 19,
+    "slice": "380.0s - 410.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is standing in the center of the image, holding a soccer ball, with the ball positioned in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 20,
+    "slice": "400.0s - 430.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 21,
+    "slice": "420.0s - 450.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 22,
+    "slice": "440.0s - 470.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left, throwing a ball to the right.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 23,
+    "slice": "460.0s - 490.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the frame, dribbling it with their right hand.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 24,
+    "slice": "480.0s - 510.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A soccer player is captured mid-action, dribbling a ball with a focused expression, clearly visible in the center of the frame.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 25,
+    "slice": "500.0s - 530.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 26,
+    "slice": "520.0s - 550.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A soccer player is dribbling the ball across the center of the screen, with the ball completely in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 27,
+    "slice": "540.0s - 570.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 28,
+    "slice": "560.0s - 590.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, which is the center of the action.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 29,
+    "slice": "580.0s - 610.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left to the right, throwing the ball in the air.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A man is crossing the goal line from the left to the right, throwing the ball in the air.\",\n    \"label\": \"ball out of play\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "window_index": 30,
+    "slice": "600.0s - 615.1s",
+    "raw_output": "[]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 0,
+    "slice": "0.0s - 30.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing a ball.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 1,
+    "slice": "20.0s - 50.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, which is the main action in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 2,
+    "slice": "40.0s - 70.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of the play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 3,
+    "slice": "60.0s - 90.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is standing in the center of the image, holding a soccer ball, which is the focal point of the scene.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 4,
+    "slice": "80.0s - 110.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 5,
+    "slice": "100.0s - 130.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 6,
+    "slice": "120.0s - 150.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right of the ball, throwing it out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 7,
+    "slice": "140.0s - 170.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 8,
+    "slice": "160.0s - 190.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 9,
+    "slice": "180.0s - 210.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 10,
+    "slice": "200.0s - 230.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A person is holding a camera with a visible ball in the center of the frame.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 11,
+    "slice": "220.0s - 250.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 12,
+    "slice": "240.0s - 270.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, which is the center of the action.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 13,
+    "slice": "260.0s - 290.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 14,
+    "slice": "280.0s - 310.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 15,
+    "slice": "300.0s - 330.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 16,
+    "slice": "320.0s - 350.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 17,
+    "slice": "340.0s - 370.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 18,
+    "slice": "360.0s - 390.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 19,
+    "slice": "380.0s - 410.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A soccer player is captured mid-action, dribbling the ball with precision.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 20,
+    "slice": "400.0s - 430.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 21,
+    "slice": "420.0s - 450.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right of the ball, throwing it out of the play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 22,
+    "slice": "440.0s - 470.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 23,
+    "slice": "460.0s - 490.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing a ball.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 24,
+    "slice": "480.0s - 510.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left to the right, throwing a ball to the right.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 25,
+    "slice": "500.0s - 530.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 26,
+    "slice": "520.0s - 550.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball in from the left side of the image.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 27,
+    "slice": "540.0s - 570.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 28,
+    "slice": "560.0s - 590.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball in from the corner.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 29,
+    "slice": "580.0s - 610.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is walking across the center of the image, throwing a ball to the left side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, throwing a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, throwing a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, holding a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, throwing a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing in the center of the image, throwing a ball to the right side of the image.\", \"label\": \"OfficialSoccerNetClass\"}]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "window_index": 30,
+    "slice": "600.0s - 615.2s",
+    "raw_output": "[]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 0,
+    "slice": "0.0s - 30.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the left.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing on the street corner, looking to the right.\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 18, \"timestamp\": \"00:00\", \"commentary\": \"",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 1,
+    "slice": "20.0s - 50.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the image, throwing a ball to the right side of the image.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 2,
+    "slice": "40.0s - 70.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 3,
+    "slice": "60.0s - 90.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the ball from the center circle to the endline, throwing a ball.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 4,
+    "slice": "80.0s - 110.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Player is holding a soccer ball in the center of the frame, clearly visible.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 5,
+    "slice": "100.0s - 130.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 6,
+    "slice": "120.0s - 150.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the screen to the right side of the screen, throwing a ball to the right.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 7,
+    "slice": "140.0s - 170.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 8,
+    "slice": "160.0s - 190.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is standing in the center of the image, holding a soccer ball.\",\n    \"label\": \"OfficialSoccerNetClass\"\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 9,
+    "slice": "180.0s - 210.0s",
+    "raw_output": "[{\"image_id\": 1, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\", \"confidence\": 0.95}, {\"image_id\": 2, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 3, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 4, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 5, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 6, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 7, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 8, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 9, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 10, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 11, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 12, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 13, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 14, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 15, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 16, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing still in the center of the image, holding a baseball\", \"label\": \"OfficialSoccerNetClass\"}, {\"image_id\": 17, \"timestamp\": \"00:00\", \"commentary\": \"A man is standing",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 10,
+    "slice": "200.0s - 230.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball, which is the center of the action.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 11,
+    "slice": "220.0s - 250.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 12,
+    "slice": "240.0s - 270.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle to the right, throwing the ball to the left.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 13,
+    "slice": "260.0s - 290.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle, throwing the ball in from the side line.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 14,
+    "slice": "280.0s - 310.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is crossing the center circle, throwing the ball out of play.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 15,
+    "slice": "300.0s - 330.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A person is holding a soccer ball in the center of the image.\",\n    \"label\": \"OfficialSoccerNetClass\",\n    \"confidence\": 0.9\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 16,
+    "slice": "320.0s - 350.0s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A man is crossing the center circle from the left side of the image, throwing a ball to the right side of the image.\",\n    \"label\": \"ball out of play\",\n    \"confidence\": 0.95\n  }\n]",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "window_index": 17,
+    "slice": "340.0s - 364.4s",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"A person is crossing the center circle to throw the ball out of play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.85\n  }\n]",
+    "is_dry_run": false
+  }
+]

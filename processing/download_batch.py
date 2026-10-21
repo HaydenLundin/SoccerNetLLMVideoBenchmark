@@ -8,7 +8,7 @@ from SoccerNet.utils import getListGames
 # ============================================================================
 
 BATCH_NUMBER = 1
-NDA_PASSWORD = "s0cc3rn3t"
+NDA_PASSWORD = os.environ.get("SOCCERNET_NDA_PASSWORD")  # set in .env (gitignored)
 RESOLUTION = "720p"
 
 # HPC PATHS
@@ -21,6 +21,9 @@ OUTPUT_DIR = os.path.join(BASE_DIR, "raw_data")
 
 print(f"📂 Setting up download to: {OUTPUT_DIR}")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+if not NDA_PASSWORD:
+    sys.exit("❌ Set SOCCERNET_NDA_PASSWORD (see .env.example)")
 
 # 1. Get Game List
 print("🔍 Finding EPL games...")

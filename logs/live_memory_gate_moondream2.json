@@ -1,0 +1,115 @@
+[
+  {
+    "model_key": "moondream2",
+    "precision": "bf16",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.594,
+    "load_reserved_gib": 3.611,
+    "peak_allocated_gib": 4.138,
+    "peak_reserved_gib": 4.34,
+    "wall_clock_sec": 3.086,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"Brief description of the action...\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:15",
+        "commentary": "Brief description of the action...",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "Moondream2",
+    "track": 3
+  },
+  {
+    "model_key": "moondream2",
+    "precision": "bf16",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.594,
+    "load_reserved_gib": 3.611,
+    "peak_allocated_gib": 4.138,
+    "peak_reserved_gib": 4.34,
+    "wall_clock_sec": 3.98,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:30",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 1.29,
+    "passed": true,
+    "model_name": "Moondream2",
+    "track": 3
+  },
+  {
+    "model_key": "moondream2",
+    "precision": "bf16",
+    "frame_count": 60,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 3.594,
+    "load_reserved_gib": 3.611,
+    "peak_allocated_gib": 4.138,
+    "peak_reserved_gib": 4.34,
+    "wall_clock_sec": 3.394,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Corner\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"01:00\",\n    \"commentary\": \"Brief description of the action...\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Corner",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "01:00",
+        "commentary": "Brief description of the action...",
+        "label": "Corner",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 0.85,
+    "passed": true,
+    "model_name": "Moondream2",
+    "track": 3
+  }
+]

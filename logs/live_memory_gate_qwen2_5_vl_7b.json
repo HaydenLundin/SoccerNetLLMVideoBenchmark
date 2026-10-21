@@ -1,0 +1,84 @@
+[
+  {
+    "model_key": "qwen2.5-vl-7b",
+    "precision": "4bit",
+    "frame_count": 15,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 5.816,
+    "load_reserved_gib": 5.922,
+    "peak_allocated_gib": 6.663,
+    "peak_reserved_gib": 6.812,
+    "wall_clock_sec": 7.773,
+    "schema_valid": true,
+    "shared_memory_spill": false,
+    "verdict": "PASS",
+    "raw_output": "[\n    {\"timestamp\": \"00:00\", \"commentary\": \"Players are positioned near the goal area, preparing for a set piece.\", \"label\": \"Corner\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n    {\"timestamp\": \"00:05\", \"commentary\": \"The ball is kicked into the penalty area but does not result in a goal.\", \"label\": \"Shots off target\", \"confidence\": 0.80, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Players are positioned near the goal area, preparing for a set piece.",
+        "label": "Corner",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:05",
+        "commentary": "The ball is kicked into the penalty area but does not result in a goal.",
+        "label": "Shots off target",
+        "confidence": 0.8,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "passed": true,
+    "model_name": "Qwen2.5-VL-7B",
+    "track": 4
+  },
+  {
+    "model_key": "qwen2.5-vl-7b",
+    "precision": "4bit",
+    "frame_count": 30,
+    "test_audio": false,
+    "dry_run": false,
+    "load_allocated_gib": 5.816,
+    "load_reserved_gib": 5.922,
+    "peak_allocated_gib": 7.971,
+    "peak_reserved_gib": 8.236,
+    "wall_clock_sec": 46.53,
+    "schema_valid": true,
+    "shared_memory_spill": true,
+    "verdict": "OOM_FAIL",
+    "raw_output": "[\n\t{\"timestamp\": \"00:00\", \"commentary\": \"Players are positioned on the field, preparing for a kick-off.\", \"label\": \"Kick-off\", \"confidence\": 0.85, \"visibility\": \"visible\"},\n\t{\"timestamp\": \"00:06\", \"commentary\": \"A player in yellow kicks the ball towards the goal.\", \"label\": \"Direct free-kick\", \"confidence\": 0.90, \"visibility\": \"visible\"},\n\t{\"timestamp\": \"00:12\", \"commentary\": \"The ball is kicked into the goal.\", \"label\": \"Goal\", \"confidence\": 0.90, \"visibility\": \"visible\"}\n]",
+    "error": null,
+    "parsed_events": [
+      {
+        "timestamp": "00:00",
+        "commentary": "Players are positioned on the field, preparing for a kick-off.",
+        "label": "Kick-off",
+        "confidence": 0.85,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:06",
+        "commentary": "A player in yellow kicks the ball towards the goal.",
+        "label": "Direct free-kick",
+        "confidence": 0.9,
+        "visibility": "visible"
+      },
+      {
+        "timestamp": "00:12",
+        "commentary": "The ball is kicked into the goal.",
+        "label": "Goal",
+        "confidence": 0.9,
+        "visibility": "visible"
+      }
+    ],
+    "out_of_bounds_drops": 0,
+    "latency_scaling_ratio": 5.99,
+    "passed": false,
+    "model_name": "Qwen2.5-VL-7B",
+    "track": 4
+  }
+]
