@@ -1,0 +1,194 @@
+[
+  {
+    "question_id": "vqa_01",
+    "category": "action_spotting",
+    "question": "Which match event occurs at the beginning of the match in this window?",
+    "chunk_index": 0,
+    "start_sec": 0.0,
+    "end_sec": 30.0,
+    "options": {
+      "O1": "Kick-off from the center circle",
+      "O2": "Corner kick from the left quadrant",
+      "O3": "Penalty kick",
+      "O4": "Goal kick by the goalkeeper"
+    },
+    "ground_truth_option": "O1",
+    "ground_truth_explanation": "The match begins at 00:00 with Manchester United executing the official Kick-off from the center circle."
+  },
+  {
+    "question_id": "vqa_02",
+    "category": "referee_decision",
+    "question": "At approximately 01:16, the ball travels across the touchline. What is the referee and assistant's restart decision?",
+    "chunk_index": 0,
+    "start_sec": 65.0,
+    "end_sec": 95.0,
+    "options": {
+      "O1": "Direct free-kick for a handball",
+      "O2": "Throw-in awarded to Arsenal following ball out of play",
+      "O3": "Goal kick for Manchester United",
+      "O4": "Corner kick awarded to the attacking side"
+    },
+    "ground_truth_option": "O2",
+    "ground_truth_explanation": "At 01:16 the ball completely crosses the touchline, and play is restarted at 01:26 via an Arsenal Throw-in."
+  },
+  {
+    "question_id": "vqa_03",
+    "category": "action_spotting",
+    "question": "What significant attacking event happens in the penalty area around 05:35 to 05:42?",
+    "chunk_index": 0,
+    "start_sec": 325.0,
+    "end_sec": 355.0,
+    "options": {
+      "O1": "A goal is scored into the top corner",
+      "O2": "An attacking strike is fired off target wide of the post",
+      "O3": "A penalty is awarded for a trip",
+      "O4": "The goalkeeper is red-carded"
+    },
+    "ground_truth_option": "O2",
+    "ground_truth_explanation": "At 05:38, an intentional shot is directed towards goal but misses the target (Shots off target)."
+  },
+  {
+    "question_id": "vqa_04",
+    "category": "tactical_setup",
+    "question": "At 06:15 to 06:25, how does the defending team resolve the attacking cross into the penalty box?",
+    "chunk_index": 0,
+    "start_sec": 370.0,
+    "end_sec": 395.0,
+    "options": {
+      "O1": "By passing backward to the goalkeeper",
+      "O2": "By forcibly kicking the ball far away from danger (Clearance)",
+      "O3": "By allowing the ball to roll out for a goal kick",
+      "O4": "By conceding an own goal"
+    },
+    "ground_truth_option": "O2",
+    "ground_truth_explanation": "At 06:18, an Arsenal defender executes an emphatic visual Clearance away from an active attacking threat."
+  },
+  {
+    "question_id": "vqa_05",
+    "category": "tactical_setup",
+    "question": "At 09:15 to 09:30, what sequence of set-piece play unfolds near the goal line?",
+    "chunk_index": 0,
+    "start_sec": 550.0,
+    "end_sec": 575.0,
+    "options": {
+      "O1": "A direct free kick strikes the crossbar",
+      "O2": "A corner kick is swung into the box resulting in a header on target",
+      "O3": "A throw-in is taken directly into the goalkeeper's hands",
+      "O4": "A substitution is made before play can restart"
+    },
+    "ground_truth_option": "O2",
+    "ground_truth_explanation": "At 09:20 a Manchester United Corner is taken, leading directly to a header saved by the keeper (Shots on target at 09:24)."
+  },
+  {
+    "question_id": "vqa_06",
+    "category": "temporal_continuity",
+    "question": "Which event happens immediately prior to the Throw-in taken at 03:54?",
+    "chunk_index": 0,
+    "start_sec": 220.0,
+    "end_sec": 245.0,
+    "options": {
+      "O1": "A yellow card caution",
+      "O2": "The ball traveling out of play across the sideline (03:48)",
+      "O3": "A goal celebration",
+      "O4": "An offside whistle"
+    },
+    "ground_truth_option": "O2",
+    "ground_truth_explanation": "The ball crossed the sideline at 03:48 (Ball out of play), establishing the legal stoppage preceding the Throw-in at 03:54."
+  },
+  {
+    "question_id": "vqa_07",
+    "category": "referee_decision",
+    "question": "During the physical tackle in midfield at 25:35 to 25:42, what is the referee's official action?",
+    "chunk_index": 2,
+    "start_sec": 360.0,
+    "end_sec": 385.0,
+    "options": {
+      "O1": "The referee waves play on with no stoppage",
+      "O2": "The referee blows the whistle and awards a Foul",
+      "O3": "The referee immediately shows a straight Red Card",
+      "O4": "The referee awards a penalty kick"
+    },
+    "ground_truth_option": "O2",
+    "ground_truth_explanation": "At 25:38, the referee stops play with a whistle for a Foul, confirmed by our acoustic whistle flux peak (z = 8.4)."
+  },
+  {
+    "question_id": "vqa_08",
+    "category": "action_spotting",
+    "question": "At match minute 29:19 (Chunk 2), what major game-defining event takes place?",
+    "chunk_index": 2,
+    "start_sec": 580.0,
+    "end_sec": 605.0,
+    "options": {
+      "O1": "Ander Herrera scores a volley into the bottom corner (Goal)",
+      "O2": "A player is sent off for a second yellow card",
+      "O3": "A penalty is saved by David de Gea",
+      "O4": "The ball strikes the referee and play is stopped"
+    },
+    "ground_truth_option": "O1",
+    "ground_truth_explanation": "At 29:19, Ander Herrera volleys Ashley Young's cross into the net for the opening Goal (triggering a +16.32 dB crowd roar)."
+  },
+  {
+    "question_id": "vqa_09",
+    "category": "temporal_continuity",
+    "question": "In the sequence leading up to the 29:19 Goal, how does the attacking buildup develop?",
+    "chunk_index": 2,
+    "start_sec": 570.0,
+    "end_sec": 595.0,
+    "options": {
+      "O1": "Ashley Young delivers a cross from the left wing before Herrera's first-time finish",
+      "O2": "A defensive clearance is deflected into the net by an own goal",
+      "O3": "A direct free kick is fired through the defensive wall",
+      "O4": "A counter-attack following an Arsenal corner kick"
+    },
+    "ground_truth_option": "O1",
+    "ground_truth_explanation": "The tactical buildup features Ashley Young driving down the left flank and delivering a cross met by Herrera at the back post."
+  },
+  {
+    "question_id": "vqa_10",
+    "category": "tactical_setup",
+    "question": "What kit colors identify the two competing sides in this Premier League broadcast?",
+    "chunk_index": 0,
+    "start_sec": 10.0,
+    "end_sec": 40.0,
+    "options": {
+      "O1": "Manchester United in red shirts / white shorts; Arsenal in yellow shirts / blue shorts",
+      "O2": "Manchester United in white shirts; Arsenal in red shirts",
+      "O3": "Manchester United in all-black; Arsenal in all-yellow",
+      "O4": "Manchester United in blue shirts; Arsenal in green shirts"
+    },
+    "ground_truth_option": "O1",
+    "ground_truth_explanation": "Manchester United wears their traditional red home kit, while Arsenal plays in their away yellow shirts with dark blue shorts."
+  },
+  {
+    "question_id": "vqa_11",
+    "category": "referee_decision",
+    "question": "At 09:40 to 09:50, the ball goes over the Arsenal endline off a defender. What set piece is awarded?",
+    "chunk_index": 0,
+    "start_sec": 575.0,
+    "end_sec": 605.0,
+    "options": {
+      "O1": "Corner kick to Manchester United",
+      "O2": "Goal kick to Arsenal",
+      "O3": "Direct free-kick for offside",
+      "O4": "Dropped ball at the penalty spot"
+    },
+    "ground_truth_option": "O1",
+    "ground_truth_explanation": "At 09:46, Manchester United is awarded a Corner kick as the ball crossed the goal line off an Arsenal defender."
+  },
+  {
+    "question_id": "vqa_12",
+    "category": "temporal_continuity",
+    "question": "Between 00:00 and 02:00 in Chunk 0, what is the chronological order of the first two official stoppages?",
+    "chunk_index": 0,
+    "start_sec": 0.0,
+    "end_sec": 95.0,
+    "options": {
+      "O1": "Kick-off (00:00) followed by Ball out of play / Throw-in (01:16–01:26)",
+      "O2": "Foul followed by a Yellow Card",
+      "O3": "Offside followed by a Corner kick",
+      "O4": "Goal followed by a substitution"
+    },
+    "ground_truth_option": "O1",
+    "ground_truth_explanation": "The official match record begins with the 00:00 Kick-off, and the next stoppage occurs at 01:16 when the ball travels out of play."
+  }
+]

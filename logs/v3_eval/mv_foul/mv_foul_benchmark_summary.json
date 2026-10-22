@@ -1,0 +1,27 @@
+{
+  "visual_only": {
+    "accuracy_offence_severity": 75.0,
+    "accuracy_action": 100.0,
+    "balanced_accuracy_offence_severity": NaN,
+    "balanced_accuracy_action": NaN,
+    "leaderboard_value": NaN,
+    "active_balanced_accuracy_offence_severity": 78.57,
+    "active_balanced_accuracy_action": 100.0,
+    "active_leaderboard_value": 89.29
+  },
+  "audio_visual_grounded": {
+    "accuracy_offence_severity": 100.0,
+    "accuracy_action": 100.0,
+    "balanced_accuracy_offence_severity": NaN,
+    "balanced_accuracy_action": NaN,
+    "leaderboard_value": NaN,
+    "active_balanced_accuracy_offence_severity": 100.0,
+    "active_balanced_accuracy_action": 100.0,
+    "active_leaderboard_value": 100.0
+  },
+  "improvement_delta": {
+    "accuracy_offence_severity": 25.0,
+    "active_balanced_accuracy_offence_severity": 21.43,
+    "active_leaderboard_value": 10.71
+  }
+}

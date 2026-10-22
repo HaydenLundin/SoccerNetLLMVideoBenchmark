@@ -1,0 +1,252 @@
+{
+  "model_key": "qwen3.5-4b",
+  "model_name": "Qwen3.5-4B",
+  "precision": "4bit",
+  "dry_run": false,
+  "total_questions": 12,
+  "total_correct": 12,
+  "overall_accuracy_pct": 100.0,
+  "random_baseline_pct": 25.0,
+  "total_wall_sec": 212.65,
+  "avg_latency_per_question_sec": 17.72,
+  "per_category_accuracy": {
+    "action_spotting": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    },
+    "referee_decision": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    },
+    "tactical_setup": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    },
+    "temporal_continuity": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    }
+  },
+  "results": [
+    {
+      "question_id": "vqa_01",
+      "category": "action_spotting",
+      "question": "Which match event occurs at the beginning of the match in this window?",
+      "ground_truth_option": "O1",
+      "predicted_option": "O1",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence begins at 00:00 with players in the center circle and the ball being kicked into play, which is the standard procedure for a kick-off.",
+      "raw_output": "{\n  \"selected_option\": \"O1\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence begins at 00:00 with players in the center circle and the ball being kicked into play, which is the standard procedure for a kick-off.\"\n}\n",
+      "inference_sec": 30.66,
+      "parse_diag": {
+        "raw_length": 216,
+        "strategy": "json",
+        "selected_option": "O1",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_02",
+      "category": "referee_decision",
+      "question": "At approximately 01:16, the ball travels across the touchline. What is the referee and assistant's restart decision?",
+      "ground_truth_option": "O2",
+      "predicted_option": "O2",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The ball is clearly seen crossing the touchline at 00:28, and the referee's arm signal at 00:29 confirms a throw-in is being awarded to the team in possession (Arsenal).",
+      "raw_output": "{\n  \"selected_option\": \"O2\",\n  \"confidence\": 0.95,\n  \"thought\": \"The ball is clearly seen crossing the touchline at 00:28, and the referee's arm signal at 00:29 confirms a throw-in is being awarded to the team in possession (Arsenal).\"\n}\n",
+      "inference_sec": 8.93,
+      "parse_diag": {
+        "raw_length": 238,
+        "strategy": "json",
+        "selected_option": "O2",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_03",
+      "category": "action_spotting",
+      "question": "What significant attacking event happens in the penalty area around 05:35 to 05:42?",
+      "ground_truth_option": "O2",
+      "predicted_option": "O2",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence from 00:18 to 00:21 shows a player in red taking a shot that goes wide of the right post, missing the goal.",
+      "raw_output": "{\n  \"selected_option\": \"O2\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence from 00:18 to 00:21 shows a player in red taking a shot that goes wide of the right post, missing the goal.\"\n}\n",
+      "inference_sec": 7.46,
+      "parse_diag": {
+        "raw_length": 189,
+        "strategy": "json",
+        "selected_option": "O2",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_04",
+      "category": "tactical_setup",
+      "question": "At 06:15 to 06:25, how does the defending team resolve the attacking cross into the penalty box?",
+      "ground_truth_option": "O2",
+      "predicted_option": "O2",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The video sequence shows the defending team (in red) receiving a cross into the box and immediately kicking the ball high and long into open play to clear the danger.",
+      "raw_output": "{\n  \"selected_option\": \"O2\",\n  \"confidence\": 0.95,\n  \"thought\": \"The video sequence shows the defending team (in red) receiving a cross into the box and immediately kicking the ball high and long into open play to clear the danger.\"\n}\n",
+      "inference_sec": 6.57,
+      "parse_diag": {
+        "raw_length": 235,
+        "strategy": "json",
+        "selected_option": "O2",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_05",
+      "category": "tactical_setup",
+      "question": "At 09:15 to 09:30, what sequence of set-piece play unfolds near the goal line?",
+      "ground_truth_option": "O2",
+      "predicted_option": "O2",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence shows a corner kick being taken, followed by a Manchester United player (number 18) jumping and heading the ball towards the goal.",
+      "raw_output": "{\n  \"selected_option\": \"O2\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence shows a corner kick being taken, followed by a Manchester United player (number 18) jumping and heading the ball towards the goal.\"\n}\n",
+      "inference_sec": 7.04,
+      "parse_diag": {
+        "raw_length": 212,
+        "strategy": "json",
+        "selected_option": "O2",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_06",
+      "category": "temporal_continuity",
+      "question": "Which event happens immediately prior to the Throw-in taken at 03:54?",
+      "ground_truth_option": "O2",
+      "predicted_option": "O2",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence shows the ball rolling out of play across the sideline at 03:48, which is the direct trigger for the throw-in that occurs at 03:54.",
+      "raw_output": "{\n  \"selected_option\": \"O2\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence shows the ball rolling out of play across the sideline at 03:48, which is the direct trigger for the throw-in that occurs at 03:54.\"\n}\n",
+      "inference_sec": 8.25,
+      "parse_diag": {
+        "raw_length": 213,
+        "strategy": "json",
+        "selected_option": "O2",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_07",
+      "category": "referee_decision",
+      "question": "During the physical tackle in midfield at 25:35 to 25:42, what is the referee's official action?",
+      "ground_truth_option": "O2",
+      "predicted_option": "O2",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence shows a physical challenge between players, followed immediately by the referee blowing the whistle and gesturing to stop play, which is the standard procedure for awarding a foul.",
+      "raw_output": "{\n  \"selected_option\": \"O2\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence shows a physical challenge between players, followed immediately by the referee blowing the whistle and gesturing to stop play, which is the standard procedure for awarding a foul.\"\n}\n",
+      "inference_sec": 7.88,
+      "parse_diag": {
+        "raw_length": 262,
+        "strategy": "json",
+        "selected_option": "O2",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_08",
+      "category": "action_spotting",
+      "question": "At match minute 29:19 (Chunk 2), what major game-defining event takes place?",
+      "ground_truth_option": "O1",
+      "predicted_option": "O1",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence shows a player in a red jersey receiving a pass, striking the ball with his chest/shoulder into the net, followed by a celebration hug, which is consistent with a volley goal.",
+      "raw_output": "{\n  \"selected_option\": \"O1\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence shows a player in a red jersey receiving a pass, striking the ball with his chest/shoulder into the net, followed by a celebration hug, which is consistent with a volley goal.\"\n}\n",
+      "inference_sec": 7.68,
+      "parse_diag": {
+        "raw_length": 257,
+        "strategy": "json",
+        "selected_option": "O1",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_09",
+      "category": "temporal_continuity",
+      "question": "In the sequence leading up to the 29:19 Goal, how does the attacking buildup develop?",
+      "ground_truth_option": "O1",
+      "predicted_option": "O1",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The sequence shows the ball being played to Ashley Young on the left wing (00:22), who then crosses it into the box where Herrera is positioned to score (00:25).",
+      "raw_output": "{\n  \"selected_option\": \"O1\",\n  \"confidence\": 0.95,\n  \"thought\": \"The sequence shows the ball being played to Ashley Young on the left wing (00:22), who then crosses it into the box where Herrera is positioned to score (00:25).\"\n}\n",
+      "inference_sec": 8.19,
+      "parse_diag": {
+        "raw_length": 230,
+        "strategy": "json",
+        "selected_option": "O1",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_10",
+      "category": "tactical_setup",
+      "question": "What kit colors identify the two competing sides in this Premier League broadcast?",
+      "ground_truth_option": "O1",
+      "predicted_option": "O1",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The video frames clearly show Manchester United players in red shirts and white shorts, while Arsenal players are wearing yellow shirts and blue shorts.",
+      "raw_output": "{\n  \"selected_option\": \"O1\",\n  \"confidence\": 0.95,\n  \"thought\": \"The video frames clearly show Manchester United players in red shirts and white shorts, while Arsenal players are wearing yellow shirts and blue shorts.\"\n}\n",
+      "inference_sec": 6.98,
+      "parse_diag": {
+        "raw_length": 221,
+        "strategy": "json",
+        "selected_option": "O1",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_11",
+      "category": "referee_decision",
+      "question": "At 09:40 to 09:50, the ball goes over the Arsenal endline off a defender. What set piece is awarded?",
+      "ground_truth_option": "O1",
+      "predicted_option": "O1",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The ball is clearly seen crossing the goal line into the net in frame 00:29, resulting in a goal for Manchester United.",
+      "raw_output": "{\n  \"selected_option\": \"O1\",\n  \"confidence\": 0.95,\n  \"thought\": \"The ball is clearly seen crossing the goal line into the net in frame 00:29, resulting in a goal for Manchester United.\"\n}\n",
+      "inference_sec": 7.39,
+      "parse_diag": {
+        "raw_length": 188,
+        "strategy": "json",
+        "selected_option": "O1",
+        "is_valid": true
+      }
+    },
+    {
+      "question_id": "vqa_12",
+      "category": "temporal_continuity",
+      "question": "Between 00:00 and 02:00 in Chunk 0, what is the chronological order of the first two official stoppages?",
+      "ground_truth_option": "O1",
+      "predicted_option": "O1",
+      "is_correct": true,
+      "confidence": 0.95,
+      "thought": "The first frame at 00:00 shows the match starting with the ball in the center circle, indicating the kick-off. The second stoppage occurs between 01:16 and 01:26, where the ball is shown in the air near the sideline, consistent with a throw-in.",
+      "raw_output": "{\n  \"selected_option\": \"O1\",\n  \"confidence\": 0.95,\n  \"thought\": \"The first frame at 00:00 shows the match starting with the ball in the center circle, indicating the kick-off. The second stoppage occurs between 01:16 and 01:26, where the ball is shown in the air near the sideline, consistent with a throw-in.\"\n}",
+      "inference_sec": 10.46,
+      "parse_diag": {
+        "raw_length": 312,
+        "strategy": "json",
+        "selected_option": "O1",
+        "is_valid": true
+      }
+    }
+  ]
+}

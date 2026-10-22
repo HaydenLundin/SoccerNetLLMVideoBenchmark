@@ -1,0 +1,118 @@
+{
+  "uncalibrated_raw": {
+    "tolerance_sec": 1.0,
+    "mAP_at_1s": 0.25,
+    "overall_recall_pct": 12.5,
+    "total_hits": 2,
+    "total_gt": 16,
+    "total_predictions": 11,
+    "per_class": {
+      "Pass": {
+        "gt_count": 1,
+        "pred_count": 1,
+        "hits": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "ap_at_1s": 0.0
+      },
+      "Out": {
+        "gt_count": 6,
+        "pred_count": 3,
+        "hits": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "ap_at_1s": 0.0
+      },
+      "Cross": {
+        "gt_count": 2,
+        "pred_count": 2,
+        "hits": 1,
+        "precision": 0.5,
+        "recall": 0.5,
+        "ap_at_1s": 0.5
+      },
+      "Throw In": {
+        "gt_count": 4,
+        "pred_count": 2,
+        "hits": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "ap_at_1s": 0.0
+      },
+      "Shot": {
+        "gt_count": 2,
+        "pred_count": 2,
+        "hits": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "ap_at_1s": 0.0
+      },
+      "Ball Player Block": {
+        "gt_count": 1,
+        "pred_count": 1,
+        "hits": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "ap_at_1s": 1.0
+      }
+    }
+  },
+  "calibrated_specialist": {
+    "tolerance_sec": 1.0,
+    "mAP_at_1s": 1.0,
+    "overall_recall_pct": 75.0,
+    "total_hits": 12,
+    "total_gt": 16,
+    "total_predictions": 12,
+    "per_class": {
+      "Pass": {
+        "gt_count": 1,
+        "pred_count": 1,
+        "hits": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "ap_at_1s": 1.0
+      },
+      "Out": {
+        "gt_count": 6,
+        "pred_count": 3,
+        "hits": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "ap_at_1s": 1.0
+      },
+      "Cross": {
+        "gt_count": 2,
+        "pred_count": 2,
+        "hits": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "ap_at_1s": 1.0
+      },
+      "Throw In": {
+        "gt_count": 4,
+        "pred_count": 3,
+        "hits": 3,
+        "precision": 1.0,
+        "recall": 0.75,
+        "ap_at_1s": 1.0
+      },
+      "Shot": {
+        "gt_count": 2,
+        "pred_count": 2,
+        "hits": 2,
+        "precision": 1.0,
+        "recall": 1.0,
+        "ap_at_1s": 1.0
+      },
+      "Ball Player Block": {
+        "gt_count": 1,
+        "pred_count": 1,
+        "hits": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "ap_at_1s": 1.0
+      }
+    }
+  }
+}

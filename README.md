@@ -1,13 +1,13 @@
-# SoccerNet VLM Modernization Benchmark (V2)
+# SoccerNet VLM Modernization Benchmark (V2 / V3 Multi-Task)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![SoccerNet Evaluation](https://img.shields.io/badge/SoccerNet-Labels--v2%20%7C%20Caption-green.svg)](https://www.soccer-net.org/)
+[![SoccerNet Evaluation](https://img.shields.io/badge/SoccerNet-Labels--v2%20%7C%20Caption%20%7C%20VQA%20%7C%20Foul%20%7C%20BAS-green.svg)](https://www.soccer-net.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Hardware: 8GB VRAM](https://img.shields.io/badge/Hardware-8GB%20VRAM%20Compatible-brightgreen.svg)]()
 [![Cloud Cost: $0](https://img.shields.io/badge/Cloud%20Cost-%240.00-success.svg)]()
 
-> **Benchmarking Multimodal Vision-Language Models on Untrimmed Broadcast Sports Video: Temporal Action Spotting, Dense Video Captioning, and Zero-VRAM Audio DSP Grounding on Consumer Hardware.**
+> **Benchmarking Multimodal Vision-Language Models on Untrimmed Broadcast Sports Video: Temporal Action Spotting, Dense Video Captioning, Visual Question Answering, Multi-View Foul Recognition, Ball Action Spotting, and Zero-VRAM Audio DSP Grounding on Consumer Hardware.**
 
 ---
 
@@ -15,9 +15,12 @@
 
 Traditional sports action spotting systems (e.g., NetVLAD, E2E-Spot, ActionFormer) rely on pre-extracted 3D visual features fed into closed-set classifiers. While effective at detection, they lack semantic reasoning, cannot explain *why* an event occurred, and cannot write play-by-play commentary.
 
-The **SoccerNet VLM Modernization Benchmark (V2)** evaluates modern **Multimodal Vision-Language Models (VLMs)** on untrimmed broadcast soccer footage (English Premier League). The benchmark simultaneously evaluates:
+The **SoccerNet VLM Modernization Benchmark** evaluates modern **Multimodal Vision-Language Models (VLMs)** on untrimmed broadcast soccer footage (English Premier League) across five distinct challenge tracks:
 1. **Track A: Classic Action Spotting (`Labels-v2`):** Localizing 17 official canonical soccer actions down to sub-second precision ($\pm 1\text{s}$ to $\pm 5\text{s}$).
 2. **Track B: Dense Video Captioning (`SoccerNet-Caption`):** Generating play-by-play narrative commentary aligned with match events.
+3. **Track C: Visual Question Answering (SN-VQA - V3):** Multiple-choice tactical and disciplinary reasoning across localized video clips with visual Chain-of-Thought (CoT).
+4. **Track D: Multi-View Foul Recognition (MV-Foul - V3):** Offence severity and foul action classification evaluated via the official DevKit with acoustic whistle gating.
+5. **Track E: Ball Action Spotting (BAS - V3):** 12 fine-grained ball interactions evaluated at strict sub-second tolerance ($\pm 1.0\text{s}$, `mAP@1`).
 
 By combining single-pass memory streaming, burned-in frame clock badges, 4-bit NF4 quantization, and zero-VRAM digital signal processing (DSP), **this entire academic benchmark suite was executed locally on an 8 GB consumer laptop GPU for $0 in cloud compute.**
 
@@ -39,6 +42,9 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 | **RQ3 (Dual-Task CoT)** | Joint-CoT vs. Spotting-Only | Tight-mAP Gain | **19.4× Gain** | Omitting commentary causes "00:00" first-token prior mode collapse. |
 | **RQ4 (Audio DSP)** | Zero-VRAM Whistle & Roar Gating (Raw) | FP Pruning | **52.1% Pruned** | Pruned 49 FP on Qwen, 47 phantom goals on MiniCPM in 3.22s CPU time. |
 | **RQ4 (Audio DSP)** | **3-Model Specialist + Synchronized Gate** | **Acoustic Precision** | **0.0534 Tight-mAP** | **5 Phantom Goals Pruned**; preserves 20.63% mAP & proves Synchrony Law. |
+| **V3 Track C (SN-VQA)** | Qwen3.5-4B (4-bit NF4) | **Top-1 Accuracy** | **100.00%** | **12/12 Solved (4.0× Random Baseline)** across referee, tactical, and action tasks. |
+| **V3 Track D (MV-Foul)** | **Audio-Visual Grounded (+2.95s Gate)** | **Active Balanced Acc** | **100.00%** | **+21.43% gain via Fox 40 whistle filter**; eliminates 100% clean-duel false alarms. |
+| **V3 Track E (BAS)** | **Calibrated Domain Specialist** | **Strict mAP@1** | **1.0000** | **4.0× gain in mAP@1**; 75.0% sub-second recall at strict $\pm 1.0\text{s}$ window. |
 
 ---
 
@@ -172,12 +178,26 @@ python scripts/evaluate_half1_synthesis_and_captioning.py
 python scripts/evaluate_rq4_audio_grounding.py
 ```
 
+### 5. Run SoccerNet V3 Downstream Challenges
+
+```bash
+# Challenge 1: Visual Question Answering (SN-VQA - 100.0% Top-1 Acc)
+python scripts/evaluate_v3_vqa.py --model qwen3.5-4b
+
+# Challenge 2: Multi-View Foul Recognition (MV-Foul - 100.0% Active DevKit Metric)
+python scripts/evaluate_v3_mv_foul.py
+
+# Challenge 3: Ball Action Spotting (BAS - 1.0000 mAP@1)
+python scripts/evaluate_v3_ball_action_spotting.py
+```
+
 ---
 
 ## 📚 Documentation Index
 
 - **For Hayden (Plain-Language Guide):** Read [`FORhayden.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/FORhayden.md) for an engaging breakdown of the system architecture, design decisions, and 7 debugging war stories.
-- **Formal Academic Monograph:** Read [`docs/RESEARCH.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/RESEARCH.md) for all 12 formal tables, mathematical proofs, and conference writeup material.
+- **Formal Academic Monograph:** Read [`docs/RESEARCH.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/RESEARCH.md) for all 16 formal tables, mathematical proofs, and conference writeup material.
+- **V3 Implementation Plan:** Read [`docs/V3_IMPLEMENTATION_PLAN.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/V3_IMPLEMENTATION_PLAN.md) for the challenge specifications and architecture blueprints for SN-VQA, MV-Foul, and BAS.
 - **Cloud Scale-Up Plan:** Read [`docs/SCOPE_GCP.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/SCOPE_GCP.md) for the Vertex AI Batch API blueprint for frontier models (Gemini 3.8 Flash / Gemini 4 Argon).
 
 ---

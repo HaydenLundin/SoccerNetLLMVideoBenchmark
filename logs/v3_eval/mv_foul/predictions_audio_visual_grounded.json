@@ -1,0 +1,64 @@
+{
+  "Actions": {
+    "action_01": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Challenge"
+    },
+    "action_02": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Standing tackling"
+    },
+    "action_03": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Challenge"
+    },
+    "action_04": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Tackling"
+    },
+    "action_05": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Challenge"
+    },
+    "action_06": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Dive"
+    },
+    "action_07": {
+      "Offence": "Offence",
+      "Severity": "1.0",
+      "Action class": "Tackling"
+    },
+    "action_08": {
+      "Offence": "Offence",
+      "Severity": "1.0",
+      "Action class": "Standing tackling"
+    },
+    "action_09": {
+      "Offence": "Offence",
+      "Severity": "1.0",
+      "Action class": "Holding"
+    },
+    "action_10": {
+      "Offence": "Offence",
+      "Severity": "1.0",
+      "Action class": "High leg"
+    },
+    "action_11": {
+      "Offence": "No offence",
+      "Severity": "",
+      "Action class": "Standing tackling"
+    },
+    "action_12": {
+      "Offence": "Offence",
+      "Severity": "1.0",
+      "Action class": "Pushing"
+    }
+  }
+}
