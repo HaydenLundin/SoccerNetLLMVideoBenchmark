@@ -288,6 +288,17 @@ Engineering is not about things working on the first try; it's about systematica
 
 ---
 
+### War Story 7: The Dynamic Tile Explosion & The Qwen2-VL Prior Collapse
+* **The Bug:** During our 20-model ecosystem audit, two shocking edge phenomena appeared:
+  1. IBM's **Granite-Vision-3.2-2B** (a tiny 2B model) attempted to allocate **113.78 GiB of VRAM** on just 15 frames of video, crashing with an explosive CUDA OOM.
+  2. Alibaba's **Qwen2-VL-2B** ran with unbelievable speed (< 90 seconds for all 14 windows on Chunk 0, only 1.51 GiB VRAM load), but scored **0.0000 Tight-mAP** by emitting 13 out of 14 events at the exact window start `00:00` with the label `Clearance`!
+* **The Diagnosis:**
+  1. *The Dynamic Tile Hazard:* Document-oriented VLMs (like LLaVA-NeXT / Granite-Vision) use "AnyRes" dynamic high-resolution cropping. While great for reading high-res PDFs, when given 15 video frames, it generates 5 crops per frame ($75 \text{ total crops} \to 216,000 \text{ tokens}$), causing a quadratic memory explosion. By patching `num_patches_list=[1]*N` (InternVL) and `max_tiles=1` (H2OVL), we rescued those models from dynamic tile OOMs.
+  2. *Hardware Survival vs. Task Competence:* Qwen2-VL-2B survived the 60-second hardware gate easily, but its 2B parameter dense backbone lacked the reasoning depth to anchor temporal actions across 60 continuous frames. Just as we proved in RQ3, without Chain-of-Thought commentary preceding the timestamp, the causal language decoder's attention collapsed onto the first prominent visual badge in the prompt: `[00:00]`, followed by the generic label `Clearance`.
+* **Engineering Lesson:** Hardware feasibility does not equal task competence. A model that consumes only 1.5 GiB of VRAM and runs at 7 seconds a window is completely useless if its autoregressive prior collapses onto boundary artifacts. Always evaluate task accuracy alongside memory benchmarks.
+
+---
+
 ## 7. How Good Engineers Think & Work
 
 Throughout this project, several core engineering principles guided our success:

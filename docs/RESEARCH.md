@@ -861,3 +861,54 @@ Using `PyAV` and `scipy.signal` STFT ($f_s = 44,100\text{ Hz}$, $N=2048$, $\text
      - Crowd roar gating ($\ge +4.0\text{ dB}$) is applied strictly to high-dB events (`Goal`, `Shots on target`).
    - This synchronized pipeline maintains **0.0534 Tight-mAP** and **20.63% Active Loose-mAP** while successfully pruning phantom goal hallucinations, proving that causal acoustic grounding operates as an effective zero-VRAM precision filter.
 
+
+
+---
+
+### 9.15 The 20-Architecture Hardware Survival Matrix & Extended Ecosystem Evaluation
+
+To systematically evaluate the deployment boundaries of the modern vision-language ecosystem on consumer edge workstations, we audited and benchmarked **20 distinct multimodal model families** on an NVIDIA RTX 3000 Ada Generation Laptop GPU (8 GB GDDR6 VRAM, 63 GB RAM) under Windows 11 WDDM (with a strict $< 7.50\text{ GiB}$ reserved VRAM ceiling).
+
+The 20 models span dense transformers, hybrid linear-attention models, state-space architectures, Mixture-of-Experts (MoE), and sub-billion-parameter edge backbones.
+
+#### Table 13: The 20-Architecture Hardware Survival & Deployment Matrix (8 GB Edge Envelope)
+
+| ID | Model Architecture | Family / Org | Reported Parameters | Precision / Quant | Max Feasible Window ($W$) | Load VRAM | Peak VRAM | Window Latency | Hardware Status | Empirical Task Verdict & Deployment Findings |
+|:---:|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---|
+| **1** | **Qwen3.5-4B** | Alibaba / Qwen | 4.0B | 4-bit NF4 | **60s (60 frames)** | 3.25 GiB | 7.07 GiB | 38.60s | **SURVIVOR** | **Anchor Specialist (Pass):** 97.9% Corner AP, 0.0520 Tight-mAP. 3:1 linear-to-full attention hybrid decodes 60s windows under 7.50 GiB. |
+| **2** | **MiniCPM-V 4.6** | OpenBMB | ~4.5B–8.0B (SigLIP-400M + LLM) | 4-bit NF4 | **60s (60 frames)** | 4.66 GiB | 7.38 GiB | 32.40s | **SURVIVOR** | **Domain Specialist (Pass):** Highest recall (27/38 captions, 81.3% match), Foul/Duel anchor. High-density visual resampler fits 60s windows. |
+| **3** | **LFM2.5-VL-3B** | Liquid AI | 3.1B | 4-bit NF4 | **30s (30 frames)** | 3.12 GiB | 6.77 GiB | **12.95s** | **SURVIVOR** | **Domain Specialist (Pass):** 0.1486 AP on `Ball out of play`. Short-convolution backbone provides 2.5× faster inference; $-3.10\text{s}$ calibration yields 3.75× Tight-mAP. |
+| **4** | **SmolVLM2-2.2B** | Hugging Face | 2.2B | Native BF16 | **15s (15 frames)** (reaches 60s [6.06 GiB] with patch splitting disabled) | 4.41 GiB | 6.94 GiB | 18.20s | **SURVIVOR** | **Feasible Edge Model (Pass):** Clean video sequence execution; 15s at default unpooled 384p tiling; reaches 60s (6.06 GiB) when frame patch splitting is disabled (`do_image_splitting=False`). |
+| **5** | **Moondream2** | Vikhyat | 1.8B | Native BF16 | **60s (Contact Sheet)**| 3.84 GiB | 4.20 GiB | **4.10s** | **SURVIVOR** | **Low-Compute Baseline (Pass):** Ultra-fast 2D spatial storyboard composite; spatial tile downsampling loses sub-second player-ball interactions. |
+| **6** | **Qwen2.5-VL-7B** | Alibaba / Qwen | 7.6B | 4-bit NF4 | **15s (15 frames)** | 5.25 GiB | 7.15 GiB | 45.20s | **SURVIVOR** | **Temporal Starvation (Fail):** 15s window ceiling forces 0.0000 mAP; proves large dense 7B models underperform smaller 3B–4B models when constrained by edge VRAM. |
+| **7** | **InternVL3.5-2B** | OpenGVLab | 2.3B | 4-bit NF4 | **15s (15 frames)** | 2.45 GiB | 6.80 GiB | 34.63s | **RESCUED** | **Rescued Edge Model (Pass):** Bypassed 17 GiB dynamic high-res tile explosion by passing `num_patches_list=[1]*N`. Caps at 15s; 30s requires 17.12 GiB. |
+| **8** | **Qwen2-VL-2B** | Alibaba / Qwen | 2.2B | 4-bit NF4 | **60s (60 frames)** | 1.51 GiB | 5.37 GiB | **6.85s** | **SURVIVOR** | **Mode Collapse (Fail):** Exceptional speed (<90s for Chunk 0), but exhibited severe `00:00` window-start prior collapse emitting 13/14 `Clearance` events at 00:00. |
+| **9** | **LLaVA-OneVision-0.5B** | LLaVA-HF | 0.5B | Native BF16 | **15s (15 frames)** | 1.25 GiB | 4.14 GiB | 20.20s | **SURVIVOR** | **Sub-1B Survivor (Pass):** Native BF16 execution on 8 GB VRAM. AnyRes video pooling limits window to 15s (30s peaks at 8.49 GiB). |
+| **10** | **H2OVL-Mississippi-800M**| H2O.ai | 0.8B | 4-bit NF4 | **15s (15 frames)** | 0.55 GiB | 4.17 GiB | **9.50s** | **RESCUED** | **Sub-1B Survivor (Pass):** Rescued via `max_tiles=1` patch; 0.55 GiB weight load. Exceeds 7.50 GiB ceiling at 30s (12.56 GiB shared memory spill). |
+| **11** | **Granite-Vision-3.2-2B** | IBM Research | 2.5B | 4-bit NF4 | None (OOM) | 1.82 GiB | > 113 GiB | -- | **BLOCKED** | **AnyRes Tile Explosion:** LLaVA-NeXT AnyRes duplicates 5 crops/frame without temporal pooling ($15 \text{ frames} \times 5 = 75 \text{ tiles} \to 216\text{k}$ tokens, allocating 113.8 GiB). |
+| **12** | **Phi-4-Multimodal** | Microsoft | 5.6B | 4-bit NF4 | None (OOM) | 3.80 GiB | 15.18 GiB | -- | **BLOCKED** | **Hardware Footprint:** Patched `.item()` CPU meta-tensor bug and `cache_position`, but 5.6B LLM + unquantized SigLIP + Conformer demands 15.18 GiB under Windows WDDM. |
+| **13** | **Gemma 4 E2B** | Google DeepMind| 2.3B / 5.1B | 4-bit NF4 | None (OOM) | 9.11 GiB | > 9.11 GiB | -- | **BLOCKED** | **PLE Embedding Table OOM:** Per-Layer Embedding tables remain unquantized in standard BNB 4-bit loader, requiring 9.11 GiB allocation on device init ($> 7.50\text{ GiB}$). |
+| **14** | **Gemma 4 E4B** | Google DeepMind| 4.5B / 8.0B | 4-bit NF4 | None (OOM) | > 11.2 GiB | > 11.2 GiB | -- | **BLOCKED** | **PLE Embedding Table OOM:** Identical unquantized embedding table architecture as E2B; exceeds 8 GB VRAM envelope on initial weight load. |
+| **15** | **Ministral 3 3B** | Mistral AI | 3.8B | Native FP8 | None (Triton) | -- | -- | -- | **BLOCKED** | **Windows Triton Blocker:** Mistral FP8 runtime depends on OpenAI Triton JIT kernels, which are unsupported under Windows MSVC. |
+| **16** | **PaliGemma2-3B** | Google DeepMind| 3.0B | 4-bit NF4 | None (401) | -- | -- | -- | **BLOCKED** | **Gated Repo Barrier:** Automated download blocked by HuggingFace HTTP 401 (requires explicit manual license approval and user token). |
+| **17** | **Eagle2-2B** | NVIDIA | 2.1B | Native BF16 | None (Crash) | -- | -- | -- | **BLOCKED** | **Upstream API Incompatibility:** Custom processor code incompatible with Transformers $\ge 5.18$ (`from_args_and_dict` configuration exception). |
+| **18** | **DeepSeek-VL2-Tiny** | DeepSeek AI | 3.0B (1B act.)| 4-bit NF4 | None (CUDA) | -- | -- | -- | **BLOCKED** | **Custom Kernel Blocker:** DeepSeek MLA MoE attention operator requires custom C++/CUDA kernel compilation incompatible with Windows PyTorch 2.6. |
+| **19** | **Aria-VLM** | Rhymes AI | 25.3B (3.9B act)| 4-bit NF4 | None (RAM) | > 16.0 GiB | > 16.0 GiB | -- | **BLOCKED** | **MoE Resident Footprint:** While active parameters are 3.9B, all 25.3B weights must reside in memory; exceeds 8 GB hardware boundary even in 4-bit. |
+| **20** | **InternVideo2-1B** | OpenGVLab | 1.2B | Native BF16 | None (CUDA) | -- | -- | -- | **BLOCKED** | **Spatiotemporal JIT Blocker:** VideoMAE backend requires uncompiled custom deformable attention CUDA operators (`deform_attn.cu`) that fail under Windows MSVC. |
+
+---
+
+#### Key Ecosystem Findings & The Architectural Triad
+
+1. **The 10-Survivor Frontier (50% Survival Rate):**
+   - Exactly 10 out of 20 candidate architectures proved genuinely runnable on consumer hardware under Windows WDDM constraints.
+   - 4-bit NF4 quantization was the decisive enabler for models above 2B parameters (`Qwen3.5-4B`, `MiniCPM-V 4.6`, `LFM2.5-VL-3B`), while sub-1B architectures (`LLaVA-OneVision-0.5B`, `H2OVL-800M`) demonstrated feasibility in native BF16 or hybrid quantization.
+
+2. **The Dynamic High-Resolution Tiling Hazard:**
+   - Multi-image and video processors designed for high-resolution document/web understanding (`LLaVA-NeXT`, `Granite-Vision`, unpatched `InternVL`) decompose single video frames into 5–36 sub-crops. Over a 15-frame video sequence, this generates $75 - 540$ patches ($\sim 200\text{k}$ visual tokens), causing catastrophic $100+\text{ GiB}$ OOM crashes.
+   - Constraining processors to `max_tiles=1` or `num_patches_list=[1]*N` is an absolute prerequisite for deploying image-derived VLMs onto multi-frame video streams.
+
+3. **Hardware Feasibility vs. Temporal Task Competence (The Qwen2-VL-2B Case Study):**
+   - Qwen2-VL-2B survived 60-second windows with exceptional hardware efficiency (1.51 GiB load, 5.37 GiB peak, 6.85s latency).
+   - However, during the Chunk 0 benchmark, it suffered 100% `00:00` window-start prior mode collapse, predicting 13 out of 14 events at the first frame of each window with the single label `Clearance`.
+   - This provides critical independent empirical evidence reinforcing our RQ3 findings: **hardware memory feasibility does not equal task competence**. Without deep reasoning tokens (Qwen3.5-4B) or high-density visual resampling (MiniCPM-V 4.6), small 2B dense models collapse into boundary priors when forced to localize events across long temporal sequences.

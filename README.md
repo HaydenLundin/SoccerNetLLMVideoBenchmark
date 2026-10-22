@@ -65,18 +65,40 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 
 ---
 
-## 🏛️ Local 8 GB Hardware Pareto Frontier (RTX 3000 Ada)
+## 🏛️ The 20-Architecture Hardware Survival & Deployment Matrix (RTX 3000 Ada, 8 GB VRAM)
+
+We evaluated **20 distinct multimodal model families** on consumer workstation hardware under Windows 11 WDDM ($< 7.50\text{ GiB}$ reserved ceiling):
 
 ```
-Local Edge Evaluation Tracks (8 GB GDDR6 VRAM, 63 GB RAM)
- ├── Track 1: Core Video Candidates (4-bit NF4 Quantization)
- │    ├── Qwen3.5-4B (W=60s; 7.07 GiB VRAM; Tactical Buildup & Corner Specialist)
- │    ├── MiniCPM-V 4.6 (W=60s; 7.38 GiB VRAM; Duel, Tackle & Offside Specialist)
- │    └── LFM2.5-VL-3B (W=30s; 12.95s/window; Rapid Boundary Specialist)
- ├── Track 2: Mode Collapse Boundaries
- │    └── Qwen2.5-VL-7B (W=15s; 0.0000 mAP; Receptive field truncation failure)
- └── Track 3: Zero-VRAM Multimodal Grounding
-      └── PyAV + SciPy STFT (CPU Broadcast Acoustics; 0 MB GPU VRAM; 3.22s runtime)
+The 20-Architecture Multimodal Deployment Matrix (8 GB GDDR6 VRAM, 63 GB RAM)
+ ├── 🟢 10 Verified Live Hardware Survivors (50% Survival Rate)
+ │    ├── 60s Full-Window Survivors (4-bit NF4 & Contact Sheet)
+ │    │    ├── Qwen3.5-4B (W=60s; Peak 7.07 GiB; Tactical Buildup Anchor; 97.9% Corner AP)
+ │    │    ├── MiniCPM-V 4.6 (W=60s; Peak 7.38 GiB; Duel/Offside Specialist; 81.3% Caption Recall)
+ │    │    ├── Qwen2-VL-2B (W=60s; Peak 5.37 GiB; Ultra-fast 6.8s/win; Subject to RQ3 00:00 mode collapse)
+ │    │    └── Moondream2 (W=60s; Peak 4.20 GiB; 4.1s 2D Contact Sheet Storyboard Baseline)
+ │    ├── 30s Rapid Transition Specialist
+ │    │    └── LFM2.5-VL-3B (W=30s; Peak 6.77 GiB; 12.95s/win; Boundary Specialist; -3.10s Recalibration)
+ │    └── 15s Rescued & Edge Survivors
+ │         ├── SmolVLM2-2.2B (W=15s default / 60s un-split; Peak 6.94 GiB; Native BF16)
+ │         ├── Qwen2.5-VL-7B (W=15s; Peak 7.15 GiB; Temporal Receptive Field Starvation Baseline)
+ │         ├── InternVL3.5-2B (W=15s; Peak 6.80 GiB; Rescued via num_patches_list=[1]*N from 17 GB OOM)
+ │         ├── LLaVA-OneVision-0.5B (W=15s; Peak 4.14 GiB; Native BF16 Sub-1B Video Baseline)
+ │         └── H2OVL-Mississippi-800M (W=15s; Peak 4.17 GiB; Rescued via max_tiles=1 from 12.5 GB spill)
+ └── 🔴 10 Architectural, Library & Platform Blockers (Documented & Audited)
+      ├── Dynamic High-Res Tile Explosions (>100 GB Virtual Allocation)
+      │    └── Granite-Vision-3.2-2B (LLaVA-NeXT AnyRes 5 crops/frame × 15 frames = 216k tokens -> 113.8 GB OOM)
+      ├── Physical VRAM Footprint (>7.50 GiB Reserved Ceiling)
+      │    ├── Phi-4-Multimodal (5.6B + unquantized SigLIP/Conformer requires 15.18 GiB under Windows WDDM)
+      │    ├── Gemma 4 E2B (Per-Layer Embedding tables unquantized in BNB 4-bit -> 9.11 GiB initial OOM)
+      │    ├── Gemma 4 E4B (PLE unquantized tables require > 11.2 GiB VRAM on initial load)
+      │    └── Aria-VLM (25.3B total MoE weights require > 16 GB VRAM resident memory)
+      └── Platform, Library & Compilation Barriers on Windows
+           ├── Ministral 3 3B (Mistral FP8 runtime blocked by missing Windows Triton JIT compiler)
+           ├── PaliGemma2-3B (HTTP 401 Unauthorized gated repository; requires authenticated HF token)
+           ├── Eagle2-2B (Deprecated from_args_and_dict config crash under Transformers >= 5.18)
+           ├── DeepSeek-VL2-Tiny (DeepSeek MLA MoE custom CUDA kernel fails Windows PyTorch 2.6 build)
+           └── InternVideo2-1B (VideoMAE deformable attention C++ operator fails Windows MSVC JIT)
 ```
 
 ---

@@ -98,6 +98,14 @@ LOCAL_MODEL_CONFIGS = {
         "default_window_sec": 15,  # Hardware physical ceiling
         "mode": "video_sequence",
         "max_pixels": 256 * 256
+    },
+    "qwen2-vl-2b": {
+        "name": "Qwen2-VL-2B",
+        "hf_id": "Qwen/Qwen2-VL-2B-Instruct",
+        "default_precision": "4bit",
+        "default_window_sec": 60,
+        "mode": "video_sequence",
+        "max_pixels": 256 * 256
     }
 }
 
@@ -223,7 +231,7 @@ def build_window_prompt(window_sec: int, spotting_only: bool = False) -> str:
             f'[\n'
             f'  {{\n'
             f'    "timestamp": "00:SS",\n'
-            f'    "label": "OfficialSoccerNetClass",\n'
+            f'    "label": "Corner",\n'
             f'    "confidence": 0.85,\n'
             f'    "visibility": "visible"\n'
             f'  }}\n'
@@ -236,7 +244,7 @@ def build_window_prompt(window_sec: int, spotting_only: bool = False) -> str:
             f'  {{\n'
             f'    "timestamp": "00:SS",\n'
             f'    "commentary": "Concise observational description...",\n'
-            f'    "label": "OfficialSoccerNetClass",\n'
+            f'    "label": "Corner",\n'
             f'    "confidence": 0.85,\n'
             f'    "visibility": "visible"\n'
             f'  }}\n'
@@ -269,18 +277,31 @@ def build_window_prompt(window_sec: int, spotting_only: bool = False) -> str:
 
 
 def normalize_soccernet_label(lbl_raw: str) -> Optional[str]:
+    import re
     from processing.unified_schema import SOCCERNET_CLASSES
     if not lbl_raw or not isinstance(lbl_raw, str):
         return None
     first_token = lbl_raw.split(",")[0].strip().rstrip(".")
     lbl_clean = first_token.lower()
+    lbl_alphanumeric = re.sub(r"[^a-z0-9]", "", lbl_clean)
+
+    # 1. Exact case-insensitive match
     for c in SOCCERNET_CLASSES:
         if c.lower() == lbl_clean:
             return c
+
+    # 2. Alphanumeric match (handles PascalCase/camelCase e.g. "BallOutOfPlay" -> "balloutofplay")
+    for c in SOCCERNET_CLASSES:
+        c_alphanumeric = re.sub(r"[^a-z0-9]", "", c.lower())
+        if c_alphanumeric == lbl_alphanumeric:
+            return c
+
+    # 3. Plural stripping & substring match
     for c in SOCCERNET_CLASSES:
         if c.lower().rstrip("s") == lbl_clean.rstrip("s"):
             return c
-        if lbl_clean in c.lower() or c.lower() in lbl_clean:
+        c_alphanumeric = re.sub(r"[^a-z0-9]", "", c.lower())
+        if lbl_alphanumeric and (lbl_alphanumeric in c_alphanumeric or c_alphanumeric in lbl_alphanumeric):
             return c
     return None
 
@@ -334,11 +355,17 @@ def parse_model_json_output(
 
         raw_ts = str(item.get("timestamp", "")).strip().strip("[]\"'")
         parts = raw_ts.split(":")
-        if len(parts) != 2 or not parts[0].isdigit() or not parts[1].isdigit():
+        if len(parts) == 3 and parts[0].isdigit() and parts[1].isdigit() and parts[2].split(".")[0].isdigit():
+            mm, ss = int(parts[1]), int(float(parts[2]))
+        elif len(parts) == 2 and parts[0].isdigit() and parts[1].split(".")[0].isdigit():
+            mm, ss = int(parts[0]), int(float(parts[1]))
+        elif len(parts) == 1 and raw_ts.replace(".", "", 1).isdigit():
+            tot = int(float(raw_ts))
+            mm, ss = tot // 60, tot % 60
+        else:
             diag["out_of_bounds_drops"] += 1
             diag["dropped_timestamps"].append(raw_ts)
             return
-        mm, ss = int(parts[0]), int(parts[1])
         item["timestamp"] = f"{mm:02d}:{ss:02d}"
         sec = mm * 60.0 + ss
         # Layer 2 bounds validation: window duration + 2s slack
@@ -466,7 +493,7 @@ class LocalVLMRunner:
         else:
             self.processor = AutoProcessor.from_pretrained(hf_id, trust_remote_code=True)
 
-        if self.model_key in ("qwen3.5-4b", "qwen2.5-vl-7b"):
+        if self.model_key in ("qwen3.5-4b", "qwen2.5-vl-7b", "qwen2-vl-2b"):
             if hasattr(self.processor, "image_processor"):
                 self.processor.image_processor.max_pixels = self.cfg["max_pixels"]
                 self.processor.image_processor.min_pixels = 128 * 128

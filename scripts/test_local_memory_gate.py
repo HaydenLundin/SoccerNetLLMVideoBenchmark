@@ -136,6 +136,39 @@ MODEL_REGISTRY = {
         "default_precisions": ["4bit"],
         "supports_audio": False,
         "notes": "Direct bridge to audited V1 F1=0.075 / 0.041 baseline"
+    },
+    # Track 5: Expanded Architecture Cohort (20-Model Taxonomy)
+    "qwen2-vl-2b": {
+        "track": 5,
+        "name": "Qwen2-VL-2B",
+        "hf_id": "Qwen/Qwen2-VL-2B-Instruct",
+        "default_precisions": ["4bit"],
+        "supports_audio": False,
+        "notes": "Dense 2.2B ViT baseline, 2D patch merging (Full W=60s survivor)"
+    },
+    "llava-onevision-0.5b": {
+        "track": 5,
+        "name": "LLaVA-OneVision 0.5B",
+        "hf_id": "llava-hf/llava-onevision-qwen2-0.5b-ov-hf",
+        "default_precisions": ["bf16"],
+        "supports_audio": False,
+        "notes": "Compact 0.5B Qwen2 backbone with SigLIP video temporal pooling (W=15s survivor)"
+    },
+    "h2ovl-mississippi-800m": {
+        "track": 5,
+        "name": "H2OVL Mississippi 800M",
+        "hf_id": "h2oai/h2ovl-mississippi-800m",
+        "default_precisions": ["4bit"],
+        "supports_audio": False,
+        "notes": "Sub-billion parameter compact VLM with InternViT (W=15s survivor)"
+    },
+    "granite-vision-3.2-2b": {
+        "track": 5,
+        "name": "Granite Vision 3.2 2B",
+        "hf_id": "ibm-granite/granite-vision-3.2-2b",
+        "default_precisions": ["4bit"],
+        "supports_audio": False,
+        "notes": "LLaVA-NeXT AnyRes architecture (Hardware Blocked: 216k tokens / 113.8 GB OOM)"
     }
 }
 
@@ -178,15 +211,31 @@ def create_contact_sheet(images: List[Any], window_sec: int) -> Any:
     return sheet.resize((448, 448))
 
 def normalize_soccernet_label(lbl_raw: str) -> Optional[str]:
+    import re
     from processing.unified_schema import SOCCERNET_CLASSES
-    lbl_clean = lbl_raw.strip().lower()
+    if not lbl_raw or not isinstance(lbl_raw, str):
+        return None
+    first_token = lbl_raw.split(",")[0].strip().rstrip(".")
+    lbl_clean = first_token.lower()
+    lbl_alphanumeric = re.sub(r"[^a-z0-9]", "", lbl_clean)
+
+    # 1. Exact case-insensitive match
     for c in SOCCERNET_CLASSES:
         if c.lower() == lbl_clean:
             return c
+
+    # 2. Alphanumeric match (handles PascalCase/camelCase e.g. "BallOutOfPlay" -> "balloutofplay")
+    for c in SOCCERNET_CLASSES:
+        c_alphanumeric = re.sub(r"[^a-z0-9]", "", c.lower())
+        if c_alphanumeric == lbl_alphanumeric:
+            return c
+
+    # 3. Plural stripping & substring match
     for c in SOCCERNET_CLASSES:
         if c.lower().rstrip("s") == lbl_clean.rstrip("s"):
             return c
-        if lbl_clean in c.lower() or c.lower() in lbl_clean:
+        c_alphanumeric = re.sub(r"[^a-z0-9]", "", c.lower())
+        if lbl_alphanumeric and (lbl_alphanumeric in c_alphanumeric or c_alphanumeric in lbl_alphanumeric):
             return c
     return None
 
@@ -317,7 +366,7 @@ def run_worker(args: argparse.Namespace) -> None:
             load_kwargs["device_map"] = {"": "cuda:0"}
 
         from transformers import AutoTokenizer
-        if args.model == "internvl3.5-2b":
+        if args.model in ("internvl3.5-2b", "h2ovl-mississippi-800m"):
             from transformers.modeling_utils import PreTrainedModel
             PreTrainedModel.all_tied_weights_keys = {}
             model = AutoModel.from_pretrained(hf_id, **load_kwargs).eval()
@@ -339,7 +388,7 @@ def run_worker(args: argparse.Namespace) -> None:
                 processor = AutoProcessor.from_pretrained(hf_id, trust_remote_code=True, fix_mistral_regex=True)
             else:
                 processor = AutoProcessor.from_pretrained(hf_id, trust_remote_code=True)
-            if args.model in ("qwen3.5-4b", "qwen2.5-vl-7b"):
+            if args.model in ("qwen3.5-4b", "qwen2.5-vl-7b", "qwen2-vl-2b"):
                 if hasattr(processor, "image_processor"):
                     processor.image_processor.max_pixels = 256 * 256
                     processor.image_processor.min_pixels = 128 * 128
@@ -394,8 +443,31 @@ def run_worker(args: argparse.Namespace) -> None:
             ])
             pixel_values = torch.stack([transform(f) for f in sample_images]).to(torch.bfloat16).to(device)
             question = "".join([f"Frame{i+1}: <image>\n" for i in range(len(sample_images))]) + prompt_text
+            num_patches_list = [1] * len(sample_images)
             with torch.inference_mode():
-                gen_text = model.chat(tokenizer, pixel_values, question, generation_config=dict(max_new_tokens=512, do_sample=False))
+                gen_text = model.chat(tokenizer, pixel_values, question, generation_config=dict(max_new_tokens=512, do_sample=False), num_patches_list=num_patches_list)
+        elif args.model == "h2ovl-mississippi-800m":
+            image_inputs = window_jpgs if "window_jpgs" in locals() and window_jpgs else sample_images
+            question = "".join([f"Frame{i+1}: <image>\n" for i in range(len(image_inputs))]) + prompt_text
+            with torch.inference_mode():
+                gen_text = model.chat(tokenizer, image_inputs, question, generation_config=dict(max_new_tokens=512, do_sample=False), max_tiles=1)
+        elif args.model == "llava-onevision-0.5b":
+            conversation = [
+                {
+                    "role": "user",
+                    "content": [
+                        {"type": "video"},
+                        {"type": "text", "text": prompt_text}
+                    ]
+                }
+            ]
+            prompt_formatted = processor.apply_chat_template(conversation, add_generation_prompt=True)
+            inputs = processor(videos=[sample_images], text=prompt_formatted, return_tensors="pt").to(device, torch.bfloat16)
+            with torch.inference_mode():
+                outputs = model.generate(**inputs, max_new_tokens=512)
+            in_len = inputs["input_ids"].shape[1] if "input_ids" in inputs else 0
+            gen_tokens = outputs[0][in_len:] if in_len > 0 and outputs.shape[1] > in_len else outputs[0]
+            gen_text = processor.decode(gen_tokens, skip_special_tokens=True)
         else:
             # Audio slice if requested
             audio_slice = None
@@ -473,13 +545,36 @@ def run_worker(args: argparse.Namespace) -> None:
             lbl = normalize_soccernet_label(str(data.get("label", "")))
             if not lbl:
                 return
-            data["label"] = lbl
-            ts = str(data.get("timestamp", ""))
+            raw_ts = str(data.get("timestamp", "")).strip().strip("[]\"'")
+            ts_norm = raw_ts
+            parts = raw_ts.split(":")
+            if len(parts) == 3:  # HH:MM:SS
+                try:
+                    mm = int(parts[1])
+                    ss = int(float(parts[2]))
+                    ts_norm = f"{mm:02d}:{ss:02d}"
+                except Exception:
+                    pass
+            elif len(parts) == 2:
+                try:
+                    mm = int(parts[0])
+                    ss = int(float(parts[1]))
+                    ts_norm = f"{mm:02d}:{ss:02d}"
+                except Exception:
+                    pass
+            elif len(parts) == 1 and raw_ts.replace(".", "", 1).isdigit():
+                try:
+                    total_s = int(float(raw_ts))
+                    ts_norm = f"{total_s // 60:02d}:{total_s % 60:02d}"
+                except Exception:
+                    pass
+
             try:
-                sec = parse_mm_ss_to_seconds(ts)
+                sec = parse_mm_ss_to_seconds(ts_norm)
             except ValueError:
                 out_of_bounds_count += 1
                 return
+            data["timestamp"] = ts_norm
             # Strict Layer 2 Bounds Check: timestamp must be within [0.0, args.frames]
             if sec < 0.0 or sec > float(args.frames):
                 out_of_bounds_count += 1
