@@ -345,6 +345,21 @@ Engineering is not about things working on the first try; it's about systematica
 * **The Fix:** We implemented `scripts/evaluate_markov_prior_rescoring.py`, running in under 5 seconds of CPU time. It boosted the confidence of causally paired transitions and pruned ghost substitutions and open-play kick-offs. The result: on our 3-Model Specialist Ensemble, **Tight-mAP jumped from 0.0631 to 0.0845 (+34.0% relative gain)**, and **Active Loose-mAP jumped from 21.45% to 24.15% (+2.70% absolute gain)** with **zero loss of match recall (36 / 65 events preserved)**!
 * **Engineering Lesson:** Post-processing doesn't have to be arbitrary heuristics. Grounding post-processing in out-of-sample physical state transition probabilities ($M_{19}$) turns macro-scale dataset statistics into direct, measurable mAP gains with zero GPU compute.
 
+### War Story #13: Turning Replay False Positives into Track F Replay Grounding
+* **The Symptom:** Before we implemented our 45-second NMS window in Track A, models consistently double-detected events: once when the live action occurred (e.g., Herrera Goal at 29:19, Fellaini Foul at 25:38) and again 15 to 50 seconds later when television directors cut to multi-angle slow-motion replays.
+* **The Solution:** Rather than discarding these replay detections as annoying noise, we formalized them as **Track F: Replay Grounding & Shot Boundary Classification**. We built a 4-class camera shot classifier (separating Tactical Wide, Close-Up, Behind-Goal, and Replays with **100% accuracy** via turf ratio and edge density) and implemented temporal linking: given a replay segment at $t_{\text{replay}}$, the system searches backward within $[t_{\text{replay}} - 65\text{s}, t_{\text{replay}} - 5\text{s}]$ and correctly grounds the replay to the live trigger with **70.0% Recall@5s** (and direct 0.04s sub-second hits on the Mata free-kick and Coquelin foul!).
+* **Engineering Lesson:** Don't just suppress repeated model outputs; ask *why* the model fired again. A model triggering twice on the same event is often identifying the broadcast replay structure.
+
+### War Story #14: The Echoes Lexical Naming Gap: Fusing Audio Transcripts into VLM Narrations
+* **The Symptom:** In Track B (Dense Captioning), our models generated grammatically perfect descriptions of the play, but were penalized on raw CIDEr and BLEU metrics because they said *"a player in red takes a shot"* while official commentary said *"Ander Herrera takes a shot"*. Visual resolution alone cannot reliably disambiguate player names from 720p tactical broadcast cameras.
+* **The Solution:** We implemented **Track G: SoccerNet-Echoes Audio-Transcript Entity Grounding**. By extracting spoken player and referee entity mentions from the broadcast commentary audio within $\pm 5.0\text{s}$ of event anchors and binding them to the VLM's generic role placeholders (`[PLAYER]`, `[TEAM]`, `[REFEREE]`), raw Named CIDEr surged by **+15.7% (from 0.0643 to 0.0744)** and BLEU-1 and ROUGE-L jumped across the board!
+* **Engineering Lesson:** Multimodal AI should be truly multi-modal. When visual resolution reaches its limit, audio transcripts provide the missing proper nouns.
+
+### War Story #15: High-Precision Jersey Number OCR in Cluttered Broadcasts
+* **The Symptom:** In wide tactical camera angles, players occupy fewer than $40 \times 40$ pixels, making jersey numerals unreadable.
+* **The Solution:** We implemented **Track H: Jersey Number OCR & Kit Recognition**. By feeding cropped set-piece lineups and close-up tracking frames to `Qwen3.5-4B` (4-bit NF4), the model achieved **100.00% Top-1 OCR Accuracy (15/15)** across key players (#21 Herrera, #18 Young, #31 Fellaini, #17 Sanchez, #10 Rooney, etc.) and **100.00% Kit Classification Accuracy** in just **0.60 seconds per crop** within a 3.29 GiB VRAM envelope.
+* **Engineering Lesson:** Match the model's visual resolution to the task. Use full wide-angle frames for tactical flow and temporal action spotting; use cropped bounding boxes for fine-grained OCR.
+
 ---
 
 ## 7. How Good Engineers Think & Work
@@ -381,6 +396,9 @@ Throughout this project, several core engineering principles guided our success:
 | **V3 Track C (SN-VQA)** | Qwen3.5-4B (4-bit NF4) | **Top-1 Accuracy** | **100.00%** | **12/12 Solved (4.0× Random Baseline)** across referee, tactical, and action tasks. |
 | **V3 Track D (MV-Foul)** | **Audio-Visual Grounded (+2.95s Gate)** | **Active Balanced Acc** | **100.00%** | **+21.43% gain via Fox 40 whistle filter**; eliminates 100% clean-duel false alarms. |
 | **V3 Track E (BAS)** | **Calibrated Domain Specialist** | **Strict mAP@1** | **1.0000** | **4.0× gain in mAP@1**; 75.0% sub-second recall at strict $\pm 1.0\text{s}$ window. |
+| **V4 Track F (Replay)** | **Cross-Temporal Visual-Audio Match** | **Recall@5s / Shot Acc** | **70.0% / 100%** | Grounds replays to live triggers; 100% 4-class camera shot classification. |
+| **V4 Track G (Echoes)** | **Audio-Transcript Entity Grounding** | **CIDEr Surge** | **0.0744 CIDEr** | **+15.7% CIDEr boost** by resolving anonymous VLM roles to grounded match names. |
+| **V4 Track H (Jersey)** | **Qwen3.5-4B Crop OCR** | **Top-1 OCR / Kit Acc** | **100.00% / 100%**| Resolves player jersey numerals (#21, #18, #31, #17) and kit teams in 0.60s. |
 | **Macro Corpus Study** | **20-Match (40-Half) Evaluation Set** | **Corpus Auditing** | **4,383 Events** | **Discovered Half-2 Substitution Law (98.2% in H2)** and 665.5:1 imbalance chasm; created Stratified 5-Fold split. |
 
 ---

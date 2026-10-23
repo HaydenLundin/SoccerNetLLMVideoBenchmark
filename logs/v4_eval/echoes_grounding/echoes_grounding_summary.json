@@ -1,0 +1,26 @@
+{
+  "matched_pairs": 22,
+  "baseline_visual_only": {
+    "bleu1": 0.1238,
+    "bleu2": 0.0417,
+    "bleu3": 0.0,
+    "bleu4": 0.0,
+    "rouge_l": 0.1229,
+    "cider": 0.0643,
+    "meteor": 0.0869
+  },
+  "echoes_audio_grounded": {
+    "bleu1": 0.1268,
+    "bleu2": 0.0447,
+    "bleu3": 0.0,
+    "bleu4": 0.0,
+    "rouge_l": 0.1292,
+    "cider": 0.0744,
+    "meteor": 0.0878
+  },
+  "deltas": {
+    "cider_pct": 15.71,
+    "bleu1_pct": 2.42,
+    "rouge_l_pct": 5.13
+  }
+}

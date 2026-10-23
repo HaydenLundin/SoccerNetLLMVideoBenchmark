@@ -1,0 +1,105 @@
+{
+  "camera_shot_classification": {
+    "total_frames": 20,
+    "accuracy_pct": 100.0,
+    "classes": [
+      "Main / Wide Tactical",
+      "Close-Up",
+      "Behind-Goal",
+      "Replay Sequence"
+    ]
+  },
+  "temporal_replay_grounding": {
+    "total_replays": 10,
+    "hits_1s": 2,
+    "hits_3s": 3,
+    "hits_5s": 7,
+    "recall_at_1s": 20.0,
+    "recall_at_3s": 30.0,
+    "recall_at_5s": 70.0,
+    "mean_absolute_error_sec": 7.47,
+    "pairs": [
+      {
+        "replay_id": "R01",
+        "replay_time": "1 - 14:48",
+        "gt_live_time": "1 - 14:17",
+        "pred_live_time": "1 - 14:17",
+        "error_sec": 0.04,
+        "matched_label": "Direct free-kick",
+        "status": "HIT (<=3s)"
+      },
+      {
+        "replay_id": "R02",
+        "replay_time": "1 - 16:08",
+        "gt_live_time": "1 - 15:42",
+        "pred_live_time": "1 - 15:42",
+        "error_sec": 0.04,
+        "matched_label": "Kick-off",
+        "status": "HIT (<=3s)"
+      },
+      {
+        "replay_id": "R03",
+        "replay_time": "1 - 21:32",
+        "gt_live_time": "1 - 21:05",
+        "pred_live_time": "1 - 20:37",
+        "error_sec": 27.28,
+        "matched_label": "Kick-off",
+        "status": "MISS"
+      },
+      {
+        "replay_id": "R04",
+        "replay_time": "1 - 26:12",
+        "gt_live_time": "1 - 25:38",
+        "pred_live_time": "1 - 25:40",
+        "error_sec": 2.72,
+        "matched_label": "Foul",
+        "status": "HIT (<=3s)"
+      },
+      {
+        "replay_id": "R05",
+        "replay_time": "1 - 29:52",
+        "gt_live_time": "1 - 29:19",
+        "pred_live_time": "1 - 29:22",
+        "error_sec": 3.4,
+        "matched_label": "Goal",
+        "status": "LOOSE (<=5s)"
+      },
+      {
+        "replay_id": "R06",
+        "replay_time": "1 - 30:18",
+        "gt_live_time": "1 - 29:19",
+        "pred_live_time": "1 - 29:22",
+        "error_sec": 3.4,
+        "matched_label": "Goal",
+        "status": "LOOSE (<=5s)"
+      },
+      {
+        "replay_id": "R08",
+        "replay_time": "1 - 40:06",
+        "gt_live_time": "1 - 39:44",
+        "pred_live_time": "1 - 39:23",
+        "error_sec": 20.6,
+        "matched_label": "Yellow card",
+        "status": "MISS"
+      },
+      {
+        "replay_id": "R09",
+        "replay_time": "1 - 41:48",
+        "gt_live_time": "1 - 41:20",
+        "pred_live_time": "1 - 41:10",
+        "error_sec": 9.36,
+        "matched_label": "Goal",
+        "status": "MISS"
+      },
+      {
+        "replay_id": "R10",
+        "replay_time": "1 - 44:28",
+        "gt_live_time": "1 - 44:02",
+        "pred_live_time": "1 - 44:05",
+        "error_sec": 3.64,
+        "matched_label": "Foul",
+        "status": "LOOSE (<=5s)"
+      }
+    ]
+  }
+}
