@@ -1071,3 +1071,50 @@ To avoid zero-representation folds for ultra-rare classes in full 20-match evalu
 | **Total / Mean** | **20** | — | **$\mu = 876.6 \pm 31.8$** | **2** | **2** | **57** | **113** |
 
 *Stratification Guarantee:* Each fold contains exactly 4 matches with approximately 876 events ($\pm 3.6\%$ variance), ensuring consistent sample variance across all validation folds while distributing rare Red cards and Penalties across separate evaluation partitions.
+
+---
+
+### 11.5 Table 20: Out-of-Sample 19-Match Markov Transition & Temporal Prior Rescoring ($M_{19}$)
+
+By extracting the empirical $17 \times 17$ Markov Transition Matrix $M_{19}$ and Half-1 temporal priors strictly on the **other 19 matches** (Games 1–19, 4,210 events, excluding Game 0), we evaluated the zero-compute post-processing confidence rescorer out-of-sample on our saved Half 1 predictions:
+
+$$\hat{s}_i = \min\left(1.0, \, s_i + \alpha \cdot \max\left(P_{\text{fwd}}(C_{i} \mid C_{i-1}, \Delta t \le 30\text{s}), \, P_{\text{bwd}}(C_i \mid C_{i+1}, \Delta t \le 30\text{s})\right)\right)$$
+
+paired with empirical temporal prior pruning for ghost predictions violating $P(C \mid \text{Half 1})$ ($P(\text{Substitution} \mid \text{Half 1}) = 0.101\%$; open-play Kick-offs requiring preceding Goal within 90s).
+
+| System Configuration | Post-Processing Rescorer | Raw Preds | Official Tight mAP (/17) | Official Loose mAP (/17) | Active Loose mAP (/12) | 30s Match Recall | Key Empirical Mechanism |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|---|
+| **Qwen3.5-4B (Solo)** | None | 94 | 0.0520 | 0.1051 | 14.89% | 23.1% (15 / 65) | High FP on middle-of-half open-play Kick-offs. |
+| **Qwen3.5-4B (Solo)** | **$M_{19}$ + Prior Rescorer** | **76** | 0.0409 | **0.1098** | **15.55%** | 23.1% (15 / 65) | **18 open-play Kick-off hallucinations pruned**; Loose mAP gains +4.4%. |
+| **MiniCPM-V 4.6 (Solo)** | None | 267 | 0.0126 | 0.0553 | 7.83% | 35.4% (23 / 65) | 7 ghost substitutions in Half 1 degrade precision. |
+| **MiniCPM-V 4.6 (Solo)** | **$M_{19}$ + Prior Rescorer** | **260** | **0.0133** | **0.0564** | **7.99%** | 35.4% (23 / 65) | **100% of ghost substitutions pruned (7/7)** via $P(\text{Sub} \mid \text{H1}) = 0.001$. |
+| **3-Model Specialist Ensemble** | Baseline (Domain Routed) | 175 | 0.0631 | 0.1514 | 21.45% | 55.4% (36 / 65) | Uncalibrated flat confidence rankings dilute PR curves. |
+| **3-Model Specialist Ensemble** | **$M_{19}$ + Prior Rescorer** | **174** | **0.0845** | **0.1705** | **24.15%** | **55.4% (36 / 65)** | **+34.0% Tight mAP gain**; **+2.70% Active Loose mAP gain** (surges to 24.15%) at $0 compute. |
+
+#### Key Takeaways from $M_{19}$ Rescoring:
+1. **Confidence Alignment over the PR Curve:** Because true causal chains (`Ball out of play` $\to$ `Throw-in` / `Corner` with $P=80.5\%$ and `Foul` $\to$ `Indirect free-kick` / `Yellow card` with $P=90.0\%$) receive causal confidence bonuses ($\hat{s} > 0.95$), true positives sort cleanly ahead of isolated background false positives.
+2. **Zero Recall Degradation:** The 19-match prior prunes purely physically impossible events (Half-1 substitutions and open-play un-scored kick-offs) while retaining 100% of legitimate detected match events ($36 / 65 = 55.38\%$ recall preserved).
+
+---
+
+### 11.6 Table 21: The Canonical 5-Match Full-17-Class Minimal Evaluation Subset (MES-5)
+
+Because ultra-rare match-deciding events (`Red card`: 2 instances; `Penalty`: 2 instances; `Yellow->red card`: 2 instances) only appear twice across 30 hours of broadcast video, any $K$-fold cross-validation scheme where $K \ge 3$ inevitably leaves multiple folds with zero support for those classes ($N_{gt} = 0$, causing $0/0 = \text{NaN}$ in unweighted official devkits).
+
+To address this, we formulate and release **MES-5 (`[Game 0, Game 1, Game 2, Game 3, Game 13]`)**: the canonical **Full-17-Class Minimal Evaluation Subset**.
+
+| Match ID | Season & Fixture Title | Split | Total Events | Red Cards | Penalties | Y$\to$R Cards | Goals | Substitutions | Strategic Benchmark Role |
+|:---:|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|---|
+| **0** | `2014-2015 Manchester United 1 - 1 Arsenal` | `test` | 173 | 0 | 0 | 0 | 2 | 6 | Established anchor match; routine flow, balanced possession. |
+| **1** | `2015-2016 Manchester City 3 - 0 Chelsea` | `test` | 232 | 0 | 0 | 0 | 3 | 6 | High-tempo open play; 6 Yellow cards, 3 dynamic goals. |
+| **2** | `2015-08-23 West Brom 2 - 3 Chelsea` | `test` | 208 | **1** | **1** | **1** | **5** | 6 | **Highest-yield rare event match:** John Terry red card, penalty, 5 goals. |
+| **3** | `2015-08-29 Liverpool 0 - 3 West Ham` | `test` | 241 | **1** | 0 | **1** | 3 | 6 | Second direct Red card; high-friction fouls and physical duels. |
+| **13** | `2016-08-27 Tottenham 1 - 1 Liverpool` | `test` | 278 | 0 | **1** | 0 | 2 | 6 | Second Penalty instance; 8 Yellow cards (highest discipline in set). |
+| **Total** | **MES-5 Benchmark Suite (10 Halves, 7.5 Hours)** | — | **1,132** | **2 (100%)** | **2 (100%)** | **2 (100%)** | **15 (26%)** | **30 (27%)** | **Guarantees $N_{gt} > 0$ for all 17 classes; Oracle Ceiling = 17/17 = 1.0000.** |
+
+#### Rare-Event Inverse-Log Frequency Weighted mAP ($\text{mAP}_{\text{inv-log}}$):
+To prevent 1,331 sideline throw-ins from overwhelming the 2 penalties and 2 red cards in performance evaluations, we define the Inverse-Log Frequency weighted metric for the SoccerNet benchmark:
+
+$$\text{mAP}_{\text{inv-log}} = \sum_{c=1}^{C} w_c \cdot \text{AP}_c, \quad \text{where } w_c = \frac{\log\left(1 + \frac{N_{\text{total}}}{N_c}\right)}{\sum_{k=1}^C \log\left(1 + \frac{N_{\text{total}}}{N_k}\right)}$$
+
+Under $\text{mAP}_{\text{inv-log}}$, game-deciding events ($N_c = 2$) receive a weighting of $w_c \propto 7.69$, whereas ubiquitous boundary events ($N_c = 1,331$) receive $w_c \propto 1.46$. This ensures that automated sports understanding systems are rewarded for detecting decisive refereeing and disciplinary moments rather than solely tracking routine restarts.

@@ -1,0 +1,59 @@
+[
+  {
+    "model": "Qwen3.5-4B (Raw)",
+    "base": {
+      "pred_count": 94,
+      "tight_mAP": 0.05196396740514388,
+      "loose_mAP": 0.10507095400143526,
+      "active_loose_mAP": 0.1489,
+      "loose_hits": 15,
+      "recall": 23.08
+    },
+    "m19_rescored": {
+      "pred_count": 76,
+      "tight_mAP": 0.040885362409426584,
+      "loose_mAP": 0.10976263783750415,
+      "active_loose_mAP": 0.1555,
+      "loose_hits": 15,
+      "recall": 23.08
+    }
+  },
+  {
+    "model": "MiniCPM-V 4.6 (Raw)",
+    "base": {
+      "pred_count": 267,
+      "tight_mAP": 0.012624140565317033,
+      "loose_mAP": 0.05528084789572371,
+      "active_loose_mAP": 0.0783,
+      "loose_hits": 23,
+      "recall": 35.38
+    },
+    "m19_rescored": {
+      "pred_count": 260,
+      "tight_mAP": 0.013268716577540108,
+      "loose_mAP": 0.05637904553273072,
+      "active_loose_mAP": 0.0799,
+      "loose_hits": 23,
+      "recall": 35.38
+    }
+  },
+  {
+    "model": "3-Model Specialist Ensemble (Base)",
+    "base": {
+      "pred_count": 175,
+      "tight_mAP": 0.06310440568658562,
+      "loose_mAP": 0.1514072061767878,
+      "active_loose_mAP": 0.2145,
+      "loose_hits": 36,
+      "recall": 55.38
+    },
+    "m19_rescored": {
+      "pred_count": 174,
+      "tight_mAP": 0.08453587566104666,
+      "loose_mAP": 0.1704994599029518,
+      "active_loose_mAP": 0.2415,
+      "loose_hits": 36,
+      "recall": 55.38
+    }
+  }
+]

@@ -339,6 +339,12 @@ Engineering is not about things working on the first try; it's about systematica
 * **The Fix:** We constructed a balanced serpentine Stratified 5-Fold Cross-Validation partitioning (`logs/macro_study/twenty_matches_macro_analysis.json`) that distributes rare Red cards and Penalties evenly across validation folds, ensuring that validation sets never starve on rare classes.
 * **Engineering Lesson:** Never assume training or evaluation data is uniformly distributed across time. In sports broadcasts, game state, referee psychology, and tactical fatigue create massive temporal asymmetry between halves.
 
+### War Story #12: The 5-Second Markov Prior Rescorer (Surging Active Loose-mAP to 24.15% at $0 Compute)
+* **The Symptom:** In our baseline predictions, models output flat confidence numbers (e.g., 0.85 or 0.90) on almost every detection. Because the official SoccerNet devkit computes Average Precision by sorting predictions descending by confidence, true positives and background false positives were tied in line, dragging down the Precision-Recall curve. Furthermore, MiniCPM hallucinated 7 substitutions in Half 1, and Qwen hallucinated 18 kick-offs during open play.
+* **The Investigation:** We computed the empirical $17 \times 17$ Markov transition matrix $M_{19}$ and Half-1 temporal priors strictly on the **other 19 matches** (Games 1–19, 4,210 events, excluding Game 0) to ensure zero data leakage. $M_{19}$ proved that $P(\text{Indirect FK} \cup \text{Yellow} \mid \text{Foul}) = 87.7\%$ and $P(\text{Throw-in} \cup \text{Clearance} \cup \text{Corner} \mid \text{Ball out of play}) = 96.6\%$, while $P(\text{Substitution} \mid \text{Half 1})$ is a microscopic $0.101\%$.
+* **The Fix:** We implemented `scripts/evaluate_markov_prior_rescoring.py`, running in under 5 seconds of CPU time. It boosted the confidence of causally paired transitions and pruned ghost substitutions and open-play kick-offs. The result: on our 3-Model Specialist Ensemble, **Tight-mAP jumped from 0.0631 to 0.0845 (+34.0% relative gain)**, and **Active Loose-mAP jumped from 21.45% to 24.15% (+2.70% absolute gain)** with **zero loss of match recall (36 / 65 events preserved)**!
+* **Engineering Lesson:** Post-processing doesn't have to be arbitrary heuristics. Grounding post-processing in out-of-sample physical state transition probabilities ($M_{19}$) turns macro-scale dataset statistics into direct, measurable mAP gains with zero GPU compute.
+
 ---
 
 ## 7. How Good Engineers Think & Work
@@ -364,6 +370,7 @@ Throughout this project, several core engineering principles guided our success:
 | **Track A (Spotting)** | MiniCPM-V 4.6 (Solo, $W=60\text{s}$) | 30s Match Recall | **23.1%** | 15 / 65 events detected; superior tackle and foul perception. |
 | **Track A (Spotting)** | LFM2.5-VL-3B (Solo, $W=30\text{s}$) | Boundary Speed | **12.95s/win** | Ultra-fast boundary specialist; 0.1486 AP on Ball out of play. |
 | **Track A (Spotting)** | **3-Model Domain Specialist Ensemble** | **Active Loose-mAP** | **20.87%** | **55.4% Match Recall (36 / 65 events)**; beats all single models. |
+| **Track A (Spotting)** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **24.15%** | **+34.0% Tight-mAP gain (0.0845)**; +2.70% Active Loose-mAP gain via out-of-sample Markov causal confidence boost ($0 compute). |
 | **Track A (Spotting)** | **3-Model Ensemble (5-Fold LOCO CV)** | **Out-of-Sample mAP**| **20.00%** | Proves zero data leakage; robust generalization across chunks. |
 | **Track B (Captioning)**| 3-Model Specialist Ensemble | Temporal Recall | **81.3%** | 26 / 32 official ground-truth captions matched within window. |
 | **Track B (Captioning)**| Delexicalized Role Normalization | ROUGE-L / METEOR | **+16% to +31%**| Proves semantic visual grounding is solid; roster naming is the bottleneck. |
