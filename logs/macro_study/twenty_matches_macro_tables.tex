@@ -1,0 +1,51 @@
+% --- Table 17: Macro-Scale Class Distribution Across 20 EPL Matches (40 Halves) ---
+\begin{table*}[t]
+\centering
+\small
+\caption{Macro-scale topological distribution and temporal asymmetry across the 20-match evaluation set (40 broadcast halves, 4,383 ground-truth events). Imbalance ratio is computed relative to the modal class (\textit{Ball out of play}).}
+\label{tab:twenty_matches_macro_distribution}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+\textbf{Class} & \textbf{Total} & \textbf{Half 1} & \textbf{Half 2} & \textbf{H2 Bias (\%)} & \textbf{Q1} & \textbf{Q2} & \textbf{Q3} & \textbf{Q4} & \textbf{Imbalance} \\
+\midrule
+Ball out of play & 1,331 & 641 & 690 & 51.8\% & 350 & 291 & 344 & 346 & 1.0:1 \\
+Throw-in & 829 & 410 & 419 & 50.5\% & 233 & 177 & 213 & 206 & 1.6:1 \\
+Foul & 435 & 218 & 217 & 49.9\% & 94 & 124 & 116 & 101 & 3.1:1 \\
+Indirect free-kick & 354 & 165 & 189 & 53.4\% & 70 & 95 & 92 & 97 & 3.8:1 \\
+Clearance & 303 & 143 & 160 & 52.8\% & 71 & 72 & 82 & 78 & 4.4:1 \\
+Shots on target & 212 & 94 & 118 & 55.7\% & 33 & 61 & 55 & 63 & 6.3:1 \\
+Shots off target & 208 & 94 & 114 & 54.8\% & 53 & 41 & 50 & 64 & 6.4:1 \\
+Corner & 191 & 86 & 105 & 55.0\% & 43 & 43 & 47 & 58 & 7.0:1 \\
+Substitution & 113 & 2 & 111 & 98.2\% & 0 & 2 & 35 & 76 & 11.8:1 \\
+Kick-off & 94 & 44 & 50 & 53.2\% & 28 & 16 & 33 & 17 & 14.2:1 \\
+Direct free-kick & 94 & 50 & 44 & 46.8\% & 22 & 28 & 22 & 22 & 14.2:1 \\
+Offside & 83 & 37 & 46 & 55.4\% & 14 & 23 & 18 & 28 & 16.0:1 \\
+Yellow card & 73 & 35 & 38 & 52.1\% & 4 & 31 & 9 & 29 & 18.2:1 \\
+Goal & 57 & 26 & 31 & 54.4\% & 9 & 17 & 15 & 16 & 23.4:1 \\
+Penalty & 2 & 2 & 0 & 0.0\% & 1 & 1 & 0 & 0 & 665.5:1 \\
+Red card & 2 & 0 & 2 & 100.0\% & 0 & 0 & 1 & 1 & 665.5:1 \\
+Yellow->red card & 2 & 1 & 1 & 50.0\% & 0 & 1 & 1 & 0 & 665.5:1 \\
+\midrule
+\textbf{Corpus Total} & \textbf{4,383} & \textbf{2,048} & \textbf{2,335} & \textbf{53.3\%} & -- & -- & -- & -- & \textbf{1.0:1} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+% --- Table 18: Stratified 5-Fold Cross-Validation Partitioning ---
+\begin{table}[t]
+\centering
+\small
+\caption{Stratified 5-Fold Cross-Validation partitioning of the 20-match benchmark suite guaranteeing balanced event loads and rare-class representation across folds.}
+\label{tab:twenty_matches_5fold_stratification}
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Fold} & \textbf{Matches} & \textbf{Total Events} & \textbf{Red Cards} & \textbf{Penalties} & \textbf{Goals} & \textbf{Subs} \\
+\midrule
+Fold 1 & 4 & 834 & 1 & 1 & 11 & 22 \\
+Fold 2 & 4 & 879 & 1 & 0 & 9 & 23 \\
+Fold 3 & 4 & 901 & 0 & 1 & 10 & 20 \\
+Fold 4 & 4 & 911 & 0 & 0 & 13 & 24 \\
+Fold 5 & 4 & 858 & 0 & 0 & 14 & 24 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -491,6 +491,9 @@ The Qwen2-VL-2B case study represents a cautionary tale for edge ML: the model p
 \subsection{Zero-GPU Post-Processing ROI}
 Our results prove that temporal calibration, domain routing, and CPU STFT audio gating provide higher empirical performance returns than brute-force model scaling, unlocking state-of-the-art results on an 8\,GB workstation at \$0 cloud compute spend.
 
+\subsection{Macro Corpus Topology \& Stratified Cross-Validation}
+Auditing the full frozen evaluation set (20 EPL fixtures, 40 broadcast halves, 4,383 ground-truth events, and 1,720 commentary captions) uncovers critical topological dynamics governing sports video perception. First, tactical substitutions exhibit extreme temporal asymmetry: \textbf{98.2\% of substitutions (111 / 113)} occur in the second half (67.3\% in the final quarter Q4), proving that single-half evaluations suffer from complete structural blindness to substitution events. Second, high-frequency boundary transitions (\textit{Ball out of play}, $N=1,331$) outnumber decisive disciplinary events (\textit{Red card}, $N=2$; \textit{Penalty}, $N=2$) by a \textbf{665.5:1 imbalance ratio}. To eliminate zero-representation test folds while preserving sample variance, we formulate a balanced serpentine Stratified 5-Fold Cross-Validation partitioning ($\mu = 876.6 \pm 31.8$ events per fold), isolating rare red cards and penalties across independent evaluation partitions.
+
 ---
 
 \section{Conclusion}

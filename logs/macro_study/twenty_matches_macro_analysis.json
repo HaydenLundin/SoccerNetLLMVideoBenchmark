@@ -1,0 +1,878 @@
+{
+  "benchmark_metadata": {
+    "total_matches": 20,
+    "total_halves": 40,
+    "total_broadcast_hours": 30.0,
+    "total_spotting_events": 4383,
+    "total_captions": 1720,
+    "mean_events_per_match": 219.15,
+    "stdev_events_per_match": 32.0,
+    "min_events_per_match": 172,
+    "max_events_per_match": 278
+  },
+  "half_asymmetry": {
+    "half_1_events": 2048,
+    "half_1_pct": 46.73,
+    "half_2_events": 2335,
+    "half_2_pct": 53.27,
+    "stoppage_time_surge_classes": [
+      "Substitution",
+      "Yellow card",
+      "Goal"
+    ]
+  },
+  "class_distributions": [
+    {
+      "class": "Ball out of play",
+      "total": 1331,
+      "half_1": 641,
+      "half_2": 690,
+      "q1": 350,
+      "q2": 291,
+      "q3": 344,
+      "q4": 346,
+      "percentage": 30.367328313940224,
+      "h2_ratio_pct": 51.84072126220887,
+      "imbalance_vs_modal": 1.0
+    },
+    {
+      "class": "Throw-in",
+      "total": 829,
+      "half_1": 410,
+      "half_2": 419,
+      "q1": 233,
+      "q2": 177,
+      "q3": 213,
+      "q4": 206,
+      "percentage": 18.913985854437602,
+      "h2_ratio_pct": 50.542822677925216,
+      "imbalance_vs_modal": 1.6055488540410132
+    },
+    {
+      "class": "Foul",
+      "total": 435,
+      "half_1": 218,
+      "half_2": 217,
+      "q1": 94,
+      "q2": 124,
+      "q3": 116,
+      "q4": 101,
+      "percentage": 9.924709103353866,
+      "h2_ratio_pct": 49.88505747126437,
+      "imbalance_vs_modal": 3.0597701149425287
+    },
+    {
+      "class": "Indirect free-kick",
+      "total": 354,
+      "half_1": 165,
+      "half_2": 189,
+      "q1": 70,
+      "q2": 95,
+      "q3": 92,
+      "q4": 97,
+      "percentage": 8.076659822039698,
+      "h2_ratio_pct": 53.38983050847458,
+      "imbalance_vs_modal": 3.7598870056497176
+    },
+    {
+      "class": "Clearance",
+      "total": 303,
+      "half_1": 143,
+      "half_2": 160,
+      "q1": 71,
+      "q2": 72,
+      "q3": 82,
+      "q4": 78,
+      "percentage": 6.913073237508556,
+      "h2_ratio_pct": 52.8052805280528,
+      "imbalance_vs_modal": 4.3927392739273925
+    },
+    {
+      "class": "Shots on target",
+      "total": 212,
+      "half_1": 94,
+      "half_2": 118,
+      "q1": 33,
+      "q2": 61,
+      "q3": 55,
+      "q4": 63,
+      "percentage": 4.836869723933379,
+      "h2_ratio_pct": 55.660377358490564,
+      "imbalance_vs_modal": 6.278301886792453
+    },
+    {
+      "class": "Shots off target",
+      "total": 208,
+      "half_1": 94,
+      "half_2": 114,
+      "q1": 53,
+      "q2": 41,
+      "q3": 50,
+      "q4": 64,
+      "percentage": 4.745608031028976,
+      "h2_ratio_pct": 54.807692307692314,
+      "imbalance_vs_modal": 6.399038461538462
+    },
+    {
+      "class": "Corner",
+      "total": 191,
+      "half_1": 86,
+      "half_2": 105,
+      "q1": 43,
+      "q2": 43,
+      "q3": 47,
+      "q4": 58,
+      "percentage": 4.357745836185261,
+      "h2_ratio_pct": 54.973821989528794,
+      "imbalance_vs_modal": 6.968586387434555
+    },
+    {
+      "class": "Substitution",
+      "total": 113,
+      "half_1": 2,
+      "half_2": 111,
+      "q1": 0,
+      "q2": 2,
+      "q3": 35,
+      "q4": 76,
+      "percentage": 2.5781428245493956,
+      "h2_ratio_pct": 98.23008849557522,
+      "imbalance_vs_modal": 11.778761061946902
+    },
+    {
+      "class": "Kick-off",
+      "total": 94,
+      "half_1": 44,
+      "half_2": 50,
+      "q1": 28,
+      "q2": 16,
+      "q3": 33,
+      "q4": 17,
+      "percentage": 2.144649783253479,
+      "h2_ratio_pct": 53.191489361702125,
+      "imbalance_vs_modal": 14.159574468085106
+    },
+    {
+      "class": "Direct free-kick",
+      "total": 94,
+      "half_1": 50,
+      "half_2": 44,
+      "q1": 22,
+      "q2": 28,
+      "q3": 22,
+      "q4": 22,
+      "percentage": 2.144649783253479,
+      "h2_ratio_pct": 46.808510638297875,
+      "imbalance_vs_modal": 14.159574468085106
+    },
+    {
+      "class": "Offside",
+      "total": 83,
+      "half_1": 37,
+      "half_2": 46,
+      "q1": 14,
+      "q2": 23,
+      "q3": 18,
+      "q4": 28,
+      "percentage": 1.8936801277663702,
+      "h2_ratio_pct": 55.42168674698795,
+      "imbalance_vs_modal": 16.03614457831325
+    },
+    {
+      "class": "Yellow card",
+      "total": 73,
+      "half_1": 35,
+      "half_2": 38,
+      "q1": 4,
+      "q2": 31,
+      "q3": 9,
+      "q4": 29,
+      "percentage": 1.6655258955053616,
+      "h2_ratio_pct": 52.054794520547944,
+      "imbalance_vs_modal": 18.232876712328768
+    },
+    {
+      "class": "Goal",
+      "total": 57,
+      "half_1": 26,
+      "half_2": 31,
+      "q1": 9,
+      "q2": 17,
+      "q3": 15,
+      "q4": 16,
+      "percentage": 1.3004791238877482,
+      "h2_ratio_pct": 54.385964912280706,
+      "imbalance_vs_modal": 23.350877192982455
+    },
+    {
+      "class": "Penalty",
+      "total": 2,
+      "half_1": 2,
+      "half_2": 0,
+      "q1": 1,
+      "q2": 1,
+      "q3": 0,
+      "q4": 0,
+      "percentage": 0.04563084645220169,
+      "h2_ratio_pct": 0.0,
+      "imbalance_vs_modal": 665.5
+    },
+    {
+      "class": "Red card",
+      "total": 2,
+      "half_1": 0,
+      "half_2": 2,
+      "q1": 0,
+      "q2": 0,
+      "q3": 1,
+      "q4": 1,
+      "percentage": 0.04563084645220169,
+      "h2_ratio_pct": 100.0,
+      "imbalance_vs_modal": 665.5
+    },
+    {
+      "class": "Yellow->red card",
+      "total": 2,
+      "half_1": 1,
+      "half_2": 1,
+      "q1": 0,
+      "q2": 1,
+      "q3": 1,
+      "q4": 0,
+      "percentage": 0.04563084645220169,
+      "h2_ratio_pct": 50.0,
+      "imbalance_vs_modal": 665.5
+    }
+  ],
+  "transition_matrix_30s": {
+    "Foul": {
+      "total_outcomes_30s": 276,
+      "top_transitions": [
+        {
+          "next_class": "Indirect free-kick",
+          "count": 179,
+          "probability": 0.6485507246376812
+        },
+        {
+          "next_class": "Yellow card",
+          "count": 60,
+          "probability": 0.21739130434782608
+        },
+        {
+          "next_class": "Ball out of play",
+          "count": 12,
+          "probability": 0.043478260869565216
+        },
+        {
+          "next_class": "Direct free-kick",
+          "count": 8,
+          "probability": 0.028985507246376812
+        }
+      ]
+    },
+    "Goal": {
+      "total_outcomes_30s": 1,
+      "top_transitions": [
+        {
+          "next_class": "Kick-off",
+          "count": 1,
+          "probability": 1.0
+        }
+      ]
+    },
+    "Ball out of play": {
+      "total_outcomes_30s": 1133,
+      "top_transitions": [
+        {
+          "next_class": "Throw-in",
+          "count": 774,
+          "probability": 0.6831421006178288
+        },
+        {
+          "next_class": "Clearance",
+          "count": 180,
+          "probability": 0.1588702559576346
+        },
+        {
+          "next_class": "Corner",
+          "count": 137,
+          "probability": 0.1209179170344219
+        },
+        {
+          "next_class": "Substitution",
+          "count": 27,
+          "probability": 0.02383053839364519
+        }
+      ]
+    },
+    "Substitution": {
+      "total_outcomes_30s": 100,
+      "top_transitions": [
+        {
+          "next_class": "Throw-in",
+          "count": 28,
+          "probability": 0.28
+        },
+        {
+          "next_class": "Clearance",
+          "count": 20,
+          "probability": 0.2
+        },
+        {
+          "next_class": "Substitution",
+          "count": 16,
+          "probability": 0.16
+        },
+        {
+          "next_class": "Indirect free-kick",
+          "count": 15,
+          "probability": 0.15
+        }
+      ]
+    },
+    "Corner": {
+      "total_outcomes_30s": 150,
+      "top_transitions": [
+        {
+          "next_class": "Ball out of play",
+          "count": 62,
+          "probability": 0.41333333333333333
+        },
+        {
+          "next_class": "Shots off target",
+          "count": 36,
+          "probability": 0.24
+        },
+        {
+          "next_class": "Shots on target",
+          "count": 31,
+          "probability": 0.20666666666666667
+        },
+        {
+          "next_class": "Foul",
+          "count": 17,
+          "probability": 0.11333333333333333
+        }
+      ]
+    }
+  },
+  "captioning_corpus_metrics": {
+    "total_captions": 1720,
+    "half_1_captions": 679,
+    "half_2_captions": 1041,
+    "important_captions_count": 417,
+    "important_captions_pct": 24.24,
+    "mean_words_per_caption": 22.78,
+    "entity_anonymization_rate_pct": 91.4,
+    "temporal_alignment_spotting_to_caption": {
+      "within_5s_pct": 17.91,
+      "within_15s_pct": 41.48,
+      "within_30s_pct": 64.91
+    }
+  },
+  "stratified_cross_validation_4fold": [
+    {
+      "fold": 1,
+      "match_count": 5,
+      "match_ids": [
+        2,
+        6,
+        7,
+        0,
+        8
+      ],
+      "total_events": 1100,
+      "red_cards": 1,
+      "penalties": 1,
+      "goals": 15,
+      "substitutions": 30
+    },
+    {
+      "fold": 2,
+      "match_count": 5,
+      "match_ids": [
+        3,
+        5,
+        1,
+        9,
+        18
+      ],
+      "total_events": 1206,
+      "red_cards": 1,
+      "penalties": 0,
+      "goals": 13,
+      "substitutions": 27
+    },
+    {
+      "fold": 3,
+      "match_count": 5,
+      "match_ids": [
+        13,
+        4,
+        17,
+        19,
+        10
+      ],
+      "total_events": 1049,
+      "red_cards": 0,
+      "penalties": 1,
+      "goals": 13,
+      "substitutions": 29
+    },
+    {
+      "fold": 4,
+      "match_count": 5,
+      "match_ids": [
+        14,
+        16,
+        15,
+        12,
+        11
+      ],
+      "total_events": 1028,
+      "red_cards": 0,
+      "penalties": 0,
+      "goals": 16,
+      "substitutions": 27
+    }
+  ],
+  "stratified_cross_validation_5fold": [
+    {
+      "fold": 1,
+      "match_count": 4,
+      "match_ids": [
+        2,
+        1,
+        17,
+        11
+      ],
+      "total_events": 834,
+      "red_cards": 1,
+      "penalties": 1,
+      "goals": 11,
+      "substitutions": 22
+    },
+    {
+      "fold": 2,
+      "match_count": 4,
+      "match_ids": [
+        3,
+        7,
+        15,
+        10
+      ],
+      "total_events": 879,
+      "red_cards": 1,
+      "penalties": 0,
+      "goals": 9,
+      "substitutions": 23
+    },
+    {
+      "fold": 3,
+      "match_count": 4,
+      "match_ids": [
+        13,
+        6,
+        12,
+        18
+      ],
+      "total_events": 901,
+      "red_cards": 0,
+      "penalties": 1,
+      "goals": 10,
+      "substitutions": 20
+    },
+    {
+      "fold": 4,
+      "match_count": 4,
+      "match_ids": [
+        14,
+        5,
+        19,
+        8
+      ],
+      "total_events": 911,
+      "red_cards": 0,
+      "penalties": 0,
+      "goals": 13,
+      "substitutions": 24
+    },
+    {
+      "fold": 5,
+      "match_count": 4,
+      "match_ids": [
+        16,
+        4,
+        9,
+        0
+      ],
+      "total_events": 858,
+      "red_cards": 0,
+      "penalties": 0,
+      "goals": 14,
+      "substitutions": 24
+    }
+  ],
+  "matches": [
+    {
+      "game_id": 0,
+      "match": "2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal",
+      "season": "2014-2015",
+      "split": "test",
+      "total_spotting": 173,
+      "h1_spotting": 65,
+      "h2_spotting": 108,
+      "total_captions": 101,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 1,
+      "goals": 2,
+      "fouls": 21,
+      "corners": 9
+    },
+    {
+      "game_id": 1,
+      "match": "2015-08-16 - 18-00 Manchester City 3 - 0 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 232,
+      "h1_spotting": 109,
+      "h2_spotting": 123,
+      "total_captions": 76,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 6,
+      "goals": 3,
+      "fouls": 29,
+      "corners": 6
+    },
+    {
+      "game_id": 2,
+      "match": "2015-08-23 - 15-30 West Brom 2 - 3 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 208,
+      "h1_spotting": 95,
+      "h2_spotting": 113,
+      "total_captions": 104,
+      "red_cards": 1,
+      "yellow_red_cards": 0,
+      "penalties": 1,
+      "substitutions": 6,
+      "yellow_cards": 3,
+      "goals": 5,
+      "fouls": 19,
+      "corners": 13
+    },
+    {
+      "game_id": 3,
+      "match": "2015-08-29 - 17-00 Liverpool 0 - 3 West Ham",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 241,
+      "h1_spotting": 111,
+      "h2_spotting": 130,
+      "total_captions": 87,
+      "red_cards": 1,
+      "yellow_red_cards": 1,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 6,
+      "goals": 3,
+      "fouls": 28,
+      "corners": 12
+    },
+    {
+      "game_id": 4,
+      "match": "2015-09-20 - 18-00 Southampton 2 - 3 Manchester United",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 195,
+      "h1_spotting": 95,
+      "h2_spotting": 100,
+      "total_captions": 87,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 2,
+      "goals": 5,
+      "fouls": 19,
+      "corners": 8
+    },
+    {
+      "game_id": 5,
+      "match": "2015-09-26 - 19-30 Newcastle Utd 2 - 2 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 268,
+      "h1_spotting": 137,
+      "h2_spotting": 131,
+      "total_captions": 97,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 3,
+      "goals": 4,
+      "fouls": 26,
+      "corners": 10
+    },
+    {
+      "game_id": 6,
+      "match": "2015-10-03 - 19-30 Chelsea 1 - 3 Southampton",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 227,
+      "h1_spotting": 97,
+      "h2_spotting": 130,
+      "total_captions": 80,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 7,
+      "goals": 4,
+      "fouls": 27,
+      "corners": 10
+    },
+    {
+      "game_id": 7,
+      "match": "2015-10-24 - 17-00 West Ham 2 - 1 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 245,
+      "h1_spotting": 113,
+      "h2_spotting": 132,
+      "total_captions": 95,
+      "red_cards": 0,
+      "yellow_red_cards": 1,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 6,
+      "goals": 3,
+      "fouls": 23,
+      "corners": 11
+    },
+    {
+      "game_id": 8,
+      "match": "2015-11-07 - 20-30 Stoke City 1 - 0 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 247,
+      "h1_spotting": 125,
+      "h2_spotting": 122,
+      "total_captions": 78,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 4,
+      "goals": 1,
+      "fouls": 22,
+      "corners": 9
+    },
+    {
+      "game_id": 9,
+      "match": "2015-11-08 - 19-00 Arsenal 1 - 1 Tottenham",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 270,
+      "h1_spotting": 103,
+      "h2_spotting": 167,
+      "total_captions": 93,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 1,
+      "goals": 2,
+      "fouls": 27,
+      "corners": 13
+    },
+    {
+      "game_id": 10,
+      "match": "2015-12-28 - 20-30 Manchester United 0 - 0 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 188,
+      "h1_spotting": 87,
+      "h2_spotting": 101,
+      "total_captions": 88,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 5,
+      "yellow_cards": 6,
+      "goals": 0,
+      "fouls": 22,
+      "corners": 9
+    },
+    {
+      "game_id": 11,
+      "match": "2016-02-03 - 22-45 Watford 0 - 0 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 178,
+      "h1_spotting": 95,
+      "h2_spotting": 83,
+      "total_captions": 80,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 4,
+      "yellow_cards": 3,
+      "goals": 0,
+      "fouls": 17,
+      "corners": 12
+    },
+    {
+      "game_id": 12,
+      "match": "2016-03-01 - 22-45 Norwich 1 - 2 Chelsea",
+      "season": "2015-2016",
+      "split": "test",
+      "total_spotting": 201,
+      "h1_spotting": 87,
+      "h2_spotting": 114,
+      "total_captions": 88,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 5,
+      "yellow_cards": 5,
+      "goals": 3,
+      "fouls": 18,
+      "corners": 6
+    },
+    {
+      "game_id": 13,
+      "match": "2016-08-27 - 14-30 Tottenham 1 - 1 Liverpool",
+      "season": "2016-2017",
+      "split": "test",
+      "total_spotting": 278,
+      "h1_spotting": 129,
+      "h2_spotting": 149,
+      "total_captions": 85,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 1,
+      "substitutions": 6,
+      "yellow_cards": 8,
+      "goals": 2,
+      "fouls": 29,
+      "corners": 9
+    },
+    {
+      "game_id": 14,
+      "match": "2016-09-24 - 14-30 Manchester United 4 - 1 Leicester",
+      "season": "2016-2017",
+      "split": "test",
+      "total_spotting": 224,
+      "h1_spotting": 118,
+      "h2_spotting": 106,
+      "total_captions": 69,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 2,
+      "goals": 5,
+      "fouls": 18,
+      "corners": 14
+    },
+    {
+      "game_id": 15,
+      "match": "2016-10-15 - 14-30 Chelsea 3 - 0 Leicester",
+      "season": "2016-2017",
+      "split": "test",
+      "total_spotting": 205,
+      "h1_spotting": 100,
+      "h2_spotting": 105,
+      "total_captions": 86,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 2,
+      "goals": 3,
+      "fouls": 15,
+      "corners": 13
+    },
+    {
+      "game_id": 16,
+      "match": "2017-01-21 - 15-30 Liverpool 2 - 3 Swansea",
+      "season": "2016-2017",
+      "split": "test",
+      "total_spotting": 220,
+      "h1_spotting": 96,
+      "h2_spotting": 124,
+      "total_captions": 85,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 2,
+      "goals": 5,
+      "fouls": 14,
+      "corners": 9
+    },
+    {
+      "game_id": 17,
+      "match": "2017-05-06 - 17-00 Leicester 3 - 0 Watford",
+      "season": "2016-2017",
+      "split": "test",
+      "total_spotting": 216,
+      "h1_spotting": 103,
+      "h2_spotting": 113,
+      "total_captions": 63,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 0,
+      "goals": 3,
+      "fouls": 17,
+      "corners": 10
+    },
+    {
+      "game_id": 18,
+      "match": "2015-04-11 - 19-30 Burnley 0 - 1 Arsenal",
+      "season": "2014-2015",
+      "split": "valid",
+      "total_spotting": 195,
+      "h1_spotting": 93,
+      "h2_spotting": 102,
+      "total_captions": 106,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 3,
+      "yellow_cards": 2,
+      "goals": 1,
+      "fouls": 23,
+      "corners": 7
+    },
+    {
+      "game_id": 19,
+      "match": "2015-08-30 - 18-00 Swansea 2 - 1 Manchester United",
+      "season": "2015-2016",
+      "split": "valid",
+      "total_spotting": 172,
+      "h1_spotting": 90,
+      "h2_spotting": 82,
+      "total_captions": 72,
+      "red_cards": 0,
+      "yellow_red_cards": 0,
+      "penalties": 0,
+      "substitutions": 6,
+      "yellow_cards": 4,
+      "goals": 3,
+      "fouls": 21,
+      "corners": 1
+    }
+  ]
+}
