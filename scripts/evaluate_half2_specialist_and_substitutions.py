@@ -173,27 +173,17 @@ def run_half2_and_full_match_evaluation():
         print(f"  Active Classes: {metrics_h2.get('active_class_count', 0)} / 17 | Oracle Ceiling: {metrics_h2.get('oracle_ceiling_mAP', 0.0):.4f}")
 
     # 5. Full 90-Minute Match Aggregation (Half 1 + Half 2)
-    # Load established Half 1 specialist predictions or build directly from Half 1 models
-    h1_specialist_file = WORKSPACE_ROOT / "logs/local_eval/specialist_3m/Predictions-v2.json"
-    if not h1_specialist_file.exists():
-        h1_specialist_file = WORKSPACE_ROOT / "logs/local_eval/specialist_3m_half1/Predictions-v2.json"
-    if not h1_specialist_file.exists():
-        h1_specialist_file = WORKSPACE_ROOT / "scratch/synthesis_eval/specialist_3m/Predictions-v2.json"
-
-    if h1_specialist_file.exists():
-        h1_specialist_preds = load_predictions(h1_specialist_file)
-        print(f"\n  Loaded Half 1 Specialist Predictions: {len(h1_specialist_preds)} events from {h1_specialist_file.name}")
-    else:
-        print("\n  Building Half 1 Specialist Predictions from saved Half 1 model predictions...")
-        qwen_h1 = load_predictions(WORKSPACE_ROOT / "logs/local_eval/qwen3.5-4b_4bit_W60_half1/Predictions-v2.json")
-        minicpm_h1 = load_predictions(WORKSPACE_ROOT / "logs/local_eval/minicpm-v-4.6_4bit_W60_half1/Predictions-v2.json")
-        lfm_h1 = load_predictions(WORKSPACE_ROOT / "logs/local_eval/lfm2.5-vl-3b_4bit_W30_half1/Predictions-v2.json")
-        h1_specialist_preds = build_specialist_ensemble(qwen_h1, minicpm_h1, lfm_h1, half=1)
-        h1_spec_dir = WORKSPACE_ROOT / "logs/local_eval/specialist_3m_half1"
-        h1_spec_dir.mkdir(parents=True, exist_ok=True)
-        with open(h1_spec_dir / "Predictions-v2.json", "w", encoding="utf-8") as f:
-            json.dump({"UrlLocal": f"{url_local}/", "predictions": h1_specialist_preds}, f, indent=2)
-        print(f"  [HALF 1 ENSEMBLE] Built and saved {len(h1_specialist_preds)} specialist predictions for Half 1.")
+    # Build clean Half 1 specialist predictions directly from saved Half 1 base models
+    print("\n  Building Half 1 Specialist Predictions from saved Half 1 model predictions...")
+    qwen_h1 = load_predictions(WORKSPACE_ROOT / "logs/local_eval/qwen3.5-4b_4bit_W60_half1/Predictions-v2.json")
+    minicpm_h1 = load_predictions(WORKSPACE_ROOT / "logs/local_eval/minicpm-v-4.6_4bit_W60_half1/Predictions-v2.json")
+    lfm_h1 = load_predictions(WORKSPACE_ROOT / "logs/local_eval/lfm2.5-vl-3b_4bit_W30_half1/Predictions-v2.json")
+    h1_specialist_preds = build_specialist_ensemble(qwen_h1, minicpm_h1, lfm_h1, half=1)
+    h1_spec_dir = WORKSPACE_ROOT / "logs/local_eval/specialist_3m_half1"
+    h1_spec_dir.mkdir(parents=True, exist_ok=True)
+    with open(h1_spec_dir / "Predictions-v2.json", "w", encoding="utf-8") as f:
+        json.dump({"UrlLocal": f"{url_local}/", "predictions": h1_specialist_preds}, f, indent=2)
+    print(f"  [HALF 1 ENSEMBLE] Built and saved {len(h1_specialist_preds)} specialist predictions for Half 1.")
 
     output_dir_full = WORKSPACE_ROOT / "logs/local_eval/full_match_90min_specialist_3m"
     metrics_full = evaluate_full_90min_match(

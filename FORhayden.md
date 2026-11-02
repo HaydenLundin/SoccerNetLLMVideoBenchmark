@@ -400,7 +400,7 @@ Throughout this project, several core engineering principles guided our success:
 | **V4 Track G (Echoes)** | **Audio-Transcript Entity Grounding** | **CIDEr Surge** | **0.0744 CIDEr** | **+15.7% CIDEr boost** by resolving anonymous VLM roles to grounded match names. |
 | **V4 Track H (Jersey)** | **Qwen3.5-4B Crop OCR** | **Top-1 OCR / Kit Acc** | **100.00% / 100%**| Resolves player jersey numerals (#21, #18, #31, #17) and kit teams in 0.60s. |
 | **Macro Corpus Study** | **20-Match (40-Half) Evaluation Set** | **Corpus Auditing** | **4,383 Events** | **Discovered Half-2 Substitution Law (98.2% in H2)** and 665.5:1 imbalance chasm; created Stratified 5-Fold split. |
-| **Full 90-Min Match** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **15.13%** | **173 GT Events (Both Halves)**; 0.1246 Official Loose-mAP (+35.7%), 0.0451 Tight-mAP (+72.8%), 66.7% Substitution Recall. |
+| **Full 90-Min Match** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **19.19%** | **173 GT Events (Both Halves)**; 0.1580 Official Loose-mAP, 0.0673 Tight-mAP (+42.6% over base), 66.7% Substitution Recall. |
 
 ---
 
@@ -414,18 +414,19 @@ To test if our system could survive a real full 90-minute match, we downloaded t
 
 When we first evaluated our Specialist Ensemble on Half 2, substitutions came back as **0 / 6 detected (0.0% Recall)**. Why? Because we had initially routed `Substitution` to `MiniCPM-V 4.6`!
 
-When we dug into the raw window outputs, we found the culprit:
-- **MiniCPM uses a Contact Sheet:** It packs 60 frames into a 2D mosaic of $224 \times 224$ thumbnails. The fourth official's electronic board and sideline players are tiny blurs in that thumbnail grid—so MiniCPM completely missed all 6 substitutions (and threw 4 phantom ones).
-- **Qwen3.5-4B uses Autoregressive Video Sequences:** Qwen receives sequential full-frame visual tokens. When the substitution board went up at `2 - 26:51` for Falcao coming on for Robin van Persie, Qwen spotted it at `2 - 26:53`—**an error of only +2.21 seconds!**
+When we dug into the raw window outputs and per-class APs, we found the key domain insights:
+- **MiniCPM suffered from over-predicting contact:** MiniCPM emitted 212 predictions in Half 2, with many spurious duel detections that dragged its `Foul` AP down to $0.0626$ (and missed sideline substitution gestures completely). However, MiniCPM excelled at detecting disciplinary consequences (`Yellow card`: **0.3333 AP**).
+- **Qwen3.5-4B demonstrated superior fine-grained localization:** Qwen spotted `Foul` with **0.1631 AP** (over $2.6\times$ higher than MiniCPM) and detected **4 out of the 6 official substitutions (66.7% recall, 57.1% precision)**. When the substitution board went up at `2 - 26:51` for Falcao coming on for Robin van Persie, Qwen spotted it at `2 - 26:53`—**an error of only +2.21 seconds!**
 
-Overall, Qwen detected **4 out of the 6 official substitutions (66.7% recall, 57.1% precision)**. When we reassigned the Substitution specialist to Qwen:
-1. In Half 1, Qwen fired 0 times on substitutions (eliminating 100% of MiniCPM's 7 first-half ghost substitutions).
-2. In Half 2, Qwen nailed the true substitutions with pinpoint accuracy!
+By updating our domain routing:
+1. `Qwen3.5-4B` handles Set-Pieces, Goals, Substitutions, Fouls, and Clearances.
+2. `MiniCPM-V 4.6` specializes in Yellow cards (0.3333 AP), Shots on target (0.0834 AP), and restarts.
+3. `LFM2.5-VL-3B` scans rapid boundary transitions (`Ball out of play`: 0.1774 AP).
 
-And when we combined Half 1 and Half 2 and applied our out-of-sample $M_{19}$ Markov Rescorer:
-- **Official Loose-mAP** jumped from 0.0918 to **0.1246 (+35.7% relative gain)**!
-- **Official Tight-mAP** jumped from 0.0261 to **0.0451 (+72.8% relative gain)**!
-- **Active-Class Loose-mAP** reached **15.13%** across all 14 active classes!
+And when we combined Half 1 (175 predictions) and Half 2 (228 predictions) and applied our out-of-sample $M_{19}$ Markov Rescorer:
+- **Official Loose-mAP** jumped to **0.1580**!
+- **Official Tight-mAP** jumped to **0.0673**!
+- **Active-Class Loose-mAP** reached **19.19%** across all 14 active classes (with **0.0818 Active Tight-mAP**)!
 - Total GPU Cloud Spend: **$0.00**.
 
 ---

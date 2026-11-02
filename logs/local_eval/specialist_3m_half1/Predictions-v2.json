@@ -542,15 +542,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 13:37",
-      "label": "Substitution",
-      "position": 819993,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 13:49",
       "label": "Indirect free-kick",
       "position": 831993,
@@ -574,15 +565,6 @@
       "position": 860993,
       "half": "1",
       "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 14:24",
-      "label": "Substitution",
-      "position": 866993,
-      "half": "1",
-      "confidence": 0.9,
       "visibility": "visible",
       "model": "minicpm-v-4.6"
     },
@@ -630,15 +612,6 @@
       "confidence": 0.95,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "1 - 16:51",
-      "label": "Substitution",
-      "position": 1013993,
-      "half": "1",
-      "confidence": 0.75,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "1 - 17:02",
@@ -902,15 +875,6 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 26:30",
-      "label": "Substitution",
-      "position": 1592673,
-      "half": "1",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 26:36",
       "label": "Indirect free-kick",
       "position": 1598673,
@@ -941,15 +905,6 @@
       "gameTime": "1 - 26:55",
       "label": "Offside",
       "position": 1617673,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 27:07",
-      "label": "Substitution",
-      "position": 1629673,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
@@ -1460,15 +1415,6 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 40:56",
-      "label": "Substitution",
-      "position": 2458593,
-      "half": "1",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 40:59",
       "label": "Offside",
       "position": 2461593,
@@ -1537,15 +1483,6 @@
       "position": 2481593,
       "half": "1",
       "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 41:22",
-      "label": "Substitution",
-      "position": 2484593,
-      "half": "1",
-      "confidence": 0.8,
       "visibility": "visible",
       "model": "minicpm-v-4.6"
     },

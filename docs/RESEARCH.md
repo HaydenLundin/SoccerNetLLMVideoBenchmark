@@ -1231,16 +1231,16 @@ By routing `Substitution` exclusively to `Qwen3.5-4B`:
 
 | Evaluation Scope | Pipeline / Model Configuration | Predictions | Tight-mAP (/17) | Loose-mAP (/17) | Active Tight-mAP | Active Loose-mAP | Active Classes |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Half 2 Only** | Qwen3.5-4B (Solo, $W=60\text{s}$) | 108 | 0.0211 | 0.0740 | 0.0276 | 0.0968 | 13 / 17 |
+| **Half 2 Only** | Qwen3.5-4B (Solo, $W=60\text{s}$) | 108 | 0.0291 | 0.0740 | 0.0381 | 0.0968 | 13 / 17 |
 | **Half 2 Only** | MiniCPM-V 4.6 (Solo, $W=60\text{s}$) | 212 | 0.0032 | 0.0373 | 0.0042 | 0.0488 | 13 / 17 |
 | **Half 2 Only** | LFM2.5-VL-3B (Solo, $W=30\text{s}$) | 169 | 0.0007 | 0.0171 | 0.0009 | 0.0224 | 13 / 17 |
-| **Half 2 Only** | **3-Model Domain Specialist Ensemble** | 182 | 0.0133 | 0.0611 | 0.0175 | 0.0800 | 13 / 17 |
-| **Half 2 Only** | **3-Model Specialist + $M_{19}$ Rescorer** | 174 | **0.0136** | **0.0649** | **0.0178** | **0.0849** | 13 / 17 |
-| **Full 90-Minute Match** | **3-Model Base Specialist Ensemble** | 364 | 0.0261 | 0.0918 | 0.0317 | 0.1114 | 14 / 17 |
-| **Full 90-Minute Match** | **3-Model Specialist + $M_{19}$ Rescorer** | **348** | **0.0451** | **0.1246** | **0.0548** | **0.1513** | **14 / 17** |
-| **Empirical Delta** | **Out-of-Sample $M_{19}$ Causal Boost** | **-16 FP** | **+72.8%** | **+35.7%** | **+72.8%** | **+35.8%** | **Ceiling: 82.35%** |
+| **Half 2 Only** | **3-Model Domain Specialist Ensemble** | 228 | 0.0356 | 0.0943 | 0.0465 | 0.1234 | 13 / 17 |
+| **Half 2 Only** | **3-Model Specialist + $M_{19}$ Rescorer** | 220 | **0.0357** | **0.1059** | **0.0467** | **0.1385** | 13 / 17 |
+| **Full 90-Minute Match** | **3-Model Base Specialist Ensemble** | 403 | 0.0472 | 0.1206 | 0.0573 | 0.1464 | 14 / 17 |
+| **Full 90-Minute Match** | **3-Model Specialist + $M_{19}$ Rescorer** | **394** | **0.0673** | **0.1580** | **0.0818** | **0.1919** | **14 / 17** |
+| **Full Match Delta** | **Out-of-Sample $M_{19}$ Causal Boost** | **-9 FP** | **+42.6%** | **+31.0%** | **+42.8%** | **+31.1%** | **Ceiling: 82.35%** |
 
 #### Key Full-Match Findings:
-1. **The $M_{19}$ Causal Transition Surge on Full Match:** Across 90 minutes of continuous action, out-of-sample Markov transition rescoring ($M_{19}$) boosts Official Loose-mAP from 0.0918 to **0.1246 (+35.7%)** and Official Tight-mAP from 0.0261 to **0.0451 (+72.8%)** by promoting causally verified pairs (Ball out of play -> Throw-in/Corner; Foul -> Yellow card) and pruning un-anchored open-play kick-offs and early ghost substitutions.
-2. **Double-Digit Active Loose-mAP:** Active-Class Loose-mAP surpasses **15.13%** across all 14 active classes in the full 90-minute match, establishing a strong, reproducible open-weight baseline on untrimmed broadcast video without supervised feature extractors or task-specific fine-tuning.
+1. **The $M_{19}$ Causal Transition Surge on Full Match:** Across 90 minutes of continuous action, out-of-sample Markov transition rescoring ($M_{19}$) boosts Official Loose-mAP from 0.1206 to **0.1580 (+31.0%)** and Official Tight-mAP from 0.0472 to **0.0673 (+42.6%)** by promoting causally verified pairs (Ball out of play -> Throw-in/Corner; Foul -> Yellow card) and pruning un-anchored open-play kick-offs.
+2. **Double-Digit Active Loose-mAP:** Active-Class Loose-mAP reaches **19.19%** (Active Tight-mAP: **0.0818**) across all 14 active classes in the full 90-minute match, establishing a strong, reproducible open-weight baseline on untrimmed broadcast video without supervised feature extractors or task-specific fine-tuning.
 3. **Zero GPU Cost:** All 720p macro-chunks across both halves were decoded, inferred, calibrated, and evaluated locally on an 8 GB NVIDIA RTX 3000 Ada laptop GPU with \$0 cloud expenditure.

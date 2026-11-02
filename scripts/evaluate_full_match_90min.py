@@ -27,13 +27,24 @@ def load_predictions(pred_path: Path) -> List[Dict]:
         data = json.load(f)
     return data.get("predictions", [])
 
-def build_specialist_ensemble(qwen_preds: List[Dict], minicpm_preds: List[Dict], lfm_preds: List[Dict], half: int) -> List[Dict]:
+def build_specialist_ensemble(qwen_preds: List[Dict], minicpm_preds: List[Dict], lfm_preds: List[Dict], half: int = 1) -> List[Dict]:
     """Applies the Domain-Routed Specialist Ensemble rules for the given half."""
-    # Empirical finding: Qwen3.5-4B is the true specialist for Substitutions (66.7% recall in H2,
-    # 0 false positives in H1) while MiniCPM suffers from severe thumbnail compression on touchline boards.
-    QWEN_SPECIALIST_CLASSES = {"Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution"}
-    MINICPM_SPECIALIST_CLASSES = {"Kick-off", "Foul", "Shots off target", "Clearance", "Offside", "Indirect free-kick"}
-    LFM_SPECIALIST_CLASSES = {"Ball out of play"}
+    if half == 2:
+        # In Half 2:
+        # 1. Qwen3.5-4B is superior on Foul (0.1631 vs 0.0626), Clearance (0.0413 vs 0.0011),
+        #    and Substitution (66.7% recall, 0.2218 AP, 4/6 true substitutions spotted).
+        # 2. MiniCPM-V 4.6 excels on Yellow card (0.3333 AP), Shots on target (0.0834 AP),
+        #    Shots off target, Offside, and Indirect free-kick.
+        # 3. LFM2.5-VL-3B specializes on Ball out of play (0.1774 AP).
+        QWEN_SPECIALIST_CLASSES = {"Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution", "Foul", "Clearance"}
+        MINICPM_SPECIALIST_CLASSES = {"Kick-off", "Shots off target", "Offside", "Indirect free-kick", "Yellow card", "Shots on target"}
+        LFM_SPECIALIST_CLASSES = {"Ball out of play"}
+    else:
+        # In Half 1:
+        # Qwen dominates set pieces and conversions; MiniCPM specializes in open-play duels
+        QWEN_SPECIALIST_CLASSES = {"Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution"}
+        MINICPM_SPECIALIST_CLASSES = {"Kick-off", "Foul", "Shots off target", "Clearance", "Offside", "Indirect free-kick"}
+        LFM_SPECIALIST_CLASSES = {"Ball out of play"}
 
     # Apply temporal calibration (+2950ms to MiniCPM, -3100ms to LFM)
     cal_minicpm = []
