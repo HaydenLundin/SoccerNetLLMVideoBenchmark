@@ -1,0 +1,53 @@
+{
+  "match": "england_epl/2014-2015/2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal",
+  "total_predictions": 348,
+  "h1_predictions": 174,
+  "h2_predictions": 174,
+  "metrics": {
+    "tight_average_mAP": 0.04512996375020597,
+    "loose_average_mAP": 0.12459964643341746,
+    "tight_per_class": {
+      "Penalty": 0.0,
+      "Kick-off": 0.006493506493506493,
+      "Goal": 0.0,
+      "Substitution": 0.017045454545454544,
+      "Offside": 0.0,
+      "Shots on target": 0.0,
+      "Shots off target": 0.0,
+      "Clearance": 0.0053475935828877,
+      "Ball out of play": 0.005124777183600713,
+      "Throw-in": 0.10687229437229437,
+      "Foul": 0.0028409090909090906,
+      "Indirect free-kick": 0.0,
+      "Direct free-kick": 0.5,
+      "Corner": 0.12348484848484849,
+      "Yellow card": 0.0,
+      "Red card": 0.0,
+      "Yellow->red card": 0.0
+    },
+    "loose_per_class": {
+      "Penalty": 0.0,
+      "Kick-off": 0.05194805194805196,
+      "Goal": 0.16153268219383926,
+      "Substitution": 0.27231404958677685,
+      "Offside": 0.0305325987144169,
+      "Shots on target": 0.0,
+      "Shots off target": 0.27468464549804267,
+      "Clearance": 0.015588340977785291,
+      "Ball out of play": 0.17788641856016404,
+      "Throw-in": 0.15584415584415587,
+      "Foul": 0.07290436835891381,
+      "Indirect free-kick": 0.04958677685950414,
+      "Direct free-kick": 0.5,
+      "Corner": 0.35537190082644626,
+      "Yellow card": 0.0,
+      "Red card": 0.0,
+      "Yellow->red card": 0.0
+    },
+    "active_class_count": 14,
+    "total_class_count": 17,
+    "oracle_ceiling_mAP": 0.8235294117647058,
+    "active_tight_average_mAP": 0.05480067026810725,
+    "active_loose_average_mAP": 0.15129957066914979
+  }
+}

@@ -14,14 +14,26 @@ from pathlib import Path
 from typing import Dict, List, Optional
 
 try:
-    import static_ffmpeg
-    static_ffmpeg.add_paths()
+    import imageio_ffmpeg
 except ImportError:
     pass
 
 CHUNK_DURATION_SEC = 600.0   # 10 minutes nominal
 CHUNK_OVERLAP_SEC = 15.0     # 15 seconds overlap
 CHUNK_STRIDE_SEC = CHUNK_DURATION_SEC - CHUNK_OVERLAP_SEC  # 585 seconds
+
+def get_ffmpeg_binary() -> str:
+    """Finds the ffmpeg binary, prioritizing imageio-ffmpeg bundled binary."""
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        pass
+    import shutil
+    found = shutil.which("ffmpeg")
+    if found:
+        return found
+    raise FileNotFoundError("ffmpeg binary not found. Please install imageio-ffmpeg or add ffmpeg to PATH.")
 
 def run_command(cmd: List[str]) -> str:
     """Executes a subprocess command and returns stdout."""
@@ -31,7 +43,19 @@ def run_command(cmd: List[str]) -> str:
     return res.stdout.strip()
 
 def get_video_duration(video_path: str) -> float:
-    """Probes the total duration of a video file in seconds."""
+    """Probes the total duration of a video file in seconds using PyAV (with ffprobe fallback)."""
+    try:
+        import av
+        with av.open(video_path) as c:
+            if c.duration is not None:
+                return float(c.duration) / av.time_base
+            elif c.streams.video:
+                v = c.streams.video[0]
+                if v.duration is not None and v.time_base is not None:
+                    return float(v.duration * v.time_base)
+    except Exception:
+        pass
+
     cmd = [
         "ffprobe", "-v", "error",
         "-show_entries", "format=duration",
@@ -44,36 +68,28 @@ def get_video_duration(video_path: str) -> float:
 def find_keyframe_at_or_before(video_path: str, target_sec: float) -> float:
     """
     Finds the exact keyframe (I-frame) presentation timestamp at or immediately before target_sec.
-    Probes packets locally within [target-20s, target+10s] for high speed without full-file scan.
+    Uses PyAV keyframe seek for sub-millisecond precision.
     """
     if target_sec <= 0.0:
         return 0.0
 
-    start_window = max(0.0, target_sec - 20.0)
-    read_interval = f"{start_window:.3f}%+30"
-
-    cmd = [
-        "ffprobe", "-v", "error",
-        "-select_streams", "v:0",
-        "-show_entries", "packet=pts_time,flags",
-        "-read_intervals", read_interval,
-        "-of", "json",
-        video_path
-    ]
     try:
-        out = run_command(cmd)
-        data = json.loads(out)
-        keyframes = [
-            float(p["pts_time"]) for p in data.get("packets", [])
-            if "K" in p.get("flags", "") and "pts_time" in p
-        ]
-        candidates = [k for k in keyframes if k <= target_sec]
-        if candidates:
-            return max(candidates)
-        elif keyframes:
-            return min(keyframes)
+        import av
+        with av.open(video_path) as c:
+            if c.streams.video:
+                v = c.streams.video[0]
+                tb = float(v.time_base)
+                target_pts = int(round(target_sec / tb))
+                c.seek(target_pts, stream=v, backward=True)
+                for packet in c.demux(v):
+                    if packet.is_keyframe and packet.pts is not None:
+                        pts_sec = float(packet.pts * tb)
+                        if pts_sec <= target_sec:
+                            return pts_sec
+                        # If the first keyframe found is slightly ahead, take it if close
+                        return pts_sec
     except Exception as e:
-        print(f"[WARN] Keyframe probe fallback: {e}")
+        print(f"[WARN] PyAV keyframe probe fallback: {e}")
 
     return target_sec
 
@@ -91,6 +107,7 @@ def slice_half_into_macro_chunks(
     """
     out_path = Path(output_dir)
     out_path.mkdir(parents=True, exist_ok=True)
+    ffmpeg_bin = get_ffmpeg_binary()
 
     total_duration = get_video_duration(input_video_path)
     print(f"[SLICE] Slicing Half {half} | Total Duration: {total_duration:.2f}s ({total_duration/60:.2f} min)")
@@ -110,7 +127,7 @@ def slice_half_into_macro_chunks(
         chunk_filename = f"game_{game_id}_half_{half}_chunk_{chunk_index:02d}.{target_container}"
         chunk_filepath = out_path / chunk_filename
 
-        cmd = ["ffmpeg", "-y"]
+        cmd = [ffmpeg_bin, "-y"]
         if actual_slice_start > 0.0:
             cmd.extend(["-ss", f"{actual_slice_start:.3f}"])
         cmd.extend(["-i", input_video_path])

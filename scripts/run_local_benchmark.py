@@ -20,6 +20,8 @@ Key Architectural Protections:
 
 import os
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
 import sys
 import json
 import time
@@ -627,7 +629,9 @@ def run_benchmark_on_chunks(
         else:
             if output_dir:
                 candidate_cache_dirs.append(output_dir)
-                candidate_cache_dirs.append(output_dir.parent / f"{runner.model_key}_{runner.precision}_W{window_sec}")
+                # Only check root legacy cache for Game 0 Half 1
+                if manifest_data.get("game_id") == 0 and manifest_data.get("half") == 1:
+                    candidate_cache_dirs.append(output_dir.parent / f"{runner.model_key}_{runner.precision}_W{window_sec}")
             else:
                 candidate_cache_dirs.append(Path("logs/local_eval") / f"{runner.model_key}_{runner.precision}_W{window_sec}")
 
@@ -869,6 +873,7 @@ def run_benchmark_on_chunks(
             all_window_diags.append(diag_entry)
             all_raw_outputs.append({
                 "chunk_index": chunk_idx,
+                "filename": filename,
                 "window_index": w_i,
                 "slice": f"{start_t:.1f}s - {end_t:.1f}s",
                 "raw_output": raw_text,
@@ -1047,9 +1052,12 @@ def main():
     parser.add_argument("--window-sec", type=int, default=None, help="Sliding window size in seconds (defaults to model ceiling)")
     parser.add_argument("--stride-sec", type=int, default=None, help="Sliding window stride in seconds (defaults to W - 15s)")
     parser.add_argument("--chunk-index", type=int, default=0, help="Chunk index to evaluate (e.g. 0 for quick test, -1 for all chunks)")
-    parser.add_argument("--manifest", type=str, default="gate2_chunks/game_0_half_1_chunks_manifest.json", help="Path to chunk manifest")
+    parser.add_argument("--game-id", type=int, default=0, help="Game ID in eval_set.json (default: 0)")
+    parser.add_argument("--half", type=int, default=1, choices=[1, 2], help="Half (1 or 2, default: 1)")
+    parser.add_argument("--eval-set", type=str, default="eval_set.json", help="Path to eval_set.json")
+    parser.add_argument("--manifest", type=str, default=None, help="Path to chunk manifest (defaults to gate2_chunks/game_{game_id}_half_{half}_chunks_manifest.json)")
     parser.add_argument("--chunks-dir", type=str, default="gate2_chunks", help="Directory containing chunk mp4 files")
-    parser.add_argument("--ground-truth", type=str, default="test_eval_ground_truth/england_epl/2014-2015/2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal/Labels-v2.json", help="Ground truth Labels-v2.json")
+    parser.add_argument("--ground-truth", type=str, default=None, help="Ground truth Labels-v2.json (defaults to match path from eval_set.json)")
     parser.add_argument("--output-dir", type=str, default="logs/local_eval", help="Directory to save predictions")
     parser.add_argument("--max-windows", type=int, default=None, help="Max windows to evaluate per chunk (for quick testing)")
     parser.add_argument("--no-cache", action="store_true", help="Do not reuse cached chunk predictions; force fresh GPU inference")
@@ -1057,6 +1065,23 @@ def main():
     parser.add_argument("--spotting-only", action="store_true", help="Run spotting-only ablation (RQ3): omit commentary and natural language reasoning before action label")
 
     args = parser.parse_args()
+
+    # Dynamically resolve game relative path from eval_set.json
+    eval_set_path = Path(args.eval_set)
+    game_path = "england_epl/2014-2015/2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal"
+    if eval_set_path.exists():
+        with open(eval_set_path, "r", encoding="utf-8") as f:
+            eval_set_data = json.load(f)
+        for g in eval_set_data.get("games", []):
+            if g.get("game_id") == args.game_id:
+                game_path = g.get("relative_path", game_path)
+                break
+
+    url_local = f"{game_path}/"
+
+    # Default manifest & ground truth resolution
+    manifest_str = args.manifest or f"gate2_chunks/game_{args.game_id}_half_{args.half}_chunks_manifest.json"
+    ground_truth_str = args.ground_truth or f"test_eval_ground_truth/{game_path}/Labels-v2.json"
 
     model_cfg = LOCAL_MODEL_CONFIGS[args.model]
     precision = args.precision or model_cfg["default_precision"]
@@ -1070,13 +1095,18 @@ def main():
     else:
         stride_sec = max(15, window_sec - 15)  # 60s window, 45s stride -> 15s overlap
 
-    scope_tag = "" if args.chunk_index >= 0 else "_half1"
+    if args.game_id == 0 and args.half == 1:
+        scope_tag = "" if args.chunk_index >= 0 else "_half1"
+    else:
+        chunk_suffix = f"_chunk{args.chunk_index}" if args.chunk_index >= 0 else ""
+        scope_tag = f"_game{args.game_id}_half{args.half}{chunk_suffix}"
+
     spotting_tag = "_spotting_only" if args.spotting_only else ""
     base_out_dir = Path("logs/local_eval_dryrun") if args.dry_run else Path(args.output_dir)
     output_dir = base_out_dir / f"{args.model}_{precision}_W{window_sec}{spotting_tag}{scope_tag}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    manifest_path = Path(args.manifest)
+    manifest_path = Path(manifest_str)
     if not manifest_path.exists():
         raise FileNotFoundError(f"Manifest not found: {manifest_path}")
 
@@ -1117,8 +1147,7 @@ def main():
     )
 
     # 3. Stitch across Match Half using 3-Tier PTS Offsets from Manifest
-    url_local = "england_epl/2014-2015/2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal/"
-    print("\n[STITCHING] Stitching chunk predictions into full match timeline using PTS offsets...")
+    print(f"\n[STITCHING] Stitching chunk predictions for {url_local} into full match timeline using PTS offsets...")
     spotting_pred, caption_pred, stitch_telem = stitch_chunks_to_match_predictions(
         chunk_results=chunk_results,
         chunks_manifest=manifest_data,
@@ -1163,7 +1192,7 @@ def main():
     print(f"[SUCCESS] Exported Telemetry          -> {telemetry_out_path}")
 
     # 4. Scope-Masked Evaluation & Qualitative Diagnostics
-    gt_path = Path(args.ground_truth)
+    gt_path = Path(ground_truth_str)
     if gt_path.exists():
         with open(gt_path, "r", encoding="utf-8") as f:
             gt_full = json.load(f)
