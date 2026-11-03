@@ -1,0 +1,85 @@
+{
+  "game_id": 13,
+  "half": 2,
+  "total_duration_sec": 2978.003,
+  "chunks": [
+    {
+      "game_id": 13,
+      "half": 2,
+      "chunk_index": 0,
+      "filename": "game_13_half_2_chunk_00.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_2_chunk_00.mp4",
+      "requested_start_sec": 0.0,
+      "actual_start_sec": 0.0,
+      "actual_start_ms": 0,
+      "keyframe_drift_sec": 0.0,
+      "duration_sec": 615.083,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 2,
+      "chunk_index": 1,
+      "filename": "game_13_half_2_chunk_01.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_2_chunk_01.mp4",
+      "requested_start_sec": 585.0,
+      "actual_start_sec": 584.523,
+      "actual_start_ms": 584523,
+      "keyframe_drift_sec": 0.477,
+      "duration_sec": 615.08,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 2,
+      "chunk_index": 2,
+      "filename": "game_13_half_2_chunk_02.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_2_chunk_02.mp4",
+      "requested_start_sec": 1170.0,
+      "actual_start_sec": 1168.083,
+      "actual_start_ms": 1168083,
+      "keyframe_drift_sec": 1.917,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 2,
+      "chunk_index": 3,
+      "filename": "game_13_half_2_chunk_03.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_2_chunk_03.mp4",
+      "requested_start_sec": 1755.0,
+      "actual_start_sec": 1753.603,
+      "actual_start_ms": 1753603,
+      "keyframe_drift_sec": 1.397,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 2,
+      "chunk_index": 4,
+      "filename": "game_13_half_2_chunk_04.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_2_chunk_04.mp4",
+      "requested_start_sec": 2340.0,
+      "actual_start_sec": 2334.483,
+      "actual_start_ms": 2334483,
+      "keyframe_drift_sec": 5.517,
+      "duration_sec": 615.08,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 2,
+      "chunk_index": 5,
+      "filename": "game_13_half_2_chunk_05.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_2_chunk_05.mp4",
+      "requested_start_sec": 2925.0,
+      "actual_start_sec": 2923.243,
+      "actual_start_ms": 2923243,
+      "keyframe_drift_sec": 1.757,
+      "duration_sec": 54.763833,
+      "is_final_chunk": true
+    }
+  ]
+}

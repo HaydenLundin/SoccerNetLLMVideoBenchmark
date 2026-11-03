@@ -1,0 +1,72 @@
+{
+  "game_id": 13,
+  "half": 1,
+  "total_duration_sec": 2797.003,
+  "chunks": [
+    {
+      "game_id": 13,
+      "half": 1,
+      "chunk_index": 0,
+      "filename": "game_13_half_1_chunk_00.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_1_chunk_00.mp4",
+      "requested_start_sec": 0.0,
+      "actual_start_sec": 0.0,
+      "actual_start_ms": 0,
+      "keyframe_drift_sec": 0.0,
+      "duration_sec": 615.083,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 1,
+      "chunk_index": 1,
+      "filename": "game_13_half_1_chunk_01.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_1_chunk_01.mp4",
+      "requested_start_sec": 585.0,
+      "actual_start_sec": 577.363,
+      "actual_start_ms": 577363,
+      "keyframe_drift_sec": 7.637,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 1,
+      "chunk_index": 2,
+      "filename": "game_13_half_1_chunk_02.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_1_chunk_02.mp4",
+      "requested_start_sec": 1170.0,
+      "actual_start_sec": 1163.763,
+      "actual_start_ms": 1163763,
+      "keyframe_drift_sec": 6.237,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 1,
+      "chunk_index": 3,
+      "filename": "game_13_half_1_chunk_03.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_1_chunk_03.mp4",
+      "requested_start_sec": 1755.0,
+      "actual_start_sec": 1750.243,
+      "actual_start_ms": 1750243,
+      "keyframe_drift_sec": 4.757,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 13,
+      "half": 1,
+      "chunk_index": 4,
+      "filename": "game_13_half_1_chunk_04.mp4",
+      "relative_path": "gate2_chunks\\game_13_half_1_chunk_04.mp4",
+      "requested_start_sec": 2340.0,
+      "actual_start_sec": 2337.363,
+      "actual_start_ms": 2337363,
+      "keyframe_drift_sec": 2.637,
+      "duration_sec": 459.644,
+      "is_final_chunk": true
+    }
+  ]
+}
