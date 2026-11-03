@@ -21,6 +21,8 @@ from SoccerNet.Evaluation.utils import EVENT_DICTIONARY_V2, INVERSE_EVENT_DICTIO
 from scripts.evaluate_full_match_90min import build_specialist_ensemble
 from scripts.evaluate_markov_prior_rescoring import (
     compute_out_of_sample_m19,
+    compute_out_of_sample_m15,
+    compute_out_of_sample_markov,
     apply_markov_and_temporal_prior
 )
 
@@ -94,11 +96,14 @@ def evaluate_predictions_tree(ground_truth_dir: Path, predictions_dir: Path) -> 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate MES-5 multi-match benchmark")
     parser.add_argument("--config", type=str, default="qwen3.5-4b",
-                        choices=["qwen3.5-4b", "minicpm-v-4.6", "lfm2.5-vl-3b", "specialist_3m", "specialist_3m_m19"],
+                        choices=["qwen3.5-4b", "minicpm-v-4.6", "lfm2.5-vl-3b", "specialist_3m", "specialist_3m_m15", "specialist_3m_m19"],
                         help="Configuration to evaluate across MES-5")
     parser.add_argument("--games", type=int, nargs="+", default=[0, 1, 2, 3, 13],
                         help="Game IDs to include (default: all MES-5 games)")
     args = parser.parse_args()
+
+    # Map m19 to m15 when running multi-game MES-5 evaluation to ensure zero data leakage
+    is_rescore = args.config in ["specialist_3m_m15", "specialist_3m_m19"]
 
     eval_games = [(gid, p) for gid, p in MES5_GAMES if gid in args.games]
 
@@ -116,10 +121,15 @@ def main():
     total_gt_all_games = 0
 
     prob_fwd, prob_bwd, h1_priors = None, None, None
-    if args.config == "specialist_3m_m19":
+    if is_rescore:
         eval_set_path = WORKSPACE_ROOT / "eval_set.json"
         gt_dir = WORKSPACE_ROOT / "test_eval_ground_truth"
-        prob_fwd, prob_bwd, h1_priors = compute_out_of_sample_m19(eval_set_path, gt_dir)
+        if args.games == [0]:
+            print("  [M19 Prior] Using out-of-sample Games 1..19 for single-game Game 0 evaluation.")
+            prob_fwd, prob_bwd, h1_priors = compute_out_of_sample_m19(eval_set_path, gt_dir)
+        else:
+            print("  [M15 Prior] Strictly out-of-sample: computing transition matrix on 15 held-out matches (Games 4..12, 14..19, 3,251 events).")
+            prob_fwd, prob_bwd, h1_priors = compute_out_of_sample_m15(eval_set_path, gt_dir)
 
     for gid, rel_path in eval_games:
         match_pred_dir = devkit_pred_dir / rel_path
@@ -147,12 +157,12 @@ def main():
         for half in [1, 2]:
             if args.config in ["qwen3.5-4b", "minicpm-v-4.6", "lfm2.5-vl-3b"]:
                 h_preds = get_model_preds_for_half(args.config, gid, half)
-            elif args.config in ["specialist_3m", "specialist_3m_m19"]:
+            elif args.config in ["specialist_3m", "specialist_3m_m15", "specialist_3m_m19"]:
                 qwen_h = get_model_preds_for_half("qwen3.5-4b", gid, half)
                 minicpm_h = get_model_preds_for_half("minicpm-v-4.6", gid, half)
                 lfm_h = get_model_preds_for_half("lfm2.5-vl-3b", gid, half)
                 h_preds = build_specialist_ensemble(qwen_h, minicpm_h, lfm_h, half=half)
-                if args.config == "specialist_3m_m19" and prob_fwd:
+                if is_rescore and prob_fwd:
                     h_preds = apply_markov_and_temporal_prior(
                         h_preds, prob_fwd, prob_bwd, alpha=0.15,
                         prune_h1_substitutions=(half == 1),

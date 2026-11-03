@@ -1,0 +1,957 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-23 - 15-30 West Brom 2 - 3 Chelsea/",
+  "predictions": [
+    {
+      "gameTime": "2 - 00:44",
+      "position": 44000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "West Brom player Benteke takes a corner kick from the right side of the penalty area."
+    },
+    {
+      "gameTime": "2 - 00:45",
+      "position": 45000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 00:50",
+      "position": 50000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Chelsea player Cech heads the ball into the net to score a goal."
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The attacking team sets up for a corner kick from the left side."
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a white and blue striped jersey takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle to signal a foul by the defending team."
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The corner kick is taken, but the ball is cleared by the defense and goes out of play."
+    },
+    {
+      "gameTime": "2 - 01:31",
+      "position": 91000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in white receives a pass in the penalty area and takes a shot that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 02:50",
+      "position": 170000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The ball is crossed into the box and the goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 03:00",
+      "position": 180000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 03:03",
+      "position": 183000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on a Chelsea player."
+    },
+    {
+      "gameTime": "2 - 03:30",
+      "position": 210000,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A player in a white and blue striped jersey throws the ball back onto the field from the sideline."
+    },
+    {
+      "gameTime": "2 - 03:45",
+      "position": 225000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The match is in progress with players in white and black kits moving across the pitch."
+    },
+    {
+      "gameTime": "2 - 03:47",
+      "position": 227000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The referee blows the whistle to restart play."
+    },
+    {
+      "gameTime": "2 - 04:30",
+      "position": 270000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee signals a foul as a player in a black jersey is brought down by a player in a white and blue striped jersey."
+    },
+    {
+      "gameTime": "2 - 04:49",
+      "position": 289000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a white and blue striped jersey takes a direct free-kick from the penalty area."
+    },
+    {
+      "gameTime": "2 - 05:18",
+      "position": 318000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A player in a black jersey prepares to take a corner kick from the corner arc."
+    },
+    {
+      "gameTime": "2 - 05:29",
+      "position": 329000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is crossed into the box and a player in a white and blue striped jersey shoots it towards the goal."
+    },
+    {
+      "gameTime": "2 - 05:51",
+      "position": 351000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul after a challenge between players."
+    },
+    {
+      "gameTime": "2 - 06:00",
+      "position": 360000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and gathers players from both teams to address them."
+    },
+    {
+      "gameTime": "2 - 06:45",
+      "position": 405000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as Diego Costa (number 19) and a Fulham player engage in a heated verbal confrontation."
+    },
+    {
+      "gameTime": "2 - 08:12",
+      "position": 492000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 08:16",
+      "position": 496000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and points to the sideline, indicating a foul."
+    },
+    {
+      "gameTime": "2 - 08:20",
+      "position": 500000,
+      "half": "2",
+      "label": "Red card",
+      "commentary": "The referee holds up a red card to the player in the black jersey."
+    },
+    {
+      "gameTime": "2 - 08:51",
+      "position": 531000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player attempts a high challenge on a Huddersfield player, resulting in a foul and a fall."
+    },
+    {
+      "gameTime": "2 - 09:00",
+      "position": 540000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The match is in progress with a goal scored by Chelsea, followed by a replay of the goal."
+    },
+    {
+      "gameTime": "2 - 09:12",
+      "position": 552000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul, stopping play as players gather."
+    },
+    {
+      "gameTime": "2 - 09:45",
+      "position": 585000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The referee blows the whistle to signal the start of the match, and the players proceed to the center circle for the kick-off."
+    },
+    {
+      "gameTime": "2 - 10:24",
+      "position": 624403,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The referee signals a direct free-kick for the home team after a foul."
+    },
+    {
+      "gameTime": "2 - 10:25",
+      "position": 625403,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The ball is struck towards the goal, but the goalkeeper makes a save, resulting in a clearance."
+    },
+    {
+      "gameTime": "2 - 10:53",
+      "position": 653403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The home team player attempts a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 11:16",
+      "position": 676403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player attempts a tackle on a Fulham player near the sideline, resulting in a fall."
+    },
+    {
+      "gameTime": "2 - 11:19",
+      "position": 679403,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The referee raises his arm to signal a free-kick for the home team."
+    },
+    {
+      "gameTime": "2 - 11:39",
+      "position": 699403,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The referee signals the restart of play with a free-kick."
+    },
+    {
+      "gameTime": "2 - 12:03",
+      "position": 723403,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The free-kick is taken and the ball goes into the net for a goal."
+    },
+    {
+      "gameTime": "2 - 12:11",
+      "position": 731403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A corner kick is taken from the corner flag."
+    },
+    {
+      "gameTime": "2 - 12:39",
+      "position": 759403,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with the kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 12:55",
+      "position": 775403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a player in a white jersey is brought down."
+    },
+    {
+      "gameTime": "2 - 13:24",
+      "position": 804403,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a white and blue striped jersey takes a direct free-kick from the penalty area."
+    },
+    {
+      "gameTime": "2 - 13:33",
+      "position": 813403,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper fails to reach it."
+    },
+    {
+      "gameTime": "2 - 13:44",
+      "position": 824403,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a white and blue striped jersey takes a direct free-kick from the penalty area."
+    },
+    {
+      "gameTime": "2 - 14:09",
+      "position": 849403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey takes a shot from outside the box which goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 14:54",
+      "position": 894403,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 16:01",
+      "position": 961403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a white and blue striped jersey receives a pass and attempts to dribble past a defender in a black jersey."
+    },
+    {
+      "gameTime": "2 - 16:19",
+      "position": 979403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and raises both arms to signal a foul on the player in the white and blue jersey."
+    },
+    {
+      "gameTime": "2 - 16:24",
+      "position": 984403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Referee blows the whistle and signals a foul as the player in the black jersey makes contact with the player in the white and blue striped jersey."
+    },
+    {
+      "gameTime": "2 - 16:36",
+      "position": 996403,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The player in the white and blue striped jersey takes a direct free-kick from the penalty area."
+    },
+    {
+      "gameTime": "2 - 17:15",
+      "position": 1035403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player attempts a tackle on a New York Red Bulls player in the midfield, resulting in a foul."
+    },
+    {
+      "gameTime": "2 - 17:25",
+      "position": 1045403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A New York Red Bulls player takes a shot from outside the box which is saved by the Chelsea goalkeeper."
+    },
+    {
+      "gameTime": "2 - 17:42",
+      "position": 1062403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player takes a shot from the edge of the box that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 17:49",
+      "position": 1069403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player takes a shot from the edge of the box that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 17:54",
+      "position": 1074403,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 18:35",
+      "position": 1115403,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the attacking team."
+    },
+    {
+      "gameTime": "2 - 18:55",
+      "position": 1135403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The ball is struck towards the goal, resulting in a shot that is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 19:18",
+      "position": 1158403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and black striped jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 19:50",
+      "position": 1190403,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey attempts a long-range shot from outside the box, but the ball is blocked by the defensive wall and deflects away from the goal."
+    },
+    {
+      "gameTime": "2 - 20:06",
+      "position": 1205723,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A player in a white and blue striped jersey throws the ball into play from the sideline."
+    },
+    {
+      "gameTime": "2 - 20:15",
+      "position": 1214723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a player in a white and blue striped jersey is fouled."
+    },
+    {
+      "gameTime": "2 - 20:54",
+      "position": 1253723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a white and blue striped jersey attempts a long pass forward but is fouled by a player in a black jersey, causing the ball to go out of play."
+    },
+    {
+      "gameTime": "2 - 21:07",
+      "position": 1266723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a black jersey attempts to head the ball but is fouled by a player in a white and blue striped jersey, causing the attacker to fall."
+    },
+    {
+      "gameTime": "2 - 21:17",
+      "position": 1276723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey receives a pass and shoots the ball towards the goal, but the shot is blocked by a defender."
+    },
+    {
+      "gameTime": "2 - 21:36",
+      "position": 1295723,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a white and blue striped jersey takes a free kick from the edge of the penalty area."
+    },
+    {
+      "gameTime": "2 - 21:43",
+      "position": 1302723,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 21:47",
+      "position": 1306723,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is crossed into the penalty area and a player in a white and blue striped jersey heads the ball into the net for a goal."
+    },
+    {
+      "gameTime": "2 - 22:23",
+      "position": 1342723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player attempts to clear the ball but is fouled by a Fulham player, causing the player to fall to the ground."
+    },
+    {
+      "gameTime": "2 - 22:28",
+      "position": 1347723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player is lying on the pitch in pain while medical staff attend to him."
+    },
+    {
+      "gameTime": "2 - 22:57",
+      "position": 1376723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player is shown on the ground in pain after a foul."
+    },
+    {
+      "gameTime": "2 - 23:13",
+      "position": 1392723,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 23:15",
+      "position": 1394723,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A Chelsea player takes a penalty kick and shoots the ball towards the goal."
+    },
+    {
+      "gameTime": "2 - 23:31",
+      "position": 1410723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul, awarding a free-kick to the team in black."
+    },
+    {
+      "gameTime": "2 - 24:47",
+      "position": 1486723,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The player in the white and blue striped jersey takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 24:48",
+      "position": 1487723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and black striped jersey attempts a shot from outside the box which is blocked by a defender in black."
+    },
+    {
+      "gameTime": "2 - 24:53",
+      "position": 1492723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the attacking player."
+    },
+    {
+      "gameTime": "2 - 25:02",
+      "position": 1501723,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The player in the white and blue striped jersey takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 25:03",
+      "position": 1502723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The ball is struck towards the goal and deflects off the goalkeeper's hands."
+    },
+    {
+      "gameTime": "2 - 25:09",
+      "position": 1508723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the attacking player."
+    },
+    {
+      "gameTime": "2 - 25:28",
+      "position": 1527723,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The video begins with a close-up of a player in a white and blue striped jersey with the name 'McManaman' and number 19 on the back, standing on the pitch."
+    },
+    {
+      "gameTime": "2 - 26:51",
+      "position": 1610723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 26:54",
+      "position": 1613723,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper fails to reach it."
+    },
+    {
+      "gameTime": "2 - 27:14",
+      "position": 1633723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 27:44",
+      "position": 1663723,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a black jersey with the number 10 on his back is shown preparing to take a free kick."
+    },
+    {
+      "gameTime": "2 - 27:57",
+      "position": 1676723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey receives a pass and takes a shot that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 28:32",
+      "position": 1711723,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey takes a shot from outside the box that hits the post and bounces out."
+    },
+    {
+      "gameTime": "2 - 29:01",
+      "position": 1740723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a Newcastle United player is brought down by a Chelsea defender."
+    },
+    {
+      "gameTime": "2 - 29:42",
+      "position": 1781723,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a player in a black jersey makes contact with an opponent."
+    },
+    {
+      "gameTime": "2 - 29:09",
+      "position": 1748683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 29:42",
+      "position": 1781683,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a black jersey receives the ball and takes a direct free-kick from the penalty area."
+    },
+    {
+      "gameTime": "2 - 30:29",
+      "position": 1828683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey strikes the ball towards the goal, but the goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 30:39",
+      "position": 1838683,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The match is in progress with a free-kick situation occurring near the goal."
+    },
+    {
+      "gameTime": "2 - 30:44",
+      "position": 1843683,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper fails to reach it."
+    },
+    {
+      "gameTime": "2 - 30:54",
+      "position": 1853683,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Players from both teams gather in a tight huddle near the center circle."
+    },
+    {
+      "gameTime": "2 - 30:59",
+      "position": 1858683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in a white and blue striped jersey receives a pass and attempts to dribble past a defender."
+    },
+    {
+      "gameTime": "2 - 31:04",
+      "position": 1863683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The goalkeeper in a light blue jersey makes a save, pushing the ball away from the goal."
+    },
+    {
+      "gameTime": "2 - 31:09",
+      "position": 1868683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "A player in a black jersey receives a long pass and runs down the wing."
+    },
+    {
+      "gameTime": "2 - 31:19",
+      "position": 1878683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in a black jersey dribbles the ball down the left flank."
+    },
+    {
+      "gameTime": "2 - 31:24",
+      "position": 1883683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a black jersey attempts a shot from outside the box which is blocked by defenders."
+    },
+    {
+      "gameTime": "2 - 31:31",
+      "position": 1890683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "Diego Costa attempts a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 31:34",
+      "position": 1893683,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a black jersey is shown with his hand over his face, appearing disappointed."
+    },
+    {
+      "gameTime": "2 - 31:52",
+      "position": 1911683,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on Diego Costa."
+    },
+    {
+      "gameTime": "2 - 32:09",
+      "position": 1928683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is about to begin as players from both teams are shown on the sidelines before the kick-off."
+    },
+    {
+      "gameTime": "2 - 32:40",
+      "position": 1959683,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a black jersey receives the ball and attempts to dribble forward but is immediately tackled by an opponent in a white and blue striped jersey, resulting in a stoppage of play."
+    },
+    {
+      "gameTime": "2 - 32:60",
+      "position": 1979683,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a Chelsea player makes contact with the ball while it is in the air."
+    },
+    {
+      "gameTime": "2 - 33:38",
+      "position": 2017683,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Chelsea player throws the ball into play from the sideline to restart the match."
+    },
+    {
+      "gameTime": "2 - 33:39",
+      "position": 2018683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 34:53",
+      "position": 2092683,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper dives but fails to reach it."
+    },
+    {
+      "gameTime": "2 - 34:54",
+      "position": 2093683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The referee blows the whistle to signal the goal and the match restarts."
+    },
+    {
+      "gameTime": "2 - 35:12",
+      "position": 2111683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a black jersey shoots the ball towards the goal, but the goalkeeper saves it."
+    },
+    {
+      "gameTime": "2 - 35:26",
+      "position": 2125683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a black jersey takes a shot from outside the box, which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 35:37",
+      "position": 2136683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey takes a shot from the edge of the box, which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 35:57",
+      "position": 2156683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a black jersey attempts a shot from the edge of the box, which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 35:58",
+      "position": 2157683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A player in a white and blue striped jersey takes a corner kick from the corner arc."
+    },
+    {
+      "gameTime": "2 - 36:30",
+      "position": 2189683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey shoots the ball towards the goal, but the goalkeeper saves it."
+    },
+    {
+      "gameTime": "2 - 36:39",
+      "position": 2198683,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A player in a white and blue kit takes a direct free-kick from the corner arc."
+    },
+    {
+      "gameTime": "2 - 37:17",
+      "position": 2236683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The goalkeeper kicks the ball from the goal area to restart play."
+    },
+    {
+      "gameTime": "2 - 37:24",
+      "position": 2243683,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The match is in progress with a player in a black jersey dribbling the ball in the midfield area."
+    },
+    {
+      "gameTime": "2 - 38:09",
+      "position": 2288683,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 38:21",
+      "position": 2300683,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 38:28",
+      "position": 2307683,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The fourth official holds up a substitution board indicating a player change."
+    },
+    {
+      "gameTime": "2 - 38:36",
+      "position": 2315683,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the Chelsea player."
+    },
+    {
+      "gameTime": "2 - 39:22",
+      "position": 2361683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The ball is crossed into the penalty area from the corner arc."
+    },
+    {
+      "gameTime": "2 - 39:14",
+      "position": 2353603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Chelsea player Pedro receives a pass in the midfield and begins to dribble forward."
+    },
+    {
+      "gameTime": "2 - 39:39",
+      "position": 2378603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 39:44",
+      "position": 2383603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey attempts a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 40:39",
+      "position": 2438603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The goalkeeper dives to his left to make a save on a shot from the right side of the box."
+    },
+    {
+      "gameTime": "2 - 41:03",
+      "position": 2462603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a white and blue striped jersey attempts a through ball into the box but is fouled by a defender in black."
+    },
+    {
+      "gameTime": "2 - 41:09",
+      "position": 2468603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is in progress with a player in a black jersey dribbling the ball in the midfield area."
+    },
+    {
+      "gameTime": "2 - 41:54",
+      "position": 2513603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The match is in progress with a free-kick being taken by the team in white and blue stripes."
+    },
+    {
+      "gameTime": "2 - 42:13",
+      "position": 2532603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The player in white and blue stripes takes a shot from outside the box which goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 42:24",
+      "position": 2543603,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The player is handed a substitution card by the fourth official."
+    },
+    {
+      "gameTime": "2 - 42:39",
+      "position": 2558603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 43:33",
+      "position": 2612603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white and blue striped jersey shoots the ball towards the goal, but the goalkeeper saves it."
+    },
+    {
+      "gameTime": "2 - 44:07",
+      "position": 2646603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a white and blue striped jersey dribbles past a defender in a black jersey and scores a goal."
+    },
+    {
+      "gameTime": "2 - 44:14",
+      "position": 2653603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a black jersey dribbles the ball forward while being closely marked by a player in a white and blue striped jersey."
+    },
+    {
+      "gameTime": "2 - 44:19",
+      "position": 2658603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The player in the white and blue jersey slides in to tackle the player in the black jersey, causing him to fall to the ground."
+    },
+    {
+      "gameTime": "2 - 44:32",
+      "position": 2671603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The referee blows the whistle and signals a free kick to the team in black jerseys after the foul."
+    },
+    {
+      "gameTime": "2 - 44:59",
+      "position": 2698603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a player in a white jersey makes contact with the ball carrier."
+    }
+  ]
+}

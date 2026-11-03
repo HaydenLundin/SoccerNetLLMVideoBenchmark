@@ -35,12 +35,19 @@ from scripts.test_temporal_calibration import (
     apply_temporal_shift_to_predictions
 )
 
-def compute_out_of_sample_m19(eval_set_path: Path, gt_dir: Path) -> Tuple[Dict, Dict, Dict]:
-    """Computes empirical 17x17 transition matrix and priors strictly on Games 1-19."""
+def compute_out_of_sample_markov(
+    eval_set_path: Path,
+    gt_dir: Path,
+    exclude_game_ids: List[int] = [0]
+) -> Tuple[Dict, Dict, Dict]:
+    """
+    Computes empirical 17x17 transition matrix and priors strictly on matches excluding `exclude_game_ids`.
+    Guarantees zero data leakage for out-of-sample rescoring.
+    """
     with open(eval_set_path, "r", encoding="utf-8") as f:
         eval_set = json.load(f)
 
-    games_19 = [g for g in eval_set["games"] if g["game_id"] != 0]
+    train_games = [g for g in eval_set["games"] if g["game_id"] not in exclude_game_ids]
 
     transitions_30s = defaultdict(Counter)
     backward_30s = defaultdict(Counter)
@@ -48,7 +55,7 @@ def compute_out_of_sample_m19(eval_set_path: Path, gt_dir: Path) -> Tuple[Dict, 
     total_events = 0
     total_h1_events = 0
 
-    for g in games_19:
+    for g in train_games:
         p = gt_dir / g["relative_path"] / "Labels-v2.json"
         with open(p, "r", encoding="utf-8") as gf:
             d = json.load(gf)
@@ -85,9 +92,21 @@ def compute_out_of_sample_m19(eval_set_path: Path, gt_dir: Path) -> Tuple[Dict, 
         tot = sum(srcs.values())
         prob_bwd[c_next] = {c_prev: cnt / tot for c_prev, cnt in srcs.items()}
 
-    h1_priors = {c: cnt / total_h1_events for c, cnt in h1_class_counts.items()}
+    h1_priors = {c: cnt / total_h1_events for c, cnt in h1_class_counts.items()} if total_h1_events > 0 else {}
 
     return prob_fwd, prob_bwd, h1_priors
+
+def compute_out_of_sample_m19(eval_set_path: Path, gt_dir: Path) -> Tuple[Dict, Dict, Dict]:
+    """Computes empirical 17x17 transition matrix and priors strictly on Games 1-19 (for Game 0 evaluation)."""
+    return compute_out_of_sample_markov(eval_set_path, gt_dir, exclude_game_ids=[0])
+
+def compute_out_of_sample_m15(eval_set_path: Path, gt_dir: Path) -> Tuple[Dict, Dict, Dict]:
+    """
+    Computes empirical 17x17 transition matrix and priors strictly on the 15 held-out non-MES-5 matches:
+    Games [4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19] (3,251 events).
+    Guarantees zero data leakage when evaluating the MES-5 subset.
+    """
+    return compute_out_of_sample_markov(eval_set_path, gt_dir, exclude_game_ids=[0, 1, 2, 3, 13])
 
 def load_with_commentary(model_dir: Path) -> List[Dict]:
     with open(model_dir / "Predictions-v2.json", "r", encoding="utf-8") as f1:

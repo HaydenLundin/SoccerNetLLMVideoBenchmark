@@ -1,0 +1,52 @@
+{
+  "config": "specialist_3m_m15",
+  "games": [
+    0
+  ],
+  "num_matches": 1,
+  "total_predictions": 394,
+  "total_ground_truth": 173,
+  "tight_average_mAP": 0.06732874968169086,
+  "loose_average_mAP": 0.15799552307058407,
+  "tight_per_class": {
+    "Penalty": 0.0,
+    "Kick-off": 0.006493506493506493,
+    "Goal": 0.0,
+    "Substitution": 0.022727272727272724,
+    "Offside": 0.0,
+    "Shots on target": 0.0,
+    "Shots off target": 0.0,
+    "Clearance": 0.0101010101010101,
+    "Ball out of play": 0.005808080808080807,
+    "Throw-in": 0.10687229437229437,
+    "Foul": 0.017207792207792207,
+    "Indirect free-kick": 0.0,
+    "Direct free-kick": 0.5,
+    "Corner": 0.14204545454545459,
+    "Yellow card": 0.33333333333333337,
+    "Red card": 0.0,
+    "Yellow->red card": 0.0
+  },
+  "loose_per_class": {
+    "Penalty": 0.0,
+    "Kick-off": 0.05194805194805196,
+    "Goal": 0.14807162534435267,
+    "Substitution": 0.2991735537190083,
+    "Offside": 0.0305325987144169,
+    "Shots on target": 0.0845270890725436,
+    "Shots off target": 0.27468464549804267,
+    "Clearance": 0.03337006427915518,
+    "Ball out of play": 0.19909536117564805,
+    "Throw-in": 0.15584415584415587,
+    "Foul": 0.13247151244477448,
+    "Indirect free-kick": 0.043388429752066124,
+    "Direct free-kick": 0.5,
+    "Corner": 0.3994834710743801,
+    "Yellow card": 0.3333333333333334,
+    "Red card": 0.0,
+    "Yellow->red card": 0.0
+  },
+  "oracle_ceiling_mAP": 1.0,
+  "active_class_count": 17,
+  "total_class_count": 17
+}
