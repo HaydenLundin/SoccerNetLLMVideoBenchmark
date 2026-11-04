@@ -1,0 +1,578 @@
+[
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A Liverpool player receives a pass in the attacking third and takes a shot that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box that hits the crossbar and bounces back into play.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A player in a red jersey takes a shot from outside the box, which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"A player in a white jersey is tackled by a player in a red jersey, resulting in a fall and a foul call.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee blows the whistle to stop play as a Tottenham player is attended to on the pitch.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:49\",\n    \"commentary\": \"The referee blows the whistle to restart play with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A medical staff member attends to a player in a white jersey who is bent over on the pitch.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:56\",\n    \"commentary\": \"A player in a red jersey is fouled by an opponent and falls to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"A Tottenham player attempts a shot from outside the box which is blocked by a Liverpool defender.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:11\",\n    \"commentary\": \"The ball deflects off the Liverpool defender and goes out of play to the left side of the pitch.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"A Tottenham player attempts a through ball which is intercepted by a Liverpool defender.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"Harry Kane attempts a shot from close range but is brought down by a Liverpool defender.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Harry Kane receives the ball and attempts to dribble past the Liverpool defender but is fouled, causing him to fall to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on Harry Kane after he is brought down by the Liverpool defender.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Tottenham Hotspur players celebrate after a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"A Tottenham player attempts a header but the ball is cleared by a Liverpool defender.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"A Tottenham player attempts a header but the ball is cleared by a Liverpool defender.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"A Liverpool player takes a free kick which is saved by the Tottenham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Tottenham Hotspur player #15 Dier is shown reacting to a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"Liverpool player #7 takes a corner kick from the corner flag.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:25\",\n    \"commentary\": \"Liverpool player #11 scores a goal after a corner kick.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:44\",\n    \"commentary\": \"A Tottenham player in white is shown reacting to a foul committed by a Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in full play with the score at 0-0.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"A direct free-kick is taken by a Liverpool player from the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"The free-kick is struck and the ball travels towards the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"The ball is played back into play after the free-kick.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:20\",\n    \"commentary\": \"A Liverpool player attempts a shot from outside the box which is saved by the Tottenham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.92,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:21\",\n    \"commentary\": \"The ball rebounds and is cleared away from the goal area.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.88,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"The ball goes out of play on the sideline.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:23\",\n    \"commentary\": \"A Liverpool player takes a throw-in from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A Liverpool player takes a throw-in from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:35\",\n    \"commentary\": \"A Liverpool player takes a throw-in from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:36\",\n    \"commentary\": \"A Liverpool player takes a throw-in from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:37\",\n    \"commentary\": \"A Liverpool player takes a throw-in",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:44\",\n    \"commentary\": \"A Tottenham player attempts a through ball which is intercepted by a Liverpool defender, resulting in a clearance.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_13_half_2_chunk_00.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"A Liverpool player shoots the ball towards the goal, but the Tottenham goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"Sadio Mane strikes the ball into the net to score for Liverpool.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:33\",\n    \"commentary\": \"A white team player shoots the ball into the net past the goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:52\",\n    \"commentary\": \"A white team player throws the ball from the sideline to restart play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"Sadio Mane strikes the ball into the net past the goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:25\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the Tottenham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"Tottenham players are in possession of the ball in the Liverpool half, passing it around the midfield area.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.6,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:47\",\n    \"commentary\": \"A Tottenham player in white makes a tackle on a Liverpool player in red, causing the ball to go out of play.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"A Liverpool player attempts a long pass forward which is intercepted by a Tottenham player.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.6,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"Steven Gerrard takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"Steven Gerrard's free-kick is cleared by the Tottenham defense.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A Liverpool player is shown on the sideline preparing to throw the ball into play.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"A Tottenham player attempts a shot from outside the box which is blocked by the Liverpool defense.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"Tottenham Hotspur player Christian Eriksen takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:25\",\n    \"commentary\": \"Tottenham Hotspur player Christian Eriksen scores a goal for his team.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"A Liverpool player shoots the ball towards the goal, but the Tottenham goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"The referee blows the whistle and shows a yellow card to a Liverpool player after a foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A free-kick is taken by Tottenham, but the ball hits the crossbar and bounces out.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.92,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Lamine Yamina is shown preparing to take a free-kick.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"Lamine Yamina takes the free-kick and scores a goal for Tottenham.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Lamela takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"Alderweir heads the ball into the net to score a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_13_half_2_chunk_01.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a player in red makes contact with the ball carrier.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:42\",\n    \"commentary\": \"A player in a white jersey takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"A Liverpool player attempts a long pass forward which is intercepted by a Tottenham defender.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.75,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"Liverpool player James Milner takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"A Tottenham player challenges Liverpool's Firmino, resulting in a foul and a free-kick.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on the Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on the Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00:00\",\n    \"commentary\": \"The match is in progress with the ball in play.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A Tottenham Hotspur player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"A Tottenham Hotspur player shoots the ball into the net to score a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"Tottenham Hotspur player Eriksen strikes the ball into the net past the Liverpool goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"Tottenham Hotspur player Dele Alli shoots the ball into the net past the Liverpool goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"Tottenham player shoots the ball into the net to score a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:44\",\n    \"commentary\": \"Tottenham player takes a free-kick from the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The ball is kicked into play and moves towards the goal.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Tottenham player challenges a Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_13_half_2_chunk_02.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A Liverpool player in red shoots the ball towards the goal, but the shot is blocked by the Tottenham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"A Tottenham player takes a throw-in from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"The referee blows the whistle and shows a yellow card to a Liverpool player.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Tottenham player makes contact with a Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:08\",\n    \"commentary\": \"The referee shows a yellow card to the Tottenham player involved in the foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"A Tottenham player attempts a long pass forward which is intercepted by a Liverpool defender.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.75,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"A Liverpool player attempts a long pass forward which is intercepted by a Tottenham defender.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.75,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with the kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:20\",\n    \"commentary\": \"A Tottenham player attempts a long pass forward but is challenged by a Liverpool defender, resulting in a foul.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with the kick-off as the ball is kicked from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:59\",\n    \"commentary\": \"A player in red is seen lying on the ground after a foul was committed.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"The goalkeeper kicks the ball from the corner arc to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"A Tottenham player is substituted on the bench.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"A Tottenham player shoots the ball into the net past the Liverpool goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"A Tottenham player is substituted on the field.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A Tottenham player with blonde hair is shown jogging on the pitch.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"Tottenham player #25 Onomah runs towards the corner flag to take a corner kick.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"Liverpool player #11 takes a direct free-kick from the edge of the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_13_half_2_chunk_03.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"A Tottenham Hotspur player heads the ball towards the goal, but the Liverpool goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"A Tottenham player takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"A Tottenham Hotspur player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:43\",\n    \"commentary\": \"A Tottenham Hotspur player throws the ball back onto the field of play from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A Tottenham player in a white jersey is seen dribbling the ball down the left wing.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"The referee blows the whistle and signals a substitution as the player in red with number 15 (Sturridge) enters the field.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"A Tottenham player attempts a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.8,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A Tottenham player takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"Tottenham players clear the ball from the penalty area after a corner kick.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:36\",\n    \"commentary\": \"A Tottenham player shoots the ball towards the goal, but the Liverpool goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the Tottenham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with the kick-off.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"A Tottenham Hotspur player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"A Liverpool player shoots the ball into the net from close range.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00:00\",\n    \"commentary\": \"The match begins with the kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:38\",\n    \"commentary\": \"A Tottenham player shoots the ball towards the goal, but the Liverpool goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:52\",\n    \"commentary\": \"A Tottenham player takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"A Tottenham player attempts a shot from outside the box which is blocked by a Liverpool defender.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"A Liverpool player takes a corner kick from the left side.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"The referee blows the whistle and waves a yellow card to signal a foul.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A Tottenham Hotspur player is shown on the bench before the match begins.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A Liverpool player attempts to dribble past a Tottenham defender near the sideline but is stopped by the defender's tackle.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_13_half_2_chunk_04.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul to the referee.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 5,
+    "filename": "game_13_half_2_chunk_05.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 54.8s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in the first half, with the ball in play as players from both teams are positioned on the pitch.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 5,
+    "filename": "game_13_half_2_chunk_05.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 54.8s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Jurgen Klopp and Sadio Mane are standing on the pitch, with Klopp gesturing and speaking to Mane.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.0,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  }
+]

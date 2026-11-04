@@ -1,0 +1,803 @@
+{
+  "UrlLocal": "england_epl/2016-2017/2016-08-27 - 14-30 Tottenham 1 - 1 Liverpool/",
+  "predictions": [
+    {
+      "gameTime": "2 - 00:00",
+      "position": 0,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 01:15",
+      "position": 75000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player receives a pass in the attacking third and takes a shot that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a red jersey takes a shot from outside the box, which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 01:48",
+      "position": 108000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a white jersey is tackled by a player in a red jersey, resulting in a fall and a foul call."
+    },
+    {
+      "gameTime": "2 - 02:15",
+      "position": 135000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle to stop play as a Tottenham player is attended to on the pitch."
+    },
+    {
+      "gameTime": "2 - 03:00",
+      "position": 180000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A medical staff member attends to a player in a white jersey who is bent over on the pitch."
+    },
+    {
+      "gameTime": "2 - 03:04",
+      "position": 184000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The referee blows the whistle to restart play with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 03:55",
+      "position": 235000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham player attempts a shot from outside the box which is blocked by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 03:56",
+      "position": 236000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a red jersey is fouled by an opponent and falls to the ground."
+    },
+    {
+      "gameTime": "2 - 03:56",
+      "position": 236000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The ball deflects off the Liverpool defender and goes out of play to the left side of the pitch."
+    },
+    {
+      "gameTime": "2 - 04:49",
+      "position": 289000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Tottenham player attempts a through ball which is intercepted by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 05:15",
+      "position": 315000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Harry Kane receives the ball and attempts to dribble past the Liverpool defender but is fouled, causing him to fall to the ground."
+    },
+    {
+      "gameTime": "2 - 05:20",
+      "position": 320000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Harry Kane attempts a shot from close range but is brought down by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 06:00",
+      "position": 360000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Tottenham Hotspur players celebrate after a goal."
+    },
+    {
+      "gameTime": "2 - 06:12",
+      "position": 372000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Tottenham player attempts a header but the ball is cleared by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 06:18",
+      "position": 378000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Tottenham player attempts a header but the ball is cleared by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 06:40",
+      "position": 400000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player takes a free kick which is saved by the Tottenham goalkeeper."
+    },
+    {
+      "gameTime": "2 - 06:57",
+      "position": 417000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Liverpool player #7 takes a corner kick from the corner flag."
+    },
+    {
+      "gameTime": "2 - 07:10",
+      "position": 430000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Liverpool player #11 scores a goal after a corner kick."
+    },
+    {
+      "gameTime": "2 - 07:30",
+      "position": 450000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 08:14",
+      "position": 494000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Tottenham player in white is shown reacting to a foul committed by a Liverpool player."
+    },
+    {
+      "gameTime": "2 - 08:24",
+      "position": 504000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A direct free-kick is taken by a Liverpool player from the penalty area."
+    },
+    {
+      "gameTime": "2 - 08:25",
+      "position": 505000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The free-kick is struck and the ball travels towards the goal."
+    },
+    {
+      "gameTime": "2 - 08:30",
+      "position": 510000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The ball is played back into play after the free-kick."
+    },
+    {
+      "gameTime": "2 - 08:35",
+      "position": 515000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player attempts a shot from outside the box which is saved by the Tottenham goalkeeper."
+    },
+    {
+      "gameTime": "2 - 08:36",
+      "position": 516000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The ball rebounds and is cleared away from the goal area."
+    },
+    {
+      "gameTime": "2 - 08:37",
+      "position": 517000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The ball goes out of play on the sideline."
+    },
+    {
+      "gameTime": "2 - 08:38",
+      "position": 518000,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Liverpool player takes a throw-in from the sideline."
+    },
+    {
+      "gameTime": "2 - 08:45",
+      "position": 525000,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Liverpool player takes a throw-in from the sideline."
+    },
+    {
+      "gameTime": "2 - 08:50",
+      "position": 530000,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Liverpool player takes a throw-in from the sideline."
+    },
+    {
+      "gameTime": "2 - 09:44",
+      "position": 584000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Tottenham player attempts a through ball which is intercepted by a Liverpool defender, resulting in a clearance."
+    },
+    {
+      "gameTime": "2 - 10:13",
+      "position": 613000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player shoots the ball towards the goal, but the Tottenham goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 10:15",
+      "position": 614523,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Sadio Mane strikes the ball into the net to score for Liverpool."
+    },
+    {
+      "gameTime": "2 - 11:03",
+      "position": 662523,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A white team player shoots the ball into the net past the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 11:22",
+      "position": 681523,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A white team player throws the ball from the sideline to restart play."
+    },
+    {
+      "gameTime": "2 - 11:53",
+      "position": 712523,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Sadio Mane strikes the ball into the net past the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 12:25",
+      "position": 744523,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player takes a shot from outside the box which is saved by the Tottenham goalkeeper."
+    },
+    {
+      "gameTime": "2 - 12:45",
+      "position": 764523,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 13:32",
+      "position": 811523,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A Tottenham player in white makes a tackle on a Liverpool player in red, causing the ball to go out of play."
+    },
+    {
+      "gameTime": "2 - 14:15",
+      "position": 854523,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 14:16",
+      "position": 855523,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Liverpool player attempts a long pass forward which is intercepted by a Tottenham player."
+    },
+    {
+      "gameTime": "2 - 14:30",
+      "position": 869523,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Steven Gerrard takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 14:33",
+      "position": 872523,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Steven Gerrard's free-kick is cleared by the Tottenham defense."
+    },
+    {
+      "gameTime": "2 - 15:38",
+      "position": 937523,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Liverpool player is shown on the sideline preparing to throw the ball into play."
+    },
+    {
+      "gameTime": "2 - 15:45",
+      "position": 944523,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 16:30",
+      "position": 989523,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham player attempts a shot from outside the box which is blocked by the Liverpool defense."
+    },
+    {
+      "gameTime": "2 - 16:32",
+      "position": 991523,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Tottenham Hotspur player Christian Eriksen takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 16:55",
+      "position": 1014523,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Tottenham Hotspur player Christian Eriksen scores a goal for his team."
+    },
+    {
+      "gameTime": "2 - 17:22",
+      "position": 1041523,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player shoots the ball towards the goal, but the Tottenham goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 17:32",
+      "position": 1051523,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee blows the whistle and shows a yellow card to a Liverpool player after a foul."
+    },
+    {
+      "gameTime": "2 - 17:53",
+      "position": 1072523,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A free-kick is taken by Tottenham, but the ball hits the crossbar and bounces out."
+    },
+    {
+      "gameTime": "2 - 17:60",
+      "position": 1079523,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Lamine Yamina is shown preparing to take a free-kick."
+    },
+    {
+      "gameTime": "2 - 18:30",
+      "position": 1109523,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Lamine Yamina takes the free-kick and scores a goal for Tottenham."
+    },
+    {
+      "gameTime": "2 - 18:45",
+      "position": 1124523,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Lamela takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 19:39",
+      "position": 1178523,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a player in red makes contact with the ball carrier."
+    },
+    {
+      "gameTime": "2 - 20:10",
+      "position": 1210083,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 20:13",
+      "position": 1213083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 21:39",
+      "position": 1299083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Liverpool player attempts a long pass forward which is intercepted by a Tottenham defender."
+    },
+    {
+      "gameTime": "2 - 21:43",
+      "position": 1303083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 22:12",
+      "position": 1332083,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Liverpool player James Milner takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 22:31",
+      "position": 1351083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Tottenham player challenges Liverpool's Firmino, resulting in a foul and a free-kick."
+    },
+    {
+      "gameTime": "2 - 23:15",
+      "position": 1395083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the Liverpool player."
+    },
+    {
+      "gameTime": "2 - 23:20",
+      "position": 1400083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the Liverpool player."
+    },
+    {
+      "gameTime": "2 - 23:58",
+      "position": 1438083,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The match is in progress with the ball in play."
+    },
+    {
+      "gameTime": "2 - 24:43",
+      "position": 1483083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 26:16",
+      "position": 1576083,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham Hotspur player takes a shot from outside the box which is saved by the Liverpool goalkeeper."
+    },
+    {
+      "gameTime": "2 - 26:18",
+      "position": 1578083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Tottenham Hotspur player shoots the ball into the net to score a goal."
+    },
+    {
+      "gameTime": "2 - 27:06",
+      "position": 1626083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Tottenham player shoots the ball into the net to score a goal."
+    },
+    {
+      "gameTime": "2 - 27:42",
+      "position": 1662083,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Tottenham player takes a free-kick from the penalty area."
+    },
+    {
+      "gameTime": "2 - 27:43",
+      "position": 1663083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 28:47",
+      "position": 1727083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a Tottenham player challenges a Liverpool player."
+    },
+    {
+      "gameTime": "2 - 29:13",
+      "position": 1753083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 29:52",
+      "position": 1791603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player in red shoots the ball towards the goal, but the shot is blocked by the Tottenham goalkeeper."
+    },
+    {
+      "gameTime": "2 - 29:59",
+      "position": 1798603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 30:49",
+      "position": 1848603,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Tottenham player takes a throw-in from the sideline."
+    },
+    {
+      "gameTime": "2 - 30:49",
+      "position": 1848603,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee blows the whistle and shows a yellow card to a Liverpool player."
+    },
+    {
+      "gameTime": "2 - 31:29",
+      "position": 1888603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a Tottenham player makes contact with a Liverpool player."
+    },
+    {
+      "gameTime": "2 - 31:37",
+      "position": 1896603,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee shows a yellow card to the Tottenham player involved in the foul."
+    },
+    {
+      "gameTime": "2 - 32:23",
+      "position": 1942603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Tottenham player attempts a long pass forward which is intercepted by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 32:59",
+      "position": 1978603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with the kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 33:04",
+      "position": 1983603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Liverpool player attempts a long pass forward which is intercepted by a Tottenham defender."
+    },
+    {
+      "gameTime": "2 - 33:19",
+      "position": 1998603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Tottenham player attempts a long pass forward but is challenged by a Liverpool defender, resulting in a foul."
+    },
+    {
+      "gameTime": "2 - 34:41",
+      "position": 2080603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 34:43",
+      "position": 2082603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in red is seen lying on the ground after a foul was committed."
+    },
+    {
+      "gameTime": "2 - 35:14",
+      "position": 2113603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 35:29",
+      "position": 2128603,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A Tottenham player is substituted on the bench."
+    },
+    {
+      "gameTime": "2 - 36:49",
+      "position": 2208603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player takes a shot from outside the box which goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 36:52",
+      "position": 2211603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Tottenham player shoots the ball into the net past the Liverpool goalkeeper."
+    },
+    {
+      "gameTime": "2 - 37:29",
+      "position": 2248603,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A Tottenham player with blonde hair is shown jogging on the pitch."
+    },
+    {
+      "gameTime": "2 - 38:42",
+      "position": 2321603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Tottenham player #25 Onomah runs towards the corner flag to take a corner kick."
+    },
+    {
+      "gameTime": "2 - 39:04",
+      "position": 2343603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Liverpool player #11 takes a direct free-kick from the edge of the penalty area."
+    },
+    {
+      "gameTime": "2 - 39:18",
+      "position": 2357603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham Hotspur player heads the ball towards the goal, but the Liverpool goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 38:54",
+      "position": 2334483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 40:33",
+      "position": 2433483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham Hotspur player takes a shot from outside the box which is saved by the Liverpool goalkeeper."
+    },
+    {
+      "gameTime": "2 - 41:07",
+      "position": 2467483,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Tottenham Hotspur player throws the ball back onto the field of play from the sideline."
+    },
+    {
+      "gameTime": "2 - 41:09",
+      "position": 2469483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "A Tottenham player in a white jersey is seen dribbling the ball down the left wing."
+    },
+    {
+      "gameTime": "2 - 42:39",
+      "position": 2559483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 42:40",
+      "position": 2560483,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The referee blows the whistle and signals a substitution as the player in red with number 15 (Sturridge) enters the field."
+    },
+    {
+      "gameTime": "2 - 43:24",
+      "position": 2604483,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A Tottenham player takes a direct free-kick from the penalty spot."
+    },
+    {
+      "gameTime": "2 - 43:25",
+      "position": 2605483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham player attempts a shot from outside the box which is saved by the Liverpool goalkeeper."
+    },
+    {
+      "gameTime": "2 - 43:54",
+      "position": 2634483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Tottenham players clear the ball from the penalty area after a corner kick."
+    },
+    {
+      "gameTime": "2 - 44:45",
+      "position": 2685483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham player shoots the ball towards the goal, but the Liverpool goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 44:54",
+      "position": 2694483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with the kick-off."
+    },
+    {
+      "gameTime": "2 - 44:57",
+      "position": 2697483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player takes a shot from outside the box which is saved by the Tottenham goalkeeper."
+    },
+    {
+      "gameTime": "2 - 45:11",
+      "position": 2711483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player shoots the ball into the net from close range."
+    },
+    {
+      "gameTime": "2 - 46:17",
+      "position": 2777483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham player shoots the ball towards the goal, but the Liverpool goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 46:31",
+      "position": 2791483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Tottenham player attempts a shot from outside the box which is blocked by a Liverpool defender."
+    },
+    {
+      "gameTime": "2 - 46:42",
+      "position": 2802483,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A Liverpool player takes a corner kick from the left side."
+    },
+    {
+      "gameTime": "2 - 47:09",
+      "position": 2829483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 47:18",
+      "position": 2838483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and waves a yellow card to signal a foul."
+    },
+    {
+      "gameTime": "2 - 48:32",
+      "position": 2912483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Liverpool player attempts to dribble past a Tottenham defender near the sideline but is stopped by the defender's tackle."
+    },
+    {
+      "gameTime": "2 - 48:39",
+      "position": 2919483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul to the referee."
+    },
+    {
+      "gameTime": "2 - 48:43",
+      "position": 2923243,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is in the first half, with the ball in play as players from both teams are positioned on the pitch."
+    },
+    {
+      "gameTime": "2 - 49:28",
+      "position": 2968243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Jurgen Klopp and Sadio Mane are standing on the pitch, with Klopp gesturing and speaking to Mane."
+    }
+  ]
+}

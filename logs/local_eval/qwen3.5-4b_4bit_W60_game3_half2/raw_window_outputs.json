@@ -1,0 +1,594 @@
+[
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"The ball is placed on the penalty spot for a direct free-kick.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:23\",\n    \"commentary\": \"The player takes the direct free-kick, shooting the ball towards the goal.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:32\",\n    \"commentary\": \"A player in red shoots the ball towards the goal, but the goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a player in red makes contact with a player in light blue.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The video begins with a close-up of the Liverpool manager, J\u00fcrgen Klopp, on the bench before cutting to the match action.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:56\",\n    \"commentary\": \"A Liverpool player attempts a long-range shot from outside the box, which is blocked by the West Ham defender and goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:32\",\n    \"commentary\": \"A player in red runs with the ball down the left wing.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:33\",\n    \"commentary\": \"The player in red shoots the ball towards the goal, but the goalkeeper saves it.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"The goalkeeper attempts to clear the ball but is fouled by a Liverpool player as the ball goes out of play.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:43\",\n    \"commentary\": \"A shot from outside the box goes wide of the goal into the crowd.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"The ball is kicked towards the goal and the goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A player in red attempts a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:23\",\n    \"commentary\": \"A West Ham player attempts a tackle on a Liverpool player in the midfield, resulting in a foul.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"The referee blows the whistle and shows a yellow card to Liverpool's Coutinho for the foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Liverpool player Philippe Coutinho reacts with frustration after the match ends.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:47\",\n    \"commentary\": \"A wide view shows the final moments of play as the ball crosses the goal line into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"A player in red shoots the ball towards the goal, but the goalkeeper catches it.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A player in a red kit takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:23\",\n    \"commentary\": \"A player in a red kit takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_3_half_2_chunk_00.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A player in a red jersey receives a pass in the midfield and takes a shot that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:57\",\n    \"commentary\": \"A player in a red jersey receives the ball near the penalty area and shoots, scoring a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with the ball in play.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:01\",\n    \"commentary\": \"The ball is out of play and the referee is signaling a throw-in.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The ball is in play after the throw-in.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"A player in red attempts a shot on goal which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"The ball is in play after the save.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"A player in red attempts a shot on goal which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:06\",\n    \"commentary\": \"The ball is in play after the save.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"A player in red attempts a shot on goal which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"The ball is in play after the save.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"A player in red attempts a shot on goal which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"The ball is in play after the save.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:11\",\n    \"commentary\": \"A player in red attempts a shot on goal which is",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"A Liverpool player in red runs onto the ball and shoots, but the shot goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on a West Ham player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A West Ham player attempts to dribble past a Liverpool defender but is tackled and falls to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.92,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"A West Ham player in light blue is tackled by a Liverpool player in red, causing the West Ham player to fall to the ground with the ball.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A West Ham player in light blue is fouled by a Liverpool player in red, resulting in a fall to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:06\",\n    \"commentary\": \"A West Ham player in light blue is fouled by a Liverpool player in red, causing the player in blue to fall to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"A Liverpool player in red takes a shot from outside the box which is saved by the West Ham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"A Liverpool player in red dribbles the ball past a West Ham defender in light blue.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:32\",\n    \"commentary\": \"A West Ham player in light blue falls to the ground clutching his leg after a challenge.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on the player in light blue who is on the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"Referee blows the whistle to signal a substitution as the player in the red jersey walks off the pitch.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"The referee signals the incoming player to enter the game as the clock updates to 00:30.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a player in a light blue jersey is attended to by medical staff.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:31\",\n    \"commentary\": \"A player in a red jersey receives a pass in the midfield and attempts to dribble forward.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.0,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the Wigan goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"A Wigan player takes a shot from the edge of the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the West Ham goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"West Ham player Tomki\u0107 receives a pass and attempts a long-range shot that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:25\",\n    \"commentary\": \"A Liverpool player shoots the ball towards the goal, but the West Ham goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:42\",\n    \"commentary\": \"Steven Gerrard takes a direct free-kick from the penalty spot, and the ball goes into the net for a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_3_half_2_chunk_01.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A Liverpool player takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"A player in red shoots the ball towards the goal, but the goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A player in light blue shoots the ball into the net from outside the penalty area.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"The ball is crossed into the penalty area from the corner arc.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"A player in red shoots the ball towards the goal, but the goalkeeper saves it.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on Liverpool player Lovren.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A replay shows Liverpool player Lovren committing a foul on West Ham player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"replay\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as Liverpool's Lovren makes contact with West Ham's Ogbonna.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"West Ham's Ogbonna restarts play from the center circle with a kick-off.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A Liverpool player in red makes a sliding tackle on a West Ham player in light blue, causing the defender to fall to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"A West Ham player in a light blue kit is on the ground after a challenge, and the referee blows the whistle to stop play.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"The referee holds up a yellow card to a West Ham player who is standing nearby.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"A Liverpool player commits a foul on a West Ham player in the midfield area.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"A West Ham player strikes the ball into the net past the Liverpool goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"West Ham player Kouyate takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"A West Ham player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"A Liverpool player in red makes a tackle on a West Ham player in light blue, causing the latter to fall to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:47\",\n    \"commentary\": \"A West Ham player in light blue shoots the ball towards the goal, but the Liverpool goalkeeper in green makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A player in a red jersey is running with the ball down the wing.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The ball is crossed into the box and a player in red attempts a shot which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a player in red is on the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"A player in red is preparing to take a free kick from the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"A player in red shoots the ball towards the goal, but the goalkeeper saves it.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_3_half_2_chunk_02.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.2s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"A Liverpool player strikes the ball into the net past the goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"A West Ham player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"A West Ham player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The video begins with a close-up of Liverpool's goalkeeper and West Ham players before cutting to a wide view of the pitch.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"West Ham player crosses the ball into the penalty area, and the referee signals a corner kick.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:20\",\n    \"commentary\": \"Liverpool player takes the corner kick, but the ball is cleared by the West Ham defense.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:49\",\n    \"commentary\": \"Liverpool player takes a shot from outside the box which goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.92,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with the score at 2-2.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:14\",\n    \"commentary\": \"A West Ham player takes a corner kick from the corner flag.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:33\",\n    \"commentary\": \"A West Ham player shoots the ball towards the goal.\",\n    \"label\": \"Shots on target\",\n    \"confidence\": 0.92,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A Liverpool player is shown walking towards the bench area while a coach stands nearby.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"The referee blows the whistle to signal the start of play after a substitution.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"The referee blows the whistle and raises a red card to show a West Ham player a red card.\",\n    \"label\": \"Red card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul to the West Ham players who are gathered in a huddle.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"A West Ham player in a light blue jersey attempts to dribble the ball forward but is challenged by a Liverpool player in red.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.88,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"A West Ham United player is on the ground after a foul, while a Liverpool player in red runs past.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"A Liverpool player is shown on the ground after the foul, while a West Ham player gestures with his hands.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"A West Ham player is shown arguing with the referee after the foul.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"The referee blows the whistle to restart the match from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is about to begin as the referee signals the start of play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:43\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on Liverpool player Milner.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"The referee blows the whistle and signals a foul to the Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"The referee shows a yellow card to the West Ham player.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"The referee shows a red card to the West Ham player.\",\n    \"label\": \"Red card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00:02\",\n    \"commentary\": \"Referee shows a red card to West Ham player #28, Manuel Lanzini, who is then substituted off.\",\n    \"label\": \"Red card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:44\",\n    \"commentary\": \"Referee blows the whistle and signals a yellow card to Liverpool player #14.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:20\",\n    \"commentary\": \"West Ham player shoots the ball into the net past the Liverpool goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"Liverpool player takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00:00\",\n    \"commentary\": \"Liverpool player number 33 is shown standing on the pitch before the restart.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:20\",\n    \"commentary\": \"Liverpool player number 7 takes a direct free-kick from the penalty area and shoots the ball into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:38\",\n    \"commentary\": \"Liverpool player number 7 takes a direct free-kick from the penalty area and shoots the ball into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:58\",\n    \"commentary\": \"The Liverpool goalkeeper picks up the ball and prepares to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_3_half_2_chunk_03.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.2s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"Pau Gasol receives the ball in the penalty area and takes a shot that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:35\",\n    \"commentary\": \"The referee blows the whistle and shows a yellow card to the Liverpool player.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"A player in a light blue jersey is tackled by a player in a red jersey, resulting in a fall to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"The referee blows the whistle and signals a foul after the player in light blue is on the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with the score at 2-2.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"A West Ham United player is attended to on the pitch by medical staff.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A West Ham player takes a shot from outside the box which is saved by the Liverpool goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:37\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Liverpool player challenges a West Ham player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"A West Ham player strikes the ball towards the goal, but the Liverpool goalkeeper catches it cleanly.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"A West Ham player shoots the ball into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:32\",\n    \"commentary\": \"A Liverpool player shoots the ball towards the goal, but the West Ham goalkeeper catches it.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:59\",\n    \"commentary\": \"A Manchester City player attempts a long-range shot from outside the box, which is blocked by a Liverpool defender.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00:00\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a West Ham player makes contact with a Liverpool player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:00:48\",\n    \"commentary\": \"A West Ham player scores a goal, and his teammates rush to celebrate with him.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"West Ham player runs towards the corner flag to collect the ball.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:36\",\n    \"commentary\": \"West Ham player shoots the ball towards the goal, but the Liverpool goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The ball is in the net as the goalkeeper dives to make a save.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:06\",\n    \"commentary\": \"A West Ham player attempts to dribble past a Liverpool defender near the penalty area.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.6,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"A West Ham player takes a direct free-kick from the penalty spot.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"A Liverpool player is shown walking on the pitch following the free-kick.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_3_half_2_chunk_04.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"A player in a red jersey strikes the ball towards the goal, resulting in a shot that goes wide of the left post.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 5,
+    "filename": "game_3_half_2_chunk_05.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 5,
+    "filename": "game_3_half_2_chunk_05.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"A player in a red jersey takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"A player in a red jersey throws the ball into play from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 5,
+    "filename": "game_3_half_2_chunk_05.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:35\",\n    \"commentary\": \"Referee blows the whistle and signals that Luis Sarmiento is off the pitch.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"Referee signals that James Milner is on the pitch.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 5,
+    "filename": "game_3_half_2_chunk_05.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 167.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"A Liverpool player attempts a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"A Liverpool player takes a shot from the edge of the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  }
+]

@@ -1,0 +1,538 @@
+[
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"A Manchester City player attempts a shot from outside the box but the ball hits the post and bounces out.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:43\",\n    \"commentary\": \"A Manchester City player takes a free-kick from the edge of the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A Manchester City player attempts a shot from outside the box which is blocked by a Chelsea defender.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:42\",\n    \"commentary\": \"The referee shows a yellow card to a Chelsea player for a foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:07\",\n    \"commentary\": \"Manchester City player attempts a tackle but is fouled by Chelsea's Branislav Ivanovic.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"Referee blows the whistle and shows a yellow card to Branislav Ivanovic for the foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:42\",\n    \"commentary\": \"Chelsea player Ramires scores a goal for his team.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"The referee blows the whistle and signals a foul.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The fourth official raises the yellow card to signal a caution to a player.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:51\",\n    \"commentary\": \"A player in a light blue jersey attempts a shot from outside the box which is blocked by a defender.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.88,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with the score at 0-0.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"Ramy Bensebaini scores a goal for Chelsea as the ball crosses the goal line.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"Ramy Bensebaini scores another goal for Chelsea.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"Yaya Toure is fouled by a Chelsea player while attempting to dribble past him.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:47\",\n    \"commentary\": \"The referee blows the whistle and shows a yellow card to Yaya Toure for the foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:20\",\n    \"commentary\": \"Yaya Toure is fouled by a Chelsea player as they challenge for the ball near the sideline.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:52\",\n    \"commentary\": \"Manchester City players set up for a free kick in the Chelsea half.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on the Chelsea player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"The ball crosses the goal line into the net as the Chelsea player shoots.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in the 3rd minute of the first half as the teams are positioned for a free kick.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:35\",\n    \"commentary\": \"The free kick is taken and the ball is played into the penalty area.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"A Chelsea player attempts a shot from the edge of the box, but the ball hits the post and bounces out.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Manchester City player is tackled in the corner area.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 0,
+    "filename": "game_1_half_2_chunk_00.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with Chelsea in possession as they build an attack.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"Chelsea player Hazard takes a corner kick from the left side.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a Chelsea player makes contact with a Manchester City player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"A Manchester City player takes a throw-in from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:35\",\n    \"commentary\": \"A Manchester City player scores a goal as the ball crosses the goal line into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A player in a blue jersey takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with the kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"The goalkeeper kicks the ball from the penalty spot to restart play after a stoppage.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A player in a light blue jersey takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:25\",\n    \"commentary\": \"A Manchester City player attempts a through ball which is intercepted by a Chelsea defender, resulting in a clearance.\",\n    \"label\": \"Clearance\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:48\",\n    \"commentary\": \"A defender in a dark blue jersey makes a sliding tackle on an opponent in a light blue jersey, resulting in a fall.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:43\",\n    \"commentary\": \"A player in a light blue jersey takes a shot from outside the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:55\",\n    \"commentary\": \"A Manchester City player attempts a shot from outside the box which is blocked by Chelsea defenders.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with a blue team player (Manevic) gesturing to the referee while the coach looks on.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:28\",\n    \"commentary\": \"The referee blows the whistle and signals a substitution as Juan Cuadrado runs onto the pitch to replace Ramires.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:10\",\n    \"commentary\": \"A player in a blue jersey throws the ball into play from the sideline.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:36\",\n    \"commentary\": \"A player in a light blue jersey scores a goal as the ball enters the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 1,
+    "filename": "game_1_half_2_chunk_01.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:02\",\n    \"commentary\": \"The ball is struck by a player in a light blue jersey and enters the net past the goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"A Manchester City player takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"The referee blows the whistle to signal a substitution, with Jesus Navas coming off and Samir Nasri coming on.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:09\",\n    \"commentary\": \"The goalkeeper kicks the ball from the center circle to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"A player in a white jersey attempts a long-range shot that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with the kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:44\",\n    \"commentary\": \"The goalkeeper kicks the ball from the center circle to restart play after the previous stoppage.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:46\",\n    \"commentary\": \"A Manchester City player attempts a shot from outside the box which is blocked by Chelsea defenders.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:06\",\n    \"commentary\": \"A Manchester City player attempts a through ball which is intercepted by a Chelsea defender.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:39\",\n    \"commentary\": \"A Manchester City player attempts a shot from outside the box which is blocked by Chelsea defenders.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:58\",\n    \"commentary\": \"A Chelsea player takes a shot from the edge of the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:14\",\n    \"commentary\": \"A Chelsea player attempts a shot from outside the box which is blocked by a Manchester City defender.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:26\",\n    \"commentary\": \"A Chelsea player takes a shot from inside the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A Chelsea player attempts to dribble past a Manchester City defender near the sideline but loses possession.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.65,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:22\",\n    \"commentary\": \"The goalkeeper kicks the ball from the center circle to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:13\",\n    \"commentary\": \"The ball is crossed into the penalty area from the corner arc.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:44\",\n    \"commentary\": \"The referee blows the whistle and signals a foul on the Chelsea player.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in the first minute of play, with the ball in play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with the kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 2,
+    "filename": "game_1_half_2_chunk_02.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:50\",\n    \"commentary\": \"The ball is crossed into the box and a player in a light blue jersey shoots it towards the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match begins with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"A player in a blue jersey takes a shot from outside the box which goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:57\",\n    \"commentary\": \"The ball crosses the goal line into the net as the goalkeeper dives to his right but fails to reach it.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in the first half with the score at 1-1.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:03\",\n    \"commentary\": \"Raheem Sterling receives the ball and takes a shot from outside the box which goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"The referee blows the whistle to signal a foul by Chelsea player N'Golo Kant\u00e9 on Raheem Sterling.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"The referee signals a free kick for Manchester City.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"Raheem Sterling takes a shot from the edge of the box that hits the post and bounces out.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:13\",\n    \"commentary\": \"The ball bounces out from the goal area after the shot.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:14\",\n    \"commentary\": \"The referee signals a free kick for Manchester City.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"Raheem Sterling takes a shot from the edge of the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"The ball bounces out from the goal area after the shot.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.85,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"The referee signals a free kick for Manchester City.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"Raheem Sterling takes a shot from the edge of the box that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\":",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"A Manchester City player takes a corner kick from the corner flag.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:45\",\n    \"commentary\": \"A Manchester City player shoots the ball into the net past the Chelsea goalkeeper.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The ball is crossed into the penalty area and the goalkeeper catches it.\",\n    \"label\": \"Corner\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"A player in a light blue jersey takes a shot from outside the box which is saved by the goalkeeper.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"A player in a light blue jersey shoots the ball into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The goalkeeper in yellow makes a diving save to his left, pushing the ball away from the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:05\",\n    \"commentary\": \"The ball crosses the goal line into the net as the goalkeeper is on the ground, resulting in a goal for the light blue team.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:12\",\n    \"commentary\": \"Eden Hazard of Chelsea is fouled by a Manchester City defender in the midfield.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"The referee shows a yellow card to Eden Hazard for the foul.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:27\",\n    \"commentary\": \"Yaya Toure of Manchester City is fouled by a Chelsea defender near the sideline.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"Eden Hazard takes a free-kick from outside the box.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:49\",\n    \"commentary\": \"Eden Hazard's free-kick goes wide of the goal and into the crowd.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"A Manchester City player shoots the ball into the net for a goal.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 510.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:25\",\n    \"commentary\": \"A Chelsea player shoots the ball towards the goal, but the Manchester City goalkeeper makes a save.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:40\",\n    \"commentary\": \"A Manchester City player is substituted on the field.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 11,
+    "slice": "495.0s - 555.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The referee signals a substitution, displaying a board to swap Sergio Ag\u00fcero for Wilfried Bony.\",\n    \"label\": \"Substitution\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"Sergio Ag\u00fcero shoots the ball into the net, scoring a goal for Manchester City.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 12,
+    "slice": "540.0s - 600.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:17\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as the ball goes out of play.\",\n    \"label\": \"Ball out of play\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 3,
+    "filename": "game_1_half_2_chunk_03.mp4",
+    "window_index": 13,
+    "slice": "585.0s - 615.1s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:15\",\n    \"commentary\": \"The ball crosses the goal line into the net as the goalkeeper fails to make a save.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 0,
+    "slice": "0.0s - 60.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:18\",\n    \"commentary\": \"A Manchester City player receives a pass and shoots the ball into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"A graphic overlay appears on screen displaying the 'GOAL' text and the Manchester City club crest.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 1,
+    "slice": "45.0s - 105.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:16\",\n    \"commentary\": \"The Manchester City player shoots the ball past the Chelsea goalkeeper into the net.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:27\",\n    \"commentary\": \"The Manchester City player celebrates the goal by running and then kneeling on the pitch.\",\n    \"label\": \"Goal\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 2,
+    "slice": "90.0s - 150.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:38\",\n    \"commentary\": \"The ball is placed on the penalty spot for the restart.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:41\",\n    \"commentary\": \"The goalkeeper kicks the ball from the penalty spot to restart play.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 3,
+    "slice": "135.0s - 195.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:29\",\n    \"commentary\": \"A Chelsea player attempts a tackle on a Manchester City player in the penalty area but fails to make contact, resulting in a foul.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:30\",\n    \"commentary\": \"The referee blows the whistle to signal the foul and awards a free-kick to Manchester City.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 4,
+    "slice": "180.0s - 240.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match is in progress with a free-kick being set up for the team in blue.\",\n    \"label\": \"Direct free-kick\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:32\",\n    \"commentary\": \"The player in blue takes the free-kick, which is deflected by the wall and goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 5,
+    "slice": "225.0s - 285.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The match restarts with a kick-off from the center circle.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:26\",\n    \"commentary\": \"A player in a light blue jersey receives a pass and takes a shot that goes wide of the goal.\",\n    \"label\": \"Shots off target\",\n    \"confidence\": 0.9,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 6,
+    "slice": "270.0s - 330.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"Manchester City player number 11 takes the kick-off to restart the match.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"Manchester City player number 12 is fouled by a Chelsea defender and falls to the ground.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.90,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 7,
+    "slice": "315.0s - 375.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:00\",\n    \"commentary\": \"The video begins with a close-up of Chelsea players on the bench, followed by a cut to the pitch where the match is in progress.\",\n    \"label\": \"Kick-off\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 8,
+    "slice": "360.0s - 420.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:54\",\n    \"commentary\": \"The referee blows the whistle and raises a yellow card to signal a caution to the Manchester City player.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 9,
+    "slice": "405.0s - 465.0s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:04\",\n    \"commentary\": \"The referee blows the whistle and signals a foul as a player in a dark blue jersey makes contact with a player in a light blue jersey.\",\n    \"label\": \"Foul\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  },\n  {\n    \"timestamp\": \"00:08\",\n    \"commentary\": \"The referee shows a yellow card to the player in the light blue jersey who is standing next to him.\",\n    \"label\": \"Yellow card\",\n    \"confidence\": 0.98,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  },
+  {
+    "chunk_index": 4,
+    "filename": "game_1_half_2_chunk_04.mp4",
+    "window_index": 10,
+    "slice": "450.0s - 472.8s",
+    "raw_output": "```json\n[\n  {\n    \"timestamp\": \"00:19\",\n    \"commentary\": \"The ball crosses the sideline into the field of play, and a player in a blue jersey initiates a throw-in.\",\n    \"label\": \"Throw-in\",\n    \"confidence\": 0.95,\n    \"visibility\": \"visible\"\n  }\n]\n```\n",
+    "is_dry_run": false
+  }
+]

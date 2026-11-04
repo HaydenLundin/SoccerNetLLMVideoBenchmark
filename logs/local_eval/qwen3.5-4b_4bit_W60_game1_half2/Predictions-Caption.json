@@ -1,0 +1,726 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-16 - 18-00 Manchester City 3 - 0 Chelsea/",
+  "predictions": [
+    {
+      "gameTime": "2 - 00:00",
+      "position": 0,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 01:01",
+      "position": 61000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Manchester City player attempts a shot from outside the box but the ball hits the post and bounces out."
+    },
+    {
+      "gameTime": "2 - 01:28",
+      "position": 88000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A Manchester City player takes a free-kick from the edge of the penalty area."
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 02:08",
+      "position": 128000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Manchester City player attempts a shot from outside the box which is blocked by a Chelsea defender."
+    },
+    {
+      "gameTime": "2 - 02:12",
+      "position": 132000,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee shows a yellow card to a Chelsea player for a foul."
+    },
+    {
+      "gameTime": "2 - 02:22",
+      "position": 142000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Manchester City player attempts a tackle but is fouled by Chelsea's Branislav Ivanovic."
+    },
+    {
+      "gameTime": "2 - 02:31",
+      "position": 151000,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "Referee blows the whistle and shows a yellow card to Branislav Ivanovic for the foul."
+    },
+    {
+      "gameTime": "2 - 03:00",
+      "position": 180000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 04:27",
+      "position": 267000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Chelsea player Ramires scores a goal for his team."
+    },
+    {
+      "gameTime": "2 - 04:30",
+      "position": 270000,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The fourth official raises the yellow card to signal a caution to a player."
+    },
+    {
+      "gameTime": "2 - 04:31",
+      "position": 271000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul."
+    },
+    {
+      "gameTime": "2 - 05:15",
+      "position": 315000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is in progress with the score at 0-0."
+    },
+    {
+      "gameTime": "2 - 05:18",
+      "position": 318000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Ramy Bensebaini scores a goal for Chelsea as the ball crosses the goal line."
+    },
+    {
+      "gameTime": "2 - 05:21",
+      "position": 321000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a light blue jersey attempts a shot from outside the box which is blocked by a defender."
+    },
+    {
+      "gameTime": "2 - 05:53",
+      "position": 353000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Yaya Toure is fouled by a Chelsea player while attempting to dribble past him."
+    },
+    {
+      "gameTime": "2 - 06:02",
+      "position": 362000,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee blows the whistle and shows a yellow card to Yaya Toure for the foul."
+    },
+    {
+      "gameTime": "2 - 06:20",
+      "position": 380000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Yaya Toure is fouled by a Chelsea player as they challenge for the ball near the sideline."
+    },
+    {
+      "gameTime": "2 - 06:49",
+      "position": 409000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the Chelsea player."
+    },
+    {
+      "gameTime": "2 - 06:52",
+      "position": 412000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Manchester City players set up for a free kick in the Chelsea half."
+    },
+    {
+      "gameTime": "2 - 07:04",
+      "position": 424000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the Chelsea player shoots."
+    },
+    {
+      "gameTime": "2 - 07:30",
+      "position": 450000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The match is in the 3rd minute of the first half as the teams are positioned for a free kick."
+    },
+    {
+      "gameTime": "2 - 08:05",
+      "position": 485000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The free kick is taken and the ball is played into the penalty area."
+    },
+    {
+      "gameTime": "2 - 08:15",
+      "position": 495000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 09:40",
+      "position": 580000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player attempts a shot from the edge of the box, but the ball hits the post and bounces out."
+    },
+    {
+      "gameTime": "2 - 09:41",
+      "position": 581000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a Manchester City player is tackled in the corner area."
+    },
+    {
+      "gameTime": "2 - 09:45",
+      "position": 585000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is in progress with Chelsea in possession as they build an attack."
+    },
+    {
+      "gameTime": "2 - 10:07",
+      "position": 607000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Chelsea player Hazard takes a corner kick from the left side."
+    },
+    {
+      "gameTime": "2 - 10:06",
+      "position": 606483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a Chelsea player makes contact with a Manchester City player."
+    },
+    {
+      "gameTime": "2 - 10:51",
+      "position": 651483,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A Manchester City player takes a throw-in from the sideline."
+    },
+    {
+      "gameTime": "2 - 11:14",
+      "position": 674483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 11:49",
+      "position": 709483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Manchester City player scores a goal as the ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 12:29",
+      "position": 749483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a blue jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 12:44",
+      "position": 764483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with the kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 14:07",
+      "position": 847483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a light blue jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 14:39",
+      "position": 879483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Manchester City player attempts a through ball which is intercepted by a Chelsea defender, resulting in a clearance."
+    },
+    {
+      "gameTime": "2 - 14:59",
+      "position": 899483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 15:47",
+      "position": 947483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A defender in a dark blue jersey makes a sliding tackle on an opponent in a light blue jersey, resulting in a fall."
+    },
+    {
+      "gameTime": "2 - 16:27",
+      "position": 987483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a light blue jersey takes a shot from outside the box that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 16:29",
+      "position": 989483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 17:59",
+      "position": 1079483,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The match is in progress with a blue team player (Manevic) gesturing to the referee while the coach looks on."
+    },
+    {
+      "gameTime": "2 - 18:09",
+      "position": 1089483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Manchester City player attempts a shot from outside the box which is blocked by Chelsea defenders."
+    },
+    {
+      "gameTime": "2 - 18:27",
+      "position": 1107483,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The referee blows the whistle and signals a substitution as Juan Cuadrado runs onto the pitch to replace Ramires."
+    },
+    {
+      "gameTime": "2 - 18:54",
+      "position": 1134483,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A player in a blue jersey throws the ball into play from the sideline."
+    },
+    {
+      "gameTime": "2 - 19:20",
+      "position": 1160483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a light blue jersey scores a goal as the ball enters the net."
+    },
+    {
+      "gameTime": "2 - 19:23",
+      "position": 1163363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 19:31",
+      "position": 1171363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Manchester City player takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 19:42",
+      "position": 1182363,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The referee blows the whistle to signal a substitution, with Jesus Navas coming off and Samir Nasri coming on."
+    },
+    {
+      "gameTime": "2 - 20:17",
+      "position": 1217363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The goalkeeper kicks the ball from the center circle to restart play."
+    },
+    {
+      "gameTime": "2 - 20:53",
+      "position": 1253363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a white jersey attempts a long-range shot that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 21:38",
+      "position": 1298363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 22:24",
+      "position": 1344363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Manchester City player attempts a shot from outside the box which is blocked by Chelsea defenders."
+    },
+    {
+      "gameTime": "2 - 22:29",
+      "position": 1349363,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Manchester City player attempts a through ball which is intercepted by a Chelsea defender."
+    },
+    {
+      "gameTime": "2 - 23:08",
+      "position": 1388363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 24:32",
+      "position": 1472363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Manchester City player attempts a shot from outside the box which is blocked by Chelsea defenders."
+    },
+    {
+      "gameTime": "2 - 24:51",
+      "position": 1491363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player takes a shot from the edge of the box that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 25:04",
+      "position": 1504363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player takes a shot from inside the box that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 26:01",
+      "position": 1561363,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player attempts to dribble past a Manchester City defender near the sideline but loses possession."
+    },
+    {
+      "gameTime": "2 - 26:08",
+      "position": 1568363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 27:06",
+      "position": 1626363,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The ball is crossed into the penalty area from the corner arc."
+    },
+    {
+      "gameTime": "2 - 27:37",
+      "position": 1657363,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul on the Chelsea player."
+    },
+    {
+      "gameTime": "2 - 27:38",
+      "position": 1658363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is in the first minute of play, with the ball in play."
+    },
+    {
+      "gameTime": "2 - 29:08",
+      "position": 1748363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 29:60",
+      "position": 1799603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 30:05",
+      "position": 1804603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The ball is crossed into the box and a player in a light blue jersey shoots it towards the goal."
+    },
+    {
+      "gameTime": "2 - 32:15",
+      "position": 1934603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is in the first half with the score at 1-1."
+    },
+    {
+      "gameTime": "2 - 32:18",
+      "position": 1937603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "Raheem Sterling receives the ball and takes a shot from outside the box which goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 32:19",
+      "position": 1938603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle to signal a foul by Chelsea player N'Golo Kant\u00e9 on Raheem Sterling."
+    },
+    {
+      "gameTime": "2 - 32:20",
+      "position": 1939603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The referee signals a free kick for Manchester City."
+    },
+    {
+      "gameTime": "2 - 32:27",
+      "position": 1946603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "Raheem Sterling takes a shot from the edge of the box that hits the post and bounces out."
+    },
+    {
+      "gameTime": "2 - 32:27",
+      "position": 1946603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper dives to his right but fails to reach it."
+    },
+    {
+      "gameTime": "2 - 32:28",
+      "position": 1947603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The ball bounces out from the goal area after the shot."
+    },
+    {
+      "gameTime": "2 - 33:41",
+      "position": 2020603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A Manchester City player takes a corner kick from the corner flag."
+    },
+    {
+      "gameTime": "2 - 33:45",
+      "position": 2024603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Manchester City player shoots the ball into the net past the Chelsea goalkeeper."
+    },
+    {
+      "gameTime": "2 - 34:15",
+      "position": 2054603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a light blue jersey takes a shot from outside the box which is saved by the goalkeeper."
+    },
+    {
+      "gameTime": "2 - 34:30",
+      "position": 2069603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The goalkeeper in yellow makes a diving save to his left, pushing the ball away from the goal."
+    },
+    {
+      "gameTime": "2 - 34:35",
+      "position": 2074603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper is on the ground, resulting in a goal for the light blue team."
+    },
+    {
+      "gameTime": "2 - 34:48",
+      "position": 2087603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 35:27",
+      "position": 2126603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Eden Hazard of Chelsea is fouled by a Manchester City defender in the midfield."
+    },
+    {
+      "gameTime": "2 - 35:31",
+      "position": 2130603,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee shows a yellow card to Eden Hazard for the foul."
+    },
+    {
+      "gameTime": "2 - 35:42",
+      "position": 2141603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Yaya Toure of Manchester City is fouled by a Chelsea defender near the sideline."
+    },
+    {
+      "gameTime": "2 - 35:55",
+      "position": 2154603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "Eden Hazard takes a free-kick from outside the box."
+    },
+    {
+      "gameTime": "2 - 35:60",
+      "position": 2159603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 36:04",
+      "position": 2163603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "Eden Hazard's free-kick goes wide of the goal and into the crowd."
+    },
+    {
+      "gameTime": "2 - 36:29",
+      "position": 2188603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Manchester City player shoots the ball into the net for a goal."
+    },
+    {
+      "gameTime": "2 - 37:10",
+      "position": 2229603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Chelsea player shoots the ball towards the goal, but the Manchester City goalkeeper makes a save."
+    },
+    {
+      "gameTime": "2 - 37:25",
+      "position": 2244603,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A Manchester City player is substituted on the field."
+    },
+    {
+      "gameTime": "2 - 37:48",
+      "position": 2267603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Sergio Ag\u00fcero shoots the ball into the net, scoring a goal for Manchester City."
+    },
+    {
+      "gameTime": "2 - 38:15",
+      "position": 2294603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 38:32",
+      "position": 2311603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The referee blows the whistle and signals a foul as the ball goes out of play."
+    },
+    {
+      "gameTime": "2 - 39:15",
+      "position": 2354603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line into the net as the goalkeeper fails to make a save."
+    },
+    {
+      "gameTime": "2 - 40:09",
+      "position": 2409243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The Manchester City player celebrates the goal by running and then kneeling on the pitch."
+    },
+    {
+      "gameTime": "2 - 41:05",
+      "position": 2465243,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The ball is placed on the penalty spot for the restart."
+    },
+    {
+      "gameTime": "2 - 41:41",
+      "position": 2501243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Chelsea player attempts a tackle on a Manchester City player in the penalty area but fails to make contact, resulting in a foul."
+    },
+    {
+      "gameTime": "2 - 41:57",
+      "position": 2517243,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The match is in progress with a free-kick being set up for the team in blue."
+    },
+    {
+      "gameTime": "2 - 42:29",
+      "position": 2549243,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The player in blue takes the free-kick, which is deflected by the wall and goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 42:42",
+      "position": 2562243,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match restarts with a kick-off from the center circle."
+    },
+    {
+      "gameTime": "2 - 43:08",
+      "position": 2588243,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in a light blue jersey receives a pass and takes a shot that goes wide of the goal."
+    },
+    {
+      "gameTime": "2 - 43:46",
+      "position": 2626243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Manchester City player number 12 is fouled by a Chelsea defender and falls to the ground."
+    },
+    {
+      "gameTime": "2 - 44:12",
+      "position": 2652243,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The video begins with a close-up of Chelsea players on the bench, followed by a cut to the pitch where the match is in progress."
+    },
+    {
+      "gameTime": "2 - 45:46",
+      "position": 2746243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee blows the whistle and signals a foul as a player in a dark blue jersey makes contact with a player in a light blue jersey."
+    },
+    {
+      "gameTime": "2 - 45:50",
+      "position": 2750243,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee shows a yellow card to the player in the light blue jersey who is standing next to him."
+    },
+    {
+      "gameTime": "2 - 46:46",
+      "position": 2806243,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "The ball crosses the sideline into the field of play, and a player in a blue jersey initiates a throw-in."
+    }
+  ]
+}
