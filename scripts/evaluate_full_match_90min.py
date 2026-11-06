@@ -32,18 +32,32 @@ def build_specialist_ensemble(qwen_preds: List[Dict], minicpm_preds: List[Dict],
     if half == 2:
         # In Half 2:
         # 1. Qwen3.5-4B is superior on Foul (0.1631 vs 0.0626), Clearance (0.0413 vs 0.0011),
-        #    and Substitution (66.7% recall, 0.2218 AP, 4/6 true substitutions spotted).
+        #    Substitution (66.7% recall, 0.2218 AP), Goal, Corner, Throw-in, Direct free-kick,
+        #    and all Disciplinary Dismissals & Penalties (Red card 0.7727, Yellow->red card 0.4773, Penalty 0.0303).
         # 2. MiniCPM-V 4.6 excels on Yellow card (0.3333 AP), Shots on target (0.0834 AP),
-        #    Shots off target, Offside, and Indirect free-kick.
+        #    Shots off target, Offside, Indirect free-kick, and Kick-off.
         # 3. LFM2.5-VL-3B specializes on Ball out of play (0.1774 AP).
-        QWEN_SPECIALIST_CLASSES = {"Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution", "Foul", "Clearance"}
-        MINICPM_SPECIALIST_CLASSES = {"Kick-off", "Shots off target", "Offside", "Indirect free-kick", "Yellow card", "Shots on target"}
+        QWEN_SPECIALIST_CLASSES = {
+            "Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution",
+            "Foul", "Clearance", "Red card", "Yellow->red card", "Penalty"
+        }
+        MINICPM_SPECIALIST_CLASSES = {
+            "Kick-off", "Shots off target", "Shots on target", "Offside",
+            "Indirect free-kick", "Yellow card"
+        }
         LFM_SPECIALIST_CLASSES = {"Ball out of play"}
     else:
         # In Half 1:
-        # Qwen dominates set pieces and conversions; MiniCPM specializes in open-play duels
-        QWEN_SPECIALIST_CLASSES = {"Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution"}
-        MINICPM_SPECIALIST_CLASSES = {"Kick-off", "Foul", "Shots off target", "Clearance", "Offside", "Indirect free-kick"}
+        # Qwen dominates set pieces, conversions, yellow card anchoring, and disciplinary actions;
+        # MiniCPM specializes in open-play duels, clearances, and line-judge calls.
+        QWEN_SPECIALIST_CLASSES = {
+            "Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution",
+            "Yellow card", "Red card", "Yellow->red card", "Penalty"
+        }
+        MINICPM_SPECIALIST_CLASSES = {
+            "Kick-off", "Foul", "Shots off target", "Shots on target",
+            "Clearance", "Offside", "Indirect free-kick"
+        }
         LFM_SPECIALIST_CLASSES = {"Ball out of play"}
 
     # Apply temporal calibration (+2950ms to MiniCPM, -3100ms to LFM)
