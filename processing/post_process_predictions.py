@@ -211,6 +211,77 @@ def stitch_chunks_to_match_predictions(
 
     return spotting_output, caption_output, telemetry
 
+def apply_semantic_co_emission(
+    predictions: List[Dict],
+    captions: Optional[List[Dict]] = None,
+    caption_window_ms: int = 25000
+) -> List[Dict]:
+    """
+    Applies zero-compute semantic co-emission for compound/multi-label events in SoccerNet:
+    1. Penalty: Converted penalties (Penalty + Goal) and saved penalties (Penalty + Shot/Free-kick)
+       co-emit a paired Penalty event when commentary contains penalty cues.
+    2. Yellow->red card: Second yellow dismissals physically produce a yellow card first,
+       followed by player dismissal/ejection cues.
+    """
+    pos_to_caption = {}
+    if captions:
+        for cap in captions:
+            pos = int(cap.get("position", 0))
+            txt = cap.get("commentary", "")
+            pos_to_caption[pos] = txt
+
+    new_preds = list(predictions)
+    sorted_preds = sorted(predictions, key=lambda x: int(x.get("position", 0)))
+
+    for i, p in enumerate(sorted_preds):
+        pos = int(p.get("position", 0))
+        lbl = p.get("label", "")
+        conf = float(p.get("confidence", 0.9))
+
+        caption_text = ""
+        for c_pos, c_txt in pos_to_caption.items():
+            if abs(c_pos - pos) <= caption_window_ms:
+                caption_text += " " + c_txt.lower()
+
+        # Rule 1: Penalty Co-Emission
+        is_penalty_cue = any(k in caption_text for k in [
+            "penalty kick", "penalty spot", "spot kick", "spot-kick", "penalty area"
+        ])
+        if lbl in ["Direct free-kick", "Goal", "Shots off target", "Shots on target"] and is_penalty_cue:
+            if any(k in caption_text for k in [
+                "takes a direct free-kick from the penalty",
+                "takes a free-kick from the penalty",
+                "penalty kick",
+                "from the penalty spot"
+            ]):
+                has_penalty_already = any(
+                    p2.get("label") == "Penalty" and abs(int(p2.get("position", 0)) - pos) <= 15000
+                    for p2 in sorted_preds
+                )
+                if not has_penalty_already:
+                    cand = dict(p)
+                    cand["label"] = "Penalty"
+                    cand["confidence"] = min(0.95, conf)
+                    new_preds.append(cand)
+
+        # Rule 2: Yellow->red card Co-Emission
+        if lbl == "Yellow card":
+            is_dismissal_cue = any(k in caption_text for k in [
+                "second yellow", "sent off", "dismissed", "reacts with frustration", "tunnel", "red card"
+            ])
+            has_yr_already = any(
+                p2.get("label") == "Yellow->red card" and abs(int(p2.get("position", 0)) - pos) <= 15000
+                for p2 in sorted_preds
+            )
+            if is_dismissal_cue and not has_yr_already:
+                cand = dict(p)
+                cand["label"] = "Yellow->red card"
+                cand["confidence"] = min(0.95, conf)
+                new_preds.append(cand)
+
+    new_preds.sort(key=lambda x: int(x.get("position", 0)))
+    return new_preds
+
 def run_self_test():
     """Unit tests validating regex hardening, bounds checks, and class-aware NMS."""
     print("[TEST] Running Checkpoint 1 Validation Suite...")

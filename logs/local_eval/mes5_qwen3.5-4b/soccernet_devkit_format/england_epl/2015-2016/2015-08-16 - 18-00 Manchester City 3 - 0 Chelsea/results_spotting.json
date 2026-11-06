@@ -202,6 +202,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 11:08",
+      "label": "Penalty",
+      "position": 668283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 11:35",
       "label": "Foul",
       "position": 695283,
@@ -706,6 +714,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 32:51",
+      "label": "Penalty",
+      "position": 1970683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 33:02",
       "label": "Corner",
       "position": 1981683,
@@ -719,6 +735,14 @@
       "position": 1985683,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:06",
+      "label": "Penalty",
+      "position": 1985683,
+      "half": "1",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -738,8 +762,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 34:27",
+      "label": "Penalty",
+      "position": 2066683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 34:49",
       "label": "Shots off target",
+      "position": 2088683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:49",
+      "label": "Penalty",
       "position": 2088683,
       "half": "1",
       "confidence": 0.9,

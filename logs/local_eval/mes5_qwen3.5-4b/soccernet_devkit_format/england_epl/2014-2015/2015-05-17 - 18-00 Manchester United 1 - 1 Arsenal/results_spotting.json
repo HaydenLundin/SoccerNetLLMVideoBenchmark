@@ -138,11 +138,27 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 07:52",
+      "label": "Penalty",
+      "position": 472000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 08:03",
       "label": "Direct free-kick",
       "position": 483000,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:03",
+      "label": "Penalty",
+      "position": 483000,
+      "half": "1",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -223,6 +239,14 @@
       "position": 677043,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:17",
+      "label": "Penalty",
+      "position": 677043,
+      "half": "1",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -578,6 +602,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 34:43",
+      "label": "Penalty",
+      "position": 2083403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 34:58",
       "label": "Foul",
       "position": 2098403,
@@ -615,6 +647,14 @@
       "position": 2177403,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:17",
+      "label": "Penalty",
+      "position": 2177403,
+      "half": "1",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -690,8 +730,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 41:09",
+      "label": "Penalty",
+      "position": 2468643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 41:11",
       "label": "Goal",
+      "position": 2470643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:11",
+      "label": "Penalty",
       "position": 2470643,
       "half": "1",
       "confidence": 0.95,
@@ -842,8 +898,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 05:21",
+      "label": "Penalty",
+      "position": 321000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 05:36",
       "label": "Direct free-kick",
+      "position": 336000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 05:36",
+      "label": "Penalty",
       "position": 336000,
       "half": "2",
       "confidence": 0.95,
@@ -868,6 +940,14 @@
     {
       "gameTime": "2 - 06:53",
       "label": "Direct free-kick",
+      "position": 413000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 06:53",
+      "label": "Penalty",
       "position": 413000,
       "half": "2",
       "confidence": 0.95,
@@ -940,6 +1020,14 @@
     {
       "gameTime": "2 - 11:01",
       "label": "Direct free-kick",
+      "position": 661403,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 11:01",
+      "label": "Penalty",
       "position": 661403,
       "half": "2",
       "confidence": 0.9,
@@ -1114,8 +1202,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 20:53",
+      "label": "Penalty",
+      "position": 1253443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 21:49",
       "label": "Direct free-kick",
+      "position": 1309443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 21:49",
+      "label": "Penalty",
       "position": 1309443,
       "half": "2",
       "confidence": 0.95,
@@ -1130,11 +1234,27 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 21:51",
+      "label": "Penalty",
+      "position": 1311443,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 21:52",
       "label": "Goal",
       "position": 1312443,
       "half": "2",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 21:52",
+      "label": "Penalty",
+      "position": 1312443,
+      "half": "2",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {

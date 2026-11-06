@@ -18,6 +18,7 @@ if str(WORKSPACE_ROOT) not in sys.path:
 
 from SoccerNet.Evaluation.ActionSpotting import evaluate
 from SoccerNet.Evaluation.utils import EVENT_DICTIONARY_V2, INVERSE_EVENT_DICTIONARY_V2
+from processing.post_process_predictions import apply_semantic_co_emission
 from scripts.evaluate_full_match_90min import build_specialist_ensemble
 from scripts.evaluate_markov_prior_rescoring import (
     compute_out_of_sample_m19,
@@ -48,14 +49,20 @@ def load_predictions(pred_path: Path) -> List[Dict]:
         data = json.load(f)
     return data.get("predictions", [])
 
-def get_model_preds_for_half(model: str, game_id: int, half: int) -> List[Dict]:
+def get_model_preds_for_half(model: str, game_id: int, half: int, co_emission: bool = True) -> List[Dict]:
     window_sec = 30 if model == "lfm2.5-vl-3b" else 60
     precision = "4bit"
     if game_id == 0 and half == 1:
         path = WORKSPACE_ROOT / f"logs/local_eval/{model}_{precision}_W{window_sec}_half1/Predictions-v2.json"
+        cap_path = WORKSPACE_ROOT / f"logs/local_eval/{model}_{precision}_W{window_sec}_half1/Predictions-Caption.json"
     else:
         path = WORKSPACE_ROOT / f"logs/local_eval/{model}_{precision}_W{window_sec}_game{game_id}_half{half}/Predictions-v2.json"
-    return load_predictions(path)
+        cap_path = WORKSPACE_ROOT / f"logs/local_eval/{model}_{precision}_W{window_sec}_game{game_id}_half{half}/Predictions-Caption.json"
+    preds = load_predictions(path)
+    if co_emission and model == "qwen3.5-4b":
+        caps = load_predictions(cap_path)
+        preds = apply_semantic_co_emission(preds, caps)
+    return preds
 
 def evaluate_predictions_tree(ground_truth_dir: Path, predictions_dir: Path) -> Tuple[float, float, Dict, Dict]:
     gt_path_str = f"\\\\?\\{ground_truth_dir.resolve()}" if os.name == "nt" else str(ground_truth_dir.resolve())

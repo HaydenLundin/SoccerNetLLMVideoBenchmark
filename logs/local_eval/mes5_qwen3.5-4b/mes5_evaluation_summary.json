@@ -8,12 +8,12 @@
     13
   ],
   "num_matches": 5,
-  "total_predictions": 1135,
+  "total_predictions": 1213,
   "total_ground_truth": 1132,
-  "tight_average_mAP": 0.055824997633021844,
-  "loose_average_mAP": 0.12654171095668262,
+  "tight_average_mAP": 0.056169350250101745,
+  "loose_average_mAP": 0.15639910846113894,
   "tight_per_class": {
-    "Penalty": 0.0,
+    "Penalty": 0.005853994490358126,
     "Kick-off": 0.00796684049848284,
     "Goal": 0.046582147863558486,
     "Substitution": 0.032196969696969696,
@@ -32,7 +32,7 @@
     "Yellow->red card": 0.0
   },
   "loose_per_class": {
-    "Penalty": 0.0,
+    "Penalty": 0.030303030303030297,
     "Kick-off": 0.03222594986771404,
     "Goal": 0.14220858446885137,
     "Substitution": 0.23806244260789713,
@@ -48,7 +48,7 @@
     "Corner": 0.19808322038167658,
     "Yellow card": 0.3158082447855175,
     "Red card": 0.7727272727272726,
-    "Yellow->red card": 0.0
+    "Yellow->red card": 0.4772727272727273
   },
   "oracle_ceiling_mAP": 1.0,
   "active_class_count": 17,

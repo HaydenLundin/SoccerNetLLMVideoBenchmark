@@ -202,6 +202,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 11:24",
+      "label": "Yellow->red card",
+      "position": 683963,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 11:25",
       "label": "Red card",
       "position": 684963,
@@ -242,11 +250,27 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 12:52",
+      "label": "Penalty",
+      "position": 771963,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 13:02",
       "label": "Direct free-kick",
       "position": 781963,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:02",
+      "label": "Penalty",
+      "position": 781963,
+      "half": "1",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -338,6 +362,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 16:35",
+      "label": "Penalty",
+      "position": 994963,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 16:40",
       "label": "Shots off target",
       "position": 999963,
@@ -346,8 +378,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 16:40",
+      "label": "Penalty",
+      "position": 999963,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 16:53",
       "label": "Direct free-kick",
+      "position": 1012963,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:53",
+      "label": "Penalty",
       "position": 1012963,
       "half": "1",
       "confidence": 0.95,
@@ -364,6 +412,14 @@
     {
       "gameTime": "1 - 17:16",
       "label": "Shots on target",
+      "position": 1035963,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:16",
+      "label": "Penalty",
       "position": 1035963,
       "half": "1",
       "confidence": 0.9,
@@ -746,6 +802,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "1 - 36:36",
+      "label": "Penalty",
+      "position": 2195883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "1 - 36:42",
       "label": "Kick-off",
       "position": 2201883,
@@ -1042,6 +1106,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 04:49",
+      "label": "Penalty",
+      "position": 289000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 05:18",
       "label": "Corner",
       "position": 318000,
@@ -1226,11 +1298,27 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 13:24",
+      "label": "Penalty",
+      "position": 804403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 13:33",
       "label": "Goal",
       "position": 813403,
       "half": "2",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 13:33",
+      "label": "Penalty",
+      "position": 813403,
+      "half": "2",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -1242,8 +1330,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 13:44",
+      "label": "Penalty",
+      "position": 824403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 14:09",
       "label": "Shots off target",
+      "position": 849403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 14:09",
+      "label": "Penalty",
       "position": 849403,
       "half": "2",
       "confidence": 0.95,
@@ -1287,6 +1391,14 @@
       "position": 996403,
       "half": "2",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 16:36",
+      "label": "Penalty",
+      "position": 996403,
+      "half": "2",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
@@ -1466,6 +1578,14 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 23:15",
+      "label": "Penalty",
+      "position": 1394723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 23:31",
       "label": "Foul",
       "position": 1410723,
@@ -1482,8 +1602,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 24:47",
+      "label": "Penalty",
+      "position": 1486723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 24:48",
       "label": "Shots off target",
+      "position": 1487723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 24:48",
+      "label": "Penalty",
       "position": 1487723,
       "half": "2",
       "confidence": 0.95,
@@ -1506,8 +1642,24 @@
       "visibility": "visible"
     },
     {
+      "gameTime": "2 - 25:02",
+      "label": "Penalty",
+      "position": 1501723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
       "gameTime": "2 - 25:03",
       "label": "Shots off target",
+      "position": 1502723,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 25:03",
+      "label": "Penalty",
       "position": 1502723,
       "half": "2",
       "confidence": 0.9,
@@ -1599,6 +1751,14 @@
       "position": 1781683,
       "half": "2",
       "confidence": 0.98,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 29:42",
+      "label": "Penalty",
+      "position": 1781683,
+      "half": "2",
+      "confidence": 0.95,
       "visibility": "visible"
     },
     {
