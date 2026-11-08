@@ -4,11 +4,11 @@
     {
       "gameTime": "1 - 00:00",
       "label": "Kick-off",
-      "position": 2950,
+      "position": 0,
       "half": "1",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 00:30",
@@ -29,38 +29,11 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 00:47",
-      "label": "Shots on target",
-      "position": 49950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 00:51",
       "label": "Clearance",
       "position": 53950,
       "half": "1",
       "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 00:53",
-      "label": "Shots off target",
-      "position": 55950,
-      "half": "1",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 00:55",
-      "label": "Foul",
-      "position": 57950,
-      "half": "1",
-      "confidence": 0.9,
       "visibility": "visible",
       "model": "minicpm-v-4.6"
     },
@@ -74,15 +47,6 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 01:03",
-      "label": "Shots off target",
-      "position": 65950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 01:05",
       "label": "Clearance",
       "position": 67950,
@@ -92,6 +56,15 @@
       "model": "minicpm-v-4.6"
     },
     {
+      "gameTime": "1 - 01:30",
+      "label": "Kick-off",
+      "position": 90000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 01:40",
       "label": "Ball out of play",
       "position": 96900,
@@ -99,15 +72,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "1 - 02:25",
-      "label": "Shots on target",
-      "position": 147950,
-      "half": "1",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "1 - 02:44",
@@ -120,39 +84,39 @@
     },
     {
       "gameTime": "1 - 03:00",
-      "label": "Shots off target",
-      "position": 182950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 03:14",
-      "label": "Foul",
-      "position": 196950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 03:25",
-      "label": "Shots off target",
-      "position": 207950,
+      "label": "Kick-off",
+      "position": 180000,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 03:45",
-      "label": "Shots on target",
-      "position": 227950,
+      "gameTime": "1 - 03:04",
+      "label": "Shots off target",
+      "position": 184000,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 03:14",
+      "label": "Shots off target",
+      "position": 194000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 03:29",
+      "label": "Shots off target",
+      "position": 209000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 04:00",
@@ -173,13 +137,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 04:23",
+      "gameTime": "1 - 04:30",
       "label": "Foul",
-      "position": 265950,
+      "position": 270000,
       "half": "1",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 04:33",
+      "label": "Shots off target",
+      "position": 273000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 04:32",
@@ -187,15 +160,6 @@
       "position": 274950,
       "half": "1",
       "confidence": 0.5,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 04:34",
-      "label": "Foul",
-      "position": 276950,
-      "half": "1",
-      "confidence": 0.8,
       "visibility": "visible",
       "model": "minicpm-v-4.6"
     },
@@ -209,36 +173,36 @@
       "model": "qwen3.5-4b"
     },
     {
+      "gameTime": "1 - 04:42",
+      "label": "Foul",
+      "position": 282000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 04:59",
+      "label": "Foul",
+      "position": 299000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 05:15",
+      "label": "Kick-off",
+      "position": 315000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 05:15",
       "label": "Offside",
       "position": 317950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 05:19",
-      "label": "Shots on target",
-      "position": 321950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 06:00",
-      "label": "Kick-off",
-      "position": 362950,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 06:04",
-      "label": "Shots on target",
-      "position": 366950,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
@@ -272,22 +236,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 07:01",
-      "label": "Shots on target",
-      "position": 423950,
+      "gameTime": "1 - 07:10",
+      "label": "Shots off target",
+      "position": 430000,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 07:32",
-      "label": "Shots on target",
-      "position": 454950,
+      "gameTime": "1 - 07:26",
+      "label": "Foul",
+      "position": 446000,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 07:35",
@@ -299,31 +263,31 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 07:38",
+      "gameTime": "1 - 07:40",
       "label": "Shots on target",
-      "position": 460950,
+      "position": 456900,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "1 - 07:54",
+      "label": "Kick-off",
+      "position": 474000,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 08:32",
+      "label": "Shots off target",
+      "position": 512000,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 08:15",
-      "label": "Kick-off",
-      "position": 497950,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 08:27",
-      "label": "Shots on target",
-      "position": 509950,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 08:40",
@@ -335,15 +299,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 08:35",
-      "label": "Shots off target",
-      "position": 517950,
-      "half": "1",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 08:50",
       "label": "Goal",
       "position": 530000,
@@ -353,13 +308,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 09:12",
-      "label": "Shots on target",
-      "position": 554950,
+      "gameTime": "1 - 09:00",
+      "label": "Kick-off",
+      "position": 540000,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 09:45",
@@ -380,6 +335,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "1 - 10:14",
+      "label": "Foul",
+      "position": 614000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 10:25",
       "label": "Ball out of play",
       "position": 621863,
@@ -387,24 +351,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "1 - 10:30",
-      "label": "Kick-off",
-      "position": 632913,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 10:38",
-      "label": "Shots on target",
-      "position": 640913,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "1 - 10:50",
@@ -416,15 +362,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 10:48",
-      "label": "Foul",
-      "position": 650913,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 11:05",
       "label": "Ball out of play",
       "position": 661863,
@@ -434,13 +371,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 11:19",
-      "label": "Foul",
-      "position": 681913,
+      "gameTime": "1 - 11:15",
+      "label": "Kick-off",
+      "position": 674963,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 11:24",
@@ -479,13 +416,13 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 11:27",
+      "gameTime": "1 - 11:40",
       "label": "Shots off target",
-      "position": 689913,
+      "position": 699963,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 12:05",
@@ -497,22 +434,31 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 11:60",
-      "label": "Kick-off",
-      "position": 722913,
+      "gameTime": "1 - 12:27",
+      "label": "Foul",
+      "position": 746963,
       "half": "1",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 12:49",
-      "label": "Shots on target",
-      "position": 771913,
+      "gameTime": "1 - 12:45",
+      "label": "Foul",
+      "position": 764963,
       "half": "1",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 12:52",
+      "label": "Shots off target",
+      "position": 771963,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 13:05",
@@ -569,31 +515,40 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 14:15",
-      "label": "Kick-off",
-      "position": 857913,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 14:17",
-      "label": "Shots on target",
-      "position": 859913,
+      "gameTime": "1 - 13:36",
+      "label": "Shots off target",
+      "position": 815963,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 14:29",
+      "gameTime": "1 - 13:60",
+      "label": "Foul",
+      "position": 839963,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 14:05",
       "label": "Shots off target",
-      "position": 871913,
+      "position": 844963,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 14:15",
+      "label": "Kick-off",
+      "position": 854963,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 14:45",
@@ -605,13 +560,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 15:05",
-      "label": "Shots on target",
-      "position": 907913,
+      "gameTime": "1 - 14:45",
+      "label": "Foul",
+      "position": 884963,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.6,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 15:38",
+      "label": "Foul",
+      "position": 937963,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 15:45",
@@ -632,6 +596,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "1 - 16:04",
+      "label": "Foul",
+      "position": 963963,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 16:15",
       "label": "Ball out of play",
       "position": 971863,
@@ -639,6 +612,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "1 - 16:14",
+      "label": "Foul",
+      "position": 973963,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 16:35",
@@ -659,22 +641,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 16:33",
-      "label": "Foul",
-      "position": 995913,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 16:40",
-      "label": "Shots on target",
-      "position": 1002913,
+      "label": "Shots off target",
+      "position": 999963,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.98,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 16:53",
@@ -686,22 +659,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 16:55",
-      "label": "Shots on target",
-      "position": 1017913,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 17:15",
       "label": "Kick-off",
-      "position": 1037913,
+      "position": 1034963,
       "half": "1",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 17:21",
@@ -731,15 +695,6 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 17:27",
-      "label": "Shots on target",
-      "position": 1049913,
-      "half": "1",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 17:30",
       "label": "Clearance",
       "position": 1052913,
@@ -758,15 +713,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 18:06",
-      "label": "Shots on target",
-      "position": 1088913,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 18:25",
       "label": "Ball out of play",
       "position": 1101863,
@@ -774,15 +720,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "1 - 18:36",
-      "label": "Shots on target",
-      "position": 1118913,
-      "half": "1",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "1 - 18:45",
@@ -794,24 +731,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 18:42",
-      "label": "Shots on target",
-      "position": 1124913,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 18:48",
-      "label": "Shots on target",
-      "position": 1130913,
-      "half": "1",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 19:05",
       "label": "Ball out of play",
       "position": 1141863,
@@ -821,13 +740,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 19:22",
-      "label": "Shots on target",
-      "position": 1165433,
+      "gameTime": "1 - 19:29",
+      "label": "Shots off target",
+      "position": 1168963,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 19:33",
@@ -839,24 +758,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 19:30",
-      "label": "Shots on target",
-      "position": 1173433,
-      "half": "1",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 19:40",
-      "label": "Shots on target",
-      "position": 1183433,
-      "half": "1",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 20:00",
       "label": "Ball out of play",
       "position": 1197383,
@@ -864,24 +765,6 @@
       "confidence": 0.95,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "1 - 20:05",
-      "label": "Kick-off",
-      "position": 1208433,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 20:07",
-      "label": "Shots on target",
-      "position": 1210433,
-      "half": "1",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "1 - 20:11",
@@ -893,13 +776,13 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 20:15",
-      "label": "Shots on target",
-      "position": 1218433,
+      "gameTime": "1 - 20:34",
+      "label": "Kick-off",
+      "position": 1234483,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 20:40",
@@ -911,31 +794,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 20:52",
+      "gameTime": "1 - 21:08",
       "label": "Shots off target",
-      "position": 1255433,
-      "half": "1",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 21:00",
-      "label": "Shots on target",
-      "position": 1263433,
+      "position": 1268483,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 21:08",
-      "label": "Shots off target",
-      "position": 1271433,
-      "half": "1",
-      "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 21:35",
@@ -943,6 +808,15 @@
       "position": 1295483,
       "half": "1",
       "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 21:42",
+      "label": "Foul",
+      "position": 1302483,
+      "half": "1",
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b"
     },
@@ -956,15 +830,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 21:56",
-      "label": "Shots on target",
-      "position": 1319433,
-      "half": "1",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 22:14",
       "label": "Goal",
       "position": 1334483,
@@ -972,33 +837,6 @@
       "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "1 - 22:20",
-      "label": "Kick-off",
-      "position": 1343433,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 22:24",
-      "label": "Foul",
-      "position": 1347433,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 22:26",
-      "label": "Shots on target",
-      "position": 1349433,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "1 - 22:30",
@@ -1010,13 +848,22 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "1 - 22:33",
-      "label": "Shots off target",
-      "position": 1356433,
+      "gameTime": "1 - 22:56",
+      "label": "Foul",
+      "position": 1376483,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 23:05",
+      "label": "Kick-off",
+      "position": 1385483,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 23:05",
@@ -1037,15 +884,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 23:27",
-      "label": "Shots off target",
-      "position": 1410433,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 23:50",
       "label": "Ball out of play",
       "position": 1427383,
@@ -1055,13 +893,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 23:54",
-      "label": "Shots on target",
-      "position": 1437433,
+      "gameTime": "1 - 24:04",
+      "label": "Foul",
+      "position": 1444483,
       "half": "1",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 24:20",
@@ -1073,22 +911,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 24:58",
-      "label": "Shots on target",
-      "position": 1501433,
+      "gameTime": "1 - 24:35",
+      "label": "Kick-off",
+      "position": 1475483,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 25:22",
+      "gameTime": "1 - 25:02",
       "label": "Foul",
-      "position": 1525433,
+      "position": 1502483,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 25:40",
@@ -1100,13 +938,31 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 26:00",
-      "label": "Shots on target",
-      "position": 1563433,
+      "gameTime": "1 - 26:03",
+      "label": "Shots off target",
+      "position": 1563483,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 26:05",
+      "label": "Kick-off",
+      "position": 1565483,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 26:08",
+      "label": "Shots off target",
+      "position": 1568483,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 26:21",
@@ -1123,6 +979,15 @@
       "position": 1611483,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 26:57",
+      "label": "Kick-off",
+      "position": 1617483,
+      "half": "1",
+      "confidence": 0.8,
       "visibility": "visible",
       "model": "qwen3.5-4b"
     },
@@ -1163,31 +1028,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 28:20",
-      "label": "Kick-off",
-      "position": 1703433,
-      "half": "1",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 28:22",
-      "label": "Shots on target",
-      "position": 1705433,
-      "half": "1",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 28:25",
       "label": "Shots off target",
-      "position": 1708433,
+      "position": 1702483,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 28:40",
@@ -1199,13 +1046,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 28:35",
+      "gameTime": "1 - 28:52",
       "label": "Shots off target",
-      "position": 1718433,
+      "position": 1732483,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 29:12",
+      "label": "Shots on target",
+      "position": 1748783,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b"
     },
     {
       "gameTime": "1 - 29:10",
@@ -1240,6 +1096,15 @@
       "position": 1796883,
       "half": "1",
       "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 30:05",
+      "label": "Kick-off",
+      "position": 1804883,
+      "half": "1",
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b"
     },
@@ -1280,6 +1145,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "1 - 30:51",
+      "label": "Kick-off",
+      "position": 1850883,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 31:02",
       "label": "Ball out of play",
       "position": 1858783,
@@ -1287,6 +1161,24 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "1 - 31:09",
+      "label": "Shots off target",
+      "position": 1868883,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 31:22",
+      "label": "Shots off target",
+      "position": 1881883,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 31:32",
@@ -1298,40 +1190,31 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 31:27",
+      "gameTime": "1 - 32:12",
       "label": "Kick-off",
-      "position": 1889833,
+      "position": 1931883,
       "half": "1",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 31:33",
-      "label": "Shots on target",
-      "position": 1895833,
+      "gameTime": "1 - 32:33",
+      "label": "Foul",
+      "position": 1952883,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 31:45",
-      "label": "Shots on target",
-      "position": 1907833,
-      "half": "1",
-      "confidence": 0.75,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 32:46",
-      "label": "Shots on target",
-      "position": 1968833,
+      "gameTime": "1 - 32:51",
+      "label": "Shots off target",
+      "position": 1970883,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 33:12",
@@ -1352,8 +1235,26 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "1 - 33:42",
+      "label": "Kick-off",
+      "position": 2021883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 34:12",
       "label": "Ball out of play",
+      "position": 2048783,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "1 - 34:12",
+      "label": "Shots on target",
       "position": 2048783,
       "half": "1",
       "confidence": 0.85,
@@ -1370,40 +1271,49 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 35:24",
-      "label": "Foul",
-      "position": 2126833,
+      "gameTime": "1 - 34:45",
+      "label": "Shots off target",
+      "position": 2084883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 35:12",
+      "label": "Kick-off",
+      "position": 2111883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 35:13",
+      "label": "Shots off target",
+      "position": 2112883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 35:40",
+      "label": "Shots off target",
+      "position": 2139883,
       "half": "1",
       "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 35:36",
+      "gameTime": "1 - 35:52",
       "label": "Foul",
-      "position": 2138833,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 35:42",
-      "label": "Shots on target",
-      "position": 2144833,
+      "position": 2151883,
       "half": "1",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 35:48",
-      "label": "Foul",
-      "position": 2150833,
-      "half": "1",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 35:54",
@@ -1433,15 +1343,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 36:06",
-      "label": "Foul",
-      "position": 2168833,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 36:36",
       "label": "Penalty",
       "position": 2195883,
@@ -1460,13 +1361,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 36:44",
-      "label": "Shots on target",
-      "position": 2206833,
+      "gameTime": "1 - 36:42",
+      "label": "Kick-off",
+      "position": 2201883,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 36:52",
@@ -1478,6 +1379,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "1 - 37:01",
+      "label": "Foul",
+      "position": 2220883,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 37:32",
       "label": "Ball out of play",
       "position": 2248783,
@@ -1487,13 +1397,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 37:29",
-      "label": "Shots off target",
-      "position": 2251833,
+      "gameTime": "1 - 37:32",
+      "label": "Shots on target",
+      "position": 2248783,
       "half": "1",
-      "confidence": 0.8,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "lfm2.5-vl-3b"
     },
     {
       "gameTime": "1 - 37:35",
@@ -1532,6 +1442,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "1 - 38:03",
+      "label": "Shots off target",
+      "position": 2282883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "1 - 38:04",
       "label": "Goal",
       "position": 2283883,
@@ -1550,13 +1469,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 38:14",
-      "label": "Shots on target",
-      "position": 2296833,
+      "gameTime": "1 - 38:15",
+      "label": "Shots off target",
+      "position": 2294883,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 38:32",
@@ -1568,15 +1487,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 38:34",
-      "label": "Shots on target",
-      "position": 2316833,
-      "half": "1",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "1 - 38:55",
       "label": "Ball out of play",
       "position": 2331783,
@@ -1584,6 +1494,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "1 - 39:07",
+      "label": "Shots off target",
+      "position": 2346883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 39:09",
@@ -1596,12 +1515,30 @@
     },
     {
       "gameTime": "1 - 39:40",
-      "label": "Kick-off",
-      "position": 2382833,
+      "label": "Foul",
+      "position": 2379883,
       "half": "1",
-      "confidence": 0.5,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 39:47",
+      "label": "Foul",
+      "position": 2386883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 40:25",
+      "label": "Kick-off",
+      "position": 2424883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 40:35",
@@ -1622,13 +1559,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 41:55",
-      "label": "Kick-off",
-      "position": 2517833,
+      "gameTime": "1 - 41:38",
+      "label": "Shots off target",
+      "position": 2497883,
       "half": "1",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 41:60",
+      "label": "Shots off target",
+      "position": 2519883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 42:09",
@@ -1640,40 +1586,22 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 42:08",
+      "gameTime": "1 - 42:41",
       "label": "Shots off target",
-      "position": 2530833,
+      "position": 2560883,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "1 - 42:16",
-      "label": "Foul",
-      "position": 2538833,
+      "gameTime": "1 - 42:55",
+      "label": "Shots off target",
+      "position": 2574883,
       "half": "1",
-      "confidence": 0.7,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 42:46",
-      "label": "Foul",
-      "position": 2568833,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "1 - 42:54",
-      "label": "Shots on target",
-      "position": 2576833,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 43:15",
@@ -1690,6 +1618,15 @@
       "position": 2603883,
       "half": "1",
       "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 43:25",
+      "label": "Kick-off",
+      "position": 2604883,
+      "half": "1",
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b"
     },
@@ -1712,13 +1649,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "1 - 44:20",
-      "label": "Shots on target",
-      "position": 2662833,
+      "gameTime": "1 - 44:21",
+      "label": "Shots off target",
+      "position": 2660883,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.8,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "1 - 44:27",
+      "label": "Foul",
+      "position": 2666883,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "1 - 44:35",
@@ -1757,27 +1703,18 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "2 - 00:03",
-      "label": "Shots on target",
-      "position": 5950,
-      "half": "2",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 00:13",
-      "label": "Shots on target",
-      "position": 15950,
-      "half": "2",
-      "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 00:44",
       "label": "Corner",
       "position": 44000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 00:45",
+      "label": "Kick-off",
+      "position": 45000,
       "half": "2",
       "confidence": 0.95,
       "visibility": "visible",
@@ -1791,15 +1728,6 @@
       "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 01:07",
-      "label": "Shots off target",
-      "position": 69950,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 01:20",
@@ -1832,6 +1760,15 @@
       "gameTime": "2 - 01:30",
       "label": "Foul",
       "position": 90000,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 01:31",
+      "label": "Shots off target",
+      "position": 91000,
       "half": "2",
       "confidence": 0.9,
       "visibility": "visible",
@@ -1883,22 +1820,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 02:55",
-      "label": "Shots on target",
-      "position": 177950,
-      "half": "2",
-      "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 03:00",
       "label": "Kick-off",
-      "position": 182950,
+      "position": 180000,
       "half": "2",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 03:03",
@@ -1910,24 +1838,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 03:04",
-      "label": "Shots on target",
-      "position": 186950,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 03:18",
-      "label": "Shots on target",
-      "position": 200950,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 03:30",
       "label": "Throw-in",
       "position": 210000,
@@ -1937,13 +1847,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 04:08",
-      "label": "Shots on target",
-      "position": 250950,
+      "gameTime": "2 - 03:47",
+      "label": "Kick-off",
+      "position": 227000,
       "half": "2",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 04:20",
@@ -1965,15 +1875,6 @@
     },
     {
       "gameTime": "2 - 04:30",
-      "label": "Kick-off",
-      "position": 272950,
-      "half": "2",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 04:30",
       "label": "Indirect free-kick",
       "position": 272950,
       "half": "2",
@@ -1989,15 +1890,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 04:39",
-      "label": "Shots on target",
-      "position": 281950,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 04:49",
@@ -2099,6 +1991,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "2 - 07:40",
+      "label": "Shots on target",
+      "position": 456900,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b"
+    },
+    {
       "gameTime": "2 - 08:00",
       "label": "Ball out of play",
       "position": 476900,
@@ -2106,6 +2007,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 08:12",
+      "label": "Shots off target",
+      "position": 492000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 08:16",
@@ -2153,15 +2063,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 08:30",
-      "label": "Yellow card",
-      "position": 512950,
-      "half": "2",
-      "confidence": 0.5,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 08:40",
       "label": "Ball out of play",
       "position": 516900,
@@ -2207,15 +2108,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 09:10",
-      "label": "Yellow card",
-      "position": 552950,
-      "half": "2",
-      "confidence": 0.6,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 09:18",
       "label": "Offside",
       "position": 560950,
@@ -2234,13 +2126,13 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "2 - 09:30",
-      "label": "Yellow card",
-      "position": 572950,
+      "gameTime": "2 - 09:45",
+      "label": "Kick-off",
+      "position": 585000,
       "half": "2",
-      "confidence": 0.6,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 09:44",
@@ -2279,13 +2171,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 10:37",
-      "label": "Shots on target",
-      "position": 640353,
+      "gameTime": "2 - 10:53",
+      "label": "Shots off target",
+      "position": 653403,
       "half": "2",
-      "confidence": 0.5,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 11:19",
@@ -2315,15 +2207,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 11:54",
-      "label": "Shots on target",
-      "position": 717353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 12:03",
       "label": "Goal",
       "position": 723403,
@@ -2333,15 +2216,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 12:08",
-      "label": "Shots on target",
-      "position": 731353,
-      "half": "2",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 12:11",
       "label": "Corner",
       "position": 731403,
@@ -2349,33 +2223,6 @@
       "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 12:16",
-      "label": "Shots on target",
-      "position": 739353,
-      "half": "2",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 12:24",
-      "label": "Shots on target",
-      "position": 747353,
-      "half": "2",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 12:32",
-      "label": "Shots on target",
-      "position": 755353,
-      "half": "2",
-      "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 12:39",
@@ -2389,20 +2236,11 @@
     {
       "gameTime": "2 - 12:39",
       "label": "Kick-off",
-      "position": 762353,
+      "position": 759403,
       "half": "2",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 12:40",
-      "label": "Shots on target",
-      "position": 763353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 12:55",
@@ -2421,24 +2259,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 12:53",
-      "label": "Shots on target",
-      "position": 776353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 13:01",
-      "label": "Shots on target",
-      "position": 784353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 13:24",
@@ -2486,15 +2306,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 13:45",
-      "label": "Shots on target",
-      "position": 828353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 13:59",
       "label": "Ball out of play",
       "position": 836303,
@@ -2502,6 +2313,15 @@
       "confidence": 0.9,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 14:09",
+      "label": "Shots off target",
+      "position": 849403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 14:19",
@@ -2522,13 +2342,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 14:33",
-      "label": "Shots on target",
-      "position": 876353,
+      "gameTime": "2 - 14:54",
+      "label": "Kick-off",
+      "position": 894403,
       "half": "2",
-      "confidence": 0.75,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 14:59",
@@ -2538,15 +2358,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 15:02",
-      "label": "Shots on target",
-      "position": 905353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 15:59",
@@ -2585,15 +2396,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 16:24",
-      "label": "Kick-off",
-      "position": 987353,
-      "half": "2",
-      "confidence": 0.5,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 16:36",
       "label": "Direct free-kick",
       "position": 996403,
@@ -2610,15 +2412,6 @@
       "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 16:39",
-      "label": "Shots on target",
-      "position": 1002353,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 16:59",
@@ -2639,6 +2432,42 @@
       "model": "qwen3.5-4b"
     },
     {
+      "gameTime": "2 - 17:25",
+      "label": "Shots off target",
+      "position": 1045403,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 17:42",
+      "label": "Shots off target",
+      "position": 1062403,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 17:49",
+      "label": "Shots off target",
+      "position": 1069403,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 17:54",
+      "label": "Kick-off",
+      "position": 1074403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 17:59",
       "label": "Ball out of play",
       "position": 1076303,
@@ -2646,33 +2475,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 17:56",
-      "label": "Shots off target",
-      "position": 1079353,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 18:03",
-      "label": "Shots on target",
-      "position": 1086353,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 18:04",
-      "label": "Shots off target",
-      "position": 1087353,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 18:35",
@@ -2684,13 +2486,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 18:47",
-      "label": "Shots on target",
-      "position": 1130353,
+      "gameTime": "2 - 18:55",
+      "label": "Shots off target",
+      "position": 1135403,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 18:59",
@@ -2711,15 +2513,6 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "2 - 18:59",
-      "label": "Shots off target",
-      "position": 1142353,
-      "half": "2",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 19:19",
       "label": "Ball out of play",
       "position": 1156303,
@@ -2727,6 +2520,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 19:18",
+      "label": "Shots off target",
+      "position": 1158403,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 19:28",
@@ -2738,13 +2540,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 19:41",
-      "label": "Shots on target",
-      "position": 1183673,
+      "gameTime": "2 - 19:50",
+      "label": "Shots off target",
+      "position": 1190403,
       "half": "2",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 20:08",
@@ -2774,15 +2576,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 20:23",
-      "label": "Shots on target",
-      "position": 1225673,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 20:54",
       "label": "Foul",
       "position": 1253723,
@@ -2792,29 +2585,20 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 20:58",
-      "label": "Kick-off",
-      "position": 1260673,
-      "half": "2",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 20:60",
-      "label": "Shots on target",
-      "position": 1262673,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 21:07",
       "label": "Foul",
       "position": 1266723,
       "half": "2",
       "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 21:17",
+      "label": "Shots off target",
+      "position": 1276723,
+      "half": "2",
+      "confidence": 0.85,
       "visibility": "visible",
       "model": "qwen3.5-4b"
     },
@@ -2828,6 +2612,15 @@
       "model": "qwen3.5-4b"
     },
     {
+      "gameTime": "2 - 21:43",
+      "label": "Kick-off",
+      "position": 1302723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 21:47",
       "label": "Goal",
       "position": 1306723,
@@ -2835,15 +2628,6 @@
       "confidence": 0.99,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 21:53",
-      "label": "Shots on target",
-      "position": 1315673,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 22:23",
@@ -2900,6 +2684,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "2 - 23:13",
+      "label": "Kick-off",
+      "position": 1392723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 23:15",
       "label": "Direct free-kick",
       "position": 1394723,
@@ -2916,15 +2709,6 @@
       "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 23:19",
-      "label": "Shots on target",
-      "position": 1401673,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 23:28",
@@ -2954,15 +2738,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 23:59",
-      "label": "Shots on target",
-      "position": 1441673,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 24:48",
       "label": "Ball out of play",
       "position": 1484623,
@@ -2990,13 +2765,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 24:45",
-      "label": "Shots on target",
-      "position": 1487673,
+      "gameTime": "2 - 24:48",
+      "label": "Shots off target",
+      "position": 1487723,
       "half": "2",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 24:53",
@@ -3017,13 +2792,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 25:05",
-      "label": "Shots on target",
-      "position": 1507673,
+      "gameTime": "2 - 25:03",
+      "label": "Shots off target",
+      "position": 1502723,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 25:09",
@@ -3042,6 +2817,15 @@
       "confidence": 0.95,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 25:28",
+      "label": "Kick-off",
+      "position": 1527723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 25:48",
@@ -3071,13 +2855,13 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "2 - 26:21",
-      "label": "Shots on target",
-      "position": 1583673,
+      "gameTime": "2 - 26:51",
+      "label": "Shots off target",
+      "position": 1610723,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 26:54",
@@ -3096,6 +2880,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 27:14",
+      "label": "Shots off target",
+      "position": 1633723,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 27:28",
@@ -3125,40 +2918,31 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 27:43",
-      "label": "Kick-off",
-      "position": 1665673,
+      "gameTime": "2 - 27:57",
+      "label": "Shots off target",
+      "position": 1676723,
       "half": "2",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 27:45",
+      "gameTime": "2 - 28:08",
       "label": "Shots on target",
-      "position": 1667673,
+      "position": 1684623,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 27:55",
-      "label": "Shots on target",
-      "position": 1677673,
+      "gameTime": "2 - 28:32",
+      "label": "Shots off target",
+      "position": 1711723,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 28:01",
-      "label": "Shots on target",
-      "position": 1683673,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 28:48",
@@ -3181,20 +2965,11 @@
     {
       "gameTime": "2 - 29:09",
       "label": "Kick-off",
-      "position": 1751633,
-      "half": "2",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 29:15",
-      "label": "Shots on target",
-      "position": 1757673,
+      "position": 1748683,
       "half": "2",
       "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 29:29",
@@ -3233,15 +3008,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 29:56",
-      "label": "Shots on target",
-      "position": 1798633,
-      "half": "2",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 30:09",
       "label": "Ball out of play",
       "position": 1805583,
@@ -3249,24 +3015,6 @@
       "confidence": 0.9,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 30:06",
-      "label": "Shots on target",
-      "position": 1808633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 30:18",
-      "label": "Shots on target",
-      "position": 1820633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 30:29",
@@ -3278,13 +3026,13 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 30:28",
-      "label": "Shots on target",
-      "position": 1830633,
+      "gameTime": "2 - 30:29",
+      "label": "Shots off target",
+      "position": 1828683,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 30:39",
@@ -3296,24 +3044,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 30:39",
-      "label": "Kick-off",
-      "position": 1841633,
-      "half": "2",
-      "confidence": 0.5,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 30:41",
-      "label": "Shots on target",
-      "position": 1843633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 30:44",
       "label": "Goal",
       "position": 1843683,
@@ -3321,24 +3051,6 @@
       "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 30:49",
-      "label": "Shots on target",
-      "position": 1851633,
-      "half": "2",
-      "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 30:51",
-      "label": "Yellow card",
-      "position": 1853633,
-      "half": "2",
-      "confidence": 0.6,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 30:54",
@@ -3368,6 +3080,33 @@
       "model": "qwen3.5-4b"
     },
     {
+      "gameTime": "2 - 31:04",
+      "label": "Shots off target",
+      "position": 1863683,
+      "half": "2",
+      "confidence": 0.8,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 31:09",
+      "label": "Shots on target",
+      "position": 1865583,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 31:09",
+      "label": "Kick-off",
+      "position": 1868683,
+      "half": "2",
+      "confidence": 0.4,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 31:19",
       "label": "Clearance",
       "position": 1878683,
@@ -3378,12 +3117,21 @@
     },
     {
       "gameTime": "2 - 31:24",
-      "label": "Shots on target",
-      "position": 1886633,
+      "label": "Shots off target",
+      "position": 1883683,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.7,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 31:31",
+      "label": "Shots off target",
+      "position": 1890683,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 31:34",
@@ -3406,20 +3154,11 @@
     {
       "gameTime": "2 - 32:09",
       "label": "Kick-off",
-      "position": 1931633,
+      "position": 1928683,
       "half": "2",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 32:11",
-      "label": "Shots on target",
-      "position": 1933633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 32:29",
@@ -3449,22 +3188,13 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 33:06",
+      "gameTime": "2 - 33:29",
       "label": "Shots on target",
-      "position": 1988633,
+      "position": 2005583,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 33:19",
-      "label": "Shots on target",
-      "position": 2001633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "lfm2.5-vl-3b"
     },
     {
       "gameTime": "2 - 33:38",
@@ -3478,11 +3208,11 @@
     {
       "gameTime": "2 - 33:39",
       "label": "Kick-off",
-      "position": 2021633,
+      "position": 2018683,
       "half": "2",
-      "confidence": 0.0,
-      "visibility": "not shown",
-      "model": "minicpm-v-4.6"
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 33:49",
@@ -3492,15 +3222,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 33:45",
-      "label": "Shots off target",
-      "position": 2027633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 34:09",
@@ -3530,20 +3251,20 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 34:48",
-      "label": "Shots on target",
-      "position": 2090633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 34:53",
       "label": "Goal",
       "position": 2092683,
       "half": "2",
       "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 34:54",
+      "label": "Kick-off",
+      "position": 2093683,
+      "half": "2",
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b"
     },
@@ -3557,22 +3278,13 @@
       "model": "minicpm-v-4.6"
     },
     {
-      "gameTime": "2 - 35:11",
-      "label": "Shots on target",
-      "position": 2113633,
+      "gameTime": "2 - 35:12",
+      "label": "Shots off target",
+      "position": 2111683,
       "half": "2",
-      "confidence": 0.95,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 35:21",
-      "label": "Shots on target",
-      "position": 2123633,
-      "half": "2",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 35:29",
@@ -3584,13 +3296,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 35:29",
-      "label": "Shots on target",
-      "position": 2131633,
+      "gameTime": "2 - 35:26",
+      "label": "Shots off target",
+      "position": 2125683,
       "half": "2",
-      "confidence": 0.95,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
+    },
+    {
+      "gameTime": "2 - 35:37",
+      "label": "Shots off target",
+      "position": 2136683,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 35:49",
@@ -3600,6 +3321,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 35:57",
+      "label": "Shots off target",
+      "position": 2156683,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 35:58",
@@ -3620,6 +3350,15 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "2 - 36:30",
+      "label": "Shots off target",
+      "position": 2189683,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 36:39",
       "label": "Direct free-kick",
       "position": 2198683,
@@ -3638,24 +3377,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 36:48",
-      "label": "Shots on target",
-      "position": 2210633,
-      "half": "2",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 36:52",
-      "label": "Yellow card",
-      "position": 2214633,
-      "half": "2",
-      "confidence": 0.7,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 37:09",
       "label": "Ball out of play",
       "position": 2225583,
@@ -3663,6 +3384,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 37:17",
+      "label": "Kick-off",
+      "position": 2236683,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 37:24",
@@ -3674,31 +3404,22 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 37:24",
+      "gameTime": "2 - 38:09",
       "label": "Kick-off",
-      "position": 2246633,
+      "position": 2288683,
       "half": "2",
-      "confidence": 0.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 37:42",
-      "label": "Shots on target",
-      "position": 2264633,
+      "gameTime": "2 - 38:21",
+      "label": "Shots off target",
+      "position": 2300683,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 38:23",
-      "label": "Shots on target",
-      "position": 2305633,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 38:28",
@@ -3719,15 +3440,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 38:39",
-      "label": "Yellow card",
-      "position": 2321633,
-      "half": "2",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 38:49",
       "label": "Ball out of play",
       "position": 2325583,
@@ -3735,24 +3447,6 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
-    },
-    {
-      "gameTime": "2 - 38:54",
-      "label": "Kick-off",
-      "position": 2336553,
-      "half": "2",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 38:59",
-      "label": "Shots off target",
-      "position": 2341553,
-      "half": "2",
-      "confidence": 0.8,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     },
     {
       "gameTime": "2 - 39:14",
@@ -3783,21 +3477,21 @@
     },
     {
       "gameTime": "2 - 39:39",
-      "label": "Shots on target",
-      "position": 2381553,
+      "label": "Kick-off",
+      "position": 2378603,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 39:47",
-      "label": "Shots on target",
-      "position": 2389553,
+      "gameTime": "2 - 39:44",
+      "label": "Shots off target",
+      "position": 2383603,
       "half": "2",
-      "confidence": 0.9,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 39:54",
@@ -3809,15 +3503,6 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 40:26",
-      "label": "Shots on target",
-      "position": 2428553,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 40:34",
       "label": "Ball out of play",
       "position": 2430503,
@@ -3827,8 +3512,26 @@
       "model": "lfm2.5-vl-3b"
     },
     {
+      "gameTime": "2 - 40:39",
+      "label": "Shots off target",
+      "position": 2438603,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 40:54",
       "label": "Ball out of play",
+      "position": 2450503,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 40:54",
+      "label": "Shots on target",
       "position": 2450503,
       "half": "2",
       "confidence": 0.85,
@@ -3845,6 +3548,15 @@
       "model": "qwen3.5-4b"
     },
     {
+      "gameTime": "2 - 41:09",
+      "label": "Kick-off",
+      "position": 2468603,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
+    },
+    {
       "gameTime": "2 - 41:54",
       "label": "Direct free-kick",
       "position": 2513603,
@@ -3854,24 +3566,6 @@
       "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 41:54",
-      "label": "Kick-off",
-      "position": 2516553,
-      "half": "2",
-      "confidence": 0.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 42:02",
-      "label": "Shots on target",
-      "position": 2524553,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
       "gameTime": "2 - 42:14",
       "label": "Ball out of play",
       "position": 2530503,
@@ -3879,6 +3573,15 @@
       "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b"
+    },
+    {
+      "gameTime": "2 - 42:13",
+      "label": "Shots off target",
+      "position": 2532603,
+      "half": "2",
+      "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 42:24",
@@ -3908,40 +3611,22 @@
       "model": "lfm2.5-vl-3b"
     },
     {
-      "gameTime": "2 - 42:45",
-      "label": "Shots on target",
-      "position": 2567553,
+      "gameTime": "2 - 42:39",
+      "label": "Kick-off",
+      "position": 2558603,
       "half": "2",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
-      "gameTime": "2 - 42:57",
+      "gameTime": "2 - 43:33",
       "label": "Shots off target",
-      "position": 2579553,
+      "position": 2612603,
       "half": "2",
-      "confidence": 0.85,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 43:25",
-      "label": "Shots on target",
-      "position": 2607553,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
-    },
-    {
-      "gameTime": "2 - 43:42",
-      "label": "Shots off target",
-      "position": 2624553,
-      "half": "2",
-      "confidence": 0.85,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
+      "model": "qwen3.5-4b"
     },
     {
       "gameTime": "2 - 43:54",
@@ -3996,15 +3681,6 @@
       "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b"
-    },
-    {
-      "gameTime": "2 - 44:59",
-      "label": "Shots on target",
-      "position": 2701553,
-      "half": "2",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6"
     }
   ]
 }

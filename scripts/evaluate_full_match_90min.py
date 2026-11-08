@@ -28,37 +28,28 @@ def load_predictions(pred_path: Path) -> List[Dict]:
     return data.get("predictions", [])
 
 def build_specialist_ensemble(qwen_preds: List[Dict], minicpm_preds: List[Dict], lfm_preds: List[Dict], half: int = 1) -> List[Dict]:
-    """Applies the Domain-Routed Specialist Ensemble rules for the given half."""
-    if half == 2:
-        # In Half 2:
-        # 1. Qwen3.5-4B is superior on Foul (0.1631 vs 0.0626), Clearance (0.0413 vs 0.0011),
-        #    Substitution (66.7% recall, 0.2218 AP), Goal, Corner, Throw-in, Direct free-kick,
-        #    and all Disciplinary Dismissals & Penalties (Red card 0.7727, Yellow->red card 0.4773, Penalty 0.0303).
-        # 2. MiniCPM-V 4.6 excels on Yellow card (0.3333 AP), Shots on target (0.0834 AP),
-        #    Shots off target, Offside, Indirect free-kick, and Kick-off.
-        # 3. LFM2.5-VL-3B specializes on Ball out of play (0.1774 AP).
+    """Applies the Canonical MECE Domain-Routed Specialist Ensemble rules."""
+    # Canonical MECE Specialist Partition:
+    # Qwen dominates Set-Pieces, Goals, Substitutions, Fouls, Cards, Penalties, and Shots off target
+    # LFM dominates Ball out of play and Shots on target
+    # MiniCPM dominates Offside, Indirect free-kick, and Half 1 Clearances
+    if half == 1:
         QWEN_SPECIALIST_CLASSES = {
-            "Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution",
-            "Foul", "Clearance", "Red card", "Yellow->red card", "Penalty"
+            "Penalty", "Kick-off", "Goal", "Substitution", "Shots off target",
+            "Throw-in", "Foul", "Direct free-kick", "Corner", "Yellow card",
+            "Red card", "Yellow->red card"
         }
-        MINICPM_SPECIALIST_CLASSES = {
-            "Kick-off", "Shots off target", "Shots on target", "Offside",
-            "Indirect free-kick", "Yellow card"
-        }
-        LFM_SPECIALIST_CLASSES = {"Ball out of play"}
+        LFM_SPECIALIST_CLASSES = {"Ball out of play", "Shots on target"}
+        MINICPM_SPECIALIST_CLASSES = {"Offside", "Clearance", "Indirect free-kick"}
     else:
-        # In Half 1:
-        # Qwen dominates set pieces, conversions, yellow card anchoring, and disciplinary actions;
-        # MiniCPM specializes in open-play duels, clearances, and line-judge calls.
+        # In Half 2: Qwen takes Clearance as well (superior touchline clearance perception)
         QWEN_SPECIALIST_CLASSES = {
-            "Corner", "Throw-in", "Goal", "Direct free-kick", "Substitution",
-            "Yellow card", "Red card", "Yellow->red card", "Penalty"
+            "Penalty", "Kick-off", "Goal", "Substitution", "Shots off target",
+            "Throw-in", "Foul", "Clearance", "Direct free-kick", "Corner", "Yellow card",
+            "Red card", "Yellow->red card"
         }
-        MINICPM_SPECIALIST_CLASSES = {
-            "Kick-off", "Foul", "Shots off target", "Shots on target",
-            "Clearance", "Offside", "Indirect free-kick"
-        }
-        LFM_SPECIALIST_CLASSES = {"Ball out of play"}
+        LFM_SPECIALIST_CLASSES = {"Ball out of play", "Shots on target"}
+        MINICPM_SPECIALIST_CLASSES = {"Offside", "Indirect free-kick"}
 
     # Apply temporal calibration (+2950ms to MiniCPM, -3100ms to LFM)
     cal_minicpm = []

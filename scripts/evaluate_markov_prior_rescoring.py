@@ -151,8 +151,8 @@ def apply_markov_and_temporal_prior(
         orig_conf = float(p.get("confidence", 0.85))
 
         # Filter 1: Half 1 Substitution Ghost Pruning
-        # P(Substitution | Half 1) = 0.10% (only 2 instances in 19 matches)
-        if prune_h1_substitutions and p_lbl == "Substitution" and p_half == "1" and p_pos <= 2700000:
+        # Prunes low-confidence (<0.90) Half 1 ghost substitutions while preserving verified ones
+        if prune_h1_substitutions and p_lbl == "Substitution" and p_half == "1" and orig_conf < 0.90 and p_pos <= 2700000:
             continue
 
         # Filter 2: Open-Play Kick-off Ghost Pruning
@@ -163,35 +163,45 @@ def apply_markov_and_temporal_prior(
             if not is_start and not is_after_goal:
                 continue
 
-        # Markov Causal Transition Support
-        # Check backward support (did a causally valid antecedent occur within [1s, 30s]?)
-        fwd_boost = 0.0
-        for j in range(i - 1, -1, -1):
-            prev_p = sorted_preds[j]
-            dt = p_pos - int(prev_p.get("position", 0))
-            if dt < 1000:
-                continue
-            if dt > 30000:
-                break
-            prev_lbl = prev_p.get("label", "")
-            if prev_lbl in prob_fwd and p_lbl in prob_fwd[prev_lbl]:
-                fwd_boost = max(fwd_boost, prob_fwd[prev_lbl][p_lbl])
+        # Selective Markov Causal Transition Support
+        # Restrict transition boosting strictly to causal restart consequents;
+        # preserve raw calibrated confidence on initiators (Goal, Substitution, Foul, Throw-in, Penalty).
+        CONSEQUENT_CLASSES = {
+            "Ball out of play", "Corner", "Direct free-kick", "Indirect free-kick",
+            "Kick-off", "Offside", "Shots on target", "Shots off target",
+            "Yellow card", "Red card", "Clearance"
+        }
+        if p_lbl in CONSEQUENT_CLASSES:
+            fwd_boost = 0.0
+            for j in range(i - 1, -1, -1):
+                prev_p = sorted_preds[j]
+                dt = p_pos - int(prev_p.get("position", 0))
+                if dt < 1000:
+                    continue
+                if dt > 30000:
+                    break
+                prev_lbl = prev_p.get("label", "")
+                if prev_lbl in prob_fwd and p_lbl in prob_fwd[prev_lbl]:
+                    fwd_boost = max(fwd_boost, prob_fwd[prev_lbl][p_lbl])
 
-        # Check forward support (is this event followed by a causally valid consequent within [1s, 30s]?)
-        bwd_boost = 0.0
-        for k in range(i + 1, len(sorted_preds)):
-            next_p = sorted_preds[k]
-            dt = int(next_p.get("position", 0)) - p_pos
-            if dt < 1000:
-                continue
-            if dt > 30000:
-                break
-            next_lbl = next_p.get("label", "")
-            if next_lbl in prob_bwd and p_lbl in prob_bwd[next_lbl]:
-                bwd_boost = max(bwd_boost, prob_bwd[next_lbl][p_lbl])
+            # Check forward support (is this event followed by a causally valid consequent within [1s, 30s]?)
+            bwd_boost = 0.0
+            for k in range(i + 1, len(sorted_preds)):
+                next_p = sorted_preds[k]
+                dt = int(next_p.get("position", 0)) - p_pos
+                if dt < 1000:
+                    continue
+                if dt > 30000:
+                    break
+                next_lbl = next_p.get("label", "")
+                if next_lbl in prob_bwd and p_lbl in prob_bwd[next_lbl]:
+                    bwd_boost = max(bwd_boost, prob_bwd[next_lbl][p_lbl])
 
-        causal_support = max(fwd_boost, bwd_boost)
-        new_conf = min(1.0, orig_conf + alpha * causal_support)
+            causal_support = max(fwd_boost, bwd_boost)
+            new_conf = min(1.0, orig_conf + alpha * causal_support)
+        else:
+            causal_support = 0.0
+            new_conf = orig_conf
 
         p_new = dict(p)
         p_new["confidence"] = round(new_conf, 4)

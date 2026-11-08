@@ -2,14 +2,44 @@
   "UrlLocal": "england_epl/2015-2016/2015-08-16 - 18-00 Manchester City 3 - 0 Chelsea/",
   "predictions": [
     {
+      "gameTime": "1 - 00:00",
+      "label": "Shots on target",
+      "position": 0,
+      "half": "1",
+      "confidence": 0.8608,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0722
+    },
+    {
+      "gameTime": "1 - 00:21",
+      "label": "Shots off target",
+      "position": 21000,
+      "half": "1",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
       "gameTime": "1 - 00:40",
       "label": "Ball out of play",
       "position": 36900,
       "half": "1",
-      "confidence": 0.9811,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.8742
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "1 - 00:55",
+      "label": "Shots off target",
+      "position": 55000,
+      "half": "1",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "1 - 00:53",
@@ -19,17 +49,7 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1829
-    },
-    {
-      "gameTime": "1 - 00:59",
-      "label": "Foul",
-      "position": 61950,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.25
+      "causal_support": 0.1626
     },
     {
       "gameTime": "1 - 01:20",
@@ -39,16 +59,26 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.5781
+      "causal_support": 0.911
     },
     {
       "gameTime": "1 - 02:20",
       "label": "Ball out of play",
       "position": 136900,
       "half": "1",
-      "confidence": 0.9,
+      "confidence": 0.9892,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
+      "causal_support": 0.5946
+    },
+    {
+      "gameTime": "1 - 02:18",
+      "label": "Foul",
+      "position": 138000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -56,49 +86,29 @@
       "label": "Ball out of play",
       "position": 156900,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.9392,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
-    },
-    {
-      "gameTime": "1 - 03:08",
-      "label": "Shots on target",
-      "position": 190950,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
+      "causal_support": 0.5946
     },
     {
       "gameTime": "1 - 03:20",
       "label": "Ball out of play",
       "position": 196900,
       "half": "1",
-      "confidence": 0.9061,
+      "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 03:18",
-      "label": "Shots on target",
-      "position": 200950,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
-    },
-    {
-      "gameTime": "1 - 03:46",
+      "gameTime": "1 - 03:50",
       "label": "Shots off target",
-      "position": 228950,
+      "position": 230000,
       "half": "1",
-      "confidence": 0.9797,
+      "confidence": 0.8797,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
+      "model": "qwen3.5-4b",
       "causal_support": 0.1982
     },
     {
@@ -110,16 +120,6 @@
       "visibility": "visible",
       "model": "minicpm-v-4.6",
       "causal_support": 0.1103
-    },
-    {
-      "gameTime": "1 - 04:01",
-      "label": "Shots off target",
-      "position": 243950,
-      "half": "1",
-      "confidence": 0.9797,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
     },
     {
       "gameTime": "1 - 04:20",
@@ -156,10 +156,10 @@
       "label": "Ball out of play",
       "position": 316900,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.9392,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.5946
     },
     {
       "gameTime": "1 - 05:40",
@@ -176,10 +176,10 @@
       "label": "Corner",
       "position": 358000,
       "half": "1",
-      "confidence": 0.9974,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.1158
+      "causal_support": 0.268
     },
     {
       "gameTime": "1 - 06:05",
@@ -192,6 +192,16 @@
       "causal_support": 0.4505
     },
     {
+      "gameTime": "1 - 06:20",
+      "label": "Shots off target",
+      "position": 380000,
+      "half": "1",
+      "confidence": 0.9851,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2342
+    },
+    {
       "gameTime": "1 - 06:40",
       "label": "Ball out of play",
       "position": 396900,
@@ -199,7 +209,17 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.8742
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "1 - 06:41",
+      "label": "Shots off target",
+      "position": 401000,
+      "half": "1",
+      "confidence": 0.9547,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0314
     },
     {
       "gameTime": "1 - 06:50",
@@ -212,16 +232,6 @@
       "causal_support": 0.1829
     },
     {
-      "gameTime": "1 - 06:52",
-      "label": "Foul",
-      "position": 414950,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.25
-    },
-    {
       "gameTime": "1 - 07:05",
       "label": "Clearance",
       "position": 427950,
@@ -232,14 +242,14 @@
       "causal_support": 0.1829
     },
     {
-      "gameTime": "1 - 07:12",
+      "gameTime": "1 - 07:14",
       "label": "Foul",
-      "position": 434950,
+      "position": 434000,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2632
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 07:20",
@@ -252,34 +262,54 @@
       "causal_support": 0.5781
     },
     {
-      "gameTime": "1 - 07:19",
-      "label": "Shots on target",
-      "position": 441950,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.3684
-    },
-    {
       "gameTime": "1 - 07:35",
       "label": "Direct free-kick",
       "position": 455000,
       "half": "1",
-      "confidence": 0.9891,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0609
+      "causal_support": 0.1443
+    },
+    {
+      "gameTime": "1 - 07:49",
+      "label": "Shots off target",
+      "position": 469000,
+      "half": "1",
+      "confidence": 0.9368,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2456
+    },
+    {
+      "gameTime": "1 - 08:15",
+      "label": "Foul",
+      "position": 495000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 08:40",
       "label": "Direct free-kick",
       "position": 520000,
       "half": "1",
-      "confidence": 0.98,
+      "confidence": 0.9961,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0
+      "causal_support": 0.1075
+    },
+    {
+      "gameTime": "1 - 09:00",
+      "label": "Shots on target",
+      "position": 536900,
+      "half": "1",
+      "confidence": 0.8763,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.1754
     },
     {
       "gameTime": "1 - 09:05",
@@ -299,47 +329,57 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.5781
+      "causal_support": 0.5946
     },
     {
-      "gameTime": "1 - 09:23",
+      "gameTime": "1 - 09:38",
       "label": "Shots on target",
-      "position": 565950,
+      "position": 575183,
       "half": "1",
-      "confidence": 0.9645,
+      "confidence": 0.856,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.04
     },
     {
-      "gameTime": "1 - 09:47",
-      "label": "Shots on target",
-      "position": 589950,
+      "gameTime": "1 - 09:42",
+      "label": "Foul",
+      "position": 582000,
       "half": "1",
-      "confidence": 0.8145,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 09:53",
-      "label": "Shots on target",
-      "position": 595950,
+      "gameTime": "1 - 09:51",
+      "label": "Foul",
+      "position": 591283,
       "half": "1",
-      "confidence": 0.9117,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 10:14",
+      "label": "Shots off target",
+      "position": 614000,
+      "half": "1",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "1 - 10:38",
       "label": "Ball out of play",
       "position": 635183,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
     },
     {
       "gameTime": "1 - 11:03",
@@ -382,24 +422,24 @@
       "causal_support": 0.4561
     },
     {
+      "gameTime": "1 - 11:35",
+      "label": "Foul",
+      "position": 695283,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
       "gameTime": "1 - 11:53",
       "label": "Corner",
       "position": 713283,
       "half": "1",
-      "confidence": 0.9871,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2473
-    },
-    {
-      "gameTime": "1 - 11:59",
-      "label": "Shots on target",
-      "position": 722233,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 12:07",
@@ -416,30 +456,40 @@
       "label": "Goal",
       "position": 730283,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3478
+      "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 12:09",
-      "label": "Shots on target",
-      "position": 732233,
+      "gameTime": "1 - 12:38",
+      "label": "Kick-off",
+      "position": 758283,
       "half": "1",
-      "confidence": 0.9811,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2072
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 12:58",
+      "label": "Shots on target",
+      "position": 775183,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 13:07",
       "label": "Corner",
       "position": 787283,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9912,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2473
+      "causal_support": 0.0745
     },
     {
       "gameTime": "1 - 13:38",
@@ -450,26 +500,6 @@
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
       "causal_support": 0.4505
-    },
-    {
-      "gameTime": "1 - 13:33",
-      "label": "Shots on target",
-      "position": 816233,
-      "half": "1",
-      "confidence": 0.9811,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2072
-    },
-    {
-      "gameTime": "1 - 13:41",
-      "label": "Shots on target",
-      "position": 824233,
-      "half": "1",
-      "confidence": 0.9617,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
     },
     {
       "gameTime": "1 - 13:58",
@@ -492,34 +522,24 @@
       "causal_support": 0.8742
     },
     {
-      "gameTime": "1 - 14:14",
-      "label": "Shots off target",
-      "position": 857233,
-      "half": "1",
-      "confidence": 0.0047,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0314
-    },
-    {
       "gameTime": "1 - 14:16",
       "label": "Clearance",
       "position": 859233,
       "half": "1",
-      "confidence": 0.8744,
+      "confidence": 0.8774,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1626
+      "causal_support": 0.1829
     },
     {
       "gameTime": "1 - 14:24",
       "label": "Clearance",
       "position": 867233,
       "half": "1",
-      "confidence": 0.8744,
+      "confidence": 0.8774,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1626
+      "causal_support": 0.1829
     },
     {
       "gameTime": "1 - 14:28",
@@ -527,6 +547,16 @@
       "position": 868283,
       "half": "1",
       "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 14:37",
+      "label": "Foul",
+      "position": 877283,
+      "half": "1",
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b",
       "causal_support": 0.0
@@ -546,9 +576,49 @@
       "label": "Ball out of play",
       "position": 935183,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.8531,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0206
+    },
+    {
+      "gameTime": "1 - 15:38",
+      "label": "Kick-off",
+      "position": 938283,
+      "half": "1",
+      "confidence": 0.9562,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0412
+    },
+    {
+      "gameTime": "1 - 15:46",
+      "label": "Shots off target",
+      "position": 946283,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 15:51",
+      "label": "Shots off target",
+      "position": 951283,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 15:52",
+      "label": "Foul",
+      "position": 952283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -556,19 +626,59 @@
       "label": "Ball out of play",
       "position": 955183,
       "half": "1",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "1 - 16:08",
+      "label": "Shots off target",
+      "position": 968283,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 16:13",
+      "label": "Shots off target",
+      "position": 973283,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "1 - 16:18",
       "label": "Ball out of play",
       "position": 975183,
       "half": "1",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "1 - 16:18",
+      "label": "Shots off target",
+      "position": 978283,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 16:20",
+      "label": "Foul",
+      "position": 980283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -576,9 +686,29 @@
       "label": "Ball out of play",
       "position": 995183,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "1 - 16:42",
+      "label": "Shots off target",
+      "position": 1002283,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 16:53",
+      "label": "Foul",
+      "position": 1013283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -586,19 +716,49 @@
       "label": "Ball out of play",
       "position": 1015183,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "1 - 17:10",
+      "label": "Shots off target",
+      "position": 1030283,
+      "half": "1",
+      "confidence": 0.9162,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1081
     },
     {
       "gameTime": "1 - 17:58",
       "label": "Ball out of play",
       "position": 1075183,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.8517,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0114
+    },
+    {
+      "gameTime": "1 - 18:21",
+      "label": "Foul",
+      "position": 1101283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 18:35",
+      "label": "Foul",
+      "position": 1115283,
+      "half": "1",
+      "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -616,20 +776,10 @@
       "label": "Goal",
       "position": 1148283,
       "half": "1",
-      "confidence": 0.9853,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0351
-    },
-    {
-      "gameTime": "1 - 19:08",
-      "label": "Shots off target",
-      "position": 1151233,
-      "half": "1",
-      "confidence": 0.8297,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 19:26",
@@ -652,16 +802,6 @@
       "causal_support": 0.0745
     },
     {
-      "gameTime": "1 - 19:30",
-      "label": "Shots on target",
-      "position": 1173393,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0641
-    },
-    {
       "gameTime": "1 - 19:42",
       "label": "Ball out of play",
       "position": 1179343,
@@ -669,17 +809,27 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.911
+      "causal_support": 0.5781
+    },
+    {
+      "gameTime": "1 - 19:41",
+      "label": "Kick-off",
+      "position": 1181443,
+      "half": "1",
+      "confidence": 0.9049,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0328
     },
     {
       "gameTime": "1 - 20:02",
       "label": "Ball out of play",
       "position": 1199343,
       "half": "1",
-      "confidence": 0.9367,
+      "confidence": 0.9392,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.5781
+      "causal_support": 0.5946
     },
     {
       "gameTime": "1 - 20:42",
@@ -696,10 +846,30 @@
       "label": "Corner",
       "position": 1252443,
       "half": "1",
-      "confidence": 0.9871,
+      "confidence": 0.9902,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2473
+      "causal_support": 0.268
+    },
+    {
+      "gameTime": "1 - 20:53",
+      "label": "Shots off target",
+      "position": 1253443,
+      "half": "1",
+      "confidence": 0.9851,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2342
+    },
+    {
+      "gameTime": "1 - 20:56",
+      "label": "Foul",
+      "position": 1256443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 21:02",
@@ -712,44 +882,34 @@
       "causal_support": 0.9706
     },
     {
-      "gameTime": "1 - 20:56",
-      "label": "Foul",
-      "position": 1259393,
-      "half": "1",
-      "confidence": 0.6135,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0901
-    },
-    {
-      "gameTime": "1 - 21:02",
-      "label": "Foul",
-      "position": 1265393,
-      "half": "1",
-      "confidence": 0.8135,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0901
-    },
-    {
       "gameTime": "1 - 21:07",
       "label": "Corner",
       "position": 1267443,
       "half": "1",
-      "confidence": 0.9871,
+      "confidence": 0.9902,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2473
+      "causal_support": 0.268
     },
     {
-      "gameTime": "1 - 21:06",
-      "label": "Shots on target",
-      "position": 1269393,
+      "gameTime": "1 - 21:10",
+      "label": "Shots off target",
+      "position": 1270443,
       "half": "1",
-      "confidence": 0.7311,
+      "confidence": 0.9351,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2072
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2342
+    },
+    {
+      "gameTime": "1 - 21:17",
+      "label": "Shots off target",
+      "position": 1277443,
+      "half": "1",
+      "confidence": 0.9351,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2342
     },
     {
       "gameTime": "1 - 21:22",
@@ -776,10 +936,10 @@
       "label": "Throw-in",
       "position": 1310443,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.6842
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 22:02",
@@ -812,44 +972,44 @@
       "causal_support": 0.8742
     },
     {
+      "gameTime": "1 - 22:41",
+      "label": "Foul",
+      "position": 1361443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
       "gameTime": "1 - 22:43",
       "label": "Indirect free-kick",
       "position": 1366393,
       "half": "1",
-      "confidence": 0.824,
+      "confidence": 0.9018,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.16
+      "causal_support": 0.6788
     },
     {
-      "gameTime": "1 - 22:45",
+      "gameTime": "1 - 22:52",
       "label": "Foul",
-      "position": 1368393,
+      "position": 1372443,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.7081
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 22:51",
       "label": "Clearance",
       "position": 1374393,
       "half": "1",
-      "confidence": 0.9274,
+      "confidence": 0.9244,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1829
-    },
-    {
-      "gameTime": "1 - 22:53",
-      "label": "Foul",
-      "position": 1376393,
-      "half": "1",
-      "confidence": 0.9062,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.7081
+      "causal_support": 0.1626
     },
     {
       "gameTime": "1 - 22:57",
@@ -866,20 +1026,10 @@
       "label": "Clearance",
       "position": 1382393,
       "half": "1",
-      "confidence": 0.8774,
+      "confidence": 0.8744,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1829
-    },
-    {
-      "gameTime": "1 - 23:01",
-      "label": "Foul",
-      "position": 1384393,
-      "half": "1",
-      "confidence": 0.9375,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.25
+      "causal_support": 0.1626
     },
     {
       "gameTime": "1 - 23:56",
@@ -892,16 +1042,6 @@
       "causal_support": 0.0015
     },
     {
-      "gameTime": "1 - 23:58",
-      "label": "Shots on target",
-      "position": 1441393,
-      "half": "1",
-      "confidence": 0.9145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
       "gameTime": "1 - 24:02",
       "label": "Clearance",
       "position": 1445393,
@@ -912,14 +1052,14 @@
       "causal_support": 0.1103
     },
     {
-      "gameTime": "1 - 24:04",
+      "gameTime": "1 - 24:22",
       "label": "Shots on target",
-      "position": 1447393,
+      "position": 1459343,
       "half": "1",
-      "confidence": 0.9617,
+      "confidence": 0.8596,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0641
     },
     {
       "gameTime": "1 - 24:22",
@@ -956,50 +1096,40 @@
       "label": "Indirect free-kick",
       "position": 1489393,
       "half": "1",
-      "confidence": 0.9226,
+      "confidence": 0.9012,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1505
+      "causal_support": 0.0078
     },
     {
-      "gameTime": "1 - 24:49",
-      "label": "Shots on target",
-      "position": 1492393,
+      "gameTime": "1 - 25:33",
+      "label": "Foul",
+      "position": 1533443,
       "half": "1",
-      "confidence": 0.9654,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1029
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 25:34",
       "label": "Indirect free-kick",
       "position": 1537393,
       "half": "1",
-      "confidence": 0.974,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.16
-    },
-    {
-      "gameTime": "1 - 25:36",
-      "label": "Foul",
-      "position": 1539393,
-      "half": "1",
-      "confidence": 0.9309,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2059
+      "causal_support": 0.6788
     },
     {
       "gameTime": "1 - 25:44",
       "label": "Clearance",
       "position": 1547393,
       "half": "1",
-      "confidence": 0.9065,
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.043
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 25:52",
@@ -1012,16 +1142,6 @@
       "causal_support": 0.1103
     },
     {
-      "gameTime": "1 - 26:07",
-      "label": "Shots on target",
-      "position": 1570393,
-      "half": "1",
-      "confidence": 0.9096,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0641
-    },
-    {
       "gameTime": "1 - 26:22",
       "label": "Ball out of play",
       "position": 1579343,
@@ -1030,6 +1150,16 @@
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
       "causal_support": 0.8742
+    },
+    {
+      "gameTime": "1 - 26:20",
+      "label": "Shots off target",
+      "position": 1580443,
+      "half": "1",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "1 - 26:32",
@@ -1046,10 +1176,10 @@
       "label": "Ball out of play",
       "position": 1599343,
       "half": "1",
-      "confidence": 0.9367,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.5781
+      "causal_support": 0.911
     },
     {
       "gameTime": "1 - 26:54",
@@ -1062,24 +1192,34 @@
       "causal_support": 0.0547
     },
     {
-      "gameTime": "1 - 26:57",
-      "label": "Shots on target",
-      "position": 1620393,
-      "half": "1",
-      "confidence": 0.9547,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0312
-    },
-    {
       "gameTime": "1 - 28:02",
       "label": "Ball out of play",
       "position": 1679343,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.8516,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.0108
+    },
+    {
+      "gameTime": "1 - 28:22",
+      "label": "Shots on target",
+      "position": 1699343,
+      "half": "1",
+      "confidence": 0.9929,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.9524
+    },
+    {
+      "gameTime": "1 - 28:36",
+      "label": "Shots off target",
+      "position": 1716443,
+      "half": "1",
+      "confidence": 0.9591,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0609
     },
     {
       "gameTime": "1 - 28:36",
@@ -1122,16 +1262,6 @@
       "causal_support": 0.9706
     },
     {
-      "gameTime": "1 - 29:28",
-      "label": "Shots on target",
-      "position": 1770633,
-      "half": "1",
-      "confidence": 0.9596,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0641
-    },
-    {
       "gameTime": "1 - 29:36",
       "label": "Corner",
       "position": 1776443,
@@ -1152,14 +1282,24 @@
       "causal_support": 0.4505
     },
     {
-      "gameTime": "1 - 30:10",
-      "label": "Shots off target",
-      "position": 1812633,
+      "gameTime": "1 - 29:55",
+      "label": "Kick-off",
+      "position": 1794683,
       "half": "1",
-      "confidence": 0.9797,
+      "confidence": 0.9551,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0343
+    },
+    {
+      "gameTime": "1 - 30:08",
+      "label": "Foul",
+      "position": 1807683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 30:17",
@@ -1179,7 +1319,17 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.911
+      "causal_support": 0.8742
+    },
+    {
+      "gameTime": "1 - 30:35",
+      "label": "Shots off target",
+      "position": 1834683,
+      "half": "1",
+      "confidence": 0.9105,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0703
     },
     {
       "gameTime": "1 - 30:37",
@@ -1192,6 +1342,16 @@
       "causal_support": 0.1626
     },
     {
+      "gameTime": "1 - 30:50",
+      "label": "Shots on target",
+      "position": 1846583,
+      "half": "1",
+      "confidence": 0.9929,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.9524
+    },
+    {
       "gameTime": "1 - 30:60",
       "label": "Goal",
       "position": 1859683,
@@ -1202,34 +1362,74 @@
       "causal_support": 0.0
     },
     {
+      "gameTime": "1 - 31:25",
+      "label": "Kick-off",
+      "position": 1884683,
+      "half": "1",
+      "confidence": 0.9562,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0412
+    },
+    {
+      "gameTime": "1 - 31:27",
+      "label": "Shots off target",
+      "position": 1886683,
+      "half": "1",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 31:36",
+      "label": "Shots off target",
+      "position": 1895683,
+      "half": "1",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 31:44",
+      "label": "Foul",
+      "position": 1903683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
       "gameTime": "1 - 31:50",
       "label": "Ball out of play",
       "position": 1906583,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
     },
     {
-      "gameTime": "1 - 32:15",
+      "gameTime": "1 - 32:10",
       "label": "Shots on target",
-      "position": 1937633,
+      "position": 1926583,
       "half": "1",
-      "confidence": 0.9096,
+      "confidence": 0.8596,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
+      "model": "lfm2.5-vl-3b",
       "causal_support": 0.0641
     },
     {
-      "gameTime": "1 - 32:20",
+      "gameTime": "1 - 32:22",
       "label": "Foul",
-      "position": 1942633,
+      "position": 1941683,
       "half": "1",
-      "confidence": 0.9304,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.8696
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 32:30",
@@ -1242,14 +1442,14 @@
       "causal_support": 0.3739
     },
     {
-      "gameTime": "1 - 32:38",
+      "gameTime": "1 - 32:37",
       "label": "Foul",
-      "position": 1960633,
+      "position": 1956683,
       "half": "1",
-      "confidence": 0.9304,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.8696
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 32:43",
@@ -1296,10 +1496,10 @@
       "label": "Goal",
       "position": 1985683,
       "half": "1",
-      "confidence": 0.9853,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0351
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 33:10",
@@ -1324,11 +1524,11 @@
     {
       "gameTime": "1 - 33:40",
       "label": "Kick-off",
-      "position": 2022633,
+      "position": 2019683,
       "half": "1",
-      "confidence": 0.0049,
+      "confidence": 0.9549,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0328
     },
     {
@@ -1376,10 +1576,10 @@
       "label": "Direct free-kick",
       "position": 2066683,
       "half": "1",
-      "confidence": 0.98,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0
+      "causal_support": 0.1443
     },
     {
       "gameTime": "1 - 34:27",
@@ -1392,64 +1592,64 @@
       "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 35:12",
-      "label": "Shots on target",
-      "position": 2114633,
+      "gameTime": "1 - 34:49",
+      "label": "Shots off target",
+      "position": 2088683,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9368,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2456
     },
     {
-      "gameTime": "1 - 35:18",
-      "label": "Shots on target",
-      "position": 2120633,
+      "gameTime": "1 - 34:55",
+      "label": "Shots off target",
+      "position": 2094683,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9368,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2456
     },
     {
-      "gameTime": "1 - 35:23",
-      "label": "Shots on target",
-      "position": 2125633,
+      "gameTime": "1 - 35:07",
+      "label": "Shots off target",
+      "position": 2106683,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9021,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0137
+    },
+    {
+      "gameTime": "1 - 35:42",
+      "label": "Foul",
+      "position": 2141683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 36:23",
       "label": "Corner",
       "position": 2182683,
       "half": "1",
-      "confidence": 0.9902,
+      "confidence": 0.9612,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.268
+      "causal_support": 0.0745
     },
     {
       "gameTime": "1 - 36:40",
       "label": "Corner",
       "position": 2199683,
       "half": "1",
-      "confidence": 0.9902,
+      "confidence": 0.9612,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.268
-    },
-    {
-      "gameTime": "1 - 36:42",
-      "label": "Shots on target",
-      "position": 2204633,
-      "half": "1",
-      "confidence": 0.8311,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2072
+      "causal_support": 0.0745
     },
     {
       "gameTime": "1 - 36:50",
@@ -1462,114 +1662,64 @@
       "causal_support": 0.8742
     },
     {
-      "gameTime": "1 - 36:44",
-      "label": "Shots off target",
-      "position": 2206633,
-      "half": "1",
-      "confidence": 0.7351,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2342
-    },
-    {
       "gameTime": "1 - 36:52",
       "label": "Clearance",
       "position": 2214633,
       "half": "1",
-      "confidence": 0.9244,
+      "confidence": 0.9274,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1626
+      "causal_support": 0.1829
     },
     {
-      "gameTime": "1 - 37:02",
-      "label": "Shots on target",
-      "position": 2224633,
+      "gameTime": "1 - 36:58",
+      "label": "Foul",
+      "position": 2217683,
       "half": "1",
-      "confidence": 0.8311,
+      "confidence": 0.6,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.2072
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 37:10",
       "label": "Ball out of play",
       "position": 2226583,
       "half": "1",
-      "confidence": 0.9866,
+      "confidence": 0.9367,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.911
+      "causal_support": 0.5781
     },
     {
-      "gameTime": "1 - 37:27",
-      "label": "Shots on target",
-      "position": 2249633,
-      "half": "1",
-      "confidence": 0.9145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "1 - 37:29",
+      "gameTime": "1 - 37:44",
       "label": "Foul",
-      "position": 2251633,
+      "position": 2263683,
       "half": "1",
-      "confidence": 0.8091,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0609
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 37:33",
-      "label": "Shots on target",
-      "position": 2255633,
-      "half": "1",
-      "confidence": 0.9145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "1 - 37:37",
+      "gameTime": "1 - 38:05",
       "label": "Foul",
-      "position": 2259633,
+      "position": 2284683,
       "half": "1",
-      "confidence": 0.8091,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0609
-    },
-    {
-      "gameTime": "1 - 37:43",
-      "label": "Shots on target",
-      "position": 2265633,
-      "half": "1",
-      "confidence": 0.9145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "1 - 38:12",
-      "label": "Shots on target",
-      "position": 2294633,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 38:14",
       "label": "Clearance",
       "position": 2296633,
       "half": "1",
-      "confidence": 0.9165,
+      "confidence": 0.9274,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1103
+      "causal_support": 0.1829
     },
     {
       "gameTime": "1 - 38:30",
@@ -1582,6 +1732,16 @@
       "causal_support": 0.5781
     },
     {
+      "gameTime": "1 - 38:42",
+      "label": "Foul",
+      "position": 2321683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
       "gameTime": "1 - 38:57",
       "label": "Ball out of play",
       "position": 2334263,
@@ -1592,29 +1752,119 @@
       "causal_support": 0.0526
     },
     {
-      "gameTime": "1 - 38:59",
-      "label": "Shots on target",
-      "position": 2341633,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
-    },
-    {
       "gameTime": "1 - 39:01",
-      "label": "Shots off target",
-      "position": 2344313,
+      "label": "Foul",
+      "position": 2340683,
       "half": "1",
-      "confidence": 0.9297,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 39:17",
       "label": "Ball out of play",
       "position": 2354263,
+      "half": "1",
+      "confidence": 0.9392,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.5946
+    },
+    {
+      "gameTime": "1 - 39:17",
+      "label": "Direct free-kick",
+      "position": 2357363,
+      "half": "1",
+      "confidence": 0.9039,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0259
+    },
+    {
+      "gameTime": "1 - 39:18",
+      "label": "Goal",
+      "position": 2357683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 39:27",
+      "label": "Foul",
+      "position": 2367363,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 39:46",
+      "label": "Clearance",
+      "position": 2389313,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible",
+      "model": "minicpm-v-4.6",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 39:56",
+      "label": "Clearance",
+      "position": 2399313,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "minicpm-v-4.6",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 40:57",
+      "label": "Clearance",
+      "position": 2460313,
+      "half": "1",
+      "confidence": 0.6274,
+      "visibility": "visible",
+      "model": "minicpm-v-4.6",
+      "causal_support": 0.1829
+    },
+    {
+      "gameTime": "1 - 41:19",
+      "label": "Shots off target",
+      "position": 2479363,
+      "half": "1",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "1 - 41:20",
+      "label": "Foul",
+      "position": 2480363,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 41:24",
+      "label": "Goal",
+      "position": 2484363,
+      "half": "1",
+      "confidence": 0.98,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 41:37",
+      "label": "Ball out of play",
+      "position": 2494263,
       "half": "1",
       "confidence": 0.9866,
       "visibility": "visible",
@@ -1622,154 +1872,34 @@
       "causal_support": 0.911
     },
     {
-      "gameTime": "1 - 39:17",
-      "label": "Direct free-kick",
-      "position": 2357363,
-      "half": "1",
-      "confidence": 0.9091,
-      "visibility": "visible",
-      "model": "qwen3.5-4b",
-      "causal_support": 0.0609
-    },
-    {
-      "gameTime": "1 - 39:18",
-      "label": "Goal",
-      "position": 2357683,
-      "half": "1",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "qwen3.5-4b",
-      "causal_support": 0.3478
-    },
-    {
-      "gameTime": "1 - 39:42",
-      "label": "Kick-off",
-      "position": 2385313,
-      "half": "1",
-      "confidence": 0.0062,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0412
-    },
-    {
-      "gameTime": "1 - 39:46",
-      "label": "Clearance",
-      "position": 2389313,
-      "half": "1",
-      "confidence": 0.8139,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0928
-    },
-    {
-      "gameTime": "1 - 39:48",
+      "gameTime": "1 - 41:36",
       "label": "Shots off target",
-      "position": 2391313,
+      "position": 2496363,
       "half": "1",
-      "confidence": 0.9162,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1081
-    },
-    {
-      "gameTime": "1 - 39:56",
-      "label": "Clearance",
-      "position": 2399313,
-      "half": "1",
-      "confidence": 0.9051,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0342
-    },
-    {
-      "gameTime": "1 - 40:57",
-      "label": "Clearance",
-      "position": 2460313,
-      "half": "1",
-      "confidence": 0.6065,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.043
-    },
-    {
-      "gameTime": "1 - 41:17",
-      "label": "Shots on target",
-      "position": 2480313,
-      "half": "1",
-      "confidence": 0.8429,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
-    },
-    {
-      "gameTime": "1 - 41:24",
-      "label": "Goal",
-      "position": 2484363,
-      "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.8297,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3478
-    },
-    {
-      "gameTime": "1 - 41:22",
-      "label": "Shots on target",
-      "position": 2485313,
-      "half": "1",
-      "confidence": 0.8145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "1 - 41:28",
-      "label": "Shots on target",
-      "position": 2491313,
-      "half": "1",
-      "confidence": 0.7145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "1 - 41:37",
-      "label": "Ball out of play",
-      "position": 2494263,
-      "half": "1",
-      "confidence": 0.9061,
-      "visibility": "visible",
-      "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
-    },
-    {
-      "gameTime": "1 - 41:37",
-      "label": "Shots on target",
-      "position": 2500313,
-      "half": "1",
-      "confidence": 0.8145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
+      "causal_support": 0.1982
     },
     {
       "gameTime": "1 - 41:57",
       "label": "Ball out of play",
       "position": 2514263,
       "half": "1",
-      "confidence": 0.9061,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.911
     },
     {
-      "gameTime": "1 - 42:07",
-      "label": "Shots on target",
-      "position": 2530313,
+      "gameTime": "1 - 42:25",
+      "label": "Foul",
+      "position": 2545363,
       "half": "1",
-      "confidence": 0.9617,
+      "confidence": 0.85,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 43:09",
@@ -1782,14 +1912,24 @@
       "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 43:29",
+      "gameTime": "1 - 43:24",
       "label": "Foul",
-      "position": 2612313,
+      "position": 2604363,
       "half": "1",
-      "confidence": 1.0,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.7081
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 43:30",
+      "label": "Foul",
+      "position": 2610363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 43:37",
@@ -1836,9 +1976,19 @@
       "label": "Ball out of play",
       "position": 2654263,
       "half": "1",
-      "confidence": 0.85,
+      "confidence": 0.8517,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0114
+    },
+    {
+      "gameTime": "1 - 44:15",
+      "label": "Foul",
+      "position": 2655363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -1846,10 +1996,10 @@
       "label": "Ball out of play",
       "position": 2674263,
       "half": "1",
-      "confidence": 0.95,
+      "confidence": 0.9554,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.0363
     },
     {
       "gameTime": "1 - 44:57",
@@ -1862,14 +2012,14 @@
       "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 45:52",
+      "gameTime": "1 - 45:53",
       "label": "Foul",
-      "position": 2755313,
+      "position": 2753363,
       "half": "1",
-      "confidence": 0.9034,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0229
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 45:53",
@@ -1882,24 +2032,34 @@
       "causal_support": 0.1829
     },
     {
-      "gameTime": "1 - 46:07",
+      "gameTime": "1 - 46:11",
       "label": "Foul",
-      "position": 2770313,
+      "position": 2771363,
       "half": "1",
-      "confidence": 0.9375,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.25
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
-      "gameTime": "1 - 47:13",
+      "gameTime": "1 - 46:40",
       "label": "Foul",
-      "position": 2836313,
+      "position": 2800363,
       "half": "1",
-      "confidence": 0.8062,
+      "confidence": 0.9,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.7081
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "1 - 47:12",
+      "label": "Foul",
+      "position": 2832363,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "1 - 47:15",
@@ -1910,6 +2070,16 @@
       "visibility": "visible",
       "model": "minicpm-v-4.6",
       "causal_support": 0.6788
+    },
+    {
+      "gameTime": "2 - 00:00",
+      "label": "Kick-off",
+      "position": 0,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 00:00",
@@ -1932,16 +2102,6 @@
       "causal_support": 0.1944
     },
     {
-      "gameTime": "2 - 00:04",
-      "label": "Shots on target",
-      "position": 6950,
-      "half": "2",
-      "confidence": 0.8154,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1029
-    },
-    {
       "gameTime": "2 - 00:12",
       "label": "Offside",
       "position": 14950,
@@ -1952,114 +2112,124 @@
       "causal_support": 0.0515
     },
     {
-      "gameTime": "2 - 00:14",
-      "label": "Shots on target",
-      "position": 16950,
-      "half": "2",
-      "confidence": 0.9154,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1029
-    },
-    {
       "gameTime": "2 - 01:00",
       "label": "Ball out of play",
       "position": 56900,
       "half": "2",
-      "confidence": 0.8516,
+      "confidence": 0.8531,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0108
+      "causal_support": 0.0206
     },
     {
-      "gameTime": "2 - 01:00",
-      "label": "Shots on target",
-      "position": 62950,
+      "gameTime": "2 - 01:01",
+      "label": "Shots off target",
+      "position": 61000,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.9797,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.3684
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "2 - 01:30",
       "label": "Ball out of play",
       "position": 86900,
       "half": "2",
-      "confidence": 0.9061,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 01:28",
       "label": "Direct free-kick",
       "position": 88000,
       "half": "2",
-      "confidence": 0.9891,
+      "confidence": 0.9961,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0609
+      "causal_support": 0.1075
+    },
+    {
+      "gameTime": "2 - 02:00",
+      "label": "Shots on target",
+      "position": 116900,
+      "half": "2",
+      "confidence": 0.8763,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.1754
+    },
+    {
+      "gameTime": "2 - 02:08",
+      "label": "Shots off target",
+      "position": 128000,
+      "half": "2",
+      "confidence": 0.8797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "2 - 02:12",
+      "label": "Yellow card",
+      "position": 132000,
+      "half": "2",
+      "confidence": 0.9833,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0217
     },
     {
       "gameTime": "2 - 02:20",
       "label": "Ball out of play",
       "position": 136900,
       "half": "2",
-      "confidence": 0.9017,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0114
-    },
-    {
-      "gameTime": "2 - 02:17",
-      "label": "Shots on target",
-      "position": 139950,
-      "half": "2",
-      "confidence": 0.906,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.04
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 02:22",
       "label": "Foul",
       "position": 142000,
       "half": "2",
-      "confidence": 0.9591,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0609
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "2 - 02:31",
+      "label": "Yellow card",
+      "position": 151000,
+      "half": "2",
+      "confidence": 1.0,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2073
     },
     {
       "gameTime": "2 - 03:00",
       "label": "Ball out of play",
       "position": 176900,
       "half": "2",
-      "confidence": 0.9516,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0108
+      "causal_support": 0.0
     },
     {
-      "gameTime": "2 - 03:05",
+      "gameTime": "2 - 03:40",
       "label": "Shots on target",
-      "position": 187950,
+      "position": 216900,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.8596,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0722
-    },
-    {
-      "gameTime": "2 - 03:30",
-      "label": "Shots off target",
-      "position": 212950,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0641
     },
     {
       "gameTime": "2 - 04:00",
@@ -2069,17 +2239,7 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.911
-    },
-    {
-      "gameTime": "2 - 04:20",
-      "label": "Shots off target",
-      "position": 262950,
-      "half": "2",
-      "confidence": 0.9509,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0057
+      "causal_support": 0.3739
     },
     {
       "gameTime": "2 - 04:27",
@@ -2092,14 +2252,24 @@
       "causal_support": 0.0
     },
     {
+      "gameTime": "2 - 04:30",
+      "label": "Yellow card",
+      "position": 270000,
+      "half": "2",
+      "confidence": 0.9509,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0057
+    },
+    {
       "gameTime": "2 - 04:31",
       "label": "Foul",
       "position": 271000,
       "half": "2",
-      "confidence": 0.9016,
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0104
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 05:00",
@@ -2112,6 +2282,16 @@
       "causal_support": 0.0363
     },
     {
+      "gameTime": "2 - 05:15",
+      "label": "Kick-off",
+      "position": 315000,
+      "half": "2",
+      "confidence": 0.9562,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0412
+    },
+    {
       "gameTime": "2 - 05:18",
       "label": "Goal",
       "position": 318000,
@@ -2122,54 +2302,54 @@
       "causal_support": 0.0
     },
     {
-      "gameTime": "2 - 05:32",
-      "label": "Yellow card",
-      "position": 334950,
-      "half": "2",
-      "confidence": 0.7009,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0057
-    },
-    {
-      "gameTime": "2 - 05:40",
+      "gameTime": "2 - 05:21",
       "label": "Shots off target",
-      "position": 342950,
+      "position": 321000,
       "half": "2",
-      "confidence": 0.9509,
+      "confidence": 0.8962,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0057
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1081
     },
     {
       "gameTime": "2 - 05:53",
       "label": "Foul",
       "position": 353000,
       "half": "2",
-      "confidence": 0.9575,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.05
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "2 - 06:02",
+      "label": "Yellow card",
+      "position": 362000,
+      "half": "2",
+      "confidence": 1.0,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2073
     },
     {
       "gameTime": "2 - 06:20",
       "label": "Foul",
       "position": 380000,
       "half": "2",
-      "confidence": 0.9534,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0229
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 06:49",
       "label": "Foul",
       "position": 409000,
       "half": "2",
-      "confidence": 0.9895,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2632
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 06:52",
@@ -2196,40 +2376,30 @@
       "label": "Goal",
       "position": 424000,
       "half": "2",
-      "confidence": 0.9853,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0351
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 07:30",
       "label": "Direct free-kick",
       "position": 450000,
       "half": "2",
-      "confidence": 0.9661,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.1075
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 07:40",
       "label": "Indirect free-kick",
       "position": 462950,
       "half": "2",
-      "confidence": 0.7226,
+      "confidence": 0.7,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1505
-    },
-    {
-      "gameTime": "2 - 07:43",
-      "label": "Shots on target",
-      "position": 465950,
-      "half": "2",
-      "confidence": 0.8553,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.3684
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 08:05",
@@ -2252,6 +2422,16 @@
       "causal_support": 0.0526
     },
     {
+      "gameTime": "2 - 08:15",
+      "label": "Kick-off",
+      "position": 495000,
+      "half": "2",
+      "confidence": 0.9549,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0328
+    },
+    {
       "gameTime": "2 - 08:20",
       "label": "Ball out of play",
       "position": 496900,
@@ -2259,47 +2439,47 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.4561
+      "causal_support": 0.5946
     },
     {
       "gameTime": "2 - 08:40",
       "label": "Ball out of play",
       "position": 516900,
       "half": "2",
-      "confidence": 0.955,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0333
+      "causal_support": 0.5946
     },
     {
       "gameTime": "2 - 09:20",
       "label": "Ball out of play",
       "position": 556900,
       "half": "2",
-      "confidence": 0.9517,
+      "confidence": 0.9531,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0114
+      "causal_support": 0.0206
     },
     {
-      "gameTime": "2 - 09:31",
-      "label": "Shots on target",
-      "position": 573950,
+      "gameTime": "2 - 09:40",
+      "label": "Shots off target",
+      "position": 580000,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.9509,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.04
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0057
     },
     {
       "gameTime": "2 - 09:41",
       "label": "Foul",
       "position": 581000,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.7081
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 09:55",
@@ -2316,10 +2496,10 @@
       "label": "Foul",
       "position": 606483,
       "half": "2",
-      "confidence": 0.9309,
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2059
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 10:07",
@@ -2336,20 +2516,10 @@
       "label": "Throw-in",
       "position": 651483,
       "half": "2",
-      "confidence": 0.9484,
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3226
-    },
-    {
-      "gameTime": "2 - 10:53",
-      "label": "Shots on target",
-      "position": 656433,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0779
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 11:44",
@@ -2382,64 +2552,64 @@
       "causal_support": 0.0206
     },
     {
-      "gameTime": "2 - 12:07",
-      "label": "Shots on target",
-      "position": 730433,
-      "half": "2",
-      "confidence": 0.9608,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0722
-    },
-    {
-      "gameTime": "2 - 12:15",
-      "label": "Shots off target",
-      "position": 738433,
-      "half": "2",
-      "confidence": 0.9297,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
-    },
-    {
       "gameTime": "2 - 12:17",
       "label": "Indirect free-kick",
       "position": 740433,
       "half": "2",
-      "confidence": 0.8002,
+      "confidence": 0.8155,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.0012
+      "causal_support": 0.1031
     },
     {
       "gameTime": "2 - 12:24",
       "label": "Ball out of play",
       "position": 741383,
       "half": "2",
-      "confidence": 0.9866,
+      "confidence": 0.8531,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.911
+      "causal_support": 0.0206
+    },
+    {
+      "gameTime": "2 - 12:29",
+      "label": "Shots off target",
+      "position": 749483,
+      "half": "2",
+      "confidence": 0.911,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0735
+    },
+    {
+      "gameTime": "2 - 12:44",
+      "label": "Kick-off",
+      "position": 764483,
+      "half": "2",
+      "confidence": 0.9549,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0328
     },
     {
       "gameTime": "2 - 13:04",
       "label": "Ball out of play",
       "position": 781383,
       "half": "2",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.5946
     },
     {
       "gameTime": "2 - 13:54",
       "label": "Indirect free-kick",
       "position": 837433,
       "half": "2",
-      "confidence": 0.717,
+      "confidence": 0.7226,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1133
+      "causal_support": 0.1505
     },
     {
       "gameTime": "2 - 14:04",
@@ -2452,34 +2622,44 @@
       "causal_support": 0.5588
     },
     {
+      "gameTime": "2 - 14:09",
+      "label": "Shots on target",
+      "position": 846383,
+      "half": "2",
+      "confidence": 0.8654,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.1029
+    },
+    {
+      "gameTime": "2 - 14:07",
+      "label": "Shots off target",
+      "position": 847483,
+      "half": "2",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
       "gameTime": "2 - 14:24",
       "label": "Ball out of play",
       "position": 861383,
       "half": "2",
-      "confidence": 0.9811,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.8742
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 14:21",
       "label": "Indirect free-kick",
       "position": 864433,
       "half": "2",
-      "confidence": 0.7155,
+      "confidence": 0.7002,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1031
-    },
-    {
-      "gameTime": "2 - 14:28",
-      "label": "Shots off target",
-      "position": 871433,
-      "half": "2",
-      "confidence": 0.911,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0735
+      "causal_support": 0.0012
     },
     {
       "gameTime": "2 - 14:39",
@@ -2492,24 +2672,14 @@
       "causal_support": 0.1626
     },
     {
-      "gameTime": "2 - 15:05",
-      "label": "Shots on target",
-      "position": 908433,
-      "half": "2",
-      "confidence": 0.9596,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0641
-    },
-    {
       "gameTime": "2 - 15:24",
       "label": "Ball out of play",
       "position": 921383,
       "half": "2",
-      "confidence": 0.9061,
+      "confidence": 0.9392,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.5946
     },
     {
       "gameTime": "2 - 15:44",
@@ -2526,50 +2696,50 @@
       "label": "Foul",
       "position": 947483,
       "half": "2",
-      "confidence": 0.9004,
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0023
-    },
-    {
-      "gameTime": "2 - 16:00",
-      "label": "Shots on target",
-      "position": 963433,
-      "half": "2",
-      "confidence": 0.8596,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0641
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 16:24",
       "label": "Ball out of play",
       "position": 981383,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.9531,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.0206
     },
     {
-      "gameTime": "2 - 16:45",
-      "label": "Shots on target",
-      "position": 1008433,
+      "gameTime": "2 - 16:27",
+      "label": "Shots off target",
+      "position": 987483,
       "half": "2",
-      "confidence": 0.9502,
+      "confidence": 0.9504,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0012
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0023
     },
     {
       "gameTime": "2 - 16:48",
       "label": "Indirect free-kick",
       "position": 1011433,
       "half": "2",
-      "confidence": 0.8,
+      "confidence": 0.8226,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.0
+      "causal_support": 0.1505
+    },
+    {
+      "gameTime": "2 - 17:24",
+      "label": "Shots on target",
+      "position": 1041383,
+      "half": "2",
+      "confidence": 0.8654,
+      "visibility": "visible",
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.1029
     },
     {
       "gameTime": "2 - 18:04",
@@ -2582,6 +2752,16 @@
       "causal_support": 0.4348
     },
     {
+      "gameTime": "2 - 18:09",
+      "label": "Shots off target",
+      "position": 1089483,
+      "half": "2",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
       "gameTime": "2 - 18:24",
       "label": "Ball out of play",
       "position": 1101383,
@@ -2589,67 +2769,27 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.4348
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 18:27",
       "label": "Substitution",
       "position": 1107483,
       "half": "2",
-      "confidence": 0.9849,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0329
-    },
-    {
-      "gameTime": "2 - 18:34",
-      "label": "Shots on target",
-      "position": 1117433,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 18:44",
-      "label": "Shots on target",
-      "position": 1127433,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 18:49",
-      "label": "Shots on target",
-      "position": 1132433,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 18:54",
       "label": "Throw-in",
       "position": 1134483,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3517
-    },
-    {
-      "gameTime": "2 - 18:54",
-      "label": "Shots on target",
-      "position": 1137433,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 19:23",
@@ -2666,10 +2806,30 @@
       "label": "Goal",
       "position": 1160483,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3478
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "2 - 19:23",
+      "label": "Kick-off",
+      "position": 1163363,
+      "half": "2",
+      "confidence": 0.9663,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1087
+    },
+    {
+      "gameTime": "2 - 19:31",
+      "label": "Shots off target",
+      "position": 1171363,
+      "half": "2",
+      "confidence": 0.9162,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1081
     },
     {
       "gameTime": "2 - 19:34",
@@ -2686,70 +2846,60 @@
       "label": "Substitution",
       "position": 1182363,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 1.0
+      "causal_support": 0.0
     },
     {
-      "gameTime": "2 - 20:08",
+      "gameTime": "2 - 20:17",
       "label": "Kick-off",
-      "position": 1211313,
+      "position": 1217363,
       "half": "2",
-      "confidence": 0.018,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.12
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "2 - 20:53",
+      "label": "Shots off target",
+      "position": 1253363,
+      "half": "2",
+      "confidence": 0.9297,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "2 - 21:03",
       "label": "Ball out of play",
       "position": 1260263,
       "half": "2",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
     },
     {
-      "gameTime": "2 - 21:38",
+      "gameTime": "2 - 22:24",
       "label": "Shots off target",
-      "position": 1301313,
+      "position": 1344363,
       "half": "2",
-      "confidence": 0.9016,
+      "confidence": 0.8797,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0108
-    },
-    {
-      "gameTime": "2 - 22:08",
-      "label": "Shots on target",
-      "position": 1331313,
-      "half": "2",
-      "confidence": 0.8145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 22:25",
-      "label": "Shots on target",
-      "position": 1348313,
-      "half": "2",
-      "confidence": 0.9117,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "2 - 22:29",
       "label": "Foul",
       "position": 1349363,
       "half": "2",
-      "confidence": 0.8591,
+      "confidence": 0.85,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0609
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 22:27",
@@ -2769,17 +2919,7 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.5588
-    },
-    {
-      "gameTime": "2 - 23:55",
-      "label": "Shots on target",
-      "position": 1438313,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 23:57",
@@ -2792,24 +2932,54 @@
       "causal_support": 0.0
     },
     {
+      "gameTime": "2 - 24:32",
+      "label": "Shots off target",
+      "position": 1472363,
+      "half": "2",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
+      "gameTime": "2 - 24:51",
+      "label": "Shots off target",
+      "position": 1491363,
+      "half": "2",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
+    },
+    {
       "gameTime": "2 - 25:03",
       "label": "Ball out of play",
       "position": 1500263,
       "half": "2",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
+    },
+    {
+      "gameTime": "2 - 25:04",
+      "label": "Shots off target",
+      "position": 1504363,
+      "half": "2",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "2 - 25:23",
       "label": "Ball out of play",
       "position": 1520263,
       "half": "2",
-      "confidence": 0.85,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 25:43",
@@ -2826,10 +2996,10 @@
       "label": "Foul",
       "position": 1561363,
       "half": "2",
-      "confidence": 0.6504,
+      "confidence": 0.65,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0023
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 27:03",
@@ -2840,16 +3010,6 @@
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
       "causal_support": 0.9706
-    },
-    {
-      "gameTime": "2 - 26:57",
-      "label": "Shots on target",
-      "position": 1620313,
-      "half": "2",
-      "confidence": 0.95,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 27:01",
@@ -2876,10 +3036,10 @@
       "label": "Foul",
       "position": 1657363,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.7081
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 27:53",
@@ -2892,64 +3052,24 @@
       "causal_support": 0.6788
     },
     {
-      "gameTime": "2 - 28:25",
+      "gameTime": "2 - 29:03",
       "label": "Shots on target",
-      "position": 1708313,
+      "position": 1740263,
       "half": "2",
-      "confidence": 0.7145,
+      "confidence": 0.8596,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 28:33",
-      "label": "Shots on target",
-      "position": 1716313,
-      "half": "2",
-      "confidence": 0.7117,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "lfm2.5-vl-3b",
+      "causal_support": 0.0641
     },
     {
       "gameTime": "2 - 29:15",
       "label": "Ball out of play",
       "position": 1751503,
       "half": "2",
-      "confidence": 0.8531,
+      "confidence": 0.9392,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0206
-    },
-    {
-      "gameTime": "2 - 29:14",
-      "label": "Shots on target",
-      "position": 1757313,
-      "half": "2",
-      "confidence": 0.9145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 29:18",
-      "label": "Shots off target",
-      "position": 1760553,
-      "half": "2",
-      "confidence": 0.9297,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1982
-    },
-    {
-      "gameTime": "2 - 29:24",
-      "label": "Shots on target",
-      "position": 1766553,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "causal_support": 0.5946
     },
     {
       "gameTime": "2 - 29:35",
@@ -2959,27 +3079,27 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.911
+      "causal_support": 0.5946
+    },
+    {
+      "gameTime": "2 - 30:05",
+      "label": "Shots off target",
+      "position": 1804603,
+      "half": "2",
+      "confidence": 0.9662,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1081
     },
     {
       "gameTime": "2 - 30:49",
       "label": "Indirect free-kick",
       "position": 1851553,
       "half": "2",
-      "confidence": 0.6226,
+      "confidence": 0.617,
       "visibility": "visible",
       "model": "minicpm-v-4.6",
-      "causal_support": 0.1505
-    },
-    {
-      "gameTime": "2 - 30:53",
-      "label": "Shots on target",
-      "position": 1855553,
-      "half": "2",
-      "confidence": 0.9154,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1029
+      "causal_support": 0.1133
     },
     {
       "gameTime": "2 - 31:20",
@@ -2992,54 +3112,64 @@
       "causal_support": 0.5588
     },
     {
-      "gameTime": "2 - 31:36",
+      "gameTime": "2 - 32:18",
       "label": "Shots off target",
-      "position": 1898553,
+      "position": 1937603,
       "half": "2",
-      "confidence": 0.8004,
+      "confidence": 1.0,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0023
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "2 - 32:19",
       "label": "Foul",
       "position": 1938603,
       "half": "2",
-      "confidence": 0.9895,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2632
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 32:20",
       "label": "Direct free-kick",
       "position": 1939603,
       "half": "2",
-      "confidence": 0.9071,
+      "confidence": 0.9216,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0476
+      "causal_support": 0.1443
+    },
+    {
+      "gameTime": "2 - 32:27",
+      "label": "Shots off target",
+      "position": 1946603,
+      "half": "2",
+      "confidence": 0.9868,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2456
     },
     {
       "gameTime": "2 - 32:27",
       "label": "Goal",
       "position": 1946603,
       "half": "2",
-      "confidence": 0.9853,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0351
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 32:35",
       "label": "Ball out of play",
       "position": 1951503,
       "half": "2",
-      "confidence": 0.9184,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.4561
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 33:15",
@@ -3082,14 +3212,24 @@
       "causal_support": 0.0
     },
     {
-      "gameTime": "2 - 34:30",
-      "label": "Kick-off",
-      "position": 2072553,
+      "gameTime": "2 - 34:15",
+      "label": "Shots off target",
+      "position": 2054603,
       "half": "2",
-      "confidence": 0.5049,
+      "confidence": 0.9031,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0328
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0206
+    },
+    {
+      "gameTime": "2 - 34:30",
+      "label": "Shots off target",
+      "position": 2069603,
+      "half": "2",
+      "confidence": 0.9797,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.1982
     },
     {
       "gameTime": "2 - 34:35",
@@ -3102,6 +3242,16 @@
       "causal_support": 0.0
     },
     {
+      "gameTime": "2 - 34:48",
+      "label": "Kick-off",
+      "position": 2087603,
+      "half": "2",
+      "confidence": 0.9549,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0328
+    },
+    {
       "gameTime": "2 - 34:55",
       "label": "Ball out of play",
       "position": 2091503,
@@ -3109,26 +3259,26 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.5946
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 35:27",
       "label": "Foul",
       "position": 2126603,
       "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "2 - 35:31",
+      "label": "Yellow card",
+      "position": 2130603,
+      "half": "2",
       "confidence": 1.0,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.8696
-    },
-    {
-      "gameTime": "2 - 35:30",
-      "label": "Yellow card",
-      "position": 2132553,
-      "half": "2",
-      "confidence": 0.9811,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
       "causal_support": 0.2073
     },
     {
@@ -3136,10 +3286,10 @@
       "label": "Foul",
       "position": 2141603,
       "half": "2",
-      "confidence": 0.9895,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2632
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 35:55",
@@ -3156,80 +3306,60 @@
       "label": "Direct free-kick",
       "position": 2154603,
       "half": "2",
-      "confidence": 0.9161,
+      "confidence": 0.9216,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.1075
+      "causal_support": 0.1443
     },
     {
-      "gameTime": "2 - 36:06",
-      "label": "Shots on target",
-      "position": 2168553,
+      "gameTime": "2 - 35:60",
+      "label": "Kick-off",
+      "position": 2159603,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.9562,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0412
+    },
+    {
+      "gameTime": "2 - 36:04",
+      "label": "Shots off target",
+      "position": 2163603,
+      "half": "2",
+      "confidence": 0.9868,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.2456
     },
     {
       "gameTime": "2 - 36:15",
       "label": "Ball out of play",
       "position": 2171503,
       "half": "2",
-      "confidence": 0.9184,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.4561
-    },
-    {
-      "gameTime": "2 - 36:12",
-      "label": "Shots on target",
-      "position": 2174553,
-      "half": "2",
-      "confidence": 1.0,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 36:29",
       "label": "Goal",
       "position": 2188603,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3478
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 36:35",
       "label": "Ball out of play",
       "position": 2191503,
       "half": "2",
-      "confidence": 0.9061,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
-    },
-    {
-      "gameTime": "2 - 36:30",
-      "label": "Shots on target",
-      "position": 2192553,
-      "half": "2",
-      "confidence": 0.9145,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 36:48",
-      "label": "Shots on target",
-      "position": 2210553,
-      "half": "2",
-      "confidence": 0.9617,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 37:05",
@@ -3242,34 +3372,24 @@
       "causal_support": 0.4348
     },
     {
-      "gameTime": "2 - 37:20",
-      "label": "Shots on target",
-      "position": 2242553,
+      "gameTime": "2 - 37:10",
+      "label": "Shots off target",
+      "position": 2229603,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.9542,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0278
     },
     {
       "gameTime": "2 - 37:25",
       "label": "Substitution",
       "position": 2244603,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 1.0
-    },
-    {
-      "gameTime": "2 - 37:30",
-      "label": "Kick-off",
-      "position": 2252553,
-      "half": "2",
-      "confidence": 0.018,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.12
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 37:34",
@@ -3282,24 +3402,14 @@
       "causal_support": 0.1514
     },
     {
-      "gameTime": "2 - 37:40",
-      "label": "Shots on target",
-      "position": 2262553,
-      "half": "2",
-      "confidence": 0.1429,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.9524
-    },
-    {
       "gameTime": "2 - 37:48",
       "label": "Goal",
       "position": 2267603,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.98,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.3478
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 37:46",
@@ -3322,24 +3432,14 @@
       "causal_support": 0.5588
     },
     {
-      "gameTime": "2 - 38:19",
-      "label": "Shots on target",
-      "position": 2301553,
+      "gameTime": "2 - 38:15",
+      "label": "Kick-off",
+      "position": 2294603,
       "half": "2",
-      "confidence": 0.8145,
+      "confidence": 0.9549,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0968
-    },
-    {
-      "gameTime": "2 - 38:25",
-      "label": "Shots on target",
-      "position": 2307553,
-      "half": "2",
-      "confidence": 0.8617,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0783
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0328
     },
     {
       "gameTime": "2 - 38:35",
@@ -3349,17 +3449,17 @@
       "confidence": 1.0,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.5946
     },
     {
       "gameTime": "2 - 38:57",
       "label": "Ball out of play",
       "position": 2334143,
       "half": "2",
-      "confidence": 0.9061,
+      "confidence": 0.85,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.3739
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 39:15",
@@ -3402,13 +3502,13 @@
       "causal_support": 0.0
     },
     {
-      "gameTime": "2 - 40:42",
-      "label": "Shots on target",
-      "position": 2445193,
+      "gameTime": "2 - 41:05",
+      "label": "Kick-off",
+      "position": 2465243,
       "half": "2",
-      "confidence": 0.8,
+      "confidence": 0.95,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
+      "model": "qwen3.5-4b",
       "causal_support": 0.0
     },
     {
@@ -3416,39 +3516,39 @@
       "label": "Foul",
       "position": 2501243,
       "half": "2",
-      "confidence": 0.9895,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.2632
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 41:57",
       "label": "Direct free-kick",
       "position": 2517243,
       "half": "2",
-      "confidence": 0.9661,
+      "confidence": 0.9539,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.1075
+      "causal_support": 0.0259
     },
     {
-      "gameTime": "2 - 41:59",
-      "label": "Shots on target",
-      "position": 2522193,
-      "half": "2",
-      "confidence": 0.9263,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.1754
-    },
-    {
-      "gameTime": "2 - 42:51",
+      "gameTime": "2 - 42:29",
       "label": "Shots off target",
-      "position": 2574193,
+      "position": 2549243,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible",
+      "model": "qwen3.5-4b",
+      "causal_support": 0.0
+    },
+    {
+      "gameTime": "2 - 43:08",
+      "label": "Shots off target",
+      "position": 2588243,
       "half": "2",
       "confidence": 0.9297,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
+      "model": "qwen3.5-4b",
       "causal_support": 0.1982
     },
     {
@@ -3466,20 +3566,20 @@
       "label": "Ball out of play",
       "position": 2614143,
       "half": "2",
-      "confidence": 0.8517,
+      "confidence": 0.9866,
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
-      "causal_support": 0.0114
+      "causal_support": 0.911
     },
     {
       "gameTime": "2 - 43:46",
       "label": "Foul",
       "position": 2626243,
       "half": "2",
-      "confidence": 0.9016,
+      "confidence": 0.9,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.0104
+      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 43:57",
@@ -3490,16 +3590,6 @@
       "visibility": "visible",
       "model": "lfm2.5-vl-3b",
       "causal_support": 0.0363
-    },
-    {
-      "gameTime": "2 - 44:36",
-      "label": "Shots on target",
-      "position": 2679193,
-      "half": "2",
-      "confidence": 0.9,
-      "visibility": "visible",
-      "model": "minicpm-v-4.6",
-      "causal_support": 0.0
     },
     {
       "gameTime": "2 - 45:37",
@@ -3516,19 +3606,19 @@
       "label": "Foul",
       "position": 2746243,
       "half": "2",
-      "confidence": 1.0,
+      "confidence": 0.95,
       "visibility": "visible",
       "model": "qwen3.5-4b",
-      "causal_support": 0.8696
+      "causal_support": 0.0
     },
     {
-      "gameTime": "2 - 45:51",
+      "gameTime": "2 - 45:50",
       "label": "Yellow card",
-      "position": 2754193,
+      "position": 2750243,
       "half": "2",
       "confidence": 1.0,
       "visibility": "visible",
-      "model": "minicpm-v-4.6",
+      "model": "qwen3.5-4b",
       "causal_support": 0.2073
     },
     {
