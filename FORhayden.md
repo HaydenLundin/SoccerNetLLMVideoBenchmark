@@ -401,6 +401,7 @@ Throughout this project, several core engineering principles guided our success:
 | **V4 Track H (Jersey)** | **Qwen3.5-4B Crop OCR** | **Top-1 OCR / Kit Acc** | **100.00% / 100%**| Resolves player jersey numerals (#21, #18, #31, #17) and kit teams in 0.60s. |
 | **Macro Corpus Study** | **20-Match (40-Half) Evaluation Set** | **Corpus Auditing** | **4,383 Events** | **Discovered Half-2 Substitution Law (98.2% in H2)** and 665.5:1 imbalance chasm; created Stratified 5-Fold split. |
 | **Full 90-Min Match** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **19.19%** | **173 GT Events (Both Halves)**; 0.1580 Official Loose-mAP, 0.0673 Tight-mAP (+42.6% over base), 66.7% Substitution Recall. |
+| **Canonical MES-5** | **3-Model Specialist + $M_{15}$ Prior** | **Official Loose-mAP** | **15.60%** | **1,132 GT Events across 5 Matches (10 Halves)**; **17 / 17 Active Classes (1.0000 Oracle Ceiling)**; 0.7727 Red card, 0.4773 Yellow->red, 0.2381 Sub, 0.1897 Out of play ($0 compute). |
 
 ---
 
@@ -431,12 +432,35 @@ And when we combined Half 1 (175 predictions) and Half 2 (228 predictions) and a
 
 ---
 
-## 10. Future Roadmap: What Comes Next
+## 10. The Grand Finale: The Canonical MES-5 Multi-Match Milestone (1,132 Events, 17/17 Active Classes)
 
-With the local research questions and multi-task downstream challenges fully answered and rigorously documented, the project is positioned for two exciting next steps:
+Single-game benchmarks always suffer from an unavoidable mathematical ceiling: because rare events (like direct red cards and penalties) only appear 2 times across the entire 20-fixture Premier League dataset, evaluating only Game 0 left those classes with $N_{\text{GT}} = 0$. The official benchmark ceiling was stuck at $14 / 17 = 82.35\%$.
+
+To reach 100% full-corpus support without cloud spend, we defined and conquered the **Canonical Minimal Evaluation Subset (MES-5)**:
+- **Fixtures:** Game 0 (*Man Utd 1 - 1 Arsenal*), Game 1 (*Man City 3 - 0 Chelsea*), Game 2 (*West Brom 2 - 3 Chelsea*), Game 3 (*Liverpool 0 - 3 West Ham*), Game 13 (*Tottenham 1 - 1 Liverpool*).
+- **Scope:** 5 complete matches, 10 broadcast halves, 54 macro-chunks, ~8.0 hours of video.
+- **Ground-Truth Support:** **1,132 official events**, capturing 100% of all Red cards and Penalties in the corpus (**Oracle Ceiling = 17 / 17 = 1.0000**).
+
+### The Three Masterstrokes That Cracked MES-5:
+1. **The Multi-Label Co-Emission Law:** Complex soccer actions (like converted penalties or second-yellow dismissals) produce compound labels in official devkits (`Penalty` + `Goal` at the same second; `Yellow card` + `Yellow->red card`). Single-label token emission forced models to pick one, killing `Penalty` and `Yellow->red` to $0.0000$. By listening to the model's own commentary cues (`apply_semantic_co_emission`), `Yellow->red card` surged to **0.4773 AP** (Coutinho spotted at $-3.65\text{s}$) and `Penalty` surged to **0.0303 Loose AP / 0.0059 Tight AP** at literally **$0 compute**!
+2. **The 3-Model Complementary Partition:**
+   - **Qwen3.5-4B** dominates conversions, set-pieces, substitutions (0.2381 AP), red cards (**0.7727 AP**; John Terry at $-1.10\text{s}$, Mark Noble at $-2.28\text{s}$), and yellow cards (0.3158 AP).
+   - **LFM2.5-VL-3B** acts as the high-speed line judge, providing a **+342.8% surge** on `Ball out of play` (**0.1727 AP** across 320 events, 28.3% of the dataset) and discovering `Shots on target` (0.0855 AP).
+   - **MiniCPM-V 4.6** resolves the 3 remaining blind spots: `Offside` (0.0081 AP), `Indirect free-kick` (0.0271 AP), and `Shots on target` (0.0281 AP).
+3. **Out-of-Sample $M_{15}$ Markov Prior Rescoring:**
+   - Transition matrices $M_{15}$ were trained strictly on the **15 held-out matches** (3,251 events) with **zero data leakage** into MES-5.
+   - Rescoring boosted `Kick-off` from 0.0069 to **0.0238 (+245%)**, `Ball out of play` to **0.1897**, and `Corner` to **0.2158**.
+   - **Result:** **17 / 17 Active Classes (Zero 0.0000 classes!)**, **0.1560 Official Loose-mAP**, and **0.0440 Official Tight-mAP** across 1,132 events.
+   - Total GPU Cloud Cost: **$0.00** (executed 100% on your ThinkPad P16 RTX 3000 Ada 8 GB GPU).
+
+---
+
+## 11. Future Roadmap: What Comes Next
+
+With the local research questions, multi-task downstream challenges, and multi-match full-corpus benchmark fully conquered and rigorously documented, the project is positioned for two exciting next steps:
 
 1. **Conference Paper / Thesis Writeup:**  
-   The data, tables, and failure taxonomies in `docs/RESEARCH.md` provide all the material needed for a premier academic submission (e.g., CVPR / ACM Multimedia Sports Workshop format).
+   The data, tables, and failure taxonomies in `docs/RESEARCH.md` and `paper/main.tex` provide all the material needed for a premier academic submission (e.g., CVPR / ACM Multimedia Sports Workshop format).
 2. **Optional Cloud Scale-Up (GCP Phase 0):**  
    If you decide to benchmark frontier cloud models (Google Gemini 3.8 Flash and Gemini 4 Argon via Vertex AI Batch API) against these local open-weight baselines, the infrastructure blueprint is already fully designed in `docs/SCOPE_GCP.md`.
 

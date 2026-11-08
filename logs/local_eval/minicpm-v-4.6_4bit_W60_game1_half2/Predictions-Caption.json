@@ -1,0 +1,1181 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-16 - 18-00 Manchester City 3 - 0 Chelsea/",
+  "predictions": [
+    {
+      "gameTime": "2 - 00:02",
+      "position": 2000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in light blue maneuvers the ball near the edge of the penalty area, attempting to create a scoring opportunity. "
+    },
+    {
+      "gameTime": "2 - 00:04",
+      "position": 4000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is passed to a player near the edge, who then attempts a shot or a pass towards the goal. "
+    },
+    {
+      "gameTime": "2 - 00:08",
+      "position": 8000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is passed to a teammate near the goal, leading to a potential goal. "
+    },
+    {
+      "gameTime": "2 - 00:12",
+      "position": 12000,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "A player in blue attempts a shot, which is blocked by the opposing team's defense. "
+    },
+    {
+      "gameTime": "2 - 00:14",
+      "position": 14000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is passed to a player near the goal, leading to a potential scoring chance. "
+    },
+    {
+      "gameTime": "2 - 00:55",
+      "position": 55000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A light-blue team player advances the ball past the blue team's defender, leading to a shot at the goal"
+    },
+    {
+      "gameTime": "2 - 01:00",
+      "position": 60000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The light-blue team player continues to maneuver the ball, attempting a pass or shot near the goal area"
+    },
+    {
+      "gameTime": "2 - 01:05",
+      "position": 65000,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "A blue team player is seen near the goal, preparing to intercept or challenge for the ball"
+    },
+    {
+      "gameTime": "2 - 02:17",
+      "position": 137000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in a blue jersey attempts a pass or shot near the goal area, with the goalkeeper in yellow positioned to defend."
+    },
+    {
+      "gameTime": "2 - 02:19",
+      "position": 139000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in light blue advances the ball and makes a close interaction with a player in blue, leading to a slide tackle."
+    },
+    {
+      "gameTime": "2 - 02:25",
+      "position": 145000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The player in light blue scores a goal, as the ball crosses the goal line into the net, resulting in a celebration among the fans and players."
+    },
+    {
+      "gameTime": "2 - 02:29",
+      "position": 149000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The play develops into a corner or further aerial challenge near the goal, with players moving and positioning for a shot or clearance."
+    },
+    {
+      "gameTime": "2 - 02:35",
+      "position": 155000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The blue team makes a strategic move, with the light blue team attempting to counter or block, leading to a quick interaction near the penalty area."
+    },
+    {
+      "gameTime": "2 - 03:05",
+      "position": 185000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player from the blue team attempts a shot near the goal, with the goalkeeper preparing to block. "
+    },
+    {
+      "gameTime": "2 - 03:15",
+      "position": 195000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player from the blue team scores a goal, sending the ball into the net. "
+    },
+    {
+      "gameTime": "2 - 03:30",
+      "position": 210000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The blue team attempts a shot, with the goalkeeper making a save. "
+    },
+    {
+      "gameTime": "2 - 03:45",
+      "position": 225000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with players positioning themselves for an initial offensive play."
+    },
+    {
+      "gameTime": "2 - 04:20",
+      "position": 260000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "Another offensive move results in a shot that is turned away, with players repositioning."
+    },
+    {
+      "gameTime": "2 - 04:30",
+      "position": 270000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee signals a foul, indicating a stoppage in play."
+    },
+    {
+      "gameTime": "2 - 04:32",
+      "position": 272000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a blue jersey takes a shot near the goal, leading to a scramble for the ball. "
+    },
+    {
+      "gameTime": "2 - 05:32",
+      "position": 332000,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The player in blue is seen lying on the ground, likely recovering from a fall or injury."
+    },
+    {
+      "gameTime": "2 - 05:40",
+      "position": 340000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The player in blue executes a shot towards the goal, with the goalkeeper attempting to block it."
+    },
+    {
+      "gameTime": "2 - 05:55",
+      "position": 355000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The player in blue is seen interacting with the referee, possibly for a foul or decision-related discussion."
+    },
+    {
+      "gameTime": "2 - 06:01",
+      "position": 361000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in blue is seen interacting with a player in light blue near the corner area, leading to a physical tackle. "
+    },
+    {
+      "gameTime": "2 - 06:23",
+      "position": 383000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in blue falls to the ground while being tackled by a player in light blue. "
+    },
+    {
+      "gameTime": "2 - 06:52",
+      "position": 412000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is played towards the goal, leading to a scramble near the goal area. A player in blue attempts to interfere, but no clear goal or goal is scored."
+    },
+    {
+      "gameTime": "2 - 06:58",
+      "position": 418000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in blue is shown interacting with a player in light blue, with visible gestures indicating a foul or discussion."
+    },
+    {
+      "gameTime": "2 - 07:08",
+      "position": 428000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The ball is played into the penalty area, leading to active play and potential scoring opportunities."
+    },
+    {
+      "gameTime": "2 - 07:15",
+      "position": 435000,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "A player in light blue is seen interacting with the referee, suggesting a potential discussion or decision."
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "position": 460000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "Players from both teams are seen in a moment of discussion or conflict, indicating a match-related incident."
+    },
+    {
+      "gameTime": "2 - 07:43",
+      "position": 463000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in a blue jersey takes a shot near the goal, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "2 - 07:55",
+      "position": 475000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The ball is passed into the penalty area, where defensive players are positioning themselves."
+    },
+    {
+      "gameTime": "2 - 08:12",
+      "position": 492000,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "The play transitions to a counter-attack, with players moving quickly to restore possession and create scoring opportunities."
+    },
+    {
+      "gameTime": "2 - 08:19",
+      "position": 499000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A close-up shows a player in light blue, likely a goal scorer, showing focus and anticipation."
+    },
+    {
+      "gameTime": "2 - 08:20",
+      "position": 500000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The blue team maintains control of the ball, with players positioning for a further offensive move."
+    },
+    {
+      "gameTime": "2 - 08:23",
+      "position": 503000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in blue falls or slides, indicating a potential foul or collision near the edge of the play."
+    },
+    {
+      "gameTime": "2 - 09:17",
+      "position": 557000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a blue jersey dribbles the ball past the opposing team's defense, initiating an attack."
+    },
+    {
+      "gameTime": "2 - 09:31",
+      "position": 571000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot on goal, resulting in a scramble near the goal area."
+    },
+    {
+      "gameTime": "2 - 09:41",
+      "position": 581000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in blue is seen colliding with a player in light blue, leading to a minor incident near the goal area."
+    },
+    {
+      "gameTime": "2 - 09:52",
+      "position": 592000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in blue attempts a shot near the goal, but it is blocked by the light blue team's defense."
+    },
+    {
+      "gameTime": "2 - 09:55",
+      "position": 595000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in blue attempts a cross into the penalty area, leading to further offensive movement."
+    },
+    {
+      "gameTime": "2 - 10:53",
+      "position": 653483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The player shoots the ball, aiming towards the goal. The ball is in the air, indicating a shot at goal."
+    },
+    {
+      "gameTime": "2 - 11:14",
+      "position": 674483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with players in position, preparing for the initial play."
+    },
+    {
+      "gameTime": "2 - 11:19",
+      "position": 679483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a blue jersey controls the ball and advances towards the opponent's goal."
+    },
+    {
+      "gameTime": "2 - 12:03",
+      "position": 723483,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The blue team progresses the ball towards the goal, with players repositioning to maintain possession."
+    },
+    {
+      "gameTime": "2 - 12:05",
+      "position": 725483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A clearances or clearance action occurs, possibly a header or ball being deflected, leading to further play near the penalty area."
+    },
+    {
+      "gameTime": "2 - 12:07",
+      "position": 727483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The blue team continues to advance, with a player attempting a shot or cross, leading to ongoing offensive pressure."
+    },
+    {
+      "gameTime": "2 - 12:09",
+      "position": 729483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The blue team is in a position to score, with players clustering near the goal and the goalkeeper ready to react."
+    },
+    {
+      "gameTime": "2 - 12:11",
+      "position": 731483,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The game continues with players moving into new positions, indicating a shift in formation or strategy."
+    },
+    {
+      "gameTime": "2 - 12:15",
+      "position": 735483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The blue team attempts a shot on goal, with the goalkeeper making a save, resulting in continued offensive action."
+    },
+    {
+      "gameTime": "2 - 12:17",
+      "position": 737483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The game intensifies with players from both teams engaging in active play, creating scoring opportunities."
+    },
+    {
+      "gameTime": "2 - 13:05",
+      "position": 785483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in blue attempts a shot or pass near the goal area, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "2 - 13:54",
+      "position": 834483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in light blue prepares to inspect the ball near the edge of the field"
+    },
+    {
+      "gameTime": "2 - 14:07",
+      "position": 847483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in light blue attempts a shot on goal while defenders in blue react"
+    },
+    {
+      "gameTime": "2 - 14:21",
+      "position": 861483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The ball is passed into play, leading to further offensive movement"
+    },
+    {
+      "gameTime": "2 - 14:28",
+      "position": 868483,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in blue attempts a shot, with the goalkeeper in yellow positioned to block it."
+    },
+    {
+      "gameTime": "2 - 15:04",
+      "position": 904483,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A corner or set-piece situation is indicated as players converge near the goal. The ball is brought near the goal area for a shot."
+    },
+    {
+      "gameTime": "2 - 15:05",
+      "position": 905483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is shot towards the goal, with the goalkeeper in position to block. The play transitions to a near-goal scenario."
+    },
+    {
+      "gameTime": "2 - 15:06",
+      "position": 906483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball hits the goal area, and the goal is scored as players reposition to continue the play."
+    },
+    {
+      "gameTime": "2 - 15:44",
+      "position": 944483,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Players are spread out, preparing to advance the ball down the left side. A player in light blue is advancing toward the goal area. "
+    },
+    {
+      "gameTime": "2 - 15:53",
+      "position": 953483,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A player in light blue receives the ball near the center and starts to move forward, creating an opening. Other players reposition to support the play. "
+    },
+    {
+      "gameTime": "2 - 16:00",
+      "position": 960483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The player in light blue continues to advance, making a run towards the goal. The defense tries to intercept the play. "
+    },
+    {
+      "gameTime": "2 - 16:07",
+      "position": 967483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is passed into the penalty area, leading to a potential scoring opportunity. The goalkeeper is in position to defend. "
+    },
+    {
+      "gameTime": "2 - 16:29",
+      "position": 989483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "Players are spread out, preparing to start the match with no immediate play."
+    },
+    {
+      "gameTime": "2 - 16:31",
+      "position": 991483,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A player in light blue passes the ball near the edge of the penalty area, initiating a counter-attacking play."
+    },
+    {
+      "gameTime": "2 - 16:37",
+      "position": 997483,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The player in light blue maintains possession and continues to move the ball down the field."
+    },
+    {
+      "gameTime": "2 - 16:39",
+      "position": 999483,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "Substitutions occur as players change positions, indicating a tactical shift in the team's formation."
+    },
+    {
+      "gameTime": "2 - 16:45",
+      "position": 1005483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in light blue receives the ball and begins to advance it towards the goal."
+    },
+    {
+      "gameTime": "2 - 16:48",
+      "position": 1008483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The ball is passed into a more active play, with players reacting to the new situation."
+    },
+    {
+      "gameTime": "2 - 16:54",
+      "position": 1014483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in light blue prepares to take a shot, indicating a potential scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 18:20",
+      "position": 1100483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in blue attempts a shot or pass near the goal, leading to a scramble for the ball. The ball goes past the goalkeeper, indicating a score. "
+    },
+    {
+      "gameTime": "2 - 18:34",
+      "position": 1114483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue crosses the ball into the penalty area, and the opposing team attempts to intercept. The ball is played forward, creating further pressure. "
+    },
+    {
+      "gameTime": "2 - 18:44",
+      "position": 1124483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot on goal, with the goalkeeper in light blue preparing to block. The ball is near the goal area, leading to a potential goal. "
+    },
+    {
+      "gameTime": "2 - 18:49",
+      "position": 1129483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The play continues with the blue team advancing, and the light blue team defending. The ball is near the goal, and the goalkeeper is in position to block. "
+    },
+    {
+      "gameTime": "2 - 18:54",
+      "position": 1134483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot or pass near the goal area, resulting in a scramble for the ball."
+    },
+    {
+      "gameTime": "2 - 19:08",
+      "position": 1148483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The ball is crossed into the penalty area, prompting further offensive movement and defensive pressure."
+    },
+    {
+      "gameTime": "2 - 19:19",
+      "position": 1159483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A goal is scored, as the ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 19:34",
+      "position": 1174483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The player is shown receiving a celebration or acknowledging the success of the play."
+    },
+    {
+      "gameTime": "2 - 19:43",
+      "position": 1183363,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in a blue jersey is fouled near the sideline, leading to a clear clearance of the ball from play."
+    },
+    {
+      "gameTime": "2 - 20:08",
+      "position": 1208363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match begins with players positioning themselves on the field. The game transitions into active play. "
+    },
+    {
+      "gameTime": "2 - 20:17",
+      "position": 1217363,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in blue dribbles the ball near the goal area while being pursued by defenders in light blue. "
+    },
+    {
+      "gameTime": "2 - 20:25",
+      "position": 1225363,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The team in blue continues to press for an offensive play near the center of the field. "
+    },
+    {
+      "gameTime": "2 - 21:05",
+      "position": 1265363,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in blue attempts a shot or pass near the goal area, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "2 - 21:17",
+      "position": 1277363,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in blue crosses the ball into the penalty area, prompting the opposing team to react."
+    },
+    {
+      "gameTime": "2 - 21:38",
+      "position": 1298363,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The goalkeeper in green makes a save, indicating a critical defensive moment."
+    },
+    {
+      "gameTime": "2 - 21:38",
+      "position": 1298363,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The match begins with players positioning themselves on the field. The ball is passed around, and players are moving to establish play."
+    },
+    {
+      "gameTime": "2 - 22:08",
+      "position": 1328363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The play develops into a series of passes and attempts to breach the opposing team's defense. The ball is near the goal area, and players are positioning to capitalize."
+    },
+    {
+      "gameTime": "2 - 22:23",
+      "position": 1343363,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Player in light blue advances and receives the ball near the edge of the penalty area."
+    },
+    {
+      "gameTime": "2 - 22:25",
+      "position": 1345363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Another player in light blue attempts a shot or a pass near the goal area, resulting in a close call."
+    },
+    {
+      "gameTime": "2 - 22:27",
+      "position": 1347363,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The player in light blue breaks away and continues to maneuver the ball past defenders."
+    },
+    {
+      "gameTime": "2 - 22:31",
+      "position": 1351363,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in light blue makes a quick movement to maintain possession and create a scoring chance."
+    },
+    {
+      "gameTime": "2 - 22:33",
+      "position": 1353363,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The team in blue attempts to intercept the ball near the goal, leading to a scramble."
+    },
+    {
+      "gameTime": "2 - 23:53",
+      "position": 1433363,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "Players are spread out on the field, preparing for the initial play."
+    },
+    {
+      "gameTime": "2 - 23:55",
+      "position": 1435363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in light blue attempts a shot or pass near the goal area."
+    },
+    {
+      "gameTime": "2 - 23:57",
+      "position": 1437363,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The ball is crossed into the penalty area, leading to further play."
+    },
+    {
+      "gameTime": "2 - 23:59",
+      "position": 1439363,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in green jersey is seen near the goal, preparing to intercept or block."
+    },
+    {
+      "gameTime": "2 - 24:01",
+      "position": 1441363,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is passed towards the goal, leading to a potential scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 26:57",
+      "position": 1617363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue approaches the goal and attempts to shoot, with the ball moving towards the goal. The defenders try to block the shot. "
+    },
+    {
+      "gameTime": "2 - 26:59",
+      "position": 1619363,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is shot, and it goes past the goal, leading to a score. The players begin to reposition themselves after the goal. "
+    },
+    {
+      "gameTime": "2 - 27:01",
+      "position": 1621363,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The scene shifts to the sideline where a player is seen speaking or gesturing, indicating a discussion or reaction. The coaching staff is present and appear to be analyzing the play. "
+    },
+    {
+      "gameTime": "2 - 27:53",
+      "position": 1673363,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in light blue is holding a soccer ball while standing on the grass"
+    },
+    {
+      "gameTime": "2 - 28:23",
+      "position": 1703363,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The match begins with players positioned and preparing to enter play. The ball is passed around the perimeter as the teams establish their positions."
+    },
+    {
+      "gameTime": "2 - 28:25",
+      "position": 1705363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot or pass near the goal area, with the light blue team pressing to regain possession."
+    },
+    {
+      "gameTime": "2 - 28:33",
+      "position": 1713363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The blue team attempts a shot or pass near the goal, with the light blue team reacting to defend."
+    },
+    {
+      "gameTime": "2 - 29:12",
+      "position": 1752363,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball hits the goal area, and the goal is considered scored. The players start to reposition after the goal. "
+    },
+    {
+      "gameTime": "2 - 29:14",
+      "position": 1754363,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue is seen taking a shot, and the ball is directed towards the goal. The goalkeeper is in position to block the shot. "
+    },
+    {
+      "gameTime": "2 - 29:15",
+      "position": 1754603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "Players are dispersed across the field, preparing for the initial phase of the match."
+    },
+    {
+      "gameTime": "2 - 29:18",
+      "position": 1757603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A player in blue approaches the ball and attempts a pass, leading to a short ball near the edge of the penalty area."
+    },
+    {
+      "gameTime": "2 - 29:21",
+      "position": 1760603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The ball is passed towards the goal area, with players positioning themselves to intercept."
+    },
+    {
+      "gameTime": "2 - 29:24",
+      "position": 1763603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is shot towards the goal, with the goalkeeper preparing to block."
+    },
+    {
+      "gameTime": "2 - 30:41",
+      "position": 1840603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A player in light blue crosses the ball into the penalty area, leading to a scramble for the ball near the goal. The blue team attempts to clear it, but the play continues near the goal area."
+    },
+    {
+      "gameTime": "2 - 30:45",
+      "position": 1844603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The game begins with players positioning themselves in the midfield and towards the penalty area. The ball is passed around, with players moving to create scoring opportunities."
+    },
+    {
+      "gameTime": "2 - 30:47",
+      "position": 1846603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in light blue advances the ball towards the goal, while the blue team defends. The play transitions into a short pass and movement near the edge of the penalty area."
+    },
+    {
+      "gameTime": "2 - 30:49",
+      "position": 1848603,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The blue team attempts a shot, but the light blue team's goalkeeper blocks the ball, leading to a quick repositioning and defensive counter-attack."
+    },
+    {
+      "gameTime": "2 - 30:52",
+      "position": 1851603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A blue team player maneuvers the ball near the goal, with players from the light blue team and black team vying for possession. The ball is passed into the penalty area, increasing pressure."
+    },
+    {
+      "gameTime": "2 - 30:53",
+      "position": 1852603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The light blue team manages to break through the defense, with the ball near the goal area, indicating a potential scoring chance."
+    },
+    {
+      "gameTime": "2 - 31:03",
+      "position": 1862603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue team scores, as the ball crosses the goal line into the net, marking a clear scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 31:30",
+      "position": 1889603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The ball is passed between players in the midfield as the team advances towards the penalty area."
+    },
+    {
+      "gameTime": "2 - 31:36",
+      "position": 1895603,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The blue team advances the ball towards the goal, with the light blue team trying to intercept or block."
+    },
+    {
+      "gameTime": "2 - 33:10",
+      "position": 1989603,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A player in a light blue jersey is shown, possibly preparing to move or celebrate. The scoreboard indicates a player off, suggesting a substitution or clearance."
+    },
+    {
+      "gameTime": "2 - 33:14",
+      "position": 1993603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a light blue jersey is seen celebrating, suggesting a goal has been scored. The scoreboard shows a player off, indicating a goal has just occurred."
+    },
+    {
+      "gameTime": "2 - 33:60",
+      "position": 2039603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The final moments of the video show continued celebrations, indicating a successful play or goal. The stadium is visible, suggesting ongoing match."
+    },
+    {
+      "gameTime": "2 - 34:30",
+      "position": 2069603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in positions for a kickoff or restart. No immediate event occurs."
+    },
+    {
+      "gameTime": "2 - 35:30",
+      "position": 2129603,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A light blue player dribbles past a blue player and attempts a shot, leading to a fall. The referee signals a yellow card. "
+    },
+    {
+      "gameTime": "2 - 35:42",
+      "position": 2141603,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "A blue player clears the ball into the penalty area, leading to a direct free-kick for the light blue team. "
+    },
+    {
+      "gameTime": "2 - 35:46",
+      "position": 2145603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue team advances the ball into the penalty area, leading to a goal. "
+    },
+    {
+      "gameTime": "2 - 35:60",
+      "position": 2159603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The blue team makes a tackle, resulting in a clearance. "
+    },
+    {
+      "gameTime": "2 - 36:06",
+      "position": 2165603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in light blue passes the ball to a teammate near the goal area, while the blue team defends. The ball is near the goal line. "
+    },
+    {
+      "gameTime": "2 - 36:12",
+      "position": 2171603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is headed towards the goal, with a player in blue attempting to block. The goalkeeper is in position to react. "
+    },
+    {
+      "gameTime": "2 - 36:30",
+      "position": 2189603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in light blue attempts a shot, with the goalkeeper ready to block. The ball is near the goal line. "
+    },
+    {
+      "gameTime": "2 - 36:36",
+      "position": 2195603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball hits the back of the net, resulting in a goal. The goalkeeper is seen reacting. "
+    },
+    {
+      "gameTime": "2 - 36:48",
+      "position": 2207603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in light blue attempts a shot, with the goalkeeper in position. The ball is near the goal area. "
+    },
+    {
+      "gameTime": "2 - 37:20",
+      "position": 2239603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot, with the goalkeeper in place to block. The ball is close to the goal, indicating a potential scoring opportunity. "
+    },
+    {
+      "gameTime": "2 - 37:22",
+      "position": 2241603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The player in the light blue jersey successfully maneuvers past the defender, moving towards the goal. The action suggests a scoring attempt. "
+    },
+    {
+      "gameTime": "2 - 37:30",
+      "position": 2249603,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at its start, with players in position for kickoff. No immediate action is visible."
+    },
+    {
+      "gameTime": "2 - 37:34",
+      "position": 2253603,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "The player in light blue makes a move towards the ball, leading to a close-up of the player's reaction."
+    },
+    {
+      "gameTime": "2 - 37:36",
+      "position": 2255603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The crowd is shown reacting with applause, indicating a significant play has occurred."
+    },
+    {
+      "gameTime": "2 - 37:40",
+      "position": 2259603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The action involves tactical movement and ball control, leading to further play progression."
+    },
+    {
+      "gameTime": "2 - 37:42",
+      "position": 2261603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The player in blue is seen attempting to intercept or challenge for the ball, with defensive pressure present."
+    },
+    {
+      "gameTime": "2 - 37:46",
+      "position": 2265603,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The play transitions into a structured offensive sequence, with players moving into new positions."
+    },
+    {
+      "gameTime": "2 - 37:52",
+      "position": 2271603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The match continues with ongoing tactical movements and player interactions."
+    },
+    {
+      "gameTime": "2 - 38:17",
+      "position": 2296603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in blue advances the ball toward the goal area, with players from the opposing team positioning to defend."
+    },
+    {
+      "gameTime": "2 - 38:19",
+      "position": 2298603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is passed near the goal, leading to a scramble for possession among the players."
+    },
+    {
+      "gameTime": "2 - 38:25",
+      "position": 2304603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot or pass, with the goalkeeper reacting to save the ball."
+    },
+    {
+      "gameTime": "2 - 39:07",
+      "position": 2346603,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in light blue advances the ball and passes it past the defender in blue, leading to a shot near the goal. The goal is scored, as indicated by the celebratory gestures."
+    },
+    {
+      "gameTime": "2 - 39:23",
+      "position": 2362603,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A cluster of players in light blue engage in a physical confrontation, with one player being pushed or tackled, indicating a foul or collision."
+    },
+    {
+      "gameTime": "2 - 39:53",
+      "position": 2393243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in light blue controls the ball and passes it toward the goal, leading to a scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 40:42",
+      "position": 2442243,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in blue attempts a shot or a pass near the goal area, leading to a scramble."
+    },
+    {
+      "gameTime": "2 - 40:47",
+      "position": 2447243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The ball is crossed into the penalty area, prompting a defensive reaction."
+    },
+    {
+      "gameTime": "2 - 40:52",
+      "position": 2452243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A goal is scored as the ball crosses the goal line into the penalty box."
+    },
+    {
+      "gameTime": "2 - 40:57",
+      "position": 2457243,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The goalkeeper in green tries to intercept the ball, but it is out of reach."
+    },
+    {
+      "gameTime": "2 - 41:22",
+      "position": 2482243,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in blue advances the ball and attempts a shot, but it is blocked by the light blue team."
+    },
+    {
+      "gameTime": "2 - 41:43",
+      "position": 2503243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The player in blue falls to the ground after making a play, while the light blue team manages to regain possession."
+    },
+    {
+      "gameTime": "2 - 41:57",
+      "position": 2517243,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The light blue team attempts a corner, with players repositioning around the corner area."
+    },
+    {
+      "gameTime": "2 - 41:57",
+      "position": 2517243,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The game begins with players in position, preparing for play."
+    },
+    {
+      "gameTime": "2 - 41:58",
+      "position": 2518243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Player in blue attempts a shot or pass near the goal area."
+    },
+    {
+      "gameTime": "2 - 41:59",
+      "position": 2519243,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is headed towards the goal, leading to a scramble for possession."
+    },
+    {
+      "gameTime": "2 - 42:45",
+      "position": 2565243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A blue-shirted player advances the ball near the goal area, with light-blue defenders attempting to intercept."
+    },
+    {
+      "gameTime": "2 - 42:51",
+      "position": 2571243,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A blue-shirted player takes a shot, with the goalkeeper in position to block."
+    },
+    {
+      "gameTime": "2 - 44:12",
+      "position": 2652243,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in position. No immediate event occurs."
+    },
+    {
+      "gameTime": "2 - 44:24",
+      "position": 2664243,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A player in blue controls the ball near the edge of the penalty area, maneuvering it past defenders."
+    },
+    {
+      "gameTime": "2 - 44:36",
+      "position": 2676243,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The player in blue approaches the goal area, preparing to take a shot or pass."
+    },
+    {
+      "gameTime": "2 - 44:43",
+      "position": 2683243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The player in blue near the goal attempts a shot, with the goalkeeping team in green reacting."
+    },
+    {
+      "gameTime": "2 - 45:48",
+      "position": 2748243,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A player in light blue advances the ball near the edge of the penalty area, leading to a close contact. The play transitions into a corner or near-corner situation."
+    },
+    {
+      "gameTime": "2 - 45:49",
+      "position": 2749243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in light blue attempts a shot or pass near the penalty area, leading to a foul."
+    },
+    {
+      "gameTime": "2 - 45:51",
+      "position": 2751243,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee signals a yellow card to a player in light blue."
+    },
+    {
+      "gameTime": "2 - 45:54",
+      "position": 2754243,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is crossed into the penalty area, and players are positioned to defend or create an immediate scoring opportunity. A player in light blue attempts a shot or pass near the goal area."
+    },
+    {
+      "gameTime": "2 - 46:02",
+      "position": 2762243,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee signals a foul, indicating an offside or interference situation. The player in light blue is seen reacting to the official's gesture."
+    }
+  ]
+}

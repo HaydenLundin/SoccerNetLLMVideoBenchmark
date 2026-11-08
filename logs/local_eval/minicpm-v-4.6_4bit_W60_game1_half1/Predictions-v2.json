@@ -1,0 +1,1333 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-16 - 18-00 Manchester City 3 - 0 Chelsea/",
+  "predictions": [
+    {
+      "gameTime": "1 - 00:47",
+      "label": "Goal",
+      "position": 47000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:53",
+      "label": "Clearance",
+      "position": 53000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:59",
+      "label": "Foul",
+      "position": 59000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 02:33",
+      "label": "Goal",
+      "position": 153000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:08",
+      "label": "Shots on target",
+      "position": 188000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:18",
+      "label": "Shots on target",
+      "position": 198000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:20",
+      "label": "Goal",
+      "position": 200000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:46",
+      "label": "Shots off target",
+      "position": 226000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:51",
+      "label": "Clearance",
+      "position": 231000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 04:01",
+      "label": "Shots off target",
+      "position": 241000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 04:06",
+      "label": "Goal",
+      "position": 246000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:21",
+      "label": "Goal",
+      "position": 381000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:42",
+      "label": "Corner",
+      "position": 402000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:50",
+      "label": "Clearance",
+      "position": 410000,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:52",
+      "label": "Foul",
+      "position": 412000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:05",
+      "label": "Clearance",
+      "position": 425000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:12",
+      "label": "Foul",
+      "position": 432000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:19",
+      "label": "Shots on target",
+      "position": 439000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:27",
+      "label": "Yellow->red card",
+      "position": 447000,
+      "half": "1",
+      "confidence": 0.5,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:00",
+      "label": "Goal",
+      "position": 540000,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:05",
+      "label": "Clearance",
+      "position": 545000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:23",
+      "label": "Shots on target",
+      "position": 563000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:30",
+      "label": "Ball out of play",
+      "position": 570000,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:40",
+      "label": "Corner",
+      "position": 580283,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:47",
+      "label": "Shots on target",
+      "position": 587000,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:48",
+      "label": "Goal",
+      "position": 588283,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:51",
+      "label": "Ball out of play",
+      "position": 591000,
+      "half": "1",
+      "confidence": 0.5,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:53",
+      "label": "Shots on target",
+      "position": 593000,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:57",
+      "label": "Ball out of play",
+      "position": 717283,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:59",
+      "label": "Shots on target",
+      "position": 719283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 12:05",
+      "label": "Goal",
+      "position": 725283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 12:09",
+      "label": "Shots on target",
+      "position": 729283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:23",
+      "label": "Ball out of play",
+      "position": 803283,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:31",
+      "label": "Ball out of play",
+      "position": 811283,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:33",
+      "label": "Shots on target",
+      "position": 813283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:37",
+      "label": "Ball out of play",
+      "position": 817283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:39",
+      "label": "Corner",
+      "position": 819283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:41",
+      "label": "Shots on target",
+      "position": 821283,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:08",
+      "label": "Ball out of play",
+      "position": 848283,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:10",
+      "label": "Goal",
+      "position": 850283,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:14",
+      "label": "Shots off target",
+      "position": 854283,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:16",
+      "label": "Clearance",
+      "position": 856283,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:24",
+      "label": "Clearance",
+      "position": 864283,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:08",
+      "label": "Shots off target",
+      "position": 1148283,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:20",
+      "label": "Goal",
+      "position": 1160283,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:26",
+      "label": "Clearance",
+      "position": 1166443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:30",
+      "label": "Shots on target",
+      "position": 1170443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:32",
+      "label": "Direct free-kick",
+      "position": 1172443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:36",
+      "label": "Ball out of play",
+      "position": 1176443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:17",
+      "label": "Goal",
+      "position": 1217443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:47",
+      "label": "Corner",
+      "position": 1247443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:56",
+      "label": "Foul",
+      "position": 1256443,
+      "half": "1",
+      "confidence": 0.6,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:02",
+      "label": "Foul",
+      "position": 1262443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:06",
+      "label": "Shots on target",
+      "position": 1266443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:47",
+      "label": "Goal",
+      "position": 1307443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:41",
+      "label": "Ball out of play",
+      "position": 1361443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:43",
+      "label": "Indirect free-kick",
+      "position": 1363443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:45",
+      "label": "Foul",
+      "position": 1365443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:47",
+      "label": "Goal",
+      "position": 1367443,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:49",
+      "label": "Yellow->red card",
+      "position": 1369443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:51",
+      "label": "Clearance",
+      "position": 1371443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:53",
+      "label": "Foul",
+      "position": 1373443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:55",
+      "label": "Red card",
+      "position": 1375443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:57",
+      "label": "Indirect free-kick",
+      "position": 1377443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:59",
+      "label": "Clearance",
+      "position": 1379443,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:01",
+      "label": "Foul",
+      "position": 1381443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:52",
+      "label": "Kick-off",
+      "position": 1432443,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:54",
+      "label": "Goal",
+      "position": 1434443,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:56",
+      "label": "Offside",
+      "position": 1436443,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:58",
+      "label": "Shots on target",
+      "position": 1438443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:02",
+      "label": "Clearance",
+      "position": 1442443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:04",
+      "label": "Shots on target",
+      "position": 1444443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:40",
+      "label": "Ball out of play",
+      "position": 1480443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:43",
+      "label": "Clearance",
+      "position": 1483443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:46",
+      "label": "Indirect free-kick",
+      "position": 1486443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:49",
+      "label": "Shots on target",
+      "position": 1489443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:52",
+      "label": "Goal",
+      "position": 1492443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:32",
+      "label": "Ball out of play",
+      "position": 1532443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:34",
+      "label": "Indirect free-kick",
+      "position": 1534443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:36",
+      "label": "Foul",
+      "position": 1536443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:38",
+      "label": "Goal",
+      "position": 1538443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:42",
+      "label": "Substitution",
+      "position": 1542443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:44",
+      "label": "Clearance",
+      "position": 1544443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:48",
+      "label": "Corner",
+      "position": 1548443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:52",
+      "label": "Clearance",
+      "position": 1552443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:07",
+      "label": "Shots on target",
+      "position": 1567443,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:32",
+      "label": "Clearance",
+      "position": 1592443,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:52",
+      "label": "Kick-off",
+      "position": 1612443,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:53",
+      "label": "Goal",
+      "position": 1613443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:54",
+      "label": "Offside",
+      "position": 1614443,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:57",
+      "label": "Shots on target",
+      "position": 1617443,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 28:22",
+      "label": "Goal",
+      "position": 1702443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 28:34",
+      "label": "Clearance",
+      "position": 1714443,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:22",
+      "label": "Goal",
+      "position": 1761683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:28",
+      "label": "Shots on target",
+      "position": 1767683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:10",
+      "label": "Shots off target",
+      "position": 1809683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:17",
+      "label": "Clearance",
+      "position": 1816683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:23",
+      "label": "Goal",
+      "position": 1822683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:37",
+      "label": "Clearance",
+      "position": 1836683,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 31:15",
+      "label": "Goal",
+      "position": 1874683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:12",
+      "label": "Ball out of play",
+      "position": 1931683,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:15",
+      "label": "Shots on target",
+      "position": 1934683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:20",
+      "label": "Foul",
+      "position": 1939683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:23",
+      "label": "Red card",
+      "position": 1942683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:25",
+      "label": "Goal",
+      "position": 1944683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:26",
+      "label": "Yellow card",
+      "position": 1945683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:38",
+      "label": "Foul",
+      "position": 1957683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:40",
+      "label": "Yellow card",
+      "position": 1959683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:40",
+      "label": "Kick-off",
+      "position": 2019683,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:42",
+      "label": "Ball out of play",
+      "position": 2021683,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:44",
+      "label": "Indirect free-kick",
+      "position": 2023683,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:46",
+      "label": "Clearance",
+      "position": 2025683,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:52",
+      "label": "Goal",
+      "position": 2031683,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:56",
+      "label": "Clearance",
+      "position": 2035683,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:12",
+      "label": "Shots on target",
+      "position": 2111683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:18",
+      "label": "Shots on target",
+      "position": 2117683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:23",
+      "label": "Shots on target",
+      "position": 2122683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:29",
+      "label": "Goal",
+      "position": 2128683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:42",
+      "label": "Shots on target",
+      "position": 2201683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:44",
+      "label": "Shots off target",
+      "position": 2203683,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:48",
+      "label": "Goal",
+      "position": 2207683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:52",
+      "label": "Clearance",
+      "position": 2211683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:56",
+      "label": "Corner",
+      "position": 2215683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:02",
+      "label": "Shots on target",
+      "position": 2221683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:27",
+      "label": "Shots on target",
+      "position": 2246683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:29",
+      "label": "Foul",
+      "position": 2248683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:33",
+      "label": "Shots on target",
+      "position": 2252683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:37",
+      "label": "Foul",
+      "position": 2256683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:41",
+      "label": "Corner",
+      "position": 2260683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:43",
+      "label": "Shots on target",
+      "position": 2262683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:10",
+      "label": "Goal",
+      "position": 2289683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:12",
+      "label": "Shots on target",
+      "position": 2291683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:14",
+      "label": "Clearance",
+      "position": 2293683,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:18",
+      "label": "Corner",
+      "position": 2297683,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:59",
+      "label": "Shots on target",
+      "position": 2338683,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:59",
+      "label": "Ball out of play",
+      "position": 2339363,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:01",
+      "label": "Goal",
+      "position": 2340683,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:01",
+      "label": "Shots off target",
+      "position": 2341363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:42",
+      "label": "Kick-off",
+      "position": 2382363,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:44",
+      "label": "Ball out of play",
+      "position": 2384363,
+      "half": "1",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:46",
+      "label": "Clearance",
+      "position": 2386363,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:48",
+      "label": "Shots off target",
+      "position": 2388363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:56",
+      "label": "Clearance",
+      "position": 2396363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:00",
+      "label": "Goal",
+      "position": 2400363,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:39",
+      "label": "Corner",
+      "position": 2439363,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:57",
+      "label": "Clearance",
+      "position": 2457363,
+      "half": "1",
+      "confidence": 0.6,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:17",
+      "label": "Shots on target",
+      "position": 2477363,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:22",
+      "label": "Shots on target",
+      "position": 2482363,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:25",
+      "label": "Goal",
+      "position": 2485363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:28",
+      "label": "Shots on target",
+      "position": 2488363,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:37",
+      "label": "Shots on target",
+      "position": 2497363,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:07",
+      "label": "Shots on target",
+      "position": 2527363,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:22",
+      "label": "Goal",
+      "position": 2542363,
+      "half": "1",
+      "confidence": 1.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:29",
+      "label": "Foul",
+      "position": 2609363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:30",
+      "label": "Goal",
+      "position": 2610363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:31",
+      "label": "Indirect free-kick",
+      "position": 2611363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:32",
+      "label": "Yellow->red card",
+      "position": 2612363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:33",
+      "label": "Red card",
+      "position": 2613363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 45:08",
+      "label": "Ball out of play",
+      "position": 2708363,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 45:52",
+      "label": "Foul",
+      "position": 2752363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 45:53",
+      "label": "Clearance",
+      "position": 2753363,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 45:56",
+      "label": "Yellow->red card",
+      "position": 2756363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 45:57",
+      "label": "Goal",
+      "position": 2757363,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 46:07",
+      "label": "Foul",
+      "position": 2767363,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 47:13",
+      "label": "Foul",
+      "position": 2833363,
+      "half": "1",
+      "confidence": 0.7,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 47:15",
+      "label": "Indirect free-kick",
+      "position": 2835363,
+      "half": "1",
+      "confidence": 0.8,
+      "visibility": "visible"
+    }
+  ]
+}

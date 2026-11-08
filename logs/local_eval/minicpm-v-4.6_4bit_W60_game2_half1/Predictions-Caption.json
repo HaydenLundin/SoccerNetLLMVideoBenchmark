@@ -1,0 +1,1132 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-23 - 15-30 West Brom 2 - 3 Chelsea/",
+  "predictions": [
+    {
+      "gameTime": "1 - 00:00",
+      "position": 0,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "Players are spread out, preparing to advance the ball. A West Brom player is near the ball. "
+    },
+    {
+      "gameTime": "1 - 00:02",
+      "position": 2000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "West Brom is advancing, connecting with the ball. Chelsea players try to intercept. "
+    },
+    {
+      "gameTime": "1 - 00:12",
+      "position": 12000,
+      "half": "1",
+      "label": "Substitution",
+      "commentary": "The ball is passed out of play, with players repositioning. "
+    },
+    {
+      "gameTime": "1 - 00:45",
+      "position": 45000,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "Players are positioned for an initial offensive play, with the ball being passed near the center circle."
+    },
+    {
+      "gameTime": "1 - 00:47",
+      "position": 47000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black advances the ball and attempts a shot, with the white team pressing to intercept."
+    },
+    {
+      "gameTime": "1 - 00:49",
+      "position": 49000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball is passed into the penalty area, leading to further offensive movement."
+    },
+    {
+      "gameTime": "1 - 00:51",
+      "position": 51000,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The white team regains possession and initiates a counter-attack near the goal area."
+    },
+    {
+      "gameTime": "1 - 00:53",
+      "position": 53000,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "The black team's player attempts a shot, with the white team managing the play."
+    },
+    {
+      "gameTime": "1 - 00:55",
+      "position": 55000,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The ball is crossed into the penalty box, prompting immediate defensive action."
+    },
+    {
+      "gameTime": "1 - 00:59",
+      "position": 59000,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The white team's defense is pushed back as the black team continues to press the play."
+    },
+    {
+      "gameTime": "1 - 01:03",
+      "position": 63000,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "The black team's player attempts a shot, with the white team trying to block it."
+    },
+    {
+      "gameTime": "1 - 01:05",
+      "position": 65000,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The white team regains control and initiates a new offensive phase."
+    },
+    {
+      "gameTime": "1 - 02:20",
+      "position": 140000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "Another player in black attempts a shot or pass near the goal area, leading to a potential score."
+    },
+    {
+      "gameTime": "1 - 02:25",
+      "position": 145000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is passed to a player near the goal, who continues toward the net."
+    },
+    {
+      "gameTime": "1 - 03:00",
+      "position": 180000,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "A player in black prepares to advance the ball while opponents in white pressure him."
+    },
+    {
+      "gameTime": "1 - 03:00",
+      "position": 180000,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "The player in black takes a shot at the goal, with the goalkeeper diving to block."
+    },
+    {
+      "gameTime": "1 - 03:09",
+      "position": 189000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The goal is scored as the player in white crosses the ball into the net."
+    },
+    {
+      "gameTime": "1 - 03:14",
+      "position": 194000,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The team in black attempts to intercept the ball, leading to a scramble for possession."
+    },
+    {
+      "gameTime": "1 - 03:25",
+      "position": 205000,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in white attempts a shot, with the goalkeeper ready to block."
+    },
+    {
+      "gameTime": "1 - 03:45",
+      "position": 225000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is shot towards the goal, with defenders and goalkeepers actively reacting."
+    },
+    {
+      "gameTime": "1 - 04:00",
+      "position": 240000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black takes a shot near the goal, resulting in a goal"
+    },
+    {
+      "gameTime": "1 - 04:23",
+      "position": 263000,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in black attempts a shot on goal, but the goal is saved by the goalkeeper"
+    },
+    {
+      "gameTime": "1 - 04:30",
+      "position": 270000,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "Players are engaged in active play, with a player in black controlling the ball near the edge of the play. "
+    },
+    {
+      "gameTime": "1 - 04:32",
+      "position": 272000,
+      "half": "1",
+      "label": "Indirect free-kick",
+      "commentary": "A player in white attempts to maneuver the ball while being pursued by a player in black. "
+    },
+    {
+      "gameTime": "1 - 04:34",
+      "position": 274000,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in black attempts to tackle a player in white near the goal area. "
+    },
+    {
+      "gameTime": "1 - 04:38",
+      "position": 278000,
+      "half": "1",
+      "label": "Yellow->red card",
+      "commentary": "The referee is seen giving a hand signal, indicating a decision or foul. "
+    },
+    {
+      "gameTime": "1 - 05:15",
+      "position": 315000,
+      "half": "1",
+      "label": "Offside",
+      "commentary": "A player in black prepares to advance the ball near the edge of the penalty area."
+    },
+    {
+      "gameTime": "1 - 05:17",
+      "position": 317000,
+      "half": "1",
+      "label": "Corner",
+      "commentary": "The ball is passed into play, leading to a corner maneuver."
+    },
+    {
+      "gameTime": "1 - 05:19",
+      "position": 319000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot at the goal, with the goalkeeping team reacting."
+    },
+    {
+      "gameTime": "1 - 05:21",
+      "position": 321000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball crosses the goal line, resulting in a goal."
+    },
+    {
+      "gameTime": "1 - 06:00",
+      "position": 360000,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The game begins with players positioning themselves for an initial offensive push. A player in black prepares to advance the ball. "
+    },
+    {
+      "gameTime": "1 - 06:02",
+      "position": 362000,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "A player in black dribbles past the white team's defense, moving towards the goal. The ball is passed into a new phase of play. "
+    },
+    {
+      "gameTime": "1 - 06:04",
+      "position": 364000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The player in black continues to advance, attempting a shot or pass near the goal area. The white team's goalkeeper is in position to block. "
+    },
+    {
+      "gameTime": "1 - 06:51",
+      "position": 411000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball is passed into the penalty area, and a player in black attempts a shot. The goalkeeper is positioned to block the shot. "
+    },
+    {
+      "gameTime": "1 - 07:01",
+      "position": 421000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is further into the goal area, and the goalkeeper is ready to react. The players are positioned to support the shot. "
+    },
+    {
+      "gameTime": "1 - 07:32",
+      "position": 452000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in white takes a shot near the goal, with the black team's goalkeeper in position. The ball is headed towards the goal. "
+    },
+    {
+      "gameTime": "1 - 07:38",
+      "position": 458000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The white team continues to press forward, with a player attempting a shot. The ball is near the goal, but the goalkeeper is ready. "
+    },
+    {
+      "gameTime": "1 - 07:45",
+      "position": 465000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The white team manages to create a scoring opportunity, with the ball going past the goal. "
+    },
+    {
+      "gameTime": "1 - 08:15",
+      "position": 495000,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "Players are spread out, preparing to initiate play near the edge of the field."
+    },
+    {
+      "gameTime": "1 - 08:27",
+      "position": 507000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The attacking team continues to advance, with players moving into the penalty area."
+    },
+    {
+      "gameTime": "1 - 08:35",
+      "position": 515000,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in black attempts a shot, with the goalkeeper ready to react."
+    },
+    {
+      "gameTime": "1 - 09:00",
+      "position": 540000,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black controls the ball and advances it toward the goal area. Other players from both teams position themselves to support the play. "
+    },
+    {
+      "gameTime": "1 - 09:12",
+      "position": 552000,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black takes a shot near the goal, with the goalkeeper in green trying to block. The ball is headed towards the net. "
+    },
+    {
+      "gameTime": "1 - 10:30",
+      "position": 629963,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match begins with players positioning themselves for an initial play. The game is in progress with active movement. "
+    },
+    {
+      "gameTime": "1 - 10:38",
+      "position": 637963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot, with the goalkeeper in position. The action is focused near the goal. "
+    },
+    {
+      "gameTime": "1 - 10:45",
+      "position": 644963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black attempts a shot or pass near the goal, leading to a scramble. The ball goes past the goalkeeper and into the net. "
+    },
+    {
+      "gameTime": "1 - 10:48",
+      "position": 647963,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The referee signals a foul, as players are seen in motion. The play is disrupted. "
+    },
+    {
+      "gameTime": "1 - 11:19",
+      "position": 678963,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The referee signals a foul, and the player in the black and gray jersey is shown being pushed away. "
+    },
+    {
+      "gameTime": "1 - 11:25",
+      "position": 684963,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The ball is crossed into the penalty area, leading to a potential scoring opportunity. "
+    },
+    {
+      "gameTime": "1 - 11:27",
+      "position": 686963,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in a black and gray jersey attempts a shot, but the goal is blocked. "
+    },
+    {
+      "gameTime": "1 - 11:29",
+      "position": 688963,
+      "half": "1",
+      "label": "Yellow card",
+      "commentary": "The referee signals a yellow card to a player, indicating a foul. "
+    },
+    {
+      "gameTime": "1 - 11:60",
+      "position": 719963,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The game begins with players positioning themselves on the field."
+    },
+    {
+      "gameTime": "1 - 12:23",
+      "position": 742963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in white attempts a shot, resulting in a goal."
+    },
+    {
+      "gameTime": "1 - 12:41",
+      "position": 760963,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "A player in white dribbles past opponents, pushing the ball towards the goal."
+    },
+    {
+      "gameTime": "1 - 12:49",
+      "position": 768963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The player in white continues to maneuver the ball, with defenders in black trying to challenge for possession."
+    },
+    {
+      "gameTime": "1 - 13:30",
+      "position": 809963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "Players are positioned for an offensive play, with the ball being passed toward the goal. "
+    },
+    {
+      "gameTime": "1 - 14:15",
+      "position": 854963,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The game begins with players positioning themselves in the pitch. A player in black prepares to advance the ball. "
+    },
+    {
+      "gameTime": "1 - 14:17",
+      "position": 856963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black passes the ball towards the goal area, while defenders in white attempt to intercept. "
+    },
+    {
+      "gameTime": "1 - 14:21",
+      "position": 860963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball is crossed into the goal area, leading to an attempt at a score. "
+    },
+    {
+      "gameTime": "1 - 14:29",
+      "position": 868963,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "The team in black attempts a shot on goal, with the goalkeeper in green ready to react. "
+    },
+    {
+      "gameTime": "1 - 14:60",
+      "position": 899963,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "The game begins with players positioning themselves for an initial offensive play."
+    },
+    {
+      "gameTime": "1 - 15:05",
+      "position": 904963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a pass near the goal area, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "1 - 15:10",
+      "position": 909963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The black team creates a scoring opportunity near the goal, with players converging near the net."
+    },
+    {
+      "gameTime": "1 - 15:15",
+      "position": 914963,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "The ball is passed into the attacking zone, with players repositioning after the play."
+    },
+    {
+      "gameTime": "1 - 16:09",
+      "position": 968963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in a black jersey shoots the ball, leading to a goal. The ball crosses the goal line into the net, awarding a goal. "
+    },
+    {
+      "gameTime": "1 - 16:33",
+      "position": 992963,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in a white jersey falls after a collision, and the referee signals a foul. "
+    },
+    {
+      "gameTime": "1 - 16:40",
+      "position": 999963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in white prepares to take a shot near the goal, with players from the black team clustered near the goal area"
+    },
+    {
+      "gameTime": "1 - 16:55",
+      "position": 1014963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in white attempts a cross or shot near the goal, leading to a scramble"
+    },
+    {
+      "gameTime": "1 - 17:15",
+      "position": 1034963,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in position for the initial play."
+    },
+    {
+      "gameTime": "1 - 17:20",
+      "position": 1039963,
+      "half": "1",
+      "label": "Offside",
+      "commentary": "The ball is passed around, with players moving to maintain possession and create scoring opportunities."
+    },
+    {
+      "gameTime": "1 - 17:23",
+      "position": 1042963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A clear opportunity for a goal is presented as the ball is played towards the goal, resulting in a scramble for the goal."
+    },
+    {
+      "gameTime": "1 - 17:27",
+      "position": 1046963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The play involves a shot towards the goal, with the goalkeeper attempting to block it, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "1 - 17:30",
+      "position": 1049963,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The ball is cleared of defensive interference, allowing the team to continue with possession and further play."
+    },
+    {
+      "gameTime": "1 - 17:60",
+      "position": 1079963,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "Players are spread out, preparing to initiate play, with the ball being passed among teammates."
+    },
+    {
+      "gameTime": "1 - 18:06",
+      "position": 1085963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot or pass near the goal area, with defenders in white trying to block."
+    },
+    {
+      "gameTime": "1 - 18:12",
+      "position": 1091963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball is passed to a player near the goal, who is advancing towards the goal."
+    },
+    {
+      "gameTime": "1 - 18:36",
+      "position": 1115963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black makes a run towards the goal, with the ball being controlled and shot towards the goal."
+    },
+    {
+      "gameTime": "1 - 18:42",
+      "position": 1121963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is shot towards the goal, with players from both teams reacting to the play."
+    },
+    {
+      "gameTime": "1 - 18:48",
+      "position": 1127963,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is headed towards the goal, with the goalkeeper in green preparing to block."
+    },
+    {
+      "gameTime": "1 - 19:25",
+      "position": 1164963,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black advances the ball and passes it past the defender, leading to a shot at the goal. The goal is scored, as indicated by the player in black celebrating near the goal area."
+    },
+    {
+      "gameTime": "1 - 19:22",
+      "position": 1162483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black prepares to shoot, with teammates positioning around the goal area. The ball is moved toward the goal, indicating an attacking play."
+    },
+    {
+      "gameTime": "1 - 19:30",
+      "position": 1170483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black makes a run towards the goal, with the ball being controlled near the goal area, suggesting a potential scoring attempt."
+    },
+    {
+      "gameTime": "1 - 19:40",
+      "position": 1180483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is passed to a teammate, advancing the play towards the goal, with players positioning for further attacks."
+    },
+    {
+      "gameTime": "1 - 20:05",
+      "position": 1205483,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players spread out and no immediate action."
+    },
+    {
+      "gameTime": "1 - 20:07",
+      "position": 1207483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts to control the ball near the goal area, with opposing players pressing."
+    },
+    {
+      "gameTime": "1 - 20:11",
+      "position": 1211483,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The ball is passed into the hexagonal area as players converge near the goal."
+    },
+    {
+      "gameTime": "1 - 20:15",
+      "position": 1215483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is shot towards the goal, leading to a scramble for the ball near the net."
+    },
+    {
+      "gameTime": "1 - 20:17",
+      "position": 1217483,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "Players from both teams converge near the goal, with the ball in play."
+    },
+    {
+      "gameTime": "1 - 20:50",
+      "position": 1250483,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "Players are spread out, preparing to advance the ball down the field."
+    },
+    {
+      "gameTime": "1 - 20:52",
+      "position": 1252483,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in black attempts a pass near the goal area, with defenders pressing."
+    },
+    {
+      "gameTime": "1 - 21:00",
+      "position": 1260483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The player in black takes a shot at the goal, with the goalkeeper attempting to block.]"
+    },
+    {
+      "gameTime": "1 - 21:08",
+      "position": 1268483,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in black attempts a shot, which is saved by the goalkeeper.]"
+    },
+    {
+      "gameTime": "1 - 21:56",
+      "position": 1316483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in a black and white jersey takes a shot near the goal, leading to a scramble for the ball"
+    },
+    {
+      "gameTime": "1 - 22:09",
+      "position": 1329483,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball enters the goal, resulting in a goal"
+    },
+    {
+      "gameTime": "1 - 22:20",
+      "position": 1340483,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is in the beginning, with players in position and the ball being passed around. "
+    },
+    {
+      "gameTime": "1 - 22:24",
+      "position": 1344483,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The ball is crossed into the penalty area, leading to active movement and defensive actions. "
+    },
+    {
+      "gameTime": "1 - 22:26",
+      "position": 1346483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot or a pass near the goal, with the goalkeeper preparing to react. "
+    },
+    {
+      "gameTime": "1 - 22:30",
+      "position": 1350483,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The ball is either crossed or entered the penalty area, prompting reorganization of the team. "
+    },
+    {
+      "gameTime": "1 - 22:33",
+      "position": 1353483,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "Another player in a black and white jersey attempts a shot, but the goalkeeper blocks it"
+    },
+    {
+      "gameTime": "1 - 23:27",
+      "position": 1407483,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "Player in white takes a shot, ball heading toward the goal, defenders and goalkeeper contest the play"
+    },
+    {
+      "gameTime": "1 - 23:39",
+      "position": 1419483,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball enters the goal area, leading to a score"
+    },
+    {
+      "gameTime": "1 - 23:50",
+      "position": 1430483,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "Players are spread out across the field, preparing to advance the ball. A player in white is moving towards the center, while others are positioned to support the play. "
+    },
+    {
+      "gameTime": "1 - 23:54",
+      "position": 1434483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The player in white is near the ball, attempting to control it while being pursued by the defenders in black. The ball is being maneuvered towards the goal area. "
+    },
+    {
+      "gameTime": "1 - 23:56",
+      "position": 1436483,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "The player in white is passing the ball to a teammate, while the defenders in black attempt to intercept. The play is unfolding towards the goal. "
+    },
+    {
+      "gameTime": "1 - 24:58",
+      "position": 1498483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot near the goal, leading to a scramble for the ball"
+    },
+    {
+      "gameTime": "1 - 25:14",
+      "position": 1514483,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black attempts to score, with the ball near the goal line"
+    },
+    {
+      "gameTime": "1 - 25:22",
+      "position": 1522483,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The referee signals a foul near the sideline"
+    },
+    {
+      "gameTime": "1 - 26:00",
+      "position": 1560483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot or pass near the goal, leading to a scramble for the ball"
+    },
+    {
+      "gameTime": "1 - 26:10",
+      "position": 1570483,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The player in black scores a goal, as the ball crosses the goal line into the net"
+    },
+    {
+      "gameTime": "1 - 28:15",
+      "position": 1695483,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in a white and blue striped jersey passes the ball towards the goal, leading to a shot. The goal is scored, as the ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "1 - 28:20",
+      "position": 1700483,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in position for an initial phase of play."
+    },
+    {
+      "gameTime": "1 - 28:22",
+      "position": 1702483,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot or pass near the goal, with the goalkeeper in light blue reacting."
+    },
+    {
+      "gameTime": "1 - 28:25",
+      "position": 1705483,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in a black and gray uniform attempts a shot, but the goalkeeper blocks the ball, resulting in a save. The play continues with repositioning of players."
+    },
+    {
+      "gameTime": "1 - 28:35",
+      "position": 1715483,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "The game proceeds with a player in a black and gray uniform making a move towards the goal, leading to a potential scoring opportunity. The ball is passed to a teammate, who attempts a shot, but the goalkeeper blocks it."
+    },
+    {
+      "gameTime": "1 - 29:51",
+      "position": 1790883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in a black jersey scores a goal, leading to celebration."
+    },
+    {
+      "gameTime": "1 - 30:42",
+      "position": 1841883,
+      "half": "1",
+      "label": "Offside",
+      "commentary": "The ball is passed towards the right side, leading to a potential shot at the goal. Players are positioned to contest the play. "
+    },
+    {
+      "gameTime": "1 - 30:50",
+      "position": 1849883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in white attempts a shot or a cross, leading to a scramble near the goal. The goalkeeper is in position to defend. "
+    },
+    {
+      "gameTime": "1 - 31:27",
+      "position": 1886883,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in position. The game begins with an initial setup and ball movement."
+    },
+    {
+      "gameTime": "1 - 31:33",
+      "position": 1892883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in white attempts a shot, with the ball heading towards the goal, and the goalkeeper is in position to block."
+    },
+    {
+      "gameTime": "1 - 31:45",
+      "position": 1904883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is headed towards the goal, with the goalkeeper in position to block, indicating a close-range attempt."
+    },
+    {
+      "gameTime": "1 - 32:34",
+      "position": 1953883,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "The player in black passes the ball, with other players repositioning for an offensive move."
+    },
+    {
+      "gameTime": "1 - 32:46",
+      "position": 1965883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The player in white approaches the goal, attempting a shot, while defenders position themselves."
+    },
+    {
+      "gameTime": "1 - 32:59",
+      "position": 1978883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in a black jersey attempts a shot or a pass near the goal area. Other players are positioning themselves for the next phase of play. "
+    },
+    {
+      "gameTime": "1 - 33:42",
+      "position": 2021883,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "The match begins with players positioning themselves and the ball being passed around the penalty area."
+    },
+    {
+      "gameTime": "1 - 35:12",
+      "position": 2111883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The match begins with players moving into play. A player in black attempts a shot near the goal. "
+    },
+    {
+      "gameTime": "1 - 35:24",
+      "position": 2123883,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in black attempts to intercept the ball near the goal. "
+    },
+    {
+      "gameTime": "1 - 35:36",
+      "position": 2135883,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in black is shown being fouled. "
+    },
+    {
+      "gameTime": "1 - 35:42",
+      "position": 2141883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "The ball is passed to a player near the goal, leading to further action. "
+    },
+    {
+      "gameTime": "1 - 35:48",
+      "position": 2147883,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in white falls, leading to a potential offside or foul situation. "
+    },
+    {
+      "gameTime": "1 - 35:54",
+      "position": 2153883,
+      "half": "1",
+      "label": "Indirect free-kick",
+      "commentary": "The player in white continues to advance with the ball, engaging with opponents. "
+    },
+    {
+      "gameTime": "1 - 35:60",
+      "position": 2159883,
+      "half": "1",
+      "label": "Yellow card",
+      "commentary": "The referee signals a yellow card to a player. "
+    },
+    {
+      "gameTime": "1 - 36:06",
+      "position": 2165883,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "The player in black is shown being fouled again, leading to further interactions. "
+    },
+    {
+      "gameTime": "1 - 36:42",
+      "position": 2201883,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "Player in black jersey is seen moving towards the ball, initiating play near the goal area."
+    },
+    {
+      "gameTime": "1 - 36:44",
+      "position": 2203883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in white attempts a shot or cross near the goal, with the goalkeeper positioned to defend."
+    },
+    {
+      "gameTime": "1 - 36:46",
+      "position": 2205883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball is directed towards the goal, leading to a potential scoring opportunity."
+    },
+    {
+      "gameTime": "1 - 37:29",
+      "position": 2248883,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "A player in white dribbles the ball towards the goal, while defenders in black try to intercept. "
+    },
+    {
+      "gameTime": "1 - 37:35",
+      "position": 2254883,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The team in white continues to press the ball towards the goal, with players moving into new positions. "
+    },
+    {
+      "gameTime": "1 - 37:39",
+      "position": 2258883,
+      "half": "1",
+      "label": "Offside",
+      "commentary": "The play continues with the team in black maintaining possession and advancing the ball. "
+    },
+    {
+      "gameTime": "1 - 37:43",
+      "position": 2262883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The goal is clearly scored, with the ball touching the net. "
+    },
+    {
+      "gameTime": "1 - 37:45",
+      "position": 2264883,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The team in black continues to move the ball down the field, with players repositioning. "
+    },
+    {
+      "gameTime": "1 - 38:14",
+      "position": 2293883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black attempts a shot or cross near the goal area, leading to a scramble for the ball. The ball is near the goal, suggesting a potential scoring opportunity. "
+    },
+    {
+      "gameTime": "1 - 38:34",
+      "position": 2313883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black receives the ball and attempts a shot, with the goalkeeper reacting. The ball is going toward the goal, indicating a potential scoring attempt. "
+    },
+    {
+      "gameTime": "1 - 38:42",
+      "position": 2321883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A clear goal is scored as the ball crosses the goal line into the net, resulting in a successful goal. "
+    },
+    {
+      "gameTime": "1 - 38:47",
+      "position": 2326883,
+      "half": "1",
+      "label": "Substitution",
+      "commentary": "The black team's players are seen regrouping, and a substitution is likely occurring, as a new player enters the play. "
+    },
+    {
+      "gameTime": "1 - 39:40",
+      "position": 2379883,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in position for play."
+    },
+    {
+      "gameTime": "1 - 39:42",
+      "position": 2381883,
+      "half": "1",
+      "label": "Ball out of play",
+      "commentary": "A player in black controls the ball and advances towards the opponent's goal."
+    },
+    {
+      "gameTime": "1 - 39:44",
+      "position": 2383883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The player in black makes a shot towards the goal, resulting in a goal."
+    },
+    {
+      "gameTime": "1 - 39:52",
+      "position": 2391883,
+      "half": "1",
+      "label": "Corner",
+      "commentary": "The ball is passed to a player near the corner area, initiating a corner kick."
+    },
+    {
+      "gameTime": "1 - 40:60",
+      "position": 2459883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black attempts a shot, with the ball crossing the goal line. The crowd and players react to the potential goal."
+    },
+    {
+      "gameTime": "1 - 41:55",
+      "position": 2514883,
+      "half": "1",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with players in position but no immediate action observed. "
+    },
+    {
+      "gameTime": "1 - 42:01",
+      "position": 2520883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in white takes a shot near the goal, leading to a scramble for the ball. "
+    },
+    {
+      "gameTime": "1 - 42:08",
+      "position": 2527883,
+      "half": "1",
+      "label": "Shots off target",
+      "commentary": "The black team counters with a pass, resulting in a close call near the goal area. "
+    },
+    {
+      "gameTime": "1 - 42:16",
+      "position": 2535883,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A player in black attempts a header, leading to a collision and a fall. "
+    },
+    {
+      "gameTime": "1 - 42:40",
+      "position": 2559883,
+      "half": "1",
+      "label": "Corner",
+      "commentary": "Players are spread out, preparing to initiate play. A West Brom player is advancing with the ball. "
+    },
+    {
+      "gameTime": "1 - 42:46",
+      "position": 2565883,
+      "half": "1",
+      "label": "Foul",
+      "commentary": "A West Brom player is marked for a foul. The referee signals a foul. "
+    },
+    {
+      "gameTime": "1 - 42:54",
+      "position": 2573883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A West Brom player takes a shot, with the goalkeeper approaching to block. "
+    },
+    {
+      "gameTime": "1 - 42:56",
+      "position": 2575883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "The ball hits the back of the net, scoring a goal. "
+    },
+    {
+      "gameTime": "1 - 44:05",
+      "position": 2644883,
+      "half": "1",
+      "label": "Goal",
+      "commentary": "A player in black ball advances and passes to a teammate near the goal, leading to a shot on target. The goal is scored, as the ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "1 - 44:20",
+      "position": 2659883,
+      "half": "1",
+      "label": "Shots on target",
+      "commentary": "A player in black ball maneuvers past defenders and takes a shot, resulting in a close call near the goal area."
+    },
+    {
+      "gameTime": "1 - 44:35",
+      "position": 2674883,
+      "half": "1",
+      "label": "Indirect free-kick",
+      "commentary": "A player in black receives the ball and continues toward the goal"
+    },
+    {
+      "gameTime": "1 - 44:40",
+      "position": 2679883,
+      "half": "1",
+      "label": "Clearance",
+      "commentary": "The ball is cleared of defenders, leading to a free-kick or further play"
+    }
+  ]
+}

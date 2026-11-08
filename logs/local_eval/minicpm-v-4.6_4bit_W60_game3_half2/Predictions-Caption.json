@@ -1,0 +1,1692 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-29 - 17-00 Liverpool 0 - 3 West Ham/",
+  "predictions": [
+    {
+      "gameTime": "2 - 00:00",
+      "position": 0,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player in red prepares to shoot or pass near the corner area, with West Ham defenders positioning. Ball movement suggests an offensive play. "
+    },
+    {
+      "gameTime": "2 - 00:02",
+      "position": 2000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Liverpool player advances the ball, leading to a potential scoring opportunity. West Ham attempts to intercept. "
+    },
+    {
+      "gameTime": "2 - 00:04",
+      "position": 4000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The red team continues to press forward, while the light blue team maintains defensive structure. "
+    },
+    {
+      "gameTime": "2 - 00:06",
+      "position": 6000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Liverpool's player attempts a shot or pass near the goal area, with West Ham's goalkeeper ready to react. "
+    },
+    {
+      "gameTime": "2 - 00:45",
+      "position": 45000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The match begins with players positioning themselves on the field. The ball is passed around, and the play develops into a structured movement down the wing. "
+    },
+    {
+      "gameTime": "2 - 01:30",
+      "position": 90000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The match begins with players distributing the ball across the field. A player in light blue attempts to advance the ball toward the red team's goal. "
+    },
+    {
+      "gameTime": "2 - 01:34",
+      "position": 94000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue team progresses the ball into the red team's penalty area, leading to a potential scoring opportunity. "
+    },
+    {
+      "gameTime": "2 - 01:42",
+      "position": 102000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The red team's defense actively counters the ball carrier, with players drafting to prevent a goal. "
+    },
+    {
+      "gameTime": "2 - 01:50",
+      "position": 110000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The light blue team manages to shoot the ball, which is directed toward the goal. The goalkeeper in green prepares to react. "
+    },
+    {
+      "gameTime": "2 - 02:15",
+      "position": 135000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The match begins with players positioned and the game in progress. The Liverpool team is advancing the ball towards the WHU side. "
+    },
+    {
+      "gameTime": "2 - 02:17",
+      "position": 137000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The ball is passed into the penalty area, leading to active play and movement. The WHU team is attempting to counter. "
+    },
+    {
+      "gameTime": "2 - 02:19",
+      "position": 139000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in red attempts a shot or pass near the goal area, with the light blue team pressing. "
+    },
+    {
+      "gameTime": "2 - 02:27",
+      "position": 147000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in red attempts a shot or a cross, with the light blue team attempting to block. "
+    },
+    {
+      "gameTime": "2 - 02:28",
+      "position": 148000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team manages to create a scoring chance, with the ball heading towards the goal. The light blue team's defense tries to block the shot. "
+    },
+    {
+      "gameTime": "2 - 03:02",
+      "position": 182000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player maneuvers the ball past the WHU defender and attempts a shot near the goal."
+    },
+    {
+      "gameTime": "2 - 03:16",
+      "position": 196000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The Liverpool player manages to shoot the ball, resulting in a score."
+    },
+    {
+      "gameTime": "2 - 03:45",
+      "position": 225000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with both teams positioned for initial play. Players are spreading out, setting up the offensive movement. "
+    },
+    {
+      "gameTime": "2 - 03:49",
+      "position": 229000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "A Liverpool player maneuvers the ball past a WHU defender, progressing towards the goal area. "
+    },
+    {
+      "gameTime": "2 - 03:55",
+      "position": 235000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The ball is passed into a new set of plays, with players repositioning. The scoreboard remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 04:32",
+      "position": 272000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in red attempts a shot or pass near the goal area, with the ball in play. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 04:34",
+      "position": 274000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is passed around the penalty area, with players moving to maintain possession and create scoring opportunities. "
+    },
+    {
+      "gameTime": "2 - 04:36",
+      "position": 276000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in light blue is near the goal, attempting to intercept or block the ball. The red team continues to press forward. "
+    },
+    {
+      "gameTime": "2 - 04:40",
+      "position": 280000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The red team continues to press and create space, with the ball being passed to a advancing player. "
+    },
+    {
+      "gameTime": "2 - 04:44",
+      "position": 284000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team attempts to clear the ball, leading to a scramble in the penalty area. "
+    },
+    {
+      "gameTime": "2 - 05:15",
+      "position": 315000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The game begins with the red team advancing the ball and trying to create a scoring opportunity. Players are positioned along the edge of the penalty area. "
+    },
+    {
+      "gameTime": "2 - 05:23",
+      "position": 323000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The red team's player approaches the goal, and the light blue team's defenders are positioned to block. The ball is near the goal area, suggesting a potential shot. "
+    },
+    {
+      "gameTime": "2 - 05:25",
+      "position": 325000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team attempts a shot on goal, with the light blue team's goalkeeper preparing to react. The ball approaches the goal line. "
+    },
+    {
+      "gameTime": "2 - 05:31",
+      "position": 331000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The red team's player attempts a shot, and the light blue team's goalkeeper is positioned to block. The ball is close to the goal area. "
+    },
+    {
+      "gameTime": "2 - 06:00",
+      "position": 360000,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, score 0-2, with players positioning themselves. The ball is passed and moved down the field. "
+    },
+    {
+      "gameTime": "2 - 06:06",
+      "position": 366000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A red team player attempts a shot or pass near the goal, with the light blue team trying to intercept. The action suggests a potential scoring opportunity. "
+    },
+    {
+      "gameTime": "2 - 06:09",
+      "position": 369000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team's goalkeeper makes a save, and the play continues with repositioning of players. "
+    },
+    {
+      "gameTime": "2 - 06:12",
+      "position": 372000,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A red team player is fouled, leading to a repositioning and potential card. The referee signals a foul. "
+    },
+    {
+      "gameTime": "2 - 06:15",
+      "position": 375000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The red team attempts a counter-attack, with players chasing the ball. The light blue team is making defensive moves. "
+    },
+    {
+      "gameTime": "2 - 06:18",
+      "position": 378000,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A player in light blue falls, likely from a collision, and the red team shows urgency to recover. The referee intervenes. "
+    },
+    {
+      "gameTime": "2 - 06:24",
+      "position": 384000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team scores, as the ball crosses the goal line into the net. The scoreboard updates to show a goal. "
+    },
+    {
+      "gameTime": "2 - 06:53",
+      "position": 413000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A light blue player dribbles the ball while being pursued by a red player, resulting in a tackle. The light blue player falls, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "2 - 06:57",
+      "position": 417000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The light blue player falls and is attended to by the red team, with the ball eventually out of play."
+    },
+    {
+      "gameTime": "2 - 07:34",
+      "position": 454000,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A player in red dribbles the ball past the light blue defenders, progressing towards the center of the field. The play continues with active movement and positioning. "
+    },
+    {
+      "gameTime": "2 - 07:36",
+      "position": 456000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The light blue team is trying to counter, with players moving to compress the red team's space. The ball is passed to a player near the edge of the penalty area. "
+    },
+    {
+      "gameTime": "2 - 07:38",
+      "position": 458000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team's player attempts a shot, with the light blue goalkeeper ready to react. The ball is near the goal, indicating a potential scoring opportunity. "
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "position": 460000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The red team maintains possession and continues to press the light blue defense, with players positioning to create scoring chances. "
+    },
+    {
+      "gameTime": "2 - 08:55",
+      "position": 535000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player advances the ball and passes it to a teammate near the edge of the penalty area. The WHU team attempts to intercept but the ball is passed to a Liverpool player who continues toward the goal."
+    },
+    {
+      "gameTime": "2 - 09:23",
+      "position": 563000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in light blue attempts to intercept or block the ball, while the red team continues to press forward. The goalkeeper is still positioned to defend. "
+    },
+    {
+      "gameTime": "2 - 09:45",
+      "position": 585000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Players are positioned for an initial ball advance from the midfield towards the right corner. A light blue player is moving to create a scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 09:45",
+      "position": 585000,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team advances the ball, leading to ongoing play near the goal area. The light blue team is trying to intercept. "
+    },
+    {
+      "gameTime": "2 - 09:57",
+      "position": 597000,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The light blue team continues to advance, with a player attempting a shot or pass near the corner. The red team's players are positioning to block."
+    },
+    {
+      "gameTime": "2 - 10:03",
+      "position": 603000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue player maintains possession and continues to press the play, while the red team tries to intercept. The ball is near the center of the field."
+    },
+    {
+      "gameTime": "2 - 10:09",
+      "position": 609000,
+      "half": "2",
+      "label": "Direct free-kick",
+      "commentary": "The light blue team is advancing further, with players repositioning. A clear free-kick scenario is implied near the corners. The ball is now in play."
+    },
+    {
+      "gameTime": "2 - 10:13",
+      "position": 613000,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The light blue team is in possession, with players moving to set up a scoring opportunity. The red team is trying to intercept the play."
+    },
+    {
+      "gameTime": "2 - 09:43",
+      "position": 583083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The red team's defenders manage to block the shot, but the ball is still in play. "
+    },
+    {
+      "gameTime": "2 - 10:24",
+      "position": 624083,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "A red player attempts a shot, and the light blue goalkeeper blocks the ball. The red team continues to press forward. "
+    },
+    {
+      "gameTime": "2 - 10:30",
+      "position": 630083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team attempts to clear the ball, leading to a scramble for possession. "
+    },
+    {
+      "gameTime": "2 - 10:33",
+      "position": 633083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team celebrates the goal, while the light blue team regroups. "
+    },
+    {
+      "gameTime": "2 - 10:39",
+      "position": 639083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The light blue team attempts to intercept the ball, leading to a physical play. "
+    },
+    {
+      "gameTime": "2 - 10:45",
+      "position": 645083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team is trying to clear the ball, leading to a defensive maneuver. "
+    },
+    {
+      "gameTime": "2 - 11:58",
+      "position": 718083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The light blue player advances and interacts with the red player, leading to a physical challenge. The ball is passed or contested, resulting in a fall or collision. "
+    },
+    {
+      "gameTime": "2 - 12:05",
+      "position": 725083,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The light blue player attempts a shot or pass, leading to a collision and a fall. The referee monitors the play closely. "
+    },
+    {
+      "gameTime": "2 - 12:35",
+      "position": 755083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Players are positioned for an initial offensive play, with the light blue team advancing toward the red team's goal. The red team is maintaining defensive positions. "
+    },
+    {
+      "gameTime": "2 - 13:20",
+      "position": 800083,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "The match begins with the ball being played out of play, leading to offensive actions. A player in red attempts to control the ball while being challenged by players in light blue. "
+    },
+    {
+      "gameTime": "2 - 13:23",
+      "position": 803083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue team is advancing, with a player near the goal. The red team is trying to intercept. "
+    },
+    {
+      "gameTime": "2 - 13:24",
+      "position": 804083,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A player in light blue is seen near the sideline, indicating a possible restart or substitution. The match continues with active play. "
+    },
+    {
+      "gameTime": "2 - 13:26",
+      "position": 806083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The red team advances, with a player in red attempting a shot or pass near the goal. The light blue goalkeeper is ready to react. "
+    },
+    {
+      "gameTime": "2 - 13:30",
+      "position": 810083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in red is seen near the goal, attempting to interfere with the play. The light blue goalkeeper is positioned to block any further action. "
+    },
+    {
+      "gameTime": "2 - 13:36",
+      "position": 816083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in red is shown near the goal, engaging with the light blue team, suggesting a direct confrontation. The ball is in play, indicating active movement. "
+    },
+    {
+      "gameTime": "2 - 14:50",
+      "position": 890083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with the score 0-2 in favor of LIV against WHU"
+    },
+    {
+      "gameTime": "2 - 15:01",
+      "position": 901083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a red jersey is seen interacting with a staff member"
+    },
+    {
+      "gameTime": "2 - 15:12",
+      "position": 912083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The player in red is seen handling the ball and interacting with officials"
+    },
+    {
+      "gameTime": "2 - 15:24",
+      "position": 924083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in a light blue jersey is shown being attended to by a referee"
+    },
+    {
+      "gameTime": "2 - 15:35",
+      "position": 935083,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The referee is seen intervening and managing the players"
+    },
+    {
+      "gameTime": "2 - 15:45",
+      "position": 945083,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A player in a light blue jersey drinks from a yellow bottle while being observed by a referee."
+    },
+    {
+      "gameTime": "2 - 16:17",
+      "position": 977083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in red attempts a shot near the goal, with the goalkeeper in light blue reacting."
+    },
+    {
+      "gameTime": "2 - 16:20",
+      "position": 980083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with the score still 0-2 in favor of WHU. The ball is passed off the ground, initiating play. "
+    },
+    {
+      "gameTime": "2 - 16:22",
+      "position": 982083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in red takes a shot or pass near the goal, leading to a close-up of a player in red. The scoreboard remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 17:21",
+      "position": 1041083,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A Liverpool player maneuvers to shoot, but the WHU goalkeeper blocks the ball. The ball is cleared out of play. "
+    },
+    {
+      "gameTime": "2 - 17:28",
+      "position": 1048083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A Liverpool player advances and takes a shot, but the goalkeeper blocks it. The ball is cleared from the goal area. "
+    },
+    {
+      "gameTime": "2 - 17:50",
+      "position": 1070083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "Players are spread out, preparing to start the match. The ball is near the midfield, and the play is ongoing. "
+    },
+    {
+      "gameTime": "2 - 17:52",
+      "position": 1072083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player advances and passes the ball to a teammate near the edge of the penalty area. The WHU side reacts defensively. "
+    },
+    {
+      "gameTime": "2 - 17:54",
+      "position": 1074083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player in light blue attempts a shot or a cross, with the goalkeeper in position. The ball is headed towards the goal. "
+    },
+    {
+      "gameTime": "2 - 17:59",
+      "position": 1079083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Liverpool player receives the ball and continues to advance, but the WHU player blocks the pass. "
+    },
+    {
+      "gameTime": "2 - 18:20",
+      "position": 1100083,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The Liverpool player in red is seen adjusting his jersey, indicating celebration or exhaustion. The game continues with the score still 0-2. "
+    },
+    {
+      "gameTime": "2 - 18:22",
+      "position": 1102083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The Liverpool player in red is on the ground, possibly having been fouled. The match resumes with the score still 0-2. "
+    },
+    {
+      "gameTime": "2 - 18:24",
+      "position": 1104083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A Liverpool player is seen preparing to move, with the score unchanged. The play continues with the team in red maintaining possession. "
+    },
+    {
+      "gameTime": "2 - 18:39",
+      "position": 1119083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in red attempts a shot or a pass towards the goal, with the goalkeeper trying to block. The ball enters the goal area, leading to a score. "
+    },
+    {
+      "gameTime": "2 - 19:22",
+      "position": 1162083,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A Liverpool player dribbles the ball towards the wall, being challenged by a Wham player. The ball is passed to a teammate who continues toward the goal area."
+    },
+    {
+      "gameTime": "2 - 19:24",
+      "position": 1164083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player attempts a shot or pass near the goal, with the Wham defense in position to intercept."
+    },
+    {
+      "gameTime": "2 - 19:26",
+      "position": 1166083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A Liverpool player is seen controlling the ball near the penalty area, with opposing players pursuing."
+    },
+    {
+      "gameTime": "2 - 19:28",
+      "position": 1168083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball is passed to a Liverpool player who is advancing towards the goal, with defenders attempting to intercept."
+    },
+    {
+      "gameTime": "2 - 19:32",
+      "position": 1172083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The Liverpool team continues to maneuver the ball, with players moving into new positions to support the play."
+    },
+    {
+      "gameTime": "2 - 19:34",
+      "position": 1174083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The Liverpool player attempts a shot or a pass, with the goalkeeper and defenders in action to block the shot."
+    },
+    {
+      "gameTime": "2 - 19:38",
+      "position": 1178083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The action focuses on a Liverpool player near the edge of the penalty area, with Wham defenders closing in."
+    },
+    {
+      "gameTime": "2 - 19:40",
+      "position": 1180083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The ball is passed to a teammate who is near the center of the field, with players from both teams repositioning to maintain possession and pressure."
+    },
+    {
+      "gameTime": "2 - 19:42",
+      "position": 1182083,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The game transitions into a new phase with players moving into new spaces, suggesting a new offensive or defensive strategy."
+    },
+    {
+      "gameTime": "2 - 19:28",
+      "position": 1167923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Players are spread out, preparing to advance the ball towards the opponent's side. A red team player is advancing while a light blue team player defends. "
+    },
+    {
+      "gameTime": "2 - 19:42",
+      "position": 1181923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The red team maintains possession and continues to advance the ball towards the opponent's goal. The light blue team's defense is trying to intercept. "
+    },
+    {
+      "gameTime": "2 - 19:44",
+      "position": 1183923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The red team's player is near the goal, attempting a shot or a pass, with the light blue team's goalkeeper in position to block. "
+    },
+    {
+      "gameTime": "2 - 20:13",
+      "position": 1212923,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The game begins with Liverpool and WHU players positioning themselves on the field. The match is in the early stages with no immediate scoring opportunity. "
+    },
+    {
+      "gameTime": "2 - 20:15",
+      "position": 1214923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in red attempts a shot or pass near the WHU goal, with the goalkeeper positioned to defend. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 20:17",
+      "position": 1216923,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The red team advances toward the goal, with players from both teams engaging in active play. A player in light blue is near the goal area, preparing to block. "
+    },
+    {
+      "gameTime": "2 - 20:19",
+      "position": 1218923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The red team continues to press forward, seeking to create a scoring opportunity near the goal. The light blue defense is actively reacting to the play. "
+    },
+    {
+      "gameTime": "2 - 20:23",
+      "position": 1222923,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The light blue team is repositioning after the play, with players spreading out to reorganize the defense. The match continues with active movement. "
+    },
+    {
+      "gameTime": "2 - 20:25",
+      "position": 1224923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The red team is pursuing the ball, with players striving to maintain possession and create pressure on the WHU defense. "
+    },
+    {
+      "gameTime": "2 - 20:29",
+      "position": 1228923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The red team is in a defensive stance, trying to intercept the ball and prevent a score. The light blue team is pushing forward. "
+    },
+    {
+      "gameTime": "2 - 21:43",
+      "position": 1302923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The game begins with the team in light blue advancing the ball down the right side. "
+    },
+    {
+      "gameTime": "2 - 21:45",
+      "position": 1304923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue player continues to move forward and attempts a shot. "
+    },
+    {
+      "gameTime": "2 - 21:49",
+      "position": 1308923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The light blue team's player manages to pass the ball. "
+    },
+    {
+      "gameTime": "2 - 21:51",
+      "position": 1310923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The red team's player attempts to block the ball. "
+    },
+    {
+      "gameTime": "2 - 21:53",
+      "position": 1312923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The light blue team's player takes a shot at the goal. "
+    },
+    {
+      "gameTime": "2 - 21:55",
+      "position": 1314923,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The red team's player is called upon to intervene. "
+    },
+    {
+      "gameTime": "2 - 22:01",
+      "position": 1320923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The referee signals a foul. "
+    },
+    {
+      "gameTime": "2 - 22:03",
+      "position": 1322923,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The light blue team's player attempts a corner. "
+    },
+    {
+      "gameTime": "2 - 22:28",
+      "position": 1347923,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the starting point with players in position. The game begins with a defensive setup."
+    },
+    {
+      "gameTime": "2 - 22:35",
+      "position": 1354923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A player in a light blue uniform is seen near the ball, attempting to control it while being challenged by a player in a red uniform."
+    },
+    {
+      "gameTime": "2 - 22:43",
+      "position": 1362923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The player in the light blue uniform successfully controls the ball and starts to advance towards the goal area."
+    },
+    {
+      "gameTime": "2 - 22:50",
+      "position": 1369923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in a light blue uniform is seen near the goal area, with the ball close by, indicating a potential scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 23:15",
+      "position": 1394923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A Liverpool player advances the ball and passes to a teammate near the goal"
+    },
+    {
+      "gameTime": "2 - 23:17",
+      "position": 1396923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is played into the box and a player attempts to score"
+    },
+    {
+      "gameTime": "2 - 23:25",
+      "position": 1404923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player from WHU falls after a collision"
+    },
+    {
+      "gameTime": "2 - 23:31",
+      "position": 1410923,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee signals a foul near the penalty area"
+    },
+    {
+      "gameTime": "2 - 23:59",
+      "position": 1438923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Player in red attempts a shot or pass near the goal area"
+    },
+    {
+      "gameTime": "2 - 24:01",
+      "position": 1440923,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "Player in light blue falls or is tackled near the goal"
+    },
+    {
+      "gameTime": "2 - 24:05",
+      "position": 1444923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "Player in red receives the ball and continues play"
+    },
+    {
+      "gameTime": "2 - 24:07",
+      "position": 1446923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Player in red attempts a shot or clearance near the goal"
+    },
+    {
+      "gameTime": "2 - 24:09",
+      "position": 1448923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "Referee signals a foul"
+    },
+    {
+      "gameTime": "2 - 24:11",
+      "position": 1450923,
+      "half": "2",
+      "label": "Red card",
+      "commentary": "Player in red is shown being examined or supported"
+    },
+    {
+      "gameTime": "2 - 24:17",
+      "position": 1456923,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "Player in light blue attempts a shot or clearance"
+    },
+    {
+      "gameTime": "2 - 24:21",
+      "position": 1460923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "Player in red makes a strategic move"
+    },
+    {
+      "gameTime": "2 - 24:23",
+      "position": 1462923,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "Player in red interacts with the referee"
+    },
+    {
+      "gameTime": "2 - 24:43",
+      "position": 1482923,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The game begins with the Yellow Cards displaying 0-2 for WHU, and play initiating near the center. Players are positioned defensively and offensively. "
+    },
+    {
+      "gameTime": "2 - 24:44",
+      "position": 1483923,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A Yellow card is issued to a WHU player, indicating a foul. The ball is passed forward, leading to immediate action near the goal area. "
+    },
+    {
+      "gameTime": "2 - 24:48",
+      "position": 1487923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The play continues with the team in light blue maintaining possession and moving the ball forward. "
+    },
+    {
+      "gameTime": "2 - 24:50",
+      "position": 1489923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is passed to a teammate, leading to further offensive movements. "
+    },
+    {
+      "gameTime": "2 - 24:52",
+      "position": 1491923,
+      "half": "2",
+      "label": "Shots off target",
+      "commentary": "The goalkeeper makes a save, but the ball continues to be in play. "
+    },
+    {
+      "gameTime": "2 - 25:28",
+      "position": 1527923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The game begins with players positioning themselves for an initial play. The ball is passed around the midfield as the team in light blue attempts to advance. "
+    },
+    {
+      "gameTime": "2 - 26:13",
+      "position": 1572923,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Players are arranged in their defensive and offensive positions, preparing to advance the ball. A red team player is advancing towards the light blue team's goal. "
+    },
+    {
+      "gameTime": "2 - 26:22",
+      "position": 1581923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue team advances and creates a scoring chance, leading to a goal. "
+    },
+    {
+      "gameTime": "2 - 26:25",
+      "position": 1584923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A light blue player is near the goal, attempting to block the shot. The red team continues to press forward. "
+    },
+    {
+      "gameTime": "2 - 26:37",
+      "position": 1596923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The light blue team maintains control of the ball, moving towards the center of the penalty area. The red team's players are trying to block the advance. "
+    },
+    {
+      "gameTime": "2 - 26:40",
+      "position": 1599923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The red team attempts to intercept the ball, but the light blue team continues to press and create space. The referee signals a foul. "
+    },
+    {
+      "gameTime": "2 - 26:60",
+      "position": 1619923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The red team continues to press the light blue team, trying to create scoring opportunities. "
+    },
+    {
+      "gameTime": "2 - 27:04",
+      "position": 1623923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The red team maintains possession and continues to press the light blue team. "
+    },
+    {
+      "gameTime": "2 - 27:06",
+      "position": 1625923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The light blue team's players try to intercept the ball, leading to a scramble for possession. "
+    },
+    {
+      "gameTime": "2 - 27:08",
+      "position": 1627923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The red team attempts a cross into the penalty area, leading to further offensive actions. "
+    },
+    {
+      "gameTime": "2 - 27:10",
+      "position": 1629923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team manages to create a scoring chance, with the ball heading towards the goal. "
+    },
+    {
+      "gameTime": "2 - 27:12",
+      "position": 1631923,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "The light blue team's defense tries to block the shot, resulting in a scramble. "
+    },
+    {
+      "gameTime": "2 - 27:16",
+      "position": 1635923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team's players attempt to clear the ball, leading to a further scramble. "
+    },
+    {
+      "gameTime": "2 - 28:02",
+      "position": 1681923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player advances the ball past the Wham (WHU) defenders, leading to a shot near the goal"
+    },
+    {
+      "gameTime": "2 - 28:11",
+      "position": 1690923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A WHU player attempts a save near the goal, resulting in a close call"
+    },
+    {
+      "gameTime": "2 - 28:26",
+      "position": 1705923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A Liverpool player receives the ball and continues to press forward"
+    },
+    {
+      "gameTime": "2 - 28:28",
+      "position": 1707923,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with Liverpool leading 0-2 against WHU."
+    },
+    {
+      "gameTime": "2 - 28:32",
+      "position": 1711923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player in a light blue jersey is seen near the goal area, with the score still 0-2. A play unfolds near the goal."
+    },
+    {
+      "gameTime": "2 - 28:40",
+      "position": 1719923,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A player in a red jersey is shown interacting with the referee, suggesting a foul or decision. The score remains 0-2."
+    },
+    {
+      "gameTime": "2 - 28:48",
+      "position": 1727923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A player in red is seen near the goal area, with the ball lying on the ground. The match continues with ongoing play."
+    },
+    {
+      "gameTime": "2 - 29:18",
+      "position": 1757923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in red is seen near the goal area, with the ball near the goal. The scene suggests a potential scoring opportunity."
+    },
+    {
+      "gameTime": "2 - 29:19",
+      "position": 1758923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player advances the ball past the WHU defenders, leading to a goal. The goal is clearly marked with the goalkeeper in green reacting to the entry."
+    },
+    {
+      "gameTime": "2 - 29:13",
+      "position": 1753483,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "The ball is passed into play, with players positioning themselves. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 29:21",
+      "position": 1761483,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The ball is crossed into the penalty area, leading to active play and defensive actions. "
+    },
+    {
+      "gameTime": "2 - 29:23",
+      "position": 1763483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The team in light blue is pushing forward, with players engaging near the goal. "
+    },
+    {
+      "gameTime": "2 - 29:27",
+      "position": 1767483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The goalkeeper makes a save, protecting the goal. "
+    },
+    {
+      "gameTime": "2 - 29:29",
+      "position": 1769483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The play continues with movement around the penalty area. "
+    },
+    {
+      "gameTime": "2 - 29:33",
+      "position": 1773483,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The crowd reacts with excitement as the play unfolds. "
+    },
+    {
+      "gameTime": "2 - 30:17",
+      "position": 1817483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player advances towards the Wham (WHU) goal area and attempts a shot or pass near the goal"
+    },
+    {
+      "gameTime": "2 - 30:30",
+      "position": 1830483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in light blue scores a goal, as the ball crosses the goal line into the net"
+    },
+    {
+      "gameTime": "2 - 30:56",
+      "position": 1856483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player advances and takes a shot near the goal, which is contested by the WHU team"
+    },
+    {
+      "gameTime": "2 - 31:09",
+      "position": 1869483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A West Ham player attempts a clearance near the goal area, leading to a brief interaction"
+    },
+    {
+      "gameTime": "2 - 31:28",
+      "position": 1888483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in a light blue jersey takes a shot near the goal, with red defenders close by. The ball is in the vicinity of the goal area. "
+    },
+    {
+      "gameTime": "2 - 31:33",
+      "position": 1893483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A West Ham player is seen near the goalpost, suggesting a defensive counter"
+    },
+    {
+      "gameTime": "2 - 31:36",
+      "position": 1896483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is shot towards the goal, and the red team's goalkeeper is in position to defend. The play is intense near the goal. "
+    },
+    {
+      "gameTime": "2 - 31:38",
+      "position": 1898483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball hits the goal net, scoring a goal. The score is now 0-2 in favor of WHU. "
+    },
+    {
+      "gameTime": "2 - 32:51",
+      "position": 1971483,
+      "half": "2",
+      "label": "Red card",
+      "commentary": "A player in light blue attempts a shot or cross near the goal area, leading to a foul. The referee signals a red card to the player in red."
+    },
+    {
+      "gameTime": "2 - 32:56",
+      "position": 1976483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The game begins with players in position, setting the stage for the initial play. The score remains 0-2, with WHU leading. "
+    },
+    {
+      "gameTime": "2 - 33:06",
+      "position": 1986483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in a light blue jersey is involved in a discussion with a referee, indicating a possible foul or decision. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 33:11",
+      "position": 1991483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The match continues with players repositioning after the red card, as the score remains 0-2. The scene transitions to a discussion among team members near the sideline."
+    },
+    {
+      "gameTime": "2 - 33:16",
+      "position": 1996483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a light blue jersey is shown interacting with teammates, possibly celebrating a goal or discussion. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 33:21",
+      "position": 2001483,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The referee is seen gesturing towards a player, likely giving instructions or a decision. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 33:41",
+      "position": 2021483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in a light blue jersey is seen taking a shot or making a play, with players from the opposing team reacting. The score remains 0-2. "
+    },
+    {
+      "gameTime": "2 - 33:44",
+      "position": 2024483,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in light blue is on the ground, indicating a fall or collision. "
+    },
+    {
+      "gameTime": "2 - 34:26",
+      "position": 2066483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Soccer match is underway with players in position, ball being passed among teams. "
+    },
+    {
+      "gameTime": "2 - 35:21",
+      "position": 2121483,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee signals a foul, prompting a stoppage in play. "
+    },
+    {
+      "gameTime": "2 - 35:26",
+      "position": 2126483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "Player in red moves towards the goal area, leading to further play. "
+    },
+    {
+      "gameTime": "2 - 35:56",
+      "position": 2156483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with both teams positioned for kickoff. The ball is passed around, and players are moving into position. "
+    },
+    {
+      "gameTime": "2 - 36:00",
+      "position": 2160483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The play progresses with movement from the red team toward the ball, and the light blue team pressing back. The ball is passed near the penalty area. "
+    },
+    {
+      "gameTime": "2 - 36:08",
+      "position": 2168483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The red team presses forward, with a player near the goal attempting a shot or a clearance. The light blue team is defending. "
+    },
+    {
+      "gameTime": "2 - 36:12",
+      "position": 2172483,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The ball is passed to a player near the edge of the penalty area, who is preparing to shoot or set the play. The red team's defense is set to react. "
+    },
+    {
+      "gameTime": "2 - 36:43",
+      "position": 2203483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player advances and sends the ball past the West Ham goalkeeper"
+    },
+    {
+      "gameTime": "2 - 36:47",
+      "position": 2207483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player receives the ball and attempts a shot at the goal"
+    },
+    {
+      "gameTime": "2 - 36:53",
+      "position": 2213483,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A Liverpool player is shown being replaced by a new player"
+    },
+    {
+      "gameTime": "2 - 36:59",
+      "position": 2219483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player makes a significant play near the goal area"
+    },
+    {
+      "gameTime": "2 - 37:09",
+      "position": 2229483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The ball is directed towards the goal and is shot past the West Ham goalkeeper"
+    },
+    {
+      "gameTime": "2 - 37:26",
+      "position": 2246483,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with Liverpool leading 0-2 against WHU. No official stoppage or key event yet."
+    },
+    {
+      "gameTime": "2 - 37:36",
+      "position": 2256483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player advances and shoots, resulting in a goal. The score remains 0-2, but a goal is confirmed."
+    },
+    {
+      "gameTime": "2 - 37:46",
+      "position": 2266483,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "The ball is passed into the penalty area, with players re positioning. A clear corner action occurs."
+    },
+    {
+      "gameTime": "2 - 38:11",
+      "position": 2291483,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The game begins with players positioned and preparing to engage in play. The ball is passed around the midfield as the teams maneuver to advance. "
+    },
+    {
+      "gameTime": "2 - 38:16",
+      "position": 2296483,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in red attempts a shot or pass near the goal area, with the light blue team defending. The ball is controlled and directed towards the goal. "
+    },
+    {
+      "gameTime": "2 - 38:26",
+      "position": 2306483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The red team maintains possession and initiates further offensive play, with players moving into the attacking quadrant. "
+    },
+    {
+      "gameTime": "2 - 38:31",
+      "position": 2311483,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The referee issues a hand signal, indicating a need to adjust the play or make a decision. "
+    },
+    {
+      "gameTime": "2 - 38:46",
+      "position": 2326483,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team manages to clear the ball, preventing a direct threat. The red team continues to press. "
+    },
+    {
+      "gameTime": "2 - 39:01",
+      "position": 2341483,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in red approaches the goal and attempts a shot, but the goalkeeper in green blocks the ball. "
+    },
+    {
+      "gameTime": "2 - 38:53",
+      "position": 2333083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "The match is at the start, with both teams positioned for initial play. The ball is being passed or set up."
+    },
+    {
+      "gameTime": "2 - 38:57",
+      "position": 2337083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The light blue team maneuvers to clear the ball, with players positioning for a potential attack."
+    },
+    {
+      "gameTime": "2 - 39:39",
+      "position": 2379083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A player in red attempts a shot or pass near the penalty area, leading to a scramble for the ball."
+    },
+    {
+      "gameTime": "2 - 39:47",
+      "position": 2387083,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "The red team advances the ball, and a player is tackled near the goal area."
+    },
+    {
+      "gameTime": "2 - 40:26",
+      "position": 2426083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The player in red (number 28) continues to manipulate the ball, leading to a further interaction with the player in light blue, resulting in a fall and loss of control."
+    },
+    {
+      "gameTime": "2 - 40:28",
+      "position": 2428083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A red team player creates a scoring opportunity with a close ball, resulting in a close interaction near the ball's contact area."
+    },
+    {
+      "gameTime": "2 - 40:28",
+      "position": 2428083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The player in light blue is seen falling and being attended to by medical staff, indicating a physical confrontation on the field."
+    },
+    {
+      "gameTime": "2 - 40:33",
+      "position": 2433083,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The referee is seen gesturing, likely signaling a foul or offside, as players from both teams engage in active play near the sideline."
+    },
+    {
+      "gameTime": "2 - 40:38",
+      "position": 2438083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A red team player is seen interacting with a player in light blue, leading to a physical contest for the ball."
+    },
+    {
+      "gameTime": "2 - 41:25",
+      "position": 2485083,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A player in a light blue kit is seen interacting with a staff member, suggesting a moment of concern or discussion. "
+    },
+    {
+      "gameTime": "2 - 41:50",
+      "position": 2510083,
+      "half": "2",
+      "label": "Yellow card",
+      "commentary": "A player in a light blue kit is seen interacting with a coach in a dark suit, indicating a discussion or concern. "
+    },
+    {
+      "gameTime": "2 - 42:03",
+      "position": 2523083,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "A player in a light blue jersey is seen interacting with a coach on the sidelines, suggesting a discussion or encouragement following play."
+    },
+    {
+      "gameTime": "2 - 42:13",
+      "position": 2533083,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A player in a light blue jersey is shown being assisted by staff, indicating a possible substitution or recovery sequence."
+    },
+    {
+      "gameTime": "2 - 42:23",
+      "position": 2543083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A player in a light blue jersey is interacting with a coach, suggesting tactical adjustments or guidance during the match."
+    },
+    {
+      "gameTime": "2 - 42:33",
+      "position": 2553083,
+      "half": "2",
+      "label": "Kick-off",
+      "commentary": "A player in a light blue jersey is seen running on the field, indicating active play and ball movement."
+    },
+    {
+      "gameTime": "2 - 42:48",
+      "position": 2568083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player attempts a shot or pass near the goal, with the Kiwis' goalkeeper pushing back. The ball is near the goal area. "
+    },
+    {
+      "gameTime": "2 - 43:03",
+      "position": 2583083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player is near the goal, with the ball in play. The Kiwis' defenders are trying to block the shot. "
+    },
+    {
+      "gameTime": "2 - 43:08",
+      "position": 2588083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player approaches the goal, and the ball is shot towards the goal. The goalkeeper is in position to block. "
+    },
+    {
+      "gameTime": "2 - 43:13",
+      "position": 2593083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The ball enters the goal, and the scoreboard updates to show a score. The players begin to regroup. "
+    },
+    {
+      "gameTime": "2 - 43:35",
+      "position": 2615083,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "A player in red advances the ball towards the Whu side, leading to a counter-attack. Other players reposition to contest the play. "
+    },
+    {
+      "gameTime": "2 - 43:47",
+      "position": 2627083,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The team in light blue maintains possession and passes the ball around the red team's perimeter. The red team attempts to intercept the play. "
+    },
+    {
+      "gameTime": "2 - 43:59",
+      "position": 2639083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The red team advances the ball into the penalty area, where a player attempts a shot or a pass. The light blue defenders press to prevent a goal. "
+    },
+    {
+      "gameTime": "2 - 45:34",
+      "position": 2734083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A Liverpool player advances the ball past the Whistler defenders, leading to a scramble for the goal"
+    },
+    {
+      "gameTime": "2 - 45:39",
+      "position": 2739083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A Liverpool player in red approaches the ball near the goal area, preparing to shoot. The WHU team is defending. "
+    },
+    {
+      "gameTime": "2 - 45:52",
+      "position": 2752083,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "A Liverpool player collides with a Whistler defender, resulting in a fall and a subsequent clearance"
+    },
+    {
+      "gameTime": "2 - 46:28",
+      "position": 2788083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "A WHU player in light blue scores, increasing the lead. The celebration follows closely. "
+    },
+    {
+      "gameTime": "2 - 47:10",
+      "position": 2830083,
+      "half": "2",
+      "label": "Substitution",
+      "commentary": "A West Ham player in a light blue jersey is seen interacting with a Liverpool player, likely engaging in a tactical move or challenge for the ball. "
+    },
+    {
+      "gameTime": "2 - 47:11",
+      "position": 2831083,
+      "half": "2",
+      "label": "Offside",
+      "commentary": "The West Ham player in light blue is in possession of the ball, while Liverpool players position themselves to defend. The ball is being controlled near the goal area. "
+    },
+    {
+      "gameTime": "2 - 47:14",
+      "position": 2834083,
+      "half": "2",
+      "label": "Yellow->red card",
+      "commentary": "The West Ham player in light blue is interacting with a referee or coaching staff, likely discussing the play or celebration. The match continues with the score at 0-3. "
+    },
+    {
+      "gameTime": "2 - 47:16",
+      "position": 2836083,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The West Ham player in light blue is seen celebrating, while the Liverpool defenders attempt to block the play. The ball is near the goal line. "
+    },
+    {
+      "gameTime": "2 - 48:40",
+      "position": 2920083,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A player in light blue advances the ball and passes to a teammate near the sideline, while red defenders press. "
+    },
+    {
+      "gameTime": "2 - 48:46",
+      "position": 2926083,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The light blue player advances and attempts a shot, with the red defense in position. "
+    },
+    {
+      "gameTime": "2 - 48:48",
+      "position": 2927923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The Liverpool player attempts a shot, resulting in a goal."
+    },
+    {
+      "gameTime": "2 - 48:52",
+      "position": 2931923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The WHU side's goalkeeper makes a save, preventing a goal."
+    },
+    {
+      "gameTime": "2 - 48:56",
+      "position": 2935923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The Liverpool team continues to press forward, creating scoring opportunities."
+    },
+    {
+      "gameTime": "2 - 48:60",
+      "position": 2939923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The Liverpool player receives the ball and progresses towards the goal, maintaining pressure."
+    },
+    {
+      "gameTime": "2 - 49:08",
+      "position": 2947923,
+      "half": "2",
+      "label": "Foul",
+      "commentary": "The WHU side's defenders clear the ball, leading to a brief offside situation."
+    },
+    {
+      "gameTime": "2 - 49:12",
+      "position": 2951923,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "The Liverpool player approaches the goal area, initiating a counter-attack."
+    },
+    {
+      "gameTime": "2 - 49:16",
+      "position": 2955923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The WHU goalkeeper makes an urgent save, disrupting the flow of play."
+    },
+    {
+      "gameTime": "2 - 49:20",
+      "position": 2959923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "The Liverpool team continues to press, attempting to create scoring chances."
+    },
+    {
+      "gameTime": "2 - 49:28",
+      "position": 2967923,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "The WHU side's defense is set to intercept, with the ball now in play."
+    },
+    {
+      "gameTime": "2 - 50:57",
+      "position": 3056923,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "A player in light blue attempts a shot or pass near the goal, leading to a scramble for the ball. "
+    },
+    {
+      "gameTime": "2 - 51:19",
+      "position": 3078923,
+      "half": "2",
+      "label": "Indirect free-kick",
+      "commentary": "The light blue team approaches the goal, with a red team player attempting to intercept the ball. "
+    },
+    {
+      "gameTime": "2 - 51:26",
+      "position": 3085923,
+      "half": "2",
+      "label": "Goal",
+      "commentary": "The light blue team scores a goal, as the ball enters the net. "
+    }
+  ]
+}

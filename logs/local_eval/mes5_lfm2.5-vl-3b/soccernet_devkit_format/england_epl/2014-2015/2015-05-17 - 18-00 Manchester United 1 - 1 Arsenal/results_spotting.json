@@ -1,0 +1,2085 @@
+{
+  "UrlLocal": "england_epl/2014-2015/2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal/",
+  "predictions": [
+    {
+      "gameTime": "1 - 00:20",
+      "label": "Ball out of play",
+      "position": 20000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:40",
+      "label": "Ball out of play",
+      "position": 40000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:50",
+      "label": "Ball out of play",
+      "position": 50000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 01:20",
+      "label": "Ball out of play",
+      "position": 80000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 01:40",
+      "label": "Ball out of play",
+      "position": 100000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 02:00",
+      "label": "Throw-in",
+      "position": 120000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 02:20",
+      "label": "Throw-in",
+      "position": 140000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 02:40",
+      "label": "Ball out of play",
+      "position": 160000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:00",
+      "label": "Ball out of play",
+      "position": 180000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:20",
+      "label": "Ball out of play",
+      "position": 200000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:40",
+      "label": "Ball out of play",
+      "position": 220000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 04:00",
+      "label": "Throw-in",
+      "position": 240000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 04:40",
+      "label": "Ball out of play",
+      "position": 280000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 05:00",
+      "label": "Throw-in",
+      "position": 300000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 05:40",
+      "label": "Ball out of play",
+      "position": 340000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:00",
+      "label": "Ball out of play",
+      "position": 360000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:20",
+      "label": "Throw-in",
+      "position": 380000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:00",
+      "label": "Ball out of play",
+      "position": 420000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:20",
+      "label": "Ball out of play",
+      "position": 440000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:20",
+      "label": "Ball out of play",
+      "position": 500000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:50",
+      "label": "Ball out of play",
+      "position": 530000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:00",
+      "label": "Ball out of play",
+      "position": 540000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:20",
+      "label": "Ball out of play",
+      "position": 560000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:40",
+      "label": "Throw-in",
+      "position": 580000,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:42",
+      "label": "Ball out of play",
+      "position": 582043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 10:00",
+      "label": "Throw-in",
+      "position": 600000,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 10:42",
+      "label": "Shots on target",
+      "position": 642043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:22",
+      "label": "Ball out of play",
+      "position": 682043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 12:02",
+      "label": "Throw-in",
+      "position": 722043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 12:42",
+      "label": "Ball out of play",
+      "position": 762043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:22",
+      "label": "Ball out of play",
+      "position": 802043,
+      "half": "1",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:42",
+      "label": "Throw-in",
+      "position": 822043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:02",
+      "label": "Throw-in",
+      "position": 842043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 15:02",
+      "label": "Throw-in",
+      "position": 902043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:02",
+      "label": "Throw-in",
+      "position": 962043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:22",
+      "label": "Ball out of play",
+      "position": 982043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:42",
+      "label": "Ball out of play",
+      "position": 1002043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:02",
+      "label": "Ball out of play",
+      "position": 1022043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:42",
+      "label": "Throw-in",
+      "position": 1062043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:52",
+      "label": "Ball out of play",
+      "position": 1072043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 18:42",
+      "label": "Ball out of play",
+      "position": 1122043,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:02",
+      "label": "Throw-in",
+      "position": 1142043,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:05",
+      "label": "Throw-in",
+      "position": 1204723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:25",
+      "label": "Throw-in",
+      "position": 1224723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:45",
+      "label": "Ball out of play",
+      "position": 1244723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:05",
+      "label": "Ball out of play",
+      "position": 1264723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:25",
+      "label": "Throw-in",
+      "position": 1284723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:25",
+      "label": "Throw-in",
+      "position": 1344723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:45",
+      "label": "Ball out of play",
+      "position": 1364723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:05",
+      "label": "Throw-in",
+      "position": 1384723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:45",
+      "label": "Ball out of play",
+      "position": 1424723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:25",
+      "label": "Ball out of play",
+      "position": 1524723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:05",
+      "label": "Throw-in",
+      "position": 1564723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:25",
+      "label": "Ball out of play",
+      "position": 1584723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:45",
+      "label": "Ball out of play",
+      "position": 1604723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 27:45",
+      "label": "Throw-in",
+      "position": 1664723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:05",
+      "label": "Ball out of play",
+      "position": 1744723,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:13",
+      "label": "Ball out of play",
+      "position": 1753403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:35",
+      "label": "Ball out of play",
+      "position": 1774723,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:53",
+      "label": "Throw-in",
+      "position": 1793403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:33",
+      "label": "Throw-in",
+      "position": 1833403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:53",
+      "label": "Throw-in",
+      "position": 1853403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 31:13",
+      "label": "Throw-in",
+      "position": 1873403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 31:53",
+      "label": "Throw-in",
+      "position": 1913403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:13",
+      "label": "Throw-in",
+      "position": 1933403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:53",
+      "label": "Ball out of play",
+      "position": 1973403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:33",
+      "label": "Ball out of play",
+      "position": 2013403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:53",
+      "label": "Ball out of play",
+      "position": 2033403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:03",
+      "label": "Ball out of play",
+      "position": 2043403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:13",
+      "label": "Throw-in",
+      "position": 2053403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:33",
+      "label": "Throw-in",
+      "position": 2073403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:53",
+      "label": "Ball out of play",
+      "position": 2093403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:13",
+      "label": "Throw-in",
+      "position": 2113403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:13",
+      "label": "Throw-in",
+      "position": 2173403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:33",
+      "label": "Throw-in",
+      "position": 2193403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:53",
+      "label": "Ball out of play",
+      "position": 2213403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:13",
+      "label": "Ball out of play",
+      "position": 2233403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:53",
+      "label": "Ball out of play",
+      "position": 2273403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:13",
+      "label": "Throw-in",
+      "position": 2293403,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:33",
+      "label": "Ball out of play",
+      "position": 2313403,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:16",
+      "label": "Ball out of play",
+      "position": 2355643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:56",
+      "label": "Ball out of play",
+      "position": 2395643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:36",
+      "label": "Throw-in",
+      "position": 2435643,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:56",
+      "label": "Throw-in",
+      "position": 2455643,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:16",
+      "label": "Throw-in",
+      "position": 2475643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:36",
+      "label": "Throw-in",
+      "position": 2555643,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:56",
+      "label": "Ball out of play",
+      "position": 2575643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:16",
+      "label": "Ball out of play",
+      "position": 2595643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:36",
+      "label": "Ball out of play",
+      "position": 2615643,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 44:16",
+      "label": "Ball out of play",
+      "position": 2655643,
+      "half": "1",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 44:41",
+      "label": "Throw-in",
+      "position": 2680643,
+      "half": "1",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 00:00",
+      "label": "Corner",
+      "position": 0,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 00:20",
+      "label": "Corner",
+      "position": 20000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 00:40",
+      "label": "Corner",
+      "position": 40000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 01:00",
+      "label": "Corner",
+      "position": 60000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 01:00",
+      "label": "Shots on target",
+      "position": 60000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 01:20",
+      "label": "Ball out of play",
+      "position": 80000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 01:40",
+      "label": "Corner",
+      "position": 100000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 02:00",
+      "label": "Corner",
+      "position": 120000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 02:00",
+      "label": "Ball out of play",
+      "position": 120000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 02:20",
+      "label": "Ball out of play",
+      "position": 140000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 03:00",
+      "label": "Corner",
+      "position": 180000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 03:20",
+      "label": "Corner",
+      "position": 200000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 03:20",
+      "label": "Ball out of play",
+      "position": 200000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 03:40",
+      "label": "Corner",
+      "position": 220000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 04:00",
+      "label": "Ball out of play",
+      "position": 240000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 04:20",
+      "label": "Throw-in",
+      "position": 260000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 04:30",
+      "label": "Ball out of play",
+      "position": 270000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 04:40",
+      "label": "Corner",
+      "position": 280000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 04:40",
+      "label": "Ball out of play",
+      "position": 280000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 05:00",
+      "label": "Ball out of play",
+      "position": 300000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 05:20",
+      "label": "Throw-in",
+      "position": 320000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 05:40",
+      "label": "Corner",
+      "position": 340000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 06:00",
+      "label": "Ball out of play",
+      "position": 360000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 06:20",
+      "label": "Throw-in",
+      "position": 380000,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 06:30",
+      "label": "Ball out of play",
+      "position": 390000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 06:40",
+      "label": "Corner",
+      "position": 400000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 07:00",
+      "label": "Corner",
+      "position": 420000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 07:20",
+      "label": "Ball out of play",
+      "position": 440000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "label": "Corner",
+      "position": 460000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "label": "Ball out of play",
+      "position": 460000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "label": "Clearance",
+      "position": 460000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 08:00",
+      "label": "Corner",
+      "position": 480000,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 08:20",
+      "label": "Ball out of play",
+      "position": 500000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 08:40",
+      "label": "Corner",
+      "position": 520000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 08:40",
+      "label": "Clearance",
+      "position": 520000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 09:00",
+      "label": "Corner",
+      "position": 540000,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 09:20",
+      "label": "Corner",
+      "position": 560000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 09:40",
+      "label": "Ball out of play",
+      "position": 580000,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 09:41",
+      "label": "Corner",
+      "position": 581403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 10:01",
+      "label": "Corner",
+      "position": 601403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 10:21",
+      "label": "Ball out of play",
+      "position": 621403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 10:41",
+      "label": "Ball out of play",
+      "position": 641403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 11:21",
+      "label": "Corner",
+      "position": 681403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 11:41",
+      "label": "Corner",
+      "position": 701403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 12:21",
+      "label": "Corner",
+      "position": 741403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 12:21",
+      "label": "Ball out of play",
+      "position": 741403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 12:21",
+      "label": "Clearance",
+      "position": 741403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 12:41",
+      "label": "Corner",
+      "position": 761403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 12:51",
+      "label": "Throw-in",
+      "position": 771403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 12:51",
+      "label": "Clearance",
+      "position": 771403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 13:01",
+      "label": "Throw-in",
+      "position": 781403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 13:21",
+      "label": "Throw-in",
+      "position": 801403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 13:41",
+      "label": "Corner",
+      "position": 821403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 13:41",
+      "label": "Clearance",
+      "position": 821403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 14:01",
+      "label": "Ball out of play",
+      "position": 841403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 14:21",
+      "label": "Ball out of play",
+      "position": 861403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 14:41",
+      "label": "Ball out of play",
+      "position": 881403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 15:01",
+      "label": "Ball out of play",
+      "position": 901403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 15:21",
+      "label": "Corner",
+      "position": 921403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 15:21",
+      "label": "Shots on target",
+      "position": 921403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 15:21",
+      "label": "Clearance",
+      "position": 921403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 15:21",
+      "label": "Shots off target",
+      "position": 921403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 15:41",
+      "label": "Corner",
+      "position": 941403,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 16:01",
+      "label": "Corner",
+      "position": 961403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 16:21",
+      "label": "Ball out of play",
+      "position": 981403,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 16:41",
+      "label": "Corner",
+      "position": 1001403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 17:01",
+      "label": "Corner",
+      "position": 1021403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 17:01",
+      "label": "Clearance",
+      "position": 1021403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 17:21",
+      "label": "Ball out of play",
+      "position": 1041403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 17:41",
+      "label": "Ball out of play",
+      "position": 1061403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 18:01",
+      "label": "Corner",
+      "position": 1081403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 18:21",
+      "label": "Clearance",
+      "position": 1101403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 18:41",
+      "label": "Corner",
+      "position": 1121403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 19:01",
+      "label": "Corner",
+      "position": 1141403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 19:01",
+      "label": "Ball out of play",
+      "position": 1141403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 19:21",
+      "label": "Corner",
+      "position": 1161403,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 19:23",
+      "label": "Ball out of play",
+      "position": 1163443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 19:43",
+      "label": "Corner",
+      "position": 1183443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 20:03",
+      "label": "Corner",
+      "position": 1203443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 20:43",
+      "label": "Ball out of play",
+      "position": 1243443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 21:03",
+      "label": "Ball out of play",
+      "position": 1263443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 21:43",
+      "label": "Corner",
+      "position": 1303443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 22:03",
+      "label": "Throw-in",
+      "position": 1323443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 22:43",
+      "label": "Corner",
+      "position": 1363443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 22:43",
+      "label": "Shots on target",
+      "position": 1363443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 23:03",
+      "label": "Corner",
+      "position": 1383443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 23:23",
+      "label": "Ball out of play",
+      "position": 1403443,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 23:43",
+      "label": "Ball out of play",
+      "position": 1423443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 24:43",
+      "label": "Corner",
+      "position": 1483443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 25:03",
+      "label": "Corner",
+      "position": 1503443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 25:23",
+      "label": "Ball out of play",
+      "position": 1523443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 25:43",
+      "label": "Corner",
+      "position": 1543443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 25:43",
+      "label": "Ball out of play",
+      "position": 1543443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 26:03",
+      "label": "Ball out of play",
+      "position": 1563443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 26:23",
+      "label": "Corner",
+      "position": 1583443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 26:43",
+      "label": "Corner",
+      "position": 1603443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 27:03",
+      "label": "Corner",
+      "position": 1623443,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 27:23",
+      "label": "Corner",
+      "position": 1643443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 27:43",
+      "label": "Ball out of play",
+      "position": 1663443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 28:03",
+      "label": "Corner",
+      "position": 1683443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 28:13",
+      "label": "Ball out of play",
+      "position": 1693443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 28:23",
+      "label": "Corner",
+      "position": 1703443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 28:43",
+      "label": "Ball out of play",
+      "position": 1723443,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 29:03",
+      "label": "Corner",
+      "position": 1743443,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 29:29",
+      "label": "Corner",
+      "position": 1769043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 29:49",
+      "label": "Corner",
+      "position": 1789043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 30:09",
+      "label": "Corner",
+      "position": 1809043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 30:09",
+      "label": "Clearance",
+      "position": 1809043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 30:49",
+      "label": "Corner",
+      "position": 1849043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 30:49",
+      "label": "Ball out of play",
+      "position": 1849043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 31:29",
+      "label": "Corner",
+      "position": 1889043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 31:49",
+      "label": "Corner",
+      "position": 1909043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 32:09",
+      "label": "Ball out of play",
+      "position": 1929043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 32:14",
+      "label": "Corner",
+      "position": 1934043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 32:49",
+      "label": "Corner",
+      "position": 1969043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 33:29",
+      "label": "Throw-in",
+      "position": 2009043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 33:49",
+      "label": "Ball out of play",
+      "position": 2029043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 34:09",
+      "label": "Clearance",
+      "position": 2049043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 34:29",
+      "label": "Ball out of play",
+      "position": 2069043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 35:09",
+      "label": "Corner",
+      "position": 2109043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 35:29",
+      "label": "Ball out of play",
+      "position": 2129043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 35:49",
+      "label": "Ball out of play",
+      "position": 2149043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 36:09",
+      "label": "Corner",
+      "position": 2169043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 36:09",
+      "label": "Ball out of play",
+      "position": 2169043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 36:19",
+      "label": "Ball out of play",
+      "position": 2179043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 36:29",
+      "label": "Corner",
+      "position": 2189043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 36:29",
+      "label": "Ball out of play",
+      "position": 2189043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 36:49",
+      "label": "Ball out of play",
+      "position": 2209043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 37:09",
+      "label": "Corner",
+      "position": 2229043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 37:09",
+      "label": "Ball out of play",
+      "position": 2229043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 37:29",
+      "label": "Corner",
+      "position": 2249043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 37:49",
+      "label": "Ball out of play",
+      "position": 2269043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 38:09",
+      "label": "Ball out of play",
+      "position": 2289043,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 38:29",
+      "label": "Corner",
+      "position": 2309043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 38:29",
+      "label": "Ball out of play",
+      "position": 2309043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 38:49",
+      "label": "Corner",
+      "position": 2329043,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 38:56",
+      "label": "Ball out of play",
+      "position": 2336003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 39:16",
+      "label": "Ball out of play",
+      "position": 2356003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 39:36",
+      "label": "Ball out of play",
+      "position": 2376003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 39:56",
+      "label": "Ball out of play",
+      "position": 2396003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 40:16",
+      "label": "Ball out of play",
+      "position": 2416003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 40:36",
+      "label": "Ball out of play",
+      "position": 2436003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 40:46",
+      "label": "Ball out of play",
+      "position": 2446003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 41:16",
+      "label": "Ball out of play",
+      "position": 2476003,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 41:36",
+      "label": "Ball out of play",
+      "position": 2496003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 41:56",
+      "label": "Ball out of play",
+      "position": 2516003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 42:16",
+      "label": "Ball out of play",
+      "position": 2536003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 42:36",
+      "label": "Throw-in",
+      "position": 2556003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 42:56",
+      "label": "Ball out of play",
+      "position": 2576003,
+      "half": "2",
+      "confidence": 0.9,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 43:36",
+      "label": "Ball out of play",
+      "position": 2616003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 43:56",
+      "label": "Ball out of play",
+      "position": 2636003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 44:36",
+      "label": "Ball out of play",
+      "position": 2676003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 44:56",
+      "label": "Corner",
+      "position": 2696003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 45:16",
+      "label": "Ball out of play",
+      "position": 2716003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 45:36",
+      "label": "Ball out of play",
+      "position": 2736003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 45:56",
+      "label": "Ball out of play",
+      "position": 2756003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 46:16",
+      "label": "Ball out of play",
+      "position": 2776003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 46:36",
+      "label": "Corner",
+      "position": 2796003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 46:56",
+      "label": "Ball out of play",
+      "position": 2816003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 47:16",
+      "label": "Ball out of play",
+      "position": 2836003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 47:26",
+      "label": "Ball out of play",
+      "position": 2846003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 47:36",
+      "label": "Ball out of play",
+      "position": 2856003,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 47:56",
+      "label": "Corner",
+      "position": 2876003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 47:56",
+      "label": "Ball out of play",
+      "position": 2876003,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 48:36",
+      "label": "Corner",
+      "position": 2916003,
+      "half": "2",
+      "confidence": 0.0,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 48:43",
+      "label": "Ball out of play",
+      "position": 2922643,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 49:23",
+      "label": "Ball out of play",
+      "position": 2962643,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 49:43",
+      "label": "Throw-in",
+      "position": 2982643,
+      "half": "2",
+      "confidence": 0.85,
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "2 - 50:03",
+      "label": "Corner",
+      "position": 3002643,
+      "half": "2",
+      "confidence": 0.95,
+      "visibility": "visible"
+    }
+  ]
+}

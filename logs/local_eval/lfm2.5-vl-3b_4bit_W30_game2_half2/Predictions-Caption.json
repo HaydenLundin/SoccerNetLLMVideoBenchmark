@@ -1,0 +1,1104 @@
+{
+  "UrlLocal": "england_epl/2015-2016/2015-08-23 - 15-30 West Brom 2 - 3 Chelsea/",
+  "predictions": [
+    {
+      "gameTime": "2 - 00:00",
+      "position": 0,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Ball crosses the entire playfield."
+    },
+    {
+      "gameTime": "2 - 00:00",
+      "position": 0,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball is off the centerline, not shown."
+    },
+    {
+      "gameTime": "2 - 00:20",
+      "position": 20000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 00:40",
+      "position": 40000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 01:00",
+      "position": 60000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player crosses the entire image."
+    },
+    {
+      "gameTime": "2 - 01:20",
+      "position": 80000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is standing on the left side of the image, holding a baseball in his right hand, preparing to throw it towards the right side of the image."
+    },
+    {
+      "gameTime": "2 - 01:40",
+      "position": 100000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle, throwing the ball in from the left side of the goal line."
+    },
+    {
+      "gameTime": "2 - 02:00",
+      "position": 120000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle"
+    },
+    {
+      "gameTime": "2 - 02:00",
+      "position": 120000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 02:20",
+      "position": 140000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 02:40",
+      "position": 160000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is crossing the center circle from the left side of the image, throwing a ball towards the right side of the image."
+    },
+    {
+      "gameTime": "2 - 03:40",
+      "position": 220000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Soccer ball is in the center of the image, ball is in the center of the image"
+    },
+    {
+      "gameTime": "2 - 04:20",
+      "position": 260000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man in a black shirt throws a baseball at a target while a woman in a black dress throws a baseball at him from the opposite side of the screen."
+    },
+    {
+      "gameTime": "2 - 04:40",
+      "position": 280000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 04:40",
+      "position": 280000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player throws the ball in from the center circle."
+    },
+    {
+      "gameTime": "2 - 05:00",
+      "position": 300000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball crosses the goal line into the net"
+    },
+    {
+      "gameTime": "2 - 05:20",
+      "position": 320000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is holding a camera with a visible ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 06:00",
+      "position": 360000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 06:00",
+      "position": 360000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 06:20",
+      "position": 380000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle to the right side of the image, throwing a soccer ball."
+    },
+    {
+      "gameTime": "2 - 06:40",
+      "position": 400000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "position": 460000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "position": 460000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 07:40",
+      "position": 460000,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 08:00",
+      "position": 480000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle from the left side of the screen to the right side of the screen, throwing a ball at the center of the screen"
+    },
+    {
+      "gameTime": "2 - 08:20",
+      "position": 500000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle from the left side of the screen to the right side of the screen, throwing a ball at the center of the screen"
+    },
+    {
+      "gameTime": "2 - 08:30",
+      "position": 510000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle from the left side of the screen to the right side of the screen, throwing a ball at the center of the screen"
+    },
+    {
+      "gameTime": "2 - 08:40",
+      "position": 520000,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is standing in the center of the image holding a large golden ball"
+    },
+    {
+      "gameTime": "2 - 09:00",
+      "position": 540000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 09:20",
+      "position": 560000,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 09:20",
+      "position": 560000,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 09:59",
+      "position": 599403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 10:19",
+      "position": 619403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A ball crosses the center circle, indicating an official event."
+    },
+    {
+      "gameTime": "2 - 10:39",
+      "position": 639403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player crosses the entire frame."
+    },
+    {
+      "gameTime": "2 - 10:59",
+      "position": 659403,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A person is crossing the center circle, throwing the ball in from the left side of the image."
+    },
+    {
+      "gameTime": "2 - 11:19",
+      "position": 679403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 11:19",
+      "position": 679403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player throws the ball in from the center circle."
+    },
+    {
+      "gameTime": "2 - 11:39",
+      "position": 699403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 11:39",
+      "position": 699403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 11:59",
+      "position": 719403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 12:19",
+      "position": 739403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 12:39",
+      "position": 759403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is holding a camera and appears to be taking a photo."
+    },
+    {
+      "gameTime": "2 - 12:59",
+      "position": 779403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is holding a ball in the center of the image"
+    },
+    {
+      "gameTime": "2 - 13:19",
+      "position": 799403,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle to the right, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 13:39",
+      "position": 819403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A black ball is completely in the center of the image, indicating a clear shot."
+    },
+    {
+      "gameTime": "2 - 13:59",
+      "position": 839403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is standing in the center of the frame, holding a baseball in his right hand, ready to throw it"
+    },
+    {
+      "gameTime": "2 - 14:19",
+      "position": 859403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a soccer ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 14:39",
+      "position": 879403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is standing in the center of the image holding a large golden ball, which is the most visible object in the scene."
+    },
+    {
+      "gameTime": "2 - 14:59",
+      "position": 899403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A woman is standing in the center of the frame, holding a ball in her hand and throwing it towards the right side of the frame."
+    },
+    {
+      "gameTime": "2 - 15:19",
+      "position": 919403,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle to the right of the ball and kicking it out of play."
+    },
+    {
+      "gameTime": "2 - 15:59",
+      "position": 959403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 16:19",
+      "position": 979403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 16:39",
+      "position": 999403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A ball is completely crossed the center circle, starting from the left edge of the image."
+    },
+    {
+      "gameTime": "2 - 16:59",
+      "position": 1019403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 16:59",
+      "position": 1019403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 17:19",
+      "position": 1039403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 17:39",
+      "position": 1059403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 17:59",
+      "position": 1079403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is holding a ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 18:19",
+      "position": 1099403,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A person is holding a camera with a camera pointed at the center of the image, which is the main subject."
+    },
+    {
+      "gameTime": "2 - 18:59",
+      "position": 1139403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A woman is crossing the center circle to throw a ball out of play."
+    },
+    {
+      "gameTime": "2 - 19:19",
+      "position": 1159403,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is holding a ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 19:28",
+      "position": 1167723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is throwing a ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 19:48",
+      "position": 1187723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 20:08",
+      "position": 1207723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player throws the ball off the center circle."
+    },
+    {
+      "gameTime": "2 - 20:08",
+      "position": 1207723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 20:28",
+      "position": 1227723,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A person is crossing the center circle, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 21:08",
+      "position": 1267723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 21:48",
+      "position": 1307723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player throws ball in from the center circle"
+    },
+    {
+      "gameTime": "2 - 22:08",
+      "position": 1327723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center line"
+    },
+    {
+      "gameTime": "2 - 22:08",
+      "position": 1327723,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 22:28",
+      "position": 1347723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center of the goal line"
+    },
+    {
+      "gameTime": "2 - 22:48",
+      "position": 1367723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 23:08",
+      "position": 1387723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle to the right, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 23:28",
+      "position": 1407723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball crosses the center of the screen."
+    },
+    {
+      "gameTime": "2 - 23:48",
+      "position": 1427723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 24:08",
+      "position": 1447723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A ball crosses the center circle"
+    },
+    {
+      "gameTime": "2 - 24:48",
+      "position": 1487723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a soccer ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 25:08",
+      "position": 1507723,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 25:28",
+      "position": 1527723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is holding a ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 25:48",
+      "position": 1547723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle to the right, throwing a ball to the left."
+    },
+    {
+      "gameTime": "2 - 26:08",
+      "position": 1567723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 26:28",
+      "position": 1587723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 27:08",
+      "position": 1627723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a soccer ball and is in the center of the screen, ball is in the center of the screen"
+    },
+    {
+      "gameTime": "2 - 27:28",
+      "position": 1647723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 27:28",
+      "position": 1647723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 27:28",
+      "position": 1647723,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Shots off target"
+    },
+    {
+      "gameTime": "2 - 27:33",
+      "position": 1652723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a soccer ball and is in the center of the screen, ball is in the center of the screen"
+    },
+    {
+      "gameTime": "2 - 27:48",
+      "position": 1667723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "A man is holding a ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 28:08",
+      "position": 1687723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 28:08",
+      "position": 1687723,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Clearance"
+    },
+    {
+      "gameTime": "2 - 28:08",
+      "position": 1687723,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 28:28",
+      "position": 1707723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle"
+    },
+    {
+      "gameTime": "2 - 28:48",
+      "position": 1727723,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a large golden ball in front of the camera"
+    },
+    {
+      "gameTime": "2 - 29:08",
+      "position": 1747723,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player is completely off the center of the screen"
+    },
+    {
+      "gameTime": "2 - 29:09",
+      "position": 1748683,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle to the right, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 29:29",
+      "position": 1768683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 29:29",
+      "position": 1768683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 29:49",
+      "position": 1788683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Player is holding a soccer ball, ball is in the center of the image, no obstruction."
+    },
+    {
+      "gameTime": "2 - 30:09",
+      "position": 1808683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is standing on the left side of the frame, holding a baseball in his right hand, preparing to throw it towards the right side of the frame"
+    },
+    {
+      "gameTime": "2 - 30:29",
+      "position": 1828683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a soccer ball in the center of the frame, ball is clearly visible."
+    },
+    {
+      "gameTime": "2 - 30:49",
+      "position": 1848683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 31:09",
+      "position": 1868683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player crosses the center circle"
+    },
+    {
+      "gameTime": "2 - 31:09",
+      "position": 1868683,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Player crosses the goal line"
+    },
+    {
+      "gameTime": "2 - 31:29",
+      "position": 1888683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player is completely off the center of the screen"
+    },
+    {
+      "gameTime": "2 - 31:49",
+      "position": 1908683,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle from the left to the right, throwing the ball out of the play area."
+    },
+    {
+      "gameTime": "2 - 32:09",
+      "position": 1928683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 32:09",
+      "position": 1928683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 32:29",
+      "position": 1948683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is standing on the left side of the image, holding a football and preparing to kick it towards the right side of the image."
+    },
+    {
+      "gameTime": "2 - 33:09",
+      "position": 1988683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the entire playfield."
+    },
+    {
+      "gameTime": "2 - 33:29",
+      "position": 2008683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 33:29",
+      "position": 2008683,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 33:49",
+      "position": 2028683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 34:09",
+      "position": 2048683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle from the left, throwing the ball to the right."
+    },
+    {
+      "gameTime": "2 - 34:29",
+      "position": 2068683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player is holding a soccer ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 34:49",
+      "position": 2088683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center of the image."
+    },
+    {
+      "gameTime": "2 - 34:49",
+      "position": 2088683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 34:49",
+      "position": 2088683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Clearance"
+    },
+    {
+      "gameTime": "2 - 35:09",
+      "position": 2108683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 35:29",
+      "position": 2128683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle to the right, throwing a ball."
+    },
+    {
+      "gameTime": "2 - 35:49",
+      "position": 2148683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is holding a ball in the center of the image."
+    },
+    {
+      "gameTime": "2 - 36:09",
+      "position": 2168683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center line"
+    },
+    {
+      "gameTime": "2 - 36:09",
+      "position": 2168683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 36:29",
+      "position": 2188683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is crossing the center circle from the left to the right, throwing a ball in the process."
+    },
+    {
+      "gameTime": "2 - 36:49",
+      "position": 2208683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle to the right, throwing a ball in the air."
+    },
+    {
+      "gameTime": "2 - 37:09",
+      "position": 2228683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player throws a ball in from the center circle."
+    },
+    {
+      "gameTime": "2 - 37:09",
+      "position": 2228683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player covers the entire image with a ball."
+    },
+    {
+      "gameTime": "2 - 37:29",
+      "position": 2248683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball off target"
+    },
+    {
+      "gameTime": "2 - 37:49",
+      "position": 2268683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Player throws ball in from the center circle"
+    },
+    {
+      "gameTime": "2 - 38:09",
+      "position": 2288683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 38:29",
+      "position": 2308683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 38:49",
+      "position": 2328683,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 38:49",
+      "position": 2328683,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 38:49",
+      "position": 2328683,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 39:14",
+      "position": 2353603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center of the image."
+    },
+    {
+      "gameTime": "2 - 39:14",
+      "position": 2353603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 39:34",
+      "position": 2373603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the goal line into the net."
+    },
+    {
+      "gameTime": "2 - 39:34",
+      "position": 2373603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Player throws the ball in from the center circle."
+    },
+    {
+      "gameTime": "2 - 39:54",
+      "position": 2393603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A person is holding a camera, aiming to take a photo of a person wearing a black jacket, which is the focal point of the image."
+    },
+    {
+      "gameTime": "2 - 40:14",
+      "position": 2413603,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle to the right of the ball, throwing it out of play."
+    },
+    {
+      "gameTime": "2 - 40:34",
+      "position": 2433603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is crossing the center circle, throwing the ball in from the side line."
+    },
+    {
+      "gameTime": "2 - 40:54",
+      "position": 2453603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 40:54",
+      "position": 2453603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 40:54",
+      "position": 2453603,
+      "half": "2",
+      "label": "Shots on target",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 41:14",
+      "position": 2473603,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle to the right, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 41:34",
+      "position": 2493603,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A man is crossing the center circle to the right, throwing the ball out of play."
+    },
+    {
+      "gameTime": "2 - 41:54",
+      "position": 2513603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 42:14",
+      "position": 2533603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is standing in the middle of the image, holding a baseball in his right hand, which is the center of the image."
+    },
+    {
+      "gameTime": "2 - 42:34",
+      "position": 2553603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball crosses the center circle."
+    },
+    {
+      "gameTime": "2 - 42:34",
+      "position": 2553603,
+      "half": "2",
+      "label": "Clearance",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 42:34",
+      "position": 2553603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Ball crosses the goal line"
+    },
+    {
+      "gameTime": "2 - 42:34",
+      "position": 2553603,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "Shots off target"
+    },
+    {
+      "gameTime": "2 - 42:39",
+      "position": 2558603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "A man is holding a baseball in his right hand, which is the center of the image."
+    },
+    {
+      "gameTime": "2 - 43:14",
+      "position": 2593603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 43:34",
+      "position": 2613603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 43:54",
+      "position": 2633603,
+      "half": "2",
+      "label": "Corner",
+      "commentary": "Ball out of play"
+    },
+    {
+      "gameTime": "2 - 43:54",
+      "position": 2633603,
+      "half": "2",
+      "label": "Ball out of play",
+      "commentary": "Shots on target"
+    },
+    {
+      "gameTime": "2 - 44:34",
+      "position": 2673603,
+      "half": "2",
+      "label": "Throw-in",
+      "commentary": "A person is crossing the center circle to the right, throwing the ball out of play."
+    }
+  ]
+}
