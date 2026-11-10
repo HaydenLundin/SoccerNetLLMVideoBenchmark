@@ -1,0 +1,440 @@
+{
+  "timestamp": "2026-11-10 15:32:16",
+  "benchmark": "SoccerNet MES-5 & Cross-Sport",
+  "scoring_formula": "ReVal = 0.45*Action + 0.30*Exposure + 0.25*Resonance",
+  "total_athletes": 12,
+  "leaderboard": [
+    {
+      "id": "ander_herrera",
+      "name": "Ander Herrera",
+      "jersey": "21",
+      "team": "Manchester United",
+      "sport": "soccer",
+      "position": "Midfielder",
+      "game_id": 0,
+      "base_market_nil": 250000.0,
+      "avatar_color": "#da291c",
+      "reval_score": 58.3,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.91x",
+      "multiplier_numeric": 1.91,
+      "estimated_nil_value": 477500.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 46.2,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 98.6
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "ander_herrera",
+          "game_id": 0,
+          "half": 1,
+          "chunk_index": 2,
+          "rel_sec": 594.6,
+          "label": "Goal",
+          "crowd_surge_db": 13.8,
+          "camera_type": "Close-Up",
+          "description": "Volley finish at far post off Young cross into Stretford End."
+        }
+      ]
+    },
+    {
+      "id": "sergio_aguero",
+      "name": "Sergio Aguero",
+      "jersey": "10",
+      "team": "Manchester City",
+      "sport": "soccer",
+      "position": "Striker",
+      "game_id": 1,
+      "base_market_nil": 450000.0,
+      "avatar_color": "#6cabdd",
+      "reval_score": 56.5,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.82x",
+      "multiplier_numeric": 1.82,
+      "estimated_nil_value": 819000.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 46.2,
+        "broadcast_exposure": 35.6,
+        "crowd_resonance": 100.0
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "sergio_aguero",
+          "game_id": 1,
+          "half": 1,
+          "chunk_index": 3,
+          "rel_sec": 111.1,
+          "label": "Goal",
+          "crowd_surge_db": 14.5,
+          "camera_type": "Replay Sequence",
+          "description": "Opener goal after tight combination play inside the 18-yard box."
+        }
+      ]
+    },
+    {
+      "id": "patrick_mahomes",
+      "name": "Patrick Mahomes",
+      "jersey": "15",
+      "team": "Kansas City",
+      "sport": "football",
+      "position": "Quarterback",
+      "game_id": 99,
+      "base_market_nil": 750000.0,
+      "avatar_color": "#e31837",
+      "reval_score": 56.5,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.82x",
+      "multiplier_numeric": 1.82,
+      "estimated_nil_value": 1365000.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 46.2,
+        "broadcast_exposure": 35.6,
+        "crowd_resonance": 100.0
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "patrick_mahomes",
+          "game_id": 99,
+          "half": 1,
+          "chunk_index": 0,
+          "rel_sec": 18.0,
+          "label": "Touchdown",
+          "crowd_surge_db": 14.8,
+          "camera_type": "Replay Sequence",
+          "description": "Rollout scramble touchdown pass to back of the endzone."
+        }
+      ]
+    },
+    {
+      "id": "diego_costa",
+      "name": "Diego Costa",
+      "jersey": "19",
+      "team": "Chelsea",
+      "sport": "soccer",
+      "position": "Striker",
+      "game_id": 2,
+      "base_market_nil": 380000.0,
+      "avatar_color": "#034694",
+      "reval_score": 54.0,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.70x",
+      "multiplier_numeric": 1.7,
+      "estimated_nil_value": 646000.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 46.2,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 81.4
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "diego_costa",
+          "game_id": 2,
+          "half": 1,
+          "chunk_index": 2,
+          "rel_sec": 588.7,
+          "label": "Goal",
+          "crowd_surge_db": 11.4,
+          "camera_type": "Close-Up",
+          "description": "Fast counter-attack goal sliding finish into the bottom corner."
+        }
+      ]
+    },
+    {
+      "id": "stephen_curry",
+      "name": "Stephen Curry",
+      "jersey": "30",
+      "team": "Golden State",
+      "sport": "basketball",
+      "position": "Point Guard",
+      "game_id": 98,
+      "base_market_nil": 800000.0,
+      "avatar_color": "#1d428a",
+      "reval_score": 53.1,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.66x",
+      "multiplier_numeric": 1.66,
+      "estimated_nil_value": 1328000.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 35.8,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 96.4
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "stephen_curry",
+          "game_id": 98,
+          "half": 1,
+          "chunk_index": 0,
+          "rel_sec": 21.0,
+          "label": "Three-Point Made",
+          "crowd_surge_db": 13.5,
+          "camera_type": "Close-Up",
+          "description": "Deep 30-foot pull-up three-pointer beating the 24s shot clock."
+        }
+      ]
+    },
+    {
+      "id": "john_terry",
+      "name": "John Terry",
+      "jersey": "26",
+      "team": "Chelsea",
+      "sport": "soccer",
+      "position": "Center Back",
+      "game_id": 2,
+      "base_market_nil": 350000.0,
+      "avatar_color": "#034694",
+      "reval_score": 51.5,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.57x",
+      "multiplier_numeric": 1.57,
+      "estimated_nil_value": 549500.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 35.8,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 90.0
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "john_terry",
+          "game_id": 2,
+          "half": 2,
+          "chunk_index": 0,
+          "rel_sec": 501.1,
+          "label": "Red card",
+          "crowd_surge_db": 12.6,
+          "camera_type": "Close-Up",
+          "description": "Straight red dismissal as last man defending inside the final third."
+        }
+      ]
+    },
+    {
+      "id": "james_milner",
+      "name": "James Milner",
+      "jersey": "7",
+      "team": "Liverpool",
+      "sport": "soccer",
+      "position": "Midfielder",
+      "game_id": 13,
+      "base_market_nil": 200000.0,
+      "avatar_color": "#c8102e",
+      "reval_score": 50.8,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.54x",
+      "multiplier_numeric": 1.54,
+      "estimated_nil_value": 308000.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 35.8,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 87.1
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "james_milner",
+          "game_id": 13,
+          "half": 1,
+          "chunk_index": 4,
+          "rel_sec": 231.3,
+          "label": "Penalty",
+          "crowd_surge_db": 12.2,
+          "camera_type": "Close-Up",
+          "description": "Calm penalty kick converted sent keeper wrong way."
+        }
+      ]
+    },
+    {
+      "id": "mark_noble",
+      "name": "Mark Noble",
+      "jersey": "16",
+      "team": "West Ham",
+      "sport": "soccer",
+      "position": "Midfielder",
+      "game_id": 3,
+      "base_market_nil": 160000.0,
+      "avatar_color": "#7a263a",
+      "reval_score": 50.1,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.51x",
+      "multiplier_numeric": 1.51,
+      "estimated_nil_value": 241600.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 35.8,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 84.3
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "mark_noble",
+          "game_id": 3,
+          "half": 2,
+          "chunk_index": 3,
+          "rel_sec": 217.8,
+          "label": "Red card",
+          "crowd_surge_db": 11.8,
+          "camera_type": "Close-Up",
+          "description": "Slide tackle dismissal drawing massive Anfield roar and protest."
+        }
+      ]
+    },
+    {
+      "id": "philippe_coutinho",
+      "name": "Philippe Coutinho",
+      "jersey": "10",
+      "team": "Liverpool",
+      "sport": "soccer",
+      "position": "Attacking Midfielder",
+      "game_id": 3,
+      "base_market_nil": 320000.0,
+      "avatar_color": "#c8102e",
+      "reval_score": 47.7,
+      "tier": "ROTATION TIER",
+      "nil_multiplier": "1.38x",
+      "multiplier_numeric": 1.38,
+      "estimated_nil_value": 441600.0,
+      "tier_description": "Baseline matchday participation; standard compensation tier.",
+      "sub_scores": {
+        "action_performance": 35.8,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 75.0
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "philippe_coutinho",
+          "game_id": 3,
+          "half": 2,
+          "chunk_index": 0,
+          "rel_sec": 391.7,
+          "label": "Yellow->red card",
+          "crowd_surge_db": 10.5,
+          "camera_type": "Close-Up",
+          "description": "Second bookable offense challenge leading to red card dismissal."
+        }
+      ]
+    },
+    {
+      "id": "radamel_falcao",
+      "name": "Radamel Falcao",
+      "jersey": "9",
+      "team": "Manchester United",
+      "sport": "soccer",
+      "position": "Striker",
+      "game_id": 0,
+      "base_market_nil": 280000.0,
+      "avatar_color": "#da291c",
+      "reval_score": 37.0,
+      "tier": "ROTATION TIER",
+      "nil_multiplier": "1.30x",
+      "multiplier_numeric": 1.3,
+      "estimated_nil_value": 364000.0,
+      "tier_description": "Baseline matchday participation; standard compensation tier.",
+      "sub_scores": {
+        "action_performance": 13.2,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 72.9
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "radamel_falcao",
+          "game_id": 0,
+          "half": 2,
+          "chunk_index": 3,
+          "rel_sec": 138.0,
+          "label": "Substitution",
+          "crowd_surge_db": 10.2,
+          "camera_type": "Close-Up",
+          "description": "Farewell appearance substitution, acknowledged with Stretford End applause."
+        }
+      ]
+    },
+    {
+      "id": "ashley_young",
+      "name": "Ashley Young",
+      "jersey": "18",
+      "team": "Manchester United",
+      "sport": "soccer",
+      "position": "Winger / Wingback",
+      "game_id": 0,
+      "base_market_nil": 180000.0,
+      "avatar_color": "#da291c",
+      "reval_score": 35.6,
+      "tier": "ROTATION TIER",
+      "nil_multiplier": "1.28x",
+      "multiplier_numeric": 1.28,
+      "estimated_nil_value": 230400.0,
+      "tier_description": "Baseline matchday participation; standard compensation tier.",
+      "sub_scores": {
+        "action_performance": 13.2,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 67.1
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "ashley_young",
+          "game_id": 0,
+          "half": 1,
+          "chunk_index": 2,
+          "rel_sec": 591.2,
+          "label": "Corner",
+          "crowd_surge_db": 9.4,
+          "camera_type": "Close-Up",
+          "description": "Curling cross assist to Herrera followed by celebration close-up."
+        }
+      ]
+    },
+    {
+      "id": "kyle_walker",
+      "name": "Kyle Walker",
+      "jersey": "2",
+      "team": "Tottenham",
+      "sport": "soccer",
+      "position": "Right Back",
+      "game_id": 13,
+      "base_market_nil": 240000.0,
+      "avatar_color": "#132257",
+      "reval_score": 31.0,
+      "tier": "ROTATION TIER",
+      "nil_multiplier": "1.25x",
+      "multiplier_numeric": 1.25,
+      "estimated_nil_value": 300000.0,
+      "tier_description": "Baseline matchday participation; standard compensation tier.",
+      "sub_scores": {
+        "action_performance": 13.2,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 48.6
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "kyle_walker",
+          "game_id": 13,
+          "half": 1,
+          "chunk_index": 2,
+          "rel_sec": 414.2,
+          "label": "Substitution",
+          "crowd_surge_db": 6.8,
+          "camera_type": "Close-Up",
+          "description": "First-half acute injury substitution leaving the pitch."
+        }
+      ]
+    }
+  ]
+}

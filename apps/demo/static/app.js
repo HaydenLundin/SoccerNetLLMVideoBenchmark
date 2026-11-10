@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentModelKey: 'mece_m15',
     chunkData: null,
     scorecardData: null,
+    revalData: null,
     highlights: [],
     isPlaying: false,
     playbackSpeed: 1.0,
@@ -66,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnOpenScorecard = document.getElementById('btn-open-scorecard');
   const btnCloseScorecard = document.getElementById('btn-close-scorecard');
   const scorecardTableBody = document.getElementById('scorecard-table-body');
+
+  const revalModal = document.getElementById('reval-modal');
+  const btnOpenReval = document.getElementById('btn-open-reval');
+  const btnCloseReval = document.getElementById('btn-close-reval');
+  const revalReelsChips = document.getElementById('reval-reels-chips');
+  const revalVideoContainer = document.getElementById('reval-video-container');
+  const revalReelPlayer = document.getElementById('reval-reel-player');
+  const revalAthleteGrid = document.getElementById('reval-athlete-grid');
 
   // Utility formatting
   function formatTime(seconds) {
@@ -580,6 +589,132 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 7b. ReVal Athlete Valuation Modal
+  async function openRevalModal() {
+    revalModal.style.display = 'flex';
+    if (!state.revalData) {
+      try {
+        const res = await fetch('/api/reval');
+        state.revalData = await res.json();
+      } catch (err) {
+        console.error('Failed to load ReVal data:', err);
+        return;
+      }
+    }
+    renderRevalContent();
+  }
+
+  function renderRevalContent() {
+    if (!state.revalData) return;
+    const { leaderboard, reels } = state.revalData;
+
+    // Render reels chips
+    revalReelsChips.innerHTML = '';
+    if (reels && reels.length > 0) {
+      reels.forEach((reel, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'reval-reel-chip';
+        btn.innerHTML = `
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span>${reel.title} Reel</span>
+        `;
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.reval-reel-chip').forEach(c => c.classList.remove('active'));
+          btn.classList.add('active');
+          revalVideoContainer.style.display = 'block';
+          revalReelPlayer.src = reel.video_url;
+          revalReelPlayer.load();
+          revalReelPlayer.play().catch(() => {});
+        });
+        revalReelsChips.appendChild(btn);
+      });
+    } else {
+      revalReelsChips.innerHTML = '<span style="color:#64748b; font-size:12px;">No video reels generated yet. Run scripts/reval_athlete_highlights.py to splice highlight reels.</span>';
+    }
+
+    // Render Athlete Grid
+    revalAthleteGrid.innerHTML = '';
+    (leaderboard || []).forEach(ath => {
+      const card = document.createElement('div');
+      card.className = 'reval-card';
+
+      const tierClass = ath.tier.toLowerCase().includes('elite') ? 'tier-elite'
+        : ath.tier.toLowerCase().includes('premier') ? 'tier-premier'
+        : ath.tier.toLowerCase().includes('impact') ? 'tier-impact'
+        : 'tier-rotation';
+
+      const actionPct = ath.sub_scores ? ath.sub_scores.action_performance : 0;
+      const expPct = ath.sub_scores ? ath.sub_scores.broadcast_exposure : 0;
+      const resPct = ath.sub_scores ? ath.sub_scores.crowd_resonance : 0;
+
+      const eventsHtml = (ath.attributed_events || []).map(ev => `
+        <span class="reval-ev-pill">
+          ${ev.label}
+          ${ev.crowd_surge_db ? `<span class="reval-ev-surge">+${ev.crowd_surge_db}dB</span>` : ''}
+          ${ev.camera_type ? `<span style="color:#94a3b8;">${ev.camera_type}</span>` : ''}
+        </span>
+      `).join('');
+
+      card.innerHTML = `
+        <div class="reval-card-top">
+          <div class="reval-jersey-badge" style="background-color: ${ath.avatar_color || '#003153'};">
+            #${ath.jersey}
+          </div>
+          <div class="reval-card-meta">
+            <div class="reval-card-name">${ath.name}</div>
+            <div class="reval-card-sub">${ath.team} &bull; ${ath.position}</div>
+          </div>
+          <span class="reval-tier-badge ${tierClass}">${ath.tier}</span>
+        </div>
+
+        <div class="reval-score-banner">
+          <div class="reval-score-main">
+            <span class="reval-score-num">${ath.reval_score.toFixed(1)}</span>
+            <span class="reval-score-label">ReVal Index (0–100)</span>
+          </div>
+          <div class="reval-nil-meta">
+            <span class="reval-nil-val">$${ath.estimated_nil_value ? Math.round(ath.estimated_nil_value).toLocaleString() : 'N/A'}</span>
+            <span class="reval-nil-mult">NIL Multiplier: ${ath.nil_multiplier}</span>
+          </div>
+        </div>
+
+        <div class="reval-pillars-stack">
+          <div class="pillar-row">
+            <div class="pillar-header">
+              <span>Action Performance (45%)</span>
+              <span>${actionPct.toFixed(1)}%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-fill fill-action" style="width: ${Math.min(100, actionPct)}%;"></div>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div class="pillar-header">
+              <span>Broadcast Exposure (30%)</span>
+              <span>${expPct.toFixed(1)}%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-fill fill-exposure" style="width: ${Math.min(100, expPct)}%;"></div>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div class="pillar-header">
+              <span>Crowd Resonance (25%)</span>
+              <span>${resPct.toFixed(1)}%</span>
+            </div>
+            <div class="pillar-bar-bg">
+              <div class="pillar-bar-fill fill-resonance" style="width: ${Math.min(100, resPct)}%;"></div>
+            </div>
+          </div>
+        </div>
+
+        ${eventsHtml ? `<div class="reval-attributed-events">${eventsHtml}</div>` : ''}
+      `;
+
+      revalAthleteGrid.appendChild(card);
+    });
+  }
+
   // 8. Event Listeners
   function setupEventListeners() {
     // Selectors
@@ -671,6 +806,19 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCloseScorecard.addEventListener('click', () => { scorecardModal.style.display = 'none'; });
     scorecardModal.addEventListener('click', (e) => {
       if (e.target === scorecardModal) scorecardModal.style.display = 'none';
+    });
+
+    // ReVal Modal
+    btnOpenReval.addEventListener('click', openRevalModal);
+    btnCloseReval.addEventListener('click', () => {
+      revalModal.style.display = 'none';
+      if (revalReelPlayer) revalReelPlayer.pause();
+    });
+    revalModal.addEventListener('click', (e) => {
+      if (e.target === revalModal) {
+        revalModal.style.display = 'none';
+        if (revalReelPlayer) revalReelPlayer.pause();
+      }
     });
   }
 

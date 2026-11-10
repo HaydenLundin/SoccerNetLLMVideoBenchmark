@@ -563,9 +563,135 @@ Open `http://localhost:8080` in your browser.
 
 ---
 
-## 14. Future Roadmap: What Comes Next
+## 14. The Cross-Sport Transfer Engine: Generalizing to Basketball & American Football (`processing/sport_schemas.py` & `scripts/cross_sport_adapter.py`)
 
-With the local research questions, multi-task downstream challenges, multi-match full-corpus benchmark, and Stage 2 latency optimizations fully conquered and rigorously documented, the project is positioned for two exciting next steps:
+A fundamental question for modern sports AI is: *Can visual wristwatch temporal windowing, acoustic/optical DSP gating, and causal Markov prior rescoring transfer outside association football without retraining from scratch?*
+
+Every sport possesses an intrinsic physical cadence defined by its rulebook:
+- **Basketball:** Bounded by the 24-second shot clock (or 30s in NCAA). Action sequences (drives, perimeter passes, shots, rebounds, fouls) resolve within $<24\text{s}$.
+- **American Football:** Bounded by the 40-second play clock (and 25s administrative clock). Discrete snaps, route trees, tackles, and incomplete passes resolve within $<30\text{s}$.
+- **Soccer:** Continuous 45-minute halves with continuous possession strings and set-piece transitions, optimal at $W=60\text{s}, S=45\text{s}$.
+
+```mermaid
+flowchart TD
+    A["Raw Broadcast Video Clip"] --> B{"Sport Selector (--sport)"}
+    
+    B -->|Basketball| C["Window: W=24s, S=16s (24s Shot Clock)"]
+    B -->|American Football| D["Window: W=30s, S=20s (40s Play Clock)"]
+    B -->|Soccer| E["Window: W=60s, S=45s (Continuous Play)"]
+    
+    C --> F["PyAV Streaming + Visual Wristwatch [00:SS]"]
+    D --> F
+    E --> F
+    
+    F --> G["Stage 2 Adaptive DSP Gating"]
+    G --> H["Track F Surface & Camera Shot Classifier"]
+    G --> H2["Track H Jersey OCR & Kit Analyzer"]
+    
+    H --> I["Sport-Specific Concise-CoT VLM Inference"]
+    H2 --> I
+    
+    I --> J["Sport Markov Consequent Rescorer"]
+    J --> K["Final Calibrated Predictions"]
+```
+
+### 14.1 Key Architectural Generalizations
+1. **Shot-Clock & Play-Clock Temporal Sizing:**
+   - Instead of forcing soccer's $W=60\text{s}$ window onto high-tempo court play, `scripts/cross_sport_adapter.py` dynamically resizes the sliding window to **$W=24\text{s}, S=16\text{s}$ for Basketball** (matching the NBA shot clock) and **$W=30\text{s}, S=20\text{s}$ for Football** (matching the pre-snap to whistle duration).
+2. **Sport-Specific Markov Transition Laws:**
+   - **American Football:** $P(\text{Field Goal / PAT} \mid \text{Touchdown}, \le 45\text{s}) = 0.95$ (boosts PAT confidence by $1.30\times$), $P(\text{Snap} \mid \text{Rush / Tackle}, \le 40\text{s}) = 0.85$.
+   - **Basketball:** $P(\text{Free Throw} \mid \text{Personal Foul}, \le 30\text{s}) = 0.75$ (boosts Free Throw confidence by $1.31\times$), $P(\text{Rebound} \mid \text{Block}, \le 5\text{s}) = 0.80$ (boosts Rebound confidence by $1.27\times$).
+3. **Adaptive Court Surface & Camera Shot Classification (Track F):**
+   - Automatically pivots HSV surface detection from green turf (hue 35–90) to hardwood orange/amber court (hue 15–45) to reliably discriminate `Main/Wide Tactical` camera views from `Close-Up` and `Endline` angles across sports.
+4. **Prerequisite for Athlete Valuation & Highlight Generation (ReVal):**
+   - By coupling multi-sport action spotting with Track H Jersey OCR, the pipeline can now link spotted events (`Touchdowns`, `Sacks`, `Three-Pointers`, `Blocks`, `Goals`) directly to individual athlete rosters to drive automated highlight clip generation and valuation scoring.
+
+---
+
+## 15. ReVal: Multi-Modal Athlete Valuation & Automated Broadcast Highlight Reel Generator (`processing/reval_scoring.py` & `scripts/reval_athlete_highlights.py`)
+
+A persistent limitation of traditional computer vision in sports is that detected actions remain isolated coordinates—numbers in a CSV file that mean little to athlete agents, athletic directors, or broadcast networks. 
+
+**ReVal** bridges that gap by fusing our 8-track perception engine and cross-sport transfer adapter into an automated, objective athlete valuation and video highlight splicing system. It answers two practical questions:
+1. *How much objective media and athletic value did this athlete generate during this broadcast?*
+2. *Can we automatically cut broadcast-grade, branded highlight reels for that athlete with zero human video editors?*
+
+```mermaid
+flowchart TD
+    A["Spotted Multi-Modal Events (Track A)"] --> D["Multi-Modal Player Attribution Engine"]
+    B["Track H Jersey OCR & Kit Matching"] --> D
+    C["Track G Commentary Entity Grounding"] --> D
+    
+    D --> E["3-Pillar ReVal Valuation Formulation"]
+    
+    subgraph ThreePillars["The 3 Pillars of ReVal (0-100 Scale)"]
+        F["Pillar 1: Action Performance (45%)<br/>mAP_inv_log Rarity Weights"]
+        G["Pillar 2: Broadcast Exposure (30%)<br/>Track F Close-Up Dwell Time"]
+        H["Pillar 3: Crowd Resonance (25%)<br/>Audio STFT Decibel Roar Surge"]
+    end
+    
+    E --> F
+    E --> G
+    E --> H
+    
+    F --> I["Composite ReVal Score & NIL Multiplier<br/>(ELITE, PREMIER, IMPACT, ROTATION)"]
+    G --> I
+    H --> I
+    
+    I --> J["ReVal Leaderboard JSON<br/>(logs/reval_highlights/reval_mes5_athlete_leaderboard.json)"]
+    
+    D --> K["Automated Highlight Reel Splicer (PyAV)"]
+    K --> L["Extract [t - 4s, t + 6s] Broadcast Window"]
+    L --> M["Burn ReVal Broadcast Telemetry HUD<br/>#003153 Prussian Blue / #FF9E1B Primary Orange"]
+    M --> N["720p HD MP4 Highlight Video Reels<br/>(Ander Herrera, Sergio Aguero, John Terry)"]
+    
+    J --> O["Interactive Cockpit (apps/demo/)<br/>ReVal Modal & Video Reel Player"]
+    N --> O
+```
+
+### 15.1 The 3-Pillar Valuation Formulation
+
+ReVal evaluates an athlete across three orthogonal dimensions, combining game impact, broadcast presence, and stadium emotional energy:
+
+$$\text{ReVal Score} = 0.45 \times \text{Action} + 0.30 \times \text{Exposure} + 0.25 \times \text{Resonance}$$
+
+1. **Action Performance Score ($45\%$ weight):**
+   - Traditional statistics treat every event equally. ReVal weights actions using our $mAP_{\text{inv-log}}$ rarity curve:
+     * **Soccer:** `Goal` (35.0), `Penalty` (25.0), `Red card` (25.0), `Direct free-kick` (20.0), `Shots on target` (15.0).
+     * **Football:** `Touchdown` (35.0), `Turnover` (25.0), `Sack` (20.0), `Field Goal / PAT` (20.0).
+     * **Basketball:** `Three-Point Made` (25.0), `Two-Point FG / Dunk` (18.0), `Block` (15.0), `Steal` (15.0).
+2. **Broadcast Exposure Score ($30\%$ weight):**
+   - Leverages Track F camera perspective classification to measure high-value screen presence. Broadcasters linger on marquee players via `Close-Up` angles (5.0s dwell) and `Replay Sequences` (4.0s dwell), whereas routine tactical play remains in `Main/Wide` angles (1.5s dwell).
+3. **Crowd Resonance Score ($25\%$ weight):**
+   - Leverages audio Short-Time Fourier Transform (STFT) acoustic decibel surges to measure real-world stadium excitement. A goal triggering a $+13.8\text{ dB}$ roar (Ander Herrera volley) scores near $100\%$, whereas a routine throw-in ($+2\text{ dB}$) contributes minimal resonance.
+
+### 15.2 NIL Media Multipliers and Tiering
+
+ReVal converts the $0\text{--}100$ score into a market-standard Name, Image, and Likeness (NIL) multiplier:
+
+$$\text{NIL Multiplier} = 1.0 + \left(\frac{\text{ReVal Score}}{100}\right)^{1.5} \times 4.0$$
+
+| Tier | Score Range | NIL Multiplier | Market Description |
+|---|---|---|---|
+| **ELITE TIER** | $\ge 80.0$ | $3.0\times\text{--}5.0\times$ | Franchise cornerstone; national brand ambassador with maximum endorsement leverage. |
+| **PREMIER TIER** | $65.0\text{--}79.9$ | $2.0\times\text{--}3.0\times$ | High-impact starter; strong regional media draw and consistent television presence. |
+| **IMPACT TIER** | $50.0\text{--}64.9$ | $1.5\times\text{--}2.0\times$ | Key rotational contributor; solid tactical footprint with localized endorsement appeal. |
+| **ROTATION TIER** | $< 50.0$ | $1.0\times\text{--}1.5\times$ | Tactical squad player; baseline media visibility during routine game transitions. |
+
+### 15.3 Automated PyAV Highlight Reel Splicing & ReVal HUD
+
+Rather than requiring manual video editing, `scripts/reval_athlete_highlights.py` uses PyAV to stream source macro-chunks, extract high-impact temporal windows $[t - 4\text{s}, t + 6\text{s}]$, and burn in ReVal's signature broadcast lower-third HUD banner:
+- **Prussian Blue `#003153` (`rgb(0, 49, 83)`):** Forms the high-contrast lower-third telemetry bar.
+- **Primary Orange `#FF9E1B` (`rgb(255, 158, 27)`):** Defines the 4px accent top border, athlete score badges, and crowd roar telemetry.
+- **Dynamic Telemetry Elements:** Displays Athlete Name, Jersey #, Team, ReVal Score, NIL Multiplier, Event Action, Crowd Surge in dB, and live countdown relative to the moment of impact $[00:0\text{s}]$.
+
+The reels are encoded as 720p HD H.264 MP4s (`logs/reval_highlights/ander_herrera_21_reel.mp4`, `sergio_aguero_10_reel.mp4`, `john_terry_26_reel.mp4`) and rendered directly inside the interactive cockpit via `GET /api/reval` and HTTP 206 Partial Content video streaming.
+
+---
+
+## 16. Future Roadmap: What Comes Next
+
+With the local research questions, multi-task downstream challenges, multi-match full-corpus benchmark, Stage 2 latency optimizations, Cross-Sport Transfer Engine, and ReVal Athlete Valuation pipeline fully conquered and rigorously documented, the project is positioned for two exciting next steps:
 
 1. **Conference Paper / Thesis Writeup:**  
    The data, tables, and failure taxonomies in `docs/RESEARCH.md` and `paper/main.tex` provide all the material needed for a premier academic submission (e.g., CVPR / ACM Multimedia Sports Workshop format).

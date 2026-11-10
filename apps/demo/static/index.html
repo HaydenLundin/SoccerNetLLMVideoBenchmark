@@ -29,6 +29,10 @@
     </div>
 
     <div class="header-actions">
+      <button id="btn-open-reval" class="btn btn-reval">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        ReVal Athlete Valuation
+      </button>
       <button id="btn-open-scorecard" class="btn btn-secondary">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
         Official Scorecard
@@ -288,6 +292,41 @@
               <!-- Dynamically populated by app.js -->
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ReVal Athlete Valuation Modal -->
+  <div id="reval-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-dialog reval-modal-dialog">
+      <div class="modal-header reval-modal-header">
+        <div class="modal-title-group">
+          <div class="reval-badge">REVAL NIL INTELLIGENCE</div>
+          <h2>Multi-Modal Athlete Valuation & Highlight Reels</h2>
+          <p>Objective 3-Pillar Scoring: 45% Action Performance &bull; 30% Broadcast Close-Up Exposure &bull; 25% Crowd Roar Resonance</p>
+        </div>
+        <button id="btn-close-reval" class="btn-close">&times;</button>
+      </div>
+
+      <div class="modal-body reval-modal-body">
+        <!-- ReVal Spliced Highlight Reels Section -->
+        <div class="reval-reels-section">
+          <h3>Generated Broadcast Highlight Reels (ReVal #003153 / #FF9E1B HUD Overlays)</h3>
+          <div id="reval-reels-chips" class="reval-reels-chips">
+            <!-- Dynamically populated -->
+          </div>
+          <div id="reval-video-container" class="reval-video-container" style="display: none;">
+            <video id="reval-reel-player" controls preload="metadata"></video>
+          </div>
+        </div>
+
+        <!-- Athlete Leaderboard Grid -->
+        <div class="reval-leaderboard-container">
+          <h3>Athletic Performance & Media Valuation Leaderboard</h3>
+          <div class="reval-grid" id="reval-athlete-grid">
+            <!-- Dynamically populated -->
+          </div>
         </div>
       </div>
     </div>

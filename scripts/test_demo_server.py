@@ -84,6 +84,28 @@ def run_tests():
         s2_map = data["overall"]["stage2_loose_mAP"]
         print(f"✓ GET /api/scorecard: OK (Stage 2 Loose-mAP: {s2_map:.4f}, 17 classes)")
 
+    # 7. Test ReVal API
+    req = urllib.request.Request(f"{base_url}/api/reval")
+    with urllib.request.urlopen(req) as resp:
+        assert resp.status == 200
+        data = json.loads(resp.read().decode("utf-8"))
+        assert "leaderboard" in data
+        assert "reels" in data
+        assert len(data["leaderboard"]) >= 12
+        assert len(data["reels"]) >= 3
+        print(f"✓ GET /api/reval: OK ({len(data['leaderboard'])} athletes, {len(data['reels'])} highlight reels)")
+
+    # 8. Test ReVal Reel Video Stream Range Request (HTTP 206)
+    reel_url = f"{base_url}/video/logs/reval_highlights/ander_herrera_21_reel.mp4"
+    reel_req = urllib.request.Request(reel_url)
+    reel_req.add_header("Range", "bytes=0-1023")
+    with urllib.request.urlopen(reel_req) as resp:
+        assert resp.status == 206, f"Expected 206 Partial Content, got {resp.status}"
+        c_range = resp.headers.get("Content-Range")
+        body = resp.read()
+        assert len(body) == 1024
+        print(f"✓ GET /video/logs/reval_highlights/... (HTTP 206 Range Stream): OK ({c_range})")
+
     print("\nALL SERVER PROBES PASSED SUCCESSFULLY!")
 
 if __name__ == "__main__":

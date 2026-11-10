@@ -49,6 +49,8 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 | **Macro Corpus (MES-5)** | **3-Model Specialist + $M_{15}$ Prior** | **Official Loose / Tight mAP** | **0.1833 / 0.0607** | **17 / 17 Active Classes (1.0000 Oracle Ceiling)** across 1,132 events in 10 halves at $0 compute. |
 | **Systems (Stage 2)** | **CPU Window Skip + Concise-CoT** | **Loose-mAP / Acceleration** | **0.1840 / 3.3× Speedup** | **100.4% mAP retention** (0.0609 Tight) via STFT whistle/crowd/cut gating and max_tokens=128. |
 | **Demonstration** | **Interactive Web Cockpit (`apps/demo/`)** | **Latency / FPS** | **60 FPS Scrubbing** | Standalone Python HTTP 206 streamer + Canvas waveform visualizer across all 75 chunks. |
+| **Cross-Sport Transfer** | **Multi-Sport Adapter (Football/Hoops)** | **Window / Clock Geometry** | **Adaptive W** | Play-clock ($W=30\text{s}$) & shot-clock ($W=24\text{s}$) geometry with sport Markov priors. |
+| **Athlete Valuation (ReVal)** | **3-Pillar Media Valuation & Reels** | **Objective ReVal Score** | **0–100 & NIL Multipliers** | 45% Action, 30% Exposure, 25% Resonance; automated PyAV 720p HD reel splicing with #003153/#FF9E1B HUD. |
 
 ---
 

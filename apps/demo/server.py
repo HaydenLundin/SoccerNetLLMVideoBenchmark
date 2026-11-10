@@ -369,6 +369,39 @@ class DemoRequestHandler(SimpleHTTPRequestHandler):
                 }
             }
 
+        elif path == "/api/reval":
+            reval_dir = LOGS_DIR.parent / "reval_highlights"
+            leaderboard_path = reval_dir / "reval_mes5_athlete_leaderboard.json"
+            leaderboard = []
+            if leaderboard_path.exists():
+                with open(leaderboard_path, "r", encoding="utf-8") as f:
+                    leaderboard = json.load(f).get("leaderboard", [])
+            else:
+                from processing.reval_scoring import attribute_events_to_athletes
+                res = attribute_events_to_athletes({})
+                leaderboard = sorted(res.values(), key=lambda a: a["reval_score"], reverse=True)
+
+            reels = []
+            if reval_dir.exists():
+                for mp4 in reval_dir.glob("*.mp4"):
+                    # Find athlete for reel
+                    ath_name = mp4.stem.replace("_reel", "").replace("_", " ").title()
+                    reels.append({
+                        "filename": mp4.name,
+                        "title": ath_name,
+                        "video_url": f"/video/logs/reval_highlights/{mp4.name}"
+                    })
+
+            response_data = {
+                "leaderboard": leaderboard,
+                "reels": reels,
+                "pillars": {
+                    "action_performance": "45% (Rarity-weighted event impact)",
+                    "broadcast_exposure": "30% (Track F Close-Up dwell seconds)",
+                    "crowd_resonance": "25% (STFT decibel roar surge)"
+                }
+            }
+
         elif path == "/api/chunk_data":
             g_id = int(query.get("game_id", [0])[0])
             half = int(query.get("half", [1])[0])
