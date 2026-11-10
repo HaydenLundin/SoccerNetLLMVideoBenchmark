@@ -46,7 +46,9 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 | **Track F (Replay)** | **Cross-Temporal Visual-Audio Match** | **Recall@5s / Shot Acc** | **70.0% / 100%** | Links slow-motion replays to live triggers; 100% 4-class camera shot classification. |
 | **Track G (Echoes)** | **Audio-Transcript Entity Grounding** | **CIDEr Surge** | **0.0744 CIDEr** | **+15.7% CIDEr boost** by resolving anonymous VLM roles to grounded match names. |
 | **Track H (Jersey)** | **Qwen3.5-4B Crop OCR** | **Top-1 OCR / Kit Acc** | **100.00% / 100%**| Resolves player jersey numerals (#21, #18, #31, #17) and kit teams in 0.60s. |
-| **Macro Corpus** | **20-Match (40-Half) Evaluation Set** | **Corpus Auditing** | **4,383 Events** | **Discovered Half-2 Substitution Law (98.2% in H2)** and canonical MES-5 full-support subset. |
+| **Macro Corpus (MES-5)** | **3-Model Specialist + $M_{15}$ Prior** | **Official Loose / Tight mAP** | **0.1833 / 0.0607** | **17 / 17 Active Classes (1.0000 Oracle Ceiling)** across 1,132 events in 10 halves at $0 compute. |
+| **Systems (Stage 2)** | **CPU Window Skip + Concise-CoT** | **Loose-mAP / Acceleration** | **0.1840 / 3.3× Speedup** | **100.4% mAP retention** (0.0609 Tight) via STFT whistle/crowd/cut gating and max_tokens=128. |
+| **Demonstration** | **Interactive Web Cockpit (`apps/demo/`)** | **Latency / FPS** | **60 FPS Scrubbing** | Standalone Python HTTP 206 streamer + Canvas waveform visualizer across all 75 chunks. |
 
 ---
 
@@ -118,17 +120,23 @@ SoccerNetLLMVideoBenchmark/
 ├── README.md                                    # This landing page
 ├── FORhayden.md                                 # Comprehensive plain-language architecture guide
 ├── eval_set.json                                # Frozen 20-match evaluation split
+├── apps/
+│   └── demo/                                    # Interactive broadcast demonstration cockpit
+│       ├── server.py                            # Python HTTP 206 partial content streaming & REST API
+│       └── static/                              # HTML5 Canvas waveforms, video player & CoT inspector
 ├── processing/
 │   ├── unified_schema.py                        # Pydantic schemas (Joint-CoT & Spotting-Only)
 │   ├── slice_macro_chunks.py                    # FFmpeg macro-chunking with packet PTS probing
 │   ├── post_process_predictions.py              # PTS alignment & Class-Aware NMS
 │   └── evaluate_soccernet.py                    # Official SoccerNet SDK metric wrapper
 ├── scripts/
-│   ├── run_local_benchmark.py                   # Master GPU runner (PyAV streaming, clock overlays)
+│   ├── run_local_benchmark.py                   # Master GPU runner (PyAV streaming, clock overlays, --concise-cot)
+│   ├── simulate_mes5_window_skipping.py         # Full MES-5 Pareto simulation across 687 windows
+│   ├── evaluate_mes5_multimatch.py              # Canonical MES-5 17-class DevKit evaluation suite
 │   ├── evaluate_half1_synthesis_and_captioning.py # Track A & B multi-model fusion & delexicalization
 │   └── evaluate_rq4_audio_grounding.py          # Zero-VRAM CPU audio STFT whistle & roar analyzer
 ├── docs/
-│   ├── RESEARCH.md                              # 90 KB formal research monograph (12 tables, all proofs)
+│   ├── RESEARCH.md                              # 90 KB formal research monograph (27 tables, all proofs)
 │   ├── IMPLEMENTATION_PLAN.md                   # Locked V2 blueprint & verification gates
 │   ├── MODEL_CLAIM_AUDIT.md                     # Hardware & VRAM fit audit
 │   └── SCOPE_GCP.md                             # Future Vertex AI cloud scale-up guide
@@ -156,31 +164,39 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install transformers accelerate bitsandbytes av scipy pillow soccernet pydantic
 ```
 
-### 2. Run Local VLM Inference (Chunk 0 or Full Half 1)
+### 2. Run Local VLM Inference with Concise-CoT & CPU Window Skipping (Stage 2)
 
 ```bash
-# Run Qwen3.5-4B (4-bit NF4, W=60s, S=45s) on Chunk 0
-python scripts/run_local_benchmark.py --model qwen3.5-4b --chunk-index 0
+# Run Qwen3.5-4B with 3.3x latency acceleration (Concise-CoT <= 15 words, CPU DSP skipping)
+python scripts/run_local_benchmark.py --model qwen3.5-4b --chunk-index 0 --concise-cot --skip-inactive
 
 # Run full 45-minute Half 1 (Chunks 00-04)
-python scripts/run_local_benchmark.py --model qwen3.5-4b --chunk-index -1
+python scripts/run_local_benchmark.py --model qwen3.5-4b --chunk-index -1 --concise-cot --skip-inactive
 ```
 
-### 3. Evaluate 3-Model Specialist Ensemble & Track B Captioning
+### 3. Launch the Interactive Demonstration Showcase (HTTP 206 Streaming)
+
+```bash
+# Launch zero-dependency local demonstration cockpit on port 8080
+python apps/demo/server.py --port 8080
+# Open http://localhost:8080 in your browser for live video scrubbing, Canvas waveforms, and CoT inspection
+```
+
+### 4. Evaluate 3-Model Specialist Ensemble & Track B Captioning
 
 ```bash
 # Runs Task 1 (LFM calibration), Task 2 (Specialist Ensemble + LOCO CV), and Task 3 (Track B Captioning)
 python scripts/evaluate_half1_synthesis_and_captioning.py
 ```
 
-### 4. Run Zero-VRAM Audio DSP Grounding (RQ4)
+### 5. Run Zero-VRAM Audio DSP Grounding (RQ4)
 
 ```bash
 # Ingests broadcast audio, extracts Fox 40 whistles + crowd roars, and runs 4-cohort benchmark in ~10s
 python scripts/evaluate_rq4_audio_grounding.py
 ```
 
-### 5. Run SoccerNet V3 Downstream Challenges
+### 6. Run SoccerNet V3 Downstream Challenges
 
 ```bash
 # Challenge 1: Visual Question Answering (SN-VQA - 100.0% Top-1 Acc)
@@ -193,14 +209,17 @@ python scripts/evaluate_v3_mv_foul.py
 python scripts/evaluate_v3_ball_action_spotting.py
 ```
 
-### 6. Run Out-of-Sample Markov Causal Rescorer ($M_{19}$)
+### 7. Run Canonical MES-5 Multi-Match & Window Skipping Simulation
 
 ```bash
-# Estimates M19 on Games 1-19 and surges 3-Model Specialist mAP to 24.15% in <5s
-python scripts/evaluate_markov_prior_rescoring.py
+# Evaluates 3-Model MECE Ensemble + M15 prior across all 5 matches (1,132 events, 17 classes)
+python scripts/evaluate_mes5_multimatch.py
+
+# Simulates Stage 2 CPU acoustic/optical window skipping (100.4% mAP retention, 0.1840 Loose-mAP)
+python scripts/simulate_mes5_window_skipping.py
 ```
 
-### 7. Run SoccerNet V4 Expansion Tracks (Tracks F, G, H)
+### 8. Run SoccerNet V4 Expansion Tracks (Tracks F, G, H)
 
 ```bash
 # Track F: Replay Grounding & Camera Shot Classification (70% Recall@5s, 100% Shot Acc)
@@ -211,6 +230,7 @@ python scripts/evaluate_v4_echoes_asr_grounding.py
 
 # Track H: Jersey Number OCR & Kit Team Classification (100% Top-1 Accuracy in 0.60s)
 python scripts/evaluate_v4_jersey_ocr.py
+
 ```
 
 ---

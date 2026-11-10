@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoccerNet VLM Interactive Showcase — Broadcast AI at $0 Compute</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-branding">
+      <div class="logo-badge">SN-VLM</div>
+      <div class="title-group">
+        <h1>SoccerNet VLM Interactive Showcase</h1>
+        <p class="subtitle">Edge Multimodal Action Spotting &bull; 8 GB VRAM &bull; $0 Cloud Spend &bull; Canonical MES-5</p>
+      </div>
+    </div>
+
+    <!-- Quick Highlights Bar -->
+    <div class="header-highlights">
+      <span class="highlight-label">Featured Highlights:</span>
+      <div id="highlights-container" class="highlights-scroll">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <button id="btn-open-scorecard" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Official Scorecard
+      </button>
+    </div>
+  </header>
+
+  <!-- Controls Bar: Match, Half, Chunk, Model -->
+  <section class="controls-bar">
+    <div class="selector-group">
+      <label for="match-select">Fixture</label>
+      <select id="match-select"></select>
+    </div>
+
+    <div class="selector-group">
+      <label for="half-select">Half</label>
+      <select id="half-select">
+        <option value="1">Half 1</option>
+        <option value="2">Half 2</option>
+      </select>
+    </div>
+
+    <div class="selector-group">
+      <label for="chunk-select">Macro-Chunk (10 min)</label>
+      <select id="chunk-select"></select>
+    </div>
+
+    <div class="selector-group selector-model">
+      <label for="model-select">Model Configuration</label>
+      <select id="model-select"></select>
+    </div>
+
+    <div class="chunk-telemetry-badge">
+      <span id="chunk-timer-badge">00:00 / 10:15</span>
+      <span id="chunk-gt-count" class="pill-badge pill-gt">0 GT</span>
+      <span id="chunk-pred-count" class="pill-badge pill-pred">0 Preds</span>
+    </div>
+  </section>
+
+  <!-- Main Grid Workspace -->
+  <main class="main-layout">
+    <!-- Left Column: Video Player & Multimodal Timeline -->
+    <section class="viewport-column">
+      <!-- Video Player Card -->
+      <div class="video-card">
+        <div class="video-container">
+          <video id="video-player" preload="metadata" playsinline></video>
+          <div id="video-overlay" class="wristwatch-overlay">
+            <span class="badge-rec">● VLM LIVE</span>
+            <span id="overlay-clock" class="overlay-time">[00:00]</span>
+          </div>
+        </div>
+
+        <!-- Custom Transport Controls -->
+        <div class="video-controls">
+          <button id="btn-play-pause" class="btn-ctrl" title="Play / Pause (Space)">
+            <svg id="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            <svg id="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+          <button id="btn-back-5" class="btn-ctrl" title="Back 5s (←)">-5s</button>
+          <button id="btn-fwd-5" class="btn-ctrl" title="Forward 5s (→)">+5s</button>
+
+          <div class="time-readout">
+            <span id="time-current">00:00.0</span> / <span id="time-duration">10:15.0</span>
+            <span class="global-game-time" id="global-game-time">(Match: 1 - 00:00)</span>
+          </div>
+
+          <div class="speed-selector">
+            <label>Speed:</label>
+            <button class="btn-speed active" data-speed="1.0">1x</button>
+            <button class="btn-speed" data-speed="2.0">2x</button>
+            <button class="btn-speed" data-speed="4.0">4x</button>
+            <button class="btn-speed" data-speed="0.5">0.5x</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Synchronized Multi-Track Timeline -->
+      <div class="timeline-container">
+        <div class="timeline-header">
+          <h3>Synchronized Multimodal Stream &bull; Acoustic STFT &bull; Optical Flow &bull; VLM Windows</h3>
+          <div class="timeline-legend">
+            <span class="legend-item"><span class="legend-dot dot-gt"></span> Ground Truth</span>
+            <span class="legend-item"><span class="legend-dot dot-pred"></span> Model Prediction</span>
+            <span class="legend-item"><span class="legend-line line-whistle"></span> Whistle STFT (z &ge; 4.5)</span>
+            <span class="legend-item"><span class="legend-line line-crowd"></span> Crowd dB (&ge; 6.0 dB)</span>
+            <span class="legend-item"><span class="legend-line line-optical"></span> Optical Cut (MAD &ge; 30)</span>
+          </div>
+        </div>
+
+        <div class="timeline-stage" id="timeline-stage">
+          <!-- Time needle indicating current playback -->
+          <div id="timeline-needle" class="timeline-needle"></div>
+
+          <!-- Track 1: Ground Truth Markers -->
+          <div class="track track-gt" id="track-gt" title="Ground Truth Events (Click to seek)">
+            <span class="track-label">GT Events</span>
+            <div class="track-content" id="track-gt-content"></div>
+          </div>
+
+          <!-- Track 2: Prediction Markers -->
+          <div class="track track-pred" id="track-pred" title="Model Predictions (Click to seek)">
+            <span class="track-label">Predictions</span>
+            <div class="track-content" id="track-pred-content"></div>
+          </div>
+
+          <!-- Track 3: DSP Waveform Canvas -->
+          <div class="track track-canvas">
+            <span class="track-label">DSP Physical Sensors</span>
+            <canvas id="dsp-canvas" width="1200" height="110"></canvas>
+          </div>
+
+          <!-- Track 4: 60s Sliding Windows -->
+          <div class="track track-windows" id="track-windows" title="Stage 2 Sliding Windows (60s)">
+            <span class="track-label">Sliding Windows</span>
+            <div class="track-content" id="track-windows-content"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Window Telemetry, CoT Reasoning, & Event Inspector -->
+    <aside class="telemetry-column">
+      <!-- Active Window Intelligence Card -->
+      <div class="card intelligence-card">
+        <div class="card-header">
+          <div class="card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Active 60s Window Inspector
+          </div>
+          <span id="window-status-badge" class="badge badge-active">Active Play</span>
+        </div>
+
+        <div class="card-body">
+          <div class="window-metrics-grid">
+            <div class="metric-box">
+              <span class="metric-label">Window Interval</span>
+              <span id="metric-window-bounds" class="metric-value">0.0s &ndash; 60.0s</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Gate Trigger</span>
+              <span id="metric-trigger-reason" class="metric-value">Whistle Resonance</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Peak Whistle STFT</span>
+              <span id="metric-whistle-peak" class="metric-value highlight-red">z = 5.86</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Crowd Surge / Cut</span>
+              <span id="metric-crowd-optical" class="metric-value">+4.2 dB / 28 MAD</span>
+            </div>
+          </div>
+
+          <!-- Chain of Thought Reasoning -->
+          <div class="cot-section">
+            <div class="cot-header">
+              <span class="cot-title">VLM Chain-of-Thought &bull; Domain Specialist Commentary</span>
+              <span id="cot-model-badge" class="badge-model">Qwen3.5-4B</span>
+            </div>
+            <div id="cot-text" class="cot-text">
+              "The Arsenal goalkeeper kicks the ball out from his goal area to restart play, spotting early midfield positioning."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events In This Chunk Table -->
+      <div class="card events-table-card">
+        <div class="card-header">
+          <div class="card-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            Chunk Event Spotting Ledger
+          </div>
+          <div class="table-filter-group">
+            <button class="btn-filter active" data-filter="all">All</button>
+            <button class="btn-filter" data-filter="matches">Hits Only</button>
+          </div>
+        </div>
+
+        <div class="table-scroll-container">
+          <table class="events-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Event Class</th>
+                <th>Source</th>
+                <th>Conf</th>
+                <th>Drift &Delta;t</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="events-table-body">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Scorecard Modal -->
+  <div id="scorecard-modal" class="modal-backdrop" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h2>Official SoccerNet DevKit Evaluation Scorecard</h2>
+          <p>Canonical MES-5 Multi-Match Benchmark &bull; 5 Fixtures &bull; 1,132 Ground-Truth Events &bull; 17 Classes</p>
+        </div>
+        <button id="btn-close-scorecard" class="btn-close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Top Summary Cards -->
+        <div class="scorecard-kpi-grid">
+          <div class="kpi-card highlight-card">
+            <span class="kpi-label">Stage 2 CPU Filtered Loose-mAP</span>
+            <span class="kpi-value">18.40%</span>
+            <span class="kpi-sub">100.4% mAP Retention (+0.07% False Alarm Pruning)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Base Specialist Ensemble</span>
+            <span class="kpi-value">18.33%</span>
+            <span class="kpi-sub">+17.2% gain over Qwen3.5-4B Solo (15.64%)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Tight-mAP (&plusmn;1.0s)</span>
+            <span class="kpi-value">0.0609</span>
+            <span class="kpi-sub">+8.0% over Qwen Solo (0.0562)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Active Classes / Oracle</span>
+            <span class="kpi-value">17 / 17</span>
+            <span class="kpi-sub">1.0000 Oracle Ceiling (100% Support)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Inference Acceleration</span>
+            <span class="kpi-value">3.3x</span>
+            <span class="kpi-sub">18.5s &rarr; 5.6s/window (Concise-CoT &le; 15 words)</span>
+          </div>
+        </div>
+
+        <!-- 17-Class Full Breakdown Table -->
+        <div class="scorecard-table-wrapper">
+          <table class="scorecard-table">
+            <thead>
+              <tr>
+                <th>Official SoccerNet Class</th>
+                <th>Qwen3.5-4B</th>
+                <th>LFM2.5-VL-3B</th>
+                <th>MiniCPM-V 4.6</th>
+                <th>3M MECE Ensemble</th>
+                <th>3M + M15 Rescorer</th>
+                <th>Stage 2 CPU Filtered</th>
+              </tr>
+            </thead>
+            <tbody id="scorecard-table-body">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

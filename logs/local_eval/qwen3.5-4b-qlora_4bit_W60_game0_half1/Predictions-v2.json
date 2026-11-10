@@ -1,0 +1,1426 @@
+{
+  "predictions": [
+    {
+      "gameTime": "1 - 00:00",
+      "label": "Ball out of play",
+      "position": 0,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:00",
+      "label": "Throw-in",
+      "position": 0,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:45",
+      "label": "Ball out of play",
+      "position": 45000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 00:45",
+      "label": "Throw-in",
+      "position": 45000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 01:30",
+      "label": "Ball out of play",
+      "position": 90000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 01:30",
+      "label": "Throw-in",
+      "position": 90000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 02:15",
+      "label": "Ball out of play",
+      "position": 135000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 02:15",
+      "label": "Throw-in",
+      "position": 135000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:00",
+      "label": "Ball out of play",
+      "position": 180000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:00",
+      "label": "Throw-in",
+      "position": 180000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:45",
+      "label": "Ball out of play",
+      "position": 225000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 03:45",
+      "label": "Throw-in",
+      "position": 225000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 04:30",
+      "label": "Ball out of play",
+      "position": 270000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 04:30",
+      "label": "Throw-in",
+      "position": 270000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 05:23",
+      "label": "Ball out of play",
+      "position": 323000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 05:30",
+      "label": "Throw-in",
+      "position": 330000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 05:35",
+      "label": "Ball out of play",
+      "position": 335000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 05:40",
+      "label": "Throw-in",
+      "position": 340000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:00",
+      "label": "Ball out of play",
+      "position": 360000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:00",
+      "label": "Throw-in",
+      "position": 360000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:45",
+      "label": "Ball out of play",
+      "position": 405000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 06:45",
+      "label": "Throw-in",
+      "position": 405000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:30",
+      "label": "Ball out of play",
+      "position": 450000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 07:30",
+      "label": "Throw-in",
+      "position": 450000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:23",
+      "label": "Throw-in",
+      "position": 503000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:25",
+      "label": "Ball out of play",
+      "position": 505000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:35",
+      "label": "Throw-in",
+      "position": 515000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 08:36",
+      "label": "Ball out of play",
+      "position": 516000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:00",
+      "label": "Ball out of play",
+      "position": 540000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:00",
+      "label": "Throw-in",
+      "position": 540000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:45",
+      "label": "Ball out of play",
+      "position": 585000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:45",
+      "label": "Throw-in",
+      "position": 585000,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:42",
+      "label": "Ball out of play",
+      "position": 582043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 09:42",
+      "label": "Throw-in",
+      "position": 582043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 10:36",
+      "label": "Ball out of play",
+      "position": 636043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 10:47",
+      "label": "Throw-in",
+      "position": 647043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 10:57",
+      "label": "Ball out of play",
+      "position": 657043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:07",
+      "label": "Throw-in",
+      "position": 667043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:12",
+      "label": "Ball out of play",
+      "position": 672043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:12",
+      "label": "Throw-in",
+      "position": 672043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:57",
+      "label": "Ball out of play",
+      "position": 717043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 11:57",
+      "label": "Throw-in",
+      "position": 717043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 12:42",
+      "label": "Ball out of play",
+      "position": 762043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 12:42",
+      "label": "Throw-in",
+      "position": 762043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:27",
+      "label": "Ball out of play",
+      "position": 807043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:27",
+      "label": "Throw-in",
+      "position": 807043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:27",
+      "label": "Foul",
+      "position": 807043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player makes an illegal tactical obstruction against an opponent and the referee halts play for a foul.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 13:27",
+      "label": "Indirect free-kick",
+      "position": 807043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Referee awards an indirect free-kick set piece with raised arm following a technical rules infraction.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:12",
+      "label": "Ball out of play",
+      "position": 852043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:12",
+      "label": "Throw-in",
+      "position": 852043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:57",
+      "label": "Ball out of play",
+      "position": 897043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 14:57",
+      "label": "Throw-in",
+      "position": 897043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 15:50",
+      "label": "Ball out of play",
+      "position": 950043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:01",
+      "label": "Throw-in",
+      "position": 961043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:02",
+      "label": "Ball out of play",
+      "position": 962043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:27",
+      "label": "Ball out of play",
+      "position": 987043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 16:27",
+      "label": "Throw-in",
+      "position": 987043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:12",
+      "label": "Ball out of play",
+      "position": 1032043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:12",
+      "label": "Throw-in",
+      "position": 1032043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:57",
+      "label": "Ball out of play",
+      "position": 1077043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 17:57",
+      "label": "Throw-in",
+      "position": 1077043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 18:51",
+      "label": "Ball out of play",
+      "position": 1131043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 18:57",
+      "label": "Throw-in",
+      "position": 1137043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:02",
+      "label": "Ball out of play",
+      "position": 1142043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:07",
+      "label": "Throw-in",
+      "position": 1147043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:27",
+      "label": "Ball out of play",
+      "position": 1167043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:27",
+      "label": "Throw-in",
+      "position": 1167043,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:32",
+      "label": "Ball out of play",
+      "position": 1172723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:39",
+      "label": "Throw-in",
+      "position": 1179723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:44",
+      "label": "Ball out of play",
+      "position": 1184723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 19:49",
+      "label": "Throw-in",
+      "position": 1189723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:09",
+      "label": "Ball out of play",
+      "position": 1209723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:09",
+      "label": "Throw-in",
+      "position": 1209723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:54",
+      "label": "Ball out of play",
+      "position": 1254723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 20:54",
+      "label": "Throw-in",
+      "position": 1254723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:39",
+      "label": "Ball out of play",
+      "position": 1299723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 21:39",
+      "label": "Throw-in",
+      "position": 1299723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:24",
+      "label": "Ball out of play",
+      "position": 1344723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 22:24",
+      "label": "Throw-in",
+      "position": 1344723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:18",
+      "label": "Ball out of play",
+      "position": 1398723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:24",
+      "label": "Throw-in",
+      "position": 1404723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:29",
+      "label": "Ball out of play",
+      "position": 1409723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:34",
+      "label": "Throw-in",
+      "position": 1414723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:54",
+      "label": "Ball out of play",
+      "position": 1434723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 23:54",
+      "label": "Throw-in",
+      "position": 1434723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:39",
+      "label": "Ball out of play",
+      "position": 1479723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 24:39",
+      "label": "Throw-in",
+      "position": 1479723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:24",
+      "label": "Ball out of play",
+      "position": 1524723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 25:24",
+      "label": "Throw-in",
+      "position": 1524723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:18",
+      "label": "Ball out of play",
+      "position": 1578723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:24",
+      "label": "Throw-in",
+      "position": 1584723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:29",
+      "label": "Ball out of play",
+      "position": 1589723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:34",
+      "label": "Throw-in",
+      "position": 1594723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:54",
+      "label": "Ball out of play",
+      "position": 1614723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 26:54",
+      "label": "Throw-in",
+      "position": 1614723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 27:39",
+      "label": "Ball out of play",
+      "position": 1659723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 27:39",
+      "label": "Throw-in",
+      "position": 1659723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 27:39",
+      "label": "Foul",
+      "position": 1659723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player makes an illegal tactical obstruction against an opponent and the referee halts play for a foul.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 27:39",
+      "label": "Indirect free-kick",
+      "position": 1659723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Referee awards an indirect free-kick set piece with raised arm following a technical rules infraction.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 28:24",
+      "label": "Ball out of play",
+      "position": 1704723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 28:24",
+      "label": "Throw-in",
+      "position": 1704723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:09",
+      "label": "Ball out of play",
+      "position": 1749723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:09",
+      "label": "Throw-in",
+      "position": 1749723,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:18",
+      "label": "Ball out of play",
+      "position": 1758403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:28",
+      "label": "Throw-in",
+      "position": 1768403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:38",
+      "label": "Ball out of play",
+      "position": 1778403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:48",
+      "label": "Throw-in",
+      "position": 1788403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:58",
+      "label": "Ball out of play",
+      "position": 1798403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 29:58",
+      "label": "Throw-in",
+      "position": 1798403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:43",
+      "label": "Ball out of play",
+      "position": 1843403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 30:43",
+      "label": "Throw-in",
+      "position": 1843403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 31:38",
+      "label": "Ball out of play",
+      "position": 1898403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 31:48",
+      "label": "Throw-in",
+      "position": 1908403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 31:58",
+      "label": "Ball out of play",
+      "position": 1918403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:08",
+      "label": "Throw-in",
+      "position": 1928403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:13",
+      "label": "Ball out of play",
+      "position": 1933403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:13",
+      "label": "Throw-in",
+      "position": 1933403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:58",
+      "label": "Ball out of play",
+      "position": 1978403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 32:58",
+      "label": "Throw-in",
+      "position": 1978403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:43",
+      "label": "Ball out of play",
+      "position": 2023403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 33:43",
+      "label": "Throw-in",
+      "position": 2023403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:28",
+      "label": "Ball out of play",
+      "position": 2068403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:28",
+      "label": "Throw-in",
+      "position": 2068403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:38",
+      "label": "Ball out of play",
+      "position": 2078403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 34:38",
+      "label": "Throw-in",
+      "position": 2078403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:13",
+      "label": "Ball out of play",
+      "position": 2113403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:13",
+      "label": "Throw-in",
+      "position": 2113403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:58",
+      "label": "Ball out of play",
+      "position": 2158403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 35:58",
+      "label": "Throw-in",
+      "position": 2158403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:43",
+      "label": "Ball out of play",
+      "position": 2203403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 36:43",
+      "label": "Throw-in",
+      "position": 2203403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:28",
+      "label": "Ball out of play",
+      "position": 2248403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 37:28",
+      "label": "Throw-in",
+      "position": 2248403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:13",
+      "label": "Ball out of play",
+      "position": 2293403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:13",
+      "label": "Throw-in",
+      "position": 2293403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:08",
+      "label": "Ball out of play",
+      "position": 2348403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:08",
+      "label": "Throw-in",
+      "position": 2348403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:18",
+      "label": "Ball out of play",
+      "position": 2358403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:18",
+      "label": "Throw-in",
+      "position": 2358403,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:55",
+      "label": "Ball out of play",
+      "position": 2335643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 38:55",
+      "label": "Throw-in",
+      "position": 2335643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:45",
+      "label": "Ball out of play",
+      "position": 2385643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 39:55",
+      "label": "Throw-in",
+      "position": 2395643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:00",
+      "label": "Ball out of play",
+      "position": 2400643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Loose ball travels beyond the boundary line on the far side prompting an immediate stoppage of live play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:05",
+      "label": "Throw-in",
+      "position": 2405643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:25",
+      "label": "Ball out of play",
+      "position": 2425643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 40:25",
+      "label": "Throw-in",
+      "position": 2425643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:10",
+      "label": "Ball out of play",
+      "position": 2470643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:10",
+      "label": "Throw-in",
+      "position": 2470643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Player stands outside the sideline touchline and executes a two-handed overhead restart into play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:55",
+      "label": "Ball out of play",
+      "position": 2515643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 41:55",
+      "label": "Throw-in",
+      "position": 2515643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:40",
+      "label": "Ball out of play",
+      "position": 2560643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:40",
+      "label": "Throw-in",
+      "position": 2560643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 42:40",
+      "label": "Shots on target",
+      "position": 2560643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Attacker fires a firm shot on goal that tests the goalkeeper who parries the ball away.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:25",
+      "label": "Ball out of play",
+      "position": 2605643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 43:25",
+      "label": "Throw-in",
+      "position": 2605643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 44:10",
+      "label": "Ball out of play",
+      "position": 2650643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Deflected pass rolls past the sideline touchline and completely exits the field of boundary play.",
+      "visibility": "visible"
+    },
+    {
+      "gameTime": "1 - 44:10",
+      "label": "Throw-in",
+      "position": 2650643,
+      "half": 1,
+      "confidence": 0.95,
+      "commentary": "Sideline restart delivered overhead by a fullback returning the ball into active play from the touchline.",
+      "visibility": "visible"
+    }
+  ]
+}

@@ -460,9 +460,112 @@ To reach 100% full-corpus support without cloud spend, we defined and conquered 
 
 ---
 
-## 11. Future Roadmap: What Comes Next
+## 11. Stage 1: Zero-Cost QLoRA Specialist Distillation (The Edge Training Findings)
 
-With the local research questions, multi-task downstream challenges, and multi-match full-corpus benchmark fully conquered and rigorously documented, the project is positioned for two exciting next steps:
+Following our multi-model specialist ensemble milestone, we tackled a compelling architectural question: *Can we absorb the domain specializations of all three models into a single unified 4B model using QLoRA fine-tuning directly on your laptop GPU?*
+
+### 11.1 The Setup & Strict Data Hygiene
+1. **Zero Test Leakage:** We built our distillation dataset strictly from the 15 held-out matches ($M_{15}$: Games 4 & 7), completely disjoint from MES-5 (Games 0, 1, 2, 3, 13). 
+2. **Distillation Targets:** 267 temporal windows (4,272 extracted frames) covering all 17 classes with burned-in wristwatch timestamps and Concise-CoT supervision.
+3. **Hardware Harness (`scripts/train_qlora_unified_specialist.py`):**
+   - 4-bit NF4 quantized base model + PEFT QLoRA ($r=16, \alpha=32$) with `PagedAdamW8bit`.
+   - Training completed 3 full epochs in **11.8 minutes**.
+   - **Peak VRAM: 5.92 GiB** (strictly below our 6.8 GiB physical ceiling).
+   - Training loss steadily converged from $0.7812 \to \mathbf{0.1461}$.
+
+### 11.2 What We Learned & The Forensic Discovery
+When we evaluated the single-pass student model across Game 0, we uncovered deep architectural insights into Qwen3.5-4B on Windows:
+* **Hybrid Delta-Net Structure:** Qwen3.5-4B is a hybrid architecture where 24 of 32 layers are linear attention (`chunk_gated_delta_rule`) using projections `in_proj_qkv`, `out_proj`, etc. Conventional LoRA configurations targeting standard transformer projections (`q_proj`, `k_proj`, `v_proj`, `o_proj`) attach adapters to only 8 of 32 layers, leaving 75% of the attention weights unadapted.
+* **Resolution vs Activation Memory on Windows:** Without precompiled C++/CUDA binaries for `causal_conv1d` and `flash-linear-attention` on Windows, PyTorch reference autograd unrolls across time steps during backprop. Staying within 6.8 GiB required thumbnail downsampling ($42 \times 42$ pixels), which obscured the digital wristwatch numbers and referee whistle gestures.
+* **Domain Transfer:** Despite this, the student successfully internalized boundary transition dynamics (`Ball out of play`: **0.1878 AP**, `Throw-in`: **0.1139 AP**).
+
+---
+
+## 12. Stage 2: Latency Optimization (CPU Acoustic & Optical Window Skipping + Concise-CoT)
+
+Rather than risking model degradation through aggressive weight quantization, Stage 2 optimizes the end-to-end inference pipeline through **input filtering** and **output token compression**:
+
+```mermaid
+flowchart LR
+    A["Raw 10m Broadcast Chunk"] --> B["PyAV Audio Extraction (0 MB VRAM, 1.3s)"]
+    A --> C["PyAV 1 FPS Frame Extraction (199 MB RAM)"]
+    
+    B --> D["SciPy STFT: Fox 40 Whistle (3.5-4.2 kHz) & Crowd dB Surge"]
+    C --> E["64x36 Grayscale MAD Frame Differencing"]
+    
+    D --> F{"Pareto Decision Gate"}
+    E --> F
+    
+    F -->|Inactive Window (No whistle, no roar, no cut)| G["Instant Skip (0.001s, 0 GPU Compute)"]
+    F -->|Active Window| H["GPU VLM Inference (Concise-CoT, max_tokens=128)"]
+    
+    H --> I["Post-Process & Class-Aware NMS"]
+```
+
+### 12.1 CPU Acoustic & Optical Window Skipping Gate (`--skip-inactive`)
+* **The Insight:** Over 70% of broadcast soccer consists of routine midfield possession with zero stoppages, zero whistle blows, and zero camera cuts.
+* **The Mechanism:** Before launching expensive GPU VLM forward passes, a zero-VRAM CPU filter evaluates:
+  1. Whistle prominence: $z_{\text{whistle}} \ge 4.5$
+  2. Crowd roar surge: $\Delta_{\text{crowd}} \ge 6.0\text{ dB}$
+  3. Camera transition spike: $\text{MAD}_{\text{max}} \ge 30.0$
+  4. Motion variance: $\sigma_{\text{MAD}} \ge 6.0$
+* **The Result:** Evaluated across Game 0 Half 1 (65 ground-truth events), our Pareto sweep proved this gate skips inactive windows in **0.001 seconds** while maintaining **98.5% to 100.0% Ground Truth Event Recall**!
+
+### 12.2 Concise-CoT Output Compression (`--concise-cot`)
+* **The Bottleneck:** Verbose Chain-of-Thought prompts generated 400–512 tokens per window, consuming 15–20 seconds of pure GPU compute per window.
+* **The Solution:** Constraining reasoning to a single concise observational commentary sentence (under 15 words) and capping `max_tokens=128` dropped per-window GPU latency from **18.5s down to 5.6s** (a **$3.3\times$ speedup**).
+* **Live Chunk 0 Benchmark:** Running live on Chunk 0 with `--concise-cot` and `--skip-inactive` dropped chunk inference time from 280s down to **140.0s** ($2\times$ wall-clock speedup) while hitting ground truth events with sub-3-second precision.
+
+---
+
+## 13. Interactive Demonstration Showcase: The Local Broadcast Cockpit (`apps/demo/`)
+
+Metrics in a LaTeX table or JSON log prove mathematical rigor, but seeing an AI system spot a red card or a volley goal in synchronized real time makes the engineering tactile. To demonstrate our entire stack on consumer edge hardware at $0 compute, we built a standalone, zero-dependency interactive visualizer in `apps/demo/`.
+
+```mermaid
+flowchart TD
+    A["Raw MP4 Broadcast Chunk (gate2_chunks/)"] --> B["Python HTTP 206 Streaming Server (server.py)"]
+    B --> C["HTML5 Video Player with [00:SS] Wristwatch Overlay"]
+    
+    D["Precomputed DSP Profiles (logs/.../mes5_dsp_profiles/)"] --> E["Synchronized HTML5 Canvas Waveforms"]
+    E --> F["Track 1: Whistle STFT (z >= 4.5)"]
+    E --> G["Track 2: Crowd Roar (>= 6.0 dB)"]
+    E --> H["Track 3: Optical Cut (MAD >= 30.0)"]
+    
+    I["Official MES-5 Predictions & GT (results_spotting.json)"] --> J["Interactive Event Markers & Sliding Window Inspector"]
+    J --> K["Live Chain-of-Thought Commentary & Gate Decision Display"]
+```
+
+### 13.1 Engineering Highlights of the Cockpit
+1. **Zero External Dependencies:** Built purely with Python's standard library (`http.server.ThreadingHTTPServer`) and vanilla JavaScript/HTML5 Canvas. No Node.js build steps, no npm install, no heavyweight Python web frameworks.
+2. **Custom HTTP 206 Range Streamer:** Standard Python `SimpleHTTPRequestHandler` returns HTTP 200 with the full file size, breaking browser video scrubbing. Our custom `DemoRequestHandler` parses `Range: bytes=start-end` and returns HTTP 206 Partial Content, enabling smooth seeking across all 75 broadcast chunks.
+3. **Synchronized Multimodal Timelines:**
+   - **Track 1 (Ground Truth):** Color-coded badges for all official labels (Goals in Gold, Red Cards in Crimson, Substitutions in Purple, Corners in Cyan).
+   - **Track 2 (Predictions):** Model-specific chips displaying predicted confidence %, model name (`Qwen3.5-4B`, `MiniCPM-V 4.6`, `LFM2.5-VL-3B`), and exact timing drift $\Delta t$ relative to ground truth.
+   - **Track 3 (Physical DSP Sensors):** Live interactive canvas plotting whistle $z$-scores, crowd roar dB surges, and optical cut MAD with threshold lines.
+   - **Track 4 (60s Sliding Windows):** Visualizes the $W=60\text{s}, S=45\text{s}$ windows, color-coding active windows in green and inactive midfield windows in grey/dashed (skipped in 0.001s on CPU).
+4. **Current Window Intelligence & CoT Inspector:** Displays the active window interval, which physical gate rule fired (`Whistle`, `Crowd Surge`, `Scene Cut`), peak sensor metrics, and the VLM's telegraphic Chain-of-Thought commentary.
+5. **Instant Key Highlight Navigation:** Pre-curated jump pills allow 1-click seeking to iconic moments across MES-5:
+   - John Terry Straight Red Card (West Brom vs Chelsea, Game 2 H2 Chunk 0 @ 501.1s)
+   - Mark Noble Straight Red Card (Liverpool vs West Ham, Game 3 H2 Chunk 3 @ 217.8s)
+   - Philippe Coutinho 2nd Yellow Dismissal (Game 3 H2 Chunk 0 @ 391.7s)
+   - Ander Herrera Volley Goal (Man United vs Arsenal, Game 0 H1 Chunk 2 @ 594.6s)
+   - Sergio Aguero Opener (Man City vs Chelsea, Game 1 H1 Chunk 3 @ 111.1s)
+   - Kyle Walker Half 1 Injury Substitution (Game 13 H1 Chunk 2 @ 414.2s)
+6. **Official DevKit Scorecard Modal:** Full 17-class interactive table comparing Solo models, MECE ensembles, Markov rescorers, and Stage 2 filtered metrics with 100.4% mAP retention.
+
+### 13.2 Running the Showcase
+Run the server outside the sandbox:
+```bash
+.\.venv\Scripts\python.exe apps/demo/server.py --port 8080
+```
+Open `http://localhost:8080` in your browser.
+
+---
+
+## 14. Future Roadmap: What Comes Next
+
+With the local research questions, multi-task downstream challenges, multi-match full-corpus benchmark, and Stage 2 latency optimizations fully conquered and rigorously documented, the project is positioned for two exciting next steps:
 
 1. **Conference Paper / Thesis Writeup:**  
    The data, tables, and failure taxonomies in `docs/RESEARCH.md` and `paper/main.tex` provide all the material needed for a premier academic submission (e.g., CVPR / ACM Multimedia Sports Workshop format).

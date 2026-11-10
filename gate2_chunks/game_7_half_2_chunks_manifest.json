@@ -1,0 +1,85 @@
+{
+  "game_id": 7,
+  "half": 2,
+  "total_duration_sec": 3031.0,
+  "chunks": [
+    {
+      "game_id": 7,
+      "half": 2,
+      "chunk_index": 0,
+      "filename": "game_7_half_2_chunk_00.mp4",
+      "relative_path": "gate2_chunks\\game_7_half_2_chunk_00.mp4",
+      "requested_start_sec": 0.0,
+      "actual_start_sec": 0.0,
+      "actual_start_ms": 0,
+      "keyframe_drift_sec": 0.0,
+      "duration_sec": 615.08,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 7,
+      "half": 2,
+      "chunk_index": 1,
+      "filename": "game_7_half_2_chunk_01.mp4",
+      "relative_path": "gate2_chunks\\game_7_half_2_chunk_01.mp4",
+      "requested_start_sec": 585.0,
+      "actual_start_sec": 584.0,
+      "actual_start_ms": 584000,
+      "keyframe_drift_sec": 1.0,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 7,
+      "half": 2,
+      "chunk_index": 2,
+      "filename": "game_7_half_2_chunk_02.mp4",
+      "relative_path": "gate2_chunks\\game_7_half_2_chunk_02.mp4",
+      "requested_start_sec": 1170.0,
+      "actual_start_sec": 1164.56,
+      "actual_start_ms": 1164560,
+      "keyframe_drift_sec": 5.44,
+      "duration_sec": 615.16,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 7,
+      "half": 2,
+      "chunk_index": 3,
+      "filename": "game_7_half_2_chunk_03.mp4",
+      "relative_path": "gate2_chunks\\game_7_half_2_chunk_03.mp4",
+      "requested_start_sec": 1755.0,
+      "actual_start_sec": 1745.96,
+      "actual_start_ms": 1745960,
+      "keyframe_drift_sec": 9.04,
+      "duration_sec": 615.08,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 7,
+      "half": 2,
+      "chunk_index": 4,
+      "filename": "game_7_half_2_chunk_04.mp4",
+      "relative_path": "gate2_chunks\\game_7_half_2_chunk_04.mp4",
+      "requested_start_sec": 2340.0,
+      "actual_start_sec": 2337.12,
+      "actual_start_ms": 2337120,
+      "keyframe_drift_sec": 2.88,
+      "duration_sec": 615.12,
+      "is_final_chunk": false
+    },
+    {
+      "game_id": 7,
+      "half": 2,
+      "chunk_index": 5,
+      "filename": "game_7_half_2_chunk_05.mp4",
+      "relative_path": "gate2_chunks\\game_7_half_2_chunk_05.mp4",
+      "requested_start_sec": 2925.0,
+      "actual_start_sec": 2920.64,
+      "actual_start_ms": 2920640,
+      "keyframe_drift_sec": 4.36,
+      "duration_sec": 110.36,
+      "is_final_chunk": true
+    }
+  ]
+}

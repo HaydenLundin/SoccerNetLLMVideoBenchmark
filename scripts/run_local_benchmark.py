@@ -31,6 +31,7 @@ import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from PIL import Image
+import numpy as np
 
 # Add workspace root to Python path
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
@@ -114,7 +115,7 @@ LOCAL_MODEL_CONFIGS = {
 
 def create_contact_sheet(images: List[Image.Image], window_sec: int) -> Image.Image:
     """Composites N sampled video frames into a single 2D contact sheet image with burned-in MM:SS."""
-    from PIL import ImageDraw
+    from PIL import Image, ImageDraw
     num_images = len(images)
     if num_images == 0:
         return Image.new("RGB", (448, 448), color=(0, 0, 0))
@@ -194,7 +195,7 @@ def burn_timestamp_overlay(
     Burns a high-contrast [00:SS] digital clock badge in the top-left corner of the frame.
     Gives discrete frame sequences an explicit visual timecode, eliminating minute-vs-second confusion.
     """
-    from PIL import ImageDraw, ImageFont
+    from PIL import Image, ImageDraw, ImageFont
 
     img_copy = image.copy()
     draw = ImageDraw.Draw(img_copy)
@@ -222,7 +223,7 @@ def burn_timestamp_overlay(
     return img_copy
 
 
-def build_window_prompt(window_sec: int, spotting_only: bool = False) -> str:
+def build_window_prompt(window_sec: int, spotting_only: bool = False, concise_cot: bool = False) -> str:
     """Builds prompt instructing MM:SS timestamps matching burned-in clock and emphasizing routine actions."""
     clip_end_ts = f"{window_sec // 60:02d}:{window_sec % 60:02d}"
     expected_density = "0 to 1 official events" if window_sec <= 30 else "0 to 2 official events"
@@ -233,6 +234,19 @@ def build_window_prompt(window_sec: int, spotting_only: bool = False) -> str:
             f'[\n'
             f'  {{\n'
             f'    "timestamp": "00:SS",\n'
+            f'    "label": "Corner",\n'
+            f'    "confidence": 0.85,\n'
+            f'    "visibility": "visible"\n'
+            f'  }}\n'
+            f']\n'
+        )
+    elif concise_cot:
+        schema_block = (
+            f"Output ONLY a valid JSON array matching this schema (Concise-CoT mode: commentary must be a single concise sentence under 15 words):\n"
+            f'[\n'
+            f'  {{\n'
+            f'    "timestamp": "00:SS",\n'
+            f'    "commentary": "Single concise sentence describing the physical action...",\n'
             f'    "label": "Corner",\n'
             f'    "confidence": 0.85,\n'
             f'    "visibility": "visible"\n'
@@ -437,12 +451,20 @@ def parse_model_json_output(
 
 class LocalVLMRunner:
     """Manages model loading and GPU inference across sliding windows."""
-    def __init__(self, model_key: str, precision: str = "bf16", dry_run: bool = False, spotting_only: bool = False):
+    def __init__(
+        self,
+        model_key: str,
+        precision: str = "bf16",
+        dry_run: bool = False,
+        spotting_only: bool = False,
+        concise_cot: bool = False
+    ):
         self.model_key = model_key
         self.cfg = LOCAL_MODEL_CONFIGS[model_key]
         self.precision = precision
         self.dry_run = dry_run
         self.spotting_only = spotting_only
+        self.concise_cot = concise_cot
         self.model = None
         self.processor = None
         self.tokenizer = None
@@ -512,7 +534,7 @@ class LocalVLMRunner:
         """Runs inference on a single window of frames."""
         self.ensure_model_loaded()
         t0 = time.perf_counter()
-        prompt_text = build_window_prompt(window_sec, spotting_only=self.spotting_only)
+        prompt_text = build_window_prompt(window_sec, spotting_only=self.spotting_only, concise_cot=self.concise_cot)
 
         if self.dry_run:
             time.sleep(0.05)
@@ -565,7 +587,7 @@ class LocalVLMRunner:
             prompt_formatted = self.processor.apply_chat_template(messages, **apply_kwargs)
             inputs = self.processor(text=[prompt_formatted], images=[frames], return_tensors="pt").to(self.device)
 
-            max_tokens = 384 if self.spotting_only else 768
+            max_tokens = 384 if self.spotting_only else (128 if self.concise_cot else 768)
             with torch.inference_mode():
                 outputs = self.model.generate(**inputs, max_new_tokens=max_tokens)
 
@@ -597,7 +619,8 @@ def run_benchmark_on_chunks(
     target_chunk_idx: Optional[int] = None,
     max_windows_per_chunk: Optional[int] = None,
     output_dir: Optional[Path] = None,
-    no_cache: bool = False
+    no_cache: bool = False,
+    skip_inactive: bool = False
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any], List[Dict[str, Any]], List[Dict[str, Any]]]:
     """
     Decodes target chunks sequentially in a single pass into memory, then slices sliding
@@ -818,6 +841,17 @@ def run_benchmark_on_chunks(
         else:
             chunk_frames = decode_chunk_frames_single_pass(str(chunk_path), fps=1.0)
 
+        chunk_w_z = np.array([])
+        chunk_c_db = np.array([])
+        optical_diffs = []
+        if skip_inactive and not runner.dry_run:
+            from scripts.test_stage2_window_skipping import extract_chunk_acoustic_profile, compute_optical_flow_activity
+            try:
+                chunk_w_z, chunk_c_db, _ = extract_chunk_acoustic_profile(chunk_path)
+            except Exception as e:
+                print(f"  [DSP WARNING] Acoustic extraction failed ({e}); evaluating all windows.")
+            optical_diffs = compute_optical_flow_activity(chunk_frames)
+
         chunk_events: List[Dict[str, Any]] = []
         chunk_window_diags: List[Dict[str, Any]] = []
 
@@ -828,6 +862,54 @@ def run_benchmark_on_chunks(
                 continue
 
             end_t = start_t + eff_window_dur
+
+            # Stage 2: CPU Acoustic & Optical Window Skipping Gate
+            if skip_inactive and not runner.dry_run:
+                bin_start = int(start_t / 0.5)
+                bin_end = int(np.ceil(end_t / 0.5))
+                max_w = float(np.max(chunk_w_z[bin_start:bin_end])) if len(chunk_w_z) > bin_start else 0.0
+                max_c = float(np.max(chunk_c_db[bin_start:bin_end])) if len(chunk_c_db) > bin_start else 0.0
+
+                f_start = min(int(round(start_t)), len(optical_diffs) - 1) if optical_diffs else 0
+                f_end = min(int(round(end_t)), len(optical_diffs)) if optical_diffs else 0
+                w_d = optical_diffs[f_start:f_end] if optical_diffs else []
+                max_o = float(np.max(w_d)) if w_d else 0.0
+                std_o = float(np.std(w_d)) if len(w_d) > 1 else 0.0
+
+                is_active = (max_w >= 4.5 or max_c >= 6.0 or max_o >= 30.0 or std_o >= 6.0)
+                if not is_active:
+                    print(f"  [Window {w_i+1:02d}/{len(win_starts):02d}] Slice: {start_t:5.1f}s - {end_t:5.1f}s ({int(eff_window_dur)}s)... [SKIPPED: Inactive DSP (w_z={max_w:.1f}, c_db={max_c:.1f}, cut={max_o:.1f})]")
+                    total_windows += 1
+                    diag_entry = {
+                        "chunk_index": chunk_idx,
+                        "window_index": w_i,
+                        "start_sec": round(start_t, 2),
+                        "end_sec": round(end_t, 2),
+                        "duration_sec": int(eff_window_dur),
+                        "elapsed_sec": 0.001,
+                        "status": "SKIPPED",
+                        "strategy_used": "dsp_skip",
+                        "candidates_found": 0,
+                        "valid_kept": 0,
+                        "out_of_bounds_drops": 0,
+                        "invalid_enum_drops": 0,
+                        "syntax_error": False,
+                        "dropped_timestamps": [],
+                        "dropped_labels": [],
+                        "is_dry_run": runner.dry_run
+                    }
+                    chunk_window_diags.append(diag_entry)
+                    all_window_diags.append(diag_entry)
+                    all_raw_outputs.append({
+                        "chunk_index": chunk_idx,
+                        "filename": filename,
+                        "window_index": w_i,
+                        "slice": f"{start_t:.1f}s - {end_t:.1f}s",
+                        "raw_output": "[]",
+                        "is_dry_run": runner.dry_run
+                    })
+                    continue
+
             print(f"  [Window {w_i+1:02d}/{len(win_starts):02d}] Slice: {start_t:5.1f}s - {end_t:5.1f}s ({int(eff_window_dur)}s)...", end="", flush=True)
 
             # Slice frames directly from the in-memory buffer (zero seek drift)
@@ -1063,6 +1145,8 @@ def main():
     parser.add_argument("--no-cache", action="store_true", help="Do not reuse cached chunk predictions; force fresh GPU inference")
     parser.add_argument("--dry-run", action="store_true", help="Run simulation without loading PyTorch weights or using GPU")
     parser.add_argument("--spotting-only", action="store_true", help="Run spotting-only ablation (RQ3): omit commentary and natural language reasoning before action label")
+    parser.add_argument("--concise-cot", action="store_true", help="Stage 2: Enable Concise-CoT mode (single-sentence commentary, max_tokens=128)")
+    parser.add_argument("--skip-inactive", action="store_true", help="Stage 2: Enable CPU Acoustic & Optical Window Skipping filter")
 
     args = parser.parse_args()
 
@@ -1102,8 +1186,10 @@ def main():
         scope_tag = f"_game{args.game_id}_half{args.half}{chunk_suffix}"
 
     spotting_tag = "_spotting_only" if args.spotting_only else ""
+    concise_tag = "_concise" if args.concise_cot else ""
+    skipping_tag = "_skipping" if args.skip_inactive else ""
     base_out_dir = Path("logs/local_eval_dryrun") if args.dry_run else Path(args.output_dir)
-    output_dir = base_out_dir / f"{args.model}_{precision}_W{window_sec}{spotting_tag}{scope_tag}"
+    output_dir = base_out_dir / f"{args.model}_{precision}_W{window_sec}{spotting_tag}{concise_tag}{skipping_tag}{scope_tag}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     manifest_path = Path(manifest_str)
@@ -1130,7 +1216,8 @@ def main():
         model_key=args.model,
         precision=precision,
         dry_run=args.dry_run,
-        spotting_only=args.spotting_only
+        spotting_only=args.spotting_only,
+        concise_cot=args.concise_cot
     )
 
     # 2. Run Inference across Sliding Windows with Single-Pass Frame Decodes
@@ -1143,7 +1230,8 @@ def main():
         target_chunk_idx=target_chunk,
         max_windows_per_chunk=args.max_windows,
         output_dir=output_dir,
-        no_cache=args.no_cache
+        no_cache=args.no_cache,
+        skip_inactive=args.skip_inactive
     )
 
     # 3. Stitch across Match Half using 3-Tier PTS Offsets from Manifest

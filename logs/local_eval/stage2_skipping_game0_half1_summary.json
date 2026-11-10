@@ -1,0 +1,12 @@
+{
+  "total_windows": 64,
+  "active_windows": 64,
+  "skipped_windows": 0,
+  "skip_rate_pct": 0.0,
+  "speedup_factor": 1.0,
+  "gt_count": 65,
+  "gt_covered": 65,
+  "recall_pct": 100.0,
+  "missed_events": [],
+  "cpu_time_sec": 179.77845979994163
+}
