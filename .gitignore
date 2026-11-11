@@ -18,4 +18,5 @@ logs/local_eval_dryrun/
 *.npz
 data/qlora_distillation/frames/
 models/**/checkpoint-*/
+hf_dataset/
 
