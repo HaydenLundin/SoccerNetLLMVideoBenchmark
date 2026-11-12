@@ -181,6 +181,10 @@ def test_reval_normalization_and_benchmark_integrity() -> None:
     b4 = bench["benchmark_4_system_engineering_and_wcag"]
     assert b4["pyav_720p_transcode"]["throughput_fps"] > 25.0
     assert b4["pyav_720p_transcode"]["realtime_capable"] is True
+    assert len(b4["av_packet_sync_audit"]) == 3
+    for av_row in b4["av_packet_sync_audit"]:
+        assert av_row["has_audio"] is True, f"Audio missing in {av_row['file']}"
+        assert av_row["sync_within_25ms"] is True, f"A/V sync drift in {av_row}"
     for name, ratio in b4["wcag_21_contrast_ratios"].items():
         assert ratio >= 4.5, f"WCAG AA failure on {name}: {ratio}"
     print("  [PASS] ReVal cross-sport normalization & 5-benchmark integrity verified.")

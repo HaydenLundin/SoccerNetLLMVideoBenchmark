@@ -11,6 +11,7 @@ import sys
 import json
 import time
 import argparse
+from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List, Tuple, Any, Optional
 
@@ -35,6 +36,22 @@ GATE2_DIR = WORKSPACE_ROOT / "gate2_chunks"
 # 1. ReVal Branded Broadcast Telemetry HUD Overlay
 # ---------------------------------------------------------------------------
 
+@lru_cache(maxsize=16)
+def _load_bold_font(size: int) -> Any:
+    """Loads and caches a bold TrueType font (falls back cleanly off Windows)."""
+    for candidate in (
+        r"C:\Windows\Fonts\arialbd.ttf",
+        r"C:\Windows\Fonts\segoeuib.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    ):
+        if Path(candidate).exists():
+            try:
+                return ImageFont.truetype(candidate, size=size)
+            except Exception:
+                pass
+    return ImageFont.load_default()
+
+
 def render_reval_hud_overlay(
     image: Image.Image,
     athlete_meta: Dict[str, Any],
@@ -42,16 +59,20 @@ def render_reval_hud_overlay(
     rel_playback_sec: float
 ) -> Image.Image:
     """
-    Renders ReVal's signature broadcast lower-third HUD overlay using brand colors:
+    Renders ReVal's signature broadcast lower-third HUD overlay using WCAG-verified colors:
     - Primary Bar: Prussian Blue #003153 (rgb(0, 49, 83))
     - Accent Highlights: Primary Orange #FF9E1B (rgb(255, 158, 27))
+    - Badge Ink: Deep Navy #001020 (9.28:1 AAA on #FF9E1B)
+    - Large Broadcast Typography (>= 20px bold at 720p): #FF9E1B on #003153 (6.49:1)
+      meets WCAG 2.1 AAA Large/Bold Text (>= 4.5:1) and AA Normal Text strictly.
     """
     img = image.copy()
     draw = ImageDraw.Draw(img, "RGBA")
     w, h = img.size
+    hd_mode = w >= 800
 
-    # Banner dimensions (occupies bottom 70px)
-    hud_h = 74
+    # Banner dimensions
+    hud_h = 88 if hd_mode else 74
     hud_top = h - hud_h - 10
     hud_left = 16
     hud_right = w - 16
@@ -65,41 +86,40 @@ def render_reval_hud_overlay(
     # 2. Prussian Blue Main Telemetry Bar (#003153)
     draw.rectangle(
         [(hud_left, hud_top + 4), (hud_right, hud_top + hud_h)],
-        fill=(0, 49, 83, 235)  # #003153 with high opacity
+        fill=(0, 49, 83, 238)  # #003153
     )
 
-    # Try font loading, fallback to default
-    try:
-        font = ImageFont.load_default()
-    except Exception:
-        font = None
+    font_lg = _load_bold_font(20 if hd_mode else 10)
+    font_md = _load_bold_font(19 if hd_mode else 10)
 
     # 3. ReVal Pill Badge (Left)
     reval_score = athlete_meta.get("reval_score", 85.0)
-    badge_w = 145
-    badge_h = 24
+    badge_w = 212 if hd_mode else 145
+    badge_h = 30 if hd_mode else 24
     badge_x = hud_left + 12
     badge_y = hud_top + 12
 
-    # Orange Pill
+    # Orange Pill with #001020 AAA ink (9.28:1)
     draw.rectangle(
         [(badge_x, badge_y), (badge_x + badge_w, badge_y + badge_h)],
         fill=(255, 158, 27, 255)
     )
     score_text = f"REVAL SCORE: {reval_score:.1f}"
-    draw.text((badge_x + 8, badge_y + 6), score_text, fill=(0, 49, 83), font=font)
+    draw.text((badge_x + 10, badge_y + (4 if hd_mode else 6)), score_text, fill=(0, 16, 32), font=font_lg)
 
     # 4. Athlete Name, Jersey, and Team Line
     name_str = f"#{athlete_meta.get('jersey', '00')} {athlete_meta.get('name', 'Athlete').upper()}"
-    team_str = f"|  {athlete_meta.get('team', 'Club')}  ({athlete_meta.get('position', 'Pro')})"
-    draw.text((badge_x + badge_w + 14, badge_y + 3), name_str, fill=(255, 255, 255), font=font)
-    draw.text((badge_x + badge_w + 160, badge_y + 3), team_str, fill=(148, 163, 184), font=font)
+    team_str = f"|  {athlete_meta.get('team', 'Club')} ({athlete_meta.get('position', 'Pro')})"
+    draw.text((badge_x + badge_w + 16, badge_y + (4 if hd_mode else 3)), name_str, fill=(255, 255, 255), font=font_lg)
+    name_offset = 270 if hd_mode else 160
+    draw.text((badge_x + badge_w + name_offset, badge_y + (5 if hd_mode else 3)), team_str, fill=(226, 232, 240), font=font_md)
 
-    # 5. NIL Valuation Multiplier Badge (Right)
+    # 5. NIL Valuation Multiplier Badge (Right) — >= 20px bold (#FF9E1B on #003153 = 6.49:1 AAA-Large)
     nil_mult = athlete_meta.get("nil_multiplier", "3.50x")
     tier = athlete_meta.get("tier", "ELITE TIER")
-    tier_str = f"{tier} ({nil_mult} MEDIA MULTIPLIER)"
-    draw.text((hud_right - 230, badge_y + 3), tier_str, fill=(255, 158, 27), font=font)
+    tier_str = f"{tier} ({nil_mult} NIL)"
+    tier_x = (hud_right - 340) if hd_mode else (hud_right - 230)
+    draw.text((tier_x, badge_y + (4 if hd_mode else 3)), tier_str, fill=(255, 158, 27), font=font_lg)
 
     # 6. Action Telemetry Sub-line (Bottom)
     action_lbl = event_meta.get("label", "Key Action")
@@ -107,13 +127,14 @@ def render_reval_hud_overlay(
     cam_type = event_meta.get("camera_type", "Close-Up")
     desc = event_meta.get("description", "Action spot in match window.")
 
-    sub_y = badge_y + 30
-    action_info = f"EVENT: {action_lbl}  |  CROWD SURGE: +{crowd_db:.1f} dB  |  CAMERA: {cam_type}  |  {desc[:65]}"
-    draw.text((hud_left + 14, sub_y), action_info, fill=(226, 232, 240), font=font)
+    sub_y = badge_y + (40 if hd_mode else 30)
+    action_info = f"EVENT: {action_lbl} | CROWD: +{crowd_db:.1f} dB | CAM: {cam_type} | {desc[:64]}"
+    draw.text((hud_left + 14, sub_y), action_info, fill=(226, 232, 240), font=font_md)
 
-    # 7. Top-Right Time Badge
+    # 7. Bottom-Right Time Badge — >= 20px bold (#FF9E1B on #003153 = 6.49:1 AAA-Large)
     time_badge = f"[+{rel_playback_sec:.1f}s]"
-    draw.text((hud_right - 60, sub_y), time_badge, fill=(255, 158, 27), font=font)
+    time_x = (hud_right - 95) if hd_mode else (hud_right - 60)
+    draw.text((time_x, sub_y), time_badge, fill=(255, 158, 27), font=font_lg)
 
     return img
 
@@ -185,60 +206,112 @@ def generate_athlete_highlight_reel(
 
     print(f"Slicing clip [{slice_start:.1f}s -> {slice_end:.1f}s] ({total_slice_dur:.1f}s) from {chunk_file.name}...")
 
-    # Decode frames in range
+    # Decode synchronized video + AAC audio packets in range
     container = av.open(str(chunk_file))
     video_stream = container.streams.video[0]
-    time_base = float(video_stream.time_base)
+    audio_stream = container.streams.audio[0] if container.streams.audio else None
+    v_time_base = float(video_stream.time_base)
+
+    # Fast keyframe seek slightly ahead of slice_start to avoid decoding entire chunk
+    container.seek(int(max(0.0, slice_start - 1.5) * av.time_base), any_frame=False, backward=True)
 
     processed_images = []
     fps_sample = 25.0
     frame_step = 1.0 / fps_sample
     next_t = slice_start
+    first_v_pts_sec: Optional[float] = None
 
-    for packet in container.demux(video_stream):
-        for frame in packet.decode():
-            if frame.pts is None:
-                continue
-            pts_sec = float(frame.pts) * time_base
-            if pts_sec < slice_start:
-                continue
-            if pts_sec > slice_end:
-                break
+    a_rate = int(audio_stream.rate) if audio_stream is not None else 44100
+    a_time_base = float(audio_stream.time_base) if audio_stream is not None else (1.0 / a_rate)
+    resampler = av.AudioResampler(format="fltp", layout="stereo", rate=a_rate) if audio_stream is not None else None
+    audio_chunks: List[Tuple[float, np.ndarray]] = []
 
-            if pts_sec >= next_t:
-                img = frame.to_image()
-                rel_t = pts_sec - slice_start
-                # Render HUD overlay on frame
-                hud_frame = render_reval_hud_overlay(img, athlete_info, target_event, rel_playback_sec=rel_t)
-                processed_images.append(hud_frame)
-                next_t += frame_step
-        if next_t > slice_end:
+    demux_streams = [video_stream, audio_stream] if audio_stream is not None else [video_stream]
+    for packet in container.demux(demux_streams):
+        if packet.dts is None and packet.pts is None:
+            continue
+        if packet.stream.type == "video":
+            for frame in packet.decode():
+                if frame.pts is None:
+                    continue
+                pts_sec = float(frame.pts) * v_time_base
+                if pts_sec < slice_start or pts_sec > slice_end + frame_step:
+                    continue
+                if pts_sec >= next_t - 1e-4:
+                    if first_v_pts_sec is None:
+                        first_v_pts_sec = pts_sec
+                    rel_t = pts_sec - slice_start
+                    hud_frame = render_reval_hud_overlay(frame.to_image(), athlete_info, target_event, rel_playback_sec=rel_t)
+                    processed_images.append(hud_frame)
+                    next_t += frame_step
+        elif audio_stream is not None and packet.stream.type == "audio" and resampler is not None:
+            for a_frame in packet.decode():
+                if a_frame.pts is None:
+                    continue
+                at0 = float(a_frame.pts) * a_time_base
+                at1 = at0 + (a_frame.samples / float(a_rate))
+                if at1 < slice_start - 0.1 or at0 > slice_end + 0.15:
+                    continue
+                for r_frame in resampler.resample(a_frame):
+                    audio_chunks.append((at0, r_frame.to_ndarray()))
+
+        audio_done = (audio_stream is None) or (len(audio_chunks) > 0 and audio_chunks[-1][0] > slice_end + 0.1)
+        if next_t > slice_end + frame_step and audio_done:
             break
     container.close()
 
-    if not processed_images:
+    if not processed_images or first_v_pts_sec is None:
         print("Failed to decode frames for reel.")
         return None
 
-    # Write output video with PyAV
+    # Write synchronized H.264 + AAC output with PyAV
     out_container = av.open(str(output_path), mode="w")
     w, h = processed_images[0].size
-    out_stream = out_container.add_stream("libx264", rate=25)
-    out_stream.width = w
-    out_stream.height = h
-    out_stream.pix_fmt = "yuv420p"
+    out_v_stream = out_container.add_stream("libx264", rate=25)
+    out_v_stream.width = w
+    out_v_stream.height = h
+    out_v_stream.pix_fmt = "yuv420p"
+    out_v_stream.options = {"preset": "veryfast", "crf": "23"}
 
-    for img in processed_images:
+    out_a_stream = None
+    pcm_stereo = None
+    n_target_samples = 0
+    if audio_stream is not None and audio_chunks:
+        out_a_stream = out_container.add_stream("aac", rate=a_rate, layout="stereo")
+        target_dur = len(processed_images) / fps_sample
+        n_target_samples = int(round(target_dur * a_rate))
+        pcm_stereo = np.zeros((2, n_target_samples), dtype=np.float32)
+        for at0, arr in audio_chunks:
+            s0 = int(round((at0 - first_v_pts_sec) * a_rate))
+            s1 = s0 + arr.shape[1]
+            d0, d1 = max(0, s0), min(n_target_samples, s1)
+            if d1 > d0:
+                pcm_stereo[:, d0:d1] = arr[:2, (d0 - s0):(d1 - s0)]
+
+    for idx, img in enumerate(processed_images):
         v_frame = av.VideoFrame.from_image(img)
-        for packet in out_stream.encode(v_frame):
+        v_frame.pts = idx
+        for packet in out_v_stream.encode(v_frame):
             out_container.mux(packet)
 
-    for packet in out_stream.encode():
+    if out_a_stream is not None and pcm_stereo is not None:
+        for pos in range(0, n_target_samples, 1024):
+            seg = np.ascontiguousarray(pcm_stereo[:, pos:pos + 1024])
+            a_out = av.AudioFrame.from_ndarray(seg, format="fltp", layout="stereo")
+            a_out.sample_rate = a_rate
+            a_out.pts = pos
+            for packet in out_a_stream.encode(a_out):
+                out_container.mux(packet)
+
+    for packet in out_v_stream.encode():
         out_container.mux(packet)
+    if out_a_stream is not None:
+        for packet in out_a_stream.encode():
+            out_container.mux(packet)
     out_container.close()
 
     size_mb = output_path.stat().st_size / (1024 * 1024)
-    print(f"✓ Highlight Reel exported: {output_path.name} ({len(processed_images)} frames, {size_mb:.2f} MB)")
+    print(f"✓ Highlight Reel exported: {output_path.name} ({len(processed_images)} frames, audio={out_a_stream is not None}@{a_rate}Hz, {size_mb:.2f} MB)")
     return output_path
 
 

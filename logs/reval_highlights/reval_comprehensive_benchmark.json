@@ -1,6 +1,6 @@
 {
   "suite": "ReVal Quantitative Valuation & Highlight Engineering Benchmark",
-  "total_runtime_sec": 4.39,
+  "total_runtime_sec": 5.2,
   "benchmark_0_cross_sport_normalization": {
     "canonical_frequency_anchor_per_game": 10.0,
     "unnormalized_scores": {
@@ -203,36 +203,65 @@
     "pyav_720p_transcode": {
       "frames_encoded": 250,
       "clip_duration_sec": 10.0,
-      "elapsed_sec": 3.545,
-      "throughput_fps": 70.51,
-      "real_time_factor": 0.355,
+      "elapsed_sec": 4.136,
+      "throughput_fps": 60.45,
+      "real_time_factor": 0.414,
       "realtime_capable": true
     },
     "av_packet_sync_audit": [
       {
         "file": "ander_herrera_21_reel.mp4",
-        "has_audio": false,
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate_hz": 44100,
         "av_start_offset_s": 0.0,
-        "av_duration_delta_s": 0.0
+        "av_first_packet_drift_ms": 23.22,
+        "av_duration_delta_s": 0.0,
+        "sync_within_25ms": true
       },
       {
         "file": "john_terry_26_reel.mp4",
-        "has_audio": false,
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate_hz": 44100,
         "av_start_offset_s": 0.0,
-        "av_duration_delta_s": 0.0
+        "av_first_packet_drift_ms": 23.22,
+        "av_duration_delta_s": 0.0,
+        "sync_within_25ms": true
       },
       {
         "file": "sergio_aguero_10_reel.mp4",
-        "has_audio": false,
+        "has_audio": true,
+        "audio_codec": "aac",
+        "audio_sample_rate_hz": 48000,
         "av_start_offset_s": 0.0,
-        "av_duration_delta_s": 0.0
+        "av_first_packet_drift_ms": 21.33,
+        "av_duration_delta_s": 0.0,
+        "sync_within_25ms": true
       }
     ],
     "wcag_21_contrast_ratios": {
       "white_#FFFFFF_on_prussian_#003153": 13.43,
       "slate_#E2E8F0_on_prussian_#003153": 10.89,
-      "orange_#FF9E1B_on_prussian_#003153": 6.49,
-      "prussian_#003153_on_orange_#FF9E1B": 6.49
+      "navy_ink_#001020_on_orange_#FF9E1B": 9.28,
+      "orange_#FF9E1B_on_prussian_#003153": 6.49
+    },
+    "wcag_21_compliance": {
+      "ratios": {
+        "white_#FFFFFF_on_prussian_#003153": 13.43,
+        "slate_#E2E8F0_on_prussian_#003153": 10.89,
+        "navy_ink_#001020_on_orange_#FF9E1B": 9.28,
+        "orange_#FF9E1B_on_prussian_#003153": 6.49
+      },
+      "orange_on_prussian_typography": ">= 20px bold Arial (qualifies WCAG 2.1 AAA Large Text >= 4.5:1 & AA Normal Text >= 4.5:1)",
+      "aaa_normal_and_large_pairs": [
+        "white_#FFFFFF_on_prussian_#003153",
+        "slate_#E2E8F0_on_prussian_#003153",
+        "navy_ink_#001020_on_orange_#FF9E1B"
+      ],
+      "aaa_large_bold_and_aa_normal_pairs": [
+        "orange_#FF9E1B_on_prussian_#003153"
+      ]
     }
   }
 }

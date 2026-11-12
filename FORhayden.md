@@ -708,14 +708,14 @@ With Tracks A through H complete, four official geometric/tracking SoccerNet cha
    - Guessing player distance from bounding-box pixel height alone (`baseline_bbox_scale_prior`) gets wildly confused when players crouch, jump, or get zoomed in (`RMSE = 32.603m`, `Abs Rel = 0.3329`).
    - Because soccer players stand on a known flat plane ($Z = 0$), shooting a 3D ray from the solved pinhole camera $\mathbf{C}_{\text{pred}}$ through $\mathbf{H}_{\text{pred}}^{-1}$ locks player depth (`38.61m–94.19m`) to **`0.0496 Abs Rel` (`4.455m RMSE`, `100%` $\delta_1$)** — and **`0.0512 Abs Rel` (`4.513m RMSE`, `100%` $\delta_1$)** with bounding-box height regularization.
 
-### 16.2 ReVal Multi-Match Empirical Benchmark (`scripts/benchmark_reval_engine.py`, `4.39s`)
+### 16.2 ReVal Multi-Match Empirical Benchmark (`scripts/benchmark_reval_engine.py`, `5.20s`)
 
 To prove ReVal isn't just a heuristic script, `scripts/benchmark_reval_engine.py` evaluates five quantitative benchmarks on real MES-5 artifacts:
 - **Cross-Sport Parity (`B0`):** Basketball has ~100 field goals per game vs ~2.6 soccer goals. Log-frequency normalization (`N_ref = 10.0`) slashes cross-sport capped score Variance (CV) by **`62.44%`** (`17.97% -> 6.75%`, and uncapped sum CV by **`80.81%`**).
-- **Attribution Ablation (`B1`):** Across `N = 73` strict high-stakes `Labels-caption.json` events, fusing Track H OCR (`14.63% F1`) + Track G ASR/NER (`33.33% F1`) raises F1 to **`34.34%`** (`23.29%` recall). On `N = 35` routine Game 0 Half 1 events, uncorroborated off-event OCR adds 3 false positives (`24.0%` vs `25.53%`), documenting why high-stakes gating matters.
+- **Attribution Ablation (`B1`):** Across `N = 73` strict high-stakes `Labels-caption.json` events across wide/mixed broadcast shots, fusing Track H OCR (`14.63% F1`) + Track G ASR/NER (`33.33% F1`) raises zero-shot attribution F1 to **`34.34%`** (`23.29%` recall). On `N = 35` routine Game 0 Half 1 events, uncorroborated off-event OCR adds 3 false positives (`24.0%` vs `25.53%`), documenting why high-stakes gating matters.
 - **Adaptive Highlight Splicing (`B2`):** Across `54` DSP profiles (`134` HS events), the Adaptive Splicer hits **`100.00%` apex containment** and **`96.27%` clean cuts** vs **`85.82%` / `80.97%`** for fixed `[t-4s, t+6s]`.
 - **Construct Validity & Stability (`B3`):** Across 10 MES-5 players, ReVal correlates strongly with independent official match ratings (**Spearman $\rho = 0.7697, p = 0.00922$**; **Kendall $\tau = 0.6000, p = 0.01667$**), with **`86.0%` Top-5 Jaccard stability** under $\pm 20\%$ Monte Carlo weight noise.
-- **Systems & WCAG 2.1 (`B4`):** PyAV encodes 720p H.264 highlights at **`70.51 FPS` (`RTF = 0.355`)**, and the Prussian Blue (`#003153`) + Orange (`#FF9E1B`) HUD clears WCAG 2.1 AA (`13.43:1`, `10.89:1`, `6.49:1`).
+- **Systems, A/V Sync & WCAG 2.1 (`B4`):** PyAV renders `>= 20px` bold HUDs onto 720p H.264 highlights at **`60.45 FPS` (`RTF = 0.414`)** while muxing real broadcast AAC audio (`44.1/48 kHz stereo`) within `21.33–23.22 ms` first-packet drift (`0.0s` start/duration delta). Palette contrast clears WCAG 2.1 **AAA** on body/badge text (`13.43:1` White, `10.89:1` Slate, `9.28:1` `#001020` badge ink) and **AAA-Large / AA-Normal** on `20px` bold `#FF9E1B` accents (`6.49:1`).
 
 ---
 

@@ -7,6 +7,16 @@ and Track H Jersey OCR into objective 3-Pillar Athlete Valuation Scores (0-100) 
 import math
 from typing import Dict, List, Tuple, Any, Optional
 
+# Broadcast Lower-Third HUD WCAG 2.1 Palette & Typography Spec
+REVAL_HUD_PALETTE: Dict[str, Any] = {
+    "prussian_blue": "#003153",
+    "primary_orange": "#FF9E1B",
+    "white": "#FFFFFF",
+    "slate": "#E2E8F0",
+    "badge_ink": "#001020",
+    "min_orange_text_px_bold": 20,  # >= 18.66px bold qualifies for WCAG 2.1 AAA Large Text (>= 4.5:1)
+}
+
 # ---------------------------------------------------------------------------
 # 1. Action Rarity Weights (mAP_inv_log Formulation)
 # ---------------------------------------------------------------------------

@@ -153,22 +153,30 @@ def test_reval_spliced_mp4_integrity():
         file_size_mb = reel_path.stat().st_size / (1024 * 1024)
         assert file_size_mb > 0.5, f"Reel file suspiciously small: {file_size_mb:.2f} MB"
 
-        # Validate with PyAV
+        # Validate synchronized video + AAC audio streams with PyAV
         container = av.open(str(reel_path))
         video_streams = [s for s in container.streams if s.type == "video"]
+        audio_streams = [s for s in container.streams if s.type == "audio"]
         assert len(video_streams) == 1, f"Expected 1 video stream, found {len(video_streams)}"
-        
+        assert len(audio_streams) == 1, f"Expected 1 audio stream in {reel_path.name}, found {len(audio_streams)}"
+
         v_stream = video_streams[0]
+        a_stream = audio_streams[0]
         width, height = v_stream.width, v_stream.height
         frames = v_stream.frames
         dur_sec = float(v_stream.duration * v_stream.time_base) if v_stream.duration else 10.0
-        
+        a_dur_sec = float(a_stream.duration * a_stream.time_base) if a_stream.duration else 0.0
+        v_start = float(v_stream.start_time * v_stream.time_base) if v_stream.start_time is not None else 0.0
+        a_start = float(a_stream.start_time * a_stream.time_base) if a_stream.start_time is not None else 0.0
+
         container.close()
 
         assert (width, height) in [(1280, 720), (398, 224)], f"Unexpected video dimensions: {width}x{height}"
         assert dur_sec >= 8.0, f"Expected reel duration >= 8s, got {dur_sec:.2f}s"
         assert frames >= 200, f"Expected >= 200 frames, got {frames}"
-        print(f"✓ Verified {reel_path.name}: {width}x{height}, {frames} frames ({dur_sec:.2f}s), {file_size_mb:.2f} MB")
+        assert abs(v_start - a_start) < 0.025, f"A/V start drift too high in {reel_path.name}: {abs(v_start - a_start):.4f}s"
+        assert abs(dur_sec - a_dur_sec) < 0.05, f"A/V duration mismatch in {reel_path.name}: {abs(dur_sec - a_dur_sec):.4f}s"
+        print(f"✓ Verified {reel_path.name}: {width}x{height}, {frames} frames ({dur_sec:.2f}s), aac@{a_stream.rate}Hz, drift={abs(v_start - a_start)*1000:.2f}ms, {file_size_mb:.2f} MB")
 
 
 def test_reval_server_api_response():

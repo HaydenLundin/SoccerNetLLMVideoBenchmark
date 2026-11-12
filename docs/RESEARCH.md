@@ -1500,6 +1500,8 @@ To close out all **12 official SoccerNet challenge tracks** on consumer 8 GB VRA
 
 ### 19.1 Tracks I–L Evaluation Results (Game 0 Half 1 Calibration, GSR, Tracking/Re-ID & Metric Depth)
 
+*Protocol Clarification:* `Tracks I`, `J`, and `L` evaluate projective geometric consistency under reference-anchored pinhole camera refinement initialized from broad pitch hypotheses (`12` calibrated `Game 0 Half 1` keyframes; `N=92` GSR players; `N=82` depth targets), distinguishing calibrated plane-constrained inference from unconstrained scratch monocular regression. Similarly, `Benchmark B1` below reports fully automated zero-shot event-to-player attribution across wide/mixed broadcast shots (`34.34% F1` on `N=73` high-stakes events), distinct from zoomed crop-level OCR in `Track H` (`100%` on isolated jersey close-ups).
+
 #### Table 28: Spatial & Geometric Challenge Tracks (Tracks I, J, K, L — Game 0 Half 1, Local CPU)
 
 | Official Track | Task & Benchmark Scope | Baseline System | Baseline Result | V5 Geometry / Tracker System | V5 Result |
@@ -1527,7 +1529,7 @@ To close out all **12 official SoccerNet challenge tracks** on consumer 8 GB VRA
 | **11** | **Track K:** Multi-Object Tracking & Player Re-ID | Kalman Filter + HSV + Cut/Dissolve Recovery + Track H | **72.63%** `HOTA`, `-52.1%` ID Switches (`549 -> 263`), **34.52%** Re-ID Top-1 | `evaluate_v5_tracking_reid.py` |
 | **12** | **Track L:** 3D Metric Depth Estimation | TRF Physical Pose Solver ($\mathbf{H}^{-1} + \mathbf{C}_{\text{pred}}$) | **0.0496** `Abs Rel` (**4.455m** RMSE; **0.0512 / 4.513m** Hybrid; **100%** $\delta_1$) | `evaluate_v5_depth_estimation.py` |
 
-### 19.2 ReVal Quantitative Valuation & Highlight Engineering Benchmark (`scripts/benchmark_reval_engine.py`, `4.39s`)
+### 19.2 ReVal Quantitative Valuation & Highlight Engineering Benchmark (`scripts/benchmark_reval_engine.py`, `5.20s`)
 
 #### Table 30: ReVal Empirical Verification Across Benchmarks 0–4
 
@@ -1537,7 +1539,7 @@ To close out all **12 official SoccerNet challenge tracks** on consumer 8 GB VRA
 | **B1: Multi-Modal Attribution Ablation** | `MES-5` Strict High-Stakes (`N=73`) / Broad (`N=104`) / G0H1 Instrumented (`N=35`) | Strict HS: Track H OCR `F1=14.63%` (`P=66.67%, R=8.22%`) $\to$ Track G `F1=33.33%` $\to$ **Fused `F1=34.34%`** (`P=65.38%, R=23.29%`). Broad (`N=104`): `12.07% -> 31.34% -> 31.65%`. G0H1 (`N=35` routine plays): Track G `25.53%` vs Fused `24.0%` (`+3` uncorroborated off-event OCR FPs when ungated by high-stakes spotting). |
 | **B2: Adaptive Acoustic/Optical Splicing** | Fixed `[t-4s, t+6s]` vs Adaptive DSP Splicer across `54` `.npz` STFT profiles (`134` HS events) | Fixed: `mIoU = 53.89%`, `Apex Containment = 85.82%`, `CleanCut = 80.97%` $\to$ **Adaptive Splicer: `mIoU = 55.04%`, `Apex = 100.00%`, `CleanCut = 96.27%`**. |
 | **B3: Construct Validity & Sensitivity** | `10` MES-5 athletes vs independent official ratings + `100` Monte Carlo trials (`±20%` weight noise) | **Spearman $\rho = 0.7697$ (`p = 0.00922`)**, **Kendall $\tau = 0.6000$ (`p = 0.01667`)**; MC perturbed `mean rho = 0.9957`, **Top-5 Mean Jaccard Stability = `86.0%`** (`58%` exact set). |
-| **B4: PyAV Throughput, A/V & WCAG 2.1** | `250` frames (`10.0s` 720p H.264) + output MP4 stream audit + `#003153` / `#FF9E1B` palette contrast | Encode elapsed `3.545s` (**`70.51 FPS`**, `RTF = 0.355` real-time); MP4 stream audit confirms `has_audio=false, av_start_offset_s=0.0, av_duration_delta_s=0.0` (video-only reels); WCAG 2.1 contrast: White `#FFFFFF` **`13.43:1`**, Slate `#E2E8F0` **`10.89:1`**, Orange `#FF9E1B` **`6.49:1`** (all pass AA `4.5:1`). |
+| **B4: PyAV Throughput, A/V & WCAG 2.1** | `250` frames (`10.0s` 720p H.264) + A/V mux audit across 3 reels + `#003153` / `#FF9E1B` palette | Encode elapsed `4.136s` (**`60.45 FPS`**, `RTF = 0.414` real-time); all 3 MP4 reels mux synchronized broadcast **AAC audio (`44100/48000` Hz stereo)** with `av_start_offset_s = 0.0`, **`21.33–23.22 ms` first-packet drift** (`< 25ms`, 1 AAC priming frame), and `av_duration_delta_s = 0.0`; WCAG 2.1 contrast: White `#FFFFFF` **`13.43:1` (AAA)**, Slate `#E2E8F0` **`10.89:1` (AAA)**, Navy `#001020` on Orange **`9.28:1` (AAA)**, and `>= 20px` bold Orange `#FF9E1B` on `#003153` **`6.49:1` (AAA-Large `>= 4.5:1` / AA-Normal `>= 4.5:1`)**. |
 
 * Verified programmatically via `scripts/test_v5_tracks_suite.py`, `scripts/test_reval_highlights.py`, and `scripts/test_demo_server.py`.
 

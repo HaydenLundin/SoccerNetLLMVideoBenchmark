@@ -731,7 +731,7 @@ def run_benchmark_4() -> Dict[str, Any]:
     fps = frames_processed / max(1e-6, render_elapsed_s)
     rtf = render_elapsed_s / max(1e-6, clip_sec)
 
-    # 2) Inspect exact A/V stream start_time & duration delta across existing rendered MP4s
+    # 2) Inspect exact A/V stream start_time, first-packet PTS drift & duration delta across rendered MP4s
     av_checks: List[Dict[str, Any]] = []
     for mp4_path in sorted(HIGHLIGHT_DIR.glob("*.mp4")):
         c = av.open(str(mp4_path))
@@ -741,20 +741,44 @@ def run_benchmark_4() -> Dict[str, Any]:
         a_start = float(a_s.start_time * a_s.time_base) if (a_s and a_s.start_time is not None) else 0.0
         v_dur = float(v_s.duration * v_s.time_base) if (v_s and v_s.duration is not None) else 0.0
         a_dur = float(a_s.duration * a_s.time_base) if (a_s and a_s.duration is not None) else 0.0
+        first_v_pkt_s: Optional[float] = None
+        first_a_pkt_s: Optional[float] = None
+        if v_s and a_s:
+            for pkt in c.demux(v_s, a_s):
+                if pkt.pts is None:
+                    continue
+                if pkt.stream.type == "video" and first_v_pkt_s is None:
+                    first_v_pkt_s = float(pkt.pts * v_s.time_base)
+                elif pkt.stream.type == "audio" and first_a_pkt_s is None:
+                    first_a_pkt_s = float(pkt.pts * a_s.time_base)
+                if first_v_pkt_s is not None and first_a_pkt_s is not None:
+                    break
         c.close()
+        pkt_drift_s = abs(first_v_pkt_s - first_a_pkt_s) if (first_v_pkt_s is not None and first_a_pkt_s is not None) else abs(v_start - a_start)
+        dur_delta_s = abs(v_dur - a_dur) if a_s else 0.0
         av_checks.append({
             "file": mp4_path.name,
             "has_audio": a_s is not None,
-            "av_start_offset_s": round(abs(v_start - a_start), 4),
-            "av_duration_delta_s": round(abs(v_dur - a_dur), 4) if a_s else 0.0,
+            "audio_codec": a_s.codec_context.name if a_s else None,
+            "audio_sample_rate_hz": int(a_s.rate) if a_s else None,
+            "av_start_offset_s": round(abs(v_start - a_start), 5),
+            "av_first_packet_drift_ms": round(pkt_drift_s * 1000.0, 2),
+            "av_duration_delta_s": round(dur_delta_s, 5),
+            "sync_within_25ms": bool(a_s is not None and pkt_drift_s < 0.025 and dur_delta_s < 0.05),
         })
 
-    # 3) Exact WCAG 2.1 contrast ratios on ReVal Broadcast HUD palette
+    # 3) Exact WCAG 2.1 contrast ratios & typography compliance on ReVal Broadcast HUD palette
     contrast_ratios = {
         "white_#FFFFFF_on_prussian_#003153": round(_wcag_contrast_ratio("#FFFFFF", "#003153"), 2),
         "slate_#E2E8F0_on_prussian_#003153": round(_wcag_contrast_ratio("#E2E8F0", "#003153"), 2),
+        "navy_ink_#001020_on_orange_#FF9E1B": round(_wcag_contrast_ratio("#001020", "#FF9E1B"), 2),
         "orange_#FF9E1B_on_prussian_#003153": round(_wcag_contrast_ratio("#FF9E1B", "#003153"), 2),
-        "prussian_#003153_on_orange_#FF9E1B": round(_wcag_contrast_ratio("#003153", "#FF9E1B"), 2),
+    }
+    wcag_compliance = {
+        "ratios": contrast_ratios,
+        "orange_on_prussian_typography": ">= 20px bold Arial (qualifies WCAG 2.1 AAA Large Text >= 4.5:1 & AA Normal Text >= 4.5:1)",
+        "aaa_normal_and_large_pairs": ["white_#FFFFFF_on_prussian_#003153", "slate_#E2E8F0_on_prussian_#003153", "navy_ink_#001020_on_orange_#FF9E1B"],
+        "aaa_large_bold_and_aa_normal_pairs": ["orange_#FF9E1B_on_prussian_#003153"],
     }
 
     return {
@@ -768,6 +792,7 @@ def run_benchmark_4() -> Dict[str, Any]:
         },
         "av_packet_sync_audit": av_checks,
         "wcag_21_contrast_ratios": contrast_ratios,
+        "wcag_21_compliance": wcag_compliance,
     }
 
 

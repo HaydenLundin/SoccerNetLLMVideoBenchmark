@@ -58,7 +58,7 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 | **Systems (Stage 2)** | **CPU Window Skip + Concise-CoT** | **Loose-mAP / Acceleration** | **0.1840 / 3.3× Speedup** | **100.4% mAP retention** (0.0609 Tight) via STFT whistle/crowd/cut gating and max_tokens=128. |
 | **Demonstration** | **Interactive Web Cockpit (`apps/demo/`)** | **Latency / FPS** | **60 FPS Scrubbing** | Standalone Python HTTP 206 streamer + Canvas waveform visualizer across all 75 chunks. |
 | **Cross-Sport Transfer** | **Multi-Sport Adapter (Football/Hoops)** | **CV Reduction (`B0`)** | **-62.44% CV (`6.75%`)** | Log-frequency anchoring aligns Soccer/Football/Hoops (uncapped sum CV `-80.81%`). |
-| **Athlete Valuation (ReVal)** | **3-Pillar Valuation & Splicer (`B1`–`B4`)** | **Rank Corr / Adaptive Apex** | **$\rho=0.770$ / 100% Apex** | $p=0.00922$ vs match ratings; **70.51 FPS** PyAV 720p encoding & WCAG 2.1 AA `#003153/#FF9E1B`. |
+| **Athlete Valuation (ReVal)** | **3-Pillar Valuation & Splicer (`B1`–`B4`)** | **Rank Corr / Adaptive Apex** | **$\rho=0.770$ / 100% Apex** | $p=0.00922$ vs match ratings; **60.45 FPS** H.264+AAC reels (`<=23.2ms` drift) & WCAG AAA-Large/AA HUD. |
 
 ---
 
