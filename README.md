@@ -1,13 +1,13 @@
-# SoccerNet VLM Modernization Benchmark (V4 8-Track Multi-Task)
+# SoccerNet VLM Modernization Benchmark (V5 Complete 12-Track Ecosystem)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![SoccerNet Evaluation](https://img.shields.io/badge/SoccerNet-8--Track%20Suite%20%7C%20Spotting%20%7C%20Caption%20%7C%20VQA%20%7C%20Foul%20%7C%20BAS%20%7C%20Replay%20%7C%20Echoes%20%7C%20Jersey-green.svg)](https://www.soccer-net.org/)
+[![SoccerNet Evaluation](https://img.shields.io/badge/SoccerNet-12--Track%20Suite%20%7C%20Spotting%20%7C%20VQA%20%7C%20GSR%20%7C%20Tracking%20%7C%20Depth-green.svg)](https://www.soccer-net.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Hardware: 8GB VRAM](https://img.shields.io/badge/Hardware-8GB%20VRAM%20Compatible-brightgreen.svg)]()
 [![Cloud Cost: $0](https://img.shields.io/badge/Cloud%20Cost-%240.00-success.svg)]()
 
-> **Benchmarking Multimodal Vision-Language Models on Untrimmed Broadcast Sports Video: The Complete 8-Track Multi-Task Benchmark Suite (Action Spotting, Dense Captioning, SN-VQA, Multi-View Foul, Ball Action Spotting, Replay Grounding, Echoes Entity Resolution, and Jersey OCR) running locally on consumer hardware at $0 cloud spend.**
+> **Benchmarking Multimodal Vision-Language Models & Classical Projective Geometry on Untrimmed Broadcast Sports Video: All 12 Official SoccerNet Challenge Tracks (Spotting, Captioning, SN-VQA, MV-Foul, BAS, Replay Grounding, Echoes Entity Resolution, Jersey OCR, Camera Calibration, Game State Reconstruction, Multi-Object Tracking/Re-ID, and 3D Metric Depth) + ReVal Athlete Valuation running locally on consumer hardware at $0 cloud spend.**
 
 ---
 
@@ -15,7 +15,7 @@
 
 Traditional sports video perception pipelines (e.g., NetVLAD, E2E-Spot, ActionFormer) rely on pre-extracted 3D visual features fed into closed-set classifiers. While effective at detection, they lack semantic reasoning, cannot explain *why* an event occurred, cannot write play-by-play commentary, and fail to ground entities.
 
-The **SoccerNet VLM Modernization Benchmark** evaluates modern **Multimodal Vision-Language Models (VLMs)** on untrimmed broadcast soccer footage (English Premier League) across **eight official challenge tracks**:
+The **SoccerNet VLM Modernization Benchmark** evaluates modern **Multimodal Vision-Language Models (VLMs)** and spatial/geometric perception primitives on untrimmed broadcast soccer footage (English Premier League) across **all twelve official challenge tracks**:
 1. **Track A: Classic Action Spotting (`Labels-v2`):** Localizing 17 official canonical soccer actions down to sub-second precision ($\pm 1\text{s}$ to $\pm 5\text{s}$).
 2. **Track B: Dense Video Captioning (`SoccerNet-Caption`):** Generating play-by-play narrative commentary aligned with match events.
 3. **Track C: Visual Question Answering (SN-VQA):** Multiple-choice tactical and disciplinary reasoning across localized video clips with visual Chain-of-Thought (CoT).
@@ -24,8 +24,12 @@ The **SoccerNet VLM Modernization Benchmark** evaluates modern **Multimodal Visi
 6. **Track F: Replay Grounding & Camera Shot Classification:** 4-class camera shot boundary classification and linking broadcast slow-mo replays backward to live action triggers ($[t_{\text{rep}} - 65\text{s}, t_{\text{rep}} - 5\text{s}]$).
 7. **Track G: SoccerNet-Echoes Audio-Transcript Entity Grounding:** Fusing spoken broadcast commentary entities into VLM narrations to resolve anonymous player descriptors into grounded names.
 8. **Track H: Jersey Number OCR & Kit Recognition:** Fine-grained numeral recognition and kit team discrimination from cropped player frames.
+9. **Track I: Camera Calibration & Pitch Line Registration:** Chamfer-distance 3D pinhole DLT/pose optimization across calibrated pitch lines and circles.
+10. **Track J: Game State Reconstruction (2D Minimap):** Inverse homography ($\mathbf{H}^{-1}$) projection into canonical $105\text{m}\times 68\text{m}$ coordinates with `RETR_EXTERNAL` pitch blob detection and 4-role kit classification.
+11. **Track K: Multi-Object Tracking & Player Re-ID:** Kalman + HSV appearance tracking with hard-cut/dissolve histogram recovery and Track H jersey fusion.
+12. **Track L: 3D Metric Depth Estimation:** Trust-Region Reflective physical camera pose estimation ($\mathbf{H}^{-1} + \mathbf{C}_{\text{pred}}$) for per-player metric depth across `38.6m–94.2m`.
 
-By combining single-pass memory streaming, burned-in frame clock badges, 4-bit NF4 quantization, zero-VRAM digital signal processing (DSP), and out-of-sample Markov transition rescoring, **this entire 8-track benchmark was executed locally on an 8 GB consumer laptop GPU for $0 in cloud compute.**
+By combining single-pass memory streaming, burned-in frame clock badges, 4-bit NF4 quantization, zero-VRAM digital signal processing (DSP), out-of-sample Markov transition rescoring, and inverse-homography pitch geometry, **this entire 12-track benchmark was executed locally on an 8 GB consumer laptop GPU for $0 in cloud compute.**
 
 ---
 
@@ -46,11 +50,15 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 | **Track F (Replay)** | **Cross-Temporal Visual-Audio Match** | **Recall@5s / Shot Acc** | **70.0% / 100%** | Links slow-motion replays to live triggers; 100% 4-class camera shot classification. |
 | **Track G (Echoes)** | **Audio-Transcript Entity Grounding** | **CIDEr Surge** | **0.0744 CIDEr** | **+15.7% CIDEr boost** by resolving anonymous VLM roles to grounded match names. |
 | **Track H (Jersey)** | **Qwen3.5-4B Crop OCR** | **Top-1 OCR / Kit Acc** | **100.00% / 100%**| Resolves player jersey numerals (#21, #18, #31, #17) and kit teams in 0.60s. |
+| **Track I (Calibration)** | **Chamfer Pinhole DLT** | **`IoU_part` / `AC@10px`** | **0.9601 / 78.47%** | Drops reprojection error from `835.97px` (Hough) to **`8.14px`** (`5.34px` median). |
+| **Track J (Game State)** | **Calibrated $\mathbf{H}^{-1}$ + 4-Role HSV** | **`GS-HOTA` / `Loc F1@2m`** | **84.78% / 89.62%** | `0.238m` mean pitch error (`98.78%` role acc) across 92 players vs `1.91%` linear baseline. |
+| **Track K (Tracking/ReID)** | **Kalman + HSV + Cut Recovery** | **`HOTA` / `IDF1` / `Top-1`** | **72.63% / 69.70% / 34.52%** | **-52.1% ID Switches** (`549 -> 263`) across 650 continuous 25 FPS frames (`8,692` GT boxes). |
+| **Track L (3D Depth)** | **TRF Pinhole Raycast / Hybrid** | **`Abs Rel` / `RMSE` ($\delta_1$)** | **0.0496 / 4.46m (`100%`)** | Beats scale-prior baseline (`32.60m` RMSE); hybrid regularizer scores `0.0512 / 4.51m`. |
 | **Macro Corpus (MES-5)** | **3-Model Specialist + $M_{15}$ Prior** | **Official Loose / Tight mAP** | **0.1833 / 0.0607** | **17 / 17 Active Classes (1.0000 Oracle Ceiling)** across 1,132 events in 10 halves at $0 compute. |
 | **Systems (Stage 2)** | **CPU Window Skip + Concise-CoT** | **Loose-mAP / Acceleration** | **0.1840 / 3.3× Speedup** | **100.4% mAP retention** (0.0609 Tight) via STFT whistle/crowd/cut gating and max_tokens=128. |
 | **Demonstration** | **Interactive Web Cockpit (`apps/demo/`)** | **Latency / FPS** | **60 FPS Scrubbing** | Standalone Python HTTP 206 streamer + Canvas waveform visualizer across all 75 chunks. |
-| **Cross-Sport Transfer** | **Multi-Sport Adapter (Football/Hoops)** | **Window / Clock Geometry** | **Adaptive W** | Play-clock ($W=30\text{s}$) & shot-clock ($W=24\text{s}$) geometry with sport Markov priors. |
-| **Athlete Valuation (ReVal)** | **3-Pillar Media Valuation & Reels** | **Objective ReVal Score** | **0–100 & NIL Multipliers** | 45% Action, 30% Exposure, 25% Resonance; automated PyAV 720p HD reel splicing with #003153/#FF9E1B HUD. |
+| **Cross-Sport Transfer** | **Multi-Sport Adapter (Football/Hoops)** | **CV Reduction (`B0`)** | **-62.44% CV (`6.75%`)** | Log-frequency anchoring aligns Soccer/Football/Hoops (uncapped sum CV `-80.81%`). |
+| **Athlete Valuation (ReVal)** | **3-Pillar Valuation & Splicer (`B1`–`B4`)** | **Rank Corr / Adaptive Apex** | **$\rho=0.770$ / 100% Apex** | $p=0.00922$ vs match ratings; **70.51 FPS** PyAV 720p encoding & WCAG 2.1 AA `#003153/#FF9E1B`. |
 
 ---
 
@@ -232,7 +240,28 @@ python scripts/evaluate_v4_echoes_asr_grounding.py
 
 # Track H: Jersey Number OCR & Kit Team Classification (100% Top-1 Accuracy in 0.60s)
 python scripts/evaluate_v4_jersey_ocr.py
+```
 
+### 9. Run SoccerNet V5 Spatial Tracks (Tracks I–L), ReVal Benchmarks & Tests
+
+```bash
+# Track I: Camera Calibration & Pitch Line Registration (IoU_part = 0.9601, AC@10px = 78.47%)
+python scripts/evaluate_v5_camera_calibration.py
+
+# Track J: Game State Reconstruction / 2D Minimap (GS-HOTA = 84.78%, Loc F1@2m = 89.62%)
+python scripts/evaluate_v5_game_state_gsr.py
+
+# Track K: Multi-Object Tracking & Player Re-ID (HOTA = 72.63%, -52.1% IDSW, 34.52% Top-1 Re-ID)
+python scripts/evaluate_v5_tracking_reid.py
+
+# Track L: 3D Metric Depth Estimation (Abs Rel = 0.0496, RMSE = 4.455m, 100% delta_1)
+python scripts/evaluate_v5_depth_estimation.py
+
+# ReVal 5-Benchmark Empirical Suite & All Verification Tests
+python scripts/benchmark_reval_engine.py
+python scripts/test_v5_tracks_suite.py
+python scripts/test_reval_highlights.py
+python scripts/test_demo_server.py
 ```
 
 ---
@@ -240,7 +269,7 @@ python scripts/evaluate_v4_jersey_ocr.py
 ## 📚 Documentation Index
 
 - **For Hayden (Plain-Language Guide):** Read [`FORhayden.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/FORhayden.md) for an engaging breakdown of the system architecture, design decisions, and 7 debugging war stories.
-- **Formal Academic Monograph:** Read [`docs/RESEARCH.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/RESEARCH.md) for all 16 formal tables, mathematical proofs, and conference writeup material.
+- **Formal Academic Monograph:** Read [`docs/RESEARCH.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/RESEARCH.md) for all 30 formal tables, mathematical proofs, and conference writeup material.
 - **V3 Implementation Plan:** Read [`docs/V3_IMPLEMENTATION_PLAN.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/V3_IMPLEMENTATION_PLAN.md) for the challenge specifications and architecture blueprints for SN-VQA, MV-Foul, and BAS.
 - **Cloud Scale-Up Plan:** Read [`docs/SCOPE_GCP.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/SCOPE_GCP.md) for the Vertex AI Batch API blueprint for frontier models (Gemini 3.8 Flash / Gemini 4 Argon).
 

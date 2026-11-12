@@ -1,0 +1,124 @@
+{
+  "track": "Track J: Game State Reconstruction (2D Pitch Minimap)",
+  "dataset": "Game 0 Half 1 (8 Multi-View Calibrated Broadcast Frames)",
+  "matching_threshold_m": 2.0,
+  "pitch_dimensions_m": [
+    105.0,
+    68.0
+  ],
+  "runtime_sec": 11.74,
+  "baseline_linear_viewport": {
+    "n_gt": 92,
+    "n_pred": 91,
+    "tp": 3,
+    "fp": 88,
+    "fn": 89,
+    "loc_precision_2m_pct": 3.3,
+    "loc_recall_2m_pct": 3.26,
+    "loc_f1_2m_pct": 3.28,
+    "mean_metric_error_m": 1.325,
+    "median_metric_error_m": 1.27,
+    "role_classification_acc_pct": 66.67,
+    "det_a_pct": 1.67,
+    "ass_a_pct": 2.19,
+    "composite_gs_hota_pct": 1.91
+  },
+  "track_j_calibrated_gsr": {
+    "n_gt": 92,
+    "n_pred": 91,
+    "tp": 82,
+    "fp": 9,
+    "fn": 10,
+    "loc_precision_2m_pct": 90.11,
+    "loc_recall_2m_pct": 89.13,
+    "loc_f1_2m_pct": 89.62,
+    "mean_metric_error_m": 0.238,
+    "median_metric_error_m": 0.136,
+    "role_classification_acc_pct": 98.78,
+    "det_a_pct": 81.19,
+    "ass_a_pct": 88.52,
+    "composite_gs_hota_pct": 84.78
+  },
+  "per_frame": [
+    {
+      "frame_id": "c0_0045",
+      "view": "Right Penalty Box",
+      "n_gt": 6,
+      "n_pred": 6,
+      "baseline_tp_2m": 0,
+      "trackj_tp_2m": 6,
+      "trackj_mean_err_m": 0.299,
+      "trackj_role_acc_pct": 100.0
+    },
+    {
+      "frame_id": "c0_0130",
+      "view": "Right Box & Mid-Wing",
+      "n_gt": 12,
+      "n_pred": 12,
+      "baseline_tp_2m": 1,
+      "trackj_tp_2m": 10,
+      "trackj_mean_err_m": 0.221,
+      "trackj_role_acc_pct": 100.0
+    },
+    {
+      "frame_id": "c0_0730",
+      "view": "Midfield Left",
+      "n_gt": 15,
+      "n_pred": 13,
+      "baseline_tp_2m": 1,
+      "trackj_tp_2m": 13,
+      "trackj_mean_err_m": 0.096,
+      "trackj_role_acc_pct": 100.0
+    },
+    {
+      "frame_id": "c1_1145",
+      "view": "Center Circle",
+      "n_gt": 13,
+      "n_pred": 12,
+      "baseline_tp_2m": 0,
+      "trackj_tp_2m": 12,
+      "trackj_mean_err_m": 0.382,
+      "trackj_role_acc_pct": 100.0
+    },
+    {
+      "frame_id": "c2_2105",
+      "view": "Midfield Right",
+      "n_gt": 9,
+      "n_pred": 9,
+      "baseline_tp_2m": 0,
+      "trackj_tp_2m": 8,
+      "trackj_mean_err_m": 0.178,
+      "trackj_role_acc_pct": 100.0
+    },
+    {
+      "frame_id": "c2_2919",
+      "view": "Right Box Goal Action",
+      "n_gt": 12,
+      "n_pred": 12,
+      "baseline_tp_2m": 0,
+      "trackj_tp_2m": 10,
+      "trackj_mean_err_m": 0.544,
+      "trackj_role_acc_pct": 90.0
+    },
+    {
+      "frame_id": "c3_2949",
+      "view": "Auxiliary 18-yd Offside Gantry",
+      "n_gt": 12,
+      "n_pred": 12,
+      "baseline_tp_2m": 0,
+      "trackj_tp_2m": 10,
+      "trackj_mean_err_m": 0.068,
+      "trackj_role_acc_pct": 100.0
+    },
+    {
+      "frame_id": "c4_4355",
+      "view": "Center Circle Wide",
+      "n_gt": 13,
+      "n_pred": 15,
+      "baseline_tp_2m": 1,
+      "trackj_tp_2m": 13,
+      "trackj_mean_err_m": 0.167,
+      "trackj_role_acc_pct": 100.0
+    }
+  ]
+}

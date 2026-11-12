@@ -689,7 +689,37 @@ The reels are encoded as 720p HD H.264 MP4s (`logs/reval_highlights/ander_herrer
 
 ---
 
-## 16. Future Roadmap: What Comes Next
+## 16. Tracks I–L & The ReVal Quantitative Benchmark (`v5.0.0`: Completing All 12 SoccerNet Tracks)
+
+With Tracks A through H complete, four official geometric/tracking SoccerNet challenges remained: **Camera Calibration (Track I)**, **Game State Reconstruction / 2D Minimap (Track J)**, **Multi-Object Tracking & Player Re-ID (Track K)**, and **3D Metric Depth Estimation (Track L)**. Rather than spending cloud GPU budget on heavyweight 3D networks, `processing/pitch_geometry.py` solves all four locally using projective geometry, OpenCV contours, and Kalman filtering.
+
+### 16.1 How Tracks I–L Work Together (Plain-Language Breakdown)
+
+1. **Track I — Turning TV Pixels Back Into Meter Coordinates (`scripts/evaluate_v5_camera_calibration.py`):**
+   - A raw Hough line detector blindly mixes stadium adboards and shadows with field lines, scoring a near-zero `0.0946` Pitch Part IoU (`835.97px` error).
+   - Instead, we isolate the green pitch turf in HSV space, extract clean white chalk pixels inside that turf polygon, and fit a 7-parameter 3D pinhole camera model using **Chamfer Distance Optimization** (plus Trust-Region Reflective `scipy.optimize.least_squares`). Across 12 calibrated keyframes, Pitch Part IoU surges to **`0.9601`**, reprojection accuracy hits **`78.47%` at 10 px** (`60.33%` at 5 px), and mean line error drops to **`8.14px`**.
+2. **Track J — Building the Top-Down 2D Minimap (`scripts/evaluate_v5_game_state_gsr.py`):**
+   - Once we have the camera matrix $\mathbf{H}$, inverting it ($\mathbf{H}^{-1}$) maps any player's bottom-center foot pixel straight onto the $105\text{m} \times 68\text{m}$ FIFA pitch!
+   - *War Story — Don't Slice Up Goalposts and Penalty Boxes:* Early detectors either accidentally painted white goalposts and touchline banners as "players" OR failed to split overlapping goalmouth crowds. Switching to `RETR_EXTERNAL` pitch blob masks (so penalty-box chalk holes don't swallow boxes), rejecting flat banners/skinny posts, splitting touching blobs along vertical torso contrast valleys, and adding a dedicated Orange Goalkeeper range (`7 <= H <= 16`) boosted **Game State HOTA (`GS-HOTA`) from `1.91%` to `84.78%`**, **2m localization F1 to `89.62%`** (`0.238m` mean error), and **4-role kit accuracy to `98.78%`**.
+3. **Track K — Following Players Across Cuts Without Phantoms (`scripts/evaluate_v5_tracking_reid.py`):**
+   - Across `650` continuous 25 FPS frames (`8,692` ground-truth boxes), a naive IoU tracker panics whenever a broadcast camera pans fast or cuts to a close-up, burning **`549` ID switches**.
+   - Adding a constant-velocity **Kalman Filter** with latent memory (never emitting phantom green boxes while occluded!), HSV shirt histograms, and hard-cut/dissolve histogram recovery slashes ID switches by **`52.1%`** (`549 -> 263`), lifts **`HOTA` from `68.59%` to `72.63%`** and **`IDF1` from `62.66%` to `69.70%`**, and lifts 84-query Re-ID **Top-1 from `20.24%` to `34.52%`** (`mAP 48.08%`) when fused with Track H jersey identity.
+4. **Track L — 3D Metric Depth Without LiDAR (`scripts/evaluate_v5_depth_estimation.py`):**
+   - Guessing player distance from bounding-box pixel height alone (`baseline_bbox_scale_prior`) gets wildly confused when players crouch, jump, or get zoomed in (`RMSE = 32.603m`, `Abs Rel = 0.3329`).
+   - Because soccer players stand on a known flat plane ($Z = 0$), shooting a 3D ray from the solved pinhole camera $\mathbf{C}_{\text{pred}}$ through $\mathbf{H}_{\text{pred}}^{-1}$ locks player depth (`38.61m–94.19m`) to **`0.0496 Abs Rel` (`4.455m RMSE`, `100%` $\delta_1$)** — and **`0.0512 Abs Rel` (`4.513m RMSE`, `100%` $\delta_1$)** with bounding-box height regularization.
+
+### 16.2 ReVal Multi-Match Empirical Benchmark (`scripts/benchmark_reval_engine.py`, `4.39s`)
+
+To prove ReVal isn't just a heuristic script, `scripts/benchmark_reval_engine.py` evaluates five quantitative benchmarks on real MES-5 artifacts:
+- **Cross-Sport Parity (`B0`):** Basketball has ~100 field goals per game vs ~2.6 soccer goals. Log-frequency normalization (`N_ref = 10.0`) slashes cross-sport capped score Variance (CV) by **`62.44%`** (`17.97% -> 6.75%`, and uncapped sum CV by **`80.81%`**).
+- **Attribution Ablation (`B1`):** Across `N = 73` strict high-stakes `Labels-caption.json` events, fusing Track H OCR (`14.63% F1`) + Track G ASR/NER (`33.33% F1`) raises F1 to **`34.34%`** (`23.29%` recall). On `N = 35` routine Game 0 Half 1 events, uncorroborated off-event OCR adds 3 false positives (`24.0%` vs `25.53%`), documenting why high-stakes gating matters.
+- **Adaptive Highlight Splicing (`B2`):** Across `54` DSP profiles (`134` HS events), the Adaptive Splicer hits **`100.00%` apex containment** and **`96.27%` clean cuts** vs **`85.82%` / `80.97%`** for fixed `[t-4s, t+6s]`.
+- **Construct Validity & Stability (`B3`):** Across 10 MES-5 players, ReVal correlates strongly with independent official match ratings (**Spearman $\rho = 0.7697, p = 0.00922$**; **Kendall $\tau = 0.6000, p = 0.01667$**), with **`86.0%` Top-5 Jaccard stability** under $\pm 20\%$ Monte Carlo weight noise.
+- **Systems & WCAG 2.1 (`B4`):** PyAV encodes 720p H.264 highlights at **`70.51 FPS` (`RTF = 0.355`)**, and the Prussian Blue (`#003153`) + Orange (`#FF9E1B`) HUD clears WCAG 2.1 AA (`13.43:1`, `10.89:1`, `6.49:1`).
+
+---
+
+## 17. Future Roadmap: What Comes Next
 
 With the local research questions, multi-task downstream challenges, multi-match full-corpus benchmark, Stage 2 latency optimizations, Cross-Sport Transfer Engine, and ReVal Athlete Valuation pipeline fully conquered and rigorously documented, the project is positioned for two exciting next steps:
 

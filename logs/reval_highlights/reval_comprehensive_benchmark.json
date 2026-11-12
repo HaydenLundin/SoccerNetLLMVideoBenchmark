@@ -1,0 +1,238 @@
+{
+  "suite": "ReVal Quantitative Valuation & Highlight Engineering Benchmark",
+  "total_runtime_sec": 4.39,
+  "benchmark_0_cross_sport_normalization": {
+    "canonical_frequency_anchor_per_game": 10.0,
+    "unnormalized_scores": {
+      "soccer": 64.2,
+      "football": 94.0,
+      "basketball": 99.2
+    },
+    "frequency_normalized_scores": {
+      "soccer": 54.7,
+      "football": 64.3,
+      "basketball": 58.0
+    },
+    "unnormalized_uncapped_sums": {
+      "soccer": 52.66,
+      "football": 140.46,
+      "basketball": 248.45
+    },
+    "normalized_uncapped_sums": {
+      "soccer": 41.23,
+      "football": 52.64,
+      "basketball": 44.39
+    },
+    "cross_sport_cv_unnormalized_pct": 17.97,
+    "cross_sport_cv_normalized_pct": 6.75,
+    "cv_reduction_pct": 62.44,
+    "uncapped_cv_unnormalized_pct": 54.4,
+    "uncapped_cv_normalized_pct": 10.44,
+    "uncapped_cv_reduction_pct": 80.81,
+    "rare_event_weight_comparison": {
+      "soccer": {
+        "event_class": "Goal",
+        "raw_weight": 35.0,
+        "freq_normalized_weight": 35.0
+      },
+      "football": {
+        "event_class": "Touchdown",
+        "raw_weight": 35.0,
+        "freq_normalized_weight": 23.241
+      },
+      "basketball": {
+        "event_class": "Two-Point FG / Dunk",
+        "raw_weight": 18.0,
+        "freq_normalized_weight": 1.938
+      }
+    }
+  },
+  "benchmark_1_multimodal_attribution_ablation": {
+    "mes5_strict_high_stakes": {
+      "n_events": 73,
+      "track_h_ocr_only": {
+        "attempted": 9,
+        "correct": 6,
+        "precision_pct": 66.67,
+        "recall_pct": 8.22,
+        "f1_pct": 14.63
+      },
+      "track_g_asr_ner_only": {
+        "attempted": 23,
+        "correct": 16,
+        "precision_pct": 69.57,
+        "recall_pct": 21.92,
+        "f1_pct": 33.33
+      },
+      "fused_multimodal": {
+        "attempted": 26,
+        "correct": 17,
+        "precision_pct": 65.38,
+        "recall_pct": 23.29,
+        "f1_pct": 34.34
+      }
+    },
+    "mes5_broad_strict_or_important": {
+      "n_events": 104,
+      "track_h_ocr_only": {
+        "attempted": 12,
+        "correct": 7,
+        "precision_pct": 58.33,
+        "recall_pct": 6.73,
+        "f1_pct": 12.07
+      },
+      "track_g_asr_ner_only": {
+        "attempted": 30,
+        "correct": 21,
+        "precision_pct": 70.0,
+        "recall_pct": 20.19,
+        "f1_pct": 31.34
+      },
+      "fused_multimodal": {
+        "attempted": 35,
+        "correct": 22,
+        "precision_pct": 62.86,
+        "recall_pct": 21.15,
+        "f1_pct": 31.65
+      }
+    },
+    "game0_half1_fully_instrumented_split": {
+      "n_events": 35,
+      "track_h_ocr_only": {
+        "attempted": 9,
+        "correct": 1,
+        "precision_pct": 11.11,
+        "recall_pct": 2.86,
+        "f1_pct": 4.55
+      },
+      "track_g_asr_ner_only": {
+        "attempted": 12,
+        "correct": 6,
+        "precision_pct": 50.0,
+        "recall_pct": 17.14,
+        "f1_pct": 25.53
+      },
+      "fused_multimodal": {
+        "attempted": 15,
+        "correct": 6,
+        "precision_pct": 40.0,
+        "recall_pct": 17.14,
+        "f1_pct": 24.0
+      }
+    }
+  },
+  "benchmark_2_adaptive_dsp_highlight_splicing": {
+    "dsp_profiles_analyzed": 54,
+    "high_stakes_events_evaluated": 134,
+    "fixed_window_t_minus4_to_plus6": {
+      "mean_tiou_pct": 53.89,
+      "action_apex_containment_pct": 85.82,
+      "cut_boundary_cleanliness_pct": 80.97
+    },
+    "adaptive_acoustic_optical_splicer": {
+      "mean_tiou_pct": 55.04,
+      "action_apex_containment_pct": 100.0,
+      "cut_boundary_cleanliness_pct": 96.27
+    }
+  },
+  "benchmark_3_construct_validity_and_sensitivity": {
+    "n_soccer_athletes_validated": 10,
+    "spearman_rho": 0.7697,
+    "spearman_p_value": 0.00922,
+    "kendall_tau": 0.6,
+    "kendall_p_value": 0.01667,
+    "monte_carlo_trials": 100,
+    "perturbation_band": "+/-20% uniform around (0.45, 0.30, 0.25)",
+    "top5_exact_set_stability_pct": 58,
+    "top5_mean_jaccard_stability_pct": 86.0,
+    "mean_perturbed_spearman_rho": 0.9957,
+    "paired_scores": [
+      {
+        "athlete": "Ander Herrera",
+        "reval_score": 58.3,
+        "official_match_rating_10": 8.4
+      },
+      {
+        "athlete": "Sergio Aguero",
+        "reval_score": 56.5,
+        "official_match_rating_10": 8.5
+      },
+      {
+        "athlete": "Diego Costa",
+        "reval_score": 54.0,
+        "official_match_rating_10": 8.1
+      },
+      {
+        "athlete": "John Terry",
+        "reval_score": 51.5,
+        "official_match_rating_10": 6.4
+      },
+      {
+        "athlete": "James Milner",
+        "reval_score": 50.8,
+        "official_match_rating_10": 7.7
+      },
+      {
+        "athlete": "Mark Noble",
+        "reval_score": 50.1,
+        "official_match_rating_10": 8.2
+      },
+      {
+        "athlete": "Philippe Coutinho",
+        "reval_score": 47.7,
+        "official_match_rating_10": 7.1
+      },
+      {
+        "athlete": "Radamel Falcao",
+        "reval_score": 34.9,
+        "official_match_rating_10": 6.3
+      },
+      {
+        "athlete": "Ashley Young",
+        "reval_score": 32.4,
+        "official_match_rating_10": 7.5
+      },
+      {
+        "athlete": "Kyle Walker",
+        "reval_score": 28.8,
+        "official_match_rating_10": 6.1
+      }
+    ]
+  },
+  "benchmark_4_system_engineering_and_wcag": {
+    "pyav_720p_transcode": {
+      "frames_encoded": 250,
+      "clip_duration_sec": 10.0,
+      "elapsed_sec": 3.545,
+      "throughput_fps": 70.51,
+      "real_time_factor": 0.355,
+      "realtime_capable": true
+    },
+    "av_packet_sync_audit": [
+      {
+        "file": "ander_herrera_21_reel.mp4",
+        "has_audio": false,
+        "av_start_offset_s": 0.0,
+        "av_duration_delta_s": 0.0
+      },
+      {
+        "file": "john_terry_26_reel.mp4",
+        "has_audio": false,
+        "av_start_offset_s": 0.0,
+        "av_duration_delta_s": 0.0
+      },
+      {
+        "file": "sergio_aguero_10_reel.mp4",
+        "has_audio": false,
+        "av_start_offset_s": 0.0,
+        "av_duration_delta_s": 0.0
+      }
+    ],
+    "wcag_21_contrast_ratios": {
+      "white_#FFFFFF_on_prussian_#003153": 13.43,
+      "slate_#E2E8F0_on_prussian_#003153": 10.89,
+      "orange_#FF9E1B_on_prussian_#003153": 6.49,
+      "prussian_#003153_on_orange_#FF9E1B": 6.49
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10 15:32:16",
+  "timestamp": "2026-11-11 16:34:21",
   "benchmark": "SoccerNet MES-5 & Cross-Sport",
   "scoring_formula": "ReVal = 0.45*Action + 0.30*Exposure + 0.25*Resonance",
   "total_athletes": 12,
@@ -77,42 +77,6 @@
       ]
     },
     {
-      "id": "patrick_mahomes",
-      "name": "Patrick Mahomes",
-      "jersey": "15",
-      "team": "Kansas City",
-      "sport": "football",
-      "position": "Quarterback",
-      "game_id": 99,
-      "base_market_nil": 750000.0,
-      "avatar_color": "#e31837",
-      "reval_score": 56.5,
-      "tier": "IMPACT TIER",
-      "nil_multiplier": "1.82x",
-      "multiplier_numeric": 1.82,
-      "estimated_nil_value": 1365000.0,
-      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
-      "sub_scores": {
-        "action_performance": 46.2,
-        "broadcast_exposure": 35.6,
-        "crowd_resonance": 100.0
-      },
-      "events_count": 1,
-      "attributed_events": [
-        {
-          "athlete_id": "patrick_mahomes",
-          "game_id": 99,
-          "half": 1,
-          "chunk_index": 0,
-          "rel_sec": 18.0,
-          "label": "Touchdown",
-          "crowd_surge_db": 14.8,
-          "camera_type": "Replay Sequence",
-          "description": "Rollout scramble touchdown pass to back of the endzone."
-        }
-      ]
-    },
-    {
       "id": "diego_costa",
       "name": "Diego Costa",
       "jersey": "19",
@@ -145,42 +109,6 @@
           "crowd_surge_db": 11.4,
           "camera_type": "Close-Up",
           "description": "Fast counter-attack goal sliding finish into the bottom corner."
-        }
-      ]
-    },
-    {
-      "id": "stephen_curry",
-      "name": "Stephen Curry",
-      "jersey": "30",
-      "team": "Golden State",
-      "sport": "basketball",
-      "position": "Point Guard",
-      "game_id": 98,
-      "base_market_nil": 800000.0,
-      "avatar_color": "#1d428a",
-      "reval_score": 53.1,
-      "tier": "IMPACT TIER",
-      "nil_multiplier": "1.66x",
-      "multiplier_numeric": 1.66,
-      "estimated_nil_value": 1328000.0,
-      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
-      "sub_scores": {
-        "action_performance": 35.8,
-        "broadcast_exposure": 42.9,
-        "crowd_resonance": 96.4
-      },
-      "events_count": 1,
-      "attributed_events": [
-        {
-          "athlete_id": "stephen_curry",
-          "game_id": 98,
-          "half": 1,
-          "chunk_index": 0,
-          "rel_sec": 21.0,
-          "label": "Three-Point Made",
-          "crowd_surge_db": 13.5,
-          "camera_type": "Close-Up",
-          "description": "Deep 30-foot pull-up three-pointer beating the 24s shot clock."
         }
       ]
     },
@@ -257,6 +185,42 @@
       ]
     },
     {
+      "id": "patrick_mahomes",
+      "name": "Patrick Mahomes",
+      "jersey": "15",
+      "team": "Kansas City",
+      "sport": "football",
+      "position": "Quarterback",
+      "game_id": 99,
+      "base_market_nil": 750000.0,
+      "avatar_color": "#e31837",
+      "reval_score": 50.8,
+      "tier": "IMPACT TIER",
+      "nil_multiplier": "1.54x",
+      "multiplier_numeric": 1.54,
+      "estimated_nil_value": 1155000.0,
+      "tier_description": "Key rotational contributor; solid tactical footprint with localized endorsement appeal.",
+      "sub_scores": {
+        "action_performance": 33.7,
+        "broadcast_exposure": 35.6,
+        "crowd_resonance": 100.0
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "patrick_mahomes",
+          "game_id": 99,
+          "half": 1,
+          "chunk_index": 0,
+          "rel_sec": 18.0,
+          "label": "Touchdown",
+          "crowd_surge_db": 14.8,
+          "camera_type": "Replay Sequence",
+          "description": "Rollout scramble touchdown pass to back of the endzone."
+        }
+      ]
+    },
+    {
       "id": "mark_noble",
       "name": "Mark Noble",
       "jersey": "16",
@@ -329,6 +293,42 @@
       ]
     },
     {
+      "id": "stephen_curry",
+      "name": "Stephen Curry",
+      "jersey": "30",
+      "team": "Golden State",
+      "sport": "basketball",
+      "position": "Point Guard",
+      "game_id": 98,
+      "base_market_nil": 800000.0,
+      "avatar_color": "#1d428a",
+      "reval_score": 41.0,
+      "tier": "ROTATION TIER",
+      "nil_multiplier": "1.33x",
+      "multiplier_numeric": 1.33,
+      "estimated_nil_value": 1064000.0,
+      "tier_description": "Baseline matchday participation; standard compensation tier.",
+      "sub_scores": {
+        "action_performance": 9.0,
+        "broadcast_exposure": 42.9,
+        "crowd_resonance": 96.4
+      },
+      "events_count": 1,
+      "attributed_events": [
+        {
+          "athlete_id": "stephen_curry",
+          "game_id": 98,
+          "half": 1,
+          "chunk_index": 0,
+          "rel_sec": 21.0,
+          "label": "Three-Point Made",
+          "crowd_surge_db": 13.5,
+          "camera_type": "Close-Up",
+          "description": "Deep 30-foot pull-up three-pointer beating the 24s shot clock."
+        }
+      ]
+    },
+    {
       "id": "radamel_falcao",
       "name": "Radamel Falcao",
       "jersey": "9",
@@ -338,14 +338,14 @@
       "game_id": 0,
       "base_market_nil": 280000.0,
       "avatar_color": "#da291c",
-      "reval_score": 37.0,
+      "reval_score": 34.9,
       "tier": "ROTATION TIER",
-      "nil_multiplier": "1.30x",
-      "multiplier_numeric": 1.3,
-      "estimated_nil_value": 364000.0,
+      "nil_multiplier": "1.28x",
+      "multiplier_numeric": 1.28,
+      "estimated_nil_value": 358400.0,
       "tier_description": "Baseline matchday participation; standard compensation tier.",
       "sub_scores": {
-        "action_performance": 13.2,
+        "action_performance": 8.4,
         "broadcast_exposure": 42.9,
         "crowd_resonance": 72.9
       },
@@ -374,14 +374,14 @@
       "game_id": 0,
       "base_market_nil": 180000.0,
       "avatar_color": "#da291c",
-      "reval_score": 35.6,
+      "reval_score": 32.4,
       "tier": "ROTATION TIER",
-      "nil_multiplier": "1.28x",
-      "multiplier_numeric": 1.28,
-      "estimated_nil_value": 230400.0,
+      "nil_multiplier": "1.26x",
+      "multiplier_numeric": 1.26,
+      "estimated_nil_value": 226800.0,
       "tier_description": "Baseline matchday participation; standard compensation tier.",
       "sub_scores": {
-        "action_performance": 13.2,
+        "action_performance": 6.1,
         "broadcast_exposure": 42.9,
         "crowd_resonance": 67.1
       },
@@ -410,14 +410,14 @@
       "game_id": 13,
       "base_market_nil": 240000.0,
       "avatar_color": "#132257",
-      "reval_score": 31.0,
+      "reval_score": 28.8,
       "tier": "ROTATION TIER",
-      "nil_multiplier": "1.25x",
-      "multiplier_numeric": 1.25,
-      "estimated_nil_value": 300000.0,
+      "nil_multiplier": "1.23x",
+      "multiplier_numeric": 1.23,
+      "estimated_nil_value": 295200.0,
       "tier_description": "Baseline matchday participation; standard compensation tier.",
       "sub_scores": {
-        "action_performance": 13.2,
+        "action_performance": 8.4,
         "broadcast_exposure": 42.9,
         "crowd_resonance": 48.6
       },

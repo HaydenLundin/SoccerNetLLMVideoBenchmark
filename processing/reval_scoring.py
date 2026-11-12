@@ -200,21 +200,101 @@ ATHLETE_REGISTRY: Dict[str, Dict[str, Any]] = {
 # 3. 3-Pillar ReVal Scoring Functions
 # ---------------------------------------------------------------------------
 
-def compute_action_performance_score(events: List[Dict[str, Any]], sport: str = "soccer") -> float:
+CANONICAL_GAME_FREQUENCY_ANCHOR = 10.0
+
+# Canonical expected per-game league class frequencies (N_bar_{c,sport}) used to prevent
+# high-frequency sports (NBA 3PT/2PT, NFL completions) from saturating 0-100 Action Scores in Q1.
+SPORT_CLASS_PER_GAME_FREQUENCIES: Dict[str, Dict[str, float]] = {
+    "soccer": {
+        "Goal": 2.6,
+        "Penalty": 0.35,
+        "Red card": 0.25,
+        "Yellow->red card": 0.20,
+        "Substitution": 6.0,
+        "Yellow card": 4.4,
+        "Direct free-kick": 4.8,
+        "Shots on target": 11.0,
+        "Shots off target": 11.2,
+        "Corner": 9.8,
+        "Foul": 25.2,
+        "Clearance": 14.8,
+        "Offside": 5.6,
+        "Indirect free-kick": 19.4,
+        "Throw-in": 40.4,
+        "Kick-off": 4.6,
+        "Ball out of play": 64.0,
+    },
+    "football": {
+        "Touchdown": 5.4,
+        "Turnover": 2.8,
+        "Sack": 5.0,
+        "Field Goal / PAT": 8.0,
+        "Penalty Flag": 12.0,
+        "Timeout": 10.0,
+        "Incompletion": 22.0,
+        "Pass Completion": 42.0,
+        "Rush / Tackle": 55.0,
+        "Snap": 130.0,
+    },
+    "basketball": {
+        "Block": 9.5,
+        "Timeout": 12.0,
+        "Three-Point Made": 25.0,
+        "Steal / Turnover": 26.0,
+        "Out of Bounds": 30.0,
+        "Free Throw": 36.0,
+        "Substitution": 38.0,
+        "Personal Foul": 40.0,
+        "Two-Point FG / Dunk": 54.0,
+        "Rebound": 86.0,
+    },
+}
+
+
+GOAL_FREQUENCY_REF = 2.6
+_LOG_GOAL_ANCHOR = math.log(1.0 + CANONICAL_GAME_FREQUENCY_ANCHOR / GOAL_FREQUENCY_REF)
+
+
+def compute_normalized_action_weight(
+    label: str,
+    sport: str = "soccer",
+    normalize_frequency: bool = True
+) -> float:
     """
-    Pillar 1 (45% weight): Action Performance Score (0-100).
-    Evaluates cumulative event rarity impact using asymptotic saturation curve.
+    Computes w_{c,sport} = w_base * log(1 + N_game / N_{c,sport}) anchored to the canonical
+    Soccer Goal rate (2.6/game) so Soccer Goal values match existing benchmarks while high-frequency
+    Football/Basketball actions do not saturate 0-100 Action Scores in Q1.
     """
     weights_dict = ACTION_RARITY_WEIGHTS.get(sport, ACTION_RARITY_WEIGHTS["soccer"])
+    base_w = float(weights_dict.get(label, 4.0))
+    if not normalize_frequency:
+        return base_w
+
+    freq_map = SPORT_CLASS_PER_GAME_FREQUENCIES.get(sport, SPORT_CLASS_PER_GAME_FREQUENCIES["soccer"])
+    n_c = max(2.6 if sport == "soccer" else 2.5, float(freq_map.get(label, 12.0)))
+    return base_w * (math.log(1.0 + CANONICAL_GAME_FREQUENCY_ANCHOR / n_c) / _LOG_GOAL_ANCHOR)
+
+
+def compute_action_performance_score(
+    events: List[Dict[str, Any]],
+    sport: str = "soccer",
+    normalize_frequency: bool = True
+) -> float:
+    """
+    Pillar 1 (45% weight): Action Performance Score (0-100).
+    Evaluates cumulative event impact using Cross-Sport Frequency-Normalized
+    Weights w_{c,sport} = w_base * log(1 + N_game / N_{c,sport}) and an
+    asymptotic saturation curve.
+    """
     total_impact = 0.0
 
     for ev in events:
         lbl = ev.get("label", "")
         conf = float(ev.get("confidence", 0.85))
-        base_w = weights_dict.get(lbl, 4.0)
-        total_impact += base_w * conf
+        eff_w = compute_normalized_action_weight(lbl, sport=sport, normalize_frequency=normalize_frequency)
+        total_impact += eff_w * conf
 
-    # Asymptotic saturation curve: 50 impact points -> ~65 score, 90 impact -> ~86 score
+    # Asymptotic saturation curve: preserves Q1-to-Q4 headroom across sports
     score = 100.0 * (1.0 - math.exp(-total_impact / 48.0))
     return round(min(100.0, max(0.0, score)), 1)
 

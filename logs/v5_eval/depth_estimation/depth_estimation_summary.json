@@ -1,0 +1,118 @@
+{
+  "track": "Track L: Monocular Player Depth & 3D Localization",
+  "dataset": "Game 0 Half 1 (82 Matched Players Across 8 Multi-View Calibrated Broadcast Frames)",
+  "runtime_sec": 11.77,
+  "depth_range_m": [
+    38.61,
+    94.19
+  ],
+  "baseline_bbox_scale_prior": {
+    "n_players": 82,
+    "abs_rel": 0.3329,
+    "sq_rel_m": 14.4233,
+    "rmse_m": 32.603,
+    "mae_m": 23.03,
+    "delta_1_pct": 48.78,
+    "delta_2_pct": 75.61
+  },
+  "ground_plane_raycast_only": {
+    "n_players": 82,
+    "abs_rel": 0.0496,
+    "sq_rel_m": 0.2887,
+    "rmse_m": 4.455,
+    "mae_m": 3.28,
+    "delta_1_pct": 100.0,
+    "delta_2_pct": 100.0
+  },
+  "track_l_hybrid_raycast_plus_scale": {
+    "n_players": 82,
+    "abs_rel": 0.0512,
+    "sq_rel_m": 0.2953,
+    "rmse_m": 4.513,
+    "mae_m": 3.4,
+    "delta_1_pct": 100.0,
+    "delta_2_pct": 100.0
+  },
+  "per_frame": [
+    {
+      "frame_id": "c0_0045",
+      "n_matched": 6,
+      "pose_fit_px": 3.82,
+      "f_gt_px": 2363.4,
+      "f_pred_px": 2212.9,
+      "hybrid_abs_rel": 0.0569,
+      "hybrid_rmse_m": 3.269,
+      "bbox_abs_rel": 0.3661
+    },
+    {
+      "frame_id": "c0_0130",
+      "n_matched": 10,
+      "pose_fit_px": 1.16,
+      "f_gt_px": 2613.1,
+      "f_pred_px": 2769.9,
+      "hybrid_abs_rel": 0.0596,
+      "hybrid_rmse_m": 3.96,
+      "bbox_abs_rel": 0.564
+    },
+    {
+      "frame_id": "c0_0730",
+      "n_matched": 13,
+      "pose_fit_px": 0.77,
+      "f_gt_px": 2573.5,
+      "f_pred_px": 2569.2,
+      "hybrid_abs_rel": 0.0113,
+      "hybrid_rmse_m": 0.961,
+      "bbox_abs_rel": 0.2663
+    },
+    {
+      "frame_id": "c1_1145",
+      "n_matched": 12,
+      "pose_fit_px": 6.02,
+      "f_gt_px": 2583.0,
+      "f_pred_px": 2374.5,
+      "hybrid_abs_rel": 0.0826,
+      "hybrid_rmse_m": 5.097,
+      "bbox_abs_rel": 0.2922
+    },
+    {
+      "frame_id": "c2_2105",
+      "n_matched": 8,
+      "pose_fit_px": 3.4,
+      "f_gt_px": 2624.4,
+      "f_pred_px": 2659.1,
+      "hybrid_abs_rel": 0.0062,
+      "hybrid_rmse_m": 0.519,
+      "bbox_abs_rel": 0.1465
+    },
+    {
+      "frame_id": "c2_2919",
+      "n_matched": 10,
+      "pose_fit_px": 1.86,
+      "f_gt_px": 3492.5,
+      "f_pred_px": 3991.5,
+      "hybrid_abs_rel": 0.1369,
+      "hybrid_rmse_m": 10.076,
+      "bbox_abs_rel": 0.2586
+    },
+    {
+      "frame_id": "c3_2949",
+      "n_matched": 10,
+      "pose_fit_px": 0.82,
+      "f_gt_px": 4185.9,
+      "f_pred_px": 4244.4,
+      "hybrid_abs_rel": 0.0148,
+      "hybrid_rmse_m": 1.267,
+      "bbox_abs_rel": 0.257
+    },
+    {
+      "frame_id": "c4_4355",
+      "n_matched": 13,
+      "pose_fit_px": 0.86,
+      "f_gt_px": 2483.8,
+      "f_pred_px": 2344.9,
+      "hybrid_abs_rel": 0.0428,
+      "hybrid_rmse_m": 2.663,
+      "bbox_abs_rel": 0.4741
+    }
+  ]
+}

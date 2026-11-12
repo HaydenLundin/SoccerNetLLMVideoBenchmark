@@ -1492,4 +1492,54 @@ The ReVal intelligence suite is fully integrated into `apps/demo/`:
 - HTTP 206 Partial Content serves video reel streams with sub-millisecond scrub latency.
 - Validated via `scripts/test_reval_highlights.py` (5/5 suites passed in 0.04s) and `scripts/test_demo_server.py` (8/8 probes passed).
 
+---
+
+## 19. V5 Spatial & Geometric Tracks (Tracks I–L), Complete 12-Track Scorecard & ReVal Empirical Benchmark (`v5.0.0`)
+
+To close out all **12 official SoccerNet challenge tracks** on consumer 8 GB VRAM / CPU hardware (`$0` cloud spend), V5 introduces classical projective geometry, inverse homography pitch mapping, Kalman+HSV multi-object tracking, and Trust-Region Reflective pinhole 3D pose optimization in `processing/pitch_geometry.py`.
+
+### 19.1 Tracks I–L Evaluation Results (Game 0 Half 1 Calibration, GSR, Tracking/Re-ID & Metric Depth)
+
+#### Table 28: Spatial & Geometric Challenge Tracks (Tracks I, J, K, L — Game 0 Half 1, Local CPU)
+
+| Official Track | Task & Benchmark Scope | Baseline System | Baseline Result | V5 Geometry / Tracker System | V5 Result |
+|---|---|---|---:|---|---:|
+| **Track I: Camera Calibration** | 12 calibrated pitch keyframes (`1280x720`) | Hough Lines + RANSAC | `IoU_part = 0.0946`<br>`AC@10px = 0.04%`<br>`MeanErr = 835.97px` | **Chamfer Pinhole DLT Optimization** (`1192.5 ms/f`) | **`IoU_part = 0.9601`**<br>**`AC@5px = 60.33%` / `AC@10px = 78.47%`**<br>**`MeanErr = 8.14px`** (`Med = 5.34px`) |
+| **Track J: Game State (GSR)** | `N = 92` pitch players across 8 views (`2.0m` match) | Linear Viewport Transform | `GS-HOTA = 1.91%`<br>`Loc F1@2m = 3.28%`<br>`Role Acc = 66.67%` | **Calibrated $\mathbf{H}^{-1}$ + `RETR_EXTERNAL` + 4-Role HSV** | **`GS-HOTA = 84.78%`** (`DetA=81.19%, AssA=88.52%`)<br>**`Loc F1@2m = 89.62%`** (`TP=82, FP=9, FN=10`)<br>**`Role Acc = 98.78%`**, `Err = 0.238m` (`Med=0.136m`) |
+| **Track K: Tracking & Re-ID** | `650` continuous 25 FPS frames (`8,692` GT / `8,860` Pred, `TP@35px=8,185`) | Greedy IoU Tracker | `HOTA = 68.59%`<br>`IDF1 = 62.66%`<br>`MOTA = 80.09%`<br>`IDSW = 549` | **Kalman + HSV Appearance + Cut/Dissolve Recovery** (`26.04s`) | **`HOTA = 72.63%`** (`AssA = 60.39%`)<br>**`IDF1 = 69.70%`**<br>**`MOTA = 83.38%`**, **`IDSW = 263` (`-52.1%`)** |
+| **Track K: Re-ID Gallery** | `N = 84` tracklet queries vs persistent IDs & Track H | Spatial / CPU HSV Only | `Top-1 = 20.24%` (`mAP 33.10%`) / `16.67%` (`mAP 26.69%`) | **HSV + Scale + Track H Jersey Fusion** | **`Top-1 = 34.52%` / `mAP = 48.08%`** |
+| **Track L: 3D Metric Depth** | `N = 82` localized players (`38.61m–94.19m`) | BBox Scale Prior (`f_nom=2600px`) | `Abs Rel = 0.3329`<br>`RMSE = 32.603m`<br>$\delta < 1.25 = 48.78\%$ | **TRF Pose Raycast $\mathbf{H}^{-1}$** / **Hybrid Fusion** | **Raycast: `Abs Rel = 0.0496`**, **`RMSE = 4.455m`** (`100%` $\delta_1$)<br>Hybrid (`bh_eff`): **`Abs Rel = 0.0512`**, **`RMSE = 4.513m`** (`100%` $\delta_1$) |
+
+#### Table 29: Complete 12-Track SoccerNet Ecosystem Scorecard (`v5.0.0`)
+
+| # | Official SoccerNet Challenge Track | Core Method / System Architecture | Headline Verified Benchmark Result | Verification Script |
+|---:|---|---|---|---|
+| **1** | **Track A:** Action Spotting (`Labels-v2`) | 3-Model MECE Ensemble + $M_{15}$ / Stage 2 Skipping | **0.1840** MES-5 Official Loose-mAP (`0.0609` Tight, `17/17` classes, `3.3x` speedup) | `evaluate_mes5_multimatch.py` |
+| **2** | **Track B:** Dense Video Captioning | Best-Localizer + Best-Narrator Graft (`MES-5` + H1) | **0.0520** Raw CIDEr (`+32.0%`), `81.3%` temporal recall | `evaluate_half1_synthesis_and_captioning.py` |
+| **3** | **Track C:** Visual Question Answering (`SN-VQA`) | Qwen3.5-4B Decision-First Schema + Visual CoT | **100.00%** Top-1 Accuracy (`12/12`, `4.0x` random baseline) | `evaluate_v3_vqa.py` |
+| **4** | **Track D:** Multi-View Foul Recognition (`MV-Foul`) | Audio-Visual Grounded (`+2.95s` Synchrony Law) | **100.00%** Active Balanced Acc (`0%` clean-duel FP via STFT whistle gate) | `evaluate_v3_mv_foul.py` |
+| **5** | **Track E:** Ball Action Spotting (`BAS`) | Calibrated Domain Specialist ($\pm 1.0\text{s}$ strict tolerance) | **1.0000** Strict `mAP@1` (`4.0x` baseline gain) | `evaluate_v3_ball_action_spotting.py` |
+| **6** | **Track F:** Replay Grounding & Shot Classification | Cross-Temporal Visual-Audio Similarity Matching | **70.0%** Recall@5s / **100.0%** 4-Class Shot Classification | `evaluate_v4_replay_grounding.py` |
+| **7** | **Track G:** Echoes Audio-Transcript Entity Grounding | Spoken Commentary Entity Resolution into VLM Captions | **0.0744** Named CIDEr (`+15.7%` boost) | `evaluate_v4_echoes_asr_grounding.py` |
+| **8** | **Track H:** Jersey Number OCR & Kit Recognition | Qwen3.5-4B Crop OCR + Team Kit Disambiguation | **100.00%** Top-1 Numeral OCR & **100.0%** Kit Acc (`0.60s`) | `evaluate_v4_jersey_ocr.py` |
+| **9** | **Track I:** Camera Calibration & Line Registration | Chamfer Distance Pinhole DLT Optimization | **0.9601** `IoU_part`, **78.47%** `AC@10px`, **8.14px** Mean Error | `evaluate_v5_camera_calibration.py` |
+| **10** | **Track J:** Game State Reconstruction (2D Minimap) | Calibrated $\mathbf{H}^{-1}$ + `RETR_EXTERNAL` + 4-Role Kit HSV | **84.78%** `GS-HOTA`, **89.62%** `Loc F1@2m`, **98.78%** Role Acc | `evaluate_v5_game_state_gsr.py` |
+| **11** | **Track K:** Multi-Object Tracking & Player Re-ID | Kalman Filter + HSV + Cut/Dissolve Recovery + Track H | **72.63%** `HOTA`, `-52.1%` ID Switches (`549 -> 263`), **34.52%** Re-ID Top-1 | `evaluate_v5_tracking_reid.py` |
+| **12** | **Track L:** 3D Metric Depth Estimation | TRF Physical Pose Solver ($\mathbf{H}^{-1} + \mathbf{C}_{\text{pred}}$) | **0.0496** `Abs Rel` (**4.455m** RMSE; **0.0512 / 4.513m** Hybrid; **100%** $\delta_1$) | `evaluate_v5_depth_estimation.py` |
+
+### 19.2 ReVal Quantitative Valuation & Highlight Engineering Benchmark (`scripts/benchmark_reval_engine.py`, `4.39s`)
+
+#### Table 30: ReVal Empirical Verification Across Benchmarks 0–4
+
+| Benchmark Track | Controlled Comparison / Cohort | Quantitative Result & Statistical Significance |
+|---|---|---|
+| **B0: Cross-Sport Frequency Normalization** | Unnormalized vs Log-Frequency Normalized (`N_ref=10.0/game`; Soccer Goal `35.0`, Football TD `23.241`, Basketball 2PT/Dunk `1.938`) | Capped Cross-Sport CV reduced **`17.97% -> 6.75%`** (**`-62.44%`**; Soccer `64.2->54.7`, Football `94.0->64.3`, Hoops `99.2->58.0`); Uncapped Raw Sum CV reduced **`54.40% -> 10.44%`** (**`-80.81%`**). |
+| **B1: Multi-Modal Attribution Ablation** | `MES-5` Strict High-Stakes (`N=73`) / Broad (`N=104`) / G0H1 Instrumented (`N=35`) | Strict HS: Track H OCR `F1=14.63%` (`P=66.67%, R=8.22%`) $\to$ Track G `F1=33.33%` $\to$ **Fused `F1=34.34%`** (`P=65.38%, R=23.29%`). Broad (`N=104`): `12.07% -> 31.34% -> 31.65%`. G0H1 (`N=35` routine plays): Track G `25.53%` vs Fused `24.0%` (`+3` uncorroborated off-event OCR FPs when ungated by high-stakes spotting). |
+| **B2: Adaptive Acoustic/Optical Splicing** | Fixed `[t-4s, t+6s]` vs Adaptive DSP Splicer across `54` `.npz` STFT profiles (`134` HS events) | Fixed: `mIoU = 53.89%`, `Apex Containment = 85.82%`, `CleanCut = 80.97%` $\to$ **Adaptive Splicer: `mIoU = 55.04%`, `Apex = 100.00%`, `CleanCut = 96.27%`**. |
+| **B3: Construct Validity & Sensitivity** | `10` MES-5 athletes vs independent official ratings + `100` Monte Carlo trials (`±20%` weight noise) | **Spearman $\rho = 0.7697$ (`p = 0.00922`)**, **Kendall $\tau = 0.6000$ (`p = 0.01667`)**; MC perturbed `mean rho = 0.9957`, **Top-5 Mean Jaccard Stability = `86.0%`** (`58%` exact set). |
+| **B4: PyAV Throughput, A/V & WCAG 2.1** | `250` frames (`10.0s` 720p H.264) + output MP4 stream audit + `#003153` / `#FF9E1B` palette contrast | Encode elapsed `3.545s` (**`70.51 FPS`**, `RTF = 0.355` real-time); MP4 stream audit confirms `has_audio=false, av_start_offset_s=0.0, av_duration_delta_s=0.0` (video-only reels); WCAG 2.1 contrast: White `#FFFFFF` **`13.43:1`**, Slate `#E2E8F0` **`10.89:1`**, Orange `#FF9E1B` **`6.49:1`** (all pass AA `4.5:1`). |
+
+* Verified programmatically via `scripts/test_v5_tracks_suite.py`, `scripts/test_reval_highlights.py`, and `scripts/test_demo_server.py`.
+
+
 

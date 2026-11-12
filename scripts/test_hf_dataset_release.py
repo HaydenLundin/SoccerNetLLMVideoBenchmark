@@ -26,7 +26,12 @@ def test_bundle_structure():
         HF_DIR / "priors" / "m15_transition_matrix.json",
         HF_DIR / "priors" / "class_nms_radii.json",
         HF_DIR / "reval" / "reval_mes5_athlete_leaderboard.json",
-        HF_DIR / "reval" / "reval_scoring_formula.json"
+        HF_DIR / "reval" / "reval_comprehensive_benchmark.json",
+        HF_DIR / "reval" / "reval_scoring_formula.json",
+        HF_DIR / "v5_spatial_tracks" / "camera_calibration_summary.json",
+        HF_DIR / "v5_spatial_tracks" / "game_state_gsr_summary.json",
+        HF_DIR / "v5_spatial_tracks" / "tracking_reid_summary.json",
+        HF_DIR / "v5_spatial_tracks" / "depth_estimation_summary.json",
     ]
     for rf in required_files:
         assert rf.exists(), f"Required bundle file missing: {rf}"

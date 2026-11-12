@@ -1,0 +1,165 @@
+{
+  "track": "Track K: Multi-Object Tracking & Player Re-Identification",
+  "dataset": "Game 0 Half 1 (650 Continuous 25 FPS Frames Across Chunks 0, 1, 2 + Track H J01..J15 Gallery)",
+  "runtime_sec": 26.04,
+  "baseline_iou_tracker": {
+    "n_gt_boxes": 8692,
+    "n_pred_boxes": 8860,
+    "tp_35": 8185,
+    "fp_35": 675,
+    "fn_35": 507,
+    "id_switches": 549,
+    "mota_pct": 80.09,
+    "idf1_pct": 62.66,
+    "det_a_pct": 87.36,
+    "ass_a_pct": 53.86,
+    "hota_pct": 68.59,
+    "det_a_at_35_pct": 87.38
+  },
+  "track_k_kalman_hsv_reid": {
+    "n_gt_boxes": 8692,
+    "n_pred_boxes": 8860,
+    "tp_35": 8185,
+    "fp_35": 675,
+    "fn_35": 507,
+    "id_switches": 263,
+    "mota_pct": 83.38,
+    "idf1_pct": 69.7,
+    "det_a_pct": 87.36,
+    "ass_a_pct": 60.39,
+    "hota_pct": 72.63,
+    "det_a_at_35_pct": 87.38
+  },
+  "reid_gallery_benchmark": {
+    "n_queries": 84,
+    "spatial_baseline": {
+      "n_queries": 84,
+      "top1_accuracy_pct": 20.24,
+      "reid_map_pct": 33.1
+    },
+    "cpu_hsv_only": {
+      "n_queries": 84,
+      "top1_accuracy_pct": 16.67,
+      "reid_map_pct": 26.69
+    },
+    "track_k_hsv_plus_track_h_reid": {
+      "n_queries": 84,
+      "top1_accuracy_pct": 34.52,
+      "reid_map_pct": 48.08
+    }
+  },
+  "per_sequence": [
+    {
+      "sequence": "seq1_midfield_duel",
+      "n_frames": 200,
+      "scene_cuts": [],
+      "baseline_iou": {
+        "n_gt_boxes": 2827,
+        "n_pred_boxes": 2862,
+        "tp_35": 2765,
+        "fp_35": 97,
+        "fn_35": 62,
+        "id_switches": 97,
+        "mota_pct": 90.94,
+        "idf1_pct": 74.99,
+        "det_a_pct": 94.58,
+        "ass_a_pct": 65.75,
+        "hota_pct": 78.86,
+        "det_a_at_35_pct": 94.56
+      },
+      "track_k_kalman_reid": {
+        "n_gt_boxes": 2827,
+        "n_pred_boxes": 2862,
+        "tp_35": 2765,
+        "fp_35": 97,
+        "fn_35": 62,
+        "id_switches": 28,
+        "mota_pct": 93.39,
+        "idf1_pct": 86.66,
+        "det_a_pct": 94.58,
+        "ass_a_pct": 80.06,
+        "hota_pct": 87.02,
+        "det_a_at_35_pct": 94.56
+      }
+    },
+    {
+      "sequence": "seq2_free_kick",
+      "n_frames": 200,
+      "scene_cuts": [
+        63,
+        194
+      ],
+      "baseline_iou": {
+        "n_gt_boxes": 2615,
+        "n_pred_boxes": 2733,
+        "tp_35": 2463,
+        "fp_35": 270,
+        "fn_35": 152,
+        "id_switches": 140,
+        "mota_pct": 78.51,
+        "idf1_pct": 66.72,
+        "det_a_pct": 85.25,
+        "ass_a_pct": 60.45,
+        "hota_pct": 71.79,
+        "det_a_at_35_pct": 85.37
+      },
+      "track_k_kalman_reid": {
+        "n_gt_boxes": 2615,
+        "n_pred_boxes": 2733,
+        "tp_35": 2463,
+        "fp_35": 270,
+        "fn_35": 152,
+        "id_switches": 85,
+        "mota_pct": 80.61,
+        "idf1_pct": 70.42,
+        "det_a_pct": 85.25,
+        "ass_a_pct": 61.01,
+        "hota_pct": 72.12,
+        "det_a_at_35_pct": 85.37
+      }
+    },
+    {
+      "sequence": "seq3_herrera_goal",
+      "n_frames": 250,
+      "scene_cuts": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        245
+      ],
+      "baseline_iou": {
+        "n_gt_boxes": 3250,
+        "n_pred_boxes": 3265,
+        "tp_35": 2957,
+        "fp_35": 308,
+        "fn_35": 293,
+        "id_switches": 312,
+        "mota_pct": 71.91,
+        "idf1_pct": 48.56,
+        "det_a_pct": 83.14,
+        "ass_a_pct": 37.27,
+        "hota_pct": 55.66,
+        "det_a_at_35_pct": 83.11
+      },
+      "track_k_kalman_reid": {
+        "n_gt_boxes": 3250,
+        "n_pred_boxes": 3265,
+        "tp_35": 2957,
+        "fp_35": 308,
+        "fn_35": 293,
+        "id_switches": 150,
+        "mota_pct": 76.89,
+        "idf1_pct": 54.31,
+        "det_a_pct": 83.14,
+        "ass_a_pct": 41.47,
+        "hota_pct": 58.72,
+        "det_a_at_35_pct": 83.11
+      }
+    }
+  ]
+}

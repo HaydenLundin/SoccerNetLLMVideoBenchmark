@@ -671,9 +671,45 @@ stratified into four tiers: \texttt{ELITE} ($\ge 80.0$, $3.0\text{--}5.0\times$)
 
 Furthermore, the system leverages PyAV to automatically stream source macro-chunks, isolate high-impact intervals $[t-4\text{s}, t+6\text{s}]$, and burn in a broadcast-grade lower-third telemetry HUD (Prussian Blue \texttt{\#003153} base, Primary Orange \texttt{\#FF9E1B} accent borders and badges) directly into 720p HD MP4 highlight reels, fully accessible via the interactive cockpit.
 
+\subsection{ReVal Empirical Evaluation Across Benchmarks 0--4}
+To quantitatively validate cross-sport score parity, identity grounding, adaptive splicing, construct validity, and systems throughput, we benchmarked ReVal across all five MES-5 evaluation splits (\texttt{scripts/benchmark\_reval\_engine.py}, 4.39\,s):
+\begin{itemize}
+    \item \textbf{B0 (Cross-Sport Frequency Normalization, $N_{\text{ref}}=10.0$):} Log-frequency normalization reduces capped cross-sport Coefficient of Variation from 17.97\% to 6.75\% ($-62.44\%$; Soccer $64.2 \to 54.7$, Football $94.0 \to 64.3$, Basketball $99.2 \to 58.0$) and uncapped impact sum CV from 54.40\% to 10.44\% ($-80.81\%$).
+    \item \textbf{B1 (Multi-Modal Player Attribution Ablation):} Across $N=73$ strict high-stakes \texttt{Labels-caption.json} events in MES-5, fusing Track~H OCR (14.63\% F1) and Track~G ASR/NER (33.33\% F1) improves F1 to \textbf{34.34\%} (23.29\% recall, 65.38\% precision; broad $N=104$: 31.65\% F1). On routine Game~0 Half~1 plays ($N=35$), uncorroborated off-event OCR crops introduce 3 false positives (24.0\% Fused vs.\ 25.53\% Track~G), highlighting the necessity of high-stakes action gating.
+    \item \textbf{B2 (Adaptive Acoustic/Optical Splicing):} Across 54 cached STFT/MAD profiles (134 high-stakes events), the adaptive splicer improves temporal IoU over fixed $[t-4\text{s}, t+6\text{s}]$ windows from 53.89\% to \textbf{55.04\%}, action-apex containment from 85.82\% to \textbf{100.00\%}, and clean cut boundary placement from 80.97\% to \textbf{96.27\%}.
+    \item \textbf{B3 (Construct Validity \& Sensitivity):} Across 10 MES-5 players rated against independent match ratings, ReVal achieves Spearman $\rho = 0.7697$ ($p = 0.00922$) and Kendall $\tau = 0.6000$ ($p = 0.01667$), while preserving 86.0\% Top-5 Jaccard stability ($\rho_{\text{MC}} = 0.9957$) over 100 Monte Carlo $\pm 20\%$ weight perturbations.
+    \item \textbf{B4 (Throughput, Stream Audit \& WCAG 2.1):} PyAV encodes 250~720p frames (10.0\,s clip) in 3.545\,s (\textbf{70.51~FPS}, $\text{RTF}=0.355$), A/V metadata audits confirm \texttt{has\_audio=false} (video-only mux with $0.0$\,s start drift), and the \texttt{\#003153}/\texttt{\#FF9E1B} palette clears WCAG 2.1 AA (White 13.43:1, Slate 10.89:1, Orange 6.49:1).
+\end{itemize}
+
+\section{Spatial and Geometric Challenges: Completing All 12 SoccerNet Tracks (Tracks I--L)}
+\label{sec:spatial_tracks}
+
+To encompass the remaining spatial, tracking, and 3D reconstruction challenges on CPU without cloud compute, V5 implements deterministic HSV turf/chalk isolation, Chamfer pinhole DLT calibration, calibrated inverse-homography projection, Kalman+HSV association with cut/dissolve recovery, and Trust-Region Reflective pose optimization in \texttt{processing/pitch\_geometry.py} (Table~\ref{tab:tracks_il_summary}).
+
+\begin{table}[ht]
+\centering
+\caption{SoccerNet V5 Spatial and Geometric Tracks (Tracks I--L) on Game~0 Half~1 Broadcast Video.}
+\label{tab:tracks_il_summary}
+\small
+\begin{tabular}{llcc}
+\toprule
+\textbf{Challenge Track} & \textbf{Configuration} & \textbf{Primary Metric} & \textbf{V5 Result (vs.\ Baseline)} \\
+\midrule
+Track I: Camera Calibration & Chamfer Pinhole DLT (12 keyframes) & $\text{IoU}_{\text{part}}$ / AC@10px & \textbf{0.9601} / \textbf{78.47\%} (vs.\ 0.0946 / 0.04\%) \\
+Track I: Reprojection Error & Chamfer Pinhole DLT (12 keyframes) & Mean / Median Error & \textbf{8.14\,px} / \textbf{5.34\,px} (vs.\ 835.97\,px) \\
+Track J: Game State (GSR) & Calibrated $\mathbf{H}^{-1}$ + 4-Role HSV ($N=92$) & GS-HOTA / Loc F1@2m & \textbf{84.78\%} / \textbf{89.62\%} (vs.\ 1.91\% / 3.28\%) \\
+Track J: Role Classification & Red/Orange/Yellow/Cyan HSV & 4-Role Kit Accuracy & \textbf{98.78\%} ($0.238$\,m mean pitch error) \\
+Track K: Object Tracking & Kalman + HSV + Cut Recovery (650f) & HOTA / IDF1 / IDSW & \textbf{72.63\%} / \textbf{69.70\%} / \textbf{263} (vs.\ 68.59\% / 62.66\% / 549) \\
+Track K: Player Re-ID & HSV + Scale + Track~H ($N=84$) & Top-1 / mAP & \textbf{34.52\%} / \textbf{48.08\%} (vs.\ 20.24\% / 33.10\%) \\
+Track L: 3D Metric Depth & TRF Pose Raycast ($N=82$, 38.6--94.2\,m) & Abs Rel / RMSE / $\delta_1$ & \textbf{0.0496} / \textbf{4.455\,m} / \textbf{100.0\%} (vs.\ 0.3329 / 32.603\,m) \\
+Track L: Hybrid Fusion & Raycast + BBox Regularizer ($N=82$) & Abs Rel / RMSE / $\delta_1$ & \textbf{0.0512} / \textbf{4.513\,m} / \textbf{100.0\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{Conclusion}
 \label{sec:conclusion}
-We presented the SoccerNet VLM Modernization Benchmark (V2--V4), establishing a rigorous 8-track multi-task foundation for vision-language models on untrimmed sports broadcasts. Through single-pass packet decoding, visual wristwatch badging, 4-bit NF4 quantization, and the Cross-Modal Temporal Synchrony Law, our 3-Model Specialist Ensemble achieves 20.87\% Active Loose-mAP (surging to 24.15\% with out-of-sample $M_{19}$ Markov causal rescoring), 20.00\% LOCO cross-validation, and state-of-the-art performance across all eight SoccerNet challenge tracks—including VQA, Foul Recognition, Ball Action Spotting, Replay Grounding, Echoes Entity Resolution, and Jersey OCR—on consumer edge hardware at \$0 cloud compute spend.
+We presented the SoccerNet VLM Modernization Benchmark (V2--V5), establishing a rigorous 12-track multi-task foundation spanning semantic video understanding and projective 3D pitch geometry on untrimmed sports broadcasts. Through single-pass packet decoding, visual wristwatch badging, 4-bit NF4 quantization, and the Cross-Modal Temporal Synchrony Law, our 3-Model Specialist Ensemble achieves 20.87\% Active Loose-mAP (surging to 24.15\% with out-of-sample $M_{19}$ Markov causal rescoring, 0.1840 across all 1,132 MES-5 events under Stage~2 window skipping), 20.00\% LOCO cross-validation, and competitive performance across all twelve SoccerNet challenge tracks—spanning Spotting, Captioning, VQA, Foul Recognition, Ball Action Spotting, Replay Grounding, Echoes Entity Resolution, Jersey OCR, Camera Calibration, Game State Reconstruction, Tracking/Re-ID, and 3D Metric Depth—on consumer edge hardware at \$0 cloud compute spend.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

@@ -89,9 +89,9 @@ pretty_name: SoccerNet MES-5 VLM Benchmark & ReVal Telemetry
 [![Hardware: 8GB VRAM](https://img.shields.io/badge/Hardware-8GB%20VRAM%20Compatible-brightgreen.svg)]()
 [![Cloud Cost: $0](https://img.shields.io/badge/Cloud%20Cost-%240.00-success.svg)]()
 
-This repository contains the complete empirical evaluation artifacts, macro-chunk manifests, out-of-sample $M_{15}$ Markov transition matrices, model predictions, and **ReVal Athlete Valuation** telemetry for the **SoccerNet VLM Modernization Benchmark**.
+This repository contains the complete empirical evaluation artifacts, macro-chunk manifests, out-of-sample $M_{15}$ Markov transition matrices, model predictions, V5 spatial/geometric track summaries (Tracks I--L), and **ReVal Athlete Valuation** telemetry & quantitative benchmarks for the **SoccerNet VLM Modernization Benchmark (V5 12-Track Ecosystem)**.
 
-Executed strictly on an **8 GB consumer workstation GPU (NVIDIA RTX 3000 Ada under Windows WDDM)** at **$0 in cloud compute**, this benchmark establishes the official edge baseline for multi-modal Vision-Language Models on untrimmed broadcast soccer video.
+Executed strictly on an **8 GB consumer workstation GPU (NVIDIA RTX 3000 Ada under Windows WDDM)** and local CPU at **$0 in cloud compute**, this benchmark establishes the official edge baseline across all **12 official SoccerNet challenge tracks** on untrimmed broadcast soccer video.
 
 ---
 
@@ -138,9 +138,15 @@ Evaluated across the **Canonical MES-5 Benchmark** (5 complete matches, 10 halve
 │   ├── specialist_3m_mece/
 │   ├── specialist_3m_m15_rescored/
 │   └── stage2_cpu_filtered/
-├── reval/                                     # ReVal Athlete Valuation Telemetry
+├── reval/                                     # ReVal Athlete Valuation Telemetry & Benchmarks
 │   ├── reval_mes5_athlete_leaderboard.json    # 12-athlete 3-pillar valuation scores & NIL multipliers
-│   └── reval_scoring_formula.json             # Weights, formulas, and attribution anchors
+│   ├── reval_comprehensive_benchmark.json     # 5 quantitative benchmarks (B0-B4) across MES-5
+│   └── reval_scoring_formula.json             # Weights, log-frequency anchors, and attribution config
+├── v5_spatial_tracks/                         # V5 Tracks I-L Evaluation Summaries (Local CPU)
+│   ├── camera_calibration_summary.json        # Track I: IoU_part=0.9601, AC@10px=78.47%, 8.14px err
+│   ├── game_state_gsr_summary.json            # Track J: GS-HOTA=84.78%, Loc F1@2m=89.62%, 98.78% role acc
+│   ├── tracking_reid_summary.json             # Track K: HOTA=72.63%, -52.1% IDSW, 34.52% Re-ID Top-1
+│   └── depth_estimation_summary.json          # Track L: Abs Rel=0.0496 (4.455m RMSE, 100% delta_1)
 └── evaluate_mes5_benchmark.py                 # 1-command evaluation reproduction script
 ```
 
@@ -182,6 +188,20 @@ $$\text{NIL Multiplier} = 1.0 + \left(\frac{\text{ReVal Score}}{100}\right)^{1.5
 1. **Ander Herrera (#21, Manchester United):** ReVal **58.3** (`IMPACT TIER`, **1.91x** Multiplier, **$477,500** NIL) — Volley goal vs. Arsenal, +13.8 dB crowd roar.
 2. **Sergio Aguero (#10, Manchester City):** ReVal **56.5** (`IMPACT TIER`, **1.82x** Multiplier, **$819,000** NIL) — Opener goal vs. Chelsea, +14.5 dB crowd roar.
 3. **John Terry (#26, Chelsea):** ReVal **51.5** (`IMPACT TIER`, **1.57x** Multiplier, **$549,500** NIL) — Straight red dismissal vs. West Brom, +12.6 dB crowd roar.
+
+### ReVal Quantitative Benchmark Highlights (`reval/reval_comprehensive_benchmark.json`)
+- **Cross-Sport Frequency Normalization (`B0`):** Reduces capped cross-sport CV from **17.97% to 6.75%** (**-62.44%**) and uncapped impact sum CV by **-80.81%**.
+- **Adaptive Highlight Splicing (`B2`, `134` HS Events):** Achieves **100.00% action-apex containment** and **96.27% clean cut boundaries** vs. 85.82% / 80.97% for fixed windows.
+- **Construct Validity (`B3`):** Correlates significantly with independent match ratings (**Spearman $\rho = 0.7697, p = 0.00922$**; **Kendall $\tau = 0.6000, p = 0.01667$**).
+
+---
+
+## 📐 V5 Spatial & Geometric Tracks (Tracks I–L, Complete 12-Track Suite)
+
+- **Track I (`v5_spatial_tracks/camera_calibration_summary.json`):** Chamfer pinhole DLT calibration scores **0.9601 `IoU_part`**, **78.47% `AC@10px`**, and **8.14px** mean reprojection error across 12 keyframes.
+- **Track J (`v5_spatial_tracks/game_state_gsr_summary.json`):** Inverse homography $\mathbf{H}^{-1}$ + 4-role kit HSV achieves **84.78% `GS-HOTA`**, **89.62% `Loc F1@2m`** (`0.238m` mean error), and **98.78%** kit-role accuracy across 92 players.
+- **Track K (`v5_spatial_tracks/tracking_reid_summary.json`):** Kalman + HSV appearance + cut/dissolve recovery reduces ID switches by **-52.1%** (`549 -> 263`) across 650 25 FPS frames (`8,692` GT boxes), hitting **72.63% `HOTA`** and **34.52% Re-ID Top-1** (`48.08% mAP`).
+- **Track L (`v5_spatial_tracks/depth_estimation_summary.json`):** Trust-Region Reflective pose raycasting across 82 players (`38.61m–94.19m`) achieves **0.0496 `Abs Rel`** (`4.455m` RMSE, **100.0%** $\delta_1$; hybrid regularizer `0.0512 / 4.513m`).
 
 ---
 
@@ -290,8 +310,13 @@ def build_hf_release_bundle():
     if reval_src.exists():
         shutil.copy2(reval_src, reval_export_dir / "reval_mes5_athlete_leaderboard.json")
 
+    reval_bench_src = WORKSPACE_ROOT / "logs/reval_highlights/reval_comprehensive_benchmark.json"
+    if reval_bench_src.exists():
+        shutil.copy2(reval_bench_src, reval_export_dir / "reval_comprehensive_benchmark.json")
+
     reval_formula = {
         "formula": "ReVal = 0.45 * Action + 0.30 * Exposure + 0.25 * Resonance",
+        "canonical_game_frequency_anchor_per_game": 10.0,
         "action_rarity_weights": {
             "Goal": 35.0, "Touchdown": 35.0, "Penalty": 25.0, "Red card": 25.0,
             "Three-Point Made": 25.0, "Direct free-kick": 20.0, "Sack": 20.0,
@@ -311,7 +336,23 @@ def build_hf_release_bundle():
     }
     with open(reval_export_dir / "reval_scoring_formula.json", "w", encoding="utf-8") as f:
         json.dump(reval_formula, f, indent=2)
-    print("✓ Copied ReVal athlete valuation telemetry & scoring formula.")
+    print("✓ Copied ReVal athlete valuation telemetry, empirical benchmarks, & scoring formula.")
+
+    # 7b. V5 Spatial & Geometric Tracks (Tracks I-L)
+    v5_export_dir = EXPORT_DIR / "v5_spatial_tracks"
+    v5_export_dir.mkdir(parents=True, exist_ok=True)
+    v5_sources = [
+        WORKSPACE_ROOT / "logs/v5_eval/camera_calibration/camera_calibration_summary.json",
+        WORKSPACE_ROOT / "logs/v5_eval/game_state_gsr/game_state_gsr_summary.json",
+        WORKSPACE_ROOT / "logs/v5_eval/tracking_reid/tracking_reid_summary.json",
+        WORKSPACE_ROOT / "logs/v5_eval/depth_estimation/depth_estimation_summary.json",
+    ]
+    copied_v5 = 0
+    for src_p in v5_sources:
+        if src_p.exists():
+            shutil.copy2(src_p, v5_export_dir / src_p.name)
+            copied_v5 += 1
+    print(f"✓ Copied {copied_v5} V5 spatial/geometric track summaries (Tracks I-L).")
 
     # 8. Standalone evaluate_mes5_benchmark.py
     eval_script = """#!/usr/bin/env python3
