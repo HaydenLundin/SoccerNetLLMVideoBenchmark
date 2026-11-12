@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, code, or ReVal telemetry, please cite it using the metadata below."
+authors:
+  - family-names: "Lundin"
+    given-names: "Hayden"
+    email: "hlundin@uncc.edu"
+    affiliation: "University of North Carolina at Charlotte, School of Data Science and Business Analytics"
+title: "Benchmarking Multimodal Vision-Language Models on Untrimmed Sports Video: Multi-Scale Domain Routing, Audio-Visual Causality, and Zero-Cost Edge Perception"
+version: "5.0.2"
+date-released: "2026-11-12"
+license: "MIT"
+repository-code: "https://github.com/HaydenLundin/SoccerNetLLMVideoBenchmark"
+keywords:
+  - "SoccerNet"
+  - "Vision-Language Models"
+  - "Temporal Action Spotting"
+  - "Dense Video Captioning"
+  - "Audio-Visual Grounding"
+  - "Edge AI"
+  - "Athlete Valuation"
+  - "Computer Vision"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Lundin"
+      given-names: "Hayden"
+      affiliation: "University of North Carolina at Charlotte"
+  title: "Benchmarking Multimodal Vision-Language Models on Untrimmed Sports Video: Multi-Scale Domain Routing, Audio-Visual Causality, and Zero-Cost Edge Perception"
+  year: 2026
+  url: "https://github.com/HaydenLundin/SoccerNetLLMVideoBenchmark"

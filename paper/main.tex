@@ -12,9 +12,9 @@
 \usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc,fit,backgrounds}
 \usepackage{subcaption}
 \usepackage{xcolor}
-\usepackage{cleveref}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{cleveref}
 
 % Define color palette for tables and diagrams
 \definecolor{survivorgreen}{RGB}{34,139,34}
@@ -71,8 +71,8 @@ The emergence of Multimodal Vision-Language Models (VLMs)~\cite{qwen2025qwen25vl
     proc/.style={base, fill=boxbg, draw=boxborder, text width=2.4cm, minimum height=1.1cm},
     model/.style={base, fill=highlightblue!10, draw=highlightblue, text width=2.5cm, minimum height=1.1cm},
     dsp/.style={base, fill=survivorgreen!10, draw=survivorgreen, text width=2.5cm, minimum height=1.1cm},
-    out/.style={base, fill=purple!10, draw=purple, text width=2.4cm, minimum height=1.1cm},
-    arrow/.style={-Latex[length=2.5mm], thick}
+    outnode/.style={base, fill=purple!10, draw=purple, text width=2.4cm, minimum height=1.1cm},
+    arrow/.style={-{Latex[length=2.5mm]}, thick}
 ]
     % Level 1: Input Video
     \node (raw) [proc, text width=3.2cm] {\textbf{Broadcast MP4 Video}\\(45-Min Half 1, 720p 25fps)};
@@ -91,10 +91,10 @@ The emergence of Multimodal Vision-Language Models (VLMs)~\cite{qwen2025qwen25vl
     \node (audio) [dsp, left=1.2cm of fuse, text width=3.6cm] {\textbf{Zero-VRAM CPU STFT}\\Fox 40 Whistle ($3.5\text{--}4.2\text{kHz}$)\\Crowd Roar ($+16.32\text{dB}$) in 3.22s};
 
     % Level 5: Outputs
-    \node (out_spot) [out, below=1.3cm of fuse, xshift=-3.6cm] {\textbf{Track A: Spotting}\\20.87\% Loose-mAP\\20.00\% LOCO CV};
-    \node (out_cap)  [out, below=1.3cm of fuse, xshift=-1.2cm] {\textbf{Track B: Caption}\\81.3\% Match Recall\\0.0520 CIDEr Graft};
-    \node (out_vqa)  [out, below=1.3cm of fuse, xshift=1.2cm] {\textbf{Track C: SN-VQA}\\100.00\% Top-1 Acc\\Factual Visual CoT};
-    \node (out_down) [out, below=1.3cm of fuse, xshift=3.6cm] {\textbf{Tracks D \& E}\\MV-Foul: 100\% Acc\\BAS: 1.0000 mAP@1};
+    \node (out_spot) [outnode, below=1.3cm of fuse, xshift=-3.6cm] {\textbf{Track A: Spotting}\\20.87\% Loose-mAP\\20.00\% LOCO CV};
+    \node (out_cap)  [outnode, below=1.3cm of fuse, xshift=-1.2cm] {\textbf{Track B: Caption}\\81.3\% Match Recall\\0.0520 CIDEr Graft};
+    \node (out_vqa)  [outnode, below=1.3cm of fuse, xshift=1.2cm] {\textbf{Track C: SN-VQA}\\100.00\% Top-1 Acc\\Factual Visual CoT};
+    \node (out_down) [outnode, below=1.3cm of fuse, xshift=3.6cm] {\textbf{Tracks D \& E}\\MV-Foul: 100\% Acc\\BAS: 1.0000 mAP@1};
 
     % Connectors
     \draw [arrow] (raw) -- (pyav);
@@ -471,7 +471,7 @@ We completed the 8-track benchmark suite by evaluating the remaining vision-lang
 \begin{itemize}
     \item \textbf{Track F (Replay Grounding \& Camera Shots):} Classifying 4 official camera shot angles (`Main/Wide`, `Close-Up`, `Behind-Goal`, `Replay`) achieved \textbf{100.00\% accuracy} via HSV turf ratio and edge density. Linking slow-motion broadcast replays backward to live action triggers ($t_{\text{live}} \in [t_{\text{replay}}-65\text{s}, t_{\text{replay}}-5\text{s}]$) achieved \textbf{70.00\% Recall@5s} (MAE 7.47s), with direct sub-second hits on direct free-kick and foul replays (0.04s error).
     \item \textbf{Track G (SoccerNet-Echoes Entity Grounding):} Fusing spoken broadcast commentary transcripts extracted within $\pm 5.0\text{s}$ of event anchors into visual VLM narrations resolved anonymous roles (`[PLAYER]`, `[TEAM]`) into grounded proper nouns, driving raw Named CIDEr from \textbf{0.0643 to 0.0744 (+15.7\% relative gain)}.
-    \item \textbf{Track H (Jersey Number OCR \& Kit Recognition):} Evaluating Qwen3.5-4B on cropped player close-ups and set-piece frames achieved \textbf{100.00\% Top-1 Jersey OCR Accuracy} (#21 Herrera, #18 Young, #31 Fellaini, #17 Sanchez, #10 Rooney) and \textbf{100.00\% Kit Team Classification} in \textbf{0.60s per crop} at 3.29\,GiB VRAM.
+    \item \textbf{Track H (Jersey Number OCR \& Kit Recognition):} Evaluating Qwen3.5-4B on cropped player close-ups and set-piece frames achieved \textbf{100.00\% Top-1 Jersey OCR Accuracy} (\#21 Herrera, \#18 Young, \#31 Fellaini, \#17 Sanchez, \#10 Rooney) and \textbf{100.00\% Kit Team Classification} in \textbf{0.60s per crop} at 3.29\,GiB VRAM.
 \end{itemize}
 
 \begin{table}[h]

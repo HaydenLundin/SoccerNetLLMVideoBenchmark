@@ -1,0 +1,48 @@
+name: Verify Benchmark & ReVal Engine
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    name: Forensic Audit & Test Suites (CPU-Only)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libswresample-dev fonts-dejavu-core
+
+      - name: Install Python Test Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy av pillow opencv-python-headless pydantic SoccerNet matplotlib
+
+      - name: 1. Run 7-Point Fable 5.2 Forensic Readiness Audit
+        run: python scripts/audit_fable52_readiness.py
+
+      - name: 2. Run SoccerNet Tracks I-L & Pitch Geometry Verification Suite
+        run: python scripts/test_v5_tracks_suite.py
+
+      - name: 3. Run ReVal Highlights, Splicing & Adversarial Clamping Suite
+        run: python scripts/test_reval_highlights.py
+
+      - name: 4. Run Hugging Face Release Bundle Verification
+        run: python scripts/test_hf_dataset_release.py
+
+      - name: 5. Run Interactive Demo Server & REST / HTTP 206 Streaming Probe
+        run: python scripts/test_demo_server.py
