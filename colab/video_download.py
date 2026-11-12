@@ -605,10 +605,9 @@ def benchmark_annotations(gemini_annotations, llm2_annotations, llm3_annotations
     print(f"  Ground Truth: {results['summary']['ground_truth']['total_events']} events")
     print(f"  Coverage:     {results['summary']['gemini']['total_events'] / max(results['summary']['ground_truth']['total_events'], 1) * 100:.1f}%")
 
-    # TODO: Add detailed metrics (precision, recall, F1) - implement your own
-    # This would require temporal matching of events (within N seconds)
-    print(f"\n⚠️  Detailed metrics (precision/recall/F1) not implemented yet")
-    print(f"   Add your own comparison logic based on your research needs")
+    # Full DevKit temporal mAP, precision, and recall evaluation is implemented in
+    # scripts/evaluate_mes5_multimatch.py and scripts/run_mes5_orchestrator.py.
+    print("\n[INFO] Use scripts/evaluate_mes5_multimatch.py for full DevKit mAP/precision/recall metrics.")
 
     return results
 

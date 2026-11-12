@@ -22,8 +22,13 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
+import random
 import numpy as np
 from scipy.optimize import least_squares, linear_sum_assignment
+
+# Deterministic execution seed (Audit 5)
+random.seed(42)
+np.random.seed(42)
 
 import sys
 ROOT = Path(__file__).resolve().parent.parent

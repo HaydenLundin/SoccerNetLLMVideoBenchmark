@@ -268,10 +268,10 @@ python scripts/test_demo_server.py
 
 ## 📚 Documentation Index
 
-- **For Hayden (Plain-Language Guide):** Read [`FORhayden.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/FORhayden.md) for an engaging breakdown of the system architecture, design decisions, and 7 debugging war stories.
-- **Formal Academic Monograph:** Read [`docs/RESEARCH.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/RESEARCH.md) for all 30 formal tables, mathematical proofs, and conference writeup material.
-- **V3 Implementation Plan:** Read [`docs/V3_IMPLEMENTATION_PLAN.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/V3_IMPLEMENTATION_PLAN.md) for the challenge specifications and architecture blueprints for SN-VQA, MV-Foul, and BAS.
-- **Cloud Scale-Up Plan:** Read [`docs/SCOPE_GCP.md`](file:///c:/Users/hayde/Documents/UNC%20Charlotte/DSBA%206165%20-%20AI%20and%20Deep%20Learning/SoccerNetLLMVideoBenchmark/docs/SCOPE_GCP.md) for the Vertex AI Batch API blueprint for frontier models (Gemini 3.8 Flash / Gemini 4 Argon).
+- **For Hayden (Plain-Language Guide):** Read [`FORhayden.md`](FORhayden.md) for an engaging breakdown of the system architecture, design decisions, and debugging war stories.
+- **Formal Academic Monograph:** Read [`docs/RESEARCH.md`](docs/RESEARCH.md) for all formal tables, mathematical proofs, and conference writeup material.
+- **V3 Implementation Plan:** Read [`docs/V3_IMPLEMENTATION_PLAN.md`](docs/V3_IMPLEMENTATION_PLAN.md) for the challenge specifications and architecture blueprints for SN-VQA, MV-Foul, and BAS.
+- **Cloud Scale-Up Plan:** Read [`docs/SCOPE_GCP.md`](docs/SCOPE_GCP.md) for the Vertex AI Batch API blueprint for frontier models (Gemini 3.8 Flash / Gemini 4 Argon).
 
 ---
 

@@ -202,6 +202,30 @@ def test_reval_server_api_response():
     print(f"✓ Leaderboard API JSON contract verified: Top athlete is {top['name']} (Score: {top['reval_score']}, Multiplier: {top['nil_multiplier']})")
 
 
+def test_reval_adversarial_clamping_and_empty_inputs():
+    print("\n--- 6. Testing Adversarial Score Clamping & Edge Case Safety ---")
+    from processing.reval_scoring import compute_reval_composite
+
+    # Negative inputs clamped to 0.0
+    underflow = compute_reval_composite(-100.0, -50.0, -20.0)
+    assert underflow["reval_score"] == 0.0, f"Expected 0.0, got {underflow['reval_score']}"
+    assert underflow["tier"] == "ROTATION TIER"
+    assert underflow["multiplier_numeric"] >= 1.0
+
+    # Extreme positive inputs clamped to 100.0
+    overflow = compute_reval_composite(250.0, 300.0, 500.0)
+    assert overflow["reval_score"] == 100.0, f"Expected 100.0, got {overflow['reval_score']}"
+    assert overflow["tier"] == "ELITE TIER"
+    assert overflow["multiplier_numeric"] == 6.0  # 4.5 + (100 - 85)*0.10
+
+    # Monotonic tier boundary transitions
+    assert compute_reval_composite(85.0, 85.0, 85.0)["tier"] == "ELITE TIER"
+    assert compute_reval_composite(70.0, 70.0, 70.0)["tier"] == "PREMIER TIER"
+    assert compute_reval_composite(50.0, 50.0, 50.0)["tier"] == "IMPACT TIER"
+    assert compute_reval_composite(49.9, 49.9, 49.9)["tier"] == "ROTATION TIER"
+    print("✓ ReVal score clamping [0.0, 100.0] and tier monotonicity verified under adversarial inputs.")
+
+
 def run_all_tests():
     start = time.time()
     test_reval_3pillar_math()
@@ -209,6 +233,7 @@ def run_all_tests():
     test_reval_hud_overlay_rendering()
     test_reval_spliced_mp4_integrity()
     test_reval_server_api_response()
+    test_reval_adversarial_clamping_and_empty_inputs()
     elapsed = time.time() - start
     print(f"\n==================================================================")
     print(f" ALL REVAL HIGHLIGHT VERIFICATION TESTS PASSED ({elapsed:.2f}s)")

@@ -190,12 +190,59 @@ def test_reval_normalization_and_benchmark_integrity() -> None:
     print("  [PASS] ReVal cross-sport normalization & 5-benchmark integrity verified.")
 
 
+def test_adversarial_and_empty_edge_cases() -> None:
+    """Validate robustness against adversarial, empty, and out-of-bounds inputs."""
+    from pydantic import ValidationError
+    from processing.unified_schema import (
+        SpottedEvent,
+        convert_clip_events_to_soccernet_format,
+        parse_mm_ss_to_seconds,
+    )
+
+    # 1. Timestamp parser malformed strings reject cleanly with ValueError
+    valid = parse_mm_ss_to_seconds("04:12")
+    assert abs(valid - 252.0) < 1e-6, f"Expected 252.0, got {valid}"
+
+    for bad_ts in ["", "invalid", "12:60", "99:99", "-01:00", "01:2"]:
+        try:
+            parse_mm_ss_to_seconds(bad_ts)
+            assert False, f"Expected ValueError for '{bad_ts}'"
+        except ValueError:
+            pass
+
+    # Pydantic schema validation rejects malformed regex timestamps at model ingestion
+    try:
+        SpottedEvent(timestamp="99:99", label="Corner", confidence=0.7, commentary="Malformed")
+        assert False, "Expected pydantic ValidationError for invalid regex '99:99'"
+    except ValidationError:
+        pass
+
+    # 2. Out-of-bounds events fault-isolated without failing entire clip
+    ev_valid = SpottedEvent(timestamp="00:15", label="Goal", confidence=0.9, commentary="Clean")
+    ev_oob = SpottedEvent(timestamp="01:30", label="Foul", confidence=0.8, commentary="Beyond clip")
+
+    # Clip duration 60.0s
+    spotting, captions, drops = convert_clip_events_to_soccernet_format(
+        [ev_valid, ev_oob], half=1, clip_start_sec=0.0, clip_duration_sec=60.0
+    )
+    assert len(spotting) == 1, f"Expected 1 valid event, got {len(spotting)}"
+    assert drops == 1, f"Expected 1 dropped adversarial event, got {drops}"
+
+    # 3. Blank black frame handling in player detection
+    black_frame = np.zeros((720, 1280, 3), dtype=np.uint8)
+    players_blank = detect_players_on_pitch(black_frame)
+    assert len(players_blank) == 0, f"Expected 0 detections on black frame, got {len(players_blank)}"
+
+    print("  [PASS] Adversarial timestamp, OOB drop, and blank-frame edge cases verified.")
+
+
 def run_all_tests() -> None:
     print("Running v5.0 Tracks I-L & ReVal benchmark verification suite...")
     test_track_i_through_l_summaries()
     test_pitch_geometry_round_trip_and_kit_classifier()
     test_real_frame_c3_2949_detection()
     test_reval_normalization_and_benchmark_integrity()
+    test_adversarial_and_empty_edge_cases()
     print("ALL V5 TRACKS SUITE CHECKS PASSED.")
 
 

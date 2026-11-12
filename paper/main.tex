@@ -130,8 +130,6 @@ To address these challenges, we present a complete systems and modeling framewor
     \item \textbf{Downstream Challenge Generalization (Tracks C--H):} Zero-shot transfer to SoccerNet VQA (100.00\% Top-1 Accuracy), Multi-View Foul Recognition (100.00\% Active Balanced Accuracy), Ball Action Spotting (1.0000 mAP@1), Camera Shot Classification (100.00\%), Replay Grounding (70.00\% Recall@5s), Echoes Entity Grounding (+15.7\% CIDEr), and Jersey Number OCR (100.00\% Top-1).
 \end{itemize}
 
----
-
 \section{Related Work}
 \label{sec:related}
 
@@ -143,8 +141,6 @@ Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrate
 
 \subsection{Dense Video Captioning \& Audio Grounding}
 SoccerNet-Caption~\cite{cioppa2022soccernetcaption} introduced dense play-by-play commentary generation. Evaluation typically relies on BLEU, ROUGE-L, METEOR, and CIDEr~\cite{vedantam2015cider}. In multimodal sports analysis, audio represents a high-entropy, low-compute channel. While deep audio-visual transformers~\cite{owens2018audio,gao2020listen} have been proposed for sound localization, they require dedicated GPU allocations. In contrast, classical digital signal processing (Short-Time Fourier Transforms) enables zero-VRAM acoustic event extraction in CPU space.
-
----
 
 \section{Systems \& Inference Architecture}
 \label{sec:architecture}
@@ -169,8 +165,6 @@ This renders temporal progress explicitly readable to the model's visual cross-a
 
 \subsection{Slotted Sliding Windows \& Keyframe Alignment}
 To prevent token budget exhaustion across 45 continuous minutes, video streams are partitioned into 10-minute macro-chunks with 15-second overlap. Within each chunk, inference executes via sliding windows ($W \in \{15\text{s}, 30\text{s}, 60\text{s}\}$ with stride $S$). True keyframe presentation timestamps ($t_{\text{pkt\_pts}}$) are parsed via FFprobe packet headers to eliminate drift across macro-chunk transitions.
-
----
 
 \section{Hardware Survival \& Ecosystem Audit}
 \label{sec:hardware}
@@ -217,7 +211,7 @@ InternVideo2-1B & OpenGVLab & 1.2B & Native BF16 & None & --- & --- & --- & \tex
 \subsection{Ecosystem Failure Analysis}
 The 10 blocked models isolate three fundamental systems failure modes:
 \begin{enumerate}
-    \item \textbf{Dynamic AnyRes Tile Explosions:} Vision encoders engineered for high-resolution document processing (e.g., LLaVA-NeXT AnyRes in Granite-Vision-3.2-2B) slice each video frame into 5 sub-crops. Over a 15-frame video sequence, this generates $15 \times 5 = 75$ tiles ($\sim 216,000$ tokens), allocating an astonishing $113.8$\,GiB of virtual memory on device initialization. We successfully rescued InternVL3.5-2B and H2OVL-800M by overriding patch counts (`num_patches_list=[1]*N` and `max_tiles=1`), compressing allocations from $17.04$\,GiB to $6.80$\,GiB.
+    \item \textbf{Dynamic AnyRes Tile Explosions:} Vision encoders engineered for high-resolution document processing (e.g., LLaVA-NeXT AnyRes in Granite-Vision-3.2-2B) slice each video frame into 5 sub-crops. Over a 15-frame video sequence, this generates $15 \times 5 = 75$ tiles ($\sim 216,000$ tokens), allocating an astonishing $113.8$\,GiB of virtual memory on device initialization. We successfully rescued InternVL3.5-2B and H2OVL-800M by overriding patch counts (\texttt{num\_patches\_list=[1]*N} and \texttt{max\_tiles=1}), compressing allocations from $17.04$\,GiB to $6.80$\,GiB.
     \item \textbf{Unquantized Per-Layer Embedding (PLE) Tables:} In Gemma 4 architectures (E2B and E4B), Per-Layer Embedding tables remain unquantized by standard BitsAndBytes 4-bit loaders, requiring an immediate $9.11$\,GiB VRAM allocation before model forward pass commences.
     \item \textbf{Windows Platform JIT Kernels:} Quantized architectures utilizing OpenAI Triton (e.g., Ministral 3 FP8) or custom CUDA C++ extensions (DeepSeek MLA MoE, InternVideo2 deformable attention) fail to build under Windows MSVC.
 \end{enumerate}
@@ -241,8 +235,6 @@ MiniCPM-V 4.6 & 4-bit NF4 & \textbf{2.60\,GiB} & \textbf{7.38\,GiB} & \textcolor
 \bottomrule
 \end{tabular}
 \end{table}
-
----
 
 \section{Dual-Task Synergy \& Mode Collapse Proof}
 \label{sec:rq3}
@@ -289,8 +281,6 @@ Contrasting RQ3 with Track C (SN-VQA) uncovers a fundamental law of structured V
     \item \textbf{Unconstrained Temporal Search (Spotting):} Requires \textit{Reasoning-First} schemas ($c \to l \to t$) to ground attention across long frame sequences.
     \item \textbf{Pre-Grounded Closed-Set Classification (VQA):} When the window is already localized and candidates are primed in prompt prefixes, placing reasoning first under tight token budgets ($96$ tokens) causes conversational preamble truncation. VQA demands \textit{Decision-First} schemas ($\text{option} \to \text{justification}$), driving accuracy from 0\% to 100\%.
 \end{itemize}
-
----
 
 \section{Cross-Modal Temporal Synchrony Law}
 \label{sec:rq4}
@@ -340,8 +330,6 @@ Qwen3.5-4B + Whistle/Roar & \textbf{0.0543} & \textbf{0.1071} & \textbf{0.0434} 
 \bottomrule
 \end{tabular}
 \end{table}
-
----
 
 \section{Specialist Ensemble \& Cross-Validation}
 \label{sec:rq5}
@@ -403,8 +391,6 @@ When captions were delexicalized (replacing player names with generic tokens `[P
 However, CIDEr score decreased ($0.0745 \to 0.0514$). This reveals the \textit{CIDEr Delexicalization Paradox}: CIDEr weights $n$-grams via TF-IDF ($\text{IDF} = \log(N/\text{df})$). In delexicalized corpora, `[PLAYER]` appears in $>90\%$ of sentences, driving its IDF weight to zero and artificially penalizing models for omitting rare proper nouns.
 Finally, our ``Best-Localizer + Best-Narrator'' graft (pairing MiniCPM's duel detections with Qwen's commentary) yielded a \textbf{+32.0\% CIDEr boost} ($0.0394 \to 0.0520$).
 
----
-
 \section{SoccerNet Multi-Task Challenge Expansion (Tracks C--H)}
 \label{sec:multitask}
 
@@ -440,7 +426,7 @@ Temporal Continuity & 3 & 25.0\% & \textbf{100.00\% (3/3)} & 8.97s \\
 \end{table}
 
 \subsection{Challenge 2: Multi-View Foul Recognition (MV-Foul)}
-Evaluated via the official DevKit (`SoccerNet.Evaluation.MV_FoulRecognition`), purely visual models exhibited a \textbf{50.0\% false alarm rate} on clean duels (78.57\% severity accuracy) because legal tackles look violent in 2D projection. 
+Evaluated via the official DevKit (\texttt{SoccerNet.Evaluation.MV\_FoulRecognition}), purely visual models exhibited a \textbf{50.0\% false alarm rate} on clean duels (78.57\% severity accuracy) because legal tackles look violent in 2D projection. 
 Applying our $+2.95\text{s}$ Synchronized Whistle Gate eliminated 100\% of false alarms on clean tackles, driving Active Balanced Accuracy to \textbf{100.00\%} (+21.43\% gain).
 
 \begin{table}[h]
@@ -505,8 +491,6 @@ Track H: Kit Team Classification & Accuracy & 33.3\% & \textbf{100.00\%} (15/15)
 \bottomrule
 \end{tabular}
 \end{table}
-
----
 
 \section{Discussion \& Edge Deployment Lessons}
 \label{sec:discussion}
@@ -599,8 +583,6 @@ Yellow$\to$red card & \textbf{0.4773} & 0.0000 & 0.0000 & 0.4773 & \textbf{0.477
 \bottomrule
 \end{tabular}
 \end{table}
-
----
 
 \section{Systems Efficiency, Distillation, and Latency Optimization}
 \label{sec:systems_efficiency}

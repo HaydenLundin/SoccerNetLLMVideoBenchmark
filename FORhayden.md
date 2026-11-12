@@ -238,8 +238,8 @@ Engineering is not about things working on the first try; it's about systematica
 
 ### War Story 1: The Win32 260-Character Ghost (`MAX_PATH`)
 * **The Bug:** On Windows, our multi-match evaluation runs were silently failing to write prediction files for certain matches. There were no stack traces, no error dialogs—just missing JSON files.
-* **The Diagnosis:** Windows has a legacy file path limit of 260 characters (`MAX_PATH`). A path like `c:\Users\hayde\Documents\UNC Charlotte\DSBA 6165 - AI and Deep Learning\SoccerNetLLMVideoBenchmark\logs\local_eval\qwen3.5-4b_4bit_W60_S45_joint_cot\england_epl\2014-2015\2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal\1_720p_predictions.json` is 283 characters long! Windows silently aborted file creation.
-* **The Fix:** We prepended the Win32 Unicode path prefix `\\?\` to all directory and file paths (`\\?\c:\Users\...`). This unlocks the full 32,767-character NTFS limit and made our file I/O bulletproof.
+* **The Diagnosis:** Windows has a legacy file path limit of 260 characters (`MAX_PATH`). A nested path like `<HOME>\Documents\...\SoccerNetLLMVideoBenchmark\logs\local_eval\qwen3.5-4b_4bit_W60_S45_joint_cot\england_epl\2014-2015\2015-05-17 - 18-00 Manchester United 1 - 1 Arsenal\1_720p_predictions.json` exceeds 260 characters! Windows silently aborted file creation.
+* **The Fix:** We prepended the Win32 Unicode path prefix `\\?\` to all directory and file paths (`\\?\<DRIVE>:\...`). This unlocks the full 32,767-character NTFS limit and made our file I/O bulletproof.
 * **Engineering Lesson:** Never assume OS file operations are clean. Always guard against path length limits when dealing with deeply nested academic dataset taxonomies.
 
 ---
