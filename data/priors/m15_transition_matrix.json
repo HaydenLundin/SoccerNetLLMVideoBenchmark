@@ -1,0 +1,273 @@
+{
+  "description": "Out-of-sample 15-match physical Markov transition matrix and Half 1 temporal priors (Games 4..12, 14..19, 3,251 events).",
+  "forward_transitions_30s": {
+    "Ball out of play": {
+      "Throw-in": 0.6842105263157895,
+      "Clearance": 0.16257309941520467,
+      "Corner": 0.11578947368421053,
+      "Substitution": 0.023391812865497075,
+      "Yellow card": 0.004678362573099415,
+      "Offside": 0.0011695906432748538,
+      "Shots off target": 0.0023391812865497076,
+      "Direct free-kick": 0.0011695906432748538,
+      "Foul": 0.0023391812865497076,
+      "Indirect free-kick": 0.0011695906432748538,
+      "Shots on target": 0.0011695906432748538
+    },
+    "Throw-in": {
+      "Foul": 0.21038961038961038,
+      "Ball out of play": 0.612987012987013,
+      "Offside": 0.03636363636363636,
+      "Shots on target": 0.07792207792207792,
+      "Shots off target": 0.05714285714285714,
+      "Throw-in": 0.0025974025974025974,
+      "Yellow card": 0.0025974025974025974
+    },
+    "Foul": {
+      "Indirect free-kick": 0.6787564766839378,
+      "Yellow card": 0.20725388601036268,
+      "Direct free-kick": 0.025906735751295335,
+      "Substitution": 0.02072538860103627,
+      "Ball out of play": 0.03626943005181347,
+      "Shots off target": 0.0051813471502590676,
+      "Throw-in": 0.0051813471502590676,
+      "Foul": 0.02072538860103627
+    },
+    "Indirect free-kick": {
+      "Ball out of play": 0.5588235294117647,
+      "Foul": 0.20588235294117646,
+      "Shots off target": 0.07352941176470588,
+      "Shots on target": 0.10294117647058823,
+      "Offside": 0.051470588235294115,
+      "Substitution": 0.007352941176470588
+    },
+    "Shots off target": {
+      "Ball out of play": 0.910958904109589,
+      "Shots on target": 0.00684931506849315,
+      "Direct free-kick": 0.02054794520547945,
+      "Clearance": 0.03424657534246575,
+      "Offside": 0.00684931506849315,
+      "Shots off target": 0.0136986301369863,
+      "Foul": 0.00684931506849315
+    },
+    "Clearance": {
+      "Foul": 0.25,
+      "Shots off target": 0.0703125,
+      "Ball out of play": 0.578125,
+      "Offside": 0.0546875,
+      "Shots on target": 0.03125,
+      "Substitution": 0.0078125,
+      "Indirect free-kick": 0.0078125
+    },
+    "Corner": {
+      "Foul": 0.09009009009009009,
+      "Ball out of play": 0.45045045045045046,
+      "Shots off target": 0.23423423423423423,
+      "Shots on target": 0.2072072072072072,
+      "Offside": 0.009009009009009009,
+      "Substitution": 0.009009009009009009
+    },
+    "Shots on target": {
+      "Shots on target": 0.0782608695652174,
+      "Goal": 0.34782608695652173,
+      "Ball out of play": 0.3739130434782609,
+      "Direct free-kick": 0.06086956521739131,
+      "Shots off target": 0.06086956521739131,
+      "Foul": 0.06086956521739131,
+      "Offside": 0.017391304347826087
+    },
+    "Offside": {
+      "Indirect free-kick": 0.9333333333333333,
+      "Ball out of play": 0.03333333333333333,
+      "Substitution": 0.03333333333333333
+    },
+    "Substitution": {
+      "Kick-off": 0.12,
+      "Indirect free-kick": 0.17333333333333334,
+      "Clearance": 0.17333333333333334,
+      "Throw-in": 0.26666666666666666,
+      "Substitution": 0.16,
+      "Corner": 0.04,
+      "Direct free-kick": 0.013333333333333334,
+      "Ball out of play": 0.04,
+      "Foul": 0.013333333333333334
+    },
+    "Kick-off": {
+      "Substitution": 0.13513513513513514,
+      "Ball out of play": 0.5945945945945946,
+      "Foul": 0.16216216216216217,
+      "Shots off target": 0.10810810810810811
+    },
+    "Direct free-kick": {
+      "Shots on target": 0.17543859649122806,
+      "Shots off target": 0.24561403508771928,
+      "Ball out of play": 0.45614035087719296,
+      "Goal": 0.03508771929824561,
+      "Foul": 0.03508771929824561,
+      "Offside": 0.05263157894736842
+    },
+    "Yellow card": {
+      "Shots on target": 0.05,
+      "Indirect free-kick": 0.55,
+      "Clearance": 0.1,
+      "Throw-in": 0.05,
+      "Substitution": 0.05,
+      "Direct free-kick": 0.1,
+      "Yellow card": 0.05,
+      "Foul": 0.05
+    }
+  },
+  "backward_transitions_30s": {
+    "Throw-in": {
+      "Ball out of play": 0.962171052631579,
+      "Substitution": 0.03289473684210526,
+      "Yellow card": 0.001644736842105263,
+      "Throw-in": 0.001644736842105263,
+      "Foul": 0.001644736842105263
+    },
+    "Foul": {
+      "Throw-in": 0.46285714285714286,
+      "Clearance": 0.18285714285714286,
+      "Corner": 0.05714285714285714,
+      "Indirect free-kick": 0.16,
+      "Shots on target": 0.04,
+      "Kick-off": 0.03428571428571429,
+      "Direct free-kick": 0.011428571428571429,
+      "Ball out of play": 0.011428571428571429,
+      "Foul": 0.022857142857142857,
+      "Yellow card": 0.005714285714285714,
+      "Shots off target": 0.005714285714285714,
+      "Substitution": 0.005714285714285714
+    },
+    "Indirect free-kick": {
+      "Foul": 0.7081081081081081,
+      "Offside": 0.15135135135135136,
+      "Substitution": 0.07027027027027027,
+      "Yellow card": 0.05945945945945946,
+      "Ball out of play": 0.005405405405405406,
+      "Clearance": 0.005405405405405406
+    },
+    "Ball out of play": {
+      "Indirect free-kick": 0.11326378539493294,
+      "Throw-in": 0.35171385991058124,
+      "Shots off target": 0.19821162444113263,
+      "Clearance": 0.11028315946348734,
+      "Shots on target": 0.06408345752608048,
+      "Corner": 0.07451564828614009,
+      "Kick-off": 0.03278688524590164,
+      "Direct free-kick": 0.038748137108792845,
+      "Substitution": 0.004470938897168405,
+      "Foul": 0.010432190760059613,
+      "Offside": 0.0014903129657228018
+    },
+    "Clearance": {
+      "Ball out of play": 0.8742138364779874,
+      "Substitution": 0.08176100628930817,
+      "Yellow card": 0.012578616352201259,
+      "Shots off target": 0.031446540880503145
+    },
+    "Shots on target": {
+      "Shots on target": 0.0967741935483871,
+      "Direct free-kick": 0.10752688172043011,
+      "Corner": 0.24731182795698925,
+      "Shots off target": 0.010752688172043012,
+      "Yellow card": 0.010752688172043012,
+      "Throw-in": 0.3225806451612903,
+      "Indirect free-kick": 0.15053763440860216,
+      "Clearance": 0.043010752688172046,
+      "Ball out of play": 0.010752688172043012
+    },
+    "Goal": {
+      "Shots on target": 0.9523809523809523,
+      "Direct free-kick": 0.047619047619047616
+    },
+    "Shots off target": {
+      "Clearance": 0.09278350515463918,
+      "Corner": 0.26804123711340205,
+      "Direct free-kick": 0.14432989690721648,
+      "Indirect free-kick": 0.10309278350515463,
+      "Throw-in": 0.2268041237113402,
+      "Shots on target": 0.07216494845360824,
+      "Kick-off": 0.041237113402061855,
+      "Ball out of play": 0.020618556701030927,
+      "Foul": 0.010309278350515464,
+      "Shots off target": 0.020618556701030927
+    },
+    "Offside": {
+      "Throw-in": 0.3888888888888889,
+      "Corner": 0.027777777777777776,
+      "Direct free-kick": 0.08333333333333333,
+      "Ball out of play": 0.027777777777777776,
+      "Shots off target": 0.027777777777777776,
+      "Indirect free-kick": 0.19444444444444445,
+      "Clearance": 0.19444444444444445,
+      "Shots on target": 0.05555555555555555
+    },
+    "Corner": {
+      "Ball out of play": 0.9705882352941176,
+      "Substitution": 0.029411764705882353
+    },
+    "Kick-off": {
+      "Substitution": 1.0
+    },
+    "Substitution": {
+      "Kick-off": 0.10869565217391304,
+      "Ball out of play": 0.43478260869565216,
+      "Substitution": 0.2608695652173913,
+      "Foul": 0.08695652173913043,
+      "Yellow card": 0.021739130434782608,
+      "Corner": 0.021739130434782608,
+      "Clearance": 0.021739130434782608,
+      "Offside": 0.021739130434782608,
+      "Indirect free-kick": 0.021739130434782608
+    },
+    "Direct free-kick": {
+      "Shots on target": 0.3684210526315789,
+      "Foul": 0.2631578947368421,
+      "Shots off target": 0.15789473684210525,
+      "Substitution": 0.05263157894736842,
+      "Ball out of play": 0.05263157894736842,
+      "Yellow card": 0.10526315789473684
+    },
+    "Yellow card": {
+      "Foul": 0.8695652173913043,
+      "Ball out of play": 0.08695652173913043,
+      "Throw-in": 0.021739130434782608,
+      "Yellow card": 0.021739130434782608
+    }
+  },
+  "half1_class_priors": {
+    "Kick-off": 0.02014294996751137,
+    "Ball out of play": 0.3222871994801819,
+    "Throw-in": 0.20272904483430798,
+    "Foul": 0.10006497725795971,
+    "Indirect free-kick": 0.07797270955165692,
+    "Clearance": 0.07212475633528265,
+    "Shots off target": 0.04613385315139701,
+    "Corner": 0.042884990253411304,
+    "Shots on target": 0.044184535412605586,
+    "Goal": 0.011046133853151396,
+    "Offside": 0.018193632228719947,
+    "Direct free-kick": 0.024041585445094216,
+    "Yellow card": 0.016894087069525665,
+    "Yellow->red card": 0.000649772579597141,
+    "Substitution": 0.000649772579597141
+  },
+  "causal_consequents": {
+    "Foul": [
+      "Yellow card",
+      "Red card",
+      "Direct free-kick",
+      "Indirect free-kick"
+    ],
+    "Goal": [
+      "Kick-off",
+      "Substitution"
+    ],
+    "Ball out of play": [
+      "Throw-in",
+      "Corner",
+      "Kick-off"
+    ]
+  }
+}
