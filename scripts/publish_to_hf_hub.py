@@ -256,22 +256,31 @@ def build_hf_release_bundle():
     eval_set_path = WORKSPACE_ROOT / "eval_set.json"
     full_gt_dir = WORKSPACE_ROOT / "test_eval_ground_truth"
     gt_dir = WORKSPACE_ROOT / "logs/local_eval/mes5_specialist_3m_m15/devkit_ground_truth"
-    
-    # Compute M15 from ground-truth annotations across all held-out matches
-    prob_fwd, prob_bwd, h1_priors = compute_out_of_sample_m15(eval_set_path, full_gt_dir)
-    m15_payload = {
-        "description": "Out-of-sample 15-match physical Markov transition matrix and Half 1 temporal priors (Games 4..12, 14..19, 3,251 events).",
-        "forward_transitions_30s": prob_fwd,
-        "backward_transitions_30s": prob_bwd,
-        "half1_class_priors": h1_priors,
-        "causal_consequents": {
-            "Foul": ["Yellow card", "Red card", "Direct free-kick", "Indirect free-kick"],
-            "Goal": ["Kick-off", "Substitution"],
-            "Ball out of play": ["Throw-in", "Corner", "Kick-off"]
+    committed_m15_path = WORKSPACE_ROOT / "data/priors/m15_transition_matrix.json"
+
+    if full_gt_dir.exists():
+        # Compute M15 from ground-truth annotations across all held-out matches,
+        # and refresh the tracked copy so it cannot drift from the computation.
+        prob_fwd, prob_bwd, h1_priors = compute_out_of_sample_m15(eval_set_path, full_gt_dir)
+        m15_payload = {
+            "description": "Out-of-sample 15-match physical Markov transition matrix and Half 1 temporal priors (Games 4..12, 14..19, 3,251 events).",
+            "forward_transitions_30s": prob_fwd,
+            "backward_transitions_30s": prob_bwd,
+            "half1_class_priors": h1_priors,
+            "causal_consequents": {
+                "Foul": ["Yellow card", "Red card", "Direct free-kick", "Indirect free-kick"],
+                "Goal": ["Kick-off", "Substitution"],
+                "Ball out of play": ["Throw-in", "Corner", "Kick-off"]
+            }
         }
-    }
-    with open(priors_dir / "m15_transition_matrix.json", "w", encoding="utf-8") as f:
-        json.dump(m15_payload, f, indent=2)
+        committed_m15_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(committed_m15_path, "w", encoding="utf-8", newline="\n") as f:
+            json.dump(m15_payload, f, indent=2)
+    else:
+        # The raw SoccerNet labels of the 15 prior matches are not tracked (.gitignore),
+        # so a cold clone or CI run stages the tracked copy of the prior instead.
+        print("  test_eval_ground_truth/ not found: staging the tracked data/priors/m15_transition_matrix.json.")
+    shutil.copy2(committed_m15_path, priors_dir / "m15_transition_matrix.json")
 
     with open(priors_dir / "class_nms_radii.json", "w", encoding="utf-8") as f:
         json.dump({
