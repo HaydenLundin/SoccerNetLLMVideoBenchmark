@@ -9,9 +9,9 @@
 ## 1. Abstract & Motivation
 Traditional sports action spotting has relied almost exclusively on domain-specific, supervised deep learning architectures (e.g., NetVLAD, E2E-Spot, ActionFormer) trained on pre-extracted 2D/3D visual features. While these systems localize events effectively, they operate as closed-set classifiers incapable of semantic reasoning, open-vocabulary narration, or game storytelling.
 
-The emergence of long-context Vision-Language Models (VLMs) offers a unified paradigm: treating video comprehension not merely as pattern detection, but as an integrated visual reasoning problem. This study benchmarks state-of-the-art proprietary VLMs (**Google Gemini 3.8 Flash**, **Gemini 4 Argon**) alongside open-weight edge models (**Qwen2.5-VL**, **Qwen3.5**, **Gemma 4**, **MiniCPM-V**) on untrimmed broadcast soccer matches. 
+The emergence of long-context Vision-Language Models (VLMs) offers a unified paradigm: treating video comprehension not merely as pattern detection, but as an integrated visual reasoning problem. This study benchmarks open-weight edge models (**Qwen3.5-4B**, **MiniCPM-V 4.6**, **LFM2.5-VL-3B**, and other candidates screened under an 8 GB VRAM gate) on untrimmed broadcast soccer matches. The proprietary models named in the original plan (**Google Gemini 3.8 Flash**, **Gemini 4 Argon**) were prepared only as dry-run batch inputs (`logs/vertex_phase0/`); no Gemini evaluation was run, so RQ1 and RQ5 are answered for open-weight models only.
 
-The evaluation spans two unified benchmark tasks: **Classic Action Spotting (`Labels-v2`)** and **Dense Video Captioning (`SoccerNet-Caption`)**, rigorously evaluating temporal localization, multi-modal audio grounding, and play-by-play narrative generation.
+The measured core of the evaluation is two tasks: **Classic Action Spotting (`Labels-v2`)** and **Dense Video Captioning (`SoccerNet-Caption`)**. The headline multi-match result is the Canonical MES-5 benchmark (Section 14: 5 matches, 1,132 events), where the 3-model ensemble with the $M_{15}$ prior scores 0.1833 Official Loose-mAP in-sample and class-level routing scores 0.1613 under leave-one-match-out cross-validation, against 0.1564 for Qwen3.5-4B alone. Later sections add ten further task harnesses (Tracks C–L) and the ReVal valuation engine. These are small single-half studies (tens of items each) with self-authored labels, and several of them (Tracks D, E, F, G, H, K) use scripted predictions or references derived from the system's own outputs. Each such section carries a provenance note.
 
 ---
 
@@ -926,7 +926,7 @@ However, the broader **SoccerNet challenge ecosystem** encompasses a wider varie
 2. **Challenge 2: SoccerNet Multi-View Foul Recognition (MV-Foul):** Two-tier classification of offence severity (No offence vs. Foul vs. Yellow/Red Card) and foul action class (Tackling, Challenge, Holding, etc.), evaluated using the official SoccerNet DevKit.
 3. **Challenge 3: SoccerNet Ball Action Spotting (BAS):** Spotting 12 fine-grained ball-interaction events (`Pass`, `Drive`, `Header`, `Cross`, `Shot`, `Out`, `Throw In`, `Ball Player Block`, `Player Successful Tackle`, etc.) evaluated under a strict **$\pm 1.0\text{-second}$ tolerance window (`mAP@1`)**.
 
-All three challenges were executed entirely on our existing local stack (RTX 3000 Ada 8 GB VRAM, 63 GB RAM) at **$0 cloud compute spend**, demonstrating the zero-shot generalization of our domain-routed specialist architecture.
+**Provenance of the three V3 studies.** Only SN-VQA (10.2) is a live model run, on 12 self-authored questions (`data/v3_vqa_dataset.json`), not an official SN-VQA set. The MV-Foul (10.3) and BAS (10.4) harnesses do not run a model: their labels and their predictions are written inside the scripts. Their tables illustrate how the metric responds to whistle gating and temporal calibration; they are not measurements of model accuracy and are not comparable to SoccerNet challenge results.
 
 ---
 
@@ -955,17 +955,17 @@ Restructuring the prompt to enforce `selected_option` as the first JSON key and 
 
 The SoccerNet Multi-View Foul Recognition challenge evaluates automated referee assistance on physical challenges. Models must predict both the **Offence Severity** (`No offence`, `Offence / No card`, `Yellow card`, `Red card`) and the **Action Class** (`Challenge`, `Standing tackling`, `Tackling`, `Holding`, `Pushing`, etc.).
 
-Evaluation was conducted using the official DevKit module `SoccerNet.Evaluation.MV_FoulRecognition.evaluate` across 12 physical duels in Half 1, directly testing our **Zero-VRAM Audio-Visual DSP Whistle Grounding pipeline** (RQ4).
+**Provenance note (scripted illustration, N = 12).** `scripts/evaluate_v3_mv_foul.py` defines 12 duels by hand, including each duel's label and its `has_whistle` / `whistle_z` fields. No video or audio is read. The "audio-visual" prediction is `has_whistle and whistle_z >= 4.0` taken from those hand-written fields, and `has_whistle` equals the offence label on all 12 rows, so the 100% row holds by construction. The three visual-only false alarms are hard-coded duel ids, and the action class is copied from the label. The official DevKit module `SoccerNet.Evaluation.MV_FoulRecognition.evaluate` is called, but its leaderboard value is `NaN` on this set (Finding 3); the table reports the custom active-class metric.
 
-#### Table 15: SoccerNet V3 Multi-View Foul Recognition (MV-Foul) Official DevKit Results
+#### Table 15: MV-Foul Scripted Whistle-Gating Illustration (12 hand-authored duels, custom active-class metric)
 
-| Model Pipeline | Audio DSP Gating | Offence/Severity Acc | Action Class Acc | Active Balanced Acc (Severity) | Active Balanced Acc (Action) | Active Official Leaderboard Metric | Clean Duel FP Rate |
+| Model Pipeline | Audio DSP Gating | Offence/Severity Acc | Action Class Acc | Active Balanced Acc (Severity) | Active Balanced Acc (Action) | Active Combined Metric (custom) | Clean Duel FP Rate |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Visual-Only Baseline** | None | 75.00% | 100.00% | 78.57% | 100.00% | **89.29%** | 50.0% (3 / 6 false alarms) |
 | **Audio-Visual Grounded** | **Fox 40 STFT Whistle Gate ($z \ge 4.0$) + Synchrony Shift ($+2.95\text{s}$)** | **100.00%** | **100.00%** | **100.00%** | **100.00%** | **100.00%** | **0.0% (0 / 6 false alarms)** |
 | **Empirical Delta** | — | **+25.00%** | **+0.00%** | **+21.43%** | **+0.00%** | **+10.71%** | **-50.0% (100% FP Elimination)** |
 
-#### Key Empirical Findings in Foul Recognition:
+#### What the Scripted Illustration Encodes (hypotheses, not measured findings):
 1. **The Visual Duel Ambiguity Trap:**
    Purely visual models misclassify legal, aggressive challenges (such as emphatic sliding clearances and shoulder-to-shoulder shoulder charges) as fouls because the high physical impact visually resembles an infraction. On legal challenges, the visual-only baseline suffered a **50.0% false alarm rate**.
 2. **Acoustic Whistle Decisiveness:**
@@ -979,9 +979,11 @@ Evaluation was conducted using the official DevKit module `SoccerNet.Evaluation.
 
 Unlike canonical Action Spotting (which permits loose $\pm 5.0\text{s}$ tolerances for major stoppages), **Ball Action Spotting (BAS)** evaluates fine-grained ball interactions (`Pass`, `Drive`, `Header`, `Cross`, `Shot`, `Out`, `Throw In`, `Ball Player Block`, etc.) under an ultra-strict **$\pm 1.0\text{-second}$ temporal window (`mAP@1`)**.
 
-Because ball actions occur at speeds exceeding 20 meters/second, sub-second temporal precision is required. We evaluated the impact of our signed temporal recalibration shifts (LFM2.5-VL-3B: $-3.10\text{s}$; Qwen3.5-4B: $-1.20\text{s}$) across 16 ball actions in Chunk 0.
+Because ball actions occur at speeds exceeding 20 meters/second, sub-second temporal precision is required. Table 16 illustrates the effect of temporal recalibration on a strict-tolerance metric across 16 hand-authored ball actions in Chunk 0.
 
-#### Table 16: SoccerNet V3 Ball Action Spotting (BAS) Strict Tolerance mAP@1 Results
+**Provenance note (scripted illustration, N = 16).** In `scripts/evaluate_v3_ball_action_spotting.py` the ground truth, the "raw" predictions and the "calibrated" predictions are three literal lists. No model is run and the stated offsets (LFM $-3.10\text{s}$, Qwen $-1.20\text{s}$) are not applied by the code; the calibrated list is typed in separately. The per-class "AP" is defined as precision (`c_ap = c_precision`), which is why 1.0000 coexists with 75% recall. The hard-coded raw errors average about $+1.7\text{s}$, not the $-2.15\text{s}$ quoted in the table.
+
+#### Table 16: BAS Scripted Calibration Illustration (16 hand-authored events, precision reported as mAP@1)
 
 | System Architecture | Temporal Offset Calibration | Tolerance Window | Sub-Second Hits | Total GT | Sub-Second Recall | mAP@1 (Strict) | Primary Bottleneck / Finding |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|---|
@@ -991,19 +993,19 @@ Because ball actions occur at speeds exceeding 20 meters/second, sub-second temp
 
 #### Per-Class BAS Breakdown at $\pm 1.0\text{s}$:
 - **`Pass` & `Cross`:** 100% precision and 100% recall at $\pm 1.0\text{s}$ after calibration (AP@1 = 1.000).
-- **`Out` & `Throw In`:** Recalibrating LFM2.5-VL-3B's boundary detections recovered 3 out of 3 sideline crossings within 0.8s of official touchline transit (AP@1 = 1.000).
-- **`Ball Player Block`:** MiniCPM-V 4.6 correctly localized the defender block at 06:18 to within 0.4s of contact (AP@1 = 1.000).
+- **`Out` & `Throw In`:** the scripted calibrated list places 3 of 3 sideline crossings within 0.8s of the labelled transit (AP@1 = 1.000). No LFM2.5-VL-3B output is involved.
+- **`Ball Player Block`:** the scripted calibrated list places the defender block at 06:18 within 0.4s of contact (AP@1 = 1.000). No MiniCPM-V 4.6 output is involved.
 
 ---
 
 ### 10.5 Unified V3 Benchmark Summary
 
 Across all three V3 challenges:
-- **SN-VQA:** **100.00% Top-1 Accuracy** across 12 multimodal questions with factual visual CoT.
-- **MV-Foul:** **100.00% Active Balanced Accuracy** (+21.43% gain via Zero-VRAM Audio Whistle DSP Grounding).
-- **BAS:** **1.0000 mAP@1** (+62.50% recall gain via signed temporal recalibration).
+- **SN-VQA (measured, N = 12 self-authored questions):** **100.00% Top-1 Accuracy** from a live Qwen3.5-4B run.
+- **MV-Foul (scripted illustration, N = 12):** 100.00% active balanced accuracy by construction from hand-written whistle fields.
+- **BAS (scripted illustration, N = 16):** 1.0000 precision at $\pm 1.0\text{s}$ with 75% recall on typed-in prediction lists.
 
-These results confirm that our 3-Model Domain-Routed Specialist Ensemble and Zero-VRAM Audio-Visual DSP pipeline generalize beyond classic action spotting and dense captioning to the full spectrum of competitive SoccerNet tasks—all running entirely on consumer workstation hardware at **$0 compute spend**.
+Only the SN-VQA row is evidence about model behaviour, and at N = 12 on self-authored questions it is a smoke test rather than a benchmark result. The MV-Foul and BAS harnesses show how the metrics would be computed; running them on real model outputs and official annotations remains future work.
 
 ---
 
@@ -1123,7 +1125,7 @@ Under $\text{mAP}_{\text{inv-log}}$, game-deciding events ($N_c = 2$) receive a 
 
 ## 12. The Complete 8-Track SoccerNet VLM Challenge Suite (V4 Expansion)
 
-To establish an exhaustive, unified benchmark across the full landscape of sports video perception, we expanded our evaluation suite from 5 to **8 official challenge tracks** on our local `Game 0 Half 1` footage at **$0 compute spend**:
+To establish an exhaustive, unified benchmark across the full landscape of sports video perception, we added harnesses for three more SoccerNet task families on `Game 0 Half 1` at **$0 compute spend**. All three are small scripted studies with hand-authored labels; see the provenance note in each subsection:
 * **Track F**: SoccerNet Replay Grounding & Camera Shot Classification
 * **Track G**: SoccerNet-Echoes Audio-Transcript Entity Grounding
 * **Track H**: SoccerNet Jersey Number OCR & Kit Team Recognition
@@ -1134,7 +1136,9 @@ To establish an exhaustive, unified benchmark across the full landscape of sport
 
 Broadcast television directors rapidly cut between camera perspectives, interjecting multi-angle slow-motion replays between live play. In Track A, before applying our 45s NMS window, VLMs fired duplicates on both live actions and subsequent slow-motion replays. Track F turns this challenge into an explicit evaluation: classifying camera perspectives and temporally grounding broadcast replays ($t_{\text{replay}}$) backward to their original live event triggers ($t_{\text{live}} \in [t_{\text{replay}} - 65\text{s}, t_{\text{replay}} - 5\text{s}]$).
 
-#### Table 22: Track F Camera Shot Classification & Temporal Replay Grounding
+**Provenance note (scripted illustration, N = 20 / N = 10).** `scripts/evaluate_v4_replay_grounding.py` processes no frames. The shot features (`turf_pct`, `edge_density`) are typed constants, and the five `Replay` items are classified from a label-supplied `is_replay` flag (15/20 without it). For replay grounding the script keeps the candidate with the smallest error to the ground-truth live time, which is oracle selection, and a replay with no candidates is credited a 4.2s hit. Without oracle selection Recall@5s is 30% to 50%, not 70%.
+
+#### Table 22: Track F Camera Shot Classification & Temporal Replay Grounding (scripted, oracle candidate selection)
 
 | Sub-Task | Evaluation Metric | Sample Size | Score | Baseline / Random | Key Empirical Finding |
 |---|:---:|:---:|:---:|:---:|---|
@@ -1148,51 +1152,55 @@ Broadcast television directors rapidly cut between camera perspectives, interjec
 
 ### 12.2 Track G: SoccerNet-Echoes Audio-Transcript Entity Grounding
 
-In Track B (Dense Video Captioning), visual-only VLMs described players anonymously (`"a player in a red jersey"`), whereas official broadcast commentary features proper nouns (`"Ander Herrera"`, `"Alexis Sanchez"`). Track G implements the **SoccerNet-Echoes** challenge: fusing spoken audio commentary entities (extracted within $\pm 5.0\text{s}$ of event anchors) into VLM visual narrations to resolve anonymous role placeholders (`[PLAYER]`, `[TEAM]`, `[REFEREE]`).
+In Track B (Dense Video Captioning), visual-only VLMs described players anonymously (`"a player in a red jersey"`), whereas official broadcast commentary features proper nouns (`"Ander Herrera"`, `"Alexis Sanchez"`). Track G is modelled on the **SoccerNet-Echoes** task: fusing spoken commentary entities into VLM visual narrations to resolve anonymous role placeholders (`[PLAYER]`, `[TEAM]`, `[REFEREE]`).
+
+**Provenance note (no audio or transcript is used, N = 22 caption pairs).** `scripts/evaluate_v4_echoes_asr_grounding.py` contains a hand-typed entity dictionary, and none of its keys matches a ground-truth caption timestamp. Every lookup therefore falls back to the fixed defaults ("Ander Herrera", "Alexis Sanchez", referee "Michael Dean"), and emptying the dictionary gives identical output. Table 23 measures the effect of substituting those fixed names into 6 of 22 captions, not the effect of ASR grounding.
 
 #### Table 23: Track G SoccerNet-Echoes Audio-Transcript Entity Grounding
 
 | Captioning Pipeline | Input Modality | Raw BLEU-1 | Raw BLEU-4 | ROUGE-L | METEOR | CIDEr |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Visual-Only Baseline** | Video Frames (720p) | 0.1238 | 0.0000 | 0.1229 | 0.0869 | 0.0643 |
-| **Echoes Audio-Transcript Grounded** | **Video + Spoken Entity Fusion** | **0.1268** | **0.0000** | **0.1292** | **0.0878** | **0.0744** |
+| **Fixed-Name Substitution (no transcript used)** | **Video + default roster names** | **0.1268** | **0.0000** | **0.1292** | **0.0878** | **0.0744** |
 | **Empirical Delta** | — | **+2.4%** | — | **+5.1%** | **+1.0%** | **+15.7% (CIDEr Surge)** |
 
 *Qualitative Resolution Example:*
 * **Visual-Only VLM**: *"A player in a red jersey takes a shot from outside the box that goes wide of the goal."*
-* **Echoes Audio-Grounded**: *"Ander Herrera takes a shot from outside the box that goes wide of the goal."*  
+* **Fixed-Name Substitution**: *"Ander Herrera takes a shot from outside the box that goes wide of the goal."*  
 * **Official Ground Truth**: *"Ander Herrera (Manchester United) is unable to feed a through ball..."*
 
 ---
 
 ### 12.3 Track H: SoccerNet Jersey Number OCR & Kit Recognition
 
-Fine-grained player identification requires parsing small, non-rigid jersey numerals and team kits during active play. We evaluated `Qwen3.5-4B` (4-bit NF4) on 15 cropped player set-pieces and close-ups across Game 0 Half 1.
+Fine-grained player identification requires parsing small, non-rigid jersey numerals and team kits during active play. Table 24 specifies the intended evaluation on 15 player crops from Game 0 Half 1.
 
-#### Table 24: Track H Jersey Number OCR & Kit Recognition
+**Provenance note (simulated, N = 15).** No model was run and no crops were processed. `scripts/evaluate_v4_jersey_ocr.py` scores a literal named `SIMULATED_VLM_PREDICTIONS`, which equals the hand-written labels on all 15 rows and includes typed-in latencies. The 100% accuracy and the 0.60s latency are placeholders, not measurements of Qwen3.5-4B.
+
+#### Table 24: Track H Jersey Number OCR & Kit Recognition (simulated predictions, not a model run)
 
 | Sub-Task | Evaluation Metric | Instances | Model / Pipeline | Accuracy (%) | Key Finding |
 |---|:---:|:---:|:---:|:---:|---|
-| **Jersey Number OCR** | Top-1 Accuracy | $N=15$ crops | Qwen3.5-4B (4-bit NF4) | **100.00% (15/15)** | Correctly reads #21 Herrera, #18 Young, #31 Fellaini, #17 Sanchez, #8 Mata, #10 Rooney, #12 Giroud, #34 Coquelin, #4 Jones, #39 Bellerin, #4 Mertesacker, #9 Falcao, #1 De Gea. |
-| **Kit Team Classification** | Categorical Accuracy | $N=15$ crops | Qwen3.5-4B (4-bit NF4) | **100.00% (15/15)** | Perfect 3-way discrimination between Man United Home Red, Arsenal Away Gold/Navy, and Official Black. |
-| **Inference Efficiency** | Average Latency | $N=15$ crops | RTX 3000 Ada (8 GB) | **0.60s / crop** | Runs within a 3.29 GiB pure VRAM footprint. |
+| **Jersey Number OCR** | Top-1 Accuracy | $N=15$ crops | Simulated literal | 100.00% (15/15) by construction | Label set covers #21 Herrera, #18 Young, #31 Fellaini, #17 Sanchez, #8 Mata, #10 Rooney, #12 Giroud, #34 Coquelin, #4 Jones, #39 Bellerin, #4 Mertesacker, #9 Falcao, #1 De Gea. |
+| **Kit Team Classification** | Categorical Accuracy | $N=15$ crops | Simulated literal | 100.00% (15/15) by construction | Label set spans Man United Home Red, Arsenal Away Gold/Navy, and Official Black. |
+| **Inference Efficiency** | Average Latency | $N=15$ crops | Typed-in values | 0.60s / crop (not measured) | No inference was executed for this table. |
 
 ---
 
-### 12.4 The Complete 8-Track Unified Scorecard
+### 12.4 The 8-Track Scorecard
 
-With the inclusion of Tracks F, G, and H, this repository represents the most comprehensive, zero-cost, multi-task benchmark of vision-language models on professional sports broadcasts:
+Rows marked † are scripted illustrations (predictions written in the harness or derived from the labels), not model measurements. Tracks A and B are measured on Game 0 Half 1; Track C is a live run on 12 self-authored questions.
 
-| Track | Official Challenge Track | Primary Metric | Baseline / Prior | Final V4 Architecture ($0 Compute) | Key Breakthrough |
+| Track | SoccerNet Task Family | Primary Metric | Baseline / Prior | V4 Result ($0 Compute) | Notes |
 |:---:|---|---|:---:|:---:|---|
 | **A** | **Action Spotting** | Active Loose-mAP | 14.89% (Solo) | **24.15% (3-Model Specialist + $M_{19}$)** | +34.0% Tight-mAP gain; 55.4% match recall. |
 | **B** | **Dense Video Captioning** | CIDEr / Temporal Recall | 0.0394 CIDEr | **0.0520 CIDEr (81.3% Recall)** | +32.0% CIDEr boost via cross-grafting. |
-| **C** | **SN-VQA** | Top-1 Accuracy | 25.0% Random | **100.00% Top-1 Accuracy (12/12)** | Decision-First Schema eliminates preamble truncation. |
-| **D** | **Multi-View Foul Recognition** | Active Balanced Acc | 78.57% (Visual) | **100.00% (Audio-Visual Whistle)** | Fox 40 STFT gate eliminates 100% clean-duel FPs. |
-| **E** | **Ball Action Spotting** | Sub-Second mAP@1 | 0.2500 mAP@1 | **1.0000 mAP@1 (75.0% Recall)** | $4.0\times$ gain via signed temporal offset shifts. |
-| **F** | **Replay Grounding** | Replay-to-Live Recall@5s | 10.0% Heuristic | **70.00% Recall@5s (100% Shot Acc)** | Cross-temporal visual-audio alignment. |
-| **G** | **SoccerNet-Echoes** | Named CIDEr Surge | 0.0643 CIDEr | **0.0744 CIDEr (+15.7% Gain)** | Fuses audio-transcript entities to resolve VLM roles. |
-| **H** | **Jersey Number & Kit OCR** | Top-1 OCR Accuracy | 10.0% Random | **100.00% OCR / 100% Kit Acc** | Qwen3.5-4B resolves player numbers in 0.60s. |
+| **C** | **SN-VQA** | Top-1 Accuracy | 25.0% Random | **100.00% Top-1 Accuracy (12/12)** | Live run on 12 self-authored questions; Decision-First Schema eliminates preamble truncation. |
+| **D** † | **Multi-View Foul Recognition** | Active Balanced Acc | 78.57% (scripted) | 100.00% (scripted, N = 12) | By construction from hand-written whistle fields. |
+| **E** † | **Ball Action Spotting** | Precision at $\pm 1.0\text{s}$ | 0.2500 | 1.0000 (75.0% recall, N = 16) | Typed-in prediction lists; AP defined as precision. |
+| **F** † | **Replay Grounding** | Replay-to-Live Recall@5s | 10.0% Heuristic | 70.00% with oracle selection (N = 10); 30% to 50% without | Typed features; candidate nearest the label is chosen. |
+| **G** † | **SoccerNet-Echoes** | Named CIDEr | 0.0643 CIDEr | 0.0744 CIDEr (+15.7%, N = 22) | Fixed default names substituted; no transcript used. |
+| **H** † | **Jersey Number & Kit OCR** | Top-1 OCR Accuracy | 10.0% Random | 100.00% (simulated, N = 15) | Simulated literal equal to the labels; no model run. |
 
 ---
 
@@ -1267,7 +1275,8 @@ To resolve this without data leakage, we formalized the **Canonical Minimal Eval
 ### 14.2 Out-of-Sample $M_{15}$ Markov Prior Rescoring
 To preserve strict experimental hygiene:
 - Prior transition matrices $M_{15} = P(C_{t+1} \mid C_t, \Delta t \le 30\text{s})$ and temporal priors are estimated strictly on the **15 held-out matches** (Games 4..12, 14..19; 30 halves, 3,251 events).
-- There is **zero overlap** between the training of the transition prior and the evaluation of MES-5.
+- There is **zero overlap** between the matches used to estimate the transition probabilities and the MES-5 evaluation matches.
+- **Scope of this guarantee:** it covers the transition probabilities only. The rule that decides which classes receive a boost was revised after the first MES-5 run (see Finding 4 in Section 14.4). In addition, 13 of the 15 prior matches belong to the official SoccerNet test split (`eval_set.json`), so these results are not comparable to the official test-split protocol.
 
 ### 14.3 Multi-Label Zero-Compute Semantic Co-Emission
 Compound soccer actions often carry multi-label semantics under official annotation protocols:
@@ -1299,7 +1308,7 @@ Single-label token classification forces a VLM to choose one class, silencing th
 | **Direct free-kick** | 24 | 0.0663 | 0.0000 | 0.0069 | 0.0663 | **0.0745** | **0.0746** |
 | **Corner** | 49 | 0.1981 | 0.0280 | 0.0170 | **0.1981** | 0.1976 | **0.1999** |
 | **Yellow card** | 24 | 0.3158 | 0.0000 | 0.1244 | 0.3158 | **0.4140** | **0.4140** |
-| **Red card** | 2 | **0.7727** | 0.0000 | 0.9008 | **0.7727** | **0.7727** | **0.7727** |
+| **Red card** | 2 | 0.7727 | 0.0000 | **0.9008** | 0.7727 | 0.7727 | 0.7727 |
 | **Yellow->red card** | 1 | **0.4773** | 0.0000 | 0.0000 | 0.4773 | **0.4773** | **0.4773** |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Official Tight-mAP (/17)** | 1,132 | 0.0562 | 0.0006 | 0.0189 | 0.0562 | 0.0607 | **0.0609** |
@@ -1311,15 +1320,21 @@ Single-label token classification forces a VLM to choose one class, silencing th
 1. **100% Class Coverage (17 / 17 Active Classes):** The 3-Model Domain Specialist Ensemble eliminates every single 0.0000 class score across the entire SoccerNet benchmark, achieving an empirical Oracle Ceiling of **1.0000**.
 2. **Canonical MECE Specialist Partition:**
    - **Qwen3.5-4B** dominates conversions, set-pieces, substitutions (0.2381 AP), fouls (0.1940 AP), shots off target (0.0768 AP), and disciplinary events (0.3158 Yellow, 0.7727 Red card; 0.5057 Tight AP on John Terry and Mark Noble).
-   - **LFM2.5-VL-3B** acts as the high-speed line judge, providing a **+342.8% surge** on `Ball out of play` (0.1717 AP across 320 events, 28.3% of the dataset) and high-velocity `Shots on target` (0.0949 AP).
+   - **LFM2.5-VL-3B** acts as the high-speed line judge, providing a **+339.7% gain** over Qwen3.5-4B solo on `Ball out of play` (0.0390 to 0.1717 AP across 320 events, 28.3% of the dataset) and high-velocity `Shots on target` (0.0949 AP).
    - **MiniCPM-V 4.6** resolves box clearances and sideline line-judge signals (`Offside`: 0.0090 AP, `Indirect free-kick`: 0.0276 AP, Half 1 `Clearance`: 0.0344 AP).
-   - Eliminating cross-model dilution lifts Base Specialist performance to **0.1733 Loose-mAP** and **0.0562 Tight-mAP** (matching Qwen solo Tight-mAP while gaining +10.8% Loose-mAP).
+   - With this partition the Base Specialist scores **0.1733 Loose-mAP** and **0.0562 Tight-mAP** on MES-5 (matching Qwen solo Tight-mAP, +10.8% Loose-mAP).
+   - **This partition was chosen with MES-5 results in view.** The first full MES-5 run (commit `0715e4a`) used the routing carried over from Game 0 and scored 0.1547 Loose / 0.0448 Tight, below Qwen3.5-4B solo (0.1564 / 0.0562). The partition above was adopted afterwards (commit `73d4d35`). 0.1733 is therefore an in-sample figure for the routing choice; the out-of-sample estimate is the LOMO result in Finding 3.
 3. **5-Fold Leave-One-Match-Out (LOMO) Cross-Validation:**
-   - Evaluated via `scripts/verify_lomo_cross_validation.py`. Across every fold where 4 matches are used to select specialists and evaluate on the 5th unseen match, out-of-sample data selects the identical MECE routing partition, yielding **0.1613 strictly out-of-sample Loose-mAP**.
+   - Evaluated via `scripts/verify_lomo_cross_validation.py`: in each fold the best model per class is selected on 4 matches and applied to the 5th, unseen match.
+   - **The selected routing is not stable across folds.** The five folds produce four distinct partitions and none of them equals the canonical partition. `Red card` is assigned to MiniCPM-V 4.6 in 4 of 5 folds (the canonical partition gives it to Qwen3.5-4B), and `Throw-in`, `Clearance` and `Shots on target` change owner between folds.
+   - Pooled out-of-sample performance is **0.1613 Loose-mAP** (+3.1% over Qwen3.5-4B solo) and **0.0261 Tight-mAP** (below Qwen3.5-4B solo at 0.0562).
+   - The LOMO script validates class-level routing only. It does not include the half-specific `Clearance` rule of the canonical ensemble, and it does not cover the $M_{15}$ rescoring rule.
 4. **Selective Causal Consequent Rescoring ($M_{15}$ Prior):**
-   - Transition matrices $M_{15}$ are trained strictly on the **15 held-out matches** (3,251 events) with **zero data leakage** into MES-5.
-   - Restricting Markov boosts strictly to physical restart consequents (`Yellow card`, `Kick-off`, `Ball out of play`, `Corner`, `Direct free-kick`) while preserving calibrated specialist confidence on independent initiators (`Goal`, `Substitution`, `Foul`) surges `Yellow card` to **0.4140**, `Kick-off` to **0.0704**, and `Ball out of play` to **0.1854**.
-   - Achieves a new benchmark high of **0.1833 Official Loose-mAP** (+17.2% relative gain over Qwen Solo) and **0.0607 Official Tight-mAP** (+8.0% relative gain over Qwen Solo).
+   - The transition probabilities in $M_{15}$ are estimated strictly on the **15 non-MES-5 matches** (3,251 events), so no MES-5 label enters the matrix.
+   - Boosts are restricted to the 11 classes in `CONSEQUENT_CLASSES` (`scripts/evaluate_markov_prior_rescoring.py`), such as `Yellow card`, `Kick-off`, `Ball out of play`, `Corner` and `Direct free-kick`, while the raw specialist confidence is kept on initiators (`Goal`, `Substitution`, `Foul`, `Throw-in`, `Penalty`). This moves `Yellow card` to **0.4140**, `Kick-off` to **0.0704**, and `Ball out of play` to **0.1854**.
+   - **The rule structure was selected on MES-5.** Uniform $M_{15}$ boosting across all classes scored 0.1560 Loose / 0.0440 Tight on the first MES-5 run (`0715e4a`). The class restriction and the 0.90 confidence gate on Half 1 substitution pruning were added afterwards (`73d4d35`) on the same five matches, and no cross-validation covers that choice.
+   - Result on MES-5: **0.1833 Official Loose-mAP** (+17.2% relative to Qwen Solo) and **0.0607 Official Tight-mAP** (+8.0% relative to Qwen Solo). Read these as in-sample upper estimates, not held-out performance.
+   - **Rare-class sensitivity:** 41% of the 0.1833 macro average comes from three classes with five ground-truth events in total (`Red card` 2, `Yellow->red card` 1, `Penalty` 2). The mean over the other 14 classes is 0.1311.
 5. **Zero Cloud Compute Spend:** All 10 broadcast halves across the 5 Premier League fixtures were decoded, processed, and evaluated locally on an 8 GB NVIDIA RTX 3000 Ada laptop GPU at **$0.00 compute cost**.
 
 ---
@@ -1376,9 +1391,14 @@ We conducted an end-to-end simulation across all 10 halves of MES-5 (5 matches, 
 | Configuration | Official Loose-mAP (/17) | Official Tight-mAP (/17) | Active Classes (/17) | Windows Skipped (0 GPU VRAM) | mAP Retention | Wall-Clock Acceleration |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **MECE Baseline (0% Skipped, 73d4d35)** | 0.1833 | 0.0607 | 17 / 17 | 0.0% (0 / 687) | 100.0% | $1.0\times$ (Baseline) |
-| **Stage 2 Gate (Acoustic + Optical DSP)** | **0.1840** | **0.0609** | **17 / 17** | 2.6% (18 / 687) | **100.4%** | **$2.0\times$ to $3.3\times$** |
+| **Stage 2 Gate (Acoustic + Optical DSP)** | **0.1840** | **0.0609** | **17 / 17** | 2.6% (18 / 687) | **100.4%** | $\approx 1.03\times$ (window skipping only) |
 
-Filtering inactive windows pruned spurious false-positive detections in dead midfield segments, yielding a slight performance increase (**100.4% retention**) while strictly preserving **17 / 17 active classes** and cutting per-window GPU latency to 5.6s.
+Masking the 18 gated windows removed a few false-positive detections, giving **100.4% retention** with **17 / 17 active classes**. The +0.0007 Loose-mAP change is within noise at this sample size.
+
+**What this simulation does and does not measure:**
+- The 0.1840 is computed from the existing verbose-CoT MES-5 predictions with the 18 gated windows masked. Skipping 18 of 687 windows saves about 2.6% of GPU window passes ($\approx 1.03\times$).
+- The $3.3\times$ per-window speedup of Concise-CoT (Section 15.2) was measured on Chunk 0 (14 windows) and was **not** applied here. Concise-CoT accuracy on MES-5 has not been measured, so the 0.1840 and the $3.3\times$ figure describe two different configurations.
+- The gate thresholds were swept on Game 0 Half 1 (`scripts/sweep_skipping_thresholds.py`), which is part of MES-5.
 
 ---
 
@@ -1446,11 +1466,14 @@ To connect raw edge perception directly to downstream commercial athlete valuati
 
 ### 18.1 Multi-Modal Player Attribution
 
-Detected events are bound to individual athletes by fusing four multimodal signals:
-1. **Track H Jersey OCR & Kit Matching:** Numeral identification (#21 Herrera, #10 Aguero, #26 Terry) and kit discrimination.
-2. **Track G Audio Commentary Entity Grounding:** Named entity extraction from spoken commentary within $[t - 5\text{s}, t + 10\text{s}]$.
-3. **Track A Calibrated Action Spotting:** Frame-accurate temporal anchors.
-4. **Verified Ground-Truth Alignment:** 12 canonical athletes ranked across Soccer, Football, and Basketball.
+**How the published leaderboard is built.** The leaderboard is hand-curated. `attribute_events_to_athletes` in `processing/reval_scoring.py` scores 12 hard-coded attribution anchors, one event per athlete (10 MES-5 soccer players plus one American football and one basketball example), and does not use its prediction arguments; `scripts/reval_athlete_highlights.py` calls it with `predictions_by_game={}`. The event label, camera type and `crowd_surge_db` of each anchor are entered by hand and are not read from the Track A predictions or the cached DSP profiles.
+
+**What automated attribution would use.** The design is to bind detected events to athletes by fusing:
+1. **Jersey OCR & Kit Matching** (Track H, currently simulated; see Section 12.3).
+2. **Commentary Entity Grounding** (Track G, currently fixed-name substitution; see Section 12.2).
+3. **Track A Calibrated Action Spotting:** temporal anchors.
+
+The automated version of this fusion is measured separately in Benchmark B1 (Section 19.2), where it reaches 34.34% F1 on 73 high-stakes events. It does not feed the leaderboard.
 
 ### 18.2 The 3-Pillar Athlete Valuation Formula
 
@@ -1458,20 +1481,21 @@ ReVal evaluates athlete media and sporting value on an objective $0\text{--}100$
 $$\text{ReVal Score} = 0.45 \times \text{Action} + 0.30 \times \text{Exposure} + 0.25 \times \text{Resonance}$$
 
 1. **Action Performance ($45\%$ Weight):** Uses $mAP_{\text{inv-log}}$ rarity weighting (Goals/Touchdowns 35.0, Penalties/Sacks 25.0, 3-Pointers 25.0).
-2. **Broadcast Exposure ($30\%$ Weight):** Measures high-value screen presence via Track F camera perspective dwell seconds (`Close-Up` 5.0s, `Replay Sequence` 4.0s, `Main/Wide` 1.5s).
-3. **Crowd Resonance ($25\%$ Weight):** Measures stadium excitement via audio STFT crowd roar decibel surge ($\Delta_{\text{crowd}} \ge 6.0\text{ dB}$).
+2. **Broadcast Exposure ($30\%$ Weight):** Fixed points per attributed event by camera type (`Close-Up` 28, `Replay` 22, `Behind-Goal` 15, other 6), mapped through $100 \times (1 - e^{-\text{points}/50})$. No dwell time is measured.
+3. **Crowd Resonance ($25\%$ Weight):** The largest `crowd_surge_db` among the athlete's events, scaled linearly so that $+14\text{ dB}$ maps to 100.
 
 ### 18.3 NIL Media Multipliers and Tiers
 
-The continuous score maps to a Name, Image, and Likeness (NIL) multiplier:
-$$\text{NIL Multiplier} = 1.0 + \left(\frac{\text{ReVal Score}}{100}\right)^{1.5} \times 4.0$$
+The continuous score maps to a Name, Image, and Likeness (NIL) multiplier through a piecewise-linear rule (`compute_reval_composite` in `processing/reval_scoring.py`):
 
-| Tier | Score Range | Multiplier | Market Profile | Top MES-5 Athlete |
+| Tier | Score Range | Multiplier Rule | Multiplier Range | Example MES-5 Athlete |
 |---|---|---|---|---|
-| **ELITE** | $\ge 80.0$ | $3.0\times\text{--}5.0\times$ | National brand ambassador | — |
-| **PREMIER** | $65.0\text{--}79.9$ | $2.0\times\text{--}3.0\times$ | Marquee franchise starter | — |
-| **IMPACT** | $50.0\text{--}64.9$ | $1.5\times\text{--}2.0\times$ | Key rotational match-winner | Ander Herrera (58.3, $1.91\times$, \$477.5k) |
-| **ROTATION** | $< 50.0$ | $1.0\times\text{--}1.5\times$ | Squad contributor | Kyle Walker (43.1, $1.33\times$, \$266.0k) |
+| **ELITE** | $\ge 85.0$ | $4.5 + 0.10 \times (s - 85)$ | $4.5\times\text{--}6.0\times$ | — |
+| **PREMIER** | $70.0\text{--}84.9$ | $2.5 + 0.13 \times (s - 70)$ | $2.5\times\text{--}4.4\times$ | — |
+| **IMPACT** | $50.0\text{--}69.9$ | $1.5 + 0.05 \times (s - 50)$ | $1.5\times\text{--}2.5\times$ | Ander Herrera (58.3, $1.91\times$, \$477.5k) |
+| **ROTATION** | $< 50.0$ | $1.0 + 0.4 \times (s / 50)$ | $1.0\times\text{--}1.4\times$ | Kyle Walker (28.8, $1.23\times$, \$295.2k) |
+
+The dollar figures multiply a hand-set `base_market_nil` per athlete by this multiplier. They are illustrative outputs of hand-authored inputs, not market estimates for the named players.
 
 Leaderboard rankings exported to `logs/reval_highlights/reval_mes5_athlete_leaderboard.json`.
 
@@ -1481,9 +1505,10 @@ Leaderboard rankings exported to `logs/reval_highlights/reval_mes5_athlete_leade
 - **Prussian Blue `#003153` (`rgb(0, 49, 83)`):** Base telemetry bar.
 - **Primary Orange `#FF9E1B` (`rgb(255, 158, 27)`):** 4px top accent border, score badges, and crowd roar decibel telemetry.
 - **Rendered Highlight Reels:**
-  - `ander_herrera_21_reel.mp4`: 251 frames, 10.04s, 4.15 MB (Far-post volley goal, $+13.8\text{ dB}$ roar).
-  - `sergio_aguero_10_reel.mp4`: 250 frames, 10.00s, 3.93 MB (18-yard box opener, $+14.5\text{ dB}$ roar).
-  - `john_terry_26_reel.mp4`: 250 frames, 10.00s, 3.68 MB (Straight red dismissal, $+12.6\text{ dB}$ roar).
+  - `ander_herrera_21_reel.mp4`: 252 frames, 10.08s, 4.25 MB (Far-post volley goal; anchor roar value $+13.8\text{ dB}$).
+  - `sergio_aguero_10_reel.mp4`: 251 frames, 10.04s, 3.94 MB (18-yard box opener; anchor roar value $+14.5\text{ dB}$).
+  - `john_terry_26_reel.mp4`: 251 frames, 10.04s, 3.78 MB (Straight red dismissal; anchor roar value $+12.6\text{ dB}$).
+  - The roar values shown in the HUD are the hand-entered anchor values, and the shipped reels use the fixed $[t - 4\text{s}, t + 6\text{s}]$ window; the adaptive splicer of Benchmark B2 is not used to cut them.
 
 ### 18.5 Interactive Cockpit Integration & Verification
 
@@ -1494,40 +1519,48 @@ The ReVal intelligence suite is fully integrated into `apps/demo/`:
 
 ---
 
-## 19. V5 Spatial & Geometric Tracks (Tracks I–L), Complete 12-Track Scorecard & ReVal Empirical Benchmark (`v5.0.0`)
+## 19. V5 Spatial & Geometric Tracks (Tracks I–L), 12-Track Scorecard & ReVal Empirical Benchmark (`v5.0.0`)
 
-To close out all **12 official SoccerNet challenge tracks** on consumer 8 GB VRAM / CPU hardware (`$0` cloud spend), V5 introduces classical projective geometry, inverse homography pitch mapping, Kalman+HSV multi-object tracking, and Trust-Region Reflective pinhole 3D pose optimization in `processing/pitch_geometry.py`.
+To extend the suite to harnesses for 12 SoccerNet task families on consumer 8 GB VRAM / CPU hardware (`$0` cloud spend), V5 introduces classical projective geometry, inverse homography pitch mapping, Kalman+HSV multi-object tracking, and Trust-Region Reflective pinhole 3D pose optimization in `processing/pitch_geometry.py`.
 
 ### 19.1 Tracks I–L Evaluation Results (Game 0 Half 1 Calibration, GSR, Tracking/Re-ID & Metric Depth)
 
-*Protocol Clarification:* `Tracks I`, `J`, and `L` evaluate projective geometric consistency under reference-anchored pinhole camera refinement initialized from broad pitch hypotheses (`12` calibrated `Game 0 Half 1` keyframes; `N=92` GSR players; `N=82` depth targets), distinguishing calibrated plane-constrained inference from unconstrained scratch monocular regression. Similarly, `Benchmark B1` below reports fully automated zero-shot event-to-player attribution across wide/mixed broadcast shots (`34.34% F1` on `N=73` high-stakes events), distinct from zoomed crop-level OCR in `Track H` (`100%` on isolated jersey close-ups).
+*Protocol Clarification:* `Tracks I`, `J`, and `L` evaluate projective geometric consistency under reference-anchored pinhole camera refinement initialized from broad pitch hypotheses (`12` calibrated `Game 0 Half 1` keyframes; `N=92` GSR players; `N=82` depth targets), distinguishing calibrated plane-constrained inference from unconstrained scratch monocular regression. Similarly, `Benchmark B1` below reports fully automated zero-shot event-to-player attribution across wide/mixed broadcast shots (`34.34% F1` on `N=73` high-stakes events), distinct from crop-level OCR in `Track H` (simulated; see Section 12.3).
+
+*Reference provenance for Tracks I–L:* none of these tracks uses official SoccerNet annotations, and all are evaluated on Game 0 Half 1 frames only.
+- **Track I:** the reference is the author's own homography fit inside hand-drawn regions, built with the same chalk-mask extraction the predictor uses.
+- **Track J:** the reference is hand-clicked player feet projected through the Track I reference; `GS-HOTA` here is a custom single-frame formula, not the official GS-HOTA.
+- **Track K:** the reference is pseudo-ground-truth produced by `build_offline_optical_flow_gt` in `scripts/evaluate_v5_tracking_reid.py` from the same detections the trackers consume, so HOTA / IDF1 / MOTA measure agreement with that pseudo-reference. The Re-ID fusion adds a bonus from a simulated Track H jersey signature assigned to both query and gallery; without it Top-1 is 30.95% (26 / 84).
+- **Track L:** the depth reference is a pinhole decomposition of the Track I reference.
 
 #### Table 28: Spatial & Geometric Challenge Tracks (Tracks I, J, K, L — Game 0 Half 1, Local CPU)
 
-| Official Track | Task & Benchmark Scope | Baseline System | Baseline Result | V5 Geometry / Tracker System | V5 Result |
+| Track | Task & Benchmark Scope | Baseline System | Baseline Result | V5 Geometry / Tracker System | V5 Result |
 |---|---|---|---:|---|---:|
 | **Track I: Camera Calibration** | 12 calibrated pitch keyframes (`1280x720`) | Hough Lines + RANSAC | `IoU_part = 0.0946`<br>`AC@10px = 0.04%`<br>`MeanErr = 835.97px` | **Chamfer Pinhole DLT Optimization** (`1192.5 ms/f`) | **`IoU_part = 0.9601`**<br>**`AC@5px = 60.33%` / `AC@10px = 78.47%`**<br>**`MeanErr = 8.14px`** (`Med = 5.34px`) |
 | **Track J: Game State (GSR)** | `N = 92` pitch players across 8 views (`2.0m` match) | Linear Viewport Transform | `GS-HOTA = 1.91%`<br>`Loc F1@2m = 3.28%`<br>`Role Acc = 66.67%` | **Calibrated $\mathbf{H}^{-1}$ + `RETR_EXTERNAL` + 4-Role HSV** | **`GS-HOTA = 84.78%`** (`DetA=81.19%, AssA=88.52%`)<br>**`Loc F1@2m = 89.62%`** (`TP=82, FP=9, FN=10`)<br>**`Role Acc = 98.78%`**, `Err = 0.238m` (`Med=0.136m`) |
-| **Track K: Tracking & Re-ID** | `650` continuous 25 FPS frames (`8,692` GT / `8,860` Pred, `TP@35px=8,185`) | Greedy IoU Tracker | `HOTA = 68.59%`<br>`IDF1 = 62.66%`<br>`MOTA = 80.09%`<br>`IDSW = 549` | **Kalman + HSV Appearance + Cut/Dissolve Recovery** (`26.04s`) | **`HOTA = 72.63%`** (`AssA = 60.39%`)<br>**`IDF1 = 69.70%`**<br>**`MOTA = 83.38%`**, **`IDSW = 263` (`-52.1%`)** |
-| **Track K: Re-ID Gallery** | `N = 84` tracklet queries vs persistent IDs & Track H | Spatial / CPU HSV Only | `Top-1 = 20.24%` (`mAP 33.10%`) / `16.67%` (`mAP 26.69%`) | **HSV + Scale + Track H Jersey Fusion** | **`Top-1 = 34.52%` / `mAP = 48.08%`** |
+| **Track K: Tracking & Re-ID** | `650` continuous 25 FPS frames (`8,692` pseudo-GT boxes / `8,860` Pred, `TP@35px=8,185`) | Greedy IoU Tracker | `HOTA = 68.59%`<br>`IDF1 = 62.66%`<br>`MOTA = 80.09%`<br>`IDSW = 549` | **Kalman + HSV Appearance + Cut/Dissolve Recovery** (`26.04s`) | **`HOTA = 72.63%`** (`AssA = 60.39%`)<br>**`IDF1 = 69.70%`**<br>**`MOTA = 83.38%`**, **`IDSW = 263` (`-52.1%`)** |
+| **Track K: Re-ID Gallery** | `N = 84` tracklet queries vs persistent IDs & simulated Track H signature | Spatial / CPU HSV Only | `Top-1 = 20.24%` (`mAP 33.10%`) / `16.67%` (`mAP 26.69%`) | **HSV + Scale + Track H Jersey Fusion** | **`Top-1 = 34.52%` / `mAP = 48.08%`** |
 | **Track L: 3D Metric Depth** | `N = 82` localized players (`38.61m–94.19m`) | BBox Scale Prior (`f_nom=2600px`) | `Abs Rel = 0.3329`<br>`RMSE = 32.603m`<br>$\delta < 1.25 = 48.78\%$ | **TRF Pose Raycast $\mathbf{H}^{-1}$** / **Hybrid Fusion** | **Raycast: `Abs Rel = 0.0496`**, **`RMSE = 4.455m`** (`100%` $\delta_1$)<br>Hybrid (`bh_eff`): **`Abs Rel = 0.0512`**, **`RMSE = 4.513m`** (`100%` $\delta_1$) |
 
-#### Table 29: Complete 12-Track SoccerNet Ecosystem Scorecard (`v5.0.0`)
+#### Table 29: 12-Track Scorecard (`v5.0.0`)
 
-| # | Official SoccerNet Challenge Track | Core Method / System Architecture | Headline Verified Benchmark Result | Verification Script |
+Rows marked † are scripted illustrations or use a self-derived reference; they are not model measurements against official annotations. Only Track A is evaluated on multiple matches with the official DevKit.
+
+| # | SoccerNet Task Family | Core Method / System Architecture | Headline Result (N, provenance) | Verification Script |
 |---:|---|---|---|---|
-| **1** | **Track A:** Action Spotting (`Labels-v2`) | 3-Model MECE Ensemble + $M_{15}$ / Stage 2 Skipping | **0.1840** MES-5 Official Loose-mAP (`0.0609` Tight, `17/17` classes, `3.3x` speedup) | `evaluate_mes5_multimatch.py` |
+| **1** | **Track A:** Action Spotting (`Labels-v2`) | 3-Model MECE Ensemble + $M_{15}$ Prior | **0.1833** MES-5 Official Loose-mAP in-sample (`0.0607` Tight, `17/17` classes, 1,132 events); `0.1613` Loose / `0.0261` Tight under LOMO; Qwen3.5-4B solo `0.1564` / `0.0562` | `evaluate_mes5_multimatch.py` |
 | **2** | **Track B:** Dense Video Captioning | Best-Localizer + Best-Narrator Graft (`MES-5` + H1) | **0.0520** Raw CIDEr (`+32.0%`), `81.3%` temporal recall | `evaluate_half1_synthesis_and_captioning.py` |
-| **3** | **Track C:** Visual Question Answering (`SN-VQA`) | Qwen3.5-4B Decision-First Schema + Visual CoT | **100.00%** Top-1 Accuracy (`12/12`, `4.0x` random baseline) | `evaluate_v3_vqa.py` |
-| **4** | **Track D:** Multi-View Foul Recognition (`MV-Foul`) | Audio-Visual Grounded (`+2.95s` Synchrony Law) | **100.00%** Active Balanced Acc (`0%` clean-duel FP via STFT whistle gate) | `evaluate_v3_mv_foul.py` |
-| **5** | **Track E:** Ball Action Spotting (`BAS`) | Calibrated Domain Specialist ($\pm 1.0\text{s}$ strict tolerance) | **1.0000** Strict `mAP@1` (`4.0x` baseline gain) | `evaluate_v3_ball_action_spotting.py` |
-| **6** | **Track F:** Replay Grounding & Shot Classification | Cross-Temporal Visual-Audio Similarity Matching | **70.0%** Recall@5s / **100.0%** 4-Class Shot Classification | `evaluate_v4_replay_grounding.py` |
-| **7** | **Track G:** Echoes Audio-Transcript Entity Grounding | Spoken Commentary Entity Resolution into VLM Captions | **0.0744** Named CIDEr (`+15.7%` boost) | `evaluate_v4_echoes_asr_grounding.py` |
-| **8** | **Track H:** Jersey Number OCR & Kit Recognition | Qwen3.5-4B Crop OCR + Team Kit Disambiguation | **100.00%** Top-1 Numeral OCR & **100.0%** Kit Acc (`0.60s`) | `evaluate_v4_jersey_ocr.py` |
-| **9** | **Track I:** Camera Calibration & Line Registration | Chamfer Distance Pinhole DLT Optimization | **0.9601** `IoU_part`, **78.47%** `AC@10px`, **8.14px** Mean Error | `evaluate_v5_camera_calibration.py` |
-| **10** | **Track J:** Game State Reconstruction (2D Minimap) | Calibrated $\mathbf{H}^{-1}$ + `RETR_EXTERNAL` + 4-Role Kit HSV | **84.78%** `GS-HOTA`, **89.62%** `Loc F1@2m`, **98.78%** Role Acc | `evaluate_v5_game_state_gsr.py` |
-| **11** | **Track K:** Multi-Object Tracking & Player Re-ID | Kalman Filter + HSV + Cut/Dissolve Recovery + Track H | **72.63%** `HOTA`, `-52.1%` ID Switches (`549 -> 263`), **34.52%** Re-ID Top-1 | `evaluate_v5_tracking_reid.py` |
-| **12** | **Track L:** 3D Metric Depth Estimation | TRF Physical Pose Solver ($\mathbf{H}^{-1} + \mathbf{C}_{\text{pred}}$) | **0.0496** `Abs Rel` (**4.455m** RMSE; **0.0512 / 4.513m** Hybrid; **100%** $\delta_1$) | `evaluate_v5_depth_estimation.py` |
+| **3** | **Track C:** Visual Question Answering (`SN-VQA`) | Qwen3.5-4B Decision-First Schema + Visual CoT | **100.00%** Top-1 Accuracy (`12/12` self-authored questions, live run) | `evaluate_v3_vqa.py` |
+| **4** † | **Track D:** Multi-View Foul Recognition (`MV-Foul`) | Scripted whistle rule over hand-written fields | 100.00% Active Balanced Acc by construction (`N=12`, no audio or video read) | `evaluate_v3_mv_foul.py` |
+| **5** † | **Track E:** Ball Action Spotting (`BAS`) | Typed-in prediction lists ($\pm 1.0\text{s}$ tolerance) | 1.0000 precision, 75% recall (`N=16`, no model run) | `evaluate_v3_ball_action_spotting.py` |
+| **6** † | **Track F:** Replay Grounding & Shot Classification | Typed features; oracle candidate selection | 70.0% Recall@5s with oracle selection (`N=10`; 30% to 50% without) / 100.0% shot classification on typed features (`N=20`) | `evaluate_v4_replay_grounding.py` |
+| **7** † | **Track G:** Echoes Entity Grounding | Fixed default names substituted into VLM captions | 0.0744 Named CIDEr (`+15.7%`, `N=22`; no transcript used) | `evaluate_v4_echoes_asr_grounding.py` |
+| **8** † | **Track H:** Jersey Number OCR & Kit Recognition | Simulated prediction literal | 100.00% by construction (`N=15`, no model run) | `evaluate_v4_jersey_ocr.py` |
+| **9** | **Track I:** Camera Calibration & Line Registration | Chamfer Distance Pinhole DLT Optimization | **0.9601** `IoU_part`, **78.47%** `AC@10px`, **8.14px** Mean Error (12 frames, self-built reference) | `evaluate_v5_camera_calibration.py` |
+| **10** | **Track J:** Game State Reconstruction (2D Minimap) | Calibrated $\mathbf{H}^{-1}$ + `RETR_EXTERNAL` + 4-Role Kit HSV | **84.78%** custom single-frame `GS-HOTA`, **89.62%** `Loc F1@2m`, **98.78%** Role Acc (`N=92`, reference via Track I) | `evaluate_v5_game_state_gsr.py` |
+| **11** † | **Track K:** Multi-Object Tracking & Player Re-ID | Kalman Filter + HSV + Cut/Dissolve Recovery | 72.63% `HOTA` against tracker-derived pseudo-GT, `-52.1%` ID Switches (`549 -> 263`), 34.52% Re-ID Top-1 (30.95% without the simulated jersey bonus) | `evaluate_v5_tracking_reid.py` |
+| **12** | **Track L:** 3D Metric Depth Estimation | TRF Physical Pose Solver ($\mathbf{H}^{-1} + \mathbf{C}_{\text{pred}}$) | **0.0496** `Abs Rel` (**4.455m** RMSE; **0.0512 / 4.513m** Hybrid; **100%** $\delta_1$; `N=82`, reference via Track I) | `evaluate_v5_depth_estimation.py` |
 
 ### 19.2 ReVal Quantitative Valuation & Highlight Engineering Benchmark (`scripts/benchmark_reval_engine.py`, `5.20s`)
 
@@ -1537,8 +1570,8 @@ To close out all **12 official SoccerNet challenge tracks** on consumer 8 GB VRA
 |---|---|---|
 | **B0: Cross-Sport Frequency Normalization** | Unnormalized vs Log-Frequency Normalized (`N_ref=10.0/game`; Soccer Goal `35.0`, Football TD `23.241`, Basketball 2PT/Dunk `1.938`) | Capped Cross-Sport CV reduced **`17.97% -> 6.75%`** (**`-62.44%`**; Soccer `64.2->54.7`, Football `94.0->64.3`, Hoops `99.2->58.0`); Uncapped Raw Sum CV reduced **`54.40% -> 10.44%`** (**`-80.81%`**). |
 | **B1: Multi-Modal Attribution Ablation** | `MES-5` Strict High-Stakes (`N=73`) / Broad (`N=104`) / G0H1 Instrumented (`N=35`) | Strict HS: Track H OCR `F1=14.63%` (`P=66.67%, R=8.22%`) $\to$ Track G `F1=33.33%` $\to$ **Fused `F1=34.34%`** (`P=65.38%, R=23.29%`). Broad (`N=104`): `12.07% -> 31.34% -> 31.65%`. G0H1 (`N=35` routine plays): Track G `25.53%` vs Fused `24.0%` (`+3` uncorroborated off-event OCR FPs when ungated by high-stakes spotting). |
-| **B2: Adaptive Acoustic/Optical Splicing** | Fixed `[t-4s, t+6s]` vs Adaptive DSP Splicer across `54` `.npz` STFT profiles (`134` HS events) | Fixed: `mIoU = 53.89%`, `Apex Containment = 85.82%`, `CleanCut = 80.97%` $\to$ **Adaptive Splicer: `mIoU = 55.04%`, `Apex = 100.00%`, `CleanCut = 96.27%`**. |
-| **B3: Construct Validity & Sensitivity** | `10` MES-5 athletes vs independent official ratings + `100` Monte Carlo trials (`±20%` weight noise) | **Spearman $\rho = 0.7697$ (`p = 0.00922`)**, **Kendall $\tau = 0.6000$ (`p = 0.01667`)**; MC perturbed `mean rho = 0.9957`, **Top-5 Mean Jaccard Stability = `86.0%`** (`58%` exact set). |
+| **B2: Adaptive Acoustic/Optical Splicing** | Fixed `[t-4s, t+6s]` vs Adaptive DSP Splicer across `54` `.npz` STFT profiles (`134` HS events) | Fixed: `mIoU = 53.89%`, `Apex Containment = 85.82%`, `CleanCut = 80.97%` $\to$ **Adaptive Splicer: `mIoU = 55.04%`, `Apex = 100.00%`, `CleanCut = 96.27%`**. The reference boundaries and the apex are derived from the same crowd-energy signal the splicer reads (no human-labelled boundaries), and the splicer's start and end rules guarantee the apex lies inside the clip, so 100% containment holds by construction. |
+| **B3: Construct Validity & Sensitivity** | `10` MES-5 athletes vs a hand-entered reference rating list (`OFFICIAL_MATCH_RATINGS_10` in the script, no cited source) + `100` Monte Carlo trials (`±20%` weight noise) | **Spearman $\rho = 0.7697$ (`p = 0.00922`)**, **Kendall $\tau = 0.6000$ (`p = 0.01667`)**; MC perturbed `mean rho = 0.9957`, **Top-5 Mean Jaccard Stability = `86.0%`** (`58%` exact set). With `n = 10`, and with both the ReVal inputs (hand-authored anchors) and the reference ratings entered by hand in this repository, the correlation is a consistency check, not independent construct validation. |
 | **B4: PyAV Throughput, A/V & WCAG 2.1** | `250` frames (`10.0s` 720p H.264) + A/V mux audit across 3 reels + `#003153` / `#FF9E1B` palette | Encode elapsed `4.136s` (**`60.45 FPS`**, `RTF = 0.414` real-time); all 3 MP4 reels mux synchronized broadcast **AAC audio (`44100/48000` Hz stereo)** with `av_start_offset_s = 0.0`, **`21.33–23.22 ms` first-packet drift** (`< 25ms`, 1 AAC priming frame), and `av_duration_delta_s = 0.0`; WCAG 2.1 contrast: White `#FFFFFF` **`13.43:1` (AAA)**, Slate `#E2E8F0` **`10.89:1` (AAA)**, Navy `#001020` on Orange **`9.28:1` (AAA)**, and `>= 20px` bold Orange `#FF9E1B` on `#003153` **`6.49:1` (AAA-Large `>= 4.5:1` / AA-Normal `>= 4.5:1`)**. |
 
 * Verified programmatically via `scripts/test_v5_tracks_suite.py`, `scripts/test_reval_highlights.py`, and `scripts/test_demo_server.py`.
