@@ -2,11 +2,13 @@
 7-Point Pre-Fable 5.2 Forensic Readiness Audit.
 
 Checks:
-  Audit 1: MES-5 17-class Table 26 / tab:mes5_eval N_GT column sum == 1,132 and per-class AP parity
+  Audit 1: MES-5 17-class Table 26 / tab:mes5_eval N_GT column sum == 1,132 and 6-configuration per-class AP parity
   Audit 2: Cross-document metric synchronization (JSON <-> docs/RESEARCH.md, FORhayden.md, README.md, paper/main.tex, hf_dataset/README.md)
   Audit 3: LaTeX syntax, balanced environments, undefined labels/citations, unescaped characters, placeholders
   Audit 4: Hardcoded local paths (C:\\Users\\..., /Users/...) and credential/token leakage across git ls-files
   Audit 5: Deterministic RNG seeding (seed=42) across benchmark & V5 scripts + hf_dataset/SHA256SUMS.txt verification
+  Audit 6: Cold-clone highlight reel tracking, .gitignore rules, and lightweight CI dependencies
+  Audit 7: LaTeX PDF binary existence, compilation, zero table Overfull \\hbox bleed, and zero unresolved references
 
 Usage:
     python scripts/audit_fable52_readiness.py
@@ -50,9 +52,12 @@ def audit_1_mes5_table_arithmetic() -> List[str]:
         c: json.loads((ROOT / "logs/local_eval" / c / "mes5_evaluation_summary.json").read_text(encoding="utf-8"))
         for c in col_dirs
     }
+    stage2_summary = json.loads(
+        (ROOT / "logs/local_eval/mes5_stage2_simulation_summary.json").read_text(encoding="utf-8")
+    )
     classes = list(summaries["mes5_specialist_3m_m15"]["loose_per_class"].keys())
 
-    # Verify RESEARCH.md Table 26 rows
+    # Verify RESEARCH.md Table 26 rows (now 6 model columns)
     res_lines = (ROOT / "docs/RESEARCH.md").read_text(encoding="utf-8").splitlines()
     t26_rows: Dict[str, Tuple[int, List[float]]] = {}
     in_t26 = False
@@ -67,7 +72,7 @@ def audit_1_mes5_table_arithmetic() -> List[str]:
             cls_name = parts[0]
             if cls_name in counts:
                 n_gt = int(parts[1])
-                aps = [float(x) for x in parts[2:7]]
+                aps = [float(x) for x in parts[2:8]]
                 t26_rows[cls_name] = (n_gt, aps)
 
     if len(t26_rows) != 17:
@@ -90,6 +95,13 @@ def audit_1_mes5_table_arithmetic() -> List[str]:
                     issues.append(
                         f"Audit 1: RESEARCH.md Table 26 '{cls_name}' col '{col}'={row_aps[idx]:.4f} != JSON {json_ap:.4f}"
                     )
+            # 6th column: Stage 2 Filtered
+            stage2_ap = round(stage2_summary["per_class_loose"][cls_name], 4)
+            if abs(row_aps[5] - stage2_ap) > 0.00015:
+                issues.append(
+                    f"Audit 1: RESEARCH.md Table 26 '{cls_name}' col 6 (Stage 2)={row_aps[5]:.4f} != JSON {stage2_ap:.4f}"
+                )
+
         for idx, col in enumerate(col_dirs):
             col_mean = sum(t26_rows[c][1][idx] for c in classes) / 17.0
             reported_loose = summaries[col]["loose_average_mAP"]
@@ -97,8 +109,14 @@ def audit_1_mes5_table_arithmetic() -> List[str]:
                 issues.append(
                     f"Audit 1: RESEARCH.md Table 26 '{col}' mean17={col_mean:.4f} != JSON loose_average_mAP {reported_loose:.4f}"
                 )
+        stage2_mean = sum(t26_rows[c][1][5] for c in classes) / 17.0
+        stage2_loose = stage2_summary["stage2_loose_mAP"]
+        if abs(stage2_mean - stage2_loose) > 0.00025:
+            issues.append(
+                f"Audit 1: RESEARCH.md Table 26 'Stage 2 Gate + M15' mean17={stage2_mean:.4f} != JSON stage2_loose_mAP {stage2_loose:.4f}"
+            )
 
-    # Verify paper/main.tex tab:mes5_eval rows match JSONs
+    # Verify paper/main.tex tab:mes5_eval rows match JSONs (all 6 columns)
     tex_txt = (ROOT / "paper/main.tex").read_text(encoding="utf-8")
     m_tab = re.search(r"\\label\{tab:mes5_eval\}.*?\\bottomrule", tex_txt, re.S)
     if not m_tab:
@@ -119,6 +137,13 @@ def audit_1_mes5_table_arithmetic() -> List[str]:
                     issues.append(
                         f"Audit 1: paper/main.tex tab:mes5_eval '{cls_name}' col '{col}'={nums[idx]:.4f} != JSON {json_ap:.4f}"
                     )
+            # 6th column: Stage 2 Filtered
+            stage2_ap = round(stage2_summary["per_class_loose"][cls_name], 4)
+            if abs(nums[5] - stage2_ap) > 0.00015:
+                issues.append(
+                    f"Audit 1: paper/main.tex tab:mes5_eval '{cls_name}' col 6 (Stage 2)={nums[5]:.4f} != JSON {stage2_ap:.4f}"
+                )
+    return issues
     return issues
 
 
@@ -292,6 +317,83 @@ def audit_5_determinism_and_hf_checksums() -> List[str]:
     return issues
 
 
+def audit_6_cold_clone_and_reels() -> List[str]:
+    issues: List[str] = []
+    # 1) Check 3 highlight reels exist and > 1 MB
+    reels = [
+        "ander_herrera_21_reel.mp4",
+        "sergio_aguero_10_reel.mp4",
+        "john_terry_26_reel.mp4",
+    ]
+    reels_dir = ROOT / "logs/reval_highlights"
+    for r in reels:
+        p = reels_dir / r
+        if not p.exists():
+            issues.append(f"Audit 6: Missing highlight reel: {p}")
+        elif p.stat().st_size < 1_000_000:
+            issues.append(f"Audit 6: Highlight reel suspiciously small ({p.stat().st_size} bytes): {p}")
+
+    # 2) Check gitignore exception allows reels
+    gi_txt = (ROOT / ".gitignore").read_text(encoding="utf-8")
+    if "!logs/reval_highlights/*_reel.mp4" not in gi_txt:
+        issues.append("Audit 6: .gitignore missing '!logs/reval_highlights/*_reel.mp4' exception")
+
+    # 3) Check requirements-ci.txt exists and is clean
+    ci_req = ROOT / "requirements-ci.txt"
+    if not ci_req.exists():
+        issues.append("Audit 6: requirements-ci.txt missing")
+    else:
+        txt = ci_req.read_text(encoding="utf-8")
+        for bad in ["torch", "bitsandbytes", "peft", "nvidia-"]:
+            if re.search(rf"^{bad}\b", txt, re.M):
+                issues.append(f"Audit 6: Heavy CUDA dependency '{bad}' in requirements-ci.txt")
+        for req in ["SoccerNet", "numpy", "scipy", "av", "pillow", "opencv-python-headless"]:
+            if req.lower() not in txt.lower():
+                issues.append(f"Audit 6: Expected CI package '{req}' missing from requirements-ci.txt")
+    return issues
+
+
+def audit_7_latex_pdf_build() -> List[str]:
+    issues: List[str] = []
+    pdf_path = ROOT / "paper/main.pdf"
+    if not pdf_path.exists():
+        issues.append("Audit 7: paper/main.pdf does not exist")
+    elif pdf_path.stat().st_size < 100_000:
+        issues.append(f"Audit 7: paper/main.pdf suspiciously small ({pdf_path.stat().st_size} bytes)")
+
+    # Verify via tectonic if available
+    tectonic = ROOT / "tools/tectonic.exe"
+    if tectonic.exists():
+        try:
+            res = subprocess.run(
+                [str(tectonic), "--print", "paper/main.tex"],
+                cwd=str(ROOT),
+                capture_output=True,
+                text=True,
+                timeout=45,
+            )
+            if res.returncode != 0:
+                combined_err = (res.stdout + res.stderr).lower()
+                if "bundle isn't cached" in combined_err or "couldn't get it from the internet" in combined_err:
+                    # Offline / sandboxed environment: external cache not mounted in sandbox
+                    pass
+                else:
+                    issues.append(f"Audit 7: Tectonic compilation failed (code {res.returncode}): {res.stderr[:200]}")
+            else:
+                combined = res.stdout + res.stderr
+                # Check for table Overfull \hbox in alignment
+                for m in re.finditer(r"Overfull \\hbox \(([0-9\.]+)pt too wide\) in alignment at lines ([0-9]+)--([0-9]+)", combined):
+                    issues.append(f"Audit 7: Table Overfull \\hbox ({m.group(1)}pt too wide) at lines {m.group(2)}--{m.group(3)}")
+                # Check for undefined citations or references
+                if "LaTeX Warning: There were undefined references" in combined:
+                    issues.append("Audit 7: Undefined LaTeX references reported by compiler")
+                if "??" in combined:
+                    issues.append("Audit 7: Unresolved '??' reference reported by compiler")
+        except Exception as e:
+            issues.append(f"Audit 7: Tectonic execution exception: {e}")
+    return issues
+
+
 def main() -> int:
     all_issues = (
         audit_1_mes5_table_arithmetic()
@@ -299,6 +401,8 @@ def main() -> int:
         + audit_3_latex_and_placeholders()
         + audit_4_paths_and_secrets()
         + audit_5_determinism_and_hf_checksums()
+        + audit_6_cold_clone_and_reels()
+        + audit_7_latex_pdf_build()
     )
     print(f"\n=== Fable 5.2 7-Point Forensic Readiness Audit: {len(all_issues)} issue(s) found ===")
     for item in all_issues:

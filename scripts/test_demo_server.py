@@ -63,7 +63,11 @@ def run_tests():
         print(f"✓ GET /api/chunk_data: OK ({gt_count} GT, {pred_count} Preds, {win_count} Windows, {dsp_pts} DSP points)")
 
     # 5. Test Video Stream Range Request (HTTP 206)
-    video_url = f"{base_url}/video/gate2_chunks/game_0_half_1_chunk_00.mp4"
+    chunk_sample = WORKSPACE_ROOT / "gate2_chunks/game_0_half_1_chunk_00.mp4"
+    if chunk_sample.exists():
+        video_url = f"{base_url}/video/gate2_chunks/game_0_half_1_chunk_00.mp4"
+    else:
+        video_url = f"{base_url}/video/logs/reval_highlights/ander_herrera_21_reel.mp4"
     range_req = urllib.request.Request(video_url)
     range_req.add_header("Range", "bytes=0-1023")
     with urllib.request.urlopen(range_req) as resp:

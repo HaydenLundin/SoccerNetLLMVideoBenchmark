@@ -4,6 +4,7 @@ __pycache__/
 .env
 *.mkv
 *.mp4
+!logs/reval_highlights/*_reel.mp4
 *.pyc
 
 # Local scratch and temporary test runs
@@ -20,4 +21,14 @@ logs/local_eval_dryrun/
 data/qlora_distillation/frames/
 models/**/checkpoint-*/
 hf_dataset/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.log
+*.synctex.gz
+
 

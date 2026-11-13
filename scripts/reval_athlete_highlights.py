@@ -38,18 +38,34 @@ GATE2_DIR = WORKSPACE_ROOT / "gate2_chunks"
 
 @lru_cache(maxsize=16)
 def _load_bold_font(size: int) -> Any:
-    """Loads and caches a bold TrueType font (falls back cleanly off Windows)."""
-    for candidate in (
+    """Loads and caches a bold TrueType font across Windows, Linux, and macOS."""
+    candidates = [
+        # Windows
         r"C:\Windows\Fonts\arialbd.ttf",
         r"C:\Windows\Fonts\segoeuib.ttf",
+        # Linux (Debian, Ubuntu, Arch, Fedora)
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-    ):
-        if Path(candidate).exists():
+        "/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/liberation-sans/LiberationSans-Bold.ttf",
+        # macOS
+        "/Library/Fonts/Arial Bold.ttf",
+        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        # Local / PATH lookup
+        "DejaVuSans-Bold.ttf",
+        "LiberationSans-Bold.ttf",
+        "arialbd.ttf",
+    ]
+    for candidate in candidates:
+        if Path(candidate).exists() or candidate.endswith(".ttf"):
             try:
                 return ImageFont.truetype(candidate, size=size)
             except Exception:
                 pass
-    return ImageFont.load_default()
+    try:
+        return ImageFont.load_default(size=size)
+    except Exception:
+        return ImageFont.load_default()
 
 
 def render_reval_hud_overlay(
