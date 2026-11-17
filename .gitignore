@@ -15,6 +15,7 @@ gate2_raw_video/
 test_eval_synthetic_predictions/
 test_eval_ground_truth/
 logs/local_eval_dryrun/
+logs/local_eval/scratch_*/
 
 # Large binaries, extracted frames, intermediate model checkpoints
 *.npz

@@ -89,9 +89,9 @@ pretty_name: SoccerNet MES-5 VLM Benchmark & ReVal Telemetry
 [![Hardware: 8GB VRAM](https://img.shields.io/badge/Hardware-8GB%20VRAM%20Compatible-brightgreen.svg)]()
 [![Cloud Cost: $0](https://img.shields.io/badge/Cloud%20Cost-%240.00-success.svg)]()
 
-This repository contains the complete empirical evaluation artifacts, macro-chunk manifests, out-of-sample $M_{15}$ Markov transition matrices, model predictions, V5 spatial/geometric track summaries (Tracks I--L), and **ReVal Athlete Valuation** telemetry & quantitative benchmarks for the **SoccerNet VLM Modernization Benchmark (V5 12-Track Ecosystem)**.
+This repository contains the complete empirical evaluation artifacts, macro-chunk manifests, out-of-sample $M_{15}$ Markov transition matrices, model predictions, V5 spatial/geometric track summaries (Tracks I--L), and **ReVal Athlete Valuation** telemetry & quantitative benchmarks for the **SoccerNet VLM Modernization Benchmark (V2--V5)**.
 
-Executed strictly on an **8 GB consumer workstation GPU (NVIDIA RTX 3000 Ada under Windows WDDM)** and local CPU at **$0 in cloud compute**, this benchmark establishes the official edge baseline across all **12 official SoccerNet challenge tracks** on untrimmed broadcast soccer video.
+Executed strictly on an **8 GB consumer workstation GPU (NVIDIA RTX 3000 Ada under Windows WDDM)** and local CPU at **$0 in cloud compute**, this benchmark evaluates open-weight Vision-Language Models on untrimmed broadcast soccer video across Action Spotting (Track A), Dense Video Captioning (Track B), and ten single-half task harnesses (Tracks C--L).
 
 ---
 
@@ -104,9 +104,12 @@ Evaluated across the **Canonical MES-5 Benchmark** (5 complete matches, 10 halve
 | **Qwen3.5-4B Solo** | 0.1564 | 0.0562 | 14 / 17 | 0.8235 | $1.0\times$ |
 | **MiniCPM-V 4.6 Solo** | 0.0809 | 0.0189 | 15 / 17 | 0.8824 | $1.0\times$ |
 | **LFM2.5-VL-3B Solo** | 0.0206 | 0.0006 | 5 / 17 | 0.2941 | $1.2\times$ |
-| **MECE 3-Model Ensemble** | 0.1733 | 0.0562 | **17 / 17** | **1.0000** | $0.4\times$ |
-| **MECE + $M_{15}$ Markov Rescorer** | 0.1833 | 0.0607 | **17 / 17** | **1.0000** | $0.4\times$ |
-| **Stage 2 Filtered + Concise-CoT** | **0.1840** | **0.0609** | **17 / 17** | **1.0000** | **$3.3\times$ GPU Speedup** |
+| **MECE 3-Model Ensemble (in-sample)** | 0.1733 | 0.0562 | **17 / 17** | **1.0000** | $0.4\times$ |
+| **MECE + $M_{15}$ Prior (in-sample)** | 0.1833 | 0.0607 | **17 / 17** | **1.0000** | $0.4\times$ |
+| **Stage 2 Filtered (Window Skipping)** | **0.1840** | **0.0609** | **17 / 17** | **1.0000** | **$1.03\times$ Skipping Speedup** |
+
+> **Out-of-Sample Routing (5-Fold LOMO Cross-Validation):** Selecting specialist routing out-of-sample across the 5 fixtures yields **0.1613 Loose-mAP** (+3.1% over Qwen Solo) and **0.0261 Tight-mAP**. Tight-mAP drops because inter-model latency variance (Qwen -1.20s, MiniCPM -2.95s, LFM -3.10s) introduces 1.5–2.0s uncalibrated temporal jitter outside the strict ±1.0s window, confirming that continuous video ensembling requires temporal synchrony alignment alongside semantic routing.
+> **Stage 2 Latency Note:** The 0.1840 row reflects CPU acoustic/optical window skipping across all 687 windows (18 windows skipped, ~1.03x speedup). The $3.3\times$ Concise-CoT acceleration (18.5s $\to$ 5.6s/window) was benchmarked on a single 10-minute chunk (`game_0_half_1_chunk_00`).
 
 ### Complete 17-Class Breakdown (Official SoccerNet DevKit)
 - **Red card:** **0.7727 Loose-mAP / 0.5057 Tight-mAP** (100% detection: John Terry @ -1.10s, Mark Noble @ -2.28s)
@@ -142,11 +145,11 @@ Evaluated across the **Canonical MES-5 Benchmark** (5 complete matches, 10 halve
 │   ├── reval_mes5_athlete_leaderboard.json    # 12-athlete 3-pillar valuation scores & NIL multipliers
 │   ├── reval_comprehensive_benchmark.json     # 5 quantitative benchmarks (B0-B4) across MES-5
 │   └── reval_scoring_formula.json             # Weights, log-frequency anchors, and attribution config
-├── v5_spatial_tracks/                         # V5 Tracks I-L Evaluation Summaries (Local CPU)
-│   ├── camera_calibration_summary.json        # Track I: IoU_part=0.9601, AC@10px=78.47%, 8.14px err
-│   ├── game_state_gsr_summary.json            # Track J: GS-HOTA=84.78%, Loc F1@2m=89.62%, 98.78% role acc
-│   ├── tracking_reid_summary.json             # Track K: HOTA=72.63%, -52.1% IDSW, 34.52% Re-ID Top-1
-│   └── depth_estimation_summary.json          # Track L: Abs Rel=0.0496 (4.455m RMSE, 100% delta_1)
+├── v5_spatial_tracks/                         # V5 Tracks I-L Single-Half Summaries (Local CPU)
+│   ├── camera_calibration_summary.json        # Track I: IoU_part=0.9601, AC@10px=78.47% (self-derived reference)
+│   ├── game_state_gsr_summary.json            # Track J: GS-HOTA=84.78%, Loc F1@2m=89.62% (derived via Track I)
+│   ├── tracking_reid_summary.json             # Track K: HOTA=72.63% (pseudo-GT), Re-ID Top-1 34.52% (w/ sim bonus)
+│   └── depth_estimation_summary.json          # Track L: Abs Rel=0.0496, 4.455m RMSE (derived via Track I)
 └── evaluate_mes5_benchmark.py                 # 1-command evaluation reproduction script
 ```
 
