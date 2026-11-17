@@ -798,7 +798,7 @@ $$\Pr(\text{label} \mid \text{video}) = \sum_{\text{comm}} \Pr(\text{comm} \mid 
 - Because the subsequent token is `label`, the autoregressive attention heads attend directly to the phrase *"corner quadrant"*, concentrating probability mass onto `"label": "Corner"` ($0.98$ confidence).
 - This visual-linguistic grounding enabled Joint-CoT to achieve **54.55% AP on Corner** (2/2 hits, zero false positives) and **25.00% AP on Shots off target**.
 
-2. **The "00:00" First-Token Prior Collapse (Mathematical Proof of Mode Collapse):**
+2. **The "00:00" First-Token Prior Collapse (Empirical Mode Collapse Ablation):**
 - Inspecting the exact match timestamps of the 6 spurious `Kick-off` events in Spotting-Only reveals an unmistakable mathematical pattern relative to the $S = 45\text{s}$ sliding-window stride:
   - `00:45` = Window 1 start ($45\text{s}$) $+$ **"00:00"**
   - `02:15` = Window 3 start ($135\text{s}$) $+$ **"00:00"**
@@ -873,7 +873,7 @@ The 20 models span dense transformers, hybrid linear-attention models, state-spa
 | ID | Model Architecture | Family / Org | Reported Parameters | Precision / Quant | Max Feasible Window ($W$) | Load VRAM | Peak VRAM | Window Latency | Hardware Status | Empirical Task Verdict & Deployment Findings |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---|
 | **1** | **Qwen3.5-4B** | Alibaba / Qwen | 4.0B | 4-bit NF4 | **60s (60 frames)** | 3.25 GiB | 7.07 GiB | 38.60s | **SURVIVOR** | **Anchor Specialist (Pass):** 97.9% Corner AP, 0.0520 Tight-mAP. 3:1 linear-to-full attention hybrid decodes 60s windows under 7.50 GiB. |
-| **2** | **MiniCPM-V 4.6** | OpenBMB | ~4.5B–8.0B (SigLIP-400M + LLM) | 4-bit NF4 | **60s (60 frames)** | 4.66 GiB | 7.38 GiB | 32.40s | **SURVIVOR** | **Domain Specialist (Pass):** Highest recall (27/38 captions, 81.3% match), Foul/Duel anchor. High-density visual resampler fits 60s windows. |
+| **2** | **MiniCPM-V 4.6** | OpenBMB | ~4.5B–8.0B (SigLIP-400M + LLM) | 4-bit NF4 | **60s (60 frames)** | 2.60 GiB | 7.38 GiB | 32.40s | **SURVIVOR** | **Domain Specialist (Pass):** Highest recall (27/38 captions, 81.3% match), Foul/Duel anchor. High-density visual resampler fits 60s windows. |
 | **3** | **LFM2.5-VL-3B** | Liquid AI | 3.1B | 4-bit NF4 | **30s (30 frames)** | 3.12 GiB | 6.77 GiB | **12.95s** | **SURVIVOR** | **Domain Specialist (Pass):** 0.1486 AP on `Ball out of play`. Short-convolution backbone provides 2.5× faster inference; $-3.10\text{s}$ calibration yields 3.75× Tight-mAP. |
 | **4** | **SmolVLM2-2.2B** | Hugging Face | 2.2B | Native BF16 | **15s (15 frames)** (reaches 60s [6.06 GiB] with patch splitting disabled) | 4.41 GiB | 6.94 GiB | 18.20s | **SURVIVOR** | **Feasible Edge Model (Pass):** Clean video sequence execution; 15s at default unpooled 384p tiling; reaches 60s (6.06 GiB) when frame patch splitting is disabled (`do_image_splitting=False`). |
 | **5** | **Moondream2** | Vikhyat | 1.8B | Native BF16 | **60s (Contact Sheet)**| 3.84 GiB | 4.20 GiB | **4.10s** | **SURVIVOR** | **Low-Compute Baseline (Pass):** Ultra-fast 2D spatial storyboard composite; spatial tile downsampling loses sub-second player-ball interactions. |

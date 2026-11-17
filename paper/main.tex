@@ -126,7 +126,7 @@ To address these challenges, we present a complete systems and modeling framewor
     \item \textbf{The 20-Architecture Hardware Survival Matrix:} A systems taxonomy benchmarking 20 distinct open-weight multimodal model families under an 8\,GB WDDM envelope ($<7.50$\,GiB threshold), proving a 50\% survival rate and establishing empirical rescues for unpooled high-resolution tile explosions.
     \item \textbf{The PyAV Single-Pass Packet Streaming Engine:} A lightweight linear video decoding pipeline that eliminates seek-latency thrashing, enforces exact packet presentation timestamps ($0.000\text{s}$ drift), and consumes only 199\,MB of system RAM.
     \item \textbf{The Digital Clock Badge ($[00:\text{SS}]$) Paradigm:} A zero-parameter visual timestamping mechanism burned directly into frame pixels that completely eliminates minute-versus-second hallucination.
-    \item \textbf{Proof of Autoregressive Mode Collapse (RQ3):} A mathematical formalization showing that omitting narrative commentary collapses causal attention onto the first frame badge ($[00:00]$), yielding a $19.4\times$ drop in Tight-mAP on one 10-minute chunk (16 events).
+    \item \textbf{Single-Chunk CoT Grounding Ablation (RQ3):} An empirical ablation showing that omitting narrative commentary collapses causal attention onto the first frame badge ($[00:00]$), yielding a $19.4\times$ drop in Tight-mAP on one 10-minute chunk (16 events).
     \item \textbf{CPU Audio Gating and Temporal Offsets (RQ4):} A zero-VRAM whistle and crowd-roar gate, together with signed timestamp residuals per model (Qwen3.5-4B median $+1.20\text{s}$, MiniCPM-V 4.6 median $-2.95\text{s}$, 15 matched detections each). The proposed $+2.95\text{s}$ cross-modal offset is a hypothesis that the gate experiment does not confirm (\Cref{sec:rq4}).
     \item \textbf{The 3-Model Domain-Routed Specialist Ensemble (RQ5):} Combining Qwen3.5-4B (buildup anchor), MiniCPM-V 4.6 (duel specialist), and LFM2.5-VL-3B (boundary scanner) to reach 20.87\% Active Loose-mAP on one half, and 20.00\% when routing is selected by 5-fold Leave-One-Chunk-Out (LOCO) cross-validation.
     \item \textbf{Downstream Task Harnesses (Tracks C--H):} A live SN-VQA-style run (12/12 on self-authored questions), plus scripted illustrative harnesses for Multi-View Foul Recognition, Ball Action Spotting, Replay Grounding, Echoes Entity Grounding, and Jersey Number OCR. The latter five score predictions written in the harness and do not run a model (\Cref{sec:multitask}).
@@ -186,7 +186,7 @@ To determine the physical limits of modern vision-language models on edge hardwa
 \midrule
 \multicolumn{9}{@{}l}{\textbf{Verified Live Hardware Survivors (10 / 20 = 50\% Survival Rate)}} \\
 \textbf{Qwen3.5-4B} & Alibaba / Qwen & 4.0B & 4-bit NF4 & \textbf{60s (60f)} & 3.25\,GiB & 7.07\,GiB & 38.60s & \textcolor{survivorgreen}{\textbf{SURVIVOR (Anchor)}} \\
-\textbf{MiniCPM-V 4.6} & OpenBMB & 4.5B--8B & 4-bit NF4 & \textbf{60s (60f)} & 4.66\,GiB & 7.38\,GiB & 32.40s & \textcolor{survivorgreen}{\textbf{SURVIVOR (Specialist)}} \\
+\textbf{MiniCPM-V 4.6} & OpenBMB & 4.5B--8B & 4-bit NF4 & \textbf{60s (60f)} & \textbf{2.60\,GiB} & 7.38\,GiB & 32.40s & \textcolor{survivorgreen}{\textbf{SURVIVOR (Specialist)}} \\
 \textbf{LFM2.5-VL-3B} & Liquid AI & 3.1B & 4-bit NF4 & \textbf{30s (30f)} & 3.12\,GiB & 6.77\,GiB & \textbf{12.95s} & \textcolor{survivorgreen}{\textbf{SURVIVOR (Boundary)}} \\
 SmolVLM2-2.2B & Hugging Face & 2.2B & Native BF16 & 15s (15f)* & 4.41\,GiB & 6.94\,GiB & 18.20s & \textcolor{survivorgreen}{\textbf{SURVIVOR}} \\
 Moondream2 & Vikhyat & 1.8B & Native BF16 & 60s (Grid) & 3.84\,GiB & 4.20\,GiB & \textbf{4.10s} & \textcolor{survivorgreen}{\textbf{SURVIVOR}} \\
@@ -242,7 +242,7 @@ MiniCPM-V 4.6 & 4-bit NF4 & \textbf{2.60\,GiB} & \textbf{7.38\,GiB} & \textcolor
 }
 \end{table}
 
-\section{Dual-Task Synergy \& Mode Collapse Proof}
+\section{Dual-Task Synergy \& Single-Chunk CoT Grounding}
 \label{sec:rq3}
 
 \subsection{Mathematical Formulation of Dual-Task Spotting}
@@ -253,7 +253,7 @@ We formalize joint action spotting and dense commentary as joint autoregressive 
 \end{align}
 where $c_i$ denotes natural-language commentary, $l_i$ denotes the categorical event label, and $t_i$ denotes the timestamp string $[00:\text{SS}]$.
 
-\subsection{Proof of the ``00:00'' First-Token Prior Collapse}
+\subsection{Single-Chunk CoT Grounding and First-Token Prior Collapse}
 In research question RQ3, we conducted a controlled ablation removing $c_i$, forcing the model into \textit{Spotting-Only} mode:
 \begin{equation}
     P_{\text{spot}}(\mathbf{Y}|\mathbf{V}) = \prod_{i=1}^M P(t_i | \mathbf{V}, \mathbf{Y}_{<i}) \cdot P(l_i | t_i, \mathbf{V}, \mathbf{Y}_{<i})
