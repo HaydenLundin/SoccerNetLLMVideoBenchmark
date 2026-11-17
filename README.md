@@ -39,11 +39,11 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 
 | Research Track | System Configuration | Primary Metric | Result | Breakthrough / Takeaway |
 |---|---|---|:---:|---|
-| **Track A (Spotting)** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **24.15%** | **0.0845 Tight-mAP (+34.0% gain)**, 55.4% match recall via out-of-sample Markov causal handshakes. |
-| **Track A (Spotting)** | **3-Model Domain-Routed Specialist** | **Active Loose-mAP** | **20.87%** | Beats all single models; combines Qwen3.5, MiniCPM-V, and LFM2.5. |
-| **Track A (Spotting)** | **3-Model Ensemble (5-Fold LOCO CV)** | **Out-of-Sample mAP** | **20.00%** | Strict Leave-One-Chunk-Out cross-validation proves zero data leakage. |
-| **Track B (Captioning)** | "Best-Localizer + Best-Narrator" Graft | Raw CIDEr | **0.0520** | **+32.0% CIDEr boost** (81.3% temporal recall) by grafting Qwen commentary onto specialist hits. |
-| **Track B (Captioning)** | Delexicalized Role Normalization | ROUGE-L / METEOR | **+16% to +31%** | Proves open VLMs perceive tactical actions; roster naming is the bottleneck. |
+| **Track A (Spotting)** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **24.15%** | **0.0845 Tight-mAP (+34.0% gain)**, 55.4% match recall. The $M_{19}$ matrix is out-of-sample, but the routing and rescoring rules were developed on this match (base 21.45% after a routing revision). |
+| **Track A (Spotting)** | **3-Model Domain-Routed Specialist** | **Active Loose-mAP** | **20.87%** | In-sample routing; above each single model on this half (Qwen3.5-4B alone: 14.89%). |
+| **Track A (Spotting)** | **3-Model Ensemble (5-Fold LOCO routing)** | **Active Loose-mAP** | **20.00%** | Routing chosen on four chunks and applied to the fifth, pooled (35 / 65 hits). Temporal shifts were fitted on the whole half; no per-fold variance is computed. |
+| **Track B (Captioning)** | "Best-Localizer + Best-Narrator" Graft | Raw CIDEr | **0.0520** | +32.0% over the ungrafted ensemble (0.0394; 81.3% temporal recall), still below Qwen3.5-4B alone (0.0745). |
+| **Track B (Captioning)** | Delexicalized Role Normalization | ROUGE-L / METEOR | **+8% to +36% / +10% to +25%** | Suggests roster naming is part of the error; absolute scores stay low (ROUGE-L 0.10 to 0.15 on 20 to 27 captions) and CIDEr does not move consistently. |
 | **Track C (SN-VQA)** | Qwen3.5-4B (Decision-First Schema) | **Top-1 Accuracy** | **100.00%** | 12/12 on self-authored questions (live run; smoke test, not an official SN-VQA set). |
 | **Track D (MV-Foul)** † | Scripted whistle rule | Active Balanced Acc | 100.00% (scripted) | N = 12 hand-authored duels; holds by construction, no audio or video read. |
 | **Track E (BAS)** † | Typed-in prediction lists | Precision at $\pm 1.0\text{s}$ | 1.0000 (scripted) | N = 16; 75.0% recall; "mAP@1" in the harness is precision; no model run. |
@@ -56,7 +56,7 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 | **Track L (3D Depth)** | **TRF Pinhole Raycast / Hybrid** | **`Abs Rel` / `RMSE` ($\delta_1$)** | **0.0496 / 4.46m (`100%`)** | Beats scale-prior baseline (`32.60m` RMSE); hybrid regularizer scores `0.0512 / 4.51m`. |
 | **Macro Corpus (MES-5)** | **3-Model Specialist + $M_{15}$ Prior** | **Official Loose / Tight mAP** | **0.1833 / 0.0607** | 17 / 17 active classes across 1,132 events in 10 halves. In-sample: routing and rescoring rules were revised on MES-5. Qwen3.5-4B solo is 0.1564 / 0.0562. |
 | **Macro Corpus (MES-5)** | 3-Model routing, 5-fold leave-one-match-out | Official Loose / Tight mAP | 0.1613 / 0.0261 | Out-of-sample routing estimate; four distinct partitions across five folds, none equal to the canonical one. |
-| **Systems (Stage 2)** | CPU Window Skip (simulated on MES-5) | Loose-mAP / Windows Skipped | 0.1840 / 2.6% | 100.4% mAP retention (0.0609 Tight) with 18 of 687 windows masked (about 1.03×). The 3.3× Concise-CoT speedup was measured on one chunk and not scored on MES-5. |
+| **Systems (Stage 2)** | CPU Window Skip (simulated on MES-5) | Loose-mAP / Windows Skipped | 0.1840 / 2.6% | 100.4% mAP retention (0.0609 Tight) with 18 of 687 windows masked (about 1.03×). The 3.3× Concise-CoT speedup was measured on one chunk, where Tight-mAP fell from 0.0389 to 0.0020, and was not scored on MES-5. |
 | **Demonstration** | **Interactive Web Cockpit (`apps/demo/`)** | **Latency / FPS** | **60 FPS Scrubbing** | Standalone Python HTTP 206 streamer + Canvas waveform visualizer across all 75 chunks. |
 | **Cross-Sport Transfer** | **Multi-Sport Adapter (Football/Hoops)** | **CV Reduction (`B0`)** | **-62.44% CV (`6.75%`)** | Log-frequency anchoring aligns Soccer/Football/Hoops (uncapped sum CV `-80.81%`). |
 | **Athlete Valuation (ReVal)** | **3-Pillar Valuation & Splicer (`B1`–`B4`)** | Rank Corr / Attribution F1 | $\rho=0.770$ (n = 10) / 34.34% F1 | Leaderboard is hand-curated (12 anchors); $\rho$ is against a hand-entered rating list, not independent validation. **60.45 FPS** H.264+AAC reels (`<=23.2ms` drift) & WCAG AAA-Large/AA HUD. |
@@ -75,14 +75,15 @@ Across 45 continuous minutes of broadcast video (Half 1, 65 official ground-trut
 - Stamping high-contrast digital clock badges `[00:00]` through `[00:59]` into frame corner pixels allows model visual attention heads to read elapsed time directly, completely eliminating minute-vs-second hallucinations.
 
 ### 3. RQ3: Autoregressive Chain-of-Thought (CoT) Synergy
-- In our controlled ablation, removing the natural-language `commentary` field caused a **19.4× collapse in Tight-mAP** ($0.0389 \to 0.0020$).
-- **The "00:00" First-Token Prior Collapse:** In Spotting-Only mode (`{"timestamp": "MM:SS", "label": "..."}`), `timestamp` is emitted first before visual reasoning occurs. The decoder collapses onto the first badge `[00:00]`, emitting 6 spurious `Kick-off` events at exact window-stride boundaries. Generating commentary first forces cross-attention to locate the active play before committing to a timestamp.
+- In our ablation on one 10-minute chunk (16 ground-truth events, single run), removing the natural-language `commentary` field caused a **19.4× collapse in Tight-mAP** ($0.0389 \to 0.0020$).
+- **The "00:00" First-Token Prior Collapse:** In Spotting-Only mode (`{"timestamp": "MM:SS", "label": "..."}`), `timestamp` is emitted first before visual reasoning occurs. The decoder collapses onto the first badge `[00:00]`, emitting 6 spurious `Kick-off` events at exact window-stride boundaries. Generating commentary first reduces this prior but does not remove it: 6 of the 23 Joint-CoT predictions also sit on window starts.
 
-### 4. RQ4: Zero-VRAM Audio DSP Grounding & The Synchrony Law
+### 4. RQ4: Zero-VRAM Audio DSP Grounding & a Synchrony Hypothesis
 - Bypassed GPU VRAM limits by running Short-Time Fourier Transforms (`scipy.signal` STFT) on CPU over 44.1 kHz AAC audio in **3.22 seconds**:
   - **Fox 40 Referee Whistle Flux ($3,500\text{ Hz} - 4,200\text{ Hz}$):** Extracted 55 discrete whistle peaks ($z \ge 4.0$).
   - **Crowd Roar Decibel Surge ($200\text{ Hz} - 2,000\text{ Hz}$):** Extracted 104 crowd roars ($\ge +5.0\text{ dB}$, peaking at $+16.32\text{ dB}$ on Goal).
-- **The Cross-Modal Temporal Synchrony Law:** Models anchored on action initiation (MiniCPM-V 4.6, $\mu_{\Delta t} = -1.68\text{s}$) precede physical whistle blows by seconds. Initiator-biased models must be shifted by $+2.95\text{s}$ before causal acoustic gating. Synchronized selective gating pruned 5 phantom goals while preserving 20.63% Active Loose-mAP.
+- **A cross-modal synchrony hypothesis (not confirmed):** MiniCPM-V 4.6's matched detections precede the labels by a median of $2.95\text{s}$ (mean $-1.68\text{s}$, SD $8.6\text{s}$, $n=15$), which suggested shifting it by $+2.95\text{s}$ before whistle gating. The data do not support this: the offset is not distinguishable from zero, MiniCPM's four matched fouls are $5.7$ to $8.2\text{s}$ late, and the shift lowers its Tight-mAP ($0.0128 \to 0.0033$) and Foul AP ($0.2307 \to 0.1853$).
+- **What the gate experiment shows:** Both ensemble gate rows use the same $+2.95\text{s}$-shifted input. The pruning gate cuts ensemble Foul AP from 0.1853 to 0.0289; the selective gate restores it to 0.1563 by not pruning fouls, removes 5 of 10 Goal predictions without changing Goal AP, and leaves Active Loose-mAP at 20.63% (20.87% ungated). On Qwen3.5-4B alone the pruning gate gives a small gain (Tight-mAP $0.0520 \to 0.0543$).
 
 ---
 
@@ -95,7 +96,7 @@ The 20-Architecture Multimodal Deployment Matrix (8 GB GDDR6 VRAM, 63 GB RAM)
  ├── 🟢 10 Verified Live Hardware Survivors (50% Survival Rate)
  │    ├── 60s Full-Window Survivors (4-bit NF4 & Contact Sheet)
  │    │    ├── Qwen3.5-4B (W=60s; Peak 7.07 GiB; Tactical Buildup Anchor; 97.9% Corner AP)
- │    │    ├── MiniCPM-V 4.6 (W=60s; Peak 7.38 GiB; Duel/Offside Specialist; 81.3% Caption Recall)
+ │    │    ├── MiniCPM-V 4.6 (W=60s; Peak 7.38 GiB; Duel/Offside Specialist; 84.4% Caption Recall)
  │    │    ├── Qwen2-VL-2B (W=60s; Peak 5.37 GiB; Ultra-fast 6.8s/win; Subject to RQ3 00:00 mode collapse)
  │    │    └── Moondream2 (W=60s; Peak 4.20 GiB; 4.1s 2D Contact Sheet Storyboard Baseline)
  │    ├── 30s Rapid Transition Specialist
@@ -178,7 +179,7 @@ pip install transformers accelerate bitsandbytes av scipy pillow soccernet pydan
 ### 2. Run Local VLM Inference with Concise-CoT & CPU Window Skipping (Stage 2)
 
 ```bash
-# Run Qwen3.5-4B with 3.3x latency acceleration (Concise-CoT <= 15 words, CPU DSP skipping)
+# Run Qwen3.5-4B with Concise-CoT (<= 15 words) and CPU DSP skipping. Faster, but Tight-mAP fell from 0.0389 to 0.0020 on chunk 0.
 python scripts/run_local_benchmark.py --model qwen3.5-4b --chunk-index 0 --concise-cot --skip-inactive
 
 # Run full 45-minute Half 1 (Chunks 00-04)

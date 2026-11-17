@@ -43,8 +43,8 @@ Video action spotting and dense commentary generation in long-form, untrimmed sp
 In this work, we present the \textbf{SoccerNet VLM Modernization Benchmark (V2--V5)}, an evaluation of modern open-weight Vision-Language Models (VLMs) on SoccerNet Action Spotting (Track A) and Dense Video Captioning (Track B).
 To democratize sports video understanding, we execute the entire benchmark locally on an 8\,GB consumer laptop GPU (NVIDIA RTX 3000 Ada under Windows WDDM) at exactly \$0 cloud compute spend.
 We audit 20 candidate vision-language architectures, identifying a 50\% hardware survival rate and isolating three catastrophic edge bottlenecks: unpooled AnyRes dynamic tiling explosions ($113.8$\,GiB virtual allocations on 15 frames), unquantized Per-Layer Embedding tables ($>9.1$\,GiB initial footprints), and Windows JIT compiler hurdles.
-To overcome these limits, we engineer: (1) a single-pass streaming decoder consuming only 199\,MB RAM with 0.000s seek drift; (2) burned-in high-contrast digital clock badges ($[00:\text{SS}]$) eliminating temporal count hallucinations; (3) a 3-Model Domain-Routed Specialist Ensemble (Qwen3.5-4B, MiniCPM-V 4.6, LFM2.5-VL-3B); (4) a mathematical proof of the ``00:00'' First-Token Prior Mode Collapse when Chain-of-Thought commentary is omitted ($19.4\times$ Tight-mAP drop); and (5) the Cross-Modal Temporal Synchrony Law, showing that initiator-biased visual detections must be shifted by $+2.95\text{s}$ before causal acoustic whistle gating.
-On a single broadcast half (65 events) the ensemble reaches 20.87\% Active Loose-mAP, and 20.00\% under 5-fold Leave-One-Chunk-Out cross-validation.
+To overcome these limits, we engineer: (1) a single-pass streaming decoder consuming only 199\,MB RAM with 0.000s seek drift; (2) burned-in high-contrast digital clock badges ($[00:\text{SS}]$) eliminating temporal count hallucinations; (3) a 3-Model Domain-Routed Specialist Ensemble (Qwen3.5-4B, MiniCPM-V 4.6, LFM2.5-VL-3B); (4) a formal account of the ``00:00'' First-Token Prior Mode Collapse, with an ablation on one 10-minute chunk (16 events) in which omitting Chain-of-Thought commentary cuts Tight-mAP from 0.0389 to 0.0020 ($19.4\times$); and (5) a zero-VRAM CPU audio gate that raises Qwen3.5-4B Tight-mAP from 0.0520 to 0.0543 but lowers ensemble Foul AP unless foul pruning is disabled. A proposed $+2.95\text{s}$ cross-modal offset rests on 15 matched detections and is not confirmed by the gate experiment.
+On a single broadcast half (65 events) the ensemble reaches 20.87\% Active Loose-mAP, and 20.00\% when its routing is chosen by 5-fold Leave-One-Chunk-Out cross-validation.
 On the five-match MES-5 benchmark (1,132 events, official SoccerNet DevKit, all 17 classes), Qwen3.5-4B alone scores 0.1564 Loose-mAP. The ensemble with a Markov transition prior estimated on 15 disjoint matches scores 0.1833, but its routing partition and rescoring rule were revised on MES-5 itself; class-level routing selected by leave-one-match-out cross-validation scores 0.1613 Loose-mAP and 0.0261 Tight-mAP, against 0.0562 Tight-mAP for Qwen3.5-4B alone.
 We also release harnesses for ten further SoccerNet task families (Tracks C--L) and an athlete-valuation demonstrator (ReVal). These are small single-half studies: Tracks D, E, F, G, H, and K use scripted predictions or self-derived references and are reported as illustrations, not as model measurements.
 All code, dataset splits, and reproducible evaluation harnesses are released under an open-source license.
@@ -117,7 +117,7 @@ The emergence of Multimodal Vision-Language Models (VLMs)~\cite{qwen2025qwen25vl
     \draw [arrow] (fuse.south) -- ++(0,-0.4) -| (out_vqa.north);
     \draw [arrow] (fuse.south) -- ++(0,-0.4) -| (out_down.north);
 \end{tikzpicture}
-\caption{\textbf{The SoccerNet VLM Modernization Architecture.} An untrimmed 45-minute broadcast half is streamed through a zero-drift PyAV packet reader and stamped with visual wristwatch badges $[00:\text{SS}]$. Parallel multi-scale sliding windows feed our 3-Model Domain-Routed Specialist Ensemble. Detections are temporally calibrated and gated via a zero-VRAM CPU audio STFT filter operating under the Cross-Modal Temporal Synchrony Law, generating predictions across all five official SoccerNet challenge tracks at \$0 cloud compute cost.}
+\caption{\textbf{The SoccerNet VLM Modernization Architecture.} An untrimmed 45-minute broadcast half is streamed through a zero-drift PyAV packet reader and stamped with visual wristwatch badges $[00:\text{SS}]$. Parallel multi-scale sliding windows feed our 3-Model Domain-Routed Specialist Ensemble. Detections are temporally shifted and gated via a zero-VRAM CPU audio STFT filter, feeding the Track~A and Track~B evaluations at \$0 cloud compute cost. Tracks~C--E are separate harnesses (\Cref{sec:multitask}).}
 \label{fig:architecture}
 \end{figure*}
 
@@ -126,9 +126,9 @@ To address these challenges, we present a complete systems and modeling framewor
     \item \textbf{The 20-Architecture Hardware Survival Matrix:} A systems taxonomy benchmarking 20 distinct open-weight multimodal model families under an 8\,GB WDDM envelope ($<7.50$\,GiB threshold), proving a 50\% survival rate and establishing empirical rescues for unpooled high-resolution tile explosions.
     \item \textbf{The PyAV Single-Pass Packet Streaming Engine:} A lightweight linear video decoding pipeline that eliminates seek-latency thrashing, enforces exact packet presentation timestamps ($0.000\text{s}$ drift), and consumes only 199\,MB of system RAM.
     \item \textbf{The Digital Clock Badge ($[00:\text{SS}]$) Paradigm:} A zero-parameter visual timestamping mechanism burned directly into frame pixels that completely eliminates minute-versus-second hallucination.
-    \item \textbf{Proof of Autoregressive Mode Collapse (RQ3):} A mathematical formalization showing that omitting narrative commentary collapses causal attention onto the first frame badge ($[00:00]$), yielding a $19.4\times$ drop in Tight-mAP.
-    \item \textbf{The Cross-Modal Temporal Synchrony Law (RQ4):} Formulating the physical causality between visual contact and acoustic consequence, showing that action-initiator predictions must be shifted by $+2.95\text{s}$ before acoustic whistle gating is applied.
-    \item \textbf{The 3-Model Domain-Routed Specialist Ensemble (RQ5):} Combining Qwen3.5-4B (buildup anchor), MiniCPM-V 4.6 (duel specialist), and LFM2.5-VL-3B (boundary scanner) to achieve 20.87\% Active Loose-mAP and 20.00\% out-of-sample 5-fold Leave-One-Chunk-Out (LOCO) cross-validation.
+    \item \textbf{Proof of Autoregressive Mode Collapse (RQ3):} A mathematical formalization showing that omitting narrative commentary collapses causal attention onto the first frame badge ($[00:00]$), yielding a $19.4\times$ drop in Tight-mAP on one 10-minute chunk (16 events).
+    \item \textbf{CPU Audio Gating and Temporal Offsets (RQ4):} A zero-VRAM whistle and crowd-roar gate, together with signed timestamp residuals per model (Qwen3.5-4B median $+1.20\text{s}$, MiniCPM-V 4.6 median $-2.95\text{s}$, 15 matched detections each). The proposed $+2.95\text{s}$ cross-modal offset is a hypothesis that the gate experiment does not confirm (\Cref{sec:rq4}).
+    \item \textbf{The 3-Model Domain-Routed Specialist Ensemble (RQ5):} Combining Qwen3.5-4B (buildup anchor), MiniCPM-V 4.6 (duel specialist), and LFM2.5-VL-3B (boundary scanner) to reach 20.87\% Active Loose-mAP on one half, and 20.00\% when routing is selected by 5-fold Leave-One-Chunk-Out (LOCO) cross-validation.
     \item \textbf{Downstream Task Harnesses (Tracks C--H):} A live SN-VQA-style run (12/12 on self-authored questions), plus scripted illustrative harnesses for Multi-View Foul Recognition, Ball Action Spotting, Replay Grounding, Echoes Entity Grounding, and Jersey Number OCR. The latter five score predictions written in the harness and do not run a model (\Cref{sec:multitask}).
 \end{itemize}
 
@@ -177,7 +177,7 @@ To determine the physical limits of modern vision-language models on edge hardwa
 \begin{table*}[t]
 \centering
 \small
-\caption{\textbf{The 20-Architecture Hardware Survival \& Deployment Matrix on an 8\,GB Workstation.} Evaluated on an NVIDIA RTX 3000 Ada Laptop GPU (8\,GB GDDR6 VRAM, 63\,GB system RAM) under Windows 11 WDDM ($<7.50$\,GiB reserved ceiling).}
+\caption{\textbf{The 20-Architecture Hardware Survival \& Deployment Matrix on an 8\,GB Workstation.} Evaluated on an NVIDIA RTX 3000 Ada Laptop GPU (8\,GB GDDR6 VRAM, 63\,GB system RAM) under Windows 11 WDDM ($<7.50$\,GiB reserved ceiling). VRAM and latency are single-window hardware-gate measurements that are not in the committed telemetry. The committed full-half runs log 43.3s (Qwen3.5-4B), 46.1s (MiniCPM-V 4.6), and 12.9s (LFM2.5-VL-3B) per window, and the chunk-0 runs log 21.8s (Moondream2) and 22.6s (SmolVLM2-2.2B). Qwen2.5-VL-7B loaded but returned no parsable output on its spotting run (62 of 62 windows dropped).}
 \label{tab:survival_matrix}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}llccccccc@{}}
@@ -262,22 +262,22 @@ When the causal decoder must predict $t_i$ first, cross-attention over 60 frames
 \begin{equation}
     \lim_{\tau \to 0} \mathrm{Softmax}\left(\frac{\mathbf{q}_{t} \mathbf{K}_v^T}{\sqrt{d}}\right) \approx \mathbf{e}_1 \implies t = \text{``00:00''}
 \end{equation}
-As shown in \Cref{tab:rq3_ablation}, stripping commentary caused Tight-mAP to plummet by \textbf{$19.4\times$} ($0.0389 \to 0.0020$). The model emitted 6 spurious `Kick-off' events at exact window-stride boundaries $[00:00]$. Generating narrative commentary first ($c_i$) acts as an autoregressive visual Chain-of-Thought (CoT), forcing cross-attention heads to locate the active action before emitting a timestamp.
+As shown in \Cref{tab:rq3_ablation}, stripping commentary caused Tight-mAP to fall by \textbf{$19.4\times$} ($0.0389 \to 0.0020$) and Loose-mAP by $3.43\times$ ($0.0548 \to 0.0160$). The ablation covers one 10-minute chunk (14 windows, 16 ground-truth events, 7 active classes) in a single run, so these ratios rest on a handful of matched events. In Spotting-Only mode, 7 of the 15 kept predictions (6 of them `Kick-off') sit on exact window-start timestamps $[00:00]$. Joint-CoT reduces this prior but does not remove it: 6 of its 23 predictions also sit on window starts, and it emits 4 `Kick-off' events against one in the ground truth. We read the result as evidence that generating commentary first ($c_i$) acts as an autoregressive visual Chain-of-Thought (CoT) that helps the decoder locate the action before it emits a timestamp.
 
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{RQ3 Dual-Task Synergy: Joint-CoT vs. Spotting-Only.}}
+\caption{\textbf{RQ3 Dual-Task Synergy: Joint-CoT vs. Spotting-Only (chunk 0, 10 minutes, 16 ground-truth events, single run; mAP over 17 classes).}}
 \label{tab:rq3_ablation}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Configuration} & \textbf{Tight-mAP} & \textbf{Loose-mAP} & \textbf{Recall} & \textbf{FP Count} \\
+\textbf{Configuration} & \textbf{Tight-mAP} & \textbf{Loose-mAP} & \textbf{Predictions} & \textbf{At Window Start} \\
 \midrule
-Spotting-Only ($t \to l$) & 0.0020 & 0.0410 & 18.5\% & 48 (6 at 00:00) \\
-\textbf{Joint-CoT ($c \to l \to t$)} & \textbf{0.0389} & \textbf{0.1051} & \textbf{46.2\%} & \textbf{23} \\
+Spotting-Only ($t \to l$) & 0.0020 & 0.0160 & 15 & 7 (6 Kick-off) \\
+\textbf{Joint-CoT ($c \to l \to t$)} & \textbf{0.0389} & \textbf{0.0548} & 23 & 6 (3 Kick-off) \\
 \midrule
-\textbf{Performance Factor} & \textbf{19.4$\times$ Gain} & \textbf{2.56$\times$ Gain} & \textbf{+27.7\%} & \textbf{-52.1\% FP} \\
+\textbf{Performance Factor} & \textbf{19.4$\times$} & \textbf{3.43$\times$} & --- & --- \\
 \bottomrule
 \end{tabular}%
 }
@@ -290,7 +290,7 @@ Contrasting RQ3 with Track C (SN-VQA) uncovers a fundamental law of structured V
     \item \textbf{Pre-Grounded Closed-Set Classification (VQA):} When the window is already localized and candidates are primed in prompt prefixes, placing reasoning first under tight token budgets ($96$ tokens) causes conversational preamble truncation. VQA demands \textit{Decision-First} schemas ($\text{option} \to \text{justification}$), driving accuracy from 0\% to 100\%.
 \end{itemize}
 
-\section{Cross-Modal Temporal Synchrony Law}
+\section{Audio Gating and Cross-Modal Temporal Offsets}
 \label{sec:rq4}
 
 \subsection{Zero-VRAM CPU Audio Signal Processing}
@@ -304,38 +304,37 @@ We isolate two acoustic signatures:
     \item \textbf{Crowd Roar Decibel Surge ($200\text{--}2,000$\,Hz):} Envelope surge relative to running ambient baseline ($\Delta\text{dB} \ge +4.0$\,dB, peaking at $+16.32$\,dB on Goal).
 \end{enumerate}
 
-\subsection{The Cross-Modal Temporal Synchrony Law}
-When we first applied a naive $\pm 4.0\text{s}$ acoustic whistle filter to raw model predictions, Foul AP on MiniCPM-V 4.6 crashed from $0.1853$ to $0.0289$. 
-Auditing signed temporal residuals ($\Delta t = t_{\text{pred}} - t_{\text{GT}}$) revealed the root cause:
+\subsection{A Cross-Modal Synchrony Hypothesis and the Gate Experiment}
+When we applied a $\pm 4.0\text{s}$ acoustic whistle gate to the ensemble's predictions, Foul AP fell from $0.1853$ to $0.0289$ (the ensemble routes `Foul' to MiniCPM-V 4.6; on MiniCPM-V 4.6 alone the same gate takes Foul AP from $0.2307$ to $0.0372$).
+We audited signed temporal residuals ($\Delta t = t_{\text{pred}} - t_{\text{GT}}$) over the ground-truth events that each model matched within $15\text{s}$:
 \begin{itemize}
-    \item \textbf{Action-Culmination Models (Qwen3.5-4B):} $\mu_{\Delta t} = +1.20\text{s}$. The model waits until play stops and the referee signals.
-    \item \textbf{Action-Initiator Models (MiniCPM-V 4.6):} $\mu_{\Delta t} = -2.95\text{s}$ (reaching $-5.28\text{s}$). The model spots the exact moment cleats collide, before the referee has blown the whistle.
+    \item \textbf{Qwen3.5-4B:} median $\Delta t = +1.20\text{s}$ (mean $+2.02\text{s}$, $n=15$).
+    \item \textbf{MiniCPM-V 4.6:} median $\Delta t = -2.95\text{s}$ (mean $-1.68\text{s}$, standard deviation $8.6\text{s}$, $n=15$).
 \end{itemize}
-Because human referee reaction time and sound propagation impose a physical causal delay ($+1.5\text{s}$ to $+3.0\text{s}$ after contact), applying acoustic gating directly to initiator-biased detections prunes valid fouls.
-\begin{quote}
-\textbf{The Cross-Modal Temporal Synchrony Law:} Visual event timestamps generated by action-initiator models must be recalibrated by their signed empirical offset $\Delta t_{\text{sync}}$ before causal acoustic gating:
+These residuals motivated a hypothesis: referee reaction time delays the whistle after contact, so a model that timestamps the start of an action should be shifted later before acoustic gating,
 \begin{equation}
-    t_{\text{gated}} = t_{\text{pred}} + \Delta t_{\text{sync}} \quad (\text{where } \Delta t_{\text{sync}} = +2.95\text{s})
+    t_{\text{gated}} = t_{\text{pred}} + \Delta t_{\text{sync}} \quad (\text{where } \Delta t_{\text{sync}} = +2.95\text{s}).
 \end{equation}
-\end{quote}
-As shown in \Cref{tab:audio_grounding}, the Synchronized Selective Gate prunes 5 phantom goal hallucinations while recovering Foul AP to 0.1563 and preserving 20.63\% Active Loose-mAP.
+Our data do not establish this. With $n=15$ and a standard deviation of $8.6\text{s}$, the MiniCPM-V 4.6 offset is not distinguishable from zero, and leave-one-chunk-out estimates of the correction range from $-1.79\text{s}$ to $+2.95\text{s}$. On the class the whistle gate targets, the four matched MiniCPM-V 4.6 fouls are \emph{late} by $5.7$ to $8.2\text{s}$, so a positive shift moves them further from the labels. Applying the $+2.95\text{s}$ shift lowers MiniCPM-V 4.6 Tight-mAP from $0.0128$ to $0.0033$ and its Foul AP from $0.2307$ to $0.1853$; applying $-1.20\text{s}$ to Qwen3.5-4B lowers its Tight-mAP from $0.0520$ to $0.0462$.
+
+The gate experiment in \Cref{tab:audio_grounding} does not test the hypothesis either. Both ensemble gate rows take the same input, in which MiniCPM-V 4.6 is already shifted by $+2.95\text{s}$, and the whistle confirms 6 predictions in each. The selective gate differs only in its rules: it exempts acoustically silent classes and neither penalizes nor prunes whistle-class predictions that lack a whistle. Foul AP therefore returns to $0.1563$ because foul pruning is switched off, and it stays below the ungated $0.1853$. The selective gate removes 5 of 10 `Goal' predictions without changing Goal AP, and Active Loose-mAP moves from 20.87\% to 20.63\% (17.09\% with the pruning gate). On Qwen3.5-4B alone the pruning gate gives a small gain on this half (Tight-mAP $0.0520 \to 0.0543$).
 
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{RQ4 Audio-Visual Acoustic Grounding Benchmarks.}}
+\caption{\textbf{RQ4 Audio Gating on Game~0 Half~1 (65 events; mAP over 17 classes; both ensemble gate rows use the same $+2.95\text{s}$-shifted input).}}
 \label{tab:audio_grounding}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{System Configuration} & \textbf{Tight-mAP} & \textbf{Loose-mAP} & \textbf{Goal AP} & \textbf{Foul AP} \\
 \midrule
-Qwen3.5-4B Solo (Visual) & 0.0520 & 0.1051 & 0.0400 & 0.0880 \\
-Qwen3.5-4B + Whistle/Roar & \textbf{0.0543} & \textbf{0.1071} & \textbf{0.0434} & \textbf{0.0994} \\
+Qwen3.5-4B Solo (Visual) & 0.0520 & 0.1051 & 0.1591 & 0.1629 \\
+Qwen3.5-4B + Pruning Gate & 0.0543 & 0.1071 & 0.1727 & 0.1839 \\
 \midrule
-3-Model Specialist (Visual) & \textbf{0.0534} & \textbf{0.2087} & 0.0476 & \textbf{0.1853} \\
-3-Model + Uncalibrated Gate & 0.0389 & 0.1709 & 0.0476 & 0.0289 \\
-\textbf{3-Model + Synchronized Gate} & \textbf{0.0534} & \textbf{0.2063} & \textbf{0.0476} & \textbf{0.1563} \\
+3-Model Specialist (Visual) & 0.0534 & 0.1473 & 0.1727 & 0.1853 \\
+3-Model + Pruning Gate & 0.0519 & 0.1206 & 0.1727 & 0.0289 \\
+3-Model + Selective Gate (no foul pruning) & 0.0534 & 0.1456 & 0.1727 & 0.1563 \\
 \bottomrule
 \end{tabular}%
 }
@@ -345,28 +344,28 @@ Qwen3.5-4B + Whistle/Roar & \textbf{0.0543} & \textbf{0.1071} & \textbf{0.0434} 
 \label{sec:rq5}
 
 \subsection{Multi-Scale Domain-Routed Specialist Ensemble}
-Rather than performing naive union ensembling (which dragged Corner AP from 97.9\% down to 39.2\% due to false positives from secondary models), we implement \textit{Domain-Routed Late Fusion}:
+Rather than performing naive union ensembling (which dragged Corner AP from 97.9\% down to 39.0\% on two ground-truth corners, due to false positives from secondary models), we implement \textit{Domain-Routed Late Fusion}:
 \begin{itemize}
     \item \textbf{Qwen3.5-4B ($W=60\text{s}$):} Tactical buildup and set-piece specialist (`Corner`, `Shots on target`, `Goal`).
     \item \textbf{MiniCPM-V 4.6 ($W=60\text{s}$):} Dense duel and rule infraction specialist (`Foul`, `Yellow card`, `Offside`).
     \item \textbf{LFM2.5-VL-3B ($W=30\text{s}$):} Rapid boundary transit specialist (`Ball out of play`, `Throw-in`).
 \end{itemize}
-As documented in \Cref{tab:track_a_benchmark}, the 3-Model Specialist Ensemble achieves \textbf{20.87\% Active Loose-mAP} and captures \textbf{55.4\% of all match events (36 / 65 hits)}, decisively outperforming every individual constituent model.
+As documented in \Cref{tab:track_a_benchmark}, the 3-Model Specialist Ensemble achieves \textbf{20.87\% Active Loose-mAP} and matches \textbf{55.4\% of the half's events within $30\text{s}$ (36 / 65)}, above each constituent model on this half. The routing was chosen on the same half, so these are in-sample figures; \Cref{tab:loco_cv} gives the cross-validated estimate.
 
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{Track A Action Spotting Full Half 1 Benchmark (45 Mins, 65 Ground-Truth Events).}}
+\caption{\textbf{Track A Action Spotting on Game~0 Half~1 (45 Mins, 65 Ground-Truth Events). Tight-mAP over 17 classes; Loose-mAP over the 12 active classes; hits within $30\text{s}$. Qwen2.5-VL-7B was run on chunk~0 only (16 events) and returned no parsable output.}}
 \label{tab:track_a_benchmark}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Model Pipeline} & \textbf{Tight-mAP} & \textbf{Loose-mAP} & \textbf{Recall} & \textbf{Hits / GT} \\
+\textbf{Model Pipeline} & \textbf{Tight-mAP} & \textbf{Active Loose-mAP} & \textbf{Recall} & \textbf{Hits / GT} \\
 \midrule
-Qwen2.5-VL-7B (4-bit, 15s) & 0.0000 & 0.0000 & 1.5\% & 1 / 65 \\
-LFM2.5-VL-3B (4-bit, 30s) & 0.0245 & 0.0712 & 30.8\% & 20 / 65 \\
-MiniCPM-V 4.6 (4-bit, 60s) & 0.0223 & 0.0984 & 41.5\% & 27 / 65 \\
-Qwen3.5-4B (4-bit, 60s) & 0.0520 & 0.1489 & 46.2\% & 30 / 65 \\
+Qwen2.5-VL-7B (4-bit, 15s) & 0.0000 & 0.0000 & 0.0\% & 0 / 16 \\
+LFM2.5-VL-3B (4-bit, 30s) & 0.0004 & 0.0168 & 33.8\% & 22 / 65 \\
+MiniCPM-V 4.6 (4-bit, 60s) & 0.0126 & 0.0783 & 35.4\% & 23 / 65 \\
+Qwen3.5-4B (4-bit, 60s) & 0.0520 & 0.1489 & 23.1\% & 15 / 65 \\
 \midrule
 \textbf{3-Model Specialist} & \textbf{0.0534} & \textbf{0.2087} & \textbf{55.4\%} & \textbf{36 / 65} \\
 \bottomrule
@@ -375,25 +374,20 @@ Qwen3.5-4B (4-bit, 60s) & 0.0520 & 0.1489 & 46.2\% & 30 / 65 \\
 \end{table}
 
 \subsection{5-Fold Leave-One-Chunk-Out (LOCO) Cross-Validation}
-To rigorously guard against spatial or temporal overfitting, we executed 5-fold Leave-One-Chunk-Out (LOCO) cross-validation across all 5 macro-chunks ($K=5$). As reported in \Cref{tab:loco_cv}, the out-of-sample Active Loose-mAP converged at \textbf{20.00\%} ($\pm 0.038$), proving that specialist calibration parameters generalize out-of-sample with zero data leakage.
+To estimate how much of the ensemble's score depends on choosing the routing on the evaluation half, we ran 5-fold Leave-One-Chunk-Out (LOCO) cross-validation across the 5 macro-chunks ($K=5$). For each fold, the best model per class is selected by Loose AP on four chunks and its predictions are used on the fifth; the held-out predictions of all five folds are then pooled and scored once. As reported in \Cref{tab:loco_cv}, pooled Active Loose-mAP is \textbf{20.00\%}, against 20.87\% for the in-sample routing. The harness produces one pooled score, so no per-fold variance is available. Two elements remain in-sample: the temporal shifts ($+2.95\text{s}$ and $-3.10\text{s}$) were fitted on the whole half, and a class with no positive training-fold AP falls back to the in-sample routing.
 
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{5-Fold Leave-One-Chunk-Out (LOCO) Cross-Validation.}}
+\caption{\textbf{In-Sample vs.\ 5-Fold Leave-One-Chunk-Out (LOCO) Routing on Game~0 Half~1 (65 events; hits are matched events within the stated tolerance).}}
 \label{tab:loco_cv}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{@{}lcccc@{}}
+\begin{tabular}{@{}lccccc@{}}
 \toprule
-\textbf{Held-Out Fold} & \textbf{Chunk Minutes} & \textbf{GT Events} & \textbf{OOS Loose-mAP} & \textbf{OOS Recall} \\
+\textbf{Routing} & \textbf{Kept} & \textbf{Hits $\le 5\text{s}$} & \textbf{Hits $\le 30\text{s}$} & \textbf{Tight-mAP} & \textbf{Active Loose-mAP} \\
 \midrule
-Fold 0 (Chunk 0) & 00:00--10:15 & 16 & 0.2023 & 56.2\% \\
-Fold 1 (Chunk 1) & 10:00--20:15 & 11 & 0.1895 & 54.5\% \\
-Fold 2 (Chunk 2) & 20:00--30:15 & 14 & 0.2144 & 57.1\% \\
-Fold 3 (Chunk 3) & 30:00--40:15 & 12 & 0.1980 & 50.0\% \\
-Fold 4 (Chunk 4) & 40:00--47:00 & 12 & 0.1958 & 58.3\% \\
-\midrule
-\textbf{Mean ($\pm \sigma$)} & --- & \textbf{65 Total} & \textbf{0.2000 ($\pm 0.038$)} & \textbf{55.4\%} \\
+In-sample (chosen on the full half) & 175 & 16 & 36 (55.4\%) & 0.0534 & 0.2087 \\
+LOCO (chosen on four chunks, pooled) & 211 & 16 & 35 (53.8\%) & 0.0537 & 0.2000 \\
 \bottomrule
 \end{tabular}%
 }
@@ -401,9 +395,10 @@ Fold 4 (Chunk 4) & 40:00--47:00 & 12 & 0.1958 & 58.3\% \\
 
 \subsection{Track B: Dense Captioning \& The CIDEr Paradox}
 In Track B (Dense Video Captioning), the Specialist Ensemble matched \textbf{81.3\% of all ground-truth commentary timestamps (26 / 32)}.
-When captions were delexicalized (replacing player names with generic tokens `[PLAYER]`), ROUGE-L and METEOR surged by \textbf{+16\% to +31\%}, proving that VLMs perceive tactical movements accurately but struggle with roster recognition.
-However, CIDEr score decreased ($0.0745 \to 0.0514$). This reveals the \textit{CIDEr Delexicalization Paradox}: CIDEr weights $n$-grams via TF-IDF ($\text{IDF} = \log(N/\text{df})$). In delexicalized corpora, `[PLAYER]` appears in $>90\%$ of sentences, driving its IDF weight to zero and artificially penalizing models for omitting rare proper nouns.
-Finally, our ``Best-Localizer + Best-Narrator'' graft (pairing MiniCPM's duel detections with Qwen's commentary) yielded a \textbf{+32.0\% CIDEr boost} ($0.0394 \to 0.0520$).
+MiniCPM-V 4.6 alone matched 27 / 32 and Qwen3.5-4B alone 20 / 32.
+When captions were delexicalized (replacing player names with generic tokens `[PLAYER]`), ROUGE-L rose by \textbf{+8\% to +36\%} and METEOR by +10\% to +25\% across the five systems, which suggests that part of the error is roster naming and not the description of the play. Absolute scores stay low (ROUGE-L 0.10--0.15 on 20--27 matched captions).
+CIDEr did not move consistently: it fell for Qwen3.5-4B ($0.0745 \to 0.0514$) and MiniCPM-V 4.6 ($0.0596 \to 0.0538$), rose for LFM2.5-VL-3B ($0.0423 \to 0.0495$), and was flat for the ensemble ($0.0394 \to 0.0396$). One explanation for the drops is that CIDEr weights $n$-grams via TF-IDF ($\text{IDF} = \log(N/\text{df})$), so a `[PLAYER]` token present in most sentences carries almost no weight; we did not test this directly.
+Finally, our ``Best-Localizer + Best-Narrator'' graft (pairing the ensemble's detections with Qwen's commentary) raised the ensemble's raw CIDEr by \textbf{+32.0\%} ($0.0394 \to 0.0520$). The grafted score remains below Qwen3.5-4B alone (0.0745), and under delexicalization the graft lowers CIDEr ($0.0396 \to 0.0316$).
 
 \section{SoccerNet Multi-Task Challenge Expansion (Tracks C--H)}
 \label{sec:multitask}
@@ -418,7 +413,7 @@ We maintain strict statistical transparency between our benchmark scopes:
 \end{itemize}
 
 \subsection{Challenge 1: Visual Question Answering (SN-VQA)}
-As reported in \Cref{tab:vqa_results}, Qwen3.5-4B achieved \textbf{100.00\% Top-1 Accuracy (12/12 hits)} on 12 self-authored multiple-choice questions across four distinct reasoning categories ($4.0\times$ above the 25.00\% random baseline) with an average inference latency of 7.8s per question.
+As reported in \Cref{tab:vqa_results}, Qwen3.5-4B achieved \textbf{100.00\% Top-1 Accuracy (12/12 hits)} on 12 self-authored multiple-choice questions across four distinct reasoning categories ($4.0\times$ above the 25.00\% random baseline) with an average inference latency of 9.8s per question (7.9s excluding the first, cold-start question at 30.7s).
 
 \begin{table}[h]
 \centering
@@ -435,7 +430,7 @@ Referee Decisions & 3 & 25.0\% & \textbf{100.00\% (3/3)} & 8.07s \\
 Tactical Setups & 3 & 25.0\% & \textbf{100.00\% (3/3)} & 6.86s \\
 Temporal Continuity & 3 & 25.0\% & \textbf{100.00\% (3/3)} & 8.97s \\
 \midrule
-\textbf{Overall Benchmark} & \textbf{12} & \textbf{25.0\%} & \textbf{100.00\% (12/12)} & \textbf{17.72s} (7.8s infer) \\
+\textbf{Overall Benchmark} & \textbf{12} & \textbf{25.0\%} & \textbf{100.00\% (12/12)} & \textbf{17.72s} wall (9.79s infer) \\
 \bottomrule
 \end{tabular}%
 }
@@ -443,7 +438,7 @@ Temporal Continuity & 3 & 25.0\% & \textbf{100.00\% (3/3)} & 8.97s \\
 
 \subsection{Challenge 2: Multi-View Foul Recognition (MV-Foul)}
 \Cref{tab:mv_foul} is a scripted illustration on 12 hand-authored duels. No video or audio is read: each duel's whistle fields are written in the harness, the three visual-only false alarms are fixed duel ids, and the audio-visual prediction is a threshold on the hand-written whistle fields, which coincide with the offence label on all 12 rows. The 100.00\% row therefore holds by construction.
-The official DevKit (\texttt{SoccerNet.Evaluation.MV\_FoulRecognition}) returns NaN on this set; the table reports a custom active-class metric.
+The official DevKit (\texttt{SoccerNet.Evaluation.MV\_FoulRecognition}) returns NaN on this set; the table reports a custom active-class balanced accuracy. Plain severity accuracy for the visual-only row is 75.00\% (9 / 12).
 
 \begin{table}[h]
 \centering
@@ -453,7 +448,7 @@ The official DevKit (\texttt{SoccerNet.Evaluation.MV\_FoulRecognition}) returns 
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Pipeline} & \textbf{Severity Acc} & \textbf{Action Acc} & \textbf{Active Metric} & \textbf{Clean FP Rate} \\
+\textbf{Pipeline} & \textbf{Severity Bal.\ Acc} & \textbf{Action Bal.\ Acc} & \textbf{Active Metric} & \textbf{Clean FP Rate} \\
 \midrule
 Visual-Only Baseline & 78.57\% & 100.00\% & 89.29\% & 50.0\% (3 / 6) \\
 \textbf{Audio-Visual Grounded} & \textbf{100.00\%} & \textbf{100.00\%} & \textbf{100.00\%} & \textbf{0.0\% (0 / 6)} \\
@@ -521,7 +516,7 @@ Track H: Kit Team Classification & Accuracy & 33.3\% & \textbf{100.00\%} (15/15)
 The Qwen2-VL-2B case study represents a cautionary tale for edge ML: the model passed all 60-second hardware gates at blazing speed (6.85s/window, 1.51\,GiB load), yet suffered 100\% prior collapse ($[00:00]$ Clearance). Edge practitioners must evaluate task accuracy concurrently with memory benchmarks.
 
 \subsection{Zero-GPU Post-Processing ROI}
-Our results prove that temporal calibration, domain routing, and CPU STFT audio gating provide higher empirical performance returns than brute-force model scaling, unlocking state-of-the-art results on an 8\,GB workstation at \$0 cloud compute spend.
+Of the zero-GPU post-processing steps, domain routing gave the largest gain on Game~0 Half~1 (14.89\% to 20.87\% Active Loose-mAP in-sample, 20.00\% under LOCO routing). Temporal shifts and CPU STFT audio gating did not raise ensemble mAP on that half (\Cref{sec:rq4}), and on MES-5 the cross-validated routing gain over Qwen3.5-4B alone is small. We make no state-of-the-art claim; these scores are far below supervised SoccerNet spotting systems.
 
 \subsection{Macro Corpus Topology \& Stratified Cross-Validation}
 Auditing the full frozen evaluation set (20 EPL fixtures, 40 broadcast halves, 4,383 ground-truth events, and 1,720 commentary captions) uncovers critical topological dynamics governing sports video perception. First, tactical substitutions exhibit extreme temporal asymmetry: \textbf{98.2\% of substitutions (111 / 113)} occur in the second half (67.3\% in the final quarter Q4), proving that single-half evaluations suffer from complete structural blindness to substitution events. Second, high-frequency boundary transitions (\textit{Ball out of play}, $N=1,331$) outnumber decisive disciplinary events (\textit{Red card}, $N=2$; \textit{Penalty}, $N=2$) by a \textbf{665.5:1 imbalance ratio}.
@@ -529,13 +524,13 @@ Auditing the full frozen evaluation set (20 EPL fixtures, 40 broadcast halves, 4
 To address this chasm without distorting evaluation integrity, we introduce two methodological contributions:
 \begin{enumerate}
     \item \textbf{The Canonical MES-5 Subset:} Because rare events appear only twice across 20 matches, standard 5-fold cross-validation leaves multiple partitions starving on rare classes. We define the \textit{Minimal Evaluation Subset} $\text{MES-5} = [\text{Game } 0, 1, 2, 3, 13]$. Spanning 5 matches (10 halves, 7.5 hours, 25\% compute), MES-5 captures \textbf{100\% of all Red cards and Penalties} in the corpus, guaranteeing non-zero ground-truth support across all 17 official classes (\textbf{Oracle Ceiling = 17/17 = 1.0000}).
-    \item \textbf{Out-of-Sample Markov Transition Rescoring ($M_{19}$):} Estimating the empirical transition matrix $M_{19} = P(C_{t+1} \mid C_t, \Delta t \le 30\text{s})$ and temporal priors strictly on Games 1--19 ($N=4,210$) provides out-of-sample causal confidence boosts. Rescoring our 3-Model Specialist predictions on Game 0 Half 1 surged Tight-mAP from \textbf{0.0631 to 0.0845 (+34.0\% relative gain)} and Active Loose-mAP from \textbf{21.45\% to 24.15\% (+2.70\% absolute gain)} at \$0 GPU compute with zero recall loss ($55.38\%$ match recall preserved).
+    \item \textbf{Out-of-Sample Markov Transition Rescoring ($M_{19}$):} Estimating the empirical transition matrix $M_{19} = P(C_{t+1} \mid C_t, \Delta t \le 30\text{s})$ and temporal priors strictly on Games 1--19 ($N=4,210$) provides out-of-sample causal confidence boosts. Rescoring our 3-Model Specialist predictions on Game 0 Half 1 surged Tight-mAP from \textbf{0.0631 to 0.0845 (+34.0\% relative gain)} and Active Loose-mAP from \textbf{21.45\% to 24.15\% (+2.70\% absolute gain)} at \$0 GPU compute with zero recall loss ($55.38\%$ match recall preserved). The transition matrix is out-of-sample, but the rescoring rules and the ensemble routing were developed on Game~0, so these gains are in-sample for the method. The same rescoring lowers Qwen3.5-4B's solo Tight-mAP from 0.0520 to 0.0409, and on MES-5 the corresponding prior adds about 6\% Loose-mAP (\Cref{tab:mes5_eval}).
 \end{enumerate}
 
 \subsection{Full 90-Minute Match Evaluation \& Second-Half Substitution Specialization}
 Expanding evaluation across both halves of Game 0 (*Manchester United 1--1 Arsenal*, 173 total ground-truth events) directly validates the Second-Half Substitution Law. Half 2 contained 6 official substitutions (Half 1 had 0). While MiniCPM-V 4.6 suffered from over-predicting contact in open play and missed sideline substitution gestures (0/6 detected, 4 FP), Qwen3.5-4B achieved \textbf{66.7\% Recall (4/6)} and \textbf{57.1\% Precision} ($\mu = 2.21\text{s}$ error on Falcao, $6.02\text{s}$ on Gibbs). 
 
-As shown in \Cref{tab:full_match_eval}, across the entire 90-minute broadcast, the 3-Model Specialist Ensemble achieves 0.1206 Official Loose-mAP and 0.0472 Tight-mAP. Applying out-of-sample $M_{19}$ Markov transition rescoring surges Official Loose-mAP to \textbf{0.1580 (+31.0\% gain)} and Tight-mAP to \textbf{0.0673 (+42.6\% gain)}, with Active Loose-mAP reaching \textbf{19.19\%} (Active Tight-mAP: \textbf{0.0818}) across all 14 active classes at \$0 cloud compute.
+As shown in \Cref{tab:full_match_eval}, across the entire 90-minute broadcast, the 3-Model Specialist Ensemble achieves 0.1206 Official Loose-mAP and 0.0472 Tight-mAP. Applying out-of-sample $M_{19}$ Markov transition rescoring surges Official Loose-mAP to \textbf{0.1580 (+31.0\% gain)} and Tight-mAP to \textbf{0.0673 (+42.6\% gain)}, with Active Loose-mAP reaching \textbf{19.19\%} (Active Tight-mAP: \textbf{0.0818}) across all 14 active classes at \$0 cloud compute. The Half~2 routing was revised after a first full-match run that scored 0.1246 Loose-mAP, so the 0.1580 figure is in-sample for routing as well as for the rescoring rules.
 
 \begin{table}[h]
 \centering
@@ -556,7 +551,7 @@ Half 2 + $M_{19}$ Rescored & \textbf{0.0357} & \textbf{0.1059} & \textbf{13.85\%
 \textbf{Full 90m Base Specialist} & 0.0472 & 0.1206 & 14.64\% & 66.7\% (4 / 6) \\
 \textbf{Full 90m + $M_{19}$ Rescored} & \textbf{0.0673} & \textbf{0.1580} & \textbf{19.19\%} & \textbf{66.7\% (4 / 6)} \\
 \midrule
-\textbf{Out-of-Sample Delta} & \textbf{+42.6\%} & \textbf{+31.0\%} & \textbf{+31.1\%} & \textbf{Pinpoint Hit} \\
+\textbf{$M_{19}$ Delta (rules tuned on Game~0)} & \textbf{+42.6\%} & \textbf{+31.0\%} & \textbf{+31.1\%} & \textbf{Pinpoint Hit} \\
 \bottomrule
 \end{tabular}%
 }
@@ -571,7 +566,7 @@ As detailed in \Cref{tab:mes5_eval}, while individual models exhibit complementa
 
 On the complete MES-5 benchmark, the Base Specialist Ensemble scores \textbf{0.1733 Loose-mAP} and \textbf{0.0562 Tight-mAP} with its canonical routing partition (Qwen3.5-4B for set-pieces, conversions, substitutions, and discipline; LFM2.5-VL-3B for ball boundary transitions and shots on target; MiniCPM-V 4.6 for offside, indirect free-kicks, and first-half clearances). This partition was adopted after a first full MES-5 run in which the routing carried over from Game~0 scored 0.1547 Loose-mAP and 0.0448 Tight-mAP, below Qwen3.5-4B alone (0.1564 / 0.0562), so 0.1733 is an in-sample figure for the routing choice.
 
-To estimate out-of-sample routing performance, we ran 5-Fold Leave-One-Match-Out (LOMO) cross-validation across the 5 fixtures ($N=1,132$), selecting the best model per class on four matches and applying it to the fifth. The selected routing is not stable: the five folds yield four distinct partitions, none equal to the canonical one (\textit{Red card} is assigned to MiniCPM-V 4.6 in four of five folds). Pooled over the held-out matches, LOMO routing scores \textbf{0.1613 Loose-mAP} (+3.1\% relative to Qwen3.5-4B alone) and \textbf{0.0261 Tight-mAP} (below Qwen3.5-4B alone at 0.0562). This Tight-mAP drop occurs because blending specialists with differing intrinsic temporal latency biases (Qwen3.5-4B $\mu=-1.20$\,s, MiniCPM-V 4.6 $\mu=-2.95$\,s, LFM2.5-VL-3B $\mu=-3.10$\,s) introduces $1.5\text{--}2.0$\,s of uncalibrated out-of-sample temporal jitter, throwing detections outside the strict $\pm 1.0$\,s evaluation window. This confirms that continuous broadcast video ensembling fundamentally requires cross-model temporal synchrony alignment alongside semantic class routing.
+To estimate out-of-sample routing performance, we ran 5-Fold Leave-One-Match-Out (LOMO) cross-validation across the 5 fixtures ($N=1,132$), selecting the best model per class on four matches and applying it to the fifth. The selected routing is not stable: the five folds yield four distinct partitions, none equal to the canonical one (\textit{Red card} is assigned to MiniCPM-V 4.6 in four of five folds). Pooled over the held-out matches, LOMO routing scores \textbf{0.1613 Loose-mAP} (+3.1\% relative to Qwen3.5-4B alone) and \textbf{0.0261 Tight-mAP} (below Qwen3.5-4B alone at 0.0562). Almost all of this Tight-mAP drop comes from one class. \textit{Red card} has two ground-truth events; routed to MiniCPM-V 4.6 in four of five folds, its tight AP falls from 0.5057 (Qwen3.5-4B) to 0.0227, which is 94.5\% of the difference in the 17-class sum. \textit{Throw-in} ($0.0341 \to 0.0087$) accounts for most of the rest. The drop is therefore a routing effect on a two-event class, selected by Loose AP, and not a calibration effect: the LOMO run already applies the temporal shifts ($+2.95$\,s to MiniCPM-V 4.6, $-3.10$\,s to LFM2.5-VL-3B).
 
 Applying Selective Causal Consequent Rescoring via $M_{15}$ (which boosts a fixed list of consequent classes while preserving raw specialist confidence on initiators such as open-play goals, substitutions, and fouls) lifts \textit{Yellow card} from 0.3158 to \textbf{0.4140}, \textit{Kick-off} from 0.0327 to \textbf{0.0704}, and \textit{Ball out of play} to \textbf{0.1854}. This gives \textbf{0.1833 Official Loose-mAP} (+17.2\% relative to Qwen3.5-4B solo) and \textbf{0.0607 Official Tight-mAP} (+8.0\% relative to Qwen3.5-4B solo) across 1,132 untrimmed broadcast events on local consumer hardware at \$0 cloud compute.
 The transition probabilities are out-of-sample, but the rule structure is not: uniform $M_{15}$ boosting scored 0.1560 Loose-mAP on the first MES-5 run, and the restriction to consequent classes was introduced afterwards on the same five matches without cross-validation. These figures are therefore in-sample upper estimates. In addition, 13 of the 15 prior matches belong to the official SoccerNet test split, so the results are not comparable to the official test protocol, and 41\% of the 0.1833 macro average comes from three classes with five ground-truth events in total (\textit{Red card}, \textit{Yellow$\to$red card}, \textit{Penalty}).
@@ -621,7 +616,7 @@ To transition the multi-modal specialist ensemble into a low-latency edge deploy
 \subsection{Stage 1: Zero-Cost QLoRA Specialist Distillation}
 To eliminate multi-model inference overhead without test data leakage, we constructed an out-of-sample distillation dataset strictly from the 15 held-out matches ($M_{15}$: Games 4 and 7), comprising 267 temporal windows ($W=60\text{s}, S=45\text{s}$) with 4,272 frames covering all 17 classes paired with burned-in wristwatch timestamps and concise Chain-of-Thought supervision. 
 
-Fine-tuning a 4-bit NF4 \texttt{Qwen3.5-4B} student via PEFT QLoRA ($r=16, \alpha=32$) using \texttt{PagedAdamW8bit} completed 3 full epochs (201 gradient steps) in 11.8 minutes with a peak VRAM of 5.92~GiB, converging to a training loss of 0.1461. While the student successfully learned boundary action dynamics (0.1878 AP on \textit{Ball out of play} and 0.1139 AP on \textit{Throw-in}), full-match evaluation revealed a key architectural constraint: \texttt{Qwen3.5-4B} incorporates 24 linear attention layers (\texttt{chunk\_gated\_delta\_rule}) alongside 8 full-attention layers. Standard transformer LoRA target configurations adapt only the 8 full-attention layers, leaving 75\% of attention blocks frozen. Furthermore, avoiding activation memory spikes ($>9.7$~GiB) during Windows-based unrolled reference autograd required downsampling keyframes to $42 \times 42$ pixels, which degraded high-frequency visual features.
+Fine-tuning a 4-bit NF4 \texttt{Qwen3.5-4B} student via PEFT QLoRA ($r=16, \alpha=32$) using \texttt{PagedAdamW8bit} completed 3 full epochs (201 gradient steps) in 11.8 minutes with a peak VRAM of 5.92~GiB, converging to a training loss of 0.1461. The distillation did not preserve ensemble accuracy. On Game~0 (both halves) the student scores 0.0187 Loose-mAP and 0.0005 Tight-mAP with 3 of 17 classes active, against 0.1206 and 0.0472 for the base specialist ensemble on the same match. It learned only boundary actions (0.1878 AP on \textit{Ball out of play} and 0.1139 AP on \textit{Throw-in}). We attribute the gap to two constraints, neither of which we isolated experimentally: \texttt{Qwen3.5-4B} incorporates 24 linear attention layers (\texttt{chunk\_gated\_delta\_rule}) alongside 8 full-attention layers. Standard transformer LoRA target configurations adapt only the 8 full-attention layers, leaving 75\% of attention blocks frozen. Furthermore, avoiding activation memory spikes ($>9.7$~GiB) during Windows-based unrolled reference autograd required downsampling keyframes to $42 \times 42$ pixels, which degraded high-frequency visual features.
 
 \subsection{Stage 2: CPU Window Skipping and Concise-CoT Compression}
 To accelerate inference without compromising visual resolution, Stage 2 optimizes the pipeline via physical input pre-filtering and autoregressive token compression:
@@ -631,11 +626,11 @@ To accelerate inference without compromising visual resolution, Stage 2 optimize
         \text{Active} = (z_{\text{whistle}} \ge 4.5) \lor (\Delta_{\text{crowd}} \ge 6.0\text{ dB}) \lor (\text{MAD}_{\text{cut}} \ge 30.0) \lor (\sigma_{\text{MAD}} \ge 6.0)
     \end{equation}
     are bypassed in 0.001 seconds on the CPU, eliminating redundant GPU compute.
-    \item \textbf{Concise-CoT Autoregressive Compression:} Constraining output reasoning to a single telegraphic commentary sentence ($<15$ words) and clamping $\text{max\_tokens}=128$ reduced per-window GPU generation latency from 18.5s to 5.6s ($3.3\times$ speedup).
+    \item \textbf{Concise-CoT Autoregressive Compression:} Constraining output reasoning to a single telegraphic commentary sentence ($<15$ words) and clamping $\text{max\_tokens}=128$ reduced per-window GPU generation latency from 18.5s to 5.6s ($3.3\times$ speedup). These two timings are not in the committed telemetry, which logs 10.0s per window for the concise run on chunk~0. On that chunk the concise run scored 0.0020 Tight-mAP and 0.0263 Loose-mAP, against 0.0389 and 0.0548 for verbose CoT, with 7 of its 9 predictions on window-start timestamps. This is the same collapse as the Spotting-Only ablation in \Cref{sec:rq3}, so the speedup is not accuracy-neutral.
 \end{enumerate}
 
 \subsection{Full MES-5 Speed-vs-mAP Pareto Verification}
-Evaluating the Stage 2 gate across all 10 halves of the Canonical MES-5 benchmark (5 matches, 54 chunks, 687 windows, 1,132 events) masked 18 of 687 windows (2.6\%) and left mAP essentially unchanged (100.4\% retention, Table~\ref{tab:stage2_pareto}); the +0.0007 Loose-mAP difference is within noise. This simulation masks windows in the existing verbose-CoT predictions, so it measures the gate alone ($\approx 1.03\times$ fewer GPU window passes). The $3.3\times$ Concise-CoT speedup was measured on a single chunk (14 windows) and its accuracy on MES-5 has not been evaluated, so the two figures describe different configurations. The gate thresholds were swept on Game~0 Half~1, which is part of MES-5.
+Evaluating the Stage 2 gate across all 10 halves of the Canonical MES-5 benchmark (5 matches, 54 chunks, 687 windows, 1,132 events) masked 18 of 687 windows (2.6\%) and left mAP essentially unchanged (100.4\% retention, Table~\ref{tab:stage2_pareto}); the +0.0007 Loose-mAP difference is within noise. This simulation masks windows in the existing verbose-CoT predictions, so it measures the gate alone ($\approx 1.03\times$ fewer GPU window passes). The $3.3\times$ Concise-CoT speedup was measured on a single chunk (14 windows), where Tight-mAP fell from 0.0389 to 0.0020; its accuracy on MES-5 has not been evaluated, so the two figures describe different configurations. The gate thresholds were swept on Game~0 Half~1, which is part of MES-5.
 
 \begin{table}[ht]
 \centering
@@ -722,7 +717,7 @@ Track L: Hybrid Fusion & Raycast + BBox Regularizer ($N=82$) & Abs Rel / RMSE / 
 \section{Conclusion}
 \label{sec:conclusion}
 We presented the SoccerNet VLM Modernization Benchmark (V2--V5), an evaluation of open-weight VLMs on untrimmed sports broadcasts executed on consumer edge hardware at \$0 cloud compute spend.
-Through single-pass packet decoding, visual wristwatch badging, 4-bit NF4 quantization, and the Cross-Modal Temporal Synchrony Law, our 3-Model Specialist Ensemble achieves 20.87\% Active Loose-mAP on a single half (24.15\% with out-of-sample $M_{19}$ Markov causal rescoring, 20.00\% under LOCO cross-validation). On the five-match MES-5 benchmark (1,132 events) it scores 0.1833 Official Loose-mAP with routing and rescoring rules revised on MES-5, and 0.1613 Loose-mAP / 0.0261 Tight-mAP under leave-one-match-out routing, against 0.1564 / 0.0562 for Qwen3.5-4B alone; a stable out-of-sample gain from ensembling is therefore not yet established. The remaining ten task families (VQA, Foul Recognition, Ball Action Spotting, Replay Grounding, Echoes Entity Resolution, Jersey OCR, Camera Calibration, Game State Reconstruction, Tracking/Re-ID, and 3D Metric Depth) are provided as harnesses on small single-half sets; several use scripted predictions or self-derived references, and running them against official annotations is future work.
+Through single-pass packet decoding, visual wristwatch badging, 4-bit NF4 quantization, and domain routing, our 3-Model Specialist Ensemble achieves 20.87\% Active Loose-mAP on a single half (20.00\% when routing is chosen by LOCO cross-validation; a later routing revision scores 21.45\%, and 24.15\% with $M_{19}$ Markov rescoring whose rules were developed on the same match). Temporal shifts and audio gating did not raise ensemble mAP on that half, and the proposed cross-modal synchrony offset remains a hypothesis. On the five-match MES-5 benchmark (1,132 events) it scores 0.1833 Official Loose-mAP with routing and rescoring rules revised on MES-5, and 0.1613 Loose-mAP / 0.0261 Tight-mAP under leave-one-match-out routing, against 0.1564 / 0.0562 for Qwen3.5-4B alone; a stable out-of-sample gain from ensembling is therefore not yet established. The remaining ten task families (VQA, Foul Recognition, Ball Action Spotting, Replay Grounding, Echoes Entity Resolution, Jersey OCR, Camera Calibration, Game State Reconstruction, Tracking/Re-ID, and 3D Metric Depth) are provided as harnesses on small single-half sets; several use scripted predictions or self-derived references, and running them against official annotations is future work.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

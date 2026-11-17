@@ -108,14 +108,14 @@ Evaluated across the **Canonical MES-5 Benchmark** (5 complete matches, 10 halve
 | **MECE + $M_{15}$ Prior (in-sample)** | 0.1833 | 0.0607 | **17 / 17** | **1.0000** | $0.4\times$ |
 | **Stage 2 Filtered (Window Skipping)** | **0.1840** | **0.0609** | **17 / 17** | **1.0000** | **$1.03\times$ Skipping Speedup** |
 
-> **Out-of-Sample Routing (5-Fold LOMO Cross-Validation):** Selecting specialist routing out-of-sample across the 5 fixtures yields **0.1613 Loose-mAP** (+3.1% over Qwen Solo) and **0.0261 Tight-mAP**. Tight-mAP drops because inter-model latency variance (Qwen -1.20s, MiniCPM -2.95s, LFM -3.10s) introduces 1.5–2.0s uncalibrated temporal jitter outside the strict ±1.0s window, confirming that continuous video ensembling requires temporal synchrony alignment alongside semantic routing.
-> **Stage 2 Latency Note:** The 0.1840 row reflects CPU acoustic/optical window skipping across all 687 windows (18 windows skipped, ~1.03x speedup). The $3.3\times$ Concise-CoT acceleration (18.5s $\to$ 5.6s/window) was benchmarked on a single 10-minute chunk (`game_0_half_1_chunk_00`).
+> **Out-of-Sample Routing (5-Fold LOMO Cross-Validation):** Selecting specialist routing out-of-sample across the 5 fixtures yields **0.1613 Loose-mAP** (+3.1% over Qwen Solo) and **0.0261 Tight-mAP** (Qwen Solo: 0.0562). Almost all of the Tight-mAP drop comes from one class: Red card has two ground-truth events, is routed to MiniCPM-V 4.6 in four of five folds, and its tight AP falls from 0.5057 to 0.0227, which is 94.5% of the difference in the 17-class sum. This is a routing effect on a two-event class, not a calibration effect; the LOMO run already applies the temporal shifts (+2.95s MiniCPM, -3.10s LFM).
+> **Stage 2 Latency Note:** The 0.1840 row reflects CPU acoustic/optical window skipping across all 687 windows (18 windows skipped, ~1.03x speedup). The $3.3\times$ Concise-CoT acceleration (18.5s $\to$ 5.6s/window) was benchmarked on a single 10-minute chunk (`game_0_half_1_chunk_00`), where Tight-mAP fell from 0.0389 to 0.0020 and Loose-mAP from 0.0548 to 0.0263. The two timings are not in the committed telemetry, which logs 10.0s per window for that run.
 
 ### Complete 17-Class Breakdown (Official SoccerNet DevKit)
 - **Red card:** **0.7727 Loose-mAP / 0.5057 Tight-mAP** (100% detection: John Terry @ -1.10s, Mark Noble @ -2.28s)
 - **Yellow->red card:** **0.4773 Loose-mAP** (Philippe Coutinho 2nd yellow dismissal)
 - **Penalty:** **0.0303 Loose-mAP** (James Morrison penalty decision)
-- **Goal:** **0.1429 Loose-mAP / 0.0635 Tight-mAP** (93.3% live match recall)
+- **Goal:** **0.1429 Loose-mAP / 0.0473 Tight-mAP** (93.3% live match recall)
 - **Substitution:** **0.2381 Loose-mAP** (including Kyle Walker first-half injury substitution)
 
 ---

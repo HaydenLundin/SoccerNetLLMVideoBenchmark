@@ -202,7 +202,7 @@ Our benchmark investigated five fundamental research questions. Here are the emp
 
 ### RQ1: Zero-Shot VLMs vs. Supervised Baselines
 *Can zero-shot foundation models spot soccer actions without task-specific training?*
-- **The Finding:** Yes, but single open-weight models have sharp domain blindspots. However, when combined into our **3-Model Domain-Routed Specialist Ensemble**, the system achieved **20.87% Active Loose-mAP** (20.00% under strict out-of-sample Leave-One-Chunk-Out Cross-Validation) and detected **55.4% of all ground-truth events (36 / 65)** across the entire 45-minute half.
+- **The Finding:** Yes, but single open-weight models have sharp domain blindspots. However, when combined into our **3-Model Domain-Routed Specialist Ensemble**, the system achieved **20.87% Active Loose-mAP** (20.00% when the routing is picked by Leave-One-Chunk-Out cross-validation) and detected **55.4% of all ground-truth events (36 / 65)** across the entire 45-minute half.
 - **The Takeaway:** Foundation models don't need fine-tuning on millions of soccer clips if you intelligently route classes to models whose receptive fields match the physical duration of the action.
 
 ### RQ2: Receptive Field Dynamics ($15\text{s}$ vs. $30\text{s}$ vs. $60\text{s}$)
@@ -216,6 +216,7 @@ Our benchmark investigated five fundamental research questions. Here are the emp
 - We ran a strictly controlled ablation comparing **Joint-CoT** (`commentary` $\to$ `label` $\to$ `timestamp`) against **Spotting-Only** (`timestamp` $\to$ `label`).
 - **The Shocking Result:** Stripping commentary caused a **$19.4\times$ collapse in Tight-mAP** ($0.0389 \to 0.0020$) and a **$3.43\times$ collapse in Loose-mAP**!
 - **Why? The "00:00" Prior Collapse:** In Spotting-Only mode, `timestamp` is the very first token emitted. Without first describing what happened, the decoder's language prior collapses onto the very first visual clock badge in the video: `[00:00]`. It emitted 6 fake `Kick-off` events at the exact start of every single sliding window! Writing commentary first acts as a visual Chain-of-Thought that forces the model to locate and describe the action before committing to a timestamp.
+- **Reality Check (added after the v5.0.5 review):** This ablation ran once, on one 10-minute chunk with 16 ground-truth events, so "19.4×" is the gap between about two tight hits and almost none. Joint-CoT also did not cure the prior: 6 of its 23 predictions still landed on exact window starts (7 of 15 without commentary), and it emitted 4 `Kick-off` events against one real kick-off. The effect is real in direction and unmeasured in size.
 
 ### RQ4: Zero-VRAM Audio-Visual Grounding
 *Can acoustic broadcast physics eliminate visual hallucinations?*
@@ -274,6 +275,7 @@ Engineering is not about things working on the first try; it's about systematica
 * **The Diagnosis:** CIDEr (Consensus-based Image Description Evaluation) weights $n$-grams using **TF-IDF** ($\text{IDF} = \log(N / \text{df})$). In the delexicalized dataset, the tokens `[PLAYER]`, `[TEAM]`, and `[REFEREE]` appear in over 90% of all reference captions. As a result, their Document Frequency ($\text{df}$) is huge, driving their IDF weight down to near zero! 
   While unweighted metrics rewarded the model for correctly spotting the players and referee, CIDEr assigned those tokens zero weight and penalized the model for omitting the rare proper nouns ("Arsenal", "Herrera") that carried high IDF in the raw text.
 * **Engineering Lesson:** Understand the mathematical loss function of your evaluation metrics. CIDEr is designed for diverse image captioning datasets (COCO) with thousands of images; on sports video captioning splits, METEOR is a vastly superior metric because it aligns with semantic meaning without collapsing under TF-IDF saturation.
+* **Reality Check (added after the v5.0.5 review):** The "paradox" is not consistent across systems. CIDEr fell for Qwen (0.0745 to 0.0514) and MiniCPM (0.0596 to 0.0538), but it rose for LFM (0.0423 to 0.0495) and stayed flat for the ensemble (0.0394 to 0.0396). Across all five systems ROUGE-L rose by +8% to +36% and METEOR by +10% to +25%, not the "+16% to +31%" we first quoted from the three best rows. With 20 to 27 matched captions, CIDEr differences of 0.01 to 0.02 are inside the noise, and the TF-IDF explanation is plausible but was never tested. The graft's 0.0520 is also still below Qwen alone (0.0745).
 
 ---
 
@@ -285,6 +287,12 @@ Engineering is not about things working on the first try; it's about systematica
   Because physical acoustic consequences (a whistle blow) always occur $+1.5\text{s}$ to $+3.0\text{s}$ *after* physical contact, gating MiniCPM with a $\pm 4.0\text{s}$ whistle window pruned its true fouls because the whistle hadn't happened yet!
 * **The Fix:** We formulated the **Cross-Modal Temporal Synchrony Law**: initiator-biased visual models must be temporally recalibrated (shifted by $+2.95\text{s}$) *before* causal acoustic gating is applied. Once aligned, audio grounding boosts precision without sacrificing recall.
 * **Engineering Lesson:** Multimodal fusion is governed by physical causality. Light travels faster than sound, and human referee reaction time introduces a causal lag. You cannot fuse vision and audio without modeling temporal causality.
+* **Reality Check (added after the v5.0.5 review):** The story above is a hypothesis, and our own logs do not support it.
+  - The "uncalibrated" and "synchronized" ensemble rows in `scripts/evaluate_rq4_audio_grounding.py` read the same predictions, which already carry the $+2.95\text{s}$ shift. The only difference is that the synchronized mode switches off the foul penalty and pruning. The whistle confirmed 6 predictions either way, so Foul AP came back (0.0289 to 0.1563) because we stopped pruning, not because we aligned anything. It never got back to the ungated 0.1853.
+  - The $-2.95\text{s}$ "initiation anchor" is the median of 15 matched detections with a standard deviation of 8.6 seconds (mean $-1.68\text{s}$). That is not distinguishable from zero, and the leave-one-chunk-out estimates of the correction swing from $-1.79\text{s}$ to $+2.95\text{s}$.
+  - On fouls specifically, MiniCPM's four matched detections were 5.7 to 8.2 seconds *late*, the opposite of "before the whistle".
+  - Applying the shift made MiniCPM worse: Tight-mAP 0.0128 to 0.0033, Foul AP 0.2307 to 0.1853.
+  - **The real lesson:** when two experiment rows differ in two ways (timing and rules), you cannot credit either one. Change one thing per row, and check the sample size behind any constant you promote to a "law".
 
 ---
 
@@ -345,6 +353,7 @@ Engineering is not about things working on the first try; it's about systematica
 * **The Investigation:** We computed the empirical $17 \times 17$ Markov transition matrix $M_{19}$ and Half-1 temporal priors strictly on the **other 19 matches** (Games 1–19, 4,210 events, excluding Game 0) to ensure zero data leakage. $M_{19}$ proved that $P(\text{Indirect FK} \cup \text{Yellow} \mid \text{Foul}) = 87.7\%$ and $P(\text{Throw-in} \cup \text{Clearance} \cup \text{Corner} \mid \text{Ball out of play}) = 96.6\%$, while $P(\text{Substitution} \mid \text{Half 1})$ is a microscopic $0.101\%$.
 * **The Fix:** We implemented `scripts/evaluate_markov_prior_rescoring.py`, running in under 5 seconds of CPU time. It boosted the confidence of causally paired transitions and pruned ghost substitutions and open-play kick-offs. The result: on our 3-Model Specialist Ensemble, **Tight-mAP jumped from 0.0631 to 0.0845 (+34.0% relative gain)**, and **Active Loose-mAP jumped from 21.45% to 24.15% (+2.70% absolute gain)** with **zero loss of match recall (36 / 65 events preserved)**!
 * **Engineering Lesson:** Post-processing doesn't have to be arbitrary heuristics. Grounding post-processing in out-of-sample physical state transition probabilities ($M_{19}$) turns macro-scale dataset statistics into direct, measurable mAP gains with zero GPU compute.
+* **Reality Check (added after the v5.0.5 review):** Only the transition matrix is out-of-sample. The rules around it (the boost weight, which classes get boosted, the kick-off and substitution pruning) and the ensemble routing were written while looking at Game 0, the same match these gains are measured on. Two signs it is overfit: the same rescorer *lowers* Qwen's solo Tight-mAP (0.0520 to 0.0409), and on the five-match MES-5 set the equivalent $M_{15}$ prior adds about 6% Loose-mAP and 8% Tight-mAP, against +13% and +34% here.
 
 ### War Story #13: Turning Replay False Positives into Track F Replay Grounding
 * **The Symptom:** Before we implemented our 45-second NMS window in Track A, models consistently double-detected events: once when the live action occurred (e.g., Herrera Goal at 29:19, Fellaini Foul at 25:38) and again 15 to 50 seconds later when television directors cut to multi-angle slow-motion replays.
@@ -389,14 +398,14 @@ Throughout this project, several core engineering principles guided our success:
 | **Track A (Spotting)** | MiniCPM-V 4.6 (Solo, $W=60\text{s}$) | 30s Match Recall | **23.1%** | 15 / 65 events detected; superior tackle and foul perception. |
 | **Track A (Spotting)** | LFM2.5-VL-3B (Solo, $W=30\text{s}$) | Boundary Speed | **12.95s/win** | Ultra-fast boundary specialist; 0.1486 AP on Ball out of play. |
 | **Track A (Spotting)** | **3-Model Domain Specialist Ensemble** | **Active Loose-mAP** | **20.87%** | **55.4% Match Recall (36 / 65 events)**; beats all single models. |
-| **Track A (Spotting)** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **24.15%** | **+34.0% Tight-mAP gain (0.0845)**; +2.70% Active Loose-mAP gain via out-of-sample Markov causal confidence boost ($0 compute). |
-| **Track A (Spotting)** | **3-Model Ensemble (5-Fold LOCO CV)** | **Out-of-Sample mAP**| **20.00%** | Proves zero data leakage; robust generalization across chunks. |
+| **Track A (Spotting)** | **3-Model Specialist + $M_{19}$ Rescorer** | **Active Loose-mAP** | **24.15%** | **+34.0% Tight-mAP gain (0.0845)**; +2.70% Active Loose-mAP gain via Markov confidence boost ($0 compute). Matrix is out-of-sample; rules and routing were developed on this match. |
+| **Track A (Spotting)** | **3-Model Ensemble (5-Fold LOCO routing)** | **Active Loose-mAP**| **20.00%** | Routing picked on 4 chunks, scored on the 5th, pooled (35 / 65 hits). Shifts were fitted on the whole half. |
 | **Track B (Captioning)**| 3-Model Specialist Ensemble | Temporal Recall | **81.3%** | 26 / 32 official ground-truth captions matched within window. |
-| **Track B (Captioning)**| Delexicalized Role Normalization | ROUGE-L / METEOR | **+16% to +31%**| Proves semantic visual grounding is solid; roster naming is the bottleneck. |
-| **Track B (Captioning)**| "Best-Localizer + Best-Narrator" Graft | Raw CIDEr | **0.0520** | **+32.0% CIDEr boost** by grafting Qwen text onto specialist hits. |
-| **RQ3 (Dual-Task)** | Joint-CoT vs. Spotting-Only | Tight-mAP Gain | **19.4× Gain** | Commentary acts as visual CoT; eliminates "00:00" prior collapse. |
+| **Track B (Captioning)**| Delexicalized Role Normalization | ROUGE-L / METEOR | **+8% to +36% / +10% to +25%**| Suggests roster naming is part of the error; absolute scores stay low and CIDEr does not move consistently. |
+| **Track B (Captioning)**| "Best-Localizer + Best-Narrator" Graft | Raw CIDEr | **0.0520** | +32.0% over the ungrafted ensemble (0.0394); still below Qwen alone (0.0745). |
+| **RQ3 (Dual-Task)** | Joint-CoT vs. Spotting-Only | Tight-mAP Gain | **19.4× Gain** | One chunk, 16 events, single run. Commentary reduces the "00:00" prior but does not eliminate it. |
 | **RQ4 (Audio DSP)** | Zero-VRAM Whistle & Roar Gating (Raw) | False Positive Pruning | **52.1% Pruned** | Pruned 49 FP on Qwen, 47 phantom goals on MiniCPM in 3.22s CPU time. |
-| **RQ4 (Audio DSP)** | **3-Model Specialist + Synchronized Gate**| **Acoustic Precision** | **0.0534 Tight-mAP** | **5 Phantom Goals Pruned**; preserves 20.63% mAP & validates Synchrony Law. |
+| **RQ4 (Audio DSP)** | 3-Model Specialist + Selective Gate (no foul pruning) | Acoustic Precision | 0.0534 Tight-mAP | Removes 5 Goal predictions with Goal AP unchanged; 20.63% vs 20.87% ungated. Does not test the synchrony hypothesis. |
 | **V3 Track C (SN-VQA)** | Qwen3.5-4B (4-bit NF4) | **Top-1 Accuracy** | **100.00%** | 12/12 on self-authored questions (live run; a smoke test, not an official SN-VQA set). |
 | **V3 Track D (MV-Foul)** † | Scripted whistle rule | Active Balanced Acc | 100.00% (scripted) | N = 12 hand-authored duels; true by construction, no audio or video read. |
 | **V3 Track E (BAS)** † | Typed-in prediction lists | Precision at $\pm 1.0\text{s}$ | 1.0000 (scripted) | N = 16; 75.0% recall; no model run. |
@@ -470,6 +479,11 @@ To reach 100% full-corpus support without cloud spend, we defined and conquered 
    - *The Catch:* Reproducible is not the same as held-out. Git history showed the ensemble first scored below Qwen solo on MES-5, and that the routing and boost rules were then edited until the same five matches scored higher. Re-running the LOMO script also showed its printed fold assignments contradicting the sentence we had written about it.
    - *Engineering Lesson:* Freeze the method before you look at the test set, and when a validation script prints something, quote its output instead of summarizing from memory. Any design decision made after seeing test results needs its own held-out check.
    - Total GPU Cloud Cost: **$0.00** (executed 100% on your ThinkPad P16 RTX 3000 Ada 8 GB GPU).
+6. **War Story #17: The Explanation the Script Disproved**
+   - *The Symptom:* Under leave-one-match-out routing, Tight-mAP was less than half of Qwen solo (0.0261 against 0.0562). In v5.0.5 we wrote a tidy reason into the paper: the specialists have different timing biases, so mixing them adds "1.5 to 2.0 s of uncalibrated temporal jitter".
+   - *The Catch:* The script we cited already applies the timing shifts, so nothing was uncalibrated. Printing per-class tight AP showed that 94.5% of the drop came from a single class. `Red card` has two events in the whole corpus; four of five folds routed it to MiniCPM, and its tight AP went from 0.5057 to 0.0227. A scratch re-run with the shifts removed moved Tight-mAP by 0.0003. The sentence had also quoted the correction shifts ($-1.20\text{s}$, $-3.10\text{s}$) as if they were the measured biases ($+1.20\text{s}$, $+3.10\text{s}$).
+   - *What else the same review found:* a LOCO fold table that no script produces, the "synchrony" gate rows that shared one input (War Story 6), and three paper tables that had drifted from the logs.
+   - *Engineering Lesson:* A plausible mechanism is a hypothesis until you test it. Before writing "because", decompose the metric (which classes moved?) and run the counterfactual (what happens without the thing you are blaming?). With a macro average over 17 classes, one two-event class can move the headline by half. And every table cell needs a log behind it: if no script prints the number, it does not go in the paper.
 
 ---
 
@@ -529,6 +543,7 @@ flowchart LR
 * **The Solution:** Constraining reasoning to a single concise observational commentary sentence (under 15 words) and capping `max_tokens=128` dropped per-window GPU latency from **18.5s down to 5.6s** (a **$3.3\times$ speedup**).
 * **Live Chunk 0 Benchmark:** Running live on Chunk 0 with `--concise-cot` and `--skip-inactive` dropped chunk inference time from 280s down to **140.0s** ($2\times$ wall-clock speedup) while hitting ground truth events with sub-3-second precision.
 * **What the MES-5 simulation actually showed:** Across all 687 MES-5 windows the gate skipped only 18 (2.6%), far from the "over 70%" intuition above, so skipping alone is worth about $1.03\times$. The 0.1840 Loose-mAP (100.4% retention) comes from masking those 18 windows in the existing verbose-CoT predictions. Concise-CoT's $3.3\times$ speedup was timed on one chunk and has not been scored on MES-5, so "0.1840 at $3.3\times$" was never a single measured configuration. The thresholds were also swept on Game 0 Half 1, which is inside MES-5.
+* **Reality Check (added after the v5.0.5 review):** Concise-CoT was scored on the one chunk where it ran, and it broke accuracy: Tight-mAP fell from 0.0389 to 0.0020 and Loose-mAP from 0.0548 to 0.0263, with 7 of its 9 predictions sitting on window-start timestamps. That is the same collapse as the RQ3 spotting-only ablation, which makes sense, because a 15-word commentary is barely a chain of thought. The 18.5s and 5.6s timings are also not in the committed telemetry, which logs 10.0s per window for that run. A speedup number without the accuracy next to it is half a result.
 
 ---
 
