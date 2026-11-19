@@ -1,0 +1,29 @@
+{
+  "per_subcategory_pct": {
+    "counting": 30.95,
+    "recall_event_time": 28.5,
+    "recall_event_player": 28.68,
+    "event_team": 50.0,
+    "event_player": 33.08,
+    "causal reasoning": 35.9
+  },
+  "subcategory_mean_pct": 34.52,
+  "overall_correct": 236,
+  "overall_total": 700,
+  "n_per_subcategory": {
+    "counting": 84,
+    "recall_event_time": 200,
+    "recall_event_player": 129,
+    "event_team": 118,
+    "event_player": 130,
+    "causal reasoning": 39
+  },
+  "model": "Qwen/Qwen3.5-4B",
+  "precision": "nf4",
+  "mode": "question",
+  "input": "text only (no video)",
+  "selection": "argmax next-token logit over option letters",
+  "limit": null,
+  "wall_sec": 476.8,
+  "max_prompt_tokens": 197
+}

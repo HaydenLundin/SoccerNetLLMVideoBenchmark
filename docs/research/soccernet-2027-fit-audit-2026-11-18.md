@@ -42,3 +42,35 @@ subcategory accuracies; submissions to CodaBench competition 18329 as OSL JSON.
 - `CITATION.cff` still says version 5.0.2.
 - LOMO 0.1613 / 0.0261 (`README.md:58`) has no committed JSON source.
 - QLoRA adapter README is an unfilled template; dataset card says MIT, but SoccerNet-derived data is NDA/"other".
+
+## 4. Text-only baseline on the SN-VQA-2027 test split (2026-11-18)
+
+Script: `scripts/evaluate_sn_vqa_2027_text_only.py` (Qwen3.5-4B, NF4, no video; the answer is
+the argmax next-token logit over the option letters, so every prediction is valid and deterministic).
+Logs: `logs/sn_vqa_2027/text_only_question/`, `logs/sn_vqa_2027/text_only_history_smoke/`.
+
+Subcategory accuracy (%), score = unweighted mean of the six:
+
+| System | counting | recall time | recall player | event team | event player | causal | **Mean** |
+|---|---|---|---|---|---|---|---|
+| n (test) | 84 | 200 | 129 | 118 | 130 | 39 | 700 |
+| Chance (2- or 4-way) | 25.0 | 25.0 | 25.0 | 50.0 | 25.0 | 25.0 | **29.2** |
+| Ours: Qwen3.5-4B text-only | 31.0 | 28.5 | 28.7 | 50.0 | 33.1 | 35.9 | **34.5** |
+| GPT-5.5 text-only (MatchLive README, not run by us) | 36.9 | 26.0 | 45.0 | 48.3 | 43.1 | 51.3 | **41.8** |
+| Organizer sample predictions | | | | | | | **41.8** |
+| MatchLive, local Qwen3.8-27B (README) | 42.9 | 70.5 | 79.1 | 84.7 | 72.3 | 53.8 | **67.2** |
+| MatchLive, gemini-3.8-flash (README) | 58.3 | 82.0 | 96.1 | 96.6 | 96.9 | 76.9 | **84.5** |
+
+Findings:
+- **Answer positions are perfectly balanced** in every subcategory, so a constant option scores chance.
+- **The 4B text-only model is only slightly above chance:** 236/700 vs 204.5 expected, z = 2.7. No single
+  subcategory is clearly above chance except event_player (z = 2.1). Team questions are exactly 50%.
+- **Text-only does almost nothing for event timing.** recall_event_time (200 Qs, the largest group) is at
+  chance for both us (28.5) and GPT-5.5 (26.0). That group needs video plus memory.
+- **Counting is the weak spot even for the best published system** (58.3 for Gemini MatchLive, vs 82–97
+  elsewhere). With equal subcategory weights it is the highest-headroom target.
+- **Earlier questions don't measurably leak answers at 4B scale.** On the first 120 questions (one half),
+  adding every earlier question as context: 49 vs 45 correct, 13 vs 9 discordant, exact McNemar p = 0.52.
+  This needs a stronger model before it can be ruled out.
+- **Speed:** without `flash-linear-attention` / `causal_conv1d`, Qwen3.5's linear-attention layers fall back
+  to PyTorch. Question-only prompts (≤197 tokens) take 0.7 s each; history prompts (≤6k tokens) take ~45 s.
