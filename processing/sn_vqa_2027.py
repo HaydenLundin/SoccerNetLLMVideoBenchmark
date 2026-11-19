@@ -60,16 +60,18 @@ def causal_frame_window(
 
 
 def iter_questions(osl: Dict[str, Any]) -> Iterator[Dict[str, Any]]:
-    """Yields one record per question with its sample id, video path and half."""
+    """Yields one record per question with its sample id, match key, video path and half."""
     for sample in osl["data"]:
         video_path = next(
             (i["path"] for i in sample.get("inputs", []) if i.get("type") == "video"),
             None,
         )
         half = sample.get("metadata", {}).get("half")
+        match_key = sample.get("metadata", {}).get("match_key")
         for question in sample["streaming_vqa"]:
             yield {
                 "sample_id": sample["id"],
+                "match_key": match_key,
                 "video_path": video_path,
                 "half": half,
                 "question": question,

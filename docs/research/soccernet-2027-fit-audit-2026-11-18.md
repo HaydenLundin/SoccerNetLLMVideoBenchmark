@@ -74,3 +74,91 @@ Findings:
   This needs a stronger model before it can be ruled out.
 - **Speed:** without `flash-linear-attention` / `causal_conv1d`, Qwen3.5's linear-attention layers fall back
   to PyTorch. Question-only prompts (≤197 tokens) take 0.7 s each; history prompts (≤6k tokens) take ~45 s.
+
+## 5. Counting event ledger, and challenge-match overlap with our own data (2026-11-18)
+
+**Ledger** (`processing/event_ledger.py`, tests in `scripts/test_event_ledger.py`):
+- **Question parsing:** every counting question follows one template,
+  "{As of now | Over the whole match so far | In/Over the past N minutes}, how many {events} has {subject}
+  {verb}?". The parser covers 84/84 test and 150/150 challenge questions.
+- **Subjects:** a team in 31/84 test questions and 67/150 challenge questions; otherwise a player.
+- **Event kinds:** shots dominate. The challenge adds "been involved in" and cards, which test does not have.
+- **Scopes:** 51 of 84 test questions are cumulative and 33 are 10- or 20-minute windows. 63 of 84 are asked
+  in the second half, so the ledger is keyed by `match_key` and spans both halves.
+- **Causality:** each event stores when perception *observed* it. A detector that looks ahead (e.g. our
+  60 s windows) stays causal by timestamping its events at the window end.
+- **Untested assumptions:**
+  - shots = on + off target;
+  - free kicks = direct + indirect;
+  - "past N minutes" uses a match clock with first-half stoppage time clamped to 45:00;
+  - "as of now" = "whole match so far".
+  These need event-level ground truth to check.
+
+**Challenge matches overlap with data we already used.** The team options of each sample's `event_team`
+questions identify the five hidden challenge matches as Chelsea v Man City, Chelsea v West Brom, Chelsea v
+Newcastle, Chelsea v West Ham, and Arsenal v Tottenham. Our `eval_set.json` contains 2015-16 fixtures of
+the first four:
+- `2015-08-16 Man City 3-0 Chelsea` (game 1, MES-5)
+- `2015-08-23 West Brom 2-3 Chelsea` (game 2, MES-5)
+- `2015-09-26 Newcastle 2-2 Chelsea` (game 5)
+- `2015-10-24 West Ham 2-1 Chelsea` (game 7)
+
+For games 1 and 2 the identity is confirmed. Corner times in the challenge questions and options fall within
+5 s of our SoccerNet-v2 corner labels 4/10 and 8/16 times, against about 0.2 and 0.9 expected by chance.
+Games 5 and 7 are only matched by team and season so far.
+
+Consequences under the "no external match information" rule:
+- **QLoRA adapter:** trained on games 4 and 7 (`dataset_manifest.json`: 128 + 139 samples). If game 7 is the
+  challenge West Ham match, the adapter must not be used for a challenge submission.
+- **MES-5 routing and rescoring:** tuned on games 1 and 2. They can't be used either.
+- **M15 prior:** excludes the MES-5 games but may include games 5 and 7. Check before use.
+- **The ledger:** must never be filled from SoccerNet-v2 labels for these games.
+
+Test-split matches are Chelsea v Manchester United and Chelsea v Liverpool. `eval_set.json` contains
+`2015-12-28 Man Utd 0-0 Chelsea`; identity unconfirmed.
+
+## 6. Oracle checks for the counting ledger (2026-11-19)
+
+**Test matches identified.** I downloaded SoccerNet-v2 `Labels-v2.json` for five candidate fixtures and matched them
+to the test answers to "Which team is taking the … now?". Diagnostic use only; these are labels, never submission inputs.
+- `game1` = **2016-02-07 Chelsea 1-1 Manchester United**: 45/60 question times within 5 s of a label, 41 with the right team.
+- `game2` = **2016-09-16 Chelsea 1-2 Liverpool**: 52/58 within 5 s, 51 with the right team.
+- Other candidates matched 16–27 times and 3–8 teams. Neither test match is in `eval_set.json`, so the test split is clean.
+
+**SoccerNet-v2 events as an oracle: 21/31 team counting questions.** I filled the ledger with SoccerNet-v2 events and
+team labels and asked only the team-subject questions.
+- The misses are coverage, not timing. VQA questions come about 2–3 s after the SoccerNet-v2 label, and looking up to
+  60 s ahead changes nothing.
+- The VQA set has its own event annotations. Game 1 has 19 corners against 17 in SoccerNet-v2.
+- A perception model trained to SoccerNet-v2 definitions is therefore capped well below 100% on counting.
+- Rule variants: counting goals as shots gives 22/31; on-target-only gives 18; direct free kicks only gives 18.
+
+**The question stream defines the countable events: 84/84.** Each event question ("Which team / Who is taking the
+<kind> now?") is asked at the moment an event happens. A ledger built only from earlier event questions plus their
+correct answers reproduces 74/84 counting answers. With goals also counted as shots, it reproduces **84/84** (team
+31/31, player 53/53). Counting is bookkeeping over one's own answers to the "now" questions.
+
+Sensitivity: I replaced each "now" answer with a random wrong option with probability 1 − p (50 draws each):
+
+| "now"-question accuracy p | 1.00 | 0.97 | 0.90 | 0.80 | 0.70 | 0.50 | 0.33 |
+|---|---|---|---|---|---|---|---|
+| counting accuracy (mean %) | 100 | 92.7 | 79.7 | 70.5 | 60.5 | 51.6 | 43.8 |
+
+MatchLive's Gemini run scores 96.6/96.9 on event_team/event_player but 58.3 on counting. At p ≈ 0.97, bookkeeping
+predicts about 93%.
+
+**Caveats:**
+1. **Rules:** this uses earlier questions as inputs. RULES.md lists permitted inputs as video plus pre-match metadata
+   and applies the causal cutoff to memory and state. Confirm with the organizers that the question stream is a
+   permitted input before a submission relies on it. It may be a benchmark design issue worth reporting to them.
+2. **The challenge split differs:**
+   - 83 of 150 counting questions use "been involved in" (shots, offsides, goals), whose meaning (main actor only,
+     or assists too) is unknown.
+   - Challenge substitution events come only as "Who is being substituted in/out now?" with no team question, so the
+     4 substitution-count questions need the player's team, e.g. from the permitted rosters.
+   - 100% on test does not transfer automatically.
+3. **The error model is simple:** uniform random wrong answers. Real errors are correlated (e.g. confusing two
+   teammates).
+
+Code: `ledgers_from_now_questions` and the goal-as-shot rule in `processing/event_ledger.py`. `scripts/test_event_ledger.py
+--official-dir` asserts the 84/84 oracle.
