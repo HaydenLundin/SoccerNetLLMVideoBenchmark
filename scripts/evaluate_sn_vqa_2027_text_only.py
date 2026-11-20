@@ -30,7 +30,7 @@ try:
 except Exception:
     pass
 
-from processing.sn_vqa_2027 import iter_questions, build_submission, validate_submission
+from processing.sn_vqa_2027 import iter_questions, build_submission, validate_submission, check_challenge_safe_model
 
 SUBCATEGORIES = [
     "counting", "recall_event_time", "recall_event_player",
@@ -90,6 +90,7 @@ def main():
     parser.add_argument("--limit", type=int, default=None, help="Score only the first N questions (smoke test)")
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "logs" / "sn_vqa_2027")
     args = parser.parse_args()
+    check_challenge_safe_model(args.model)
 
     import torch
     from transformers import AutoProcessor, AutoModelForImageTextToText, BitsAndBytesConfig

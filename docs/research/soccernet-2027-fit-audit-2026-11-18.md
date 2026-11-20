@@ -114,6 +114,11 @@ Consequences under the "no external match information" rule:
 - **M15 prior:** excludes the MES-5 games but may include games 5 and 7. Check before use.
 - **The ledger:** must never be filled from SoccerNet-v2 labels for these games.
 
+Enforced in code (2026-11-19): `check_challenge_safe_model` in `processing/sn_vqa_2027.py` refuses the QLoRA adapter
+and any local PEFT adapter, and `scripts/evaluate_sn_vqa_2027_text_only.py` calls it before loading a model.
+`scripts/test_sn_vqa_2027.py` (CI) fails if any SN-VQA-2027 file imports QLoRA, MES-5, MECE-routing or Markov-prior
+code, directly or through other repo modules.
+
 Test-split matches are Chelsea v Manchester United and Chelsea v Liverpool. `eval_set.json` contains
 `2015-12-28 Man Utd 0-0 Chelsea`; identity unconfirmed.
 
@@ -148,9 +153,8 @@ MatchLive's Gemini run scores 96.6/96.9 on event_team/event_player but 58.3 on c
 predicts about 93%.
 
 **Caveats:**
-1. **Rules:** this uses earlier questions as inputs. RULES.md lists permitted inputs as video plus pre-match metadata
-   and applies the causal cutoff to memory and state. Confirm with the organizers that the question stream is a
-   permitted input before a submission relies on it. It may be a benchmark design issue worth reporting to them.
+1. **Rules:** this uses earlier questions as inputs, which the rules' list of permitted inputs does not include.
+   See section 7. Don't rely on it for a submission without a written answer from the organizers.
 2. **The challenge split differs:**
    - 83 of 150 counting questions use "been involved in" (shots, offsides, goals), whose meaning (main actor only,
      or assists too) is unknown.
@@ -162,3 +166,36 @@ predicts about 93%.
 
 Code: `ledgers_from_now_questions` and the goal-as-shot rule in `processing/event_ledger.py`. `scripts/test_event_ledger.py
 --official-dir` asserts the 84/84 oracle.
+
+## 7. Permitted inputs: what the rules say (2026-11-19)
+
+Sources: RULES.md and README of github.com/SoccerNet/sn-vqa-2027, and the code of github.com/Becomebright/MatchLive-baseline.
+The HF dataset card (gated), CodaBench and Discord were not read.
+
+**The list of permitted inputs is closed, and it does not include earlier questions.** RULES.md: at question time `t`
+"a method may use only the match video observed up to and including `t`, the current question and answer options,
+the question timestamp, and permitted match metadata". The cutoff covers "memory, cached features, retrieved frames,
+tool calls, and state or model updates", and "Predictions must use only the permitted inputs listed above."
+- Earlier questions, previous answers and question history are not mentioned anywhere in the repo.
+- Read strictly, "the current question" excludes earlier ones. That rules out the counting ledger built from the
+  question stream, and also our `--mode history` text-only run (a test-split diagnostic, never a submission).
+- A lenient reading says earlier questions sit inside the cutoff. Nothing in the text supports that over the strict one.
+
+**The official baseline uses no question history.** MatchLive's `scripts/run_qa.py` says the model sees "the pre-match
+facts, the question and its options, and nothing else from the question file". It answers questions independently in a
+thread pool. Its video memory is built from frames only. So the baseline neither uses nor tests the practice.
+
+**Delivery.** The whole question file (`challenge_public.json`, 1,158 questions) is handed out up front and scored as
+one JSON file. Nothing technical stops a method from reading other questions. Compliance is judged from the required
+technical report: "rule compliance is assessed from the report and method review."
+
+**Pre-match metadata** is limited to "team names, kit colors, rosters and jersey numbers, initial lineups and positions,
+and playing directions once they have been established from the broadcast". Rosters cover the substitution-team gap
+(section 6, caveat 2). The baseline's `data/prematch/` files key players by team.
+
+**Where to ask:** the README points to the SoccerNet Discord (discord.gg/cPbqf2mAwF) for "rule clarifications". GitHub
+issues are enabled on the repo; it has no issues or discussions yet.
+
+**Consequence:** treat the ledger as video-fed only. Perception (a spotting model or VLM watching frames up to `t`)
+appends events, and counting reads them. That is permitted under either reading. Filling it from the question stream
+stays a diagnostic until the organizers answer.

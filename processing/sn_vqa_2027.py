@@ -15,10 +15,35 @@ Pure Python, no model or video dependencies, so it runs in CPU-only CI.
 """
 
 import copy
+import re
+from pathlib import Path
 from typing import Any, Dict, Iterator, List, Optional, Sequence, Tuple, TypeVar
 
 Frame = TypeVar("Frame")
 QuestionKey = Tuple[str, str]
+
+# Artifacts built from matches that are also in the hidden challenge split
+# (docs/research/soccernet-2027-fit-audit-2026-11-18.md, section 5). The rules
+# forbid using reference annotations, so the SN-VQA-2027 pipeline never loads or
+# imports them:
+# - the QLoRA adapter (models/qwen3.5-4b-soccernet-qlora), trained on eval_set
+#   games 4 and 7; game 7 is likely the challenge West Ham match;
+# - MES-5 routing and its Markov-prior rescoring, tuned on games 1 and 2, which
+#   are the challenge Man City and West Brom matches.
+# scripts/test_sn_vqa_2027.py checks every SN-VQA-2027 file's imports against this.
+CHALLENGE_EXCLUDED_NAME_RE = re.compile(r"qlora|mes5|mece|markov_prior", re.I)
+
+
+def check_challenge_safe_model(model_ref: str) -> None:
+    """
+    Raises ValueError unless `model_ref` is a base model. Any local PEFT adapter
+    is refused, since ours were trained on SoccerNet labels of challenge matches.
+    """
+    if CHALLENGE_EXCLUDED_NAME_RE.search(model_ref) or (Path(model_ref) / "adapter_config.json").is_file():
+        raise ValueError(
+            f"{model_ref!r} is excluded from SN-VQA-2027: our QLoRA adapter and MES-5 routing were "
+            "trained or tuned on challenge matches. Use a base model."
+        )
 
 
 def question_time_sec(question: Dict[str, Any]) -> float:

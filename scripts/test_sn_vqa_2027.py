@@ -11,9 +11,11 @@ reproduces their published 41.76% score. To confirm with the official scorer, ru
 """
 
 import sys
+import ast
 import copy
 import json
 import argparse
+import tempfile
 from pathlib import Path
 
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
@@ -25,6 +27,8 @@ from processing.sn_vqa_2027 import (
     iter_questions,
     build_submission,
     validate_submission,
+    check_challenge_safe_model,
+    CHALLENGE_EXCLUDED_NAME_RE,
 )
 
 
@@ -203,7 +207,7 @@ def test_validator_flags_scorer_failures():
 # --- Optional official-file check -------------------------------------------
 
 def check_official(official_dir: Path):
-    print(f"\n--- 9. Official files: rebuild baseline submission from {official_dir} ---")
+    print(f"\n--- 11. Official files: rebuild baseline submission from {official_dir} ---")
     gt = json.loads((official_dir / "test_GT.json").read_text(encoding="utf-8"))
     baseline = json.loads((official_dir / "test_submission.json").read_text(encoding="utf-8"))
     preds = {
@@ -238,6 +242,66 @@ def check_official(official_dir: Path):
     print(f"  [PASS] baseline reproduces {score:.2f}% ({sum(hits.values())}/{n})")
 
 
+def test_challenge_guard_refuses_adapters():
+    print("[TEST 9] Model guard: the QLoRA adapter and any PEFT adapter are refused")
+    check_challenge_safe_model("Qwen/Qwen3.5-4B")
+    with tempfile.TemporaryDirectory() as d:
+        (Path(d) / "adapter_config.json").write_text("{}", encoding="utf-8")
+        refused = [str(WORKSPACE_ROOT / "models" / "qwen3.5-4b-soccernet-qlora"), d]
+        for ref in refused:
+            try:
+                check_challenge_safe_model(ref)
+            except ValueError:
+                continue
+            raise AssertionError(f"guard accepted {ref}")
+    print("  [PASS] base model accepted; QLoRA adapter and a synthetic adapter refused")
+
+
+def _excluded_imports(sources):
+    """Follows repo-local imports from `sources`; returns (file, module) pairs naming excluded artifacts."""
+    hits, seen, queue = [], set(), list(sources)
+    while queue:
+        path = queue.pop()
+        if path in seen:
+            continue
+        seen.add(path)
+        for node in ast.walk(ast.parse(path.read_text(encoding="utf-8"))):
+            if isinstance(node, ast.Import):
+                names = [a.name for a in node.names]
+            elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
+                names = [node.module] + [f"{node.module}.{a.name}" for a in node.names]
+            else:
+                continue
+            for name in names:
+                if CHALLENGE_EXCLUDED_NAME_RE.search(name):
+                    hits.append((path.name, name))
+                module_file = WORKSPACE_ROOT / (name.replace(".", "/") + ".py")
+                if module_file.is_file():
+                    queue.append(module_file)
+    return hits
+
+
+def test_sn_vqa_code_never_imports_excluded_artifacts():
+    print("[TEST 10] No SN-VQA-2027 file imports QLoRA or MES-5 routing code, directly or transitively")
+    sources = (
+        set(WORKSPACE_ROOT.glob("processing/*sn_vqa_2027*.py"))
+        | set(WORKSPACE_ROOT.glob("scripts/*sn_vqa_2027*.py"))
+        | {WORKSPACE_ROOT / "processing" / "event_ledger.py", WORKSPACE_ROOT / "scripts" / "test_event_ledger.py"}
+    )
+    hits = _excluded_imports(sorted(sources))
+    assert not hits, f"excluded artifacts imported: {hits}"
+
+    # The scan must catch direct and transitive imports, or the check above proves nothing.
+    # evaluate_half2_specialist_and_substitutions has a neutral name but imports the rescoring.
+    with tempfile.TemporaryDirectory() as d:
+        probe = Path(d) / "probe.py"
+        probe.write_text("from scripts.test_mece_routing import get_model_preds_for_half\n", encoding="utf-8")
+        assert _excluded_imports([probe]), "scan missed a direct MES-5 routing import"
+        probe.write_text("import scripts.evaluate_half2_specialist_and_substitutions\n", encoding="utf-8")
+        assert _excluded_imports([probe]), "scan missed a transitive MES-5 rescoring import"
+    print(f"  [PASS] {len(sources)} SN-VQA-2027 files clean; scan catches planted direct and transitive imports")
+
+
 def run_all_tests(official_dir=None):
     test_causal_window_excludes_future_frames()
     test_causal_window_subsample_keeps_latest_frame()
@@ -247,6 +311,8 @@ def run_all_tests(official_dir=None):
     test_submission_round_trip()
     test_writer_rejects_missing_and_unknown_predictions()
     test_validator_flags_scorer_failures()
+    test_challenge_guard_refuses_adapters()
+    test_sn_vqa_code_never_imports_excluded_artifacts()
     if official_dir is not None:
         check_official(official_dir)
     print("\n" + "=" * 60)

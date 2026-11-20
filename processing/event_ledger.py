@@ -197,9 +197,10 @@ def ledgers_from_now_questions(
     player questions at the same moment are merged into one event, observed at
     the question time, so later questions see it and earlier ones don't.
 
-    Compliance note: this uses earlier questions as inputs. Confirm with the
-    organizers that the question stream counts as a permitted input before a
-    challenge submission relies on it.
+    Compliance note: this uses earlier questions as inputs. RULES.md permits
+    only "the current question and answer options" (plus video up to t, the
+    timestamp and pre-match metadata), so treat this as a diagnostic, not a
+    submission method, unless the organizers confirm otherwise in writing.
     """
     merged: Dict[Tuple[str, int, int, str], Dict[str, Optional[str]]] = {}
     for r in records:
