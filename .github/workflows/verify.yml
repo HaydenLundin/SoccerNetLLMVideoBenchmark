@@ -49,3 +49,9 @@ jobs:
 
       - name: 5. Run Interactive Demo Server & REST / HTTP 206 Streaming Probe
         run: python scripts/test_demo_server.py
+
+      - name: 6. Run SN-VQA-2027 Causal Cutoff & OSL Submission Suite
+        run: python scripts/test_sn_vqa_2027.py
+
+      - name: 7. Run SN-VQA-2027 Counting Event Ledger Suite
+        run: python scripts/test_event_ledger.py

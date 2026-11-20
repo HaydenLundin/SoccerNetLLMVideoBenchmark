@@ -1,0 +1,29 @@
+{
+  "per_subcategory_pct": {
+    "counting": 50.0,
+    "recall_event_time": 39.29,
+    "recall_event_player": 43.48,
+    "event_team": 58.33,
+    "event_player": 25.0,
+    "causal reasoning": 22.22
+  },
+  "subcategory_mean_pct": 39.72,
+  "overall_correct": 49,
+  "overall_total": 120,
+  "n_per_subcategory": {
+    "counting": 12,
+    "recall_event_time": 28,
+    "recall_event_player": 23,
+    "event_team": 24,
+    "event_player": 24,
+    "causal reasoning": 9
+  },
+  "model": "Qwen/Qwen3.5-4B",
+  "precision": "nf4",
+  "mode": "history",
+  "input": "text only (no video)",
+  "selection": "argmax next-token logit over option letters",
+  "limit": 120,
+  "wall_sec": 5393.3,
+  "max_prompt_tokens": 5970
+}
