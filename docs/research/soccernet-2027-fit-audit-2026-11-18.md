@@ -422,6 +422,98 @@ Held-out halves (34 shots):
 - **The warm-up matters little.** Over 0, 60, 120 and 240 s the chosen cut-off stays the same and F1 stays at 0.33–0.36. Three held-out shots fall in the first 120 s.
 - **Peak picking still looks up to 30 s ahead.** The cut-off is causal, but a window can be dropped for a higher one up to 30 s later. A ledger would therefore confirm a shot up to 30 s late, or pick forward in time order instead.
 
-**Next:**
-- For counting, detection quality is the limit, not the cut-off: about 1 detection in 3 is a real shot. Better per-window evidence (the v2 classes plus shot_bin's aftermath cues, or a second look at candidate windows) has to come before counts can beat the rate prior.
-- After that, team attribution from kits and rosters, then wiring the detections into `EventLedger` with observation time = window end (plus the peak-picking delay).
+### Where the counting points are: detection vs attribution (2026-11-24)
+
+Exploratory, run from scratch scripts on the committed window outputs; no repo code changed.
+
+**What the counting questions ask.**
+
+| Split | Counting questions | About shots | Shots, about a player |
+|---|---|---|---|
+| test | 84 | 37 | 28 |
+| challenge | 150 | 74 | 55 |
+
+Offsides come second on the challenge set (31, of which 21 are about a player). Corners have 10 questions in each split. On the challenge set, 83 of the 150 counting questions are about a player, not a team.
+
+**Corners.** The per-half percentile cut-off overcounts by 13–19 per held-out half, because game1 H1 has too few corners to tune on. The absolute p ≥ 0.5 cut-off lands near the right counts (+2, −1, +1), but finds only 5 of 16 held-out corners, so those counts are close by coincidence.
+
+**Better shot evidence from what we already have: none.** Each cue's causal percentile in its half, alone and averaged with v2's p(shot):
+
+| Score | Mean AUC (4 halves) |
+|---|---|
+| v2 p(shot) | 0.87 |
+| shot_bin p(shot) | 0.78 |
+| v2 replay in the next 30 s | 0.54 |
+| v2 goal kick in the next 24 s | 0.63 |
+| v2 corner in the next 30 s | 0.62 |
+| v2 + shot_bin over the next 12 s | 0.87 (held-out F1 0.36) |
+
+Adding the after-shot cues to the average lowers AUC to 0.75–0.81.
+
+**A bound on shot-count accuracy.** Ledgers were built from detections and scored on the 37 test shot-count questions with `choose_count_option`:
+- A detection matched to a true shot (strict rule, 15 s lead) takes that shot's time and attribution.
+- A false detection gets a random team and a random player from the match.
+- Detections become visible 30 s after their window ends, because of the peak-picking look-ahead.
+- Every result is a mean over 50 draws of the random choices.
+
+"Measured" attribution is right with the video QA run's accuracy on the shot/goal "now" questions: 70% for team (chance 50%) and 49% for player (chance 25%). Those choices are among 2 teams or 4 listed players. A ledger has to pick from a whole squad, so "measured" is optimistic.
+
+| Ledger fed by | Attribution | Team (9) | Player (28) | Total (37) |
+|---|---|---|---|---|
+| Video QA run (no ledger) | | 3 | 7 | 10 |
+| Empty ledger (always 0) | | 2 | 8 | 10 |
+| Chance (expected) | | | | 9.2 |
+| Question-stream oracle (diagnostic) | oracle | 9 | 28 | 37 |
+| Perfect detection, visible 30 s late | oracle | 6.0 | 28.0 | 34.0 |
+| v2, percentile ≥ 0.93 | oracle | 5.3 | 12.6 | 17.9 |
+| shot_bin, percentile ≥ 0.97 | oracle | 5.1 | 14.4 | 19.5 |
+| Perfect detection, visible 30 s late | measured | 4.6 | 14.9 | 19.5 |
+| v2, percentile ≥ 0.93 | measured | 5.3 | 11.2 | 16.5 |
+| shot_bin, percentile ≥ 0.97 | measured | 4.3 | 12.1 | 16.4 |
+
+- **Current detections looked worth wiring in, if attribution held up.** At measured attribution the ledger answers about 16.5 of 37, against 10 for the video QA run. The next subsection shows that attribution does not hold up, and that most of this gain is an artefact of how the test options are built.
+- **Player attribution is the bigger bottleneck.** Perfect detection with measured attribution (19.5) is barely better than our detections with measured attribution (16.5). Perfect detection with oracle attribution reaches 34.
+- **The 30 s visibility delay costs 3 of 9 team questions** even with perfect detection: questions asked soon after a shot don't see it yet.
+- **Scale:** shot counting is 37 of 700 test questions. A gain of 6.5 questions is worth about 0.9 points of overall accuracy.
+
+### Player attribution from the full squad (2026-11-24)
+
+Exploratory, run from a scratch script; no repo code changed.
+
+**Setup.** For each of the 43 true shots on test, the model sees 8 frames from 6 s before to 10 s after the shot. Video after the shot is fair, because a ledger records a shot only after its window. Qwen3.5-4B (NF4) is asked two questions, scored by letter logits:
+1. Which team takes the shot? The two options give each team's kit, and the prompt gives which goal each team defends.
+2. Which player of that team's full 18-man pre-match squad takes it? Each option gives shirt number and position.
+
+A no-frames control asks the same questions with the roster and kits only.
+
+| Frames | Team right | Player right (of 36) | Player right when team right | True player in top 3 |
+|---|---|---|---|---|
+| 8 at 896 px | 24/43 (56%) | 5/43 (12%) | 21% | 21% |
+| 8 at 448 px | 22/43 (51%) | 4/43 (9%) | 18% | 14% |
+| None (control) | 22/43 (51%) | 5/43 (12%) | 23% | 19% |
+
+- **The frames add nothing measurable.** Video at either resolution scores like the no-frames control.
+- **The answers collapse onto fixed picks.** The model names Manchester United or Liverpool for 41–43 of the 43 shots. At 896 px it names one of two players, Nathaniel Clyne or Memphis Depay, for 28 of them.
+- **The 70% / 49% "measured" attribution above was far too optimistic.** In the "now" questions the 4 listed players do most of the work. Against a full squad, Qwen3.5-4B cannot tell who shot.
+
+**Ledgers with this attribution** (false detections get a random team, and a random player of that team's squad):
+
+| Ledger fed by | Attribution | Total (37) |
+|---|---|---|
+| Video QA run (no ledger) | | 10 |
+| Perfect detection | 896 px | 12.0 |
+| Perfect detection | none (control) | 9.0 |
+| v2, percentile ≥ 0.93 | 896 px | 17.7 |
+| v2, percentile ≥ 0.93 | none (control) | 15.8 |
+
+**Why v2 still scores well: an artefact of the test options.**
+- Every test counting question offers 4 consecutive numbers, and the correct answer's position is balanced overall (21 at each rank of 84).
+- Within groups it is skewed. When the smallest option is above 0, the correct answer is the largest in 12 of 14. For team counts since kick-off, the largest option is correct in 12 of 19.
+- v2's false detections overcount, and `choose_count_option` snaps an overcount to the largest option. That earns team points without any video evidence; the no-frames control scores almost the same.
+- The challenge split builds its options differently: only 4 of 150 option sets are consecutive (e.g. [1, 3, 4, 6], [2, 5, 8, 10]). So neither this artefact nor a question-only rule built on it carries over.
+
+**Conclusion.** With Qwen3.5-4B, a video-fed ledger is not worth building for shot counting. Detection is weak (about 1 detection in 3 is real), and player identity, which 55 of the 74 challenge shot questions need, is not recoverable from frames at 448 or 896 px. Test-split counting gains should also be checked against the option artefact before being trusted.
+
+**Next, if counting stays a target:**
+- Player attribution needs a different signal than a squad-wide multiple choice from a 4B model: shirt-number reading on crops, or a larger model.
+- Otherwise move effort to question types where frames help the most.
