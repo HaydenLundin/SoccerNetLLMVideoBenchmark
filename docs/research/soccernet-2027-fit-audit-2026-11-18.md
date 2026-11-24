@@ -356,6 +356,8 @@ The change is noise:
 
 ### Event detection on all four test halves
 
+Code: `scripts/detect_events_sn_vqa_2027.py` (GPU), `scripts/score_events_sn_vqa_2027.py`, and `processing/sn_vqa_2027_events.py`. Window outputs are in `logs/sn_vqa_2027/events/`. `scripts/test_sn_vqa_2027_events.py --official-dir` reproduces the numbers below.
+
 **Detectors.** Both run with Qwen3.5-4B, scoring each window by letter logits. They are scored against the moments of the test "now" questions, which is diagnostic only.
 - **v2:** a 12-class prompt (with decoys such as cross, close-up and throw-in) on 6 s windows at 448 px and 2 fps, about 7–10 min per half.
 - **shot_bin:** a yes/no shot question on 12 s windows at 896 px and 1 fps, about 15–20 min per half.

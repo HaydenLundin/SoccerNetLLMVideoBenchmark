@@ -55,3 +55,6 @@ jobs:
 
       - name: 7. Run SN-VQA-2027 Counting Event Ledger Suite
         run: python scripts/test_event_ledger.py
+
+      - name: 8. Run SN-VQA-2027 Event Detection Scoring Suite
+        run: python scripts/test_sn_vqa_2027_events.py
