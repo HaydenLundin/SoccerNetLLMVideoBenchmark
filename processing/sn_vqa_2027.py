@@ -31,7 +31,11 @@ QuestionKey = Tuple[str, str]
 # - MES-5 routing and its Markov-prior rescoring, tuned on games 1 and 2, which
 #   are the challenge Man City and West Brom matches.
 # scripts/test_sn_vqa_2027.py checks every SN-VQA-2027 file's imports against this.
-CHALLENGE_EXCLUDED_NAME_RE = re.compile(r"qlora|mes5|mece|markov_prior", re.I)
+CHALLENGE_EXCLUDED_NAME_RE = re.compile(r"qlora|mes[-_ ]?5|mece|markov[-_ ]?prior", re.I)
+# Model names are also refused if they look fine-tuned: a merged fine-tune has no
+# adapter_config.json, so only its name can give it away.
+_FINE_TUNED_MODEL_RE = re.compile(r"lora|sft|soccernet", re.I)
+_REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def check_challenge_safe_model(model_ref: str) -> None:
@@ -39,7 +43,14 @@ def check_challenge_safe_model(model_ref: str) -> None:
     Raises ValueError unless `model_ref` is a base model. Any local PEFT adapter
     is refused, since ours were trained on SoccerNet labels of challenge matches.
     """
-    if CHALLENGE_EXCLUDED_NAME_RE.search(model_ref) or (Path(model_ref) / "adapter_config.json").is_file():
+    name = model_ref
+    if Path(model_ref).exists():  # a local path: ignore the repo's own folder name
+        try:
+            name = str(Path(model_ref).resolve().relative_to(_REPO_ROOT))
+        except ValueError:
+            pass
+    if (CHALLENGE_EXCLUDED_NAME_RE.search(name) or _FINE_TUNED_MODEL_RE.search(name)
+            or (Path(model_ref) / "adapter_config.json").is_file()):
         raise ValueError(
             f"{model_ref!r} is excluded from SN-VQA-2027: our QLoRA adapter and MES-5 routing were "
             "trained or tuned on challenge matches. Use a base model."
@@ -118,11 +129,10 @@ _OPTION_CLOCK_RE = re.compile(r"^(?P<h>First|Second) half, (?P<m>\d{1,2}):(?P<s>
 
 
 def _half_clock(half_word: str, minutes: int, seconds: int) -> Tuple[int, float]:
+    # "Second half, 45:45" is stoppage time counted from the start of that half,
+    # not match clock: in both splits every such time precedes its question.
     half = 1 if half_word.lower() == "first" else 2
-    sec = minutes * 60 + seconds
-    if half == 2 and sec >= HALF_SEC:  # "88:53 in the second half" is match clock
-        sec -= HALF_SEC
-    return half, float(sec)
+    return half, float(minutes * 60 + seconds)
 
 
 def _match_clock(minutes: int, seconds: int) -> Tuple[int, float]:

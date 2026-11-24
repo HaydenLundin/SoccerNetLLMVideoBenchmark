@@ -72,7 +72,8 @@ def score_by_subcategory(records: List[Dict], predictions: Dict) -> Dict:
         sub = q["metadata"]["subcategory"]
         totals[sub] += 1
         hits[sub] += predictions[(r["sample_id"], q["id"])] == q["correct_option_id"]
-    per = {s: 100.0 * hits[s] / totals[s] for s in SUBCATEGORIES}
+    # Subcategories absent from a partial run (--limit, --subcategories) are left out of the mean
+    per = {s: 100.0 * hits[s] / totals[s] for s in SUBCATEGORIES if totals[s]}
     return {
         "per_subcategory_pct": {s: round(v, 2) for s, v in per.items()},
         "subcategory_mean_pct": round(sum(per.values()) / len(per), 2),

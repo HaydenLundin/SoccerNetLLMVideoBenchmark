@@ -92,7 +92,7 @@ def build_messages(record: Dict, frames: List[Tuple[float, object]], half_shown:
     q = record["question"]
     content = [{"type": "text", "text": (
         "You are watching a live professional soccer broadcast and answering a multiple-choice question.\n"
-        + "\n".join(prematch_lines(prematch, record["half"]))
+        + "\n".join(prematch_lines(prematch, half_shown))  # directions for the half the frames come from
         + "\nFrames from the broadcast follow, oldest first, each labelled with its match time. "
         "Nothing after the current time is shown. Replays may repeat earlier play."
     )}]

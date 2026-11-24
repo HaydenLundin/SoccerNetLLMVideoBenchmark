@@ -247,9 +247,12 @@ def check_official(official_dir: Path):
 def test_challenge_guard_refuses_adapters():
     print("[TEST 9] Model guard: the QLoRA adapter and any PEFT adapter are refused")
     check_challenge_safe_model("Qwen/Qwen3.5-4B")
+    with tempfile.TemporaryDirectory(dir=WORKSPACE_ROOT) as base:
+        check_challenge_safe_model(base)  # a local base model inside this repo's folder is fine
     with tempfile.TemporaryDirectory() as d:
         (Path(d) / "adapter_config.json").write_text("{}", encoding="utf-8")
-        refused = [str(WORKSPACE_ROOT / "models" / "qwen3.5-4b-soccernet-qlora"), d]
+        refused = [str(WORKSPACE_ROOT / "models" / "qwen3.5-4b-soccernet-qlora"), d,
+                   "me/MES-5", "me/mes_5-router", "me/qwen-soccernet-lora", "me/qwen-sft-merged"]
         for ref in refused:
             try:
                 check_challenge_safe_model(ref)
@@ -324,6 +327,13 @@ def test_question_window_picks_causal_spans():
                  ("First half, 16:27", "First half, 16:16", "First half, 16:08", "First half, 16:39")), (1, 958.0, 1000.0)),
         # match clock 88:53 is second half 43:53
         (_record("Following Lucas's foul around 88:53, which player struck the wall?", 2, 2650), (2, 2623.0, 2643.0)),
+        # second-half stoppage options (45:45-46:15) are half-relative: 2745-2775 s, not 45-75 s
+        (_record("When did X take the shot?", 2, 2796,
+                 ("Second half, 45:45", "Second half, 45:55", "Second half, 46:05", "Second half, 46:15")), (2, 2735.0, 2785.0)),
+        # options straddling 45:00 stay one contiguous span
+        (_record("When did X take the corner?", 2, 2750,
+                 ("Second half, 44:33", "Second half, 44:45", "Second half, 44:52", "Second half, 45:01")), (2, 2663.0, 2711.0)),
+        (_record("Who scored the goal that occurred at second half, 45:45?", 2, 2903), (2, 2735.0, 2755.0)),
         # the 12th minute is 11:00-12:00, padded, clipped at now
         (_record("Around the 12th minute, what led to the corner?", 1, 730), (1, 650.0, 730.0)),
         # a named time in a later half cannot be shown: fall back to the recent span
