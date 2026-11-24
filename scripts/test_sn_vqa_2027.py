@@ -29,6 +29,8 @@ from processing.sn_vqa_2027 import (
     validate_submission,
     check_challenge_safe_model,
     CHALLENGE_EXCLUDED_NAME_RE,
+    question_window,
+    annotate_option,
 )
 
 
@@ -207,7 +209,7 @@ def test_validator_flags_scorer_failures():
 # --- Optional official-file check -------------------------------------------
 
 def check_official(official_dir: Path):
-    print(f"\n--- 11. Official files: rebuild baseline submission from {official_dir} ---")
+    print(f"\n--- 13. Official files: rebuild baseline submission from {official_dir} ---")
     gt = json.loads((official_dir / "test_GT.json").read_text(encoding="utf-8"))
     baseline = json.loads((official_dir / "test_submission.json").read_text(encoding="utf-8"))
     preds = {
@@ -302,6 +304,55 @@ def test_sn_vqa_code_never_imports_excluded_artifacts():
     print(f"  [PASS] {len(sources)} SN-VQA-2027 files clean; scan catches planted direct and transitive imports")
 
 
+def _record(text, half, pos_sec, options=("A", "B")):
+    return {"half": half, "question": {
+        "question": text, "position_ms": int(pos_sec * 1000),
+        "options": [{"id": f"o{i}", "text": t} for i, t in enumerate(options, 1)],
+    }}
+
+
+def test_question_window_picks_causal_spans():
+    print("[TEST 11] question_window: named times, option times and recent spans, never past the question")
+    cases = [
+        (_record("Which team is taking the corner now?", 1, 600), (1, 584.0, 600.0)),
+        (_record("As of now, how many corners has Chelsea taken?", 2, 10), (2, 0.0, 10.0)),
+        (_record("Who took the corner that occurred at first half, 03:22?", 1, 300), (1, 192.0, 212.0)),
+        # earlier half: no clipping to the current time
+        (_record("Who took the shot that occurred at approximately 00:23 in the first half?", 2, 100), (1, 13.0, 33.0)),
+        # option clocks span 16:08-16:39 (968-999 s), padded, clipped at now = 1000 s
+        (_record("Looking back, when did X last take a shot?", 1, 1000,
+                 ("First half, 16:27", "First half, 16:16", "First half, 16:08", "First half, 16:39")), (1, 958.0, 1000.0)),
+        # match clock 88:53 is second half 43:53
+        (_record("Following Lucas's foul around 88:53, which player struck the wall?", 2, 2650), (2, 2623.0, 2643.0)),
+        # the 12th minute is 11:00-12:00, padded, clipped at now
+        (_record("Around the 12th minute, what led to the corner?", 1, 730), (1, 650.0, 730.0)),
+        # a named time in a later half cannot be shown: fall back to the recent span
+        (_record("Who took the corner that occurred at second half, 03:22?", 1, 300), (1, 240.0, 300.0)),
+        # no time and not "now": the last 60 s
+        (_record("What happened when Matic met Hazard's cross in the first half?", 1, 1157), (1, 1097.0, 1157.0)),
+    ]
+    for record, expected in cases:
+        got = question_window(record)
+        assert got == expected, (record["question"]["question"], got, expected)
+        half, start, end = got
+        assert half < record["half"] or end <= record["question"]["position_ms"] / 1000
+    print(f"  [PASS] {len(cases)} cases, all spans end at or before the question time")
+
+
+def test_annotate_option_from_roster():
+    print("[TEST 12] annotate_option adds team and shirt number from the pre-match roster")
+    prematch = {
+        "home": {"name": "Chelsea", "players": [{"long_name": "Diego Costa", "name": "Costa D.", "short_name": "Costa", "shirt_number": "19"}]},
+        "away": {"name": "Liverpool", "players": [{"long_name": "James Milner", "name": "Milner J.", "short_name": "Milner", "shirt_number": "7"}]},
+    }
+    assert annotate_option("Diego Costa", prematch) == "Diego Costa (Chelsea #19)"
+    assert annotate_option("james milner", prematch) == "james milner (Liverpool #7)"
+    assert annotate_option("Gary Cahill", prematch) == "Gary Cahill"
+    assert annotate_option("Chelsea", prematch) == "Chelsea"
+    assert annotate_option("Diego Costa", None) == "Diego Costa"
+    print("  [PASS] rostered players annotated; teams, unknown names and missing rosters unchanged")
+
+
 def run_all_tests(official_dir=None):
     test_causal_window_excludes_future_frames()
     test_causal_window_subsample_keeps_latest_frame()
@@ -313,6 +364,8 @@ def run_all_tests(official_dir=None):
     test_validator_flags_scorer_failures()
     test_challenge_guard_refuses_adapters()
     test_sn_vqa_code_never_imports_excluded_artifacts()
+    test_question_window_picks_causal_spans()
+    test_annotate_option_from_roster()
     if official_dir is not None:
         check_official(official_dir)
     print("\n" + "=" * 60)

@@ -103,6 +103,108 @@ def iter_questions(osl: Dict[str, Any]) -> Iterator[Dict[str, Any]]:
             }
 
 
+HALF_SEC = 45 * 60
+
+# Times named in a question's own text, e.g. "at first half, 03:22", "00:23 in the
+# first half", "around 88:53" (match clock), "around the 12th minute".
+_HALF_CLOCK_RE = re.compile(
+    r"(?:(?P<h1>first|second) half, (?P<m1>\d{1,2}):(?P<s1>\d\d))"
+    r"|(?:(?P<m2>\d{1,2}):(?P<s2>\d\d) in the (?P<h2>first|second) half)",
+    re.I,
+)
+_MATCH_CLOCK_RE = re.compile(r"\b(?P<m>\d{1,2}):(?P<s>\d\d)\b")
+_MINUTE_RE = re.compile(r"\b(?P<n>\d{1,2})(?:st|nd|rd|th) minute\b", re.I)
+_OPTION_CLOCK_RE = re.compile(r"^(?P<h>First|Second) half, (?P<m>\d{1,2}):(?P<s>\d\d)$")
+
+
+def _half_clock(half_word: str, minutes: int, seconds: int) -> Tuple[int, float]:
+    half = 1 if half_word.lower() == "first" else 2
+    sec = minutes * 60 + seconds
+    if half == 2 and sec >= HALF_SEC:  # "88:53 in the second half" is match clock
+        sec -= HALF_SEC
+    return half, float(sec)
+
+
+def _match_clock(minutes: int, seconds: int) -> Tuple[int, float]:
+    sec = minutes * 60 + seconds
+    return (2, float(sec - HALF_SEC)) if sec >= HALF_SEC else (1, float(sec))
+
+
+def question_window(
+    record: Dict[str, Any],
+    recent_sec: float = 16.0,
+    context_sec: float = 60.0,
+    pad_sec: float = 10.0,
+) -> Tuple[int, float, float]:
+    """
+    Returns (half, start_sec, end_sec): the span of video to show for a question,
+    in seconds from the start of that half. Never extends past the question time.
+
+    - Options that are all clock times (recall_event_time): the span of the
+      options, padded.
+    - A time named in the question ("the corner at first half, 03:22", "around
+      the 12th minute"): that time, padded.
+    - "... now?" / "so far": the last `recent_sec`.
+    - Anything else (e.g. "What happened when X met Y's cross?", asked just
+      after the play): the last `context_sec`.
+    """
+    q = record["question"]
+    half, now = record["half"], question_time_sec(q)
+    lookback = recent_sec if re.search(r"\bnow\b|\bso far\b", q["question"], re.I) else context_sec
+    recent = (half, max(0.0, now - lookback), now)
+
+    option_times = [_OPTION_CLOCK_RE.match(o["text"]) for o in q["options"]]
+    text = q["question"]
+    if option_times and all(option_times):
+        refs = [_half_clock(m["h"], int(m["m"]), int(m["s"])) for m in option_times]
+        ref_half = refs[0][0]
+        secs = [s for h, s in refs if h == ref_half]
+        ref = (ref_half, min(secs) - pad_sec, max(secs) + pad_sec)
+    elif m := _HALF_CLOCK_RE.search(text):
+        if m["h1"]:
+            h, s = _half_clock(m["h1"], int(m["m1"]), int(m["s1"]))
+        else:
+            h, s = _half_clock(m["h2"], int(m["m2"]), int(m["s2"]))
+        ref = (h, s - pad_sec, s + pad_sec)
+    elif m := _MINUTE_RE.search(text):
+        h, s = _match_clock(int(m["n"]) - 1, 30)  # "the 12th minute" is 11:00-12:00
+        ref = (h, s - 30 - pad_sec, s + 30 + pad_sec)
+    elif m := _MATCH_CLOCK_RE.search(text):
+        h, s = _match_clock(int(m["m"]), int(m["s"]))
+        ref = (h, s - pad_sec, s + pad_sec)
+    else:
+        return recent
+
+    ref_half, start, end = ref
+    if ref_half > half:
+        return recent
+    if ref_half == half:
+        end = min(end, now)
+    start = max(0.0, start)
+    if start >= end:
+        return recent
+    return ref_half, start, end
+
+
+def annotate_option(text: str, prematch: Optional[Dict[str, Any]]) -> str:
+    """
+    Appends team and shirt number to an option naming a rostered player, e.g.
+    "Diego Costa" -> "Diego Costa (Chelsea #19)". `prematch` is one match of the
+    organizers' pre-match file: {"home": {"name", "players": [...]}, "away": ...}.
+    Rosters are permitted metadata under RULES.md.
+    """
+    if not prematch:
+        return text
+    key = text.casefold()
+    for side in ("home", "away"):
+        team = prematch[side]
+        for p in team.get("players", []):
+            names = {p.get(k, "").casefold() for k in ("long_name", "name", "short_name")}
+            if key in names:
+                return f"{text} ({team['name']} #{p['shirt_number']})"
+    return text
+
+
 def build_submission(
     reference: Dict[str, Any],
     predictions: Dict[QuestionKey, Optional[str]],
