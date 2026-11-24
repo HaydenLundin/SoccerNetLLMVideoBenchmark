@@ -198,10 +198,34 @@ def test_ledger_from_now_questions():
     print("  [PASS] 3 events; counts follow question times")
 
 
+def test_half_time_boundary():
+    print("\n--- 12. First-half stoppage past 2700 s orders before the second half ---")
+    q_all = CountQuery("shot", "Chelsea", "taken", None)
+    led = EventLedger()
+    # shot at 1-45:50, reported at 1-46:00: known to every second-half query
+    led.add(LedgerEvent(half=1, sec=2750, kind="shot", team="Chelsea"), observed_half=1, observed_sec=2760)
+    assert [led.count(q_all, 2, s) for s in (10, 50, 60)] == [1, 1, 1]
+    # reported only after the break is still a valid observation
+    late = EventLedger()
+    late.add(LedgerEvent(half=1, sec=2750, kind="shot", team="Chelsea"), observed_half=2, observed_sec=5)
+    assert late.count(q_all, 1, 2800) == 0 and late.count(q_all, 2, 5) == 1
+    # a second-half event is never visible to a first-half stoppage query
+    led.add(LedgerEvent(half=2, sec=0, kind="shot", team="Chelsea"))
+    assert led.count(q_all, 1, 2800) == 1
+    # "past 10 minutes" in first-half stoppage uses real elapsed time: 1-47:00 reaches back to 1-37:00
+    stop = EventLedger()
+    stop.add(LedgerEvent(half=1, sec=2150, kind="shot", team="Chelsea"))  # 1-35:50, outside
+    stop.add(LedgerEvent(half=1, sec=2300, kind="shot", team="Chelsea"))  # 1-38:20, inside
+    assert stop.count(CountQuery("shot", "Chelsea", "taken", 10), 1, 2820) == 1
+    # a 0-minute window is not "since kick-off"
+    assert stop.count(CountQuery("shot", "Chelsea", "taken", 0), 1, 2820) == 0
+    print("  [PASS] stoppage events visible after the break, never the reverse; windows keep real length")
+
+
 # --- Optional official-file coverage -----------------------------------------
 
 def check_official(official_dir: Path):
-    print(f"\n--- 10. Parser coverage on official files in {official_dir} ---")
+    print(f"\n--- 13. Parser coverage on official files in {official_dir} ---")
     for name in ("test_GT.json", "challenge_public.json"):
         ref = json.loads((official_dir / name).read_text(encoding="utf-8"))
         counting = [r for r in iter_questions(ref) if r["question"]["metadata"]["subcategory"] == "counting"]
@@ -238,6 +262,7 @@ def run_all_tests(official_dir=None):
     test_soccernet_label_mapping()
     test_goal_counts_as_shot()
     test_ledger_from_now_questions()
+    test_half_time_boundary()
     if official_dir is not None:
         check_official(official_dir)
     print("\n" + "=" * 60)

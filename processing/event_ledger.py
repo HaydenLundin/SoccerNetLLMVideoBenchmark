@@ -129,36 +129,44 @@ def from_soccernet_label(label: str) -> Optional[str]:
 @dataclass
 class EventLedger:
     """Append-only, per-match event record with causal count queries."""
-    _entries: List[Tuple[float, LedgerEvent]] = field(default_factory=list)
+    # Times are (half, sec) pairs. They order real time correctly even when first-half
+    # stoppage runs past 2700 s, which a single seconds axis (HALF_SEC + sec) does not.
+    _entries: List[Tuple[Tuple[int, float], LedgerEvent]] = field(default_factory=list)
 
     def add(self, event: LedgerEvent, observed_half: Optional[int] = None, observed_sec: Optional[float] = None):
         """Adds an event, visible to queries from its observation time onward (default: the event time)."""
         oh = event.half if observed_half is None else observed_half
         os_ = event.sec if observed_sec is None else observed_sec
-        observed = HALF_SEC + os_ if oh == 2 else os_  # raw, unclamped: ordering of real time
-        happened = HALF_SEC + event.sec if event.half == 2 else event.sec
-        if observed < happened:
+        if (oh, os_) < (event.half, event.sec):
             raise ValueError(f"Observation ({oh}, {os_}) precedes the event ({event.half}, {event.sec})")
-        self._entries.append((observed, event))
+        self._entries.append(((oh, os_), event))
 
     def events_as_of(self, now_half: int, now_sec: float) -> List[LedgerEvent]:
-        now = HALF_SEC + now_sec if now_half == 2 else now_sec
-        return [e for observed, e in self._entries if observed <= now]
+        return [e for observed, e in self._entries if observed <= (now_half, now_sec)]
 
     def count(self, query: CountQuery, now_half: int, now_sec: float) -> int:
-        now_clock = match_clock_sec(now_half, now_sec)
-        start_clock = now_clock - query.window_minutes * 60 if query.window_minutes else float("-inf")
         subject = query.subject.casefold()
         counted_kinds = _COUNTED_AS.get(query.kind, {query.kind})
         n = 0
         for e in self.events_as_of(now_half, now_sec):
-            if e.kind not in counted_kinds:
+            if e.kind not in counted_kinds or (e.half, e.sec) > (now_half, now_sec):
                 continue
-            if not (start_clock <= match_clock_sec(e.half, e.sec) <= now_clock):
+            if query.window_minutes is not None and not _in_window(e, now_half, now_sec, query.window_minutes * 60):
                 continue
             if _matches_subject(e, subject, query.verb):
                 n += 1
         return n
+
+
+def _in_window(event: LedgerEvent, now_half: int, now_sec: float, window_sec: float) -> bool:
+    """
+    Whether an event at or before now falls in the last `window_sec`. Within one half
+    this is video time, so first-half stoppage keeps its real length. Across the break
+    it is match clock, with first-half stoppage clamped to 45:00.
+    """
+    if event.half == now_half:
+        return event.sec >= now_sec - window_sec
+    return match_clock_sec(event.half, event.sec) >= match_clock_sec(now_half, now_sec) - window_sec
 
 
 def _matches_subject(event: LedgerEvent, subject: str, verb: str) -> bool:
