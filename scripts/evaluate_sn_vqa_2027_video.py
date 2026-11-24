@@ -12,6 +12,13 @@ so it stays within RULES.md's permitted inputs under either reading.
 The answer is the argmax next-token logit over the option letters, as in the
 text-only baseline, so runs are deterministic and every prediction is valid.
 
+With --recall-detector, recall_event_time questions ("Looking back, when did X
+last take a shot?") are answered differently: each option time gets a short
+window centred on it (never past the question time), the window is classified
+with the event detector's v2 prompt, and the option with the highest p(kind)
+wins. Questions about kinds v2 has no class for (injuries) use the normal path.
+Research note section 12.
+
 Usage (test split):
     python scripts/evaluate_sn_vqa_2027_video.py --gt <sn-vqa-2027>/data/test_GT.json \
         --videos <SN-VQA-2027 dataset root> --prematch <MatchLive-baseline>/data/prematch/test.json
@@ -33,8 +40,9 @@ except Exception:
 
 from processing.sn_vqa_2027 import (
     iter_questions, build_submission, validate_submission, check_challenge_safe_model,
-    causal_frame_window, question_window, annotate_option,
+    causal_frame_window, question_window, annotate_option, option_time, question_time_sec,
 )
+from processing.sn_vqa_2027_events import CLASS_SETS, LETTERS as CLASS_LETTERS, window_messages, recall_event_kind, option_window
 from scripts.evaluate_sn_vqa_2027_text_only import LETTERS, format_clock, score_by_subcategory
 
 DECODE_STEP_SEC = 0.2  # keep at most 5 decoded frames per second before subsampling
@@ -119,6 +127,10 @@ def main():
     parser.add_argument("--frame-width", type=int, default=448)
     parser.add_argument("--recent-sec", type=float, default=16.0)
     parser.add_argument("--context-sec", type=float, default=60.0)
+    parser.add_argument("--recall-detector", action="store_true",
+                        help="Answer recall_event_time by classifying a window centred on each option time")
+    parser.add_argument("--recall-window", type=float, default=4.0, help="Seconds per option window")
+    parser.add_argument("--recall-frames", type=int, default=12, help="Frames per option window")
     parser.add_argument("--subcategories", nargs="+", default=None, help="Score only these subcategories")
     parser.add_argument("--limit", type=int, default=None, help="Score only the first N questions (smoke test)")
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "logs" / "sn_vqa_2027")
@@ -156,6 +168,33 @@ def main():
     ).eval()
     processor = AutoProcessor.from_pretrained(args.model)
     letter_ids = [processor.tokenizer.encode(l, add_special_tokens=False)[0] for l in LETTERS]
+    class_keys = [k for k, _ in CLASS_SETS["v2"]]
+    class_ids = [processor.tokenizer.encode(l, add_special_tokens=False)[0] for l in CLASS_LETTERS[: len(class_keys)]]
+
+    def answer_by_option_windows(rec, kind, times):
+        """Option whose centred window has the highest p(kind); (prediction, windows, n_frames, max prompt tokens)."""
+        q, now = rec["question"], question_time_sec(rec["question"])
+        best, spans, n_frames, n_tokens = (-1.0, None), [], 0, 0
+        for option, (half, sec) in zip(q["options"], times):
+            span = option_window(half, sec, rec["half"], now, args.recall_window)
+            frames = videos.frames(rec["match_key"], half, span[0], span[1], args.recall_frames, args.frame_width) if span else []
+            p = 0.0
+            if frames:
+                inputs = processor.apply_chat_template(
+                    window_messages([image for _, image in frames], args.recall_window),
+                    add_generation_prompt=True, tokenize=True, return_dict=True, return_tensors="pt",
+                    enable_thinking=False,
+                ).to("cuda:0")
+                with torch.inference_mode():
+                    logits = model(**inputs, logits_to_keep=1).logits[0, -1]
+                p = float(torch.softmax(logits[class_ids].float(), 0)[class_keys.index(kind)])
+                n_tokens = max(n_tokens, int(inputs["input_ids"].shape[1]))
+                del inputs, logits
+            spans.append([half, round(span[0], 1), round(span[1], 1)] if span else None)
+            n_frames += len(frames)
+            if p > best[0]:
+                best = (p, option["id"])
+        return best[1], spans, n_frames, n_tokens
 
     predictions: Dict = {}
     rows = []
@@ -163,26 +202,35 @@ def main():
     for i, rec in enumerate(records, 1):
         q = rec["question"]
         prematch = prematch_all.get(rec["match_key"])
-        half_shown, start, end = question_window(rec, args.recent_sec, args.context_sec)
-        frames = videos.frames(rec["match_key"], half_shown, start, end, args.frames, args.frame_width)
-        inputs = processor.apply_chat_template(
-            build_messages(rec, frames, half_shown, prematch),
-            add_generation_prompt=True, tokenize=True, return_dict=True, return_tensors="pt",
-            enable_thinking=False,
-        ).to("cuda:0")
-        with torch.inference_mode():
-            logits = model(**inputs).logits[0, -1]
-        option_logits = logits[letter_ids[: len(q["options"])]].float()
-        pred = q["options"][int(option_logits.argmax())]["id"]
+        kind = times = None
+        if args.recall_detector and q["metadata"]["subcategory"] == "recall_event_time":
+            kind, times = recall_event_kind(q["question"]), [option_time(o["text"]) for o in q["options"]]
+        if kind and all(times):
+            pred, window, n_frames, n_tokens = answer_by_option_windows(rec, kind, times)
+        else:
+            kind = None
+            half_shown, start, end = question_window(rec, args.recent_sec, args.context_sec)
+            frames = videos.frames(rec["match_key"], half_shown, start, end, args.frames, args.frame_width)
+            inputs = processor.apply_chat_template(
+                build_messages(rec, frames, half_shown, prematch),
+                add_generation_prompt=True, tokenize=True, return_dict=True, return_tensors="pt",
+                enable_thinking=False,
+            ).to("cuda:0")
+            with torch.inference_mode():
+                logits = model(**inputs).logits[0, -1]
+            option_logits = logits[letter_ids[: len(q["options"])]].float()
+            pred = q["options"][int(option_logits.argmax())]["id"]
+            window, n_frames = [half_shown, round(start, 1), round(end, 1)], len(frames)
+            n_tokens = int(inputs["input_ids"].shape[1])
+            del inputs, logits
         predictions[(rec["sample_id"], q["id"])] = pred
         rows.append({
             "sample_id": rec["sample_id"], "question_id": q["id"],
             "subcategory": q["metadata"]["subcategory"], "prediction": pred,
             "correct": pred == q.get("correct_option_id"),
-            "window": [half_shown, round(start, 1), round(end, 1)], "n_frames": len(frames),
-            "prompt_tokens": int(inputs["input_ids"].shape[1]),
+            "window": window, "n_frames": n_frames, "prompt_tokens": n_tokens,
+            "answered_by": f"option windows, p({kind})" if kind else "question",
         })
-        del inputs, logits
         if i % 25 == 0 or i == len(records):
             acc = sum(r["correct"] for r in rows) / len(rows)
             print(f"  [{i}/{len(records)}] running accuracy {acc:.3f} | {time.perf_counter() - t_run:.0f}s")
@@ -199,6 +247,7 @@ def main():
         "model": args.model, "precision": "nf4", "input": "causal video frames + question + pre-match roster",
         "frames": args.frames, "frame_width": args.frame_width,
         "recent_sec": args.recent_sec, "context_sec": args.context_sec,
+        "recall_detector": args.recall_detector, "recall_window": args.recall_window, "recall_frames": args.recall_frames,
         "subcategories": args.subcategories, "limit": args.limit,
         "wall_sec": round(time.perf_counter() - t_run, 1),
         "sec_per_question": round((time.perf_counter() - t_run) / max(1, len(rows)), 2),

@@ -517,3 +517,97 @@ A no-frames control asks the same questions with the roster and kits only.
 **Next, if counting stays a target:**
 - Player attribution needs a different signal than a squad-wide multiple choice from a 4B model: shirt-number reading on crops, or a larger model.
 - Otherwise move effort to question types where frames help the most.
+
+## 12. Where the headroom is, and recall_event_time from the window detector (2026-11-24)
+
+Exploratory, run from scratch scripts on the committed logs; no repo code changed.
+
+### Headroom by subcategory
+
+Test accuracy of the text-only and video QA runs (`text_only_question`, `video_v2`), weighted by each subcategory's share of the challenge split:
+
+| Subcategory | Test n | Challenge n | Chance | Text | Video | Points left on challenge |
+|---|---|---|---|---|---|---|
+| recall_event_time | 200 | 493 | 0.25 | 0.28 | 0.37 | **26.8** |
+| counting | 84 | 150 | 0.25 | 0.31 | 0.25 | 9.7 |
+| recall_event_player | 129 | 215 | 0.25 | 0.29 | 0.54 | 8.5 |
+| event_player | 130 | 158 | 0.25 | 0.33 | 0.49 | 6.9 |
+| causal reasoning | 39 | 50 | 0.25 | 0.36 | 0.26 | 3.2 |
+| event_team | 118 | 92 | 0.50 | 0.50 | 0.69 | 2.5 |
+
+"Points left" is the overall challenge accuracy that subcategory would add at 100% instead of the video run's test accuracy. `recall_event_time` is 43% of the challenge split, and it holds more headroom than all other subcategories combined.
+
+### recall_event_time
+
+**The questions.** For example, "Looking back, when did Cameron Borthwick-Jackson last take a corner?" with options First half 03:22, 03:11, 03:03 and 02:54.
+- The four options sit close together: on test the median gap is 10 s (10th–90th percentile 8–12 s).
+- The correct option is the event moment. Here the matching "now" question came at 03:24.
+- The correct option is spread evenly by time order and by listed position (50 at each of the 4).
+- Kinds on test: 70 shots, 46 substitutions, 24 free kicks, 21 corners, 17 offsides, 14 cards and 8 injuries.
+
+**Method.** For each option, read the v2 detector's p(kind) from the 6 s window that contains the option time, and pick the highest. Only windows that end by the question time are used, and each window's probabilities come from its own frames only, so the method is causal.
+- The v2 window outputs are the committed `logs/sn_vqa_2027/events/*_v2.json`.
+- Goals use p(shot). Injuries have no v2 class, so they keep the video QA answer.
+- Player and "first" vs "last" are ignored: the options already narrow the question to one episode.
+
+| Window(s) read per option | Correct (200) |
+|---|---|
+| Video QA run (`video_v2`) | 74 (0.37) |
+| Window containing t | **133 (0.665)** |
+| Windows overlapping [t − 3, t + 3], max | 131 |
+| Windows overlapping [t, t + 6], max | 127 |
+| Windows overlapping [t − 6, t + 6], mean | 130 |
+| Windows overlapping [t − 6, t + 6], max | 118 |
+| Windows overlapping [t − 3, t + 9], max | 83 |
+
+The single-window rule was the first one tried, not chosen from this table.
+- **By kind:** shots 60/70, cards 11/14, corners 14/21, offsides 11/17, free kicks 11/24, substitutions 22/46. Substitutions do better with the 12 s mean (29/46): they unfold slowly.
+- **Every half improves:** game1 H1 14 vs 10 (of 28), game1 H2 52 vs 27 (of 72), game2 H1 31 vs 13 (of 43), game2 H2 36 vs 24 (of 57).
+- **Paired against the video QA run:** 78 questions only the detector gets right and 19 only the video run gets right; exact McNemar p = 1.2e-9.
+- **No artefacts found:** the correct option's position is uniform, only 5 questions have tied scores, and no option's window ends after the question time.
+
+**Why it works when the video QA run doesn't.** The QA run shows 8 frames spread over the span of all 4 options and asks for a clock time. The detector instead asks, separately for each option's moment, whether that kind of event is happening. Telling which of four nearby moments holds the event is a local comparison, and that suits a per-window classifier.
+
+**Expected value.** On the challenge split, +29.5 points on `recall_event_time` would be about +12.6 points overall, if it transfers.
+
+**Caveats for the challenge split.**
+- **The options are closer together:** median 7 s, 10th percentile 5 s, 90th percentile 16 s. A fixed 6 s grid can put two options in one window, so a runner should score a window centred on each option instead.
+- **The challenge videos are not on disk:** only `video-test/` is.
+
+### Centred windows at question time (GPU check)
+
+This is the form a runner would use. For each option time t, the model sees one window centred on t, shifted earlier if it would end after the question time. The prompt is v2 at 448 px, scored exactly as the detector does. The 8 injury questions are skipped; the video QA run gets 4 of them.
+
+| Window per option | Correct (192, no injuries) | With injuries (200) | Only this right / only video right | McNemar p |
+|---|---|---|---|---|
+| Video QA run | 70 | 74 | | |
+| 6 s grid (above) | 129 | 133 | 78 / 19 | 1.2e-9 |
+| 6 s centred, 2 fps | **129** | **133** | 76 / 17 | 4e-10 |
+| 4 s centred, 3 fps | 127 | 131 | 78 / 21 | 7e-9 |
+
+- **Centred windows reproduce the grid result:** 129 of 192 both ways.
+- **4 s windows lose almost nothing:** 127, with the same 12 frames. They suit the challenge split's tighter gaps (10th percentile 5 s), where a 6 s window would overlap the next option.
+- **By kind (6 s centred):** shots 61/70, corners 16/21, cards 11/14, free kicks 11/24, offsides 8/17, substitutions 22/46. Shots and corners carry the gain. Free kicks and substitutions are near the QA run's level.
+- **Cost:** about 6 s per question (4 windows), so the 493 challenge questions take about 50 minutes on the 8 GB card.
+
+### In the runner: `--recall-detector`
+
+`scripts/evaluate_sn_vqa_2027_video.py --recall-detector` answers `recall_event_time` this way: 4 s windows with 12 frames, the v2 prompt from `window_messages`, and option windows from `option_window`. Questions whose kind has no v2 class (injuries) use the normal question path. The detector script now builds its prompt with the same `window_messages`, and its output on game1 H1's first 30 s is unchanged.
+
+Test, `--subcategories recall_event_time` (scratch output, not committed):
+
+| | Correct (200) |
+|---|---|
+| Video QA run (`video_v2`) | 74 |
+| Runner, `--recall-detector` | **134 (67.0%)** |
+| Detector-answered | 130/192 |
+| Injuries, question path | 4/8, the same answers as `video_v2` |
+
+- **Cost:** 5.0 s per question; the largest prompt is 1634 tokens.
+- **Individual answers depend on frame choice:** the runner picks 12 of the window's frames decoded every 0.2 s, while the scratch run kept 3 fps. Only 140 of the 192 picks agree, yet accuracy is the same (134 vs 131 of 200).
+- **CPU tests** (`scripts/test_sn_vqa_2027_events.py`, test 8) cover kind parsing and option windows: centred, moved earlier so they never pass the question time, clipped at 0, and None for an option after the question.
+  - With `--official-dir`, every test and challenge recall question gets a v2 class except injuries (8 on test, 21 on challenge), and every option parses as a clock time.
+
+**Next:**
+- Download the challenge videos and run the full challenge split with `--recall-detector` (5 matches, 10 halves; about 40 minutes for the 472 detector-answered questions).
+- A full test run with `--recall-detector`, for the new overall test score.

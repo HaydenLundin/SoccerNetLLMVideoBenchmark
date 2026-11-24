@@ -6,7 +6,9 @@ Detection (scripts/detect_events_sn_vqa_2027.py) asks a VLM which kind of event
 each short window shows and keeps the per-class probabilities. This module holds
 the parts that need no model or video:
 - `windows`: groups decoded frames into fixed windows at a sampling rate;
-- the prompts (`CLASS_SETS`);
+- the prompts (`CLASS_SETS`, `window_messages`);
+- `recall_event_kind` and `option_window`, which let the video QA runner answer
+  recall_event_time questions by scoring a window centred on each option (section 12);
 - scoring against the test split's own event moments, which is diagnostic only:
   test labels measure the detector, never feed it.
 
@@ -50,8 +52,47 @@ LETTERS = "ABCDEFGHIJKL"
 
 EVENT_LAG = 2.5  # event questions come ~2-3 s after the event
 _KIND_RE = re.compile(r"\b(corner|shot|free kick|goal|substitution|card|offside)\b", re.I)
+_RECALL_KIND_RE = re.compile(r"\b(shot|goal|corner|free kick|substitut\w*|card|offside|injury)\b", re.I)
+_RECALL_KIND = {"shot": "shot", "goal": "shot", "corner": "corner", "free kick": "free_kick", "card": "card",
+                "offside": "offside", "injury": None}
 
 Window = Tuple[float, float]
+
+
+def window_messages(images: Sequence[object], window_sec: float, prompt: str = "v2") -> List[Dict]:
+    """Chat messages asking which class best describes a clip, with the classes as lettered options."""
+    options = "\n".join(f"{letter}. {desc}" for letter, (_, desc) in zip(LETTERS, CLASS_SETS[prompt]))
+    content = [{"type": "text", "text": f"These are {len(images)} consecutive frames, {window_sec:.0f} seconds of a live soccer broadcast, oldest first."}]
+    content += [{"type": "image", "image": image} for image in images]
+    content.append({"type": "text", "text": f"\nWhich best describes what happens in this clip?\n{options}\n\nAnswer with a single letter."})
+    return [{"role": "user", "content": content}]
+
+
+def recall_event_kind(question: str) -> Optional[str]:
+    """
+    The v2 class of the event a "Looking back, when did ...?" question asks about (goals
+    count as shots), or None when v2 has no class for it (injuries) or no kind is named.
+    """
+    m = _RECALL_KIND_RE.search(question)
+    if not m:
+        return None
+    word = m.group(1).lower()
+    return "substitution" if word.startswith("substitut") else _RECALL_KIND[word]
+
+
+def option_window(option_half: int, option_sec: float, now_half: int, now_sec: float,
+                  window: float) -> Optional[Window]:
+    """
+    A `window`-second span centred on an option time, in seconds from the start of the
+    option's half. In the question's own half it is moved earlier so it never ends after
+    the question time. None if the option is after the question time.
+    """
+    if (option_half, option_sec) > (now_half, now_sec):
+        return None
+    start, end = option_sec - window / 2, option_sec + window / 2
+    if option_half == now_half and end > now_sec:
+        start, end = now_sec - window, now_sec
+    return max(0.0, start), end
 
 
 def windows(frames: Iterable[Tuple[float, object]], window: float, fps: float,

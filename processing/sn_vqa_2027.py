@@ -135,6 +135,12 @@ def _half_clock(half_word: str, minutes: int, seconds: int) -> Tuple[int, float]
     return half, float(minutes * 60 + seconds)
 
 
+def option_time(text: str) -> Optional[Tuple[int, float]]:
+    """(half, seconds from the start of that half) for an option such as "First half, 03:22"; None otherwise."""
+    m = _OPTION_CLOCK_RE.match(text)
+    return _half_clock(m["h"], int(m["m"]), int(m["s"])) if m else None
+
+
 def _match_clock(minutes: int, seconds: int) -> Tuple[int, float]:
     sec = minutes * 60 + seconds
     return (2, float(sec - HALF_SEC)) if sec >= HALF_SEC else (1, float(sec))

@@ -28,7 +28,7 @@ except Exception:
     pass
 
 from processing.sn_vqa_2027 import check_challenge_safe_model
-from processing.sn_vqa_2027_events import CLASS_SETS, LETTERS, windows
+from processing.sn_vqa_2027_events import CLASS_SETS, LETTERS, windows, window_messages
 
 
 def main():
@@ -63,7 +63,6 @@ def main():
     proc = AutoProcessor.from_pretrained(a.model)
     classes = CLASS_SETS[a.prompt]
     ids = [proc.tokenizer.encode(letter, add_special_tokens=False)[0] for letter in LETTERS[: len(classes)]]
-    options = "\n".join(f"{letter}. {desc}" for letter, (_, desc) in zip(LETTERS, classes))
 
     container = av.open(str(a.video))
     stream = container.streams.video[0]
@@ -74,10 +73,8 @@ def main():
 
     rows, t0 = [], time.perf_counter()
     for start, end, kept in windows(frames, a.window, a.fps, convert=lambda f: f.to_image(width=a.width, height=height)):
-        content = [{"type": "text", "text": f"These are {len(kept)} consecutive frames, {a.window:.0f} seconds of a live soccer broadcast, oldest first."}]
-        content += [{"type": "image", "image": image} for _, image in kept]
-        content.append({"type": "text", "text": f"\nWhich best describes what happens in this clip?\n{options}\n\nAnswer with a single letter."})
-        inputs = proc.apply_chat_template([{"role": "user", "content": content}], add_generation_prompt=True, tokenize=True,
+        inputs = proc.apply_chat_template(window_messages([image for _, image in kept], a.window, a.prompt),
+                                          add_generation_prompt=True, tokenize=True,
                                           return_dict=True, return_tensors="pt", enable_thinking=False).to("cuda:0")
         with torch.inference_mode():
             logits = model(**inputs, logits_to_keep=1).logits[0, -1]

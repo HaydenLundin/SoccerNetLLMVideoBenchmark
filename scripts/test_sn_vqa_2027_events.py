@@ -18,8 +18,9 @@ sys.path.insert(0, str(WORKSPACE_ROOT))
 
 from processing.sn_vqa_2027_events import (
     CLASS_SETS, LETTERS, EVENT_LAG, windows, truth_events, covers, match, merge_above, peaks, auc, worst_case_ranks, f1,
-    causal_percentile_rows,
+    causal_percentile_rows, window_messages, recall_event_kind, option_window,
 )
+from processing.sn_vqa_2027 import option_time
 
 
 def test_windows_sampling_gaps_and_last_window():
@@ -128,9 +129,50 @@ def test_causal_percentile():
     print("  [PASS] percentile uses no later window; warm-up suppresses early windows only")
 
 
+def test_recall_option_windows():
+    print("\n--- 8. recall_event_time: kind, option times and causal option windows ---")
+    kinds = {
+        "Looking back, when did Willian last take a shot?": "shot",
+        "Looking back, when did Diego Costa first score a goal?": "shot",
+        "Looking back, when was Manchester United's first awarded corner taken?": "corner",
+        "Looking back, when did Oscar first take a free kick?": "free_kick",
+        "Looking back, when was Oscar last substituted off?": "substitution",
+        "Looking back, when did Chelsea make their first substitution?": "substitution",
+        "Looking back, when did Kurt Zouma first receive a card?": "card",
+        "Looking back, when did Diego Costa first get called offside?": "offside",
+        "Looking back, when did David Luiz first suffer an injury?": None,  # no v2 class
+        "What happened next?": None,
+    }
+    for text, kind in kinds.items():
+        assert recall_event_kind(text) == kind, (text, recall_event_kind(text))
+    assert option_time("First half, 03:22") == (1, 202.0)
+    assert option_time("Second half, 45:45") == (2, 2745.0)  # stoppage time from the start of the half
+    assert option_time("Chelsea") is None
+    assert option_window(1, 100.0, 1, 200.0, 4.0) == (98.0, 102.0)      # centred
+    assert option_window(1, 199.0, 1, 200.0, 4.0) == (196.0, 200.0)     # moved earlier: never past the question
+    assert option_window(1, 1.0, 1, 200.0, 4.0) == (0.0, 3.0)           # clipped at the start of the half
+    assert option_window(1, 2699.0, 2, 10.0, 4.0) == (2697.0, 2701.0)   # earlier half: no clipping needed
+    assert option_window(1, 201.0, 1, 200.0, 4.0) is None               # option after the question
+    assert option_window(2, 5.0, 1, 2000.0, 4.0) is None
+    msgs = window_messages(["img1", "img2"], 4.0)
+    content = msgs[0]["content"]
+    assert [c["image"] for c in content if c["type"] == "image"] == ["img1", "img2"]
+    assert content[0]["text"].startswith("These are 2 consecutive frames, 4 seconds")
+    assert "L. The referee showing a yellow or red card" in content[-1]["text"]
+    print("  [PASS] kinds parsed, injuries left to the QA path, option windows never pass the question time")
+
+
 def check_official(official_dir: Path):
-    """Reproduces section 11 of the research note from the committed detector outputs."""
-    print(f"\n--- 8. Section 11 numbers from logs/sn_vqa_2027/events and {official_dir} ---")
+    """Checks recall_event_time parsing on both official splits, then reproduces section 11 from the committed detector outputs."""
+    print(f"\n--- 9. recall_event_time kinds in test and challenge ---")
+    for name in ("test_GT.json", "challenge_public.json"):
+        osl = json.loads((official_dir / name).read_text(encoding="utf-8"))
+        qs = [q for s in osl["data"] for q in s["streaming_vqa"] if q["metadata"]["subcategory"] == "recall_event_time"]
+        unparsed = [q["question"] for q in qs if recall_event_kind(q["question"]) is None]
+        assert all("injur" in t for t in unparsed), [t for t in unparsed if "injur" not in t][:3]
+        assert all(option_time(o["text"]) for q in qs for o in q["options"]), name
+        print(f"  [PASS] {name}: {len(qs) - len(unparsed)}/{len(qs)} get a v2 class (the rest are injuries); every option is a clock time")
+    print(f"\n--- 10. Section 11 numbers from logs/sn_vqa_2027/events and {official_dir} ---")
     sys.path.insert(0, str(WORKSPACE_ROOT / "scripts"))
     from score_events_sn_vqa_2027 import load_halves, shot_counts, CUTS, PERCENTILES
     gt = json.loads((official_dir / "test_GT.json").read_text(encoding="utf-8"))
@@ -173,6 +215,7 @@ def run_all_tests(official_dir=None):
     test_auc_and_ranks()
     test_prompts()
     test_causal_percentile()
+    test_recall_option_windows()
     if official_dir is not None:
         check_official(official_dir)
     print("\n" + "=" * 60)
