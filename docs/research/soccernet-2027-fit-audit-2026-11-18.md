@@ -72,8 +72,10 @@ Findings:
 - **Earlier questions don't measurably leak answers at 4B scale.** On the first 120 questions (one half),
   adding every earlier question as context: 49 vs 45 correct, 13 vs 9 discordant, exact McNemar p = 0.52.
   This needs a stronger model before it can be ruled out.
-- **Speed:** without `flash-linear-attention` / `causal_conv1d`, Qwen3.5's linear-attention layers fall back
-  to PyTorch. Question-only prompts (≤197 tokens) take 0.7 s each; history prompts (≤6k tokens) take ~45 s.
+- **Speed:** question-only prompts (≤197 tokens) take 0.7 s each; history prompts (≤6k tokens) take ~45 s.
+  (Corrected 2026-11-24: this was first blamed on the missing `flash-linear-attention` / `causal_conv1d` kernels. Profiling
+  showed the main cost is the 8 full-attention layers. On this torch 2.6 Windows wheel, transformers' GQA path for SDPA falls
+  back to the O(n²) math kernel; see section 11.)
 
 ## 5. Counting event ledger, and challenge-match overlap with our own data (2026-11-18)
 
@@ -90,7 +92,8 @@ Findings:
 - **Untested assumptions:**
   - shots = on + off target;
   - free kicks = direct + indirect;
-  - "past N minutes" uses a match clock with first-half stoppage time clamped to 45:00;
+  - "past N minutes" uses video time within a half, and match clock across the break with first-half stoppage
+    clamped to 45:00 (changed 2026-11-24; before, stoppage was clamped within the first half too);
   - "as of now" = "whole match so far".
   These need event-level ground truth to check.
 
@@ -196,6 +199,204 @@ and playing directions once they have been established from the broadcast". Rost
 **Where to ask:** the README points to the SoccerNet Discord (discord.gg/cPbqf2mAwF) for "rule clarifications". GitHub
 issues are enabled on the repo; it has no issues or discussions yet.
 
-**Consequence:** treat the ledger as video-fed only. Perception (a spotting model or VLM watching frames up to `t`)
+**Consequence (see section 8):** treat the ledger as video-fed only. Perception (a spotting model or VLM watching frames up to `t`)
 appends events, and counting reads them. That is permitted under either reading. Filling it from the question stream
 stays a diagnostic until the organizers answer.
+
+## 8. Where MatchLive loses counting points (2026-11-20)
+
+**How MatchLive builds memory** (read from github.com/Becomebright/MatchLive-baseline; nothing run):
+- Perception runs on every frame: RF-DETR detection, BoT-SORT tracking, a jersey-number classifier and kit colours.
+- A VLM then reads 30 s windows (5 s overlap) at 2 fps, about 60 frames of 960x540 per call. It returns typed events: shot, goal, card, foul, substitution, penalty, free kick, offside, corner, injury.
+- Rules merge repeat sightings. An LLM arbiter settles conflicts.
+- Each event enters an append-only log at `t_known` = window end + API latency. Questions see only `known_by(now)`, so memory lags events by 30–90 s.
+- The QA agent is generic: up to 4 rounds of tools (event list, state, frames up to `now`). It is the same for every subcategory, and counting is left to the LLM reading event counts.
+- Per subcategory, Gemini scores counting 58.3, recall_event_time 82.0, recall_event_player 96.1, event_team 96.6, event_player 96.9, causal 76.9.
+
+**Lag is not the main loss: 30–90 s of lag costs 11–14 points at most.** I rebuilt the ledger from the test "now" questions with correct answers (a diagnostic, test split only) and delayed every event's observation by L seconds:
+
+| lag L (s) | 0 | 5 | 10 | 20–60 | 90 | 120 |
+|---|---|---|---|---|---|---|
+| counting accuracy | 100 | 92.9 | 91.7 | 89.3 | 85.7 | 82.1 |
+
+- The first 5 s cost 6 questions. These are asked seconds after an event the answer already includes.
+- The latest relevant event (any subject) falls within 10 s of the question for 15/84 counting questions, and within 90 s for 32/84. The median gap is 124 s.
+
+**So the 58.3 comes mostly from event quality.** MatchLive answers "now" questions at about 97% when asked directly, but its window analyzer's ledger counts at 58.3. With the lag above and 97%-accurate events, bookkeeping would predict about 80–90% (section 6 table).
+
+**Levers, in order:**
+1. Event recall and precision under the VQA's own event definitions, with replays de-duplicated.
+2. Deterministic counting over the ledger instead of LLM counting.
+3. A short-lag path: check the last few seconds of video when a count question arrives, to catch the event that just happened.
+
+**Inputs we now have:** the official pre-match rosters (`data/prematch/test.json` and `challenge.json` in the MatchLive repo) list each team's players with shirt numbers, starters and bench. That covers team attribution for substitutions.
+
+**Blocked:** the SN-VQA-2027 videos (test: 4 halves, 3.4 GB; challenge: 10 halves, 9.8 GB) are in the gated `SoccerNet/SN-VQA-2027` dataset. This machine has no Hugging Face login with access (HTTP 401), and none of the local SoccerNet videos are test matches.
+
+## 9. Local video runner, stage 1 (2026-11-20)
+
+Decision: event detection and QA run on local Qwen3.5-4B only (NF4, 8 GB GPU); no paid API.
+
+`scripts/evaluate_sn_vqa_2027_video.py` answers each question from the video alone, with no memory across questions:
+- `question_window` (in `processing/sn_vqa_2027.py`) picks the span to show, always ending at or before the question time. "Now" questions get the last 16 s. Questions naming a time get that time ±10 s, including recall_event_player ("the corner at first half, 03:22"), match clock ("around 88:53") and "the 12th minute". recall_event_time gets the span of its option times. Other questions get the last 60 s.
+- On the test split the window covers 129/129 recall_event_player, 200/200 recall_event_time and 32/39 causal questions with a named time. On the challenge split it covers 215/215, 493/493 and 1/50; challenge causal questions are asked right after the play, so they get the 60 s span.
+- Frames: PyAV seeks to the span and keeps at most 5 frames/s, then `causal_frame_window` takes 8, at 448x252 and labelled with the match clock. On a local non-challenge video (Tottenham v Liverpool 2016-08-27), 8 frames decode in 0.4–1.4 s.
+- Player options are labelled with team and shirt number from the official pre-match roster (`annotate_option`); this covers 100% of player options on both splits. Kits and playing directions go in the prompt.
+- Answers are picked by the next-token logit over the option letters, as in the text-only run. Smoke run: 2.0 s per question at about 1,200 prompt tokens, so the test split takes about 25 min.
+
+Not yet measured: no test videos (section 8, Blocked).
+
+Next levers, after the first test run:
+- **Goals from the scorebug.** The broadcast overlay shows the score and clock in every frame. Goal counts can be read from the latest frame.
+- **A sharper last frame for player questions.** Jersey numbers are unreadable at 448 px.
+- **Counting from a video-fed ledger.** Run event detection over windows up to `t` with the same model, then count with code (sections 6 and 8).
+
+## 10. First video run on the test split (2026-11-23)
+
+**Videos.** HF access to `SoccerNet/SN-VQA-2027` is still refused for our account, so this run uses SoccerNet's own 720p halves of the two test matches:
+
+| Test match | SoccerNet game |
+|---|---|
+| game1 | `england_epl/2015-2016/2016-02-07 - 19-00 Chelsea 1 - 1 Manchester United` (train split) |
+| game2 | `england_epl/2016-2017/2016-09-16 - 22-00 Chelsea 1 - 2 Liverpool` (train split) |
+
+How we know they match the SN-VQA files:
+- **Lineups and goals.** The pre-match lineups and the goal-count answers identify the games.
+- **Same video, audio removed.** Our copies are not byte-identical to the SN-VQA files. In all four halves, our Vorbis audio track accounts for 96.8% of the size gap, and the rest is consistent with that track's container overhead.
+- **Time alignment.** All five goal times named in the questions show the goal within about 2 s in our copies.
+- **No leakage.** Neither game appears in `eval_set.json`, `data/` or `hf_dataset/`, so nothing we trained or tuned has seen them.
+
+The halves are hard-linked into `data/sn_vqa_2027/video-test/` in the main checkout. A challenge submission must still use the official files.
+
+**Result.** The defaults are 8 frames, 448 px width, 16 s/60 s windows, Qwen3.5-4B NF4. The run took 2.15 s per question, 25 min in total, with at most 1,250 prompt tokens. Logs are in `logs/sn_vqa_2027/video_v1/`.
+
+| Subcategory | n | Text-only | Video | Paired (video-only right / text-only right), McNemar p |
+|---|---|---|---|---|
+| counting | 84 | 30.95 | 25.00 | 6 / 11, p = 0.33 |
+| recall_event_time | 200 | 28.50 | 36.50 | 57 / 41, p = 0.13 |
+| recall_event_player | 129 | 28.68 | 52.71 | 53 / 22, p < 0.001 |
+| event_team | 118 | 50.00 | 67.80 | 22 / 1, p < 0.001 |
+| event_player | 130 | 33.08 | 46.92 | 36 / 18, p = 0.02 |
+| causal reasoning | 39 | 35.90 | 28.21 | 5 / 8, p = 0.58 |
+| **Subcategory mean** | 700 | **34.52** | **42.86** | +8.3 points, bootstrap 95% CI +3.5 to +13.3 |
+
+For reference, MatchLive reports 67.2 with Qwen3.8-27B and 84.5 with Gemini.
+
+What this says:
+- **Video helps where one look at the right moment answers the question.** The gains are in event_team and recall_event_player, which stay significant after a Holm correction for the six subcategories. event_player's gain (p = 0.02) does not survive the correction (its threshold is 0.0125), so treat it as likely rather than shown.
+- **Counting and causal show no measurable change.** Counting needs the whole half, and an 8-frame window cannot count. The causal sample (39) is too small to read.
+- **recall_event_time's gain is not significant (p = 0.13).** The option span is about 50 s (median 51 s, p10–p90 47–53 s), so 8 frames are about 7 s apart and can miss a short event.
+
+The next levers in section 9 still apply. They now have measured targets:
+- **Counting:** the scorebug for goals, then a video-fed ledger for everything else.
+- **recall_event_time:** more frames or a denser scan of the option span.
+
+## 11. Speed fix, review fixes, and event detection on all four test halves (2026-11-24)
+
+### Speed: the attention fallback, not the linear-attention kernels
+
+transformers warns that `flash-linear-attention` and `causal_conv1d` are missing, but those layers weren't the bottleneck. I timed one 12-frame, 896 px window (5,462 tokens):
+- The 24 linear-attention layers took about 0.1 s each.
+- The 8 full-attention layers took 1.3 s each and added 4.6 GiB. Peak memory reached 8.38 GiB on an 8 GiB card, so Windows spilled to shared memory.
+
+**Cause:** transformers calls SDPA with `enable_gqa=True` (16 query heads, 4 KV heads). The torch 2.6 Windows wheel has no FlashAttention, and its memory-efficient kernel rejects mismatched head counts, so SDPA falls back to the O(n²) math kernel.
+
+Reproduced standalone at the model's shapes:
+
+| Call | Kernel | Time | Extra memory |
+|---|---|---|---|
+| `enable_gqa=True` | math | 0.15 s | 4.5 GiB |
+| KV heads expanded first | memory-efficient | 0.012 s | 0.13 GiB |
+
+**Fix:** the video runner and the detector set `transformers.integrations.sdpa_attention.use_gqa_in_sdpa` to return False, so KV heads are expanded first. I also installed `triton-windows` 3.2 and `flash-linear-attention` 0.6, which matches the reference to 4 decimals.
+
+| Setup | Time per window | Peak memory |
+|---|---|---|
+| Stock | 13.7 s | 8.38 GiB |
+| fla only | 9.2 s | 8.38 GiB |
+| Patch only | 3.85 s | 4.97 GiB |
+| Patch + fla | **2.9 s** | 4.39 GiB |
+
+The test QA run dropped from 2.15 to 1.1 s per question.
+
+### Review of sections 4–10
+
+Two independent reviews (pipeline; ledger and detector scoring) found no causality leak:
+- All 700 logged windows end at or before their question time, and none comes from a later half.
+- Every metric in sections 4 and 10 reproduces from the raw predictions and `test_GT.json`.
+
+Bugs found and fixed (commits `77ab9f2`, `316ed1e`):
+- **Second-half stoppage times were shifted by 45 minutes.** "Second half, 45:45" is counted from the start of the half, not the match clock; in both splits every such time precedes its question. 17 test questions (13 recall_event_time, 4 recall_event_player) were shown the wrong span of video, for example 0:35–1:25 instead of 45:35–46:25.
+- **The prompt stated the goal directions for the question's half** even when the frames came from the earlier half (8 test questions).
+- **The ledger put both halves on one seconds axis.** First-half stoppage past 2700 s therefore sorted after early second-half play. No current question triggers this, but a video-fed ledger would. It now orders events by (half, sec).
+- **Smaller fixes:** text-only scoring crashed on partial runs, and the model guard missed names like `MES-5` or `*-sft-merged`.
+
+**Re-run** (`logs/sn_vqa_2027/video_v2/`, same settings as `video_v1`, with fixes and new kernels):
+
+| Subcategory | v1 | v2 |
+|---|---|---|
+| counting | 25.00 | 25.00 |
+| recall_event_time | 36.50 | 37.00 |
+| recall_event_player | 52.71 | 54.26 |
+| event_team | 67.80 | 68.64 |
+| event_player | 46.92 | 49.23 |
+| causal reasoning | 28.21 | 25.64 |
+| **Mean** | **42.86** | **43.30** |
+
+The change is noise:
+
+| Questions | n | v1 correct | v2 correct | Answers changed |
+|---|---|---|---|---|
+| Window moved (stoppage fix) | 17 | 8 | 8 | 8 (+3/−3) |
+| Frames from an earlier half (direction fix) | 8 | 0 | 0 | 0 |
+| Unchanged window (kernel change only) | 675 | 306 | 312 | 28 (+12/−6, p = 0.24) |
+
+- The right video didn't help the 17 stoppage questions. Most are recall_event_time, where 8 frames about 7 s apart can't separate options 10 s apart.
+- **Kernel rounding alone changes about 4% of answers.** Differences under about 1 point between runs on different kernels are not evidence.
+
+### Event detection on all four test halves
+
+**Detectors.** Both run with Qwen3.5-4B, scoring each window by letter logits. They are scored against the moments of the test "now" questions, which is diagnostic only.
+- **v2:** a 12-class prompt (with decoys such as cross, close-up and throw-in) on 6 s windows at 448 px and 2 fps, about 7–10 min per half.
+- **shot_bin:** a yes/no shot question on 12 s windows at 896 px and 1 fps, about 15–20 min per half.
+
+**Strict scoring** replaces the looser rule used on game1 H1 earlier:
+- A window must contain the event moment, taken as the question time minus 2.5 s.
+- Each detection is credited to at most one event.
+- Ranks are worst-case among ties: the probabilities are coarse, so 218 of 225 windows in one run share their value with another window.
+
+The earlier rule credited any window within a 19–25 s zone, which a random top-20 pick passes 17% of the time.
+
+Ranking quality (AUC: windows containing an event vs all others):
+
+| | g1h1 | g1h2 | g2h1 | g2h2 | Mean |
+|---|---|---|---|---|---|
+| shot, shot_bin 896 px | 0.85 | 0.78 | 0.80 | 0.69 | 0.78 |
+| shot, v2 448 px | 0.85 | 0.88 | 0.78 | 0.96 | **0.87** |
+| corner, v2 | 0.89 | 0.91 | 0.98 | 0.98 | **0.94** |
+
+Free kicks, offsides, cards and substitutions rank between 0.43 and 1.00, but each half has only 1–7 of them.
+
+**Shots as counts.** Detection is peak picking: windows are taken in order of p(shot), and any window within 30 s of one already taken is dropped, so the number of detections is the predicted count.
+- Cut-offs were chosen on game1 H1 only.
+- A detection may start up to 15 s after the shot, because the clearest cues (reactions, the replay wipe) follow it.
+- The random baseline uses the same number of detections, placed under the same rule.
+
+Held-out halves (34 shots):
+
+| Detector (cut-off) | Found | Real | F1 | Random F1 | Count error per half |
+|---|---|---|---|---|---|
+| v2 448 px (p ≥ 0.02) | 18/34 | 18/77 | 0.32 | 0.11 | +22, +8, +13 |
+| shot_bin 896 px (p ≥ 0.9) | 8/34 | 8/20 | 0.30 | 0.09 | +2, −12, −4 |
+
+- **The 896 px advantage seen on game1 H1, the half the prompts were tuned on, was a selection effect.** On held-out halves both detectors reach about 3× random. The pipeline now uses v2 at 448 px for every class: it's one pass at about 2.2× lower cost.
+- **Neither gives usable counts.** v2 overcounts by 8–22 shots per half. shot_bin's probability scale collapses on game2 (12 too few in one half). Counting options differ by one or two, so a ledger fed by either would stay near chance.
+- **Corners rank well but a fixed threshold fails.** At p ≥ 0.5, 10/28 are found, with 10 of 31 detections real, despite AUC 0.89–0.98. The probability scale shifts between halves.
+
+**Caveats:**
+- The truth set is the events the test asks about. Real shots it skips count as false positives; in game1 H1 the VQA set and SoccerNet-v2 share only 5 of their 9 and 7 shots.
+- Each cut-off was tuned on one half, and there are four halves in total.
+
+**Next:**
+- A per-half cut-off: rank-based, or normalised to each half's score distribution. That is the main blocker for a video-fed counting ledger.
+- After that, team attribution from kits and rosters, then wiring the detections into `EventLedger` with observation time = window end.
