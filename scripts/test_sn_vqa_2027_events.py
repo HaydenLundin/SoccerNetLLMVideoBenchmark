@@ -18,6 +18,7 @@ sys.path.insert(0, str(WORKSPACE_ROOT))
 
 from processing.sn_vqa_2027_events import (
     CLASS_SETS, LETTERS, EVENT_LAG, windows, truth_events, covers, match, merge_above, peaks, auc, worst_case_ranks, f1,
+    causal_percentile_rows,
 )
 
 
@@ -111,30 +112,57 @@ def test_prompts():
     print(f"  [PASS] {len(CLASS_SETS)} prompts, unique classes, each scores shots")
 
 
+def test_causal_percentile():
+    print("\n--- 7. Per-half cut-off: causal percentile of p within the half ---")
+    rows = _rows([0.5, 0.1, 0.9, 0.3])
+    pct = [r["p"]["shot"] for r in causal_percentile_rows(rows, "shot")]
+    assert pct == [1.0, 0.5, 1.0, 0.5], pct  # each window ranked only against itself and earlier windows
+    # later video never changes an earlier value
+    longer = [r["p"]["shot"] for r in causal_percentile_rows(_rows([0.5, 0.1, 0.9, 0.3, 0.95, 0.0]), "shot")]
+    assert longer[:4] == pct, longer
+    # the warm-up zeroes windows that start before it; they still count as history
+    assert [r["p"]["shot"] for r in causal_percentile_rows(rows, "shot", warmup=12.0)] == [0.0, 0.0, 1.0, 0.5]
+    # times and the input rows are untouched
+    assert [(r["start"], r["end"]) for r in causal_percentile_rows(rows, "shot")] == [(r["start"], r["end"]) for r in rows]
+    assert rows[0]["p"]["shot"] == 0.5
+    print("  [PASS] percentile uses no later window; warm-up suppresses early windows only")
+
+
 def check_official(official_dir: Path):
     """Reproduces section 11 of the research note from the committed detector outputs."""
-    print(f"\n--- 7. Section 11 numbers from logs/sn_vqa_2027/events and {official_dir} ---")
+    print(f"\n--- 8. Section 11 numbers from logs/sn_vqa_2027/events and {official_dir} ---")
     sys.path.insert(0, str(WORKSPACE_ROOT / "scripts"))
-    from score_events_sn_vqa_2027 import load_halves, shot_counts, CUTS
+    from score_events_sn_vqa_2027 import load_halves, shot_counts, CUTS, PERCENTILES
     gt = json.loads((official_dir / "test_GT.json").read_text(encoding="utf-8"))
     folder = WORKSPACE_ROOT / "logs" / "sn_vqa_2027" / "events"
-    expected = {"v2": (0.02, 0.87, 18, 77, "0.32"), "shot_bin_896": (0.9, 0.78, 8, 20, "0.30")}
-    for source, (cut_expected, mean_auc, found_expected, dets_expected, f1_expected) in expected.items():
+    # (cuts, warmup) -> source -> (cut, held-out found, held-out detections, F1, sum of |count error|)
+    expected = {
+        (tuple(CUTS), None): {"v2": (0.02, 18, 77, "0.32", 43), "shot_bin_896": (0.9, 8, 20, "0.30", 18)},
+        (tuple(PERCENTILES), 120.0): {"v2": (0.93, 16, 61, "0.34", 27), "shot_bin_896": (0.97, 10, 27, "0.33", 7)},
+    }
+    mean_aucs = {"v2": 0.87, "shot_bin_896": 0.78}
+    for source, mean_auc in mean_aucs.items():
         halves = load_halves(gt, folder, source)
         assert len(halves) == 4, f"{source}: {len(halves)} halves"
         aucs = [auc(rows, "shot", [t for t, k in ev if k == "shot"]) for rows, _, ev in halves.values()]
         assert f"{sum(aucs) / 4:.2f}" == f"{mean_auc:.2f}", (source, aucs)
-        rows, _, events = halves["game1_h1"]
-        tuned = {c: f1(*shot_counts(rows, events, c, 30.0, 15.0)[:4]) for c in CUTS}
-        cut = max(CUTS, key=lambda c: (tuned[c], c))
-        assert cut == cut_expected, (source, cut)
-        held = [0, 0, 0, 0]
-        for tag, (rows, _, events) in halves.items():
-            if tag != "game1_h1":
-                held = [a + b for a, b in zip(held, shot_counts(rows, events, cut, 30.0, 15.0)[:4])]
-        assert (held[0], held[3]) == (found_expected, dets_expected) and f"{f1(*held):.2f}" == f1_expected, (source, held)
-        print(f"  [PASS] {source}: mean shot AUC {mean_auc:.2f}; cut {cut}; held-out {held[0]}/{held[1]} found, "
-              f"{held[2]}/{held[3]} real, F1 {f1_expected}")
+        for (cuts, warmup), by_source in expected.items():
+            cut_expected, found_expected, dets_expected, f1_expected, err_expected = by_source[source]
+            rows, _, events = halves["game1_h1"]
+            tuned = {c: f1(*shot_counts(rows, events, c, 30.0, 15.0, warmup=warmup)[:4]) for c in cuts}
+            cut = max(cuts, key=lambda c: (tuned[c], c))
+            assert cut == cut_expected, (source, warmup, cut)
+            held, err = [0, 0, 0, 0], 0
+            for tag, (rows, _, events) in halves.items():
+                if tag != "game1_h1":
+                    counts = shot_counts(rows, events, cut, 30.0, 15.0, warmup=warmup)[:4]
+                    held = [a + b for a, b in zip(held, counts)]
+                    err += abs(counts[3] - counts[1])
+            assert (held[0], held[3], f"{f1(*held):.2f}", err) == (found_expected, dets_expected, f1_expected, err_expected), \
+                (source, warmup, held, err)
+            kind = "p(shot)" if warmup is None else "per-half percentile"
+            print(f"  [PASS] {source}: mean shot AUC {mean_auc:.2f}; {kind} cut {cut}; held-out {held[0]}/{held[1]} found, "
+                  f"{held[2]}/{held[3]} real, F1 {f1_expected}, |count error| {err}")
 
 
 def run_all_tests(official_dir=None):
@@ -144,6 +172,7 @@ def run_all_tests(official_dir=None):
     test_merge_and_peaks()
     test_auc_and_ranks()
     test_prompts()
+    test_causal_percentile()
     if official_dir is not None:
         check_official(official_dir)
     print("\n" + "=" * 60)

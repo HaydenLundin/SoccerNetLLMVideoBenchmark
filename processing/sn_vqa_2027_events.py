@@ -19,6 +19,7 @@ Pure Python, no model or video dependencies.
 """
 
 import re
+import bisect
 from typing import Callable, Dict, Iterable, Iterator, List, Optional, Sequence, Tuple
 
 # Prompts: each class is (key, description shown to the model as a lettered option).
@@ -146,6 +147,24 @@ def peaks(rows: Sequence[Dict], kind: str, thr: Optional[float] = None, n: Optio
             if n is not None and len(taken) == n:
                 break
     return sorted((r["start"], r["end"]) for r in taken)
+
+
+def causal_percentile_rows(rows: Sequence[Dict], kind: str, warmup: float = 0.0) -> List[Dict]:
+    """
+    Rows (time order, one half) with p(kind) replaced by its causal percentile: the share of
+    this half's windows so far, itself included, with p(kind) at or below its own. Later video
+    never changes a window's value, so a cut-off on it is a per-half cut-off a streaming
+    answerer may use. Windows starting before `warmup` s get 0: a percentile over a handful
+    of windows is noise.
+    """
+    seen: List[float] = []
+    out = []
+    for r in rows:
+        p = r["p"][kind]
+        bisect.insort(seen, p)
+        pct = bisect.bisect_right(seen, p) / len(seen) if r["start"] >= warmup else 0.0
+        out.append({**r, "p": {kind: pct}})
+    return out
 
 
 def auc(rows: Sequence[Dict], kind: str, events: Sequence[float]) -> Optional[float]:

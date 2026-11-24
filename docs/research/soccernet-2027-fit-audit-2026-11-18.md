@@ -399,6 +399,29 @@ Held-out halves (34 shots):
 - The truth set is the events the test asks about. Real shots it skips count as false positives; in game1 H1 the VQA set and SoccerNet-v2 share only 5 of their 9 and 7 shots.
 - Each cut-off was tuned on one half, and there are four halves in total.
 
+### Per-half shot cut-off (2026-11-24)
+
+The cut-off now applies to each window's **causal percentile**: the share of this half's windows so far, itself included, whose p(shot) is at or below its own. Later video never changes the value, so a streaming answerer may use it.
+- Windows in a half's first 120 s get no detections, because a percentile over a handful of windows is noise. The 120 s was set before scoring.
+- The percentile cut-off was chosen on game1 H1 only, from 0.80–0.995. Peak picking, the lead and the random baseline are unchanged.
+- **Rate baseline for counts:** game1 H1's shots per second times each half's length. A fixed percentile fires at a roughly fixed rate, so it has to beat this to show that it tracks the match.
+
+Held-out halves (34 shots):
+
+| Detector (cut-off) | Found | Real | F1 | Random F1 | Count error per half | Sum of \|count error\| |
+|---|---|---|---|---|---|---|
+| v2 (p ≥ 0.02) | 18/34 | 18/77 | 0.32 | 0.11 | +22, +8, +13 | 43 |
+| v2 (percentile ≥ 0.93) | 16/34 | 16/61 | 0.34 | 0.10 | +9, +3, +15 | 27 |
+| shot_bin (p ≥ 0.9) | 8/34 | 8/20 | 0.30 | 0.09 | +2, −12, −4 | 18 |
+| shot_bin (percentile ≥ 0.97) | 10/34 | 10/27 | 0.33 | 0.09 | −3, −4, 0 | 7 |
+| Rate baseline | | | | | −3.9, −3.7, +2.2 | 9.8 |
+
+- **It fixes shot_bin's calibration collapse.** Game2 goes from 1 and 3 detections to 9 and 7, and the sum of count errors falls from 18 to 7.
+- **Counts barely beat a constant rate.** shot_bin's errors follow the rate baseline's half by half (−3, −4, 0 against −3.9, −3.7, +2.2). v2 is worse than the rate baseline. A percentile cut-off makes the detection rate the same in every half, which also removes the signal that one half had more shots than another.
+- **F1 gains are within noise:** 0.32 → 0.34 and 0.30 → 0.33 on 34 shots.
+- **The warm-up matters little.** Over 0, 60, 120 and 240 s the chosen cut-off stays the same and F1 stays at 0.33–0.36. Three held-out shots fall in the first 120 s.
+- **Peak picking still looks up to 30 s ahead.** The cut-off is causal, but a window can be dropped for a higher one up to 30 s later. A ledger would therefore confirm a shot up to 30 s late, or pick forward in time order instead.
+
 **Next:**
-- A per-half cut-off: rank-based, or normalised to each half's score distribution. That is the main blocker for a video-fed counting ledger.
-- After that, team attribution from kits and rosters, then wiring the detections into `EventLedger` with observation time = window end.
+- For counting, detection quality is the limit, not the cut-off: about 1 detection in 3 is a real shot. Better per-window evidence (the v2 classes plus shot_bin's aftermath cues, or a second look at candidate windows) has to come before counts can beat the rate prior.
+- After that, team attribution from kits and rosters, then wiring the detections into `EventLedger` with observation time = window end (plus the peak-picking delay).
