@@ -474,7 +474,7 @@ Adding the after-shot cues to the average lowers AUC to 0.75–0.81.
 - **Current detections looked worth wiring in, if attribution held up.** At measured attribution the ledger answers about 16.5 of 37, against 10 for the video QA run. The next subsection shows that attribution does not hold up, and that most of this gain is an artefact of how the test options are built.
 - **Player attribution is the bigger bottleneck.** Perfect detection with measured attribution (19.5) is barely better than our detections with measured attribution (16.5). Perfect detection with oracle attribution reaches 34.
 - **The 30 s visibility delay costs 3 of 9 team questions** even with perfect detection: questions asked soon after a shot don't see it yet.
-- **Scale:** shot counting is 37 of 700 test questions. A gain of 6.5 questions is worth about 0.9 points of overall accuracy.
+- **Scale:** the score is the unweighted mean of six subcategories. 6.5 more of the 84 counting questions is 7.7 points of counting, or about 1.3 points of the score. (Corrected 2026-11-25: this said 0.9 points of pooled accuracy.)
 
 ### Player attribution from the full squad (2026-11-24)
 
@@ -524,18 +524,19 @@ Exploratory, run from scratch scripts on the committed logs; no repo code change
 
 ### Headroom by subcategory
 
-Test accuracy of the text-only and video QA runs (`text_only_question`, `video_v2`), weighted by each subcategory's share of the challenge split:
+*Corrected 2026-11-25.* The first version of this table weighted each subcategory by its share of the challenge split, which would matter for pooled accuracy. The score is the **unweighted mean of the six subcategories** (section 1), so each one counts 1/6 however many questions it has. "Points left" is (100 − video accuracy) / 6: the score one subcategory would add at 100%.
 
-| Subcategory | Test n | Challenge n | Chance | Text | Video | Points left on challenge |
-|---|---|---|---|---|---|---|
-| recall_event_time | 200 | 493 | 0.25 | 0.28 | 0.37 | **26.8** |
-| counting | 84 | 150 | 0.25 | 0.31 | 0.25 | 9.7 |
-| recall_event_player | 129 | 215 | 0.25 | 0.29 | 0.54 | 8.5 |
-| event_player | 130 | 158 | 0.25 | 0.33 | 0.49 | 6.9 |
-| causal reasoning | 39 | 50 | 0.25 | 0.36 | 0.26 | 3.2 |
-| event_team | 118 | 92 | 0.50 | 0.50 | 0.69 | 2.5 |
+| Subcategory | Test n | Challenge n | Chance | Text | Video (`video_v2`) | Points left | With `--recall-detector` (`video_v3_recall`) | Points left |
+|---|---|---|---|---|---|---|---|---|
+| recall_event_time | 200 | 493 | 0.25 | 0.28 | 0.37 | 10.5 | **0.67** | 5.5 |
+| counting | 84 | 150 | 0.25 | 0.31 | 0.25 | 12.5 | 0.25 | **12.5** |
+| causal reasoning | 39 | 50 | 0.25 | 0.36 | 0.26 | 12.4 | 0.26 | **12.4** |
+| event_player | 130 | 158 | 0.25 | 0.33 | 0.49 | 8.5 | 0.49 | 8.5 |
+| recall_event_player | 129 | 215 | 0.25 | 0.29 | 0.54 | 7.6 | 0.54 | 7.6 |
+| event_team | 118 | 92 | 0.50 | 0.50 | 0.69 | 5.2 | 0.69 | 5.2 |
 
-"Points left" is the overall challenge accuracy that subcategory would add at 100% instead of the video run's test accuracy. `recall_event_time` is 43% of the challenge split, and it holds more headroom than all other subcategories combined.
+- **Before the recall mode,** `recall_event_time` had the most headroom of the video-strong subcategories. It still had less than counting and causal reasoning, which are at chance with video.
+- **Video scores below text-only on counting and causal reasoning** (0.25 vs 0.31, and 0.26 vs 0.36). Both splits are small (84 and 39), and counting on test is inflated by the option artefact in section 11, so picking text-only for them on this evidence would be selection on test.
 
 ### recall_event_time
 
@@ -568,7 +569,7 @@ The single-window rule was the first one tried, not chosen from this table.
 
 **Why it works when the video QA run doesn't.** The QA run shows 8 frames spread over the span of all 4 options and asks for a clock time. The detector instead asks, separately for each option's moment, whether that kind of event is happening. Telling which of four nearby moments holds the event is a local comparison, and that suits a per-window classifier.
 
-**Expected value.** On the challenge split, +29.5 points on `recall_event_time` would be about +12.6 points overall, if it transfers.
+**Expected value.** +29.5 points on `recall_event_time` is about +4.9 points of the score (1/6 of it), if it transfers. (Corrected 2026-11-25: this said +12.6, using the challenge question share.)
 
 **Caveats for the challenge split.**
 - **The options are closer together:** median 7 s, 10th percentile 5 s, 90th percentile 16 s. A fixed 6 s grid can put two options in one window, so a runner should score a window centred on each option instead.
@@ -608,6 +609,22 @@ Test, `--subcategories recall_event_time` (scratch output, not committed):
 - **CPU tests** (`scripts/test_sn_vqa_2027_events.py`, test 8) cover kind parsing and option windows: centred, moved earlier so they never pass the question time, clipped at 0, and None for an option after the question.
   - With `--official-dir`, every test and challenge recall question gets a v2 class except injuries (8 on test, 21 on challenge), and every option parses as a clock time.
 
+### Full test run with `--recall-detector` (2026-11-25)
+
+`logs/sn_vqa_2027/video_v3_recall/`, the same settings as `video_v2` plus `--recall-detector`:
+
+| | `video_v2` | `video_v3_recall` |
+|---|---|---|
+| **Score (mean of six subcategories)** | 43.30 | **48.30** |
+| Pooled accuracy | 320/700 (45.7%) | 380/700 (54.3%) |
+| recall_event_time | 74/200 | 134/200 |
+| Each of the other five subcategories | | identical answers, question by question |
+| Time | 768 s (1.1 s per question) | 1426 s (2.0 s per question) |
+
+- **The recall mode is the whole gain:** 74 questions gained and 14 lost, all in `recall_event_time`; exact McNemar p = 5.1e-11.
+- **The other subcategories reproduce exactly:** same kernels and the same frames, so their answers are deterministic. This also confirms that the runner change did not touch the normal path.
+- **Against the published numbers:** the organizers' test baseline scores 41.76, so 48.30 is 6.5 points above it.
+
 **Next:**
-- Download the challenge videos and run the full challenge split with `--recall-detector` (5 matches, 10 halves; about 40 minutes for the 472 detector-answered questions).
-- A full test run with `--recall-detector`, for the new overall test score.
+- Download the challenge videos and run the challenge split with `--recall-detector` (5 matches, 10 halves; about 40 minutes for the 472 detector-answered questions).
+- By the score's equal weighting, counting (12.5 points left) and causal reasoning (12.4) are now the largest headroom, and both sit at chance with video.

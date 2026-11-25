@@ -1,0 +1,36 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "precision": "nf4",
+  "input": "causal video frames + question + pre-match roster",
+  "frames": 8,
+  "frame_width": 448,
+  "recent_sec": 16.0,
+  "context_sec": 60.0,
+  "recall_detector": true,
+  "recall_window": 4.0,
+  "recall_frames": 12,
+  "subcategories": null,
+  "limit": null,
+  "wall_sec": 1425.9,
+  "sec_per_question": 2.04,
+  "max_prompt_tokens": 1634,
+  "per_subcategory_pct": {
+    "counting": 25.0,
+    "recall_event_time": 67.0,
+    "recall_event_player": 54.26,
+    "event_team": 68.64,
+    "event_player": 49.23,
+    "causal reasoning": 25.64
+  },
+  "n_per_subcategory": {
+    "counting": 84,
+    "recall_event_time": 200,
+    "recall_event_player": 129,
+    "event_team": 118,
+    "event_player": 130,
+    "causal reasoning": 39
+  },
+  "subcategory_mean_pct": 48.3,
+  "overall_correct": 380,
+  "overall_total": 700
+}
