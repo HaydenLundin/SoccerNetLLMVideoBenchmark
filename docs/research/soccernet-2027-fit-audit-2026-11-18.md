@@ -628,3 +628,44 @@ Test, `--subcategories recall_event_time` (scratch output, not committed):
 **Next:**
 - Download the challenge videos and run the challenge split with `--recall-detector` (5 matches, 10 halves; about 40 minutes for the 472 detector-answered questions).
 - By the score's equal weighting, counting (12.5 points left) and causal reasoning (12.4) are now the largest headroom, and both sit at chance with video.
+
+### Ideas checked after the recall mode: all null (2026-11-25)
+
+Exploratory, from scratch scripts on the committed logs plus two GPU runs; no repo code changed.
+
+**Causal reasoning: test does not stand in for the challenge split.**
+- On test, many options combine two choices in a 2×2 grid, e.g. "Martial / Blind took the strike, and Martial / Blind delivered the corner". In 6 of the 39 questions, two options name the same player in both slots; the correct option never does. Both `video_v3_recall` and the text-only run already avoid those options in all 6.
+- The challenge split has no such questions (0 of 50). Its causal questions ask for one outcome in free form, e.g. "What happened to Sergio Aguero's shot around the 15th minute?" with four outcomes.
+- So a method tuned on the 39 test questions would be tuned on a different question style, at about 0.43 points of the score per question. No offline signal here.
+
+**Player questions: the errors are within the right team.**
+
+From the pre-match rosters:
+
+| | event_player (130) | recall_event_player (129) |
+|---|---|---|
+| Correct (`video_v3_recall`) | 64 | 70 |
+| Picked player on the correct team | 102 (78.5%) | 104 (80.6%) |
+| Wrong player on the correct team | 38 | 34 |
+| Wrong team | 28 | 25 |
+
+- **Picking the team first would hurt.** The player pick lands on the right team more often than the model's answer to the paired "Which team … now?" question (91 of 130). This was a diagnostic only, since a runner may not read another question.
+- **The options' team mix gives nothing away.** Options are 2+2 by team (60 and 56), 1+3 (62 and 63) or one team (8 and 10). In the 1+3 questions, the lone team's player is correct 20 of 62 and 16 of 63 times, close to the 1 in 4 of a random pick.
+
+**A narrow window for the player questions (GPU check).**
+- `recall_event_player` shows 8 frames over 20 s centred on the named time, and `event_player` the last 16 s. The 4 s window that fixed `recall_event_time` was the setting chosen before the run: 4 s centred on the named time, or the last 4 s for "now" questions, with 12 frames.
+- A control kept the default windows with the same 12 frames, to separate the window from the frame count.
+- Both runs are paired against `video_v3_recall` (8 frames, default windows):
+
+| Run, 12 frames | event_player (130) | recall_event_player (129) |
+|---|---|---|
+| `video_v3_recall`, 8 frames | 64 | 70 |
+| 4 s window | 67 (gained 19, lost 16; p = 0.74) | 67 (gained 16, lost 19; p = 0.74) |
+| Default windows | 73 (gained 18, lost 9; p = 0.12) | 72 (gained 12, lost 10; p = 0.83) |
+
+- **The narrow window does nothing:** the two subcategories move by 3 in opposite directions, and about 35 answers flip each way. `recall_event_time` asks which of four nearby moments holds an event, and a local window suits that. The player questions ask which person it is, and a closer look in time doesn't help.
+- **12 frames on `event_player`** (+9, about +1.2 points of the score) is not significant. It is a setting chosen after seeing test results, so it is not adopted.
+- **Cost:** about 1 s per question for either run.
+- This fits section 11's full-squad check: Qwen3.5-4B can't tell players apart from frames much better than from the options alone.
+
+**Where that leaves the next step:** the challenge run with `--recall-detector` is the only measured gain not yet in a submission.
