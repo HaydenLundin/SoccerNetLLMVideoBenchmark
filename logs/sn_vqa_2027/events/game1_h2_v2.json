@@ -1,0 +1,9099 @@
+{
+"args": {
+"window": 6.0,
+"fps": 2.0,
+"width": 448,
+"limit_sec": null,
+"model": "Qwen/Qwen3.5-4B",
+"prompt": "v2",
+"video": "game1/2_720p.mkv"
+},
+"classes": [
+"none",
+"replay",
+"closeup",
+"goal_kick",
+"throw_in",
+"cross",
+"shot",
+"corner",
+"free_kick",
+"offside",
+"substitution",
+"card"
+],
+"rows": [
+{
+"start": 0.0,
+"end": 6.0,
+"p": {
+"none": 0.6237,
+"replay": 0.0793,
+"closeup": 0.0177,
+"goal_kick": 0.0024,
+"throw_in": 0.0037,
+"cross": 0.0042,
+"shot": 0.0061,
+"corner": 0.0037,
+"free_kick": 0.0035,
+"offside": 0.0512,
+"substitution": 0.0257,
+"card": 0.1787
+}
+},
+{
+"start": 6.0,
+"end": 12.0,
+"p": {
+"none": 0.7798,
+"replay": 0.1196,
+"closeup": 0.0081,
+"goal_kick": 0.0008,
+"throw_in": 0.0019,
+"cross": 0.0049,
+"shot": 0.0044,
+"corner": 0.0025,
+"free_kick": 0.0019,
+"offside": 0.044,
+"substitution": 0.0126,
+"card": 0.0195
+}
+},
+{
+"start": 12.0,
+"end": 18.0,
+"p": {
+"none": 0.9058,
+"replay": 0.0579,
+"closeup": 0.0065,
+"goal_kick": 0.0005,
+"throw_in": 0.0014,
+"cross": 0.0007,
+"shot": 0.0021,
+"corner": 0.0009,
+"free_kick": 0.0009,
+"offside": 0.0114,
+"substitution": 0.0045,
+"card": 0.0074
+}
+},
+{
+"start": 18.0,
+"end": 24.0,
+"p": {
+"none": 0.2959,
+"replay": 0.1398,
+"closeup": 0.0259,
+"goal_kick": 0.0084,
+"throw_in": 0.0147,
+"cross": 0.1234,
+"shot": 0.0547,
+"corner": 0.0243,
+"free_kick": 0.0084,
+"offside": 0.1584,
+"substitution": 0.0228,
+"card": 0.1234
+}
+},
+{
+"start": 24.0,
+"end": 30.0,
+"p": {
+"none": 0.3799,
+"replay": 0.1233,
+"closeup": 0.0157,
+"goal_kick": 0.002,
+"throw_in": 0.0031,
+"cross": 0.0122,
+"shot": 0.0089,
+"corner": 0.04,
+"free_kick": 0.2034,
+"offside": 0.0848,
+"substitution": 0.0178,
+"card": 0.1089
+}
+},
+{
+"start": 30.0,
+"end": 36.0,
+"p": {
+"none": 0.6804,
+"replay": 0.0525,
+"closeup": 0.0133,
+"goal_kick": 0.0008,
+"throw_in": 0.0052,
+"cross": 0.003,
+"shot": 0.0059,
+"corner": 0.003,
+"free_kick": 0.0086,
+"offside": 0.0299,
+"substitution": 0.0865,
+"card": 0.1111
+}
+},
+{
+"start": 36.0,
+"end": 42.0,
+"p": {
+"none": 0.7103,
+"replay": 0.0376,
+"closeup": 0.013,
+"goal_kick": 0.0008,
+"throw_in": 0.0033,
+"cross": 0.0042,
+"shot": 0.0045,
+"corner": 0.0061,
+"free_kick": 0.0051,
+"offside": 0.0312,
+"substitution": 0.0749,
+"card": 0.1089
+}
+},
+{
+"start": 42.0,
+"end": 48.0,
+"p": {
+"none": 0.3826,
+"replay": 0.0665,
+"closeup": 0.0158,
+"goal_kick": 0.0011,
+"throw_in": 0.0027,
+"cross": 0.0062,
+"shot": 0.0055,
+"corner": 0.0055,
+"free_kick": 0.004,
+"offside": 0.0665,
+"substitution": 0.2629,
+"card": 0.1807
+}
+},
+{
+"start": 48.0,
+"end": 54.0,
+"p": {
+"none": 0.5076,
+"replay": 0.0882,
+"closeup": 0.021,
+"goal_kick": 0.0013,
+"throw_in": 0.0025,
+"cross": 0.0041,
+"shot": 0.0027,
+"corner": 0.0034,
+"free_kick": 0.0025,
+"offside": 0.0345,
+"substitution": 0.1454,
+"card": 0.1867
+}
+},
+{
+"start": 54.0,
+"end": 60.0,
+"p": {
+"none": 0.5608,
+"replay": 0.0522,
+"closeup": 0.0124,
+"goal_kick": 0.001,
+"throw_in": 0.0013,
+"cross": 0.0055,
+"shot": 0.0043,
+"corner": 0.0028,
+"free_kick": 0.0019,
+"offside": 0.0217,
+"substitution": 0.0713,
+"card": 0.2649
+}
+},
+{
+"start": 60.0,
+"end": 66.0,
+"p": {
+"none": 0.3552,
+"replay": 0.0793,
+"closeup": 0.0177,
+"goal_kick": 0.0014,
+"throw_in": 0.0035,
+"cross": 0.0107,
+"shot": 0.0084,
+"corner": 0.0074,
+"free_kick": 0.0078,
+"offside": 0.0745,
+"substitution": 0.1901,
+"card": 0.2441
+}
+},
+{
+"start": 66.0,
+"end": 72.0,
+"p": {
+"none": 0.6039,
+"replay": 0.0678,
+"closeup": 0.0282,
+"goal_kick": 0.0016,
+"throw_in": 0.0043,
+"cross": 0.0104,
+"shot": 0.0067,
+"corner": 0.0081,
+"free_kick": 0.0036,
+"offside": 0.032,
+"substitution": 0.0986,
+"card": 0.1348
+}
+},
+{
+"start": 72.0,
+"end": 78.0,
+"p": {
+"none": 0.7799,
+"replay": 0.0931,
+"closeup": 0.0118,
+"goal_kick": 0.001,
+"throw_in": 0.0044,
+"cross": 0.006,
+"shot": 0.0041,
+"corner": 0.0023,
+"free_kick": 0.0036,
+"offside": 0.0267,
+"substitution": 0.0172,
+"card": 0.0499
+}
+},
+{
+"start": 78.0,
+"end": 84.0,
+"p": {
+"none": 0.7209,
+"replay": 0.2065,
+"closeup": 0.0109,
+"goal_kick": 0.0008,
+"throw_in": 0.0033,
+"cross": 0.0132,
+"shot": 0.0049,
+"corner": 0.0022,
+"free_kick": 0.0018,
+"offside": 0.015,
+"substitution": 0.0055,
+"card": 0.015
+}
+},
+{
+"start": 84.0,
+"end": 90.0,
+"p": {
+"none": 0.8361,
+"replay": 0.0881,
+"closeup": 0.0087,
+"goal_kick": 0.0007,
+"throw_in": 0.0027,
+"cross": 0.0017,
+"shot": 0.0032,
+"corner": 0.0021,
+"free_kick": 0.0013,
+"offside": 0.0174,
+"substitution": 0.0144,
+"card": 0.0237
+}
+},
+{
+"start": 90.0,
+"end": 96.0,
+"p": {
+"none": 0.3837,
+"replay": 0.1412,
+"closeup": 0.0261,
+"goal_kick": 0.0062,
+"throw_in": 0.0096,
+"cross": 0.2637,
+"shot": 0.0315,
+"corner": 0.0096,
+"free_kick": 0.009,
+"offside": 0.0519,
+"substitution": 0.0216,
+"card": 0.0458
+}
+},
+{
+"start": 96.0,
+"end": 102.0,
+"p": {
+"none": 0.4348,
+"replay": 0.097,
+"closeup": 0.038,
+"goal_kick": 0.0029,
+"throw_in": 0.0043,
+"cross": 0.2637,
+"shot": 0.009,
+"corner": 0.0055,
+"free_kick": 0.0033,
+"offside": 0.038,
+"substitution": 0.0179,
+"card": 0.0856
+}
+},
+{
+"start": 102.0,
+"end": 108.0,
+"p": {
+"none": 0.2176,
+"replay": 0.1028,
+"closeup": 0.0158,
+"goal_kick": 0.0016,
+"throw_in": 0.0074,
+"cross": 0.4606,
+"shot": 0.0244,
+"corner": 0.08,
+"free_kick": 0.0058,
+"offside": 0.026,
+"substitution": 0.0096,
+"card": 0.0485
+}
+},
+{
+"start": 108.0,
+"end": 114.0,
+"p": {
+"none": 0.162,
+"replay": 0.343,
+"closeup": 0.0282,
+"goal_kick": 0.1114,
+"throw_in": 0.0142,
+"cross": 0.0362,
+"shot": 0.0635,
+"corner": 0.0206,
+"free_kick": 0.0091,
+"offside": 0.1046,
+"substitution": 0.0206,
+"card": 0.0867
+}
+},
+{
+"start": 114.0,
+"end": 120.0,
+"p": {
+"none": 0.7877,
+"replay": 0.083,
+"closeup": 0.0088,
+"goal_kick": 0.0007,
+"throw_in": 0.0044,
+"cross": 0.0056,
+"shot": 0.0044,
+"corner": 0.006,
+"free_kick": 0.0039,
+"offside": 0.0444,
+"substitution": 0.0185,
+"card": 0.0325
+}
+},
+{
+"start": 120.0,
+"end": 126.0,
+"p": {
+"none": 0.7778,
+"replay": 0.1532,
+"closeup": 0.0142,
+"goal_kick": 0.0008,
+"throw_in": 0.003,
+"cross": 0.0072,
+"shot": 0.0041,
+"corner": 0.0023,
+"free_kick": 0.0016,
+"offside": 0.0183,
+"substitution": 0.0072,
+"card": 0.0104
+}
+},
+{
+"start": 126.0,
+"end": 132.0,
+"p": {
+"none": 0.6875,
+"replay": 0.1738,
+"closeup": 0.0118,
+"goal_kick": 0.0008,
+"throw_in": 0.003,
+"cross": 0.0032,
+"shot": 0.0044,
+"corner": 0.0026,
+"free_kick": 0.0022,
+"offside": 0.0498,
+"substitution": 0.0221,
+"card": 0.0388
+}
+},
+{
+"start": 132.0,
+"end": 138.0,
+"p": {
+"none": 0.3282,
+"replay": 0.1134,
+"closeup": 0.0325,
+"goal_kick": 0.0018,
+"throw_in": 0.0073,
+"cross": 0.0127,
+"shot": 0.0064,
+"corner": 0.0087,
+"free_kick": 0.0082,
+"offside": 0.3282,
+"substitution": 0.0392,
+"card": 0.1134
+}
+},
+{
+"start": 138.0,
+"end": 144.0,
+"p": {
+"none": 0.5984,
+"replay": 0.2827,
+"closeup": 0.015,
+"goal_kick": 0.0012,
+"throw_in": 0.0033,
+"cross": 0.0043,
+"shot": 0.004,
+"corner": 0.0062,
+"free_kick": 0.0036,
+"offside": 0.0218,
+"substitution": 0.0103,
+"card": 0.0491
+}
+},
+{
+"start": 144.0,
+"end": 150.0,
+"p": {
+"none": 0.7573,
+"replay": 0.1491,
+"closeup": 0.0157,
+"goal_kick": 0.0015,
+"throw_in": 0.0035,
+"cross": 0.0084,
+"shot": 0.0051,
+"corner": 0.0048,
+"free_kick": 0.004,
+"offside": 0.0148,
+"substitution": 0.0115,
+"card": 0.0243
+}
+},
+{
+"start": 150.0,
+"end": 156.0,
+"p": {
+"none": 0.698,
+"replay": 0.2,
+"closeup": 0.0068,
+"goal_kick": 0.0009,
+"throw_in": 0.0034,
+"cross": 0.0047,
+"shot": 0.0044,
+"corner": 0.0044,
+"free_kick": 0.0027,
+"offside": 0.0394,
+"substitution": 0.0154,
+"card": 0.0198
+}
+},
+{
+"start": 156.0,
+"end": 162.0,
+"p": {
+"none": 0.4745,
+"replay": 0.4188,
+"closeup": 0.0251,
+"goal_kick": 0.001,
+"throw_in": 0.0023,
+"cross": 0.0025,
+"shot": 0.0016,
+"corner": 0.0012,
+"free_kick": 0.0018,
+"offside": 0.0143,
+"substitution": 0.0068,
+"card": 0.05
+}
+},
+{
+"start": 162.0,
+"end": 168.0,
+"p": {
+"none": 0.5583,
+"replay": 0.1412,
+"closeup": 0.0357,
+"goal_kick": 0.0045,
+"throw_in": 0.0062,
+"cross": 0.0296,
+"shot": 0.0179,
+"corner": 0.007,
+"free_kick": 0.0048,
+"offside": 0.1246,
+"substitution": 0.0149,
+"card": 0.0553
+}
+},
+{
+"start": 168.0,
+"end": 174.0,
+"p": {
+"none": 0.0128,
+"replay": 0.0047,
+"closeup": 0.8961,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0002,
+"shot": 0.0004,
+"corner": 0.0002,
+"free_kick": 0.0001,
+"offside": 0.0034,
+"substitution": 0.0083,
+"card": 0.0736
+}
+},
+{
+"start": 174.0,
+"end": 180.0,
+"p": {
+"none": 0.0441,
+"replay": 0.0303,
+"closeup": 0.6082,
+"goal_kick": 0.0004,
+"throw_in": 0.0004,
+"cross": 0.0006,
+"shot": 0.0012,
+"corner": 0.0005,
+"free_kick": 0.0003,
+"offside": 0.0303,
+"substitution": 0.0303,
+"card": 0.2535
+}
+},
+{
+"start": 180.0,
+"end": 186.0,
+"p": {
+"none": 0.03,
+"replay": 0.0086,
+"closeup": 0.7749,
+"goal_kick": 0.0004,
+"throw_in": 0.0006,
+"cross": 0.0006,
+"shot": 0.0012,
+"corner": 0.0006,
+"free_kick": 0.0005,
+"offside": 0.0495,
+"substitution": 0.0282,
+"card": 0.1049
+}
+},
+{
+"start": 186.0,
+"end": 192.0,
+"p": {
+"none": 0.0091,
+"replay": 0.0015,
+"closeup": 0.9873,
+"goal_kick": 0.0,
+"throw_in": 0.0,
+"cross": 0.0,
+"shot": 0.0001,
+"corner": 0.0,
+"free_kick": 0.0,
+"offside": 0.0001,
+"substitution": 0.0008,
+"card": 0.001
+}
+},
+{
+"start": 192.0,
+"end": 198.0,
+"p": {
+"none": 0.3887,
+"replay": 0.0765,
+"closeup": 0.143,
+"goal_kick": 0.2081,
+"throw_in": 0.0049,
+"cross": 0.0038,
+"shot": 0.0067,
+"corner": 0.0028,
+"free_kick": 0.0046,
+"offside": 0.0142,
+"substitution": 0.0206,
+"card": 0.1262
+}
+},
+{
+"start": 198.0,
+"end": 204.0,
+"p": {
+"none": 0.3658,
+"replay": 0.0925,
+"closeup": 0.034,
+"goal_kick": 0.0194,
+"throw_in": 0.0104,
+"cross": 0.0925,
+"shot": 0.032,
+"corner": 0.0133,
+"free_kick": 0.0052,
+"offside": 0.0925,
+"substitution": 0.034,
+"card": 0.2084
+}
+},
+{
+"start": 204.0,
+"end": 210.0,
+"p": {
+"none": 0.813,
+"replay": 0.0971,
+"closeup": 0.0116,
+"goal_kick": 0.0011,
+"throw_in": 0.0033,
+"cross": 0.0048,
+"shot": 0.0043,
+"corner": 0.0038,
+"free_kick": 0.0026,
+"offside": 0.018,
+"substitution": 0.0109,
+"card": 0.0296
+}
+},
+{
+"start": 210.0,
+"end": 216.0,
+"p": {
+"none": 0.8189,
+"replay": 0.1108,
+"closeup": 0.0132,
+"goal_kick": 0.0008,
+"throw_in": 0.003,
+"cross": 0.0019,
+"shot": 0.0036,
+"corner": 0.0013,
+"free_kick": 0.001,
+"offside": 0.0205,
+"substitution": 0.0117,
+"card": 0.0132
+}
+},
+{
+"start": 216.0,
+"end": 222.0,
+"p": {
+"none": 0.8566,
+"replay": 0.0903,
+"closeup": 0.0101,
+"goal_kick": 0.0006,
+"throw_in": 0.002,
+"cross": 0.0026,
+"shot": 0.0033,
+"corner": 0.0013,
+"free_kick": 0.0015,
+"offside": 0.0138,
+"substitution": 0.0084,
+"card": 0.0095
+}
+},
+{
+"start": 222.0,
+"end": 228.0,
+"p": {
+"none": 0.5913,
+"replay": 0.2465,
+"closeup": 0.0158,
+"goal_kick": 0.0015,
+"throw_in": 0.0045,
+"cross": 0.0079,
+"shot": 0.0058,
+"corner": 0.0084,
+"free_kick": 0.0058,
+"offside": 0.0517,
+"substitution": 0.0123,
+"card": 0.0485
+}
+},
+{
+"start": 228.0,
+"end": 234.0,
+"p": {
+"none": 0.3444,
+"replay": 0.2089,
+"closeup": 0.0466,
+"goal_kick": 0.0041,
+"throw_in": 0.0111,
+"cross": 0.1118,
+"shot": 0.0234,
+"corner": 0.0194,
+"free_kick": 0.0183,
+"offside": 0.0768,
+"substitution": 0.0234,
+"card": 0.1118
+}
+},
+{
+"start": 234.0,
+"end": 240.0,
+"p": {
+"none": 0.7497,
+"replay": 0.1015,
+"closeup": 0.0107,
+"goal_kick": 0.0011,
+"throw_in": 0.0045,
+"cross": 0.0107,
+"shot": 0.0069,
+"corner": 0.0035,
+"free_kick": 0.0042,
+"offside": 0.0543,
+"substitution": 0.0107,
+"card": 0.0423
+}
+},
+{
+"start": 240.0,
+"end": 246.0,
+"p": {
+"none": 0.176,
+"replay": 0.1067,
+"closeup": 0.027,
+"goal_kick": 0.0064,
+"throw_in": 0.0127,
+"cross": 0.0831,
+"shot": 0.0197,
+"corner": 0.1209,
+"free_kick": 0.2901,
+"offside": 0.0831,
+"substitution": 0.0093,
+"card": 0.0647
+}
+},
+{
+"start": 246.0,
+"end": 252.0,
+"p": {
+"none": 0.3489,
+"replay": 0.1648,
+"closeup": 0.1206,
+"goal_kick": 0.0368,
+"throw_in": 0.0082,
+"cross": 0.0305,
+"shot": 0.0135,
+"corner": 0.006,
+"free_kick": 0.0047,
+"offside": 0.0645,
+"substitution": 0.0368,
+"card": 0.1648
+}
+},
+{
+"start": 252.0,
+"end": 258.0,
+"p": {
+"none": 0.5771,
+"replay": 0.1136,
+"closeup": 0.0186,
+"goal_kick": 0.0016,
+"throw_in": 0.0127,
+"cross": 0.0831,
+"shot": 0.0781,
+"corner": 0.0057,
+"free_kick": 0.0073,
+"offside": 0.0571,
+"substitution": 0.0144,
+"card": 0.0306
+}
+},
+{
+"start": 258.0,
+"end": 264.0,
+"p": {
+"none": 0.2984,
+"replay": 0.1409,
+"closeup": 0.0295,
+"goal_kick": 0.0033,
+"throw_in": 0.0066,
+"cross": 0.2051,
+"shot": 0.023,
+"corner": 0.0855,
+"free_kick": 0.0123,
+"offside": 0.0519,
+"substitution": 0.0191,
+"card": 0.1244
+}
+},
+{
+"start": 264.0,
+"end": 270.0,
+"p": {
+"none": 0.7237,
+"replay": 0.1425,
+"closeup": 0.016,
+"goal_kick": 0.001,
+"throw_in": 0.0038,
+"cross": 0.0055,
+"shot": 0.0038,
+"corner": 0.0034,
+"free_kick": 0.0028,
+"offside": 0.0408,
+"substitution": 0.0133,
+"card": 0.0435
+}
+},
+{
+"start": 270.0,
+"end": 276.0,
+"p": {
+"none": 0.5759,
+"replay": 0.1456,
+"closeup": 0.0269,
+"goal_kick": 0.0017,
+"throw_in": 0.006,
+"cross": 0.0883,
+"shot": 0.0144,
+"corner": 0.0099,
+"free_kick": 0.0036,
+"offside": 0.0646,
+"substitution": 0.0185,
+"card": 0.0444
+}
+},
+{
+"start": 276.0,
+"end": 282.0,
+"p": {
+"none": 0.6659,
+"replay": 0.1684,
+"closeup": 0.0177,
+"goal_kick": 0.0013,
+"throw_in": 0.0037,
+"cross": 0.0702,
+"shot": 0.0084,
+"corner": 0.0037,
+"free_kick": 0.0024,
+"offside": 0.0293,
+"substitution": 0.0101,
+"card": 0.0189
+}
+},
+{
+"start": 282.0,
+"end": 288.0,
+"p": {
+"none": 0.3398,
+"replay": 0.2999,
+"closeup": 0.0246,
+"goal_kick": 0.002,
+"throw_in": 0.0058,
+"cross": 0.1605,
+"shot": 0.0406,
+"corner": 0.0149,
+"free_kick": 0.0297,
+"offside": 0.0521,
+"substitution": 0.0109,
+"card": 0.0192
+}
+},
+{
+"start": 288.0,
+"end": 294.0,
+"p": {
+"none": 0.143,
+"replay": 0.0526,
+"closeup": 0.2672,
+"goal_kick": 0.0009,
+"throw_in": 0.0023,
+"cross": 0.0041,
+"shot": 0.0041,
+"corner": 0.0025,
+"free_kick": 0.0009,
+"offside": 0.0385,
+"substitution": 0.0436,
+"card": 0.4405
+}
+},
+{
+"start": 294.0,
+"end": 300.0,
+"p": {
+"none": 0.5209,
+"replay": 0.1162,
+"closeup": 0.0108,
+"goal_kick": 0.0018,
+"throw_in": 0.0095,
+"cross": 0.0799,
+"shot": 0.1317,
+"corner": 0.0079,
+"free_kick": 0.0058,
+"offside": 0.0428,
+"substitution": 0.0178,
+"card": 0.0549
+}
+},
+{
+"start": 300.0,
+"end": 306.0,
+"p": {
+"none": 0.4324,
+"replay": 0.1919,
+"closeup": 0.0428,
+"goal_kick": 0.0029,
+"throw_in": 0.0157,
+"cross": 0.0428,
+"shot": 0.0663,
+"corner": 0.0276,
+"free_kick": 0.0115,
+"offside": 0.0751,
+"substitution": 0.0157,
+"card": 0.0751
+}
+},
+{
+"start": 306.0,
+"end": 312.0,
+"p": {
+"none": 0.0716,
+"replay": 0.0298,
+"closeup": 0.529,
+"goal_kick": 0.0004,
+"throw_in": 0.0009,
+"cross": 0.0016,
+"shot": 0.001,
+"corner": 0.0007,
+"free_kick": 0.001,
+"offside": 0.028,
+"substitution": 0.015,
+"card": 0.3209
+}
+},
+{
+"start": 312.0,
+"end": 318.0,
+"p": {
+"none": 0.0787,
+"replay": 0.0421,
+"closeup": 0.2745,
+"goal_kick": 0.0007,
+"throw_in": 0.0013,
+"cross": 0.0022,
+"shot": 0.0022,
+"corner": 0.0017,
+"free_kick": 0.0006,
+"offside": 0.0891,
+"substitution": 0.0541,
+"card": 0.4527
+}
+},
+{
+"start": 318.0,
+"end": 324.0,
+"p": {
+"none": 0.7484,
+"replay": 0.1301,
+"closeup": 0.0107,
+"goal_kick": 0.0011,
+"throw_in": 0.0021,
+"cross": 0.0027,
+"shot": 0.0039,
+"corner": 0.0022,
+"free_kick": 0.0016,
+"offside": 0.0373,
+"substitution": 0.0121,
+"card": 0.0478
+}
+},
+{
+"start": 324.0,
+"end": 330.0,
+"p": {
+"none": 0.7564,
+"replay": 0.1024,
+"closeup": 0.0243,
+"goal_kick": 0.0008,
+"throw_in": 0.0024,
+"cross": 0.0021,
+"shot": 0.0042,
+"corner": 0.0023,
+"free_kick": 0.0027,
+"offside": 0.0202,
+"substitution": 0.0202,
+"card": 0.0621
+}
+},
+{
+"start": 330.0,
+"end": 336.0,
+"p": {
+"none": 0.8842,
+"replay": 0.064,
+"closeup": 0.006,
+"goal_kick": 0.0005,
+"throw_in": 0.0023,
+"cross": 0.0015,
+"shot": 0.003,
+"corner": 0.0014,
+"free_kick": 0.0022,
+"offside": 0.0098,
+"substitution": 0.0098,
+"card": 0.0152
+}
+},
+{
+"start": 336.0,
+"end": 342.0,
+"p": {
+"none": 0.8999,
+"replay": 0.0739,
+"closeup": 0.0037,
+"goal_kick": 0.0003,
+"throw_in": 0.0011,
+"cross": 0.0009,
+"shot": 0.0014,
+"corner": 0.0008,
+"free_kick": 0.0009,
+"offside": 0.005,
+"substitution": 0.0057,
+"card": 0.0065
+}
+},
+{
+"start": 342.0,
+"end": 348.0,
+"p": {
+"none": 0.5251,
+"replay": 0.248,
+"closeup": 0.0231,
+"goal_kick": 0.0018,
+"throw_in": 0.0051,
+"cross": 0.0857,
+"shot": 0.009,
+"corner": 0.008,
+"free_kick": 0.0051,
+"offside": 0.0459,
+"substitution": 0.0116,
+"card": 0.0315
+}
+},
+{
+"start": 348.0,
+"end": 354.0,
+"p": {
+"none": 0.7952,
+"replay": 0.1219,
+"closeup": 0.0113,
+"goal_kick": 0.0009,
+"throw_in": 0.0024,
+"cross": 0.0094,
+"shot": 0.0044,
+"corner": 0.005,
+"free_kick": 0.0025,
+"offside": 0.0146,
+"substitution": 0.0083,
+"card": 0.024
+}
+},
+{
+"start": 354.0,
+"end": 360.0,
+"p": {
+"none": 0.6438,
+"replay": 0.209,
+"closeup": 0.0266,
+"goal_kick": 0.0016,
+"throw_in": 0.0043,
+"cross": 0.0072,
+"shot": 0.0052,
+"corner": 0.0056,
+"free_kick": 0.0034,
+"offside": 0.0466,
+"substitution": 0.0104,
+"card": 0.0363
+}
+},
+{
+"start": 360.0,
+"end": 366.0,
+"p": {
+"none": 0.7729,
+"replay": 0.1185,
+"closeup": 0.0206,
+"goal_kick": 0.0011,
+"throw_in": 0.0043,
+"cross": 0.003,
+"shot": 0.0052,
+"corner": 0.0049,
+"free_kick": 0.0034,
+"offside": 0.034,
+"substitution": 0.0151,
+"card": 0.0171
+}
+},
+{
+"start": 366.0,
+"end": 372.0,
+"p": {
+"none": 0.5528,
+"replay": 0.2611,
+"closeup": 0.0214,
+"goal_kick": 0.0016,
+"throw_in": 0.0051,
+"cross": 0.04,
+"shot": 0.0095,
+"corner": 0.0079,
+"free_kick": 0.0045,
+"offside": 0.0547,
+"substitution": 0.0138,
+"card": 0.0275
+}
+},
+{
+"start": 372.0,
+"end": 378.0,
+"p": {
+"none": 0.3482,
+"replay": 0.1864,
+"closeup": 0.0144,
+"goal_kick": 0.0018,
+"throw_in": 0.005,
+"cross": 0.3072,
+"shot": 0.0268,
+"corner": 0.0286,
+"free_kick": 0.005,
+"offside": 0.0252,
+"substitution": 0.0099,
+"card": 0.0416
+}
+},
+{
+"start": 378.0,
+"end": 384.0,
+"p": {
+"none": 0.5852,
+"replay": 0.1677,
+"closeup": 0.0177,
+"goal_kick": 0.0019,
+"throw_in": 0.0101,
+"cross": 0.0166,
+"shot": 0.0083,
+"corner": 0.0069,
+"free_kick": 0.0048,
+"offside": 0.048,
+"substitution": 0.0177,
+"card": 0.1152
+}
+},
+{
+"start": 384.0,
+"end": 390.0,
+"p": {
+"none": 0.7878,
+"replay": 0.0941,
+"closeup": 0.012,
+"goal_kick": 0.0007,
+"throw_in": 0.0024,
+"cross": 0.0027,
+"shot": 0.003,
+"corner": 0.0025,
+"free_kick": 0.0022,
+"offside": 0.0253,
+"substitution": 0.0305,
+"card": 0.0368
+}
+},
+{
+"start": 390.0,
+"end": 396.0,
+"p": {
+"none": 0.5761,
+"replay": 0.1651,
+"closeup": 0.0144,
+"goal_kick": 0.0015,
+"throw_in": 0.0034,
+"cross": 0.0053,
+"shot": 0.0064,
+"corner": 0.0068,
+"free_kick": 0.0087,
+"offside": 0.0444,
+"substitution": 0.0392,
+"card": 0.1286
+}
+},
+{
+"start": 396.0,
+"end": 402.0,
+"p": {
+"none": 0.5117,
+"replay": 0.1466,
+"closeup": 0.0395,
+"goal_kick": 0.002,
+"throw_in": 0.0064,
+"cross": 0.0307,
+"shot": 0.0106,
+"corner": 0.0175,
+"free_kick": 0.0044,
+"offside": 0.1215,
+"substitution": 0.0255,
+"card": 0.0835
+}
+},
+{
+"start": 402.0,
+"end": 408.0,
+"p": {
+"none": 0.03,
+"replay": 0.011,
+"closeup": 0.1115,
+"goal_kick": 0.0006,
+"throw_in": 0.022,
+"cross": 0.001,
+"shot": 0.0018,
+"corner": 0.001,
+"free_kick": 0.0006,
+"offside": 0.034,
+"substitution": 0.0597,
+"card": 0.7269
+}
+},
+{
+"start": 408.0,
+"end": 414.0,
+"p": {
+"none": 0.1926,
+"replay": 0.1168,
+"closeup": 0.0295,
+"goal_kick": 0.007,
+"throw_in": 0.0055,
+"cross": 0.0179,
+"shot": 0.0109,
+"corner": 0.1031,
+"free_kick": 0.2473,
+"offside": 0.0803,
+"substitution": 0.0191,
+"card": 0.17
+}
+},
+{
+"start": 414.0,
+"end": 420.0,
+"p": {
+"none": 0.6454,
+"replay": 0.144,
+"closeup": 0.0162,
+"goal_kick": 0.0013,
+"throw_in": 0.0046,
+"cross": 0.0221,
+"shot": 0.0072,
+"corner": 0.0056,
+"free_kick": 0.0049,
+"offside": 0.0364,
+"substitution": 0.0302,
+"card": 0.0821
+}
+},
+{
+"start": 420.0,
+"end": 426.0,
+"p": {
+"none": 0.6064,
+"replay": 0.1533,
+"closeup": 0.0183,
+"goal_kick": 0.0022,
+"throw_in": 0.0046,
+"cross": 0.0143,
+"shot": 0.0118,
+"corner": 0.0118,
+"free_kick": 0.0284,
+"offside": 0.068,
+"substitution": 0.0208,
+"card": 0.06
+}
+},
+{
+"start": 426.0,
+"end": 432.0,
+"p": {
+"none": 0.8913,
+"replay": 0.0687,
+"closeup": 0.0032,
+"goal_kick": 0.0003,
+"throw_in": 0.0014,
+"cross": 0.0006,
+"shot": 0.0015,
+"corner": 0.001,
+"free_kick": 0.0019,
+"offside": 0.0119,
+"substitution": 0.0093,
+"card": 0.0087
+}
+},
+{
+"start": 432.0,
+"end": 438.0,
+"p": {
+"none": 0.8501,
+"replay": 0.0791,
+"closeup": 0.0069,
+"goal_kick": 0.0007,
+"throw_in": 0.0035,
+"cross": 0.0024,
+"shot": 0.0037,
+"corner": 0.0017,
+"free_kick": 0.0031,
+"offside": 0.0129,
+"substitution": 0.0146,
+"card": 0.0213
+}
+},
+{
+"start": 438.0,
+"end": 444.0,
+"p": {
+"none": 0.8106,
+"replay": 0.1243,
+"closeup": 0.0079,
+"goal_kick": 0.0005,
+"throw_in": 0.0014,
+"cross": 0.0033,
+"shot": 0.0038,
+"corner": 0.002,
+"free_kick": 0.0008,
+"offside": 0.0261,
+"substitution": 0.007,
+"card": 0.0123
+}
+},
+{
+"start": 444.0,
+"end": 450.0,
+"p": {
+"none": 0.5749,
+"replay": 0.3077,
+"closeup": 0.0324,
+"goal_kick": 0.0014,
+"throw_in": 0.0039,
+"cross": 0.0093,
+"shot": 0.0072,
+"corner": 0.0034,
+"free_kick": 0.0021,
+"offside": 0.0209,
+"substitution": 0.0144,
+"card": 0.0223
+}
+},
+{
+"start": 450.0,
+"end": 456.0,
+"p": {
+"none": 0.564,
+"replay": 0.2664,
+"closeup": 0.0205,
+"goal_kick": 0.0012,
+"throw_in": 0.0043,
+"cross": 0.0717,
+"shot": 0.0091,
+"corner": 0.0036,
+"free_kick": 0.0032,
+"offside": 0.0219,
+"substitution": 0.016,
+"card": 0.0181
+}
+},
+{
+"start": 456.0,
+"end": 462.0,
+"p": {
+"none": 0.1448,
+"replay": 0.0604,
+"closeup": 0.0077,
+"goal_kick": 0.0017,
+"throw_in": 0.0039,
+"cross": 0.3473,
+"shot": 0.0303,
+"corner": 0.2387,
+"free_kick": 0.0775,
+"offside": 0.0533,
+"substitution": 0.006,
+"card": 0.0285
+}
+},
+{
+"start": 462.0,
+"end": 468.0,
+"p": {
+"none": 0.0952,
+"replay": 0.1078,
+"closeup": 0.1078,
+"goal_kick": 0.029,
+"throw_in": 0.0089,
+"cross": 0.0894,
+"shot": 0.035,
+"corner": 0.0329,
+"free_kick": 0.0083,
+"offside": 0.084,
+"substitution": 0.0696,
+"card": 0.3321
+}
+},
+{
+"start": 468.0,
+"end": 474.0,
+"p": {
+"none": 0.4078,
+"replay": 0.15,
+"closeup": 0.0335,
+"goal_kick": 0.0033,
+"throw_in": 0.007,
+"cross": 0.0379,
+"shot": 0.0969,
+"corner": 0.0158,
+"free_kick": 0.0048,
+"offside": 0.0404,
+"substitution": 0.043,
+"card": 0.1597
+}
+},
+{
+"start": 474.0,
+"end": 480.0,
+"p": {
+"none": 0.1559,
+"replay": 0.0539,
+"closeup": 0.5794,
+"goal_kick": 0.0047,
+"throw_in": 0.0053,
+"cross": 0.0069,
+"shot": 0.006,
+"corner": 0.003,
+"free_kick": 0.0029,
+"offside": 0.0154,
+"substitution": 0.0288,
+"card": 0.1376
+}
+},
+{
+"start": 480.0,
+"end": 486.0,
+"p": {
+"none": 0.0531,
+"replay": 0.0221,
+"closeup": 0.006,
+"goal_kick": 0.0004,
+"throw_in": 0.0012,
+"cross": 0.0023,
+"shot": 0.0034,
+"corner": 0.1443,
+"free_kick": 0.7329,
+"offside": 0.0098,
+"substitution": 0.0036,
+"card": 0.0208
+}
+},
+{
+"start": 486.0,
+"end": 492.0,
+"p": {
+"none": 0.0958,
+"replay": 0.0513,
+"closeup": 0.0201,
+"goal_kick": 0.0009,
+"throw_in": 0.0029,
+"cross": 0.0045,
+"shot": 0.0061,
+"corner": 0.1394,
+"free_kick": 0.5515,
+"offside": 0.0242,
+"substitution": 0.0074,
+"card": 0.0958
+}
+},
+{
+"start": 492.0,
+"end": 498.0,
+"p": {
+"none": 0.114,
+"replay": 0.0239,
+"closeup": 0.0128,
+"goal_kick": 0.0009,
+"throw_in": 0.0037,
+"cross": 0.0175,
+"shot": 0.0073,
+"corner": 0.3511,
+"free_kick": 0.3979,
+"offside": 0.0211,
+"substitution": 0.0053,
+"card": 0.0446
+}
+},
+{
+"start": 498.0,
+"end": 504.0,
+"p": {
+"none": 0.1238,
+"replay": 0.0799,
+"closeup": 0.0157,
+"goal_kick": 0.0016,
+"throw_in": 0.007,
+"cross": 0.0178,
+"shot": 0.007,
+"corner": 0.5548,
+"free_kick": 0.0402,
+"offside": 0.0549,
+"substitution": 0.0123,
+"card": 0.0851
+}
+},
+{
+"start": 504.0,
+"end": 510.0,
+"p": {
+"none": 0.7303,
+"replay": 0.1269,
+"closeup": 0.0161,
+"goal_kick": 0.0012,
+"throw_in": 0.0043,
+"cross": 0.0056,
+"shot": 0.0046,
+"corner": 0.0098,
+"free_kick": 0.0032,
+"offside": 0.0439,
+"substitution": 0.0221,
+"card": 0.0321
+}
+},
+{
+"start": 510.0,
+"end": 516.0,
+"p": {
+"none": 0.0441,
+"replay": 0.0119,
+"closeup": 0.0236,
+"goal_kick": 0.0016,
+"throw_in": 0.0017,
+"cross": 0.0013,
+"shot": 0.0016,
+"corner": 0.0025,
+"free_kick": 0.0011,
+"offside": 0.0727,
+"substitution": 0.0566,
+"card": 0.7814
+}
+},
+{
+"start": 516.0,
+"end": 522.0,
+"p": {
+"none": 0.0008,
+"replay": 0.003,
+"closeup": 0.0251,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0003,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0028,
+"substitution": 0.0251,
+"card": 0.9424
+}
+},
+{
+"start": 522.0,
+"end": 528.0,
+"p": {
+"none": 0.0014,
+"replay": 0.0025,
+"closeup": 0.045,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0003,
+"corner": 0.0002,
+"free_kick": 0.0001,
+"offside": 0.045,
+"substitution": 0.2015,
+"card": 0.7034
+}
+},
+{
+"start": 528.0,
+"end": 534.0,
+"p": {
+"none": 0.0068,
+"replay": 0.0036,
+"closeup": 0.0882,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0006,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0093,
+"substitution": 0.0535,
+"card": 0.8368
+}
+},
+{
+"start": 534.0,
+"end": 540.0,
+"p": {
+"none": 0.1608,
+"replay": 0.0337,
+"closeup": 0.0232,
+"goal_kick": 0.002,
+"throw_in": 0.0204,
+"cross": 0.0033,
+"shot": 0.004,
+"corner": 0.0382,
+"free_kick": 0.0013,
+"offside": 0.049,
+"substitution": 0.0279,
+"card": 0.636
+}
+},
+{
+"start": 540.0,
+"end": 546.0,
+"p": {
+"none": 0.0072,
+"replay": 0.005,
+"closeup": 0.0163,
+"goal_kick": 0.0003,
+"throw_in": 0.0005,
+"cross": 0.0011,
+"shot": 0.0011,
+"corner": 0.0009,
+"free_kick": 0.0007,
+"offside": 0.0776,
+"substitution": 0.2392,
+"card": 0.6502
+}
+},
+{
+"start": 546.0,
+"end": 552.0,
+"p": {
+"none": 0.0025,
+"replay": 0.001,
+"closeup": 0.0251,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0032,
+"substitution": 0.0251,
+"card": 0.9423
+}
+},
+{
+"start": 552.0,
+"end": 558.0,
+"p": {
+"none": 0.2106,
+"replay": 0.2106,
+"closeup": 0.047,
+"goal_kick": 0.0252,
+"throw_in": 0.0041,
+"cross": 0.0077,
+"shot": 0.0143,
+"corner": 0.0077,
+"free_kick": 0.0039,
+"offside": 0.0684,
+"substitution": 0.0533,
+"card": 0.3473
+}
+},
+{
+"start": 558.0,
+"end": 564.0,
+"p": {
+"none": 0.6542,
+"replay": 0.2124,
+"closeup": 0.012,
+"goal_kick": 0.001,
+"throw_in": 0.0024,
+"cross": 0.0047,
+"shot": 0.0039,
+"corner": 0.0039,
+"free_kick": 0.0018,
+"offside": 0.0347,
+"substitution": 0.0154,
+"card": 0.0537
+}
+},
+{
+"start": 564.0,
+"end": 570.0,
+"p": {
+"none": 0.692,
+"replay": 0.1363,
+"closeup": 0.0209,
+"goal_kick": 0.0018,
+"throw_in": 0.005,
+"cross": 0.0163,
+"shot": 0.0099,
+"corner": 0.0068,
+"free_kick": 0.0041,
+"offside": 0.039,
+"substitution": 0.0209,
+"card": 0.0471
+}
+},
+{
+"start": 570.0,
+"end": 576.0,
+"p": {
+"none": 0.8498,
+"replay": 0.115,
+"closeup": 0.0057,
+"goal_kick": 0.0003,
+"throw_in": 0.0009,
+"cross": 0.0008,
+"shot": 0.0014,
+"corner": 0.0008,
+"free_kick": 0.0011,
+"offside": 0.0094,
+"substitution": 0.01,
+"card": 0.0047
+}
+},
+{
+"start": 576.0,
+"end": 582.0,
+"p": {
+"none": 0.5182,
+"replay": 0.216,
+"closeup": 0.0177,
+"goal_kick": 0.0015,
+"throw_in": 0.0042,
+"cross": 0.0353,
+"shot": 0.0095,
+"corner": 0.0108,
+"free_kick": 0.0084,
+"offside": 0.1156,
+"substitution": 0.0228,
+"card": 0.04
+}
+},
+{
+"start": 582.0,
+"end": 588.0,
+"p": {
+"none": 0.0102,
+"replay": 0.0029,
+"closeup": 0.1924,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0005,
+"corner": 0.0002,
+"free_kick": 0.0003,
+"offside": 0.0062,
+"substitution": 0.026,
+"card": 0.7608
+}
+},
+{
+"start": 588.0,
+"end": 594.0,
+"p": {
+"none": 0.0338,
+"replay": 0.0036,
+"closeup": 0.1718,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0004,
+"corner": 0.0001,
+"free_kick": 0.0005,
+"offside": 0.0049,
+"substitution": 0.0141,
+"card": 0.7701
+}
+},
+{
+"start": 594.0,
+"end": 600.0,
+"p": {
+"none": 0.0175,
+"replay": 0.0032,
+"closeup": 0.4507,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0004,
+"corner": 0.0002,
+"free_kick": 0.0004,
+"offside": 0.0027,
+"substitution": 0.0136,
+"card": 0.5107
+}
+},
+{
+"start": 600.0,
+"end": 606.0,
+"p": {
+"none": 0.0066,
+"replay": 0.002,
+"closeup": 0.9226,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0011,
+"substitution": 0.008,
+"card": 0.059
+}
+},
+{
+"start": 606.0,
+"end": 612.0,
+"p": {
+"none": 0.0145,
+"replay": 0.0186,
+"closeup": 0.6147,
+"goal_kick": 0.0004,
+"throw_in": 0.0005,
+"cross": 0.0005,
+"shot": 0.0006,
+"corner": 0.0003,
+"free_kick": 0.0003,
+"offside": 0.0088,
+"substitution": 0.012,
+"card": 0.329
+}
+},
+{
+"start": 612.0,
+"end": 618.0,
+"p": {
+"none": 0.0117,
+"replay": 0.0132,
+"closeup": 0.4659,
+"goal_kick": 0.0005,
+"throw_in": 0.0005,
+"cross": 0.0006,
+"shot": 0.0012,
+"corner": 0.0005,
+"free_kick": 0.0012,
+"offside": 0.0124,
+"substitution": 0.0263,
+"card": 0.4659
+}
+},
+{
+"start": 618.0,
+"end": 624.0,
+"p": {
+"none": 0.0016,
+"replay": 0.0021,
+"closeup": 0.0038,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0003,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0058,
+"substitution": 0.0075,
+"card": 0.9782
+}
+},
+{
+"start": 624.0,
+"end": 630.0,
+"p": {
+"none": 0.1113,
+"replay": 0.0494,
+"closeup": 0.0339,
+"goal_kick": 0.0041,
+"throw_in": 0.0043,
+"cross": 0.0117,
+"shot": 0.0063,
+"corner": 0.6403,
+"free_kick": 0.0117,
+"offside": 0.0133,
+"substitution": 0.0091,
+"card": 0.1045
+}
+},
+{
+"start": 630.0,
+"end": 636.0,
+"p": {
+"none": 0.0041,
+"replay": 0.0059,
+"closeup": 0.082,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0007,
+"corner": 0.0009,
+"free_kick": 0.0019,
+"offside": 0.0092,
+"substitution": 0.0134,
+"card": 0.8812
+}
+},
+{
+"start": 636.0,
+"end": 642.0,
+"p": {
+"none": 0.0068,
+"replay": 0.005,
+"closeup": 0.3945,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0003,
+"shot": 0.0007,
+"corner": 0.0006,
+"free_kick": 0.0002,
+"offside": 0.0039,
+"substitution": 0.0135,
+"card": 0.574
+}
+},
+{
+"start": 642.0,
+"end": 648.0,
+"p": {
+"none": 0.0058,
+"replay": 0.0084,
+"closeup": 0.6276,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0002,
+"shot": 0.0006,
+"corner": 0.0003,
+"free_kick": 0.0001,
+"offside": 0.0035,
+"substitution": 0.0167,
+"card": 0.3359
+}
+},
+{
+"start": 648.0,
+"end": 654.0,
+"p": {
+"none": 0.0039,
+"replay": 0.0051,
+"closeup": 0.5497,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0003,
+"shot": 0.0009,
+"corner": 0.0005,
+"free_kick": 0.0002,
+"offside": 0.0035,
+"substitution": 0.0074,
+"card": 0.4281
+}
+},
+{
+"start": 654.0,
+"end": 660.0,
+"p": {
+"none": 0.0083,
+"replay": 0.0054,
+"closeup": 0.0542,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0003,
+"shot": 0.0009,
+"corner": 0.0005,
+"free_kick": 0.0002,
+"offside": 0.0121,
+"substitution": 0.0696,
+"card": 0.848
+}
+},
+{
+"start": 660.0,
+"end": 666.0,
+"p": {
+"none": 0.0088,
+"replay": 0.0093,
+"closeup": 0.0944,
+"goal_kick": 0.0003,
+"throw_in": 0.0008,
+"cross": 0.0006,
+"shot": 0.001,
+"corner": 0.0006,
+"free_kick": 0.0004,
+"offside": 0.01,
+"substitution": 0.0833,
+"card": 0.7905
+}
+},
+{
+"start": 666.0,
+"end": 672.0,
+"p": {
+"none": 0.0042,
+"replay": 0.0057,
+"closeup": 0.7976,
+"goal_kick": 0.0003,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0003,
+"corner": 0.0002,
+"free_kick": 0.0001,
+"offside": 0.0027,
+"substitution": 0.0107,
+"card": 0.178
+}
+},
+{
+"start": 672.0,
+"end": 678.0,
+"p": {
+"none": 0.0069,
+"replay": 0.0107,
+"closeup": 0.123,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0004,
+"shot": 0.0008,
+"corner": 0.0005,
+"free_kick": 0.0004,
+"offside": 0.0147,
+"substitution": 0.0399,
+"card": 0.802
+}
+},
+{
+"start": 678.0,
+"end": 684.0,
+"p": {
+"none": 0.0075,
+"replay": 0.0103,
+"closeup": 0.321,
+"goal_kick": 0.0004,
+"throw_in": 0.0006,
+"cross": 0.0005,
+"shot": 0.0014,
+"corner": 0.0006,
+"free_kick": 0.0003,
+"offside": 0.0193,
+"substitution": 0.0383,
+"card": 0.5997
+}
+},
+{
+"start": 684.0,
+"end": 690.0,
+"p": {
+"none": 0.0139,
+"replay": 0.0096,
+"closeup": 0.8608,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0002,
+"shot": 0.0007,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.004,
+"substitution": 0.007,
+"card": 0.1028
+}
+},
+{
+"start": 690.0,
+"end": 696.0,
+"p": {
+"none": 0.0032,
+"replay": 0.0025,
+"closeup": 0.8349,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0003,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0039,
+"substitution": 0.0093,
+"card": 0.1451
+}
+},
+{
+"start": 696.0,
+"end": 702.0,
+"p": {
+"none": 0.005,
+"replay": 0.006,
+"closeup": 0.4239,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0006,
+"corner": 0.0003,
+"free_kick": 0.0001,
+"offside": 0.0037,
+"substitution": 0.0154,
+"card": 0.5443
+}
+},
+{
+"start": 702.0,
+"end": 708.0,
+"p": {
+"none": 0.0082,
+"replay": 0.0093,
+"closeup": 0.2562,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0002,
+"shot": 0.0007,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0082,
+"substitution": 0.0198,
+"card": 0.6965
+}
+},
+{
+"start": 708.0,
+"end": 714.0,
+"p": {
+"none": 0.0115,
+"replay": 0.0079,
+"closeup": 0.2779,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0004,
+"shot": 0.0009,
+"corner": 0.0004,
+"free_kick": 0.0002,
+"offside": 0.0122,
+"substitution": 0.0214,
+"card": 0.6666
+}
+},
+{
+"start": 714.0,
+"end": 720.0,
+"p": {
+"none": 0.017,
+"replay": 0.0076,
+"closeup": 0.4975,
+"goal_kick": 0.0004,
+"throw_in": 0.0005,
+"cross": 0.0006,
+"shot": 0.0006,
+"corner": 0.0006,
+"free_kick": 0.0004,
+"offside": 0.0125,
+"substitution": 0.0233,
+"card": 0.439
+}
+},
+{
+"start": 720.0,
+"end": 726.0,
+"p": {
+"none": 0.0249,
+"replay": 0.0234,
+"closeup": 0.2222,
+"goal_kick": 0.0005,
+"throw_in": 0.0007,
+"cross": 0.0008,
+"shot": 0.0008,
+"corner": 0.0004,
+"free_kick": 0.001,
+"offside": 0.0161,
+"substitution": 0.0249,
+"card": 0.6843
+}
+},
+{
+"start": 726.0,
+"end": 732.0,
+"p": {
+"none": 0.0169,
+"replay": 0.0109,
+"closeup": 0.2065,
+"goal_kick": 0.0004,
+"throw_in": 0.0005,
+"cross": 0.0004,
+"shot": 0.0007,
+"corner": 0.0003,
+"free_kick": 0.0004,
+"offside": 0.0192,
+"substitution": 0.0232,
+"card": 0.7206
+}
+},
+{
+"start": 732.0,
+"end": 738.0,
+"p": {
+"none": 0.0068,
+"replay": 0.0044,
+"closeup": 0.6531,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0003,
+"shot": 0.0006,
+"corner": 0.0003,
+"free_kick": 0.0002,
+"offside": 0.0077,
+"substitution": 0.0174,
+"card": 0.3085
+}
+},
+{
+"start": 738.0,
+"end": 744.0,
+"p": {
+"none": 0.0073,
+"replay": 0.0036,
+"closeup": 0.9503,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0003,
+"corner": 0.0001,
+"free_kick": 0.0,
+"offside": 0.0024,
+"substitution": 0.0032,
+"card": 0.0325
+}
+},
+{
+"start": 744.0,
+"end": 750.0,
+"p": {
+"none": 0.0142,
+"replay": 0.0171,
+"closeup": 0.6428,
+"goal_kick": 0.0006,
+"throw_in": 0.0007,
+"cross": 0.001,
+"shot": 0.0012,
+"corner": 0.0006,
+"free_kick": 0.0004,
+"offside": 0.0171,
+"substitution": 0.0678,
+"card": 0.2365
+}
+},
+{
+"start": 750.0,
+"end": 756.0,
+"p": {
+"none": 0.0154,
+"replay": 0.0088,
+"closeup": 0.579,
+"goal_kick": 0.0003,
+"throw_in": 0.0004,
+"cross": 0.0004,
+"shot": 0.0009,
+"corner": 0.0005,
+"free_kick": 0.0007,
+"offside": 0.0053,
+"substitution": 0.037,
+"card": 0.3512
+}
+},
+{
+"start": 756.0,
+"end": 762.0,
+"p": {
+"none": 0.0092,
+"replay": 0.0098,
+"closeup": 0.7292,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0007,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0059,
+"substitution": 0.0599,
+"card": 0.1844
+}
+},
+{
+"start": 762.0,
+"end": 768.0,
+"p": {
+"none": 0.014,
+"replay": 0.0116,
+"closeup": 0.2637,
+"goal_kick": 0.0003,
+"throw_in": 0.0004,
+"cross": 0.0005,
+"shot": 0.001,
+"corner": 0.0005,
+"free_kick": 0.0007,
+"offside": 0.008,
+"substitution": 0.0667,
+"card": 0.6327
+}
+},
+{
+"start": 768.0,
+"end": 774.0,
+"p": {
+"none": 0.0074,
+"replay": 0.004,
+"closeup": 0.7564,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0005,
+"corner": 0.0003,
+"free_kick": 0.0001,
+"offside": 0.0045,
+"substitution": 0.0095,
+"card": 0.2167
+}
+},
+{
+"start": 774.0,
+"end": 780.0,
+"p": {
+"none": 0.0042,
+"replay": 0.0062,
+"closeup": 0.5557,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0004,
+"shot": 0.0011,
+"corner": 0.0005,
+"free_kick": 0.0001,
+"offside": 0.009,
+"substitution": 0.0403,
+"card": 0.3819
+}
+},
+{
+"start": 780.0,
+"end": 786.0,
+"p": {
+"none": 0.0048,
+"replay": 0.0066,
+"closeup": 0.0427,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0005,
+"corner": 0.0003,
+"free_kick": 0.0002,
+"offside": 0.0058,
+"substitution": 0.0799,
+"card": 0.8586
+}
+},
+{
+"start": 786.0,
+"end": 792.0,
+"p": {
+"none": 0.0097,
+"replay": 0.0103,
+"closeup": 0.0462,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0005,
+"shot": 0.001,
+"corner": 0.0005,
+"free_kick": 0.0003,
+"offside": 0.0132,
+"substitution": 0.0979,
+"card": 0.8197
+}
+},
+{
+"start": 792.0,
+"end": 798.0,
+"p": {
+"none": 0.0066,
+"replay": 0.0027,
+"closeup": 0.9167,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0001,
+"corner": 0.0001,
+"free_kick": 0.0,
+"offside": 0.0011,
+"substitution": 0.0058,
+"card": 0.0664
+}
+},
+{
+"start": 798.0,
+"end": 804.0,
+"p": {
+"none": 0.0068,
+"replay": 0.0106,
+"closeup": 0.0832,
+"goal_kick": 0.0003,
+"throw_in": 0.0004,
+"cross": 0.0004,
+"shot": 0.0009,
+"corner": 0.0005,
+"free_kick": 0.0003,
+"offside": 0.0136,
+"substitution": 0.0942,
+"card": 0.7889
+}
+},
+{
+"start": 804.0,
+"end": 810.0,
+"p": {
+"none": 0.0052,
+"replay": 0.0103,
+"closeup": 0.0594,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0005,
+"shot": 0.0012,
+"corner": 0.0005,
+"free_kick": 0.0001,
+"offside": 0.0049,
+"substitution": 0.0979,
+"card": 0.8196
+}
+},
+{
+"start": 810.0,
+"end": 816.0,
+"p": {
+"none": 0.0034,
+"replay": 0.0039,
+"closeup": 0.0877,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0003,
+"corner": 0.0003,
+"free_kick": 0.0001,
+"offside": 0.0039,
+"substitution": 0.0683,
+"card": 0.8318
+}
+},
+{
+"start": 816.0,
+"end": 822.0,
+"p": {
+"none": 0.0075,
+"replay": 0.0019,
+"closeup": 0.0191,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0003,
+"shot": 0.0003,
+"corner": 0.0003,
+"free_kick": 0.0006,
+"offside": 0.0033,
+"substitution": 0.0458,
+"card": 0.9202
+}
+},
+{
+"start": 822.0,
+"end": 828.0,
+"p": {
+"none": 0.2191,
+"replay": 0.0459,
+"closeup": 0.0381,
+"goal_kick": 0.0204,
+"throw_in": 0.0043,
+"cross": 0.0026,
+"shot": 0.0033,
+"corner": 0.0043,
+"free_kick": 0.0052,
+"offside": 0.0297,
+"substitution": 0.0316,
+"card": 0.5956
+}
+},
+{
+"start": 828.0,
+"end": 834.0,
+"p": {
+"none": 0.0885,
+"replay": 0.0369,
+"closeup": 0.0198,
+"goal_kick": 0.309,
+"throw_in": 0.003,
+"cross": 0.0025,
+"shot": 0.0093,
+"corner": 0.0039,
+"free_kick": 0.0144,
+"offside": 0.0326,
+"substitution": 0.0306,
+"card": 0.4495
+}
+},
+{
+"start": 834.0,
+"end": 840.0,
+"p": {
+"none": 0.8193,
+"replay": 0.1256,
+"closeup": 0.0085,
+"goal_kick": 0.0007,
+"throw_in": 0.002,
+"cross": 0.0075,
+"shot": 0.0038,
+"corner": 0.0028,
+"free_kick": 0.0008,
+"offside": 0.0132,
+"substitution": 0.0059,
+"card": 0.0097
+}
+},
+{
+"start": 840.0,
+"end": 846.0,
+"p": {
+"none": 0.4189,
+"replay": 0.1746,
+"closeup": 0.0153,
+"goal_kick": 0.0019,
+"throw_in": 0.005,
+"cross": 0.2242,
+"shot": 0.0162,
+"corner": 0.0285,
+"free_kick": 0.0047,
+"offside": 0.0366,
+"substitution": 0.0173,
+"card": 0.0567
+}
+},
+{
+"start": 846.0,
+"end": 852.0,
+"p": {
+"none": 0.0881,
+"replay": 0.0286,
+"closeup": 0.6507,
+"goal_kick": 0.0009,
+"throw_in": 0.0013,
+"cross": 0.0009,
+"shot": 0.0013,
+"corner": 0.001,
+"free_kick": 0.0017,
+"offside": 0.0777,
+"substitution": 0.0416,
+"card": 0.1062
+}
+},
+{
+"start": 852.0,
+"end": 858.0,
+"p": {
+"none": 0.4045,
+"replay": 0.1488,
+"closeup": 0.0147,
+"goal_kick": 0.0031,
+"throw_in": 0.0065,
+"cross": 0.0483,
+"shot": 0.0201,
+"corner": 0.0189,
+"free_kick": 0.0084,
+"offside": 0.1023,
+"substitution": 0.0332,
+"card": 0.1911
+}
+},
+{
+"start": 858.0,
+"end": 864.0,
+"p": {
+"none": 0.6027,
+"replay": 0.2217,
+"closeup": 0.0097,
+"goal_kick": 0.001,
+"throw_in": 0.0028,
+"cross": 0.0282,
+"shot": 0.0076,
+"corner": 0.0052,
+"free_kick": 0.0038,
+"offside": 0.0495,
+"substitution": 0.0182,
+"card": 0.0495
+}
+},
+{
+"start": 864.0,
+"end": 870.0,
+"p": {
+"none": 0.1891,
+"replay": 0.0654,
+"closeup": 0.1891,
+"goal_kick": 0.0047,
+"throw_in": 0.0047,
+"cross": 0.0114,
+"shot": 0.0073,
+"corner": 0.0078,
+"free_kick": 0.01,
+"offside": 0.1147,
+"substitution": 0.0839,
+"card": 0.3118
+}
+},
+{
+"start": 870.0,
+"end": 876.0,
+"p": {
+"none": 0.9449,
+"replay": 0.0285,
+"closeup": 0.0064,
+"goal_kick": 0.0003,
+"throw_in": 0.0008,
+"cross": 0.0005,
+"shot": 0.0009,
+"corner": 0.0005,
+"free_kick": 0.0005,
+"offside": 0.0047,
+"substitution": 0.0034,
+"card": 0.0087
+}
+},
+{
+"start": 876.0,
+"end": 882.0,
+"p": {
+"none": 0.2677,
+"replay": 0.032,
+"closeup": 0.2362,
+"goal_kick": 0.0016,
+"throw_in": 0.0038,
+"cross": 0.0023,
+"shot": 0.0022,
+"corner": 0.0015,
+"free_kick": 0.0038,
+"offside": 0.0869,
+"substitution": 0.0182,
+"card": 0.3437
+}
+},
+{
+"start": 882.0,
+"end": 888.0,
+"p": {
+"none": 0.3118,
+"replay": 0.1078,
+"closeup": 0.0893,
+"goal_kick": 0.0788,
+"throw_in": 0.0137,
+"cross": 0.0199,
+"shot": 0.0272,
+"corner": 0.01,
+"free_kick": 0.0069,
+"offside": 0.0614,
+"substitution": 0.0449,
+"card": 0.2281
+}
+},
+{
+"start": 888.0,
+"end": 894.0,
+"p": {
+"none": 0.7996,
+"replay": 0.1226,
+"closeup": 0.0089,
+"goal_kick": 0.0011,
+"throw_in": 0.0024,
+"cross": 0.0027,
+"shot": 0.0045,
+"corner": 0.0031,
+"free_kick": 0.0022,
+"offside": 0.0146,
+"substitution": 0.0074,
+"card": 0.031
+}
+},
+{
+"start": 894.0,
+"end": 900.0,
+"p": {
+"none": 0.7393,
+"replay": 0.165,
+"closeup": 0.0135,
+"goal_kick": 0.0009,
+"throw_in": 0.0025,
+"cross": 0.0047,
+"shot": 0.0036,
+"corner": 0.002,
+"free_kick": 0.0024,
+"offside": 0.0325,
+"substitution": 0.0127,
+"card": 0.021
+}
+},
+{
+"start": 900.0,
+"end": 906.0,
+"p": {
+"none": 0.2238,
+"replay": 0.1743,
+"closeup": 0.0184,
+"goal_kick": 0.0032,
+"throw_in": 0.0134,
+"cross": 0.2873,
+"shot": 0.1057,
+"corner": 0.0303,
+"free_kick": 0.0087,
+"offside": 0.0773,
+"substitution": 0.0162,
+"card": 0.0414
+}
+},
+{
+"start": 906.0,
+"end": 912.0,
+"p": {
+"none": 0.063,
+"replay": 0.0132,
+"closeup": 0.5275,
+"goal_kick": 0.0008,
+"throw_in": 0.0017,
+"cross": 0.002,
+"shot": 0.0046,
+"corner": 0.0031,
+"free_kick": 0.0007,
+"offside": 0.0337,
+"substitution": 0.0298,
+"card": 0.3199
+}
+},
+{
+"start": 912.0,
+"end": 918.0,
+"p": {
+"none": 0.0242,
+"replay": 0.0065,
+"closeup": 0.2294,
+"goal_kick": 0.0003,
+"throw_in": 0.0008,
+"cross": 0.0009,
+"shot": 0.0025,
+"corner": 0.0025,
+"free_kick": 0.0003,
+"offside": 0.0138,
+"substitution": 0.0122,
+"card": 0.7066
+}
+},
+{
+"start": 918.0,
+"end": 924.0,
+"p": {
+"none": 0.266,
+"replay": 0.0558,
+"closeup": 0.3415,
+"goal_kick": 0.0016,
+"throw_in": 0.0049,
+"cross": 0.0038,
+"shot": 0.0097,
+"corner": 0.0026,
+"free_kick": 0.001,
+"offside": 0.028,
+"substitution": 0.0193,
+"card": 0.266
+}
+},
+{
+"start": 924.0,
+"end": 930.0,
+"p": {
+"none": 0.8416,
+"replay": 0.0887,
+"closeup": 0.0088,
+"goal_kick": 0.0008,
+"throw_in": 0.0029,
+"cross": 0.0198,
+"shot": 0.0039,
+"corner": 0.0024,
+"free_kick": 0.0018,
+"offside": 0.0113,
+"substitution": 0.0068,
+"card": 0.0113
+}
+},
+{
+"start": 930.0,
+"end": 936.0,
+"p": {
+"none": 0.5675,
+"replay": 0.1117,
+"closeup": 0.0142,
+"goal_kick": 0.002,
+"throw_in": 0.0059,
+"cross": 0.1435,
+"shot": 0.0118,
+"corner": 0.0104,
+"free_kick": 0.0161,
+"offside": 0.0562,
+"substitution": 0.0111,
+"card": 0.0496
+}
+},
+{
+"start": 936.0,
+"end": 942.0,
+"p": {
+"none": 0.1849,
+"replay": 0.1054,
+"closeup": 0.0104,
+"goal_kick": 0.0012,
+"throw_in": 0.0043,
+"cross": 0.0221,
+"shot": 0.0413,
+"corner": 0.0564,
+"free_kick": 0.3915,
+"offside": 0.1194,
+"substitution": 0.0162,
+"card": 0.0468
+}
+},
+{
+"start": 942.0,
+"end": 948.0,
+"p": {
+"none": 0.1628,
+"replay": 0.2225,
+"closeup": 0.0183,
+"goal_kick": 0.0028,
+"throw_in": 0.0081,
+"cross": 0.0341,
+"shot": 0.0769,
+"corner": 0.0207,
+"free_kick": 0.0194,
+"offside": 0.1733,
+"substitution": 0.0387,
+"card": 0.2225
+}
+},
+{
+"start": 948.0,
+"end": 954.0,
+"p": {
+"none": 0.0762,
+"replay": 0.0298,
+"closeup": 0.6382,
+"goal_kick": 0.0017,
+"throw_in": 0.0026,
+"cross": 0.0059,
+"shot": 0.0097,
+"corner": 0.0067,
+"free_kick": 0.0011,
+"offside": 0.0594,
+"substitution": 0.0263,
+"card": 0.1424
+}
+},
+{
+"start": 954.0,
+"end": 960.0,
+"p": {
+"none": 0.0573,
+"replay": 0.037,
+"closeup": 0.3976,
+"goal_kick": 0.0016,
+"throw_in": 0.0018,
+"cross": 0.0034,
+"shot": 0.0307,
+"corner": 0.0068,
+"free_kick": 0.0013,
+"offside": 0.0254,
+"substitution": 0.0394,
+"card": 0.3976
+}
+},
+{
+"start": 960.0,
+"end": 966.0,
+"p": {
+"none": 0.0462,
+"replay": 0.0193,
+"closeup": 0.6375,
+"goal_kick": 0.0011,
+"throw_in": 0.0017,
+"cross": 0.003,
+"shot": 0.0063,
+"corner": 0.0052,
+"free_kick": 0.0014,
+"offside": 0.0247,
+"substitution": 0.0193,
+"card": 0.2345
+}
+},
+{
+"start": 966.0,
+"end": 972.0,
+"p": {
+"none": 0.1251,
+"replay": 0.0337,
+"closeup": 0.5606,
+"goal_kick": 0.0012,
+"throw_in": 0.002,
+"cross": 0.0026,
+"shot": 0.0038,
+"corner": 0.0019,
+"free_kick": 0.0014,
+"offside": 0.0337,
+"substitution": 0.0279,
+"card": 0.2062
+}
+},
+{
+"start": 972.0,
+"end": 978.0,
+"p": {
+"none": 0.3758,
+"replay": 0.122,
+"closeup": 0.0226,
+"goal_kick": 0.0121,
+"throw_in": 0.0083,
+"cross": 0.0838,
+"shot": 0.0226,
+"corner": 0.0838,
+"free_kick": 0.0308,
+"offside": 0.095,
+"substitution": 0.0212,
+"card": 0.122
+}
+},
+{
+"start": 978.0,
+"end": 984.0,
+"p": {
+"none": 0.6647,
+"replay": 0.1155,
+"closeup": 0.0084,
+"goal_kick": 0.0008,
+"throw_in": 0.0029,
+"cross": 0.0042,
+"shot": 0.004,
+"corner": 0.0058,
+"free_kick": 0.0027,
+"offside": 0.0227,
+"substitution": 0.0201,
+"card": 0.1483
+}
+},
+{
+"start": 984.0,
+"end": 990.0,
+"p": {
+"none": 0.814,
+"replay": 0.0757,
+"closeup": 0.0096,
+"goal_kick": 0.0008,
+"throw_in": 0.0031,
+"cross": 0.0024,
+"shot": 0.004,
+"corner": 0.0018,
+"free_kick": 0.0023,
+"offside": 0.0358,
+"substitution": 0.0169,
+"card": 0.0336
+}
+},
+{
+"start": 990.0,
+"end": 996.0,
+"p": {
+"none": 0.7363,
+"replay": 0.145,
+"closeup": 0.0093,
+"goal_kick": 0.0009,
+"throw_in": 0.0023,
+"cross": 0.0021,
+"shot": 0.0036,
+"corner": 0.0023,
+"free_kick": 0.0028,
+"offside": 0.0324,
+"substitution": 0.0285,
+"card": 0.0344
+}
+},
+{
+"start": 996.0,
+"end": 1002.0,
+"p": {
+"none": 0.8651,
+"replay": 0.0805,
+"closeup": 0.0048,
+"goal_kick": 0.0006,
+"throw_in": 0.0017,
+"cross": 0.0024,
+"shot": 0.0029,
+"corner": 0.0023,
+"free_kick": 0.0018,
+"offside": 0.014,
+"substitution": 0.0116,
+"card": 0.0123
+}
+},
+{
+"start": 1002.0,
+"end": 1008.0,
+"p": {
+"none": 0.6553,
+"replay": 0.2411,
+"closeup": 0.0106,
+"goal_kick": 0.0007,
+"throw_in": 0.0025,
+"cross": 0.0073,
+"shot": 0.0032,
+"corner": 0.0017,
+"free_kick": 0.0034,
+"offside": 0.037,
+"substitution": 0.0186,
+"card": 0.0186
+}
+},
+{
+"start": 1008.0,
+"end": 1014.0,
+"p": {
+"none": 0.371,
+"replay": 0.1063,
+"closeup": 0.0252,
+"goal_kick": 0.003,
+"throw_in": 0.0127,
+"cross": 0.1365,
+"shot": 0.0391,
+"corner": 0.0135,
+"free_kick": 0.0087,
+"offside": 0.0645,
+"substitution": 0.0209,
+"card": 0.1986
+}
+},
+{
+"start": 1014.0,
+"end": 1020.0,
+"p": {
+"none": 0.1786,
+"replay": 0.3781,
+"closeup": 0.02,
+"goal_kick": 0.0012,
+"throw_in": 0.0027,
+"cross": 0.0657,
+"shot": 0.0129,
+"corner": 0.0114,
+"free_kick": 0.0027,
+"offside": 0.0745,
+"substitution": 0.0227,
+"card": 0.2293
+}
+},
+{
+"start": 1020.0,
+"end": 1026.0,
+"p": {
+"none": 0.2806,
+"replay": 0.3603,
+"closeup": 0.0588,
+"goal_kick": 0.0023,
+"throw_in": 0.0096,
+"cross": 0.0191,
+"shot": 0.0245,
+"corner": 0.0278,
+"free_kick": 0.0085,
+"offside": 0.097,
+"substitution": 0.0203,
+"card": 0.0911
+}
+},
+{
+"start": 1026.0,
+"end": 1032.0,
+"p": {
+"none": 0.035,
+"replay": 0.0241,
+"closeup": 0.1568,
+"goal_kick": 0.0011,
+"throw_in": 0.0014,
+"cross": 0.0031,
+"shot": 0.0044,
+"corner": 0.0054,
+"free_kick": 0.0012,
+"offside": 0.0509,
+"substitution": 0.0137,
+"card": 0.7029
+}
+},
+{
+"start": 1032.0,
+"end": 1038.0,
+"p": {
+"none": 0.0993,
+"replay": 0.4737,
+"closeup": 0.1057,
+"goal_kick": 0.0012,
+"throw_in": 0.0023,
+"cross": 0.0036,
+"shot": 0.0032,
+"corner": 0.003,
+"free_kick": 0.0026,
+"offside": 0.0322,
+"substitution": 0.0196,
+"card": 0.2535
+}
+},
+{
+"start": 1038.0,
+"end": 1044.0,
+"p": {
+"none": 0.8991,
+"replay": 0.0507,
+"closeup": 0.0061,
+"goal_kick": 0.0004,
+"throw_in": 0.0021,
+"cross": 0.0011,
+"shot": 0.0027,
+"corner": 0.0014,
+"free_kick": 0.0013,
+"offside": 0.0145,
+"substitution": 0.0113,
+"card": 0.0094
+}
+},
+{
+"start": 1044.0,
+"end": 1050.0,
+"p": {
+"none": 0.7091,
+"replay": 0.1232,
+"closeup": 0.0189,
+"goal_kick": 0.0015,
+"throw_in": 0.007,
+"cross": 0.0201,
+"shot": 0.0189,
+"corner": 0.0061,
+"free_kick": 0.0048,
+"offside": 0.0426,
+"substitution": 0.0167,
+"card": 0.0312
+}
+},
+{
+"start": 1050.0,
+"end": 1056.0,
+"p": {
+"none": 0.1145,
+"replay": 0.0541,
+"closeup": 0.0396,
+"goal_kick": 0.0037,
+"throw_in": 0.0083,
+"cross": 0.0652,
+"shot": 0.1075,
+"corner": 0.0308,
+"free_kick": 0.0057,
+"offside": 0.1145,
+"substitution": 0.0308,
+"card": 0.4253
+}
+},
+{
+"start": 1056.0,
+"end": 1062.0,
+"p": {
+"none": 0.0016,
+"replay": 0.0008,
+"closeup": 0.0008,
+"goal_kick": 0.0,
+"throw_in": 0.0,
+"cross": 0.0001,
+"shot": 0.0001,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0016,
+"substitution": 0.0059,
+"card": 0.9888
+}
+},
+{
+"start": 1062.0,
+"end": 1068.0,
+"p": {
+"none": 0.0508,
+"replay": 0.1076,
+"closeup": 0.0129,
+"goal_kick": 0.0011,
+"throw_in": 0.0032,
+"cross": 0.5465,
+"shot": 0.0121,
+"corner": 0.0107,
+"free_kick": 0.0032,
+"offside": 0.1382,
+"substitution": 0.0187,
+"card": 0.095
+}
+},
+{
+"start": 1068.0,
+"end": 1074.0,
+"p": {
+"none": 0.0748,
+"replay": 0.71,
+"closeup": 0.0228,
+"goal_kick": 0.0006,
+"throw_in": 0.0019,
+"cross": 0.0048,
+"shot": 0.0024,
+"corner": 0.0026,
+"free_kick": 0.0027,
+"offside": 0.0376,
+"substitution": 0.0084,
+"card": 0.1313
+}
+},
+{
+"start": 1074.0,
+"end": 1080.0,
+"p": {
+"none": 0.2088,
+"replay": 0.6431,
+"closeup": 0.0133,
+"goal_kick": 0.0025,
+"throw_in": 0.0034,
+"cross": 0.0301,
+"shot": 0.0111,
+"corner": 0.003,
+"free_kick": 0.0059,
+"offside": 0.0363,
+"substitution": 0.0125,
+"card": 0.0301
+}
+},
+{
+"start": 1080.0,
+"end": 1086.0,
+"p": {
+"none": 0.0301,
+"replay": 0.0207,
+"closeup": 0.0872,
+"goal_kick": 0.0007,
+"throw_in": 0.0028,
+"cross": 0.002,
+"shot": 0.0034,
+"corner": 0.0438,
+"free_kick": 0.4158,
+"offside": 0.0161,
+"substitution": 0.0104,
+"card": 0.3669
+}
+},
+{
+"start": 1086.0,
+"end": 1092.0,
+"p": {
+"none": 0.0112,
+"replay": 0.0027,
+"closeup": 0.137,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0009,
+"corner": 0.0004,
+"free_kick": 0.0003,
+"offside": 0.0164,
+"substitution": 0.0418,
+"card": 0.7884
+}
+},
+{
+"start": 1092.0,
+"end": 1098.0,
+"p": {
+"none": 0.0193,
+"replay": 0.0142,
+"closeup": 0.6406,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0003,
+"shot": 0.001,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0125,
+"substitution": 0.0086,
+"card": 0.3026
+}
+},
+{
+"start": 1098.0,
+"end": 1104.0,
+"p": {
+"none": 0.0471,
+"replay": 0.0533,
+"closeup": 0.0685,
+"goal_kick": 0.0012,
+"throw_in": 0.0032,
+"cross": 0.0119,
+"shot": 0.0127,
+"corner": 0.239,
+"free_kick": 0.4466,
+"offside": 0.0209,
+"substitution": 0.0077,
+"card": 0.0879
+}
+},
+{
+"start": 1104.0,
+"end": 1110.0,
+"p": {
+"none": 0.037,
+"replay": 0.0164,
+"closeup": 0.003,
+"goal_kick": 0.0005,
+"throw_in": 0.0013,
+"cross": 0.0136,
+"shot": 0.0053,
+"corner": 0.8971,
+"free_kick": 0.0088,
+"offside": 0.0078,
+"substitution": 0.0017,
+"card": 0.0073
+}
+},
+{
+"start": 1110.0,
+"end": 1116.0,
+"p": {
+"none": 0.0719,
+"replay": 0.0361,
+"closeup": 0.0983,
+"goal_kick": 0.016,
+"throw_in": 0.0815,
+"cross": 0.0043,
+"shot": 0.0055,
+"corner": 0.0815,
+"free_kick": 0.0028,
+"offside": 0.03,
+"substitution": 0.041,
+"card": 0.5312
+}
+},
+{
+"start": 1116.0,
+"end": 1122.0,
+"p": {
+"none": 0.0141,
+"replay": 0.008,
+"closeup": 0.0026,
+"goal_kick": 0.0002,
+"throw_in": 0.0026,
+"cross": 0.001,
+"shot": 0.0018,
+"corner": 0.926,
+"free_kick": 0.0218,
+"offside": 0.0029,
+"substitution": 0.0011,
+"card": 0.0181
+}
+},
+{
+"start": 1122.0,
+"end": 1128.0,
+"p": {
+"none": 0.2615,
+"replay": 0.1235,
+"closeup": 0.0229,
+"goal_kick": 0.0377,
+"throw_in": 0.0178,
+"cross": 0.2308,
+"shot": 0.0454,
+"corner": 0.0484,
+"free_kick": 0.0167,
+"offside": 0.0661,
+"substitution": 0.0202,
+"card": 0.109
+}
+},
+{
+"start": 1128.0,
+"end": 1134.0,
+"p": {
+"none": 0.6696,
+"replay": 0.1693,
+"closeup": 0.0157,
+"goal_kick": 0.0013,
+"throw_in": 0.004,
+"cross": 0.0079,
+"shot": 0.0058,
+"corner": 0.0035,
+"free_kick": 0.0035,
+"offside": 0.0428,
+"substitution": 0.0215,
+"card": 0.055
+}
+},
+{
+"start": 1134.0,
+"end": 1140.0,
+"p": {
+"none": 0.5481,
+"replay": 0.1779,
+"closeup": 0.0176,
+"goal_kick": 0.0016,
+"throw_in": 0.0047,
+"cross": 0.0578,
+"shot": 0.0121,
+"corner": 0.0188,
+"free_kick": 0.0054,
+"offside": 0.0742,
+"substitution": 0.0241,
+"card": 0.0578
+}
+},
+{
+"start": 1140.0,
+"end": 1146.0,
+"p": {
+"none": 0.6651,
+"replay": 0.1682,
+"closeup": 0.0084,
+"goal_kick": 0.0011,
+"throw_in": 0.0048,
+"cross": 0.0138,
+"shot": 0.0058,
+"corner": 0.0054,
+"free_kick": 0.0054,
+"offside": 0.0228,
+"substitution": 0.0292,
+"card": 0.0701
+}
+},
+{
+"start": 1146.0,
+"end": 1152.0,
+"p": {
+"none": 0.169,
+"replay": 0.1025,
+"closeup": 0.019,
+"goal_kick": 0.002,
+"throw_in": 0.0035,
+"cross": 0.019,
+"shot": 0.0048,
+"corner": 0.019,
+"free_kick": 0.4054,
+"offside": 0.0549,
+"substitution": 0.0095,
+"card": 0.1915
+}
+},
+{
+"start": 1152.0,
+"end": 1158.0,
+"p": {
+"none": 0.3146,
+"replay": 0.0795,
+"closeup": 0.0214,
+"goal_kick": 0.0027,
+"throw_in": 0.0084,
+"cross": 0.0453,
+"shot": 0.0122,
+"corner": 0.2162,
+"free_kick": 0.0228,
+"offside": 0.0659,
+"substitution": 0.0201,
+"card": 0.1908
+}
+},
+{
+"start": 1158.0,
+"end": 1164.0,
+"p": {
+"none": 0.6629,
+"replay": 0.1899,
+"closeup": 0.033,
+"goal_kick": 0.0016,
+"throw_in": 0.0045,
+"cross": 0.0129,
+"shot": 0.0083,
+"corner": 0.0037,
+"free_kick": 0.0033,
+"offside": 0.031,
+"substitution": 0.0138,
+"card": 0.0351
+}
+},
+{
+"start": 1164.0,
+"end": 1170.0,
+"p": {
+"none": 0.2494,
+"replay": 0.0918,
+"closeup": 0.081,
+"goal_kick": 0.0038,
+"throw_in": 0.0103,
+"cross": 0.0761,
+"shot": 0.0671,
+"corner": 0.0091,
+"free_kick": 0.0059,
+"offside": 0.1421,
+"substitution": 0.0433,
+"card": 0.2201
+}
+},
+{
+"start": 1170.0,
+"end": 1176.0,
+"p": {
+"none": 0.0299,
+"replay": 0.0171,
+"closeup": 0.8221,
+"goal_kick": 0.0059,
+"throw_in": 0.0012,
+"cross": 0.0012,
+"shot": 0.002,
+"corner": 0.0005,
+"free_kick": 0.0006,
+"offside": 0.0081,
+"substitution": 0.0133,
+"card": 0.0982
+}
+},
+{
+"start": 1176.0,
+"end": 1182.0,
+"p": {
+"none": 0.1057,
+"replay": 0.0727,
+"closeup": 0.0303,
+"goal_kick": 0.0026,
+"throw_in": 0.0056,
+"cross": 0.2537,
+"shot": 0.0251,
+"corner": 0.0641,
+"free_kick": 0.1976,
+"offside": 0.0933,
+"substitution": 0.0134,
+"card": 0.1358
+}
+},
+{
+"start": 1182.0,
+"end": 1188.0,
+"p": {
+"none": 0.3489,
+"replay": 0.1,
+"closeup": 0.0325,
+"goal_kick": 0.0053,
+"throw_in": 0.0072,
+"cross": 0.0778,
+"shot": 0.0472,
+"corner": 0.0237,
+"free_kick": 0.0077,
+"offside": 0.057,
+"substitution": 0.021,
+"card": 0.2717
+}
+},
+{
+"start": 1188.0,
+"end": 1194.0,
+"p": {
+"none": 0.0903,
+"replay": 0.1686,
+"closeup": 0.0228,
+"goal_kick": 0.002,
+"throw_in": 0.0061,
+"cross": 0.0353,
+"shot": 0.0228,
+"corner": 0.357,
+"free_kick": 0.066,
+"offside": 0.0903,
+"substitution": 0.0228,
+"card": 0.1159
+}
+},
+{
+"start": 1194.0,
+"end": 1200.0,
+"p": {
+"none": 0.4638,
+"replay": 0.1706,
+"closeup": 0.0246,
+"goal_kick": 0.0016,
+"throw_in": 0.0055,
+"cross": 0.0124,
+"shot": 0.0149,
+"corner": 0.0132,
+"free_kick": 0.0052,
+"offside": 0.052,
+"substitution": 0.1035,
+"card": 0.1329
+}
+},
+{
+"start": 1200.0,
+"end": 1206.0,
+"p": {
+"none": 0.6846,
+"replay": 0.119,
+"closeup": 0.022,
+"goal_kick": 0.0017,
+"throw_in": 0.0046,
+"cross": 0.0111,
+"shot": 0.0056,
+"corner": 0.0034,
+"free_kick": 0.0026,
+"offside": 0.0528,
+"substitution": 0.0249,
+"card": 0.0678
+}
+},
+{
+"start": 1206.0,
+"end": 1212.0,
+"p": {
+"none": 0.7396,
+"replay": 0.165,
+"closeup": 0.0105,
+"goal_kick": 0.0008,
+"throw_in": 0.0028,
+"cross": 0.0018,
+"shot": 0.0021,
+"corner": 0.0013,
+"free_kick": 0.0027,
+"offside": 0.0253,
+"substitution": 0.0087,
+"card": 0.0392
+}
+},
+{
+"start": 1212.0,
+"end": 1218.0,
+"p": {
+"none": 0.7894,
+"replay": 0.1211,
+"closeup": 0.0068,
+"goal_kick": 0.0007,
+"throw_in": 0.0025,
+"cross": 0.0041,
+"shot": 0.0041,
+"corner": 0.0015,
+"free_kick": 0.0028,
+"offside": 0.0288,
+"substitution": 0.0093,
+"card": 0.0288
+}
+},
+{
+"start": 1218.0,
+"end": 1224.0,
+"p": {
+"none": 0.532,
+"replay": 0.1524,
+"closeup": 0.0234,
+"goal_kick": 0.0022,
+"throw_in": 0.0059,
+"cross": 0.0924,
+"shot": 0.0194,
+"corner": 0.0142,
+"free_kick": 0.0097,
+"offside": 0.0527,
+"substitution": 0.0142,
+"card": 0.0816
+}
+},
+{
+"start": 1224.0,
+"end": 1230.0,
+"p": {
+"none": 0.4364,
+"replay": 0.0915,
+"closeup": 0.0246,
+"goal_kick": 0.0019,
+"throw_in": 0.0058,
+"cross": 0.0262,
+"shot": 0.0062,
+"corner": 0.0071,
+"free_kick": 0.0048,
+"offside": 0.1036,
+"substitution": 0.0432,
+"card": 0.2486
+}
+},
+{
+"start": 1230.0,
+"end": 1236.0,
+"p": {
+"none": 0.4551,
+"replay": 0.1015,
+"closeup": 0.0107,
+"goal_kick": 0.0021,
+"throw_in": 0.0101,
+"cross": 0.0544,
+"shot": 0.0374,
+"corner": 0.0511,
+"free_kick": 0.1151,
+"offside": 0.0698,
+"substitution": 0.0137,
+"card": 0.0791
+}
+},
+{
+"start": 1236.0,
+"end": 1242.0,
+"p": {
+"none": 0.2407,
+"replay": 0.069,
+"closeup": 0.012,
+"goal_kick": 0.0013,
+"throw_in": 0.0034,
+"cross": 0.0128,
+"shot": 0.0093,
+"corner": 0.012,
+"free_kick": 0.4497,
+"offside": 0.0537,
+"substitution": 0.0073,
+"card": 0.1288
+}
+},
+{
+"start": 1242.0,
+"end": 1248.0,
+"p": {
+"none": 0.7482,
+"replay": 0.0789,
+"closeup": 0.005,
+"goal_kick": 0.0008,
+"throw_in": 0.0029,
+"cross": 0.0061,
+"shot": 0.0054,
+"corner": 0.0047,
+"free_kick": 0.0044,
+"offside": 0.0509,
+"substitution": 0.035,
+"card": 0.0577
+}
+},
+{
+"start": 1248.0,
+"end": 1254.0,
+"p": {
+"none": 0.5688,
+"replay": 0.077,
+"closeup": 0.0067,
+"goal_kick": 0.0012,
+"throw_in": 0.0049,
+"cross": 0.2687,
+"shot": 0.0098,
+"corner": 0.0059,
+"free_kick": 0.0052,
+"offside": 0.0142,
+"substitution": 0.0092,
+"card": 0.0283
+}
+},
+{
+"start": 1254.0,
+"end": 1260.0,
+"p": {
+"none": 0.6931,
+"replay": 0.1753,
+"closeup": 0.0093,
+"goal_kick": 0.0013,
+"throw_in": 0.0036,
+"cross": 0.0047,
+"shot": 0.0047,
+"corner": 0.0039,
+"free_kick": 0.003,
+"offside": 0.0502,
+"substitution": 0.0185,
+"card": 0.0324
+}
+},
+{
+"start": 1260.0,
+"end": 1266.0,
+"p": {
+"none": 0.9037,
+"replay": 0.0578,
+"closeup": 0.0065,
+"goal_kick": 0.0003,
+"throw_in": 0.0011,
+"cross": 0.0008,
+"shot": 0.0021,
+"corner": 0.0008,
+"free_kick": 0.0006,
+"offside": 0.0042,
+"substitution": 0.01,
+"card": 0.0121
+}
+},
+{
+"start": 1266.0,
+"end": 1272.0,
+"p": {
+"none": 0.8579,
+"replay": 0.0704,
+"closeup": 0.0054,
+"goal_kick": 0.0005,
+"throw_in": 0.002,
+"cross": 0.0011,
+"shot": 0.0027,
+"corner": 0.0014,
+"free_kick": 0.001,
+"offside": 0.019,
+"substitution": 0.0157,
+"card": 0.0229
+}
+},
+{
+"start": 1272.0,
+"end": 1278.0,
+"p": {
+"none": 0.6823,
+"replay": 0.0923,
+"closeup": 0.0049,
+"goal_kick": 0.001,
+"throw_in": 0.0081,
+"cross": 0.0046,
+"shot": 0.0038,
+"corner": 0.0022,
+"free_kick": 0.0032,
+"offside": 0.0385,
+"substitution": 0.0249,
+"card": 0.1344
+}
+},
+{
+"start": 1278.0,
+"end": 1284.0,
+"p": {
+"none": 0.1324,
+"replay": 0.0102,
+"closeup": 0.0109,
+"goal_kick": 0.0004,
+"throw_in": 0.0013,
+"cross": 0.0007,
+"shot": 0.0008,
+"corner": 0.0011,
+"free_kick": 0.001,
+"offside": 0.0168,
+"substitution": 0.0625,
+"card": 0.7619
+}
+},
+{
+"start": 1284.0,
+"end": 1290.0,
+"p": {
+"none": 0.0082,
+"replay": 0.0098,
+"closeup": 0.0236,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0004,
+"shot": 0.0006,
+"corner": 0.0005,
+"free_kick": 0.0005,
+"offside": 0.0126,
+"substitution": 0.2537,
+"card": 0.6895
+}
+},
+{
+"start": 1290.0,
+"end": 1296.0,
+"p": {
+"none": 0.0049,
+"replay": 0.0063,
+"closeup": 0.118,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0007,
+"corner": 0.0003,
+"free_kick": 0.0002,
+"offside": 0.0181,
+"substitution": 0.0811,
+"card": 0.7697
+}
+},
+{
+"start": 1296.0,
+"end": 1302.0,
+"p": {
+"none": 0.0042,
+"replay": 0.0024,
+"closeup": 0.006,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0007,
+"corner": 0.0006,
+"free_kick": 0.0004,
+"offside": 0.0145,
+"substitution": 0.0736,
+"card": 0.8968
+}
+},
+{
+"start": 1302.0,
+"end": 1308.0,
+"p": {
+"none": 0.7742,
+"replay": 0.1048,
+"closeup": 0.0125,
+"goal_kick": 0.001,
+"throw_in": 0.0046,
+"cross": 0.0063,
+"shot": 0.0056,
+"corner": 0.0036,
+"free_kick": 0.0028,
+"offside": 0.0182,
+"substitution": 0.0104,
+"card": 0.0561
+}
+},
+{
+"start": 1308.0,
+"end": 1314.0,
+"p": {
+"none": 0.5249,
+"replay": 0.0805,
+"closeup": 0.008,
+"goal_kick": 0.0012,
+"throw_in": 0.0043,
+"cross": 0.0357,
+"shot": 0.0066,
+"corner": 0.0116,
+"free_kick": 0.0058,
+"offside": 0.0488,
+"substitution": 0.0246,
+"card": 0.248
+}
+},
+{
+"start": 1314.0,
+"end": 1320.0,
+"p": {
+"none": 0.2004,
+"replay": 0.1377,
+"closeup": 0.0198,
+"goal_kick": 0.002,
+"throw_in": 0.0083,
+"cross": 0.4243,
+"shot": 0.012,
+"corner": 0.0186,
+"free_kick": 0.005,
+"offside": 0.0651,
+"substitution": 0.012,
+"card": 0.0947
+}
+},
+{
+"start": 1320.0,
+"end": 1326.0,
+"p": {
+"none": 0.1112,
+"replay": 0.0409,
+"closeup": 0.016,
+"goal_kick": 0.004,
+"throw_in": 0.0076,
+"cross": 0.0409,
+"shot": 0.0067,
+"corner": 0.3424,
+"free_kick": 0.1833,
+"offside": 0.0318,
+"substitution": 0.0076,
+"card": 0.2077
+}
+},
+{
+"start": 1326.0,
+"end": 1332.0,
+"p": {
+"none": 0.0574,
+"replay": 0.042,
+"closeup": 0.1215,
+"goal_kick": 0.0946,
+"throw_in": 0.0053,
+"cross": 0.0064,
+"shot": 0.0083,
+"corner": 0.0088,
+"free_kick": 0.0042,
+"offside": 0.065,
+"substitution": 0.042,
+"card": 0.5445
+}
+},
+{
+"start": 1332.0,
+"end": 1338.0,
+"p": {
+"none": 0.6177,
+"replay": 0.2272,
+"closeup": 0.0088,
+"goal_kick": 0.0011,
+"throw_in": 0.0032,
+"cross": 0.0575,
+"shot": 0.0069,
+"corner": 0.0128,
+"free_kick": 0.0042,
+"offside": 0.0175,
+"substitution": 0.0083,
+"card": 0.0348
+}
+},
+{
+"start": 1338.0,
+"end": 1344.0,
+"p": {
+"none": 0.342,
+"replay": 0.183,
+"closeup": 0.0141,
+"goal_kick": 0.0022,
+"throw_in": 0.008,
+"cross": 0.2074,
+"shot": 0.0594,
+"corner": 0.0673,
+"free_kick": 0.0141,
+"offside": 0.0435,
+"substitution": 0.0205,
+"card": 0.0384
+}
+},
+{
+"start": 1344.0,
+"end": 1350.0,
+"p": {
+"none": 0.2378,
+"replay": 0.2694,
+"closeup": 0.0152,
+"goal_kick": 0.0014,
+"throw_in": 0.0063,
+"cross": 0.1123,
+"shot": 0.0498,
+"corner": 0.0498,
+"free_kick": 0.1634,
+"offside": 0.0468,
+"substitution": 0.0134,
+"card": 0.0343
+}
+},
+{
+"start": 1350.0,
+"end": 1356.0,
+"p": {
+"none": 0.3501,
+"replay": 0.1654,
+"closeup": 0.0832,
+"goal_kick": 0.0027,
+"throw_in": 0.0057,
+"cross": 0.1068,
+"shot": 0.0128,
+"corner": 0.0057,
+"free_kick": 0.0053,
+"offside": 0.1068,
+"substitution": 0.0347,
+"card": 0.121
+}
+},
+{
+"start": 1356.0,
+"end": 1362.0,
+"p": {
+"none": 0.5979,
+"replay": 0.1713,
+"closeup": 0.0232,
+"goal_kick": 0.0015,
+"throw_in": 0.0062,
+"cross": 0.0359,
+"shot": 0.0232,
+"corner": 0.0085,
+"free_kick": 0.004,
+"offside": 0.0556,
+"substitution": 0.0205,
+"card": 0.0522
+}
+},
+{
+"start": 1362.0,
+"end": 1368.0,
+"p": {
+"none": 0.1085,
+"replay": 0.0425,
+"closeup": 0.0051,
+"goal_kick": 0.0008,
+"throw_in": 0.0031,
+"cross": 0.0274,
+"shot": 0.0311,
+"corner": 0.7074,
+"free_kick": 0.0089,
+"offside": 0.0227,
+"substitution": 0.0074,
+"card": 0.0352
+}
+},
+{
+"start": 1368.0,
+"end": 1374.0,
+"p": {
+"none": 0.1236,
+"replay": 0.1024,
+"closeup": 0.0427,
+"goal_kick": 0.0045,
+"throw_in": 0.0054,
+"cross": 0.2309,
+"shot": 0.0515,
+"corner": 0.0515,
+"free_kick": 0.0074,
+"offside": 0.1091,
+"substitution": 0.0401,
+"card": 0.2309
+}
+},
+{
+"start": 1374.0,
+"end": 1380.0,
+"p": {
+"none": 0.7161,
+"replay": 0.1811,
+"closeup": 0.0085,
+"goal_kick": 0.001,
+"throw_in": 0.0035,
+"cross": 0.0058,
+"shot": 0.0033,
+"corner": 0.0045,
+"free_kick": 0.0043,
+"offside": 0.038,
+"substitution": 0.0149,
+"card": 0.0191
+}
+},
+{
+"start": 1380.0,
+"end": 1386.0,
+"p": {
+"none": 0.7065,
+"replay": 0.1786,
+"closeup": 0.0101,
+"goal_kick": 0.0011,
+"throw_in": 0.0042,
+"cross": 0.0039,
+"shot": 0.0048,
+"corner": 0.0045,
+"free_kick": 0.0051,
+"offside": 0.031,
+"substitution": 0.0227,
+"card": 0.0274
+}
+},
+{
+"start": 1386.0,
+"end": 1392.0,
+"p": {
+"none": 0.5142,
+"replay": 0.2429,
+"closeup": 0.0199,
+"goal_kick": 0.0014,
+"throw_in": 0.005,
+"cross": 0.1013,
+"shot": 0.0155,
+"corner": 0.0083,
+"free_kick": 0.0047,
+"offside": 0.029,
+"substitution": 0.0226,
+"card": 0.035
+}
+},
+{
+"start": 1392.0,
+"end": 1398.0,
+"p": {
+"none": 0.2684,
+"replay": 0.0871,
+"closeup": 0.0266,
+"goal_kick": 0.0599,
+"throw_in": 0.0111,
+"cross": 0.0769,
+"shot": 0.0363,
+"corner": 0.1437,
+"free_kick": 0.025,
+"offside": 0.0722,
+"substitution": 0.0301,
+"card": 0.1628
+}
+},
+{
+"start": 1398.0,
+"end": 1404.0,
+"p": {
+"none": 0.1506,
+"replay": 0.1329,
+"closeup": 0.0405,
+"goal_kick": 0.0149,
+"throw_in": 0.0066,
+"cross": 0.0358,
+"shot": 0.0914,
+"corner": 0.0191,
+"free_kick": 0.0043,
+"offside": 0.0757,
+"substitution": 0.0668,
+"card": 0.3613
+}
+},
+{
+"start": 1404.0,
+"end": 1410.0,
+"p": {
+"none": 0.2022,
+"replay": 0.7057,
+"closeup": 0.02,
+"goal_kick": 0.0013,
+"throw_in": 0.0045,
+"cross": 0.0069,
+"shot": 0.0078,
+"corner": 0.0057,
+"free_kick": 0.0022,
+"offside": 0.0078,
+"substitution": 0.0083,
+"card": 0.0274
+}
+},
+{
+"start": 1410.0,
+"end": 1416.0,
+"p": {
+"none": 0.1735,
+"replay": 0.077,
+"closeup": 0.1966,
+"goal_kick": 0.0529,
+"throw_in": 0.0056,
+"cross": 0.0038,
+"shot": 0.0104,
+"corner": 0.0025,
+"free_kick": 0.003,
+"offside": 0.0302,
+"substitution": 0.0283,
+"card": 0.4162
+}
+},
+{
+"start": 1416.0,
+"end": 1422.0,
+"p": {
+"none": 0.8007,
+"replay": 0.1228,
+"closeup": 0.0069,
+"goal_kick": 0.0006,
+"throw_in": 0.0029,
+"cross": 0.0156,
+"shot": 0.0045,
+"corner": 0.0033,
+"free_kick": 0.0022,
+"offside": 0.0138,
+"substitution": 0.0129,
+"card": 0.0138
+}
+},
+{
+"start": 1422.0,
+"end": 1428.0,
+"p": {
+"none": 0.0792,
+"replay": 0.0398,
+"closeup": 0.7995,
+"goal_kick": 0.0005,
+"throw_in": 0.0011,
+"cross": 0.001,
+"shot": 0.0008,
+"corner": 0.0007,
+"free_kick": 0.0009,
+"offside": 0.0424,
+"substitution": 0.0129,
+"card": 0.0213
+}
+},
+{
+"start": 1428.0,
+"end": 1434.0,
+"p": {
+"none": 0.0753,
+"replay": 0.0334,
+"closeup": 0.3593,
+"goal_kick": 0.0277,
+"throw_in": 0.0055,
+"cross": 0.0035,
+"shot": 0.0075,
+"corner": 0.0042,
+"free_kick": 0.0026,
+"offside": 0.0334,
+"substitution": 0.0403,
+"card": 0.4072
+}
+},
+{
+"start": 1434.0,
+"end": 1440.0,
+"p": {
+"none": 0.4625,
+"replay": 0.1501,
+"closeup": 0.0357,
+"goal_kick": 0.0245,
+"throw_in": 0.0075,
+"cross": 0.0123,
+"shot": 0.0131,
+"corner": 0.0116,
+"free_kick": 0.0075,
+"offside": 0.0969,
+"substitution": 0.0458,
+"card": 0.1325
+}
+},
+{
+"start": 1440.0,
+"end": 1446.0,
+"p": {
+"none": 0.6715,
+"replay": 0.1322,
+"closeup": 0.0158,
+"goal_kick": 0.0026,
+"throw_in": 0.0058,
+"cross": 0.0148,
+"shot": 0.0085,
+"corner": 0.0191,
+"free_kick": 0.0102,
+"offside": 0.0429,
+"substitution": 0.0179,
+"card": 0.0587
+}
+},
+{
+"start": 1446.0,
+"end": 1452.0,
+"p": {
+"none": 0.8336,
+"replay": 0.1128,
+"closeup": 0.0072,
+"goal_kick": 0.0005,
+"throw_in": 0.0012,
+"cross": 0.0021,
+"shot": 0.0021,
+"corner": 0.0022,
+"free_kick": 0.0016,
+"offside": 0.0127,
+"substitution": 0.0068,
+"card": 0.0173
+}
+},
+{
+"start": 1452.0,
+"end": 1458.0,
+"p": {
+"none": 0.896,
+"replay": 0.0649,
+"closeup": 0.0041,
+"goal_kick": 0.0004,
+"throw_in": 0.0013,
+"cross": 0.0011,
+"shot": 0.0018,
+"corner": 0.0009,
+"free_kick": 0.0012,
+"offside": 0.0053,
+"substitution": 0.0064,
+"card": 0.0164
+}
+},
+{
+"start": 1458.0,
+"end": 1464.0,
+"p": {
+"none": 0.2703,
+"replay": 0.05,
+"closeup": 0.0642,
+"goal_kick": 0.0012,
+"throw_in": 0.0018,
+"cross": 0.0019,
+"shot": 0.0021,
+"corner": 0.0013,
+"free_kick": 0.0013,
+"offside": 0.0366,
+"substitution": 0.0642,
+"card": 0.5051
+}
+},
+{
+"start": 1464.0,
+"end": 1470.0,
+"p": {
+"none": 0.5359,
+"replay": 0.1971,
+"closeup": 0.0111,
+"goal_kick": 0.0013,
+"throw_in": 0.0028,
+"cross": 0.0267,
+"shot": 0.0053,
+"corner": 0.0098,
+"free_kick": 0.0028,
+"offside": 0.064,
+"substitution": 0.0235,
+"card": 0.1196
+}
+},
+{
+"start": 1470.0,
+"end": 1476.0,
+"p": {
+"none": 0.4572,
+"replay": 0.2447,
+"closeup": 0.013,
+"goal_kick": 0.002,
+"throw_in": 0.0058,
+"cross": 0.131,
+"shot": 0.0242,
+"corner": 0.0122,
+"free_kick": 0.0058,
+"offside": 0.0453,
+"substitution": 0.0214,
+"card": 0.0375
+}
+},
+{
+"start": 1476.0,
+"end": 1482.0,
+"p": {
+"none": 0.221,
+"replay": 0.1341,
+"closeup": 0.0764,
+"goal_kick": 0.0046,
+"throw_in": 0.015,
+"cross": 0.1519,
+"shot": 0.0595,
+"corner": 0.0921,
+"free_kick": 0.0103,
+"offside": 0.0921,
+"substitution": 0.0384,
+"card": 0.1044
+}
+},
+{
+"start": 1482.0,
+"end": 1488.0,
+"p": {
+"none": 0.035,
+"replay": 0.0114,
+"closeup": 0.7961,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0003,
+"shot": 0.0003,
+"corner": 0.0002,
+"free_kick": 0.0001,
+"offside": 0.0094,
+"substitution": 0.0083,
+"card": 0.1383
+}
+},
+{
+"start": 1488.0,
+"end": 1494.0,
+"p": {
+"none": 0.1011,
+"replay": 0.0478,
+"closeup": 0.0165,
+"goal_kick": 0.0024,
+"throw_in": 0.005,
+"cross": 0.1011,
+"shot": 0.01,
+"corner": 0.0129,
+"free_kick": 0.5135,
+"offside": 0.0892,
+"substitution": 0.0113,
+"card": 0.0892
+}
+},
+{
+"start": 1494.0,
+"end": 1500.0,
+"p": {
+"none": 0.2077,
+"replay": 0.0981,
+"closeup": 0.0339,
+"goal_kick": 0.0038,
+"throw_in": 0.011,
+"cross": 0.1617,
+"shot": 0.1341,
+"corner": 0.2353,
+"free_kick": 0.0206,
+"offside": 0.0281,
+"substitution": 0.0193,
+"card": 0.0463
+}
+},
+{
+"start": 1500.0,
+"end": 1506.0,
+"p": {
+"none": 0.1581,
+"replay": 0.0546,
+"closeup": 0.0101,
+"goal_kick": 0.0015,
+"throw_in": 0.0058,
+"cross": 0.6253,
+"shot": 0.0546,
+"corner": 0.04,
+"free_kick": 0.0054,
+"offside": 0.0201,
+"substitution": 0.0079,
+"card": 0.0167
+}
+},
+{
+"start": 1506.0,
+"end": 1512.0,
+"p": {
+"none": 0.1635,
+"replay": 0.0875,
+"closeup": 0.0162,
+"goal_kick": 0.0026,
+"throw_in": 0.0104,
+"cross": 0.1635,
+"shot": 0.0208,
+"corner": 0.4443,
+"free_kick": 0.0072,
+"offside": 0.0284,
+"substitution": 0.0143,
+"card": 0.0413
+}
+},
+{
+"start": 1512.0,
+"end": 1518.0,
+"p": {
+"none": 0.4699,
+"replay": 0.285,
+"closeup": 0.0171,
+"goal_kick": 0.0017,
+"throw_in": 0.0041,
+"cross": 0.0142,
+"shot": 0.0063,
+"corner": 0.0076,
+"free_kick": 0.0036,
+"offside": 0.1048,
+"substitution": 0.0362,
+"card": 0.0495
+}
+},
+{
+"start": 1518.0,
+"end": 1524.0,
+"p": {
+"none": 0.6299,
+"replay": 0.2045,
+"closeup": 0.019,
+"goal_kick": 0.0012,
+"throw_in": 0.0048,
+"cross": 0.0045,
+"shot": 0.0058,
+"corner": 0.007,
+"free_kick": 0.0042,
+"offside": 0.0429,
+"substitution": 0.0244,
+"card": 0.0517
+}
+},
+{
+"start": 1524.0,
+"end": 1530.0,
+"p": {
+"none": 0.6232,
+"replay": 0.1391,
+"closeup": 0.0156,
+"goal_kick": 0.0011,
+"throw_in": 0.0031,
+"cross": 0.0069,
+"shot": 0.0074,
+"corner": 0.0054,
+"free_kick": 0.0054,
+"offside": 0.0699,
+"substitution": 0.0274,
+"card": 0.0956
+}
+},
+{
+"start": 1530.0,
+"end": 1536.0,
+"p": {
+"none": 0.8158,
+"replay": 0.086,
+"closeup": 0.0096,
+"goal_kick": 0.0008,
+"throw_in": 0.0038,
+"cross": 0.0028,
+"shot": 0.0059,
+"corner": 0.004,
+"free_kick": 0.0024,
+"offside": 0.0192,
+"substitution": 0.0382,
+"card": 0.0116
+}
+},
+{
+"start": 1536.0,
+"end": 1542.0,
+"p": {
+"none": 0.8208,
+"replay": 0.1111,
+"closeup": 0.011,
+"goal_kick": 0.0007,
+"throw_in": 0.0022,
+"cross": 0.0018,
+"shot": 0.0028,
+"corner": 0.002,
+"free_kick": 0.0025,
+"offside": 0.0181,
+"substitution": 0.016,
+"card": 0.011
+}
+},
+{
+"start": 1542.0,
+"end": 1548.0,
+"p": {
+"none": 0.6079,
+"replay": 0.2236,
+"closeup": 0.0077,
+"goal_kick": 0.001,
+"throw_in": 0.0053,
+"cross": 0.006,
+"shot": 0.0068,
+"corner": 0.0038,
+"free_kick": 0.0044,
+"offside": 0.0531,
+"substitution": 0.0365,
+"card": 0.044
+}
+},
+{
+"start": 1548.0,
+"end": 1554.0,
+"p": {
+"none": 0.7454,
+"replay": 0.1885,
+"closeup": 0.0083,
+"goal_kick": 0.0008,
+"throw_in": 0.0022,
+"cross": 0.0073,
+"shot": 0.0044,
+"corner": 0.002,
+"free_kick": 0.0014,
+"offside": 0.0137,
+"substitution": 0.0106,
+"card": 0.0155
+}
+},
+{
+"start": 1554.0,
+"end": 1560.0,
+"p": {
+"none": 0.7548,
+"replay": 0.1486,
+"closeup": 0.0138,
+"goal_kick": 0.0008,
+"throw_in": 0.004,
+"cross": 0.0243,
+"shot": 0.0045,
+"corner": 0.0023,
+"free_kick": 0.0013,
+"offside": 0.0228,
+"substitution": 0.0108,
+"card": 0.0122
+}
+},
+{
+"start": 1560.0,
+"end": 1566.0,
+"p": {
+"none": 0.6286,
+"replay": 0.1801,
+"closeup": 0.019,
+"goal_kick": 0.0016,
+"throw_in": 0.0058,
+"cross": 0.0294,
+"shot": 0.0084,
+"corner": 0.0062,
+"free_kick": 0.0051,
+"offside": 0.0485,
+"substitution": 0.019,
+"card": 0.0485
+}
+},
+{
+"start": 1566.0,
+"end": 1572.0,
+"p": {
+"none": 0.644,
+"replay": 0.1845,
+"closeup": 0.0161,
+"goal_kick": 0.0014,
+"throw_in": 0.0056,
+"cross": 0.0134,
+"shot": 0.0092,
+"corner": 0.0046,
+"free_kick": 0.0041,
+"offside": 0.0599,
+"substitution": 0.0161,
+"card": 0.0412
+}
+},
+{
+"start": 1572.0,
+"end": 1578.0,
+"p": {
+"none": 0.8747,
+"replay": 0.0814,
+"closeup": 0.0086,
+"goal_kick": 0.0004,
+"throw_in": 0.0014,
+"cross": 0.0011,
+"shot": 0.0017,
+"corner": 0.0009,
+"free_kick": 0.0008,
+"offside": 0.0091,
+"substitution": 0.0067,
+"card": 0.0133
+}
+},
+{
+"start": 1578.0,
+"end": 1584.0,
+"p": {
+"none": 0.8295,
+"replay": 0.0991,
+"closeup": 0.0076,
+"goal_kick": 0.0006,
+"throw_in": 0.0016,
+"cross": 0.0015,
+"shot": 0.0026,
+"corner": 0.0021,
+"free_kick": 0.001,
+"offside": 0.0322,
+"substitution": 0.0104,
+"card": 0.0118
+}
+},
+{
+"start": 1584.0,
+"end": 1590.0,
+"p": {
+"none": 0.8136,
+"replay": 0.1414,
+"closeup": 0.0051,
+"goal_kick": 0.0004,
+"throw_in": 0.002,
+"cross": 0.0013,
+"shot": 0.0024,
+"corner": 0.0014,
+"free_kick": 0.0011,
+"offside": 0.0116,
+"substitution": 0.0116,
+"card": 0.008
+}
+},
+{
+"start": 1590.0,
+"end": 1596.0,
+"p": {
+"none": 0.6141,
+"replay": 0.2259,
+"closeup": 0.0154,
+"goal_kick": 0.0013,
+"throw_in": 0.0037,
+"cross": 0.0197,
+"shot": 0.0099,
+"corner": 0.0047,
+"free_kick": 0.0064,
+"offside": 0.0571,
+"substitution": 0.0164,
+"card": 0.0253
+}
+},
+{
+"start": 1596.0,
+"end": 1602.0,
+"p": {
+"none": 0.3139,
+"replay": 0.2157,
+"closeup": 0.0177,
+"goal_kick": 0.002,
+"throw_in": 0.0054,
+"cross": 0.07,
+"shot": 0.0425,
+"corner": 0.168,
+"free_kick": 0.0258,
+"offside": 0.0618,
+"substitution": 0.0227,
+"card": 0.0545
+}
+},
+{
+"start": 1602.0,
+"end": 1608.0,
+"p": {
+"none": 0.1688,
+"replay": 0.0849,
+"closeup": 0.0354,
+"goal_kick": 0.0029,
+"throw_in": 0.0079,
+"cross": 0.116,
+"shot": 0.1586,
+"corner": 0.0749,
+"free_kick": 0.1586,
+"offside": 0.1235,
+"substitution": 0.0259,
+"card": 0.0427
+}
+},
+{
+"start": 1608.0,
+"end": 1614.0,
+"p": {
+"none": 0.1187,
+"replay": 0.1187,
+"closeup": 0.0437,
+"goal_kick": 0.0049,
+"throw_in": 0.0034,
+"cross": 0.0234,
+"shot": 0.0265,
+"corner": 0.0125,
+"free_kick": 0.0025,
+"offside": 0.0676,
+"substitution": 0.0465,
+"card": 0.5318
+}
+},
+{
+"start": 1614.0,
+"end": 1620.0,
+"p": {
+"none": 0.247,
+"replay": 0.1242,
+"closeup": 0.0379,
+"goal_kick": 0.002,
+"throw_in": 0.0139,
+"cross": 0.0486,
+"shot": 0.1242,
+"corner": 0.0753,
+"free_kick": 0.0139,
+"offside": 0.1407,
+"substitution": 0.0625,
+"card": 0.1096
+}
+},
+{
+"start": 1620.0,
+"end": 1626.0,
+"p": {
+"none": 0.2122,
+"replay": 0.0884,
+"closeup": 0.0224,
+"goal_kick": 0.005,
+"throw_in": 0.0099,
+"cross": 0.0473,
+"shot": 0.0174,
+"corner": 0.0504,
+"free_kick": 0.2122,
+"offside": 0.1652,
+"substitution": 0.0238,
+"card": 0.1458
+}
+},
+{
+"start": 1626.0,
+"end": 1632.0,
+"p": {
+"none": 0.1377,
+"replay": 0.1768,
+"closeup": 0.0835,
+"goal_kick": 0.0128,
+"throw_in": 0.0078,
+"cross": 0.0507,
+"shot": 0.0198,
+"corner": 0.0164,
+"free_kick": 0.0069,
+"offside": 0.0835,
+"substitution": 0.0737,
+"card": 0.3303
+}
+},
+{
+"start": 1632.0,
+"end": 1638.0,
+"p": {
+"none": 0.6233,
+"replay": 0.1227,
+"closeup": 0.0177,
+"goal_kick": 0.0015,
+"throw_in": 0.0057,
+"cross": 0.0843,
+"shot": 0.0138,
+"corner": 0.0114,
+"free_kick": 0.0045,
+"offside": 0.0451,
+"substitution": 0.0188,
+"card": 0.0512
+}
+},
+{
+"start": 1638.0,
+"end": 1644.0,
+"p": {
+"none": 0.1854,
+"replay": 0.1636,
+"closeup": 0.0143,
+"goal_kick": 0.0019,
+"throw_in": 0.0056,
+"cross": 0.1274,
+"shot": 0.0365,
+"corner": 0.3056,
+"free_kick": 0.0208,
+"offside": 0.0602,
+"substitution": 0.0221,
+"card": 0.0565
+}
+},
+{
+"start": 1644.0,
+"end": 1650.0,
+"p": {
+"none": 0.1634,
+"replay": 0.0874,
+"closeup": 0.0284,
+"goal_kick": 0.0032,
+"throw_in": 0.0087,
+"cross": 0.2694,
+"shot": 0.0725,
+"corner": 0.1634,
+"free_kick": 0.0183,
+"offside": 0.0874,
+"substitution": 0.0208,
+"card": 0.0772
+}
+},
+{
+"start": 1650.0,
+"end": 1656.0,
+"p": {
+"none": 0.1708,
+"replay": 0.2485,
+"closeup": 0.1103,
+"goal_kick": 0.008,
+"throw_in": 0.0048,
+"cross": 0.0169,
+"shot": 0.0149,
+"corner": 0.008,
+"free_kick": 0.004,
+"offside": 0.059,
+"substitution": 0.0358,
+"card": 0.319
+}
+},
+{
+"start": 1656.0,
+"end": 1662.0,
+"p": {
+"none": 0.3714,
+"replay": 0.2717,
+"closeup": 0.0325,
+"goal_kick": 0.0022,
+"throw_in": 0.0105,
+"cross": 0.0305,
+"shot": 0.0829,
+"corner": 0.0253,
+"free_kick": 0.0105,
+"offside": 0.1,
+"substitution": 0.021,
+"card": 0.0417
+}
+},
+{
+"start": 1662.0,
+"end": 1668.0,
+"p": {
+"none": 0.065,
+"replay": 0.0113,
+"closeup": 0.2572,
+"goal_kick": 0.0004,
+"throw_in": 0.001,
+"cross": 0.0014,
+"shot": 0.0014,
+"corner": 0.0011,
+"free_kick": 0.0007,
+"offside": 0.0145,
+"substitution": 0.0289,
+"card": 0.617
+}
+},
+{
+"start": 1668.0,
+"end": 1674.0,
+"p": {
+"none": 0.1936,
+"replay": 0.0859,
+"closeup": 0.1103,
+"goal_kick": 0.3192,
+"throw_in": 0.008,
+"cross": 0.0091,
+"shot": 0.0096,
+"corner": 0.0116,
+"free_kick": 0.0048,
+"offside": 0.0279,
+"substitution": 0.0262,
+"card": 0.1936
+}
+},
+{
+"start": 1674.0,
+"end": 1680.0,
+"p": {
+"none": 0.6597,
+"replay": 0.2142,
+"closeup": 0.0121,
+"goal_kick": 0.0009,
+"throw_in": 0.0025,
+"cross": 0.0029,
+"shot": 0.0021,
+"corner": 0.0013,
+"free_kick": 0.0014,
+"offside": 0.0309,
+"substitution": 0.0107,
+"card": 0.0614
+}
+},
+{
+"start": 1680.0,
+"end": 1686.0,
+"p": {
+"none": 0.6505,
+"replay": 0.2112,
+"closeup": 0.0119,
+"goal_kick": 0.0015,
+"throw_in": 0.0027,
+"cross": 0.0127,
+"shot": 0.0047,
+"corner": 0.0044,
+"free_kick": 0.0036,
+"offside": 0.0471,
+"substitution": 0.0082,
+"card": 0.0416
+}
+},
+{
+"start": 1686.0,
+"end": 1692.0,
+"p": {
+"none": 0.6818,
+"replay": 0.1953,
+"closeup": 0.0097,
+"goal_kick": 0.0008,
+"throw_in": 0.0026,
+"cross": 0.0059,
+"shot": 0.0028,
+"corner": 0.0032,
+"free_kick": 0.0025,
+"offside": 0.0494,
+"substitution": 0.0076,
+"card": 0.0385
+}
+},
+{
+"start": 1692.0,
+"end": 1698.0,
+"p": {
+"none": 0.2862,
+"replay": 0.2526,
+"closeup": 0.0207,
+"goal_kick": 0.0183,
+"throw_in": 0.0081,
+"cross": 0.0387,
+"shot": 0.0161,
+"corner": 0.0266,
+"free_kick": 0.0111,
+"offside": 0.1532,
+"substitution": 0.0152,
+"card": 0.1532
+}
+},
+{
+"start": 1698.0,
+"end": 1704.0,
+"p": {
+"none": 0.7,
+"replay": 0.1562,
+"closeup": 0.0094,
+"goal_kick": 0.0011,
+"throw_in": 0.0032,
+"cross": 0.0348,
+"shot": 0.005,
+"corner": 0.0061,
+"free_kick": 0.0024,
+"offside": 0.0271,
+"substitution": 0.01,
+"card": 0.0447
+}
+},
+{
+"start": 1704.0,
+"end": 1710.0,
+"p": {
+"none": 0.531,
+"replay": 0.2508,
+"closeup": 0.0219,
+"goal_kick": 0.0012,
+"throw_in": 0.0043,
+"cross": 0.011,
+"shot": 0.0049,
+"corner": 0.0038,
+"free_kick": 0.0032,
+"offside": 0.0385,
+"substitution": 0.0248,
+"card": 0.1046
+}
+},
+{
+"start": 1710.0,
+"end": 1716.0,
+"p": {
+"none": 0.8851,
+"replay": 0.0566,
+"closeup": 0.0056,
+"goal_kick": 0.0003,
+"throw_in": 0.0015,
+"cross": 0.0019,
+"shot": 0.0026,
+"corner": 0.0016,
+"free_kick": 0.001,
+"offside": 0.0134,
+"substitution": 0.0119,
+"card": 0.0184
+}
+},
+{
+"start": 1716.0,
+"end": 1722.0,
+"p": {
+"none": 0.3483,
+"replay": 0.2112,
+"closeup": 0.0209,
+"goal_kick": 0.0019,
+"throw_in": 0.0064,
+"cross": 0.2394,
+"shot": 0.0286,
+"corner": 0.0087,
+"free_kick": 0.0047,
+"offside": 0.0881,
+"substitution": 0.0209,
+"card": 0.0209
+}
+},
+{
+"start": 1722.0,
+"end": 1728.0,
+"p": {
+"none": 0.1936,
+"replay": 0.4643,
+"closeup": 0.0246,
+"goal_kick": 0.002,
+"throw_in": 0.0048,
+"cross": 0.0358,
+"shot": 0.0055,
+"corner": 0.0297,
+"free_kick": 0.0149,
+"offside": 0.0758,
+"substitution": 0.0159,
+"card": 0.133
+}
+},
+{
+"start": 1728.0,
+"end": 1734.0,
+"p": {
+"none": 0.5341,
+"replay": 0.2859,
+"closeup": 0.0118,
+"goal_kick": 0.0009,
+"throw_in": 0.0038,
+"cross": 0.0599,
+"shot": 0.0072,
+"corner": 0.0059,
+"free_kick": 0.0049,
+"offside": 0.0563,
+"substitution": 0.0098,
+"card": 0.0195
+}
+},
+{
+"start": 1734.0,
+"end": 1740.0,
+"p": {
+"none": 0.2068,
+"replay": 0.1335,
+"closeup": 0.0317,
+"goal_kick": 0.0038,
+"throw_in": 0.0103,
+"cross": 0.0232,
+"shot": 0.081,
+"corner": 0.0232,
+"free_kick": 0.0085,
+"offside": 0.1335,
+"substitution": 0.0434,
+"card": 0.301
+}
+},
+{
+"start": 1740.0,
+"end": 1746.0,
+"p": {
+"none": 0.4854,
+"replay": 0.1786,
+"closeup": 0.0274,
+"goal_kick": 0.0013,
+"throw_in": 0.0045,
+"cross": 0.0147,
+"shot": 0.0057,
+"corner": 0.0274,
+"free_kick": 0.0048,
+"offside": 0.0956,
+"substitution": 0.0242,
+"card": 0.1306
+}
+},
+{
+"start": 1746.0,
+"end": 1752.0,
+"p": {
+"none": 0.5216,
+"replay": 0.2175,
+"closeup": 0.0333,
+"goal_kick": 0.0048,
+"throw_in": 0.007,
+"cross": 0.08,
+"shot": 0.0148,
+"corner": 0.0051,
+"free_kick": 0.0074,
+"offside": 0.0313,
+"substitution": 0.0148,
+"card": 0.0623
+}
+},
+{
+"start": 1752.0,
+"end": 1758.0,
+"p": {
+"none": 0.7118,
+"replay": 0.0963,
+"closeup": 0.0148,
+"goal_kick": 0.0019,
+"throw_in": 0.0051,
+"cross": 0.0313,
+"shot": 0.0074,
+"corner": 0.0074,
+"free_kick": 0.0035,
+"offside": 0.0276,
+"substitution": 0.0178,
+"card": 0.075
+}
+},
+{
+"start": 1758.0,
+"end": 1764.0,
+"p": {
+"none": 0.7086,
+"replay": 0.1792,
+"closeup": 0.0069,
+"goal_kick": 0.0007,
+"throw_in": 0.0021,
+"cross": 0.0045,
+"shot": 0.0037,
+"corner": 0.0019,
+"free_kick": 0.0051,
+"offside": 0.0292,
+"substitution": 0.0228,
+"card": 0.0353
+}
+},
+{
+"start": 1764.0,
+"end": 1770.0,
+"p": {
+"none": 0.8459,
+"replay": 0.0892,
+"closeup": 0.0113,
+"goal_kick": 0.0008,
+"throw_in": 0.0027,
+"cross": 0.0021,
+"shot": 0.0029,
+"corner": 0.002,
+"free_kick": 0.0014,
+"offside": 0.0176,
+"substitution": 0.0106,
+"card": 0.0137
+}
+},
+{
+"start": 1770.0,
+"end": 1776.0,
+"p": {
+"none": 0.6599,
+"replay": 0.1891,
+"closeup": 0.0114,
+"goal_kick": 0.0011,
+"throw_in": 0.0037,
+"cross": 0.0054,
+"shot": 0.0057,
+"corner": 0.0044,
+"free_kick": 0.0039,
+"offside": 0.0449,
+"substitution": 0.0256,
+"card": 0.0449
+}
+},
+{
+"start": 1776.0,
+"end": 1782.0,
+"p": {
+"none": 0.722,
+"replay": 0.1422,
+"closeup": 0.0062,
+"goal_kick": 0.001,
+"throw_in": 0.0036,
+"cross": 0.0052,
+"shot": 0.0059,
+"corner": 0.0071,
+"free_kick": 0.0031,
+"offside": 0.0383,
+"substitution": 0.0247,
+"card": 0.0407
+}
+},
+{
+"start": 1782.0,
+"end": 1788.0,
+"p": {
+"none": 0.3897,
+"replay": 0.2086,
+"closeup": 0.0111,
+"goal_kick": 0.0012,
+"throw_in": 0.0036,
+"cross": 0.2678,
+"shot": 0.0151,
+"corner": 0.0194,
+"free_kick": 0.0052,
+"offside": 0.0282,
+"substitution": 0.0161,
+"card": 0.034
+}
+},
+{
+"start": 1788.0,
+"end": 1794.0,
+"p": {
+"none": 0.7318,
+"replay": 0.1633,
+"closeup": 0.0152,
+"goal_kick": 0.001,
+"throw_in": 0.0028,
+"cross": 0.0056,
+"shot": 0.0038,
+"corner": 0.0026,
+"free_kick": 0.0023,
+"offside": 0.0388,
+"substitution": 0.0076,
+"card": 0.025
+}
+},
+{
+"start": 1794.0,
+"end": 1800.0,
+"p": {
+"none": 0.7845,
+"replay": 0.1062,
+"closeup": 0.0209,
+"goal_kick": 0.0008,
+"throw_in": 0.0023,
+"cross": 0.0036,
+"shot": 0.0041,
+"corner": 0.0016,
+"free_kick": 0.0017,
+"offside": 0.0223,
+"substitution": 0.0153,
+"card": 0.0367
+}
+},
+{
+"start": 1800.0,
+"end": 1806.0,
+"p": {
+"none": 0.707,
+"replay": 0.1788,
+"closeup": 0.0079,
+"goal_kick": 0.0008,
+"throw_in": 0.0023,
+"cross": 0.0057,
+"shot": 0.0051,
+"corner": 0.0033,
+"free_kick": 0.0029,
+"offside": 0.0452,
+"substitution": 0.0138,
+"card": 0.0274
+}
+},
+{
+"start": 1806.0,
+"end": 1812.0,
+"p": {
+"none": 0.6699,
+"replay": 0.2464,
+"closeup": 0.0108,
+"goal_kick": 0.0005,
+"throw_in": 0.0012,
+"cross": 0.002,
+"shot": 0.0024,
+"corner": 0.0018,
+"free_kick": 0.0029,
+"offside": 0.0179,
+"substitution": 0.0108,
+"card": 0.0334
+}
+},
+{
+"start": 1812.0,
+"end": 1818.0,
+"p": {
+"none": 0.0075,
+"replay": 0.0023,
+"closeup": 0.0589,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0004,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0021,
+"substitution": 0.0058,
+"card": 0.9219
+}
+},
+{
+"start": 1818.0,
+"end": 1824.0,
+"p": {
+"none": 0.1287,
+"replay": 0.577,
+"closeup": 0.0238,
+"goal_kick": 0.0009,
+"throw_in": 0.0028,
+"cross": 0.0053,
+"shot": 0.0018,
+"corner": 0.005,
+"free_kick": 0.0016,
+"offside": 0.021,
+"substitution": 0.0197,
+"card": 0.2123
+}
+},
+{
+"start": 1824.0,
+"end": 1830.0,
+"p": {
+"none": 0.2416,
+"replay": 0.4513,
+"closeup": 0.0225,
+"goal_kick": 0.0012,
+"throw_in": 0.0025,
+"cross": 0.0078,
+"shot": 0.0034,
+"corner": 0.0034,
+"free_kick": 0.0069,
+"offside": 0.0889,
+"substitution": 0.0145,
+"card": 0.156
+}
+},
+{
+"start": 1830.0,
+"end": 1836.0,
+"p": {
+"none": 0.1792,
+"replay": 0.0619,
+"closeup": 0.013,
+"goal_kick": 0.0037,
+"throw_in": 0.0061,
+"cross": 0.0426,
+"shot": 0.0258,
+"corner": 0.2775,
+"free_kick": 0.0846,
+"offside": 0.1157,
+"substitution": 0.0108,
+"card": 0.1792
+}
+},
+{
+"start": 1836.0,
+"end": 1842.0,
+"p": {
+"none": 0.0144,
+"replay": 0.0163,
+"closeup": 0.4752,
+"goal_kick": 0.0006,
+"throw_in": 0.0007,
+"cross": 0.0012,
+"shot": 0.0013,
+"corner": 0.001,
+"free_kick": 0.001,
+"offside": 0.0415,
+"substitution": 0.1202,
+"card": 0.3266
+}
+},
+{
+"start": 1842.0,
+"end": 1848.0,
+"p": {
+"none": 0.0157,
+"replay": 0.0377,
+"closeup": 0.0045,
+"goal_kick": 0.0003,
+"throw_in": 0.0005,
+"cross": 0.002,
+"shot": 0.002,
+"corner": 0.0011,
+"free_kick": 0.0051,
+"offside": 0.0548,
+"substitution": 0.0189,
+"card": 0.8573
+}
+},
+{
+"start": 1848.0,
+"end": 1854.0,
+"p": {
+"none": 0.032,
+"replay": 0.0142,
+"closeup": 0.3444,
+"goal_kick": 0.0006,
+"throw_in": 0.0009,
+"cross": 0.0015,
+"shot": 0.0017,
+"corner": 0.0007,
+"free_kick": 0.0006,
+"offside": 0.0183,
+"substitution": 0.0171,
+"card": 0.5679
+}
+},
+{
+"start": 1854.0,
+"end": 1860.0,
+"p": {
+"none": 0.5431,
+"replay": 0.0833,
+"closeup": 0.0113,
+"goal_kick": 0.0022,
+"throw_in": 0.0649,
+"cross": 0.0145,
+"shot": 0.006,
+"corner": 0.0099,
+"free_kick": 0.006,
+"offside": 0.0446,
+"substitution": 0.0145,
+"card": 0.1998
+}
+},
+{
+"start": 1860.0,
+"end": 1866.0,
+"p": {
+"none": 0.9113,
+"replay": 0.0178,
+"closeup": 0.0079,
+"goal_kick": 0.0003,
+"throw_in": 0.0026,
+"cross": 0.0008,
+"shot": 0.0023,
+"corner": 0.0013,
+"free_kick": 0.0016,
+"offside": 0.0051,
+"substitution": 0.0115,
+"card": 0.0376
+}
+},
+{
+"start": 1866.0,
+"end": 1872.0,
+"p": {
+"none": 0.7465,
+"replay": 0.0892,
+"closeup": 0.0083,
+"goal_kick": 0.0007,
+"throw_in": 0.0021,
+"cross": 0.0039,
+"shot": 0.0031,
+"corner": 0.0021,
+"free_kick": 0.002,
+"offside": 0.0225,
+"substitution": 0.0187,
+"card": 0.101
+}
+},
+{
+"start": 1872.0,
+"end": 1878.0,
+"p": {
+"none": 0.6797,
+"replay": 0.1947,
+"closeup": 0.017,
+"goal_kick": 0.0012,
+"throw_in": 0.0036,
+"cross": 0.0034,
+"shot": 0.0055,
+"corner": 0.0043,
+"free_kick": 0.0022,
+"offside": 0.0281,
+"substitution": 0.0141,
+"card": 0.0463
+}
+},
+{
+"start": 1878.0,
+"end": 1884.0,
+"p": {
+"none": 0.0155,
+"replay": 0.0069,
+"closeup": 0.0106,
+"goal_kick": 0.0003,
+"throw_in": 0.0005,
+"cross": 0.0009,
+"shot": 0.001,
+"corner": 0.0016,
+"free_kick": 0.0009,
+"offside": 0.0308,
+"substitution": 0.1378,
+"card": 0.7933
+}
+},
+{
+"start": 1884.0,
+"end": 1890.0,
+"p": {
+"none": 0.169,
+"replay": 0.0584,
+"closeup": 0.0333,
+"goal_kick": 0.0015,
+"throw_in": 0.0037,
+"cross": 0.0058,
+"shot": 0.0066,
+"corner": 0.007,
+"free_kick": 0.0026,
+"offside": 0.0427,
+"substitution": 0.0798,
+"card": 0.5898
+}
+},
+{
+"start": 1890.0,
+"end": 1896.0,
+"p": {
+"none": 0.8765,
+"replay": 0.0635,
+"closeup": 0.0059,
+"goal_kick": 0.0004,
+"throw_in": 0.0014,
+"cross": 0.001,
+"shot": 0.0025,
+"corner": 0.0013,
+"free_kick": 0.0015,
+"offside": 0.0133,
+"substitution": 0.0133,
+"card": 0.0194
+}
+},
+{
+"start": 1896.0,
+"end": 1902.0,
+"p": {
+"none": 0.8321,
+"replay": 0.0877,
+"closeup": 0.0105,
+"goal_kick": 0.0011,
+"throw_in": 0.0039,
+"cross": 0.0112,
+"shot": 0.0036,
+"corner": 0.0028,
+"free_kick": 0.0019,
+"offside": 0.0208,
+"substitution": 0.0082,
+"card": 0.0162
+}
+},
+{
+"start": 1902.0,
+"end": 1908.0,
+"p": {
+"none": 0.3457,
+"replay": 0.1441,
+"closeup": 0.0134,
+"goal_kick": 0.0019,
+"throw_in": 0.0076,
+"cross": 0.3051,
+"shot": 0.0364,
+"corner": 0.044,
+"free_kick": 0.0092,
+"offside": 0.0388,
+"substitution": 0.0172,
+"card": 0.0364
+}
+},
+{
+"start": 1908.0,
+"end": 1914.0,
+"p": {
+"none": 0.2904,
+"replay": 0.146,
+"closeup": 0.0326,
+"goal_kick": 0.0057,
+"throw_in": 0.0064,
+"cross": 0.1555,
+"shot": 0.0734,
+"corner": 0.0254,
+"free_kick": 0.0154,
+"offside": 0.1372,
+"substitution": 0.0288,
+"card": 0.0832
+}
+},
+{
+"start": 1914.0,
+"end": 1920.0,
+"p": {
+"none": 0.4402,
+"replay": 0.208,
+"closeup": 0.0464,
+"goal_kick": 0.0028,
+"throw_in": 0.0043,
+"cross": 0.0596,
+"shot": 0.016,
+"corner": 0.056,
+"free_kick": 0.0125,
+"offside": 0.0409,
+"substitution": 0.0151,
+"card": 0.0982
+}
+},
+{
+"start": 1920.0,
+"end": 1926.0,
+"p": {
+"none": 0.4323,
+"replay": 0.0851,
+"closeup": 0.1239,
+"goal_kick": 0.0058,
+"throw_in": 0.0062,
+"cross": 0.1027,
+"shot": 0.0131,
+"corner": 0.0276,
+"free_kick": 0.0115,
+"offside": 0.0623,
+"substitution": 0.0202,
+"card": 0.1093
+}
+},
+{
+"start": 1926.0,
+"end": 1932.0,
+"p": {
+"none": 0.0121,
+"replay": 0.0089,
+"closeup": 0.7514,
+"goal_kick": 0.0002,
+"throw_in": 0.0001,
+"cross": 0.0002,
+"shot": 0.0004,
+"corner": 0.0001,
+"free_kick": 0.0002,
+"offside": 0.0054,
+"substitution": 0.0057,
+"card": 0.2153
+}
+},
+{
+"start": 1932.0,
+"end": 1938.0,
+"p": {
+"none": 0.1191,
+"replay": 0.3238,
+"closeup": 0.135,
+"goal_kick": 0.1268,
+"throw_in": 0.0072,
+"cross": 0.0183,
+"shot": 0.0341,
+"corner": 0.0086,
+"free_kick": 0.0041,
+"offside": 0.0466,
+"substitution": 0.0235,
+"card": 0.153
+}
+},
+{
+"start": 1938.0,
+"end": 1944.0,
+"p": {
+"none": 0.3897,
+"replay": 0.0985,
+"closeup": 0.0249,
+"goal_kick": 0.0249,
+"throw_in": 0.0111,
+"cross": 0.032,
+"shot": 0.0265,
+"corner": 0.0171,
+"free_kick": 0.0092,
+"offside": 0.0598,
+"substitution": 0.0386,
+"card": 0.2678
+}
+},
+{
+"start": 1944.0,
+"end": 1950.0,
+"p": {
+"none": 0.79,
+"replay": 0.1556,
+"closeup": 0.006,
+"goal_kick": 0.0006,
+"throw_in": 0.0018,
+"cross": 0.0022,
+"shot": 0.0024,
+"corner": 0.0012,
+"free_kick": 0.0012,
+"offside": 0.0154,
+"substitution": 0.0164,
+"card": 0.0073
+}
+},
+{
+"start": 1950.0,
+"end": 1956.0,
+"p": {
+"none": 0.8134,
+"replay": 0.1247,
+"closeup": 0.0085,
+"goal_kick": 0.0006,
+"throw_in": 0.0024,
+"cross": 0.0026,
+"shot": 0.0033,
+"corner": 0.0019,
+"free_kick": 0.0016,
+"offside": 0.0159,
+"substitution": 0.0102,
+"card": 0.0149
+}
+},
+{
+"start": 1956.0,
+"end": 1962.0,
+"p": {
+"none": 0.2274,
+"replay": 0.1074,
+"closeup": 0.0289,
+"goal_kick": 0.0025,
+"throw_in": 0.0094,
+"cross": 0.3309,
+"shot": 0.0837,
+"corner": 0.0395,
+"free_kick": 0.0061,
+"offside": 0.0837,
+"substitution": 0.0328,
+"card": 0.0477
+}
+},
+{
+"start": 1962.0,
+"end": 1968.0,
+"p": {
+"none": 0.0107,
+"replay": 0.0088,
+"closeup": 0.1668,
+"goal_kick": 0.0003,
+"throw_in": 0.0006,
+"cross": 0.0007,
+"shot": 0.0027,
+"corner": 0.0013,
+"free_kick": 0.0007,
+"offside": 0.0187,
+"substitution": 0.275,
+"card": 0.5137
+}
+},
+{
+"start": 1968.0,
+"end": 1974.0,
+"p": {
+"none": 0.002,
+"replay": 0.0024,
+"closeup": 0.021,
+"goal_kick": 0.0001,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0004,
+"corner": 0.0002,
+"free_kick": 0.0001,
+"offside": 0.0068,
+"substitution": 0.0733,
+"card": 0.8934
+}
+},
+{
+"start": 1974.0,
+"end": 1980.0,
+"p": {
+"none": 0.0032,
+"replay": 0.0015,
+"closeup": 0.0219,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0002,
+"shot": 0.0004,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0046,
+"substitution": 0.0361,
+"card": 0.9317
+}
+},
+{
+"start": 1980.0,
+"end": 1986.0,
+"p": {
+"none": 0.0352,
+"replay": 0.0138,
+"closeup": 0.6239,
+"goal_kick": 0.0003,
+"throw_in": 0.0003,
+"cross": 0.0004,
+"shot": 0.0007,
+"corner": 0.0002,
+"free_kick": 0.0003,
+"offside": 0.0213,
+"substitution": 0.0089,
+"card": 0.2947
+}
+},
+{
+"start": 1986.0,
+"end": 1992.0,
+"p": {
+"none": 0.0097,
+"replay": 0.0067,
+"closeup": 0.0924,
+"goal_kick": 0.0003,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0005,
+"corner": 0.0003,
+"free_kick": 0.0003,
+"offside": 0.0234,
+"substitution": 0.0924,
+"card": 0.7734
+}
+},
+{
+"start": 1992.0,
+"end": 1998.0,
+"p": {
+"none": 0.0034,
+"replay": 0.0015,
+"closeup": 0.0282,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0002,
+"shot": 0.0003,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0043,
+"substitution": 0.0282,
+"card": 0.933
+}
+},
+{
+"start": 1998.0,
+"end": 2004.0,
+"p": {
+"none": 0.0424,
+"replay": 0.0227,
+"closeup": 0.0129,
+"goal_kick": 0.0054,
+"throw_in": 0.5847,
+"cross": 0.0078,
+"shot": 0.0065,
+"corner": 0.048,
+"free_kick": 0.0065,
+"offside": 0.0351,
+"substitution": 0.0129,
+"card": 0.2151
+}
+},
+{
+"start": 2004.0,
+"end": 2010.0,
+"p": {
+"none": 0.7228,
+"replay": 0.2071,
+"closeup": 0.011,
+"goal_kick": 0.0012,
+"throw_in": 0.0033,
+"cross": 0.0046,
+"shot": 0.0043,
+"corner": 0.002,
+"free_kick": 0.0013,
+"offside": 0.017,
+"substitution": 0.0049,
+"card": 0.0205
+}
+},
+{
+"start": 2010.0,
+"end": 2016.0,
+"p": {
+"none": 0.8185,
+"replay": 0.1255,
+"closeup": 0.0067,
+"goal_kick": 0.0004,
+"throw_in": 0.0012,
+"cross": 0.0031,
+"shot": 0.0026,
+"corner": 0.0014,
+"free_kick": 0.001,
+"offside": 0.0205,
+"substitution": 0.0067,
+"card": 0.0124
+}
+},
+{
+"start": 2016.0,
+"end": 2022.0,
+"p": {
+"none": 0.0012,
+"replay": 0.0007,
+"closeup": 0.0004,
+"goal_kick": 0.0,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0001,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0007,
+"substitution": 0.0007,
+"card": 0.9958
+}
+},
+{
+"start": 2022.0,
+"end": 2028.0,
+"p": {
+"none": 0.6431,
+"replay": 0.1626,
+"closeup": 0.0265,
+"goal_kick": 0.0015,
+"throw_in": 0.0043,
+"cross": 0.0118,
+"shot": 0.0038,
+"corner": 0.0071,
+"free_kick": 0.0036,
+"offside": 0.0496,
+"substitution": 0.0182,
+"card": 0.0678
+}
+},
+{
+"start": 2028.0,
+"end": 2034.0,
+"p": {
+"none": 0.003,
+"replay": 0.0004,
+"closeup": 0.0049,
+"goal_kick": 0.0,
+"throw_in": 0.0,
+"cross": 0.0001,
+"shot": 0.0001,
+"corner": 0.0001,
+"free_kick": 0.0,
+"offside": 0.001,
+"substitution": 0.0014,
+"card": 0.989
+}
+},
+{
+"start": 2034.0,
+"end": 2040.0,
+"p": {
+"none": 0.8382,
+"replay": 0.1001,
+"closeup": 0.0087,
+"goal_kick": 0.0009,
+"throw_in": 0.0027,
+"cross": 0.0034,
+"shot": 0.0025,
+"corner": 0.0015,
+"free_kick": 0.0025,
+"offside": 0.0163,
+"substitution": 0.0068,
+"card": 0.0163
+}
+},
+{
+"start": 2040.0,
+"end": 2046.0,
+"p": {
+"none": 0.6314,
+"replay": 0.1809,
+"closeup": 0.0139,
+"goal_kick": 0.0013,
+"throw_in": 0.0045,
+"cross": 0.0587,
+"shot": 0.0102,
+"corner": 0.0085,
+"free_kick": 0.0066,
+"offside": 0.0245,
+"substitution": 0.0191,
+"card": 0.0404
+}
+},
+{
+"start": 2046.0,
+"end": 2052.0,
+"p": {
+"none": 0.5203,
+"replay": 0.3156,
+"closeup": 0.0167,
+"goal_kick": 0.0017,
+"throw_in": 0.0062,
+"cross": 0.0139,
+"shot": 0.0074,
+"corner": 0.009,
+"free_kick": 0.0058,
+"offside": 0.0354,
+"substitution": 0.0167,
+"card": 0.0515
+}
+},
+{
+"start": 2052.0,
+"end": 2058.0,
+"p": {
+"none": 0.7438,
+"replay": 0.1881,
+"closeup": 0.0094,
+"goal_kick": 0.0006,
+"throw_in": 0.0013,
+"cross": 0.0017,
+"shot": 0.0037,
+"corner": 0.0011,
+"free_kick": 0.0011,
+"offside": 0.0225,
+"substitution": 0.0113,
+"card": 0.0154
+}
+},
+{
+"start": 2058.0,
+"end": 2064.0,
+"p": {
+"none": 0.8648,
+"replay": 0.0804,
+"closeup": 0.0062,
+"goal_kick": 0.0005,
+"throw_in": 0.0018,
+"cross": 0.0017,
+"shot": 0.0028,
+"corner": 0.0013,
+"free_kick": 0.0012,
+"offside": 0.0191,
+"substitution": 0.007,
+"card": 0.0131
+}
+},
+{
+"start": 2064.0,
+"end": 2070.0,
+"p": {
+"none": 0.6856,
+"replay": 0.2522,
+"closeup": 0.0126,
+"goal_kick": 0.0007,
+"throw_in": 0.0023,
+"cross": 0.0038,
+"shot": 0.0025,
+"corner": 0.002,
+"free_kick": 0.0012,
+"offside": 0.0126,
+"substitution": 0.0111,
+"card": 0.0134
+}
+},
+{
+"start": 2070.0,
+"end": 2076.0,
+"p": {
+"none": 0.7698,
+"replay": 0.1181,
+"closeup": 0.0091,
+"goal_kick": 0.0007,
+"throw_in": 0.0019,
+"cross": 0.004,
+"shot": 0.0046,
+"corner": 0.0025,
+"free_kick": 0.0026,
+"offside": 0.0434,
+"substitution": 0.017,
+"card": 0.0263
+}
+},
+{
+"start": 2076.0,
+"end": 2082.0,
+"p": {
+"none": 0.0011,
+"replay": 0.0007,
+"closeup": 0.0052,
+"goal_kick": 0.0,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0028,
+"substitution": 0.0028,
+"card": 0.9869
+}
+},
+{
+"start": 2082.0,
+"end": 2088.0,
+"p": {
+"none": 0.7143,
+"replay": 0.2047,
+"closeup": 0.0079,
+"goal_kick": 0.0006,
+"throw_in": 0.0019,
+"cross": 0.0045,
+"shot": 0.0033,
+"corner": 0.0023,
+"free_kick": 0.0026,
+"offside": 0.0244,
+"substitution": 0.009,
+"card": 0.0244
+}
+},
+{
+"start": 2088.0,
+"end": 2094.0,
+"p": {
+"none": 0.4654,
+"replay": 0.194,
+"closeup": 0.0298,
+"goal_kick": 0.0015,
+"throw_in": 0.0026,
+"cross": 0.0091,
+"shot": 0.008,
+"corner": 0.0052,
+"free_kick": 0.0038,
+"offside": 0.0714,
+"substitution": 0.0382,
+"card": 0.1712
+}
+},
+{
+"start": 2094.0,
+"end": 2100.0,
+"p": {
+"none": 0.7221,
+"replay": 0.1826,
+"closeup": 0.0091,
+"goal_kick": 0.0009,
+"throw_in": 0.0028,
+"cross": 0.0075,
+"shot": 0.0043,
+"corner": 0.0055,
+"free_kick": 0.004,
+"offside": 0.0247,
+"substitution": 0.0132,
+"card": 0.0232
+}
+},
+{
+"start": 2100.0,
+"end": 2106.0,
+"p": {
+"none": 0.4554,
+"replay": 0.1016,
+"closeup": 0.0138,
+"goal_kick": 0.0017,
+"throw_in": 0.0054,
+"cross": 0.2151,
+"shot": 0.0241,
+"corner": 0.0177,
+"free_kick": 0.0045,
+"offside": 0.0791,
+"substitution": 0.02,
+"card": 0.0616
+}
+},
+{
+"start": 2106.0,
+"end": 2112.0,
+"p": {
+"none": 0.3095,
+"replay": 0.1656,
+"closeup": 0.0175,
+"goal_kick": 0.0053,
+"throw_in": 0.012,
+"cross": 0.1877,
+"shot": 0.0419,
+"corner": 0.0609,
+"free_kick": 0.0073,
+"offside": 0.0887,
+"substitution": 0.0254,
+"card": 0.0782
+}
+},
+{
+"start": 2112.0,
+"end": 2118.0,
+"p": {
+"none": 0.0536,
+"replay": 0.0473,
+"closeup": 0.1135,
+"goal_kick": 0.0473,
+"throw_in": 0.021,
+"cross": 0.0064,
+"shot": 0.0087,
+"corner": 0.0884,
+"free_kick": 0.0044,
+"offside": 0.0536,
+"substitution": 0.0473,
+"card": 0.5085
+}
+},
+{
+"start": 2118.0,
+"end": 2124.0,
+"p": {
+"none": 0.2085,
+"replay": 0.0985,
+"closeup": 0.0194,
+"goal_kick": 0.0032,
+"throw_in": 0.0071,
+"cross": 0.0985,
+"shot": 0.0437,
+"corner": 0.1623,
+"free_kick": 0.0869,
+"offside": 0.1116,
+"substitution": 0.0171,
+"card": 0.1433
+}
+},
+{
+"start": 2124.0,
+"end": 2130.0,
+"p": {
+"none": 0.1192,
+"replay": 0.2524,
+"closeup": 0.1052,
+"goal_kick": 0.0221,
+"throw_in": 0.0152,
+"cross": 0.0638,
+"shot": 0.0439,
+"corner": 0.0723,
+"free_kick": 0.0072,
+"offside": 0.0819,
+"substitution": 0.0638,
+"card": 0.1531
+}
+},
+{
+"start": 2130.0,
+"end": 2136.0,
+"p": {
+"none": 0.2502,
+"replay": 0.1043,
+"closeup": 0.0594,
+"goal_kick": 0.0717,
+"throw_in": 0.0117,
+"cross": 0.036,
+"shot": 0.015,
+"corner": 0.0181,
+"free_kick": 0.016,
+"offside": 0.1043,
+"substitution": 0.0299,
+"card": 0.2835
+}
+},
+{
+"start": 2136.0,
+"end": 2142.0,
+"p": {
+"none": 0.1053,
+"replay": 0.0467,
+"closeup": 0.0467,
+"goal_kick": 0.0046,
+"throw_in": 0.0063,
+"cross": 0.0104,
+"shot": 0.0052,
+"corner": 0.0412,
+"free_kick": 0.6059,
+"offside": 0.0364,
+"substitution": 0.0092,
+"card": 0.082
+}
+},
+{
+"start": 2142.0,
+"end": 2148.0,
+"p": {
+"none": 0.1274,
+"replay": 0.044,
+"closeup": 0.0251,
+"goal_kick": 0.0021,
+"throw_in": 0.0044,
+"cross": 0.0221,
+"shot": 0.0068,
+"corner": 0.0195,
+"free_kick": 0.5709,
+"offside": 0.044,
+"substitution": 0.0063,
+"card": 0.1274
+}
+},
+{
+"start": 2148.0,
+"end": 2154.0,
+"p": {
+"none": 0.5874,
+"replay": 0.2161,
+"closeup": 0.0138,
+"goal_kick": 0.0013,
+"throw_in": 0.0035,
+"cross": 0.0042,
+"shot": 0.0045,
+"corner": 0.0023,
+"free_kick": 0.0045,
+"offside": 0.0901,
+"substitution": 0.0242,
+"card": 0.0482
+}
+},
+{
+"start": 2154.0,
+"end": 2160.0,
+"p": {
+"none": 0.6975,
+"replay": 0.1764,
+"closeup": 0.0106,
+"goal_kick": 0.0008,
+"throw_in": 0.0018,
+"cross": 0.0032,
+"shot": 0.0041,
+"corner": 0.002,
+"free_kick": 0.0022,
+"offside": 0.0393,
+"substitution": 0.0175,
+"card": 0.0446
+}
+},
+{
+"start": 2160.0,
+"end": 2166.0,
+"p": {
+"none": 0.5599,
+"replay": 0.2645,
+"closeup": 0.0204,
+"goal_kick": 0.0013,
+"throw_in": 0.0031,
+"cross": 0.0066,
+"shot": 0.0058,
+"corner": 0.0031,
+"free_kick": 0.0024,
+"offside": 0.0521,
+"substitution": 0.0217,
+"card": 0.059
+}
+},
+{
+"start": 2166.0,
+"end": 2172.0,
+"p": {
+"none": 0.7924,
+"replay": 0.1377,
+"closeup": 0.0053,
+"goal_kick": 0.0005,
+"throw_in": 0.0018,
+"cross": 0.003,
+"shot": 0.003,
+"corner": 0.0017,
+"free_kick": 0.0016,
+"offside": 0.0128,
+"substitution": 0.0128,
+"card": 0.0271
+}
+},
+{
+"start": 2172.0,
+"end": 2178.0,
+"p": {
+"none": 0.5008,
+"replay": 0.1626,
+"closeup": 0.0194,
+"goal_kick": 0.0018,
+"throw_in": 0.0056,
+"cross": 0.0171,
+"shot": 0.0086,
+"corner": 0.0133,
+"free_kick": 0.0052,
+"offside": 0.1435,
+"substitution": 0.0234,
+"card": 0.0986
+}
+},
+{
+"start": 2178.0,
+"end": 2184.0,
+"p": {
+"none": 0.0178,
+"replay": 0.0058,
+"closeup": 0.0483,
+"goal_kick": 0.002,
+"throw_in": 0.0115,
+"cross": 0.0023,
+"shot": 0.0018,
+"corner": 0.0026,
+"free_kick": 0.001,
+"offside": 0.0258,
+"substitution": 0.0258,
+"card": 0.8555
+}
+},
+{
+"start": 2184.0,
+"end": 2190.0,
+"p": {
+"none": 0.2129,
+"replay": 0.0691,
+"closeup": 0.061,
+"goal_kick": 0.061,
+"throw_in": 0.0834,
+"cross": 0.0128,
+"shot": 0.0078,
+"corner": 0.1765,
+"free_kick": 0.0094,
+"offside": 0.0506,
+"substitution": 0.0145,
+"card": 0.2412
+}
+},
+{
+"start": 2190.0,
+"end": 2196.0,
+"p": {
+"none": 0.587,
+"replay": 0.1682,
+"closeup": 0.0138,
+"goal_kick": 0.0012,
+"throw_in": 0.0031,
+"cross": 0.0054,
+"shot": 0.0054,
+"corner": 0.0051,
+"free_kick": 0.0048,
+"offside": 0.0399,
+"substitution": 0.0177,
+"card": 0.1484
+}
+},
+{
+"start": 2196.0,
+"end": 2202.0,
+"p": {
+"none": 0.8092,
+"replay": 0.1241,
+"closeup": 0.0084,
+"goal_kick": 0.0006,
+"throw_in": 0.0018,
+"cross": 0.0023,
+"shot": 0.0027,
+"corner": 0.0018,
+"free_kick": 0.0012,
+"offside": 0.0123,
+"substitution": 0.0096,
+"card": 0.026
+}
+},
+{
+"start": 2202.0,
+"end": 2208.0,
+"p": {
+"none": 0.849,
+"replay": 0.1149,
+"closeup": 0.0065,
+"goal_kick": 0.0004,
+"throw_in": 0.0012,
+"cross": 0.0015,
+"shot": 0.0025,
+"corner": 0.0012,
+"free_kick": 0.0013,
+"offside": 0.0083,
+"substitution": 0.0047,
+"card": 0.0083
+}
+},
+{
+"start": 2208.0,
+"end": 2214.0,
+"p": {
+"none": 0.7921,
+"replay": 0.1215,
+"closeup": 0.0094,
+"goal_kick": 0.0009,
+"throw_in": 0.0032,
+"cross": 0.005,
+"shot": 0.0042,
+"corner": 0.0039,
+"free_kick": 0.0024,
+"offside": 0.0175,
+"substitution": 0.0175,
+"card": 0.0225
+}
+},
+{
+"start": 2214.0,
+"end": 2220.0,
+"p": {
+"none": 0.6684,
+"replay": 0.1915,
+"closeup": 0.0157,
+"goal_kick": 0.0014,
+"throw_in": 0.0031,
+"cross": 0.0259,
+"shot": 0.009,
+"corner": 0.0074,
+"free_kick": 0.0074,
+"offside": 0.0259,
+"substitution": 0.013,
+"card": 0.0313
+}
+},
+{
+"start": 2220.0,
+"end": 2226.0,
+"p": {
+"none": 0.026,
+"replay": 0.0074,
+"closeup": 0.2971,
+"goal_kick": 0.0004,
+"throw_in": 0.0008,
+"cross": 0.001,
+"shot": 0.0007,
+"corner": 0.0005,
+"free_kick": 0.0008,
+"offside": 0.0148,
+"substitution": 0.0215,
+"card": 0.629
+}
+},
+{
+"start": 2226.0,
+"end": 2232.0,
+"p": {
+"none": 0.0023,
+"replay": 0.002,
+"closeup": 0.0004,
+"goal_kick": 0.0,
+"throw_in": 0.0,
+"cross": 0.0001,
+"shot": 0.0001,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0011,
+"substitution": 0.0016,
+"card": 0.9922
+}
+},
+{
+"start": 2232.0,
+"end": 2238.0,
+"p": {
+"none": 0.3807,
+"replay": 0.4889,
+"closeup": 0.0115,
+"goal_kick": 0.0008,
+"throw_in": 0.0026,
+"cross": 0.004,
+"shot": 0.0035,
+"corner": 0.0035,
+"free_kick": 0.0027,
+"offside": 0.0401,
+"substitution": 0.0101,
+"card": 0.0515
+}
+},
+{
+"start": 2238.0,
+"end": 2244.0,
+"p": {
+"none": 0.0052,
+"replay": 0.0007,
+"closeup": 0.0018,
+"goal_kick": 0.0,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0002,
+"free_kick": 0.0004,
+"offside": 0.0024,
+"substitution": 0.0029,
+"card": 0.986
+}
+},
+{
+"start": 2244.0,
+"end": 2250.0,
+"p": {
+"none": 0.0035,
+"replay": 0.0021,
+"closeup": 0.0035,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0003,
+"shot": 0.0002,
+"corner": 0.001,
+"free_kick": 0.0085,
+"offside": 0.0007,
+"substitution": 0.0007,
+"card": 0.9791
+}
+},
+{
+"start": 2250.0,
+"end": 2256.0,
+"p": {
+"none": 0.2348,
+"replay": 0.0673,
+"closeup": 0.0524,
+"goal_kick": 0.0013,
+"throw_in": 0.0033,
+"cross": 0.0067,
+"shot": 0.0049,
+"corner": 0.1257,
+"free_kick": 0.3015,
+"offside": 0.0408,
+"substitution": 0.0097,
+"card": 0.1516
+}
+},
+{
+"start": 2256.0,
+"end": 2262.0,
+"p": {
+"none": 0.1879,
+"replay": 0.114,
+"closeup": 0.0538,
+"goal_kick": 0.0024,
+"throw_in": 0.0034,
+"cross": 0.0039,
+"shot": 0.01,
+"corner": 0.1879,
+"free_kick": 0.1658,
+"offside": 0.0254,
+"substitution": 0.0326,
+"card": 0.2129
+}
+},
+{
+"start": 2262.0,
+"end": 2268.0,
+"p": {
+"none": 0.1541,
+"replay": 0.0567,
+"closeup": 0.0099,
+"goal_kick": 0.0018,
+"throw_in": 0.0053,
+"cross": 0.0236,
+"shot": 0.0119,
+"corner": 0.3263,
+"free_kick": 0.3263,
+"offside": 0.0323,
+"substitution": 0.0077,
+"card": 0.0442
+}
+},
+{
+"start": 2268.0,
+"end": 2274.0,
+"p": {
+"none": 0.2438,
+"replay": 0.1675,
+"closeup": 0.0095,
+"goal_kick": 0.0012,
+"throw_in": 0.0039,
+"cross": 0.033,
+"shot": 0.0095,
+"corner": 0.3547,
+"free_kick": 0.0351,
+"offside": 0.0791,
+"substitution": 0.0177,
+"card": 0.0451
+}
+},
+{
+"start": 2274.0,
+"end": 2280.0,
+"p": {
+"none": 0.1017,
+"replay": 0.0424,
+"closeup": 0.0146,
+"goal_kick": 0.0024,
+"throw_in": 0.0037,
+"cross": 0.0374,
+"shot": 0.0121,
+"corner": 0.3549,
+"free_kick": 0.1899,
+"offside": 0.0792,
+"substitution": 0.0138,
+"card": 0.1479
+}
+},
+{
+"start": 2280.0,
+"end": 2286.0,
+"p": {
+"none": 0.0102,
+"replay": 0.0066,
+"closeup": 0.1412,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0004,
+"shot": 0.0007,
+"corner": 0.0004,
+"free_kick": 0.0002,
+"offside": 0.014,
+"substitution": 0.0131,
+"card": 0.8126
+}
+},
+{
+"start": 2286.0,
+"end": 2292.0,
+"p": {
+"none": 0.1916,
+"replay": 0.1162,
+"closeup": 0.0799,
+"goal_kick": 0.0024,
+"throw_in": 0.0095,
+"cross": 0.0455,
+"shot": 0.0294,
+"corner": 0.1162,
+"free_kick": 0.1092,
+"offside": 0.0584,
+"substitution": 0.0244,
+"card": 0.2172
+}
+},
+{
+"start": 2292.0,
+"end": 2298.0,
+"p": {
+"none": 0.3769,
+"replay": 0.2286,
+"closeup": 0.0351,
+"goal_kick": 0.0035,
+"throw_in": 0.0121,
+"cross": 0.0479,
+"shot": 0.01,
+"corner": 0.01,
+"free_kick": 0.0069,
+"offside": 0.1014,
+"substitution": 0.02,
+"card": 0.1476
+}
+},
+{
+"start": 2298.0,
+"end": 2304.0,
+"p": {
+"none": 0.3139,
+"replay": 0.0845,
+"closeup": 0.2157,
+"goal_kick": 0.0031,
+"throw_in": 0.0074,
+"cross": 0.0065,
+"shot": 0.0084,
+"corner": 0.0057,
+"free_kick": 0.0013,
+"offside": 0.0545,
+"substitution": 0.0545,
+"card": 0.2445
+}
+},
+{
+"start": 2304.0,
+"end": 2310.0,
+"p": {
+"none": 0.6256,
+"replay": 0.2031,
+"closeup": 0.013,
+"goal_kick": 0.0012,
+"throw_in": 0.0033,
+"cross": 0.0108,
+"shot": 0.0042,
+"corner": 0.0058,
+"free_kick": 0.0058,
+"offside": 0.04,
+"substitution": 0.0214,
+"card": 0.0659
+}
+},
+{
+"start": 2310.0,
+"end": 2316.0,
+"p": {
+"none": 0.6301,
+"replay": 0.1805,
+"closeup": 0.0131,
+"goal_kick": 0.001,
+"throw_in": 0.0029,
+"cross": 0.0042,
+"shot": 0.0037,
+"corner": 0.0066,
+"free_kick": 0.004,
+"offside": 0.0277,
+"substitution": 0.0295,
+"card": 0.0966
+}
+},
+{
+"start": 2316.0,
+"end": 2322.0,
+"p": {
+"none": 0.1394,
+"replay": 0.0846,
+"closeup": 0.0095,
+"goal_kick": 0.001,
+"throw_in": 0.0048,
+"cross": 0.0114,
+"shot": 0.0048,
+"corner": 0.2298,
+"free_kick": 0.3789,
+"offside": 0.0311,
+"substitution": 0.0089,
+"card": 0.0958
+}
+},
+{
+"start": 2322.0,
+"end": 2328.0,
+"p": {
+"none": 0.0362,
+"replay": 0.0219,
+"closeup": 0.0036,
+"goal_kick": 0.0007,
+"throw_in": 0.002,
+"cross": 0.0052,
+"shot": 0.0038,
+"corner": 0.1621,
+"free_kick": 0.5658,
+"offside": 0.0319,
+"substitution": 0.0046,
+"card": 0.1621
+}
+},
+{
+"start": 2328.0,
+"end": 2334.0,
+"p": {
+"none": 0.0181,
+"replay": 0.0181,
+"closeup": 0.0263,
+"goal_kick": 0.0006,
+"throw_in": 0.0009,
+"cross": 0.0012,
+"shot": 0.0015,
+"corner": 0.002,
+"free_kick": 0.0055,
+"offside": 0.0299,
+"substitution": 0.0233,
+"card": 0.8725
+}
+},
+{
+"start": 2334.0,
+"end": 2340.0,
+"p": {
+"none": 0.1058,
+"replay": 0.05,
+"closeup": 0.0049,
+"goal_kick": 0.0009,
+"throw_in": 0.0032,
+"cross": 0.0222,
+"shot": 0.0092,
+"corner": 0.4743,
+"free_kick": 0.2539,
+"offside": 0.0184,
+"substitution": 0.0072,
+"card": 0.05
+}
+},
+{
+"start": 2340.0,
+"end": 2346.0,
+"p": {
+"none": 0.7441,
+"replay": 0.166,
+"closeup": 0.0094,
+"goal_kick": 0.0009,
+"throw_in": 0.0034,
+"cross": 0.0029,
+"shot": 0.0037,
+"corner": 0.003,
+"free_kick": 0.0034,
+"offside": 0.0255,
+"substitution": 0.0106,
+"card": 0.0271
+}
+},
+{
+"start": 2346.0,
+"end": 2352.0,
+"p": {
+"none": 0.7158,
+"replay": 0.181,
+"closeup": 0.0131,
+"goal_kick": 0.0009,
+"throw_in": 0.0023,
+"cross": 0.0038,
+"shot": 0.0038,
+"corner": 0.0019,
+"free_kick": 0.0023,
+"offside": 0.0278,
+"substitution": 0.0096,
+"card": 0.0379
+}
+},
+{
+"start": 2352.0,
+"end": 2358.0,
+"p": {
+"none": 0.643,
+"replay": 0.0598,
+"closeup": 0.0104,
+"goal_kick": 0.0012,
+"throw_in": 0.0043,
+"cross": 0.0182,
+"shot": 0.0059,
+"corner": 0.0043,
+"free_kick": 0.0034,
+"offside": 0.0265,
+"substitution": 0.0142,
+"card": 0.2087
+}
+},
+{
+"start": 2358.0,
+"end": 2364.0,
+"p": {
+"none": 0.3759,
+"replay": 0.1077,
+"closeup": 0.0328,
+"goal_kick": 0.001,
+"throw_in": 0.0044,
+"cross": 0.0065,
+"shot": 0.0047,
+"corner": 0.0039,
+"free_kick": 0.0025,
+"offside": 0.0449,
+"substitution": 0.0396,
+"card": 0.3759
+}
+},
+{
+"start": 2364.0,
+"end": 2370.0,
+"p": {
+"none": 0.8224,
+"replay": 0.0867,
+"closeup": 0.0067,
+"goal_kick": 0.0006,
+"throw_in": 0.0026,
+"cross": 0.0041,
+"shot": 0.0032,
+"corner": 0.0017,
+"free_kick": 0.0023,
+"offside": 0.0219,
+"substitution": 0.016,
+"card": 0.0319
+}
+},
+{
+"start": 2370.0,
+"end": 2376.0,
+"p": {
+"none": 0.5523,
+"replay": 0.2032,
+"closeup": 0.013,
+"goal_kick": 0.0011,
+"throw_in": 0.0031,
+"cross": 0.0747,
+"shot": 0.0138,
+"corner": 0.0201,
+"free_kick": 0.0084,
+"offside": 0.0353,
+"substitution": 0.0167,
+"card": 0.0582
+}
+},
+{
+"start": 2376.0,
+"end": 2382.0,
+"p": {
+"none": 0.32,
+"replay": 0.1039,
+"closeup": 0.008,
+"goal_kick": 0.0016,
+"throw_in": 0.0085,
+"cross": 0.1941,
+"shot": 0.028,
+"corner": 0.1512,
+"free_kick": 0.0714,
+"offside": 0.0407,
+"substitution": 0.017,
+"card": 0.0556
+}
+},
+{
+"start": 2382.0,
+"end": 2388.0,
+"p": {
+"none": 0.7775,
+"replay": 0.1531,
+"closeup": 0.0059,
+"goal_kick": 0.0008,
+"throw_in": 0.0023,
+"cross": 0.0049,
+"shot": 0.0052,
+"corner": 0.003,
+"free_kick": 0.0036,
+"offside": 0.0207,
+"substitution": 0.0111,
+"card": 0.0118
+}
+},
+{
+"start": 2388.0,
+"end": 2394.0,
+"p": {
+"none": 0.1144,
+"replay": 0.0612,
+"closeup": 0.0069,
+"goal_kick": 0.0015,
+"throw_in": 0.0069,
+"cross": 0.0421,
+"shot": 0.0106,
+"corner": 0.2422,
+"free_kick": 0.3993,
+"offside": 0.0612,
+"substitution": 0.0061,
+"card": 0.0477
+}
+},
+{
+"start": 2394.0,
+"end": 2400.0,
+"p": {
+"none": 0.1865,
+"replay": 0.1131,
+"closeup": 0.0127,
+"goal_kick": 0.0017,
+"throw_in": 0.0044,
+"cross": 0.0324,
+"shot": 0.0072,
+"corner": 0.3076,
+"free_kick": 0.1646,
+"offside": 0.0606,
+"substitution": 0.0093,
+"card": 0.0998
+}
+},
+{
+"start": 2400.0,
+"end": 2406.0,
+"p": {
+"none": 0.1564,
+"replay": 0.0421,
+"closeup": 0.0128,
+"goal_kick": 0.0009,
+"throw_in": 0.0032,
+"cross": 0.2579,
+"shot": 0.0176,
+"corner": 0.4252,
+"free_kick": 0.01,
+"offside": 0.0212,
+"substitution": 0.0078,
+"card": 0.0448
+}
+},
+{
+"start": 2406.0,
+"end": 2412.0,
+"p": {
+"none": 0.6117,
+"replay": 0.1753,
+"closeup": 0.0223,
+"goal_kick": 0.0019,
+"throw_in": 0.0077,
+"cross": 0.0938,
+"shot": 0.0112,
+"corner": 0.0099,
+"free_kick": 0.0034,
+"offside": 0.0286,
+"substitution": 0.0119,
+"card": 0.0223
+}
+},
+{
+"start": 2412.0,
+"end": 2418.0,
+"p": {
+"none": 0.778,
+"replay": 0.1352,
+"closeup": 0.0076,
+"goal_kick": 0.0009,
+"throw_in": 0.0034,
+"cross": 0.0032,
+"shot": 0.0036,
+"corner": 0.0032,
+"free_kick": 0.0025,
+"offside": 0.0118,
+"substitution": 0.0143,
+"card": 0.0364
+}
+},
+{
+"start": 2418.0,
+"end": 2424.0,
+"p": {
+"none": 0.3751,
+"replay": 0.1772,
+"closeup": 0.0212,
+"goal_kick": 0.0015,
+"throw_in": 0.0121,
+"cross": 0.1772,
+"shot": 0.0448,
+"corner": 0.0255,
+"free_kick": 0.0069,
+"offside": 0.0739,
+"substitution": 0.0371,
+"card": 0.0477
+}
+},
+{
+"start": 2424.0,
+"end": 2430.0,
+"p": {
+"none": 0.0157,
+"replay": 0.0108,
+"closeup": 0.7588,
+"goal_kick": 0.0004,
+"throw_in": 0.0003,
+"cross": 0.0008,
+"shot": 0.0008,
+"corner": 0.0003,
+"free_kick": 0.0003,
+"offside": 0.0131,
+"substitution": 0.0294,
+"card": 0.1693
+}
+},
+{
+"start": 2430.0,
+"end": 2436.0,
+"p": {
+"none": 0.0016,
+"replay": 0.0027,
+"closeup": 0.0792,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.0025,
+"substitution": 0.0617,
+"card": 0.8515
+}
+},
+{
+"start": 2436.0,
+"end": 2442.0,
+"p": {
+"none": 0.0052,
+"replay": 0.0052,
+"closeup": 0.076,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0005,
+"corner": 0.0003,
+"free_kick": 0.0002,
+"offside": 0.0091,
+"substitution": 0.0861,
+"card": 0.8168
+}
+},
+{
+"start": 2442.0,
+"end": 2448.0,
+"p": {
+"none": 0.006,
+"replay": 0.0029,
+"closeup": 0.0539,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0005,
+"shot": 0.0009,
+"corner": 0.0004,
+"free_kick": 0.0004,
+"offside": 0.0128,
+"substitution": 0.0784,
+"card": 0.8433
+}
+},
+{
+"start": 2448.0,
+"end": 2454.0,
+"p": {
+"none": 0.124,
+"replay": 0.3167,
+"closeup": 0.0429,
+"goal_kick": 0.0024,
+"throw_in": 0.0062,
+"cross": 0.0456,
+"shot": 0.0378,
+"corner": 0.055,
+"free_kick": 0.0456,
+"offside": 0.1165,
+"substitution": 0.0378,
+"card": 0.1695
+}
+},
+{
+"start": 2454.0,
+"end": 2460.0,
+"p": {
+"none": 0.0519,
+"replay": 0.023,
+"closeup": 0.0048,
+"goal_kick": 0.0005,
+"throw_in": 0.0019,
+"cross": 0.0096,
+"shot": 0.0179,
+"corner": 0.8116,
+"free_kick": 0.0203,
+"offside": 0.0278,
+"substitution": 0.0045,
+"card": 0.0261
+}
+},
+{
+"start": 2460.0,
+"end": 2466.0,
+"p": {
+"none": 0.0163,
+"replay": 0.0044,
+"closeup": 0.8363,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0003,
+"shot": 0.0008,
+"corner": 0.0006,
+"free_kick": 0.0002,
+"offside": 0.0036,
+"substitution": 0.0087,
+"card": 0.1282
+}
+},
+{
+"start": 2466.0,
+"end": 2472.0,
+"p": {
+"none": 0.0035,
+"replay": 0.0035,
+"closeup": 0.0629,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0004,
+"shot": 0.0005,
+"corner": 0.0003,
+"free_kick": 0.0001,
+"offside": 0.0109,
+"substitution": 0.049,
+"card": 0.8684
+}
+},
+{
+"start": 2472.0,
+"end": 2478.0,
+"p": {
+"none": 0.0069,
+"replay": 0.0037,
+"closeup": 0.0423,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0005,
+"corner": 0.0003,
+"free_kick": 0.0005,
+"offside": 0.0048,
+"substitution": 0.0897,
+"card": 0.8506
+}
+},
+{
+"start": 2478.0,
+"end": 2484.0,
+"p": {
+"none": 0.8462,
+"replay": 0.0787,
+"closeup": 0.0107,
+"goal_kick": 0.0008,
+"throw_in": 0.0024,
+"cross": 0.0019,
+"shot": 0.0027,
+"corner": 0.0019,
+"free_kick": 0.0014,
+"offside": 0.0113,
+"substitution": 0.0094,
+"card": 0.0328
+}
+},
+{
+"start": 2484.0,
+"end": 2490.0,
+"p": {
+"none": 0.8093,
+"replay": 0.1241,
+"closeup": 0.0079,
+"goal_kick": 0.0007,
+"throw_in": 0.002,
+"cross": 0.002,
+"shot": 0.0027,
+"corner": 0.0011,
+"free_kick": 0.0023,
+"offside": 0.019,
+"substitution": 0.0131,
+"card": 0.0158
+}
+},
+{
+"start": 2490.0,
+"end": 2496.0,
+"p": {
+"none": 0.9002,
+"replay": 0.0508,
+"closeup": 0.0054,
+"goal_kick": 0.0004,
+"throw_in": 0.0018,
+"cross": 0.0029,
+"shot": 0.0027,
+"corner": 0.002,
+"free_kick": 0.0011,
+"offside": 0.0088,
+"substitution": 0.0094,
+"card": 0.0146
+}
+},
+{
+"start": 2496.0,
+"end": 2502.0,
+"p": {
+"none": 0.3909,
+"replay": 0.077,
+"closeup": 0.0183,
+"goal_kick": 0.0023,
+"throw_in": 0.0046,
+"cross": 0.3909,
+"shot": 0.0221,
+"corner": 0.0072,
+"free_kick": 0.0038,
+"offside": 0.0497,
+"substitution": 0.0067,
+"card": 0.0266
+}
+},
+{
+"start": 2502.0,
+"end": 2508.0,
+"p": {
+"none": 0.1606,
+"replay": 0.2062,
+"closeup": 0.0758,
+"goal_kick": 0.0103,
+"throw_in": 0.0149,
+"cross": 0.0758,
+"shot": 0.0231,
+"corner": 0.0316,
+"free_kick": 0.0149,
+"offside": 0.125,
+"substitution": 0.0555,
+"card": 0.2062
+}
+},
+{
+"start": 2508.0,
+"end": 2514.0,
+"p": {
+"none": 0.0995,
+"replay": 0.5726,
+"closeup": 0.0222,
+"goal_kick": 0.0012,
+"throw_in": 0.0028,
+"cross": 0.2387,
+"shot": 0.0056,
+"corner": 0.0036,
+"free_kick": 0.0018,
+"offside": 0.0196,
+"substitution": 0.0039,
+"card": 0.0285
+}
+},
+{
+"start": 2514.0,
+"end": 2520.0,
+"p": {
+"none": 0.1537,
+"replay": 0.6889,
+"closeup": 0.0134,
+"goal_kick": 0.0005,
+"throw_in": 0.0015,
+"cross": 0.0046,
+"shot": 0.0015,
+"corner": 0.0012,
+"free_kick": 0.0021,
+"offside": 0.0322,
+"substitution": 0.0072,
+"card": 0.0932
+}
+},
+{
+"start": 2520.0,
+"end": 2526.0,
+"p": {
+"none": 0.5034,
+"replay": 0.1273,
+"closeup": 0.0302,
+"goal_kick": 0.001,
+"throw_in": 0.0025,
+"cross": 0.0019,
+"shot": 0.0026,
+"corner": 0.0016,
+"free_kick": 0.0028,
+"offside": 0.0322,
+"substitution": 0.0251,
+"card": 0.2694
+}
+},
+{
+"start": 2526.0,
+"end": 2532.0,
+"p": {
+"none": 0.8212,
+"replay": 0.1111,
+"closeup": 0.0125,
+"goal_kick": 0.0008,
+"throw_in": 0.0025,
+"cross": 0.0025,
+"shot": 0.0034,
+"corner": 0.0014,
+"free_kick": 0.0023,
+"offside": 0.0206,
+"substitution": 0.0086,
+"card": 0.0133
+}
+},
+{
+"start": 2532.0,
+"end": 2538.0,
+"p": {
+"none": 0.5687,
+"replay": 0.1438,
+"closeup": 0.0301,
+"goal_kick": 0.0022,
+"throw_in": 0.0111,
+"cross": 0.0412,
+"shot": 0.0111,
+"corner": 0.0098,
+"free_kick": 0.0049,
+"offside": 0.0679,
+"substitution": 0.022,
+"card": 0.0872
+}
+},
+{
+"start": 2538.0,
+"end": 2544.0,
+"p": {
+"none": 0.1396,
+"replay": 0.0847,
+"closeup": 0.013,
+"goal_kick": 0.002,
+"throw_in": 0.0177,
+"cross": 0.0122,
+"shot": 0.0079,
+"corner": 0.0453,
+"free_kick": 0.43,
+"offside": 0.1232,
+"substitution": 0.0157,
+"card": 0.1087
+}
+},
+{
+"start": 2544.0,
+"end": 2550.0,
+"p": {
+"none": 0.3571,
+"replay": 0.0848,
+"closeup": 0.0122,
+"goal_kick": 0.0019,
+"throw_in": 0.0108,
+"cross": 0.0189,
+"shot": 0.0074,
+"corner": 0.0312,
+"free_kick": 0.2781,
+"offside": 0.0548,
+"substitution": 0.0115,
+"card": 0.1314
+}
+},
+{
+"start": 2550.0,
+"end": 2556.0,
+"p": {
+"none": 0.6844,
+"replay": 0.1527,
+"closeup": 0.0171,
+"goal_kick": 0.0017,
+"throw_in": 0.0071,
+"cross": 0.032,
+"shot": 0.0142,
+"corner": 0.0071,
+"free_kick": 0.0046,
+"offside": 0.0363,
+"substitution": 0.0161,
+"card": 0.0265
+}
+},
+{
+"start": 2556.0,
+"end": 2562.0,
+"p": {
+"none": 0.2676,
+"replay": 0.0869,
+"closeup": 0.0133,
+"goal_kick": 0.0019,
+"throw_in": 0.0052,
+"cross": 0.0282,
+"shot": 0.011,
+"corner": 0.0265,
+"free_kick": 0.3437,
+"offside": 0.072,
+"substitution": 0.0171,
+"card": 0.1264
+}
+},
+{
+"start": 2562.0,
+"end": 2568.0,
+"p": {
+"none": 0.7748,
+"replay": 0.1049,
+"closeup": 0.0098,
+"goal_kick": 0.0006,
+"throw_in": 0.0032,
+"cross": 0.0038,
+"shot": 0.0046,
+"corner": 0.0043,
+"free_kick": 0.0028,
+"offside": 0.0386,
+"substitution": 0.032,
+"card": 0.0206
+}
+},
+{
+"start": 2568.0,
+"end": 2574.0,
+"p": {
+"none": 0.7698,
+"replay": 0.1338,
+"closeup": 0.0097,
+"goal_kick": 0.0007,
+"throw_in": 0.0019,
+"cross": 0.0023,
+"shot": 0.0024,
+"corner": 0.0026,
+"free_kick": 0.003,
+"offside": 0.028,
+"substitution": 0.0298,
+"card": 0.016
+}
+},
+{
+"start": 2574.0,
+"end": 2580.0,
+"p": {
+"none": 0.7958,
+"replay": 0.1383,
+"closeup": 0.0078,
+"goal_kick": 0.0006,
+"throw_in": 0.0016,
+"cross": 0.0017,
+"shot": 0.0021,
+"corner": 0.0014,
+"free_kick": 0.0014,
+"offside": 0.0199,
+"substitution": 0.0129,
+"card": 0.0165
+}
+},
+{
+"start": 2580.0,
+"end": 2586.0,
+"p": {
+"none": 0.7224,
+"replay": 0.1612,
+"closeup": 0.0097,
+"goal_kick": 0.0011,
+"throw_in": 0.003,
+"cross": 0.0091,
+"shot": 0.0063,
+"corner": 0.0024,
+"free_kick": 0.0028,
+"offside": 0.036,
+"substitution": 0.0181,
+"card": 0.028
+}
+},
+{
+"start": 2586.0,
+"end": 2592.0,
+"p": {
+"none": 0.2238,
+"replay": 0.0823,
+"closeup": 0.0092,
+"goal_kick": 0.0013,
+"throw_in": 0.0053,
+"cross": 0.1538,
+"shot": 0.0208,
+"corner": 0.0441,
+"free_kick": 0.2874,
+"offside": 0.1057,
+"substitution": 0.0162,
+"card": 0.0499
+}
+},
+{
+"start": 2592.0,
+"end": 2598.0,
+"p": {
+"none": 0.1107,
+"replay": 0.1255,
+"closeup": 0.0232,
+"goal_kick": 0.0043,
+"throw_in": 0.0085,
+"cross": 0.2069,
+"shot": 0.0218,
+"corner": 0.028,
+"free_kick": 0.0317,
+"offside": 0.0977,
+"substitution": 0.0407,
+"card": 0.301
+}
+},
+{
+"start": 2598.0,
+"end": 2604.0,
+"p": {
+"none": 0.1724,
+"replay": 0.0814,
+"closeup": 0.0091,
+"goal_kick": 0.0008,
+"throw_in": 0.003,
+"cross": 0.0104,
+"shot": 0.0059,
+"corner": 0.2213,
+"free_kick": 0.3649,
+"offside": 0.03,
+"substitution": 0.0086,
+"card": 0.0923
+}
+},
+{
+"start": 2604.0,
+"end": 2610.0,
+"p": {
+"none": 0.0383,
+"replay": 0.0205,
+"closeup": 0.0038,
+"goal_kick": 0.0005,
+"throw_in": 0.002,
+"cross": 0.0033,
+"shot": 0.0052,
+"corner": 0.6788,
+"free_kick": 0.2204,
+"offside": 0.0091,
+"substitution": 0.0031,
+"card": 0.015
+}
+},
+{
+"start": 2610.0,
+"end": 2616.0,
+"p": {
+"none": 0.1168,
+"replay": 0.0552,
+"closeup": 0.0245,
+"goal_kick": 0.0012,
+"throw_in": 0.0055,
+"cross": 0.0075,
+"shot": 0.0096,
+"corner": 0.3176,
+"free_kick": 0.3599,
+"offside": 0.0168,
+"substitution": 0.0051,
+"card": 0.0803
+}
+},
+{
+"start": 2616.0,
+"end": 2622.0,
+"p": {
+"none": 0.0407,
+"replay": 0.0491,
+"closeup": 0.0075,
+"goal_kick": 0.0005,
+"throw_in": 0.0029,
+"cross": 0.0205,
+"shot": 0.0059,
+"corner": 0.6367,
+"free_kick": 0.2067,
+"offside": 0.0071,
+"substitution": 0.0019,
+"card": 0.0205
+}
+},
+{
+"start": 2622.0,
+"end": 2628.0,
+"p": {
+"none": 0.1949,
+"replay": 0.0921,
+"closeup": 0.0717,
+"goal_kick": 0.0025,
+"throw_in": 0.0055,
+"cross": 0.1426,
+"shot": 0.0233,
+"corner": 0.0594,
+"free_kick": 0.0063,
+"offside": 0.0525,
+"substitution": 0.0281,
+"card": 0.3213
+}
+},
+{
+"start": 2628.0,
+"end": 2634.0,
+"p": {
+"none": 0.127,
+"replay": 0.0364,
+"closeup": 0.0043,
+"goal_kick": 0.0005,
+"throw_in": 0.0028,
+"cross": 0.0076,
+"shot": 0.0052,
+"corner": 0.3913,
+"free_kick": 0.3913,
+"offside": 0.0098,
+"substitution": 0.0016,
+"card": 0.0221
+}
+},
+{
+"start": 2634.0,
+"end": 2640.0,
+"p": {
+"none": 0.3465,
+"replay": 0.1855,
+"closeup": 0.0303,
+"goal_kick": 0.0025,
+"throw_in": 0.0143,
+"cross": 0.0389,
+"shot": 0.0602,
+"corner": 0.0267,
+"free_kick": 0.0134,
+"offside": 0.0933,
+"substitution": 0.0441,
+"card": 0.1444
+}
+},
+{
+"start": 2640.0,
+"end": 2646.0,
+"p": {
+"none": 0.1819,
+"replay": 0.1819,
+"closeup": 0.0629,
+"goal_kick": 0.0052,
+"throw_in": 0.0075,
+"cross": 0.2647,
+"shot": 0.1605,
+"corner": 0.0336,
+"free_kick": 0.0043,
+"offside": 0.0262,
+"substitution": 0.0159,
+"card": 0.0555
+}
+},
+{
+"start": 2646.0,
+"end": 2652.0,
+"p": {
+"none": 0.0045,
+"replay": 0.0051,
+"closeup": 0.973,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0,
+"free_kick": 0.0,
+"offside": 0.0008,
+"substitution": 0.0023,
+"card": 0.0139
+}
+},
+{
+"start": 2652.0,
+"end": 2658.0,
+"p": {
+"none": 0.4394,
+"replay": 0.1427,
+"closeup": 0.2665,
+"goal_kick": 0.0017,
+"throw_in": 0.0017,
+"cross": 0.0036,
+"shot": 0.002,
+"corner": 0.0013,
+"free_kick": 0.0014,
+"offside": 0.0233,
+"substitution": 0.0299,
+"card": 0.0865
+}
+},
+{
+"start": 2658.0,
+"end": 2664.0,
+"p": {
+"none": 0.0789,
+"replay": 0.0121,
+"closeup": 0.0027,
+"goal_kick": 0.0003,
+"throw_in": 0.0011,
+"cross": 0.0009,
+"shot": 0.0008,
+"corner": 0.0006,
+"free_kick": 0.001,
+"offside": 0.8488,
+"substitution": 0.005,
+"card": 0.0479
+}
+},
+{
+"start": 2664.0,
+"end": 2670.0,
+"p": {
+"none": 0.0115,
+"replay": 0.0045,
+"closeup": 0.9758,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0001,
+"shot": 0.0002,
+"corner": 0.0,
+"free_kick": 0.0,
+"offside": 0.0004,
+"substitution": 0.0027,
+"card": 0.0045
+}
+},
+{
+"start": 2670.0,
+"end": 2676.0,
+"p": {
+"none": 0.0548,
+"replay": 0.0548,
+"closeup": 0.8576,
+"goal_kick": 0.0005,
+"throw_in": 0.0006,
+"cross": 0.0004,
+"shot": 0.0009,
+"corner": 0.0003,
+"free_kick": 0.0002,
+"offside": 0.0033,
+"substitution": 0.0108,
+"card": 0.0157
+}
+},
+{
+"start": 2676.0,
+"end": 2682.0,
+"p": {
+"none": 0.8771,
+"replay": 0.072,
+"closeup": 0.0086,
+"goal_kick": 0.0006,
+"throw_in": 0.0025,
+"cross": 0.0013,
+"shot": 0.0028,
+"corner": 0.0018,
+"free_kick": 0.0019,
+"offside": 0.0092,
+"substitution": 0.0125,
+"card": 0.0097
+}
+},
+{
+"start": 2682.0,
+"end": 2688.0,
+"p": {
+"none": 0.6948,
+"replay": 0.1757,
+"closeup": 0.0144,
+"goal_kick": 0.0013,
+"throw_in": 0.0036,
+"cross": 0.0163,
+"shot": 0.0053,
+"corner": 0.0025,
+"free_kick": 0.0027,
+"offside": 0.0305,
+"substitution": 0.0135,
+"card": 0.0392
+}
+},
+{
+"start": 2688.0,
+"end": 2694.0,
+"p": {
+"none": 0.8142,
+"replay": 0.1249,
+"closeup": 0.0033,
+"goal_kick": 0.0006,
+"throw_in": 0.0021,
+"cross": 0.009,
+"shot": 0.0031,
+"corner": 0.0024,
+"free_kick": 0.002,
+"offside": 0.0132,
+"substitution": 0.007,
+"card": 0.018
+}
+},
+{
+"start": 2694.0,
+"end": 2700.0,
+"p": {
+"none": 0.8629,
+"replay": 0.0803,
+"closeup": 0.0045,
+"goal_kick": 0.0003,
+"throw_in": 0.0011,
+"cross": 0.0016,
+"shot": 0.0026,
+"corner": 0.001,
+"free_kick": 0.0017,
+"offside": 0.0168,
+"substitution": 0.0148,
+"card": 0.0123
+}
+},
+{
+"start": 2700.0,
+"end": 2706.0,
+"p": {
+"none": 0.0162,
+"replay": 0.0068,
+"closeup": 0.0025,
+"goal_kick": 0.0002,
+"throw_in": 0.0005,
+"cross": 0.0009,
+"shot": 0.0009,
+"corner": 0.0009,
+"free_kick": 0.001,
+"offside": 0.0135,
+"substitution": 0.1745,
+"card": 0.7822
+}
+},
+{
+"start": 2706.0,
+"end": 2712.0,
+"p": {
+"none": 0.5895,
+"replay": 0.2168,
+"closeup": 0.0115,
+"goal_kick": 0.0011,
+"throw_in": 0.0029,
+"cross": 0.0037,
+"shot": 0.0058,
+"corner": 0.0029,
+"free_kick": 0.0033,
+"offside": 0.0515,
+"substitution": 0.0312,
+"card": 0.0798
+}
+},
+{
+"start": 2712.0,
+"end": 2718.0,
+"p": {
+"none": 0.3067,
+"replay": 0.3067,
+"closeup": 0.0268,
+"goal_kick": 0.0023,
+"throw_in": 0.0053,
+"cross": 0.0729,
+"shot": 0.0105,
+"corner": 0.0099,
+"free_kick": 0.0068,
+"offside": 0.1449,
+"substitution": 0.0344,
+"card": 0.0729
+}
+},
+{
+"start": 2718.0,
+"end": 2724.0,
+"p": {
+"none": 0.7322,
+"replay": 0.1851,
+"closeup": 0.0067,
+"goal_kick": 0.001,
+"throw_in": 0.0038,
+"cross": 0.0092,
+"shot": 0.0044,
+"corner": 0.0044,
+"free_kick": 0.0023,
+"offside": 0.0221,
+"substitution": 0.0104,
+"card": 0.0183
+}
+},
+{
+"start": 2724.0,
+"end": 2730.0,
+"p": {
+"none": 0.6844,
+"replay": 0.1961,
+"closeup": 0.0125,
+"goal_kick": 0.0011,
+"throw_in": 0.003,
+"cross": 0.0032,
+"shot": 0.0056,
+"corner": 0.0038,
+"free_kick": 0.0038,
+"offside": 0.0194,
+"substitution": 0.0234,
+"card": 0.0437
+}
+},
+{
+"start": 2730.0,
+"end": 2736.0,
+"p": {
+"none": 0.6659,
+"replay": 0.1908,
+"closeup": 0.0167,
+"goal_kick": 0.0013,
+"throw_in": 0.0042,
+"cross": 0.0101,
+"shot": 0.0061,
+"corner": 0.0095,
+"free_kick": 0.0037,
+"offside": 0.0275,
+"substitution": 0.0189,
+"card": 0.0453
+}
+},
+{
+"start": 2736.0,
+"end": 2742.0,
+"p": {
+"none": 0.8094,
+"replay": 0.1407,
+"closeup": 0.0051,
+"goal_kick": 0.0005,
+"throw_in": 0.0014,
+"cross": 0.0031,
+"shot": 0.0033,
+"corner": 0.0033,
+"free_kick": 0.0024,
+"offside": 0.0158,
+"substitution": 0.0048,
+"card": 0.0102
+}
+},
+{
+"start": 2742.0,
+"end": 2748.0,
+"p": {
+"none": 0.4036,
+"replay": 0.23,
+"closeup": 0.0482,
+"goal_kick": 0.0035,
+"throw_in": 0.0147,
+"cross": 0.0513,
+"shot": 0.0701,
+"corner": 0.0375,
+"free_kick": 0.0101,
+"offside": 0.0513,
+"substitution": 0.0214,
+"card": 0.0582
+}
+},
+{
+"start": 2748.0,
+"end": 2754.0,
+"p": {
+"none": 0.1248,
+"replay": 0.0278,
+"closeup": 0.2642,
+"goal_kick": 0.0012,
+"throw_in": 0.0019,
+"cross": 0.008,
+"shot": 0.0109,
+"corner": 0.0149,
+"free_kick": 0.0015,
+"offside": 0.0296,
+"substitution": 0.0217,
+"card": 0.4935
+}
+},
+{
+"start": 2754.0,
+"end": 2760.0,
+"p": {
+"none": 0.0151,
+"replay": 0.0036,
+"closeup": 0.9337,
+"goal_kick": 0.0001,
+"throw_in": 0.0001,
+"cross": 0.0002,
+"shot": 0.0003,
+"corner": 0.0001,
+"free_kick": 0.0001,
+"offside": 0.003,
+"substitution": 0.0026,
+"card": 0.041
+}
+},
+{
+"start": 2760.0,
+"end": 2766.0,
+"p": {
+"none": 0.2086,
+"replay": 0.0767,
+"closeup": 0.3439,
+"goal_kick": 0.0032,
+"throw_in": 0.0041,
+"cross": 0.0104,
+"shot": 0.0265,
+"corner": 0.0056,
+"free_kick": 0.0019,
+"offside": 0.0527,
+"substitution": 0.0301,
+"card": 0.2364
+}
+},
+{
+"start": 2766.0,
+"end": 2772.0,
+"p": {
+"none": 0.9512,
+"replay": 0.0287,
+"closeup": 0.0017,
+"goal_kick": 0.0002,
+"throw_in": 0.001,
+"cross": 0.001,
+"shot": 0.0012,
+"corner": 0.0009,
+"free_kick": 0.0007,
+"offside": 0.0039,
+"substitution": 0.0027,
+"card": 0.0068
+}
+},
+{
+"start": 2772.0,
+"end": 2778.0,
+"p": {
+"none": 0.6937,
+"replay": 0.1366,
+"closeup": 0.0119,
+"goal_kick": 0.0014,
+"throw_in": 0.0087,
+"cross": 0.0286,
+"shot": 0.0305,
+"corner": 0.0237,
+"free_kick": 0.0053,
+"offside": 0.0305,
+"substitution": 0.0105,
+"card": 0.0185
+}
+},
+{
+"start": 2778.0,
+"end": 2784.0,
+"p": {
+"none": 0.3624,
+"replay": 0.3624,
+"closeup": 0.0279,
+"goal_kick": 0.0016,
+"throw_in": 0.0066,
+"cross": 0.0232,
+"shot": 0.015,
+"corner": 0.0232,
+"free_kick": 0.0066,
+"offside": 0.0592,
+"substitution": 0.0204,
+"card": 0.0916
+}
+},
+{
+"start": 2784.0,
+"end": 2790.0,
+"p": {
+"none": 0.2353,
+"replay": 0.0866,
+"closeup": 0.0633,
+"goal_kick": 0.0038,
+"throw_in": 0.016,
+"cross": 0.0181,
+"shot": 0.0674,
+"corner": 0.0718,
+"free_kick": 0.0133,
+"offside": 0.1427,
+"substitution": 0.0463,
+"card": 0.2353
+}
+},
+{
+"start": 2790.0,
+"end": 2796.0,
+"p": {
+"none": 0.0341,
+"replay": 0.0071,
+"closeup": 0.8797,
+"goal_kick": 0.0003,
+"throw_in": 0.0006,
+"cross": 0.0008,
+"shot": 0.001,
+"corner": 0.0008,
+"free_kick": 0.0003,
+"offside": 0.0092,
+"substitution": 0.0134,
+"card": 0.0528
+}
+},
+{
+"start": 2796.0,
+"end": 2802.0,
+"p": {
+"none": 0.0556,
+"replay": 0.0141,
+"closeup": 0.8693,
+"goal_kick": 0.0003,
+"throw_in": 0.0007,
+"cross": 0.0006,
+"shot": 0.0006,
+"corner": 0.0002,
+"free_kick": 0.0003,
+"offside": 0.0038,
+"substitution": 0.0055,
+"card": 0.049
+}
+},
+{
+"start": 2802.0,
+"end": 2808.0,
+"p": {
+"none": 0.6721,
+"replay": 0.1097,
+"closeup": 0.0116,
+"goal_kick": 0.0019,
+"throw_in": 0.0245,
+"cross": 0.0168,
+"shot": 0.0048,
+"corner": 0.0116,
+"free_kick": 0.0023,
+"offside": 0.0277,
+"substitution": 0.0261,
+"card": 0.091
+}
+},
+{
+"start": 2808.0,
+"end": 2814.0,
+"p": {
+"none": 0.8602,
+"replay": 0.0706,
+"closeup": 0.0035,
+"goal_kick": 0.0004,
+"throw_in": 0.0023,
+"cross": 0.0027,
+"shot": 0.0027,
+"corner": 0.0018,
+"free_kick": 0.0015,
+"offside": 0.0158,
+"substitution": 0.0108,
+"card": 0.0277
+}
+},
+{
+"start": 2814.0,
+"end": 2820.0,
+"p": {
+"none": 0.7885,
+"replay": 0.1209,
+"closeup": 0.0077,
+"goal_kick": 0.001,
+"throw_in": 0.0032,
+"cross": 0.0022,
+"shot": 0.0032,
+"corner": 0.002,
+"free_kick": 0.0025,
+"offside": 0.0164,
+"substitution": 0.0106,
+"card": 0.0418
+}
+},
+{
+"start": 2820.0,
+"end": 2826.0,
+"p": {
+"none": 0.54,
+"replay": 0.1987,
+"closeup": 0.0185,
+"goal_kick": 0.0013,
+"throw_in": 0.006,
+"cross": 0.0687,
+"shot": 0.0223,
+"corner": 0.0223,
+"free_kick": 0.0034,
+"offside": 0.0535,
+"substitution": 0.0416,
+"card": 0.0237
+}
+},
+{
+"start": 2826.0,
+"end": 2832.0,
+"p": {
+"none": 0.2233,
+"replay": 0.1195,
+"closeup": 0.0118,
+"goal_kick": 0.0017,
+"throw_in": 0.0063,
+"cross": 0.1195,
+"shot": 0.0498,
+"corner": 0.1971,
+"free_kick": 0.0172,
+"offside": 0.1355,
+"substitution": 0.0251,
+"card": 0.0931
+}
+},
+{
+"start": 2832.0,
+"end": 2838.0,
+"p": {
+"none": 0.697,
+"replay": 0.1555,
+"closeup": 0.0145,
+"goal_kick": 0.0013,
+"throw_in": 0.0037,
+"cross": 0.0136,
+"shot": 0.0064,
+"corner": 0.0082,
+"free_kick": 0.0037,
+"offside": 0.0393,
+"substitution": 0.0174,
+"card": 0.0393
+}
+},
+{
+"start": 2838.0,
+"end": 2844.0,
+"p": {
+"none": 0.6246,
+"replay": 0.2028,
+"closeup": 0.0114,
+"goal_kick": 0.0015,
+"throw_in": 0.0035,
+"cross": 0.0069,
+"shot": 0.0035,
+"corner": 0.0061,
+"free_kick": 0.0031,
+"offside": 0.0452,
+"substitution": 0.0166,
+"card": 0.0746
+}
+},
+{
+"start": 2844.0,
+"end": 2850.0,
+"p": {
+"none": 0.5646,
+"replay": 0.2354,
+"closeup": 0.015,
+"goal_kick": 0.0011,
+"throw_in": 0.0036,
+"cross": 0.0081,
+"shot": 0.0076,
+"corner": 0.0063,
+"free_kick": 0.0034,
+"offside": 0.0595,
+"substitution": 0.0281,
+"card": 0.0674
+}
+},
+{
+"start": 2850.0,
+"end": 2856.0,
+"p": {
+"none": 0.7068,
+"replay": 0.1577,
+"closeup": 0.0122,
+"goal_kick": 0.0014,
+"throw_in": 0.0048,
+"cross": 0.0033,
+"shot": 0.0074,
+"corner": 0.0054,
+"free_kick": 0.0029,
+"offside": 0.0399,
+"substitution": 0.0292,
+"card": 0.0292
+}
+},
+{
+"start": 2856.0,
+"end": 2862.0,
+"p": {
+"none": 0.5505,
+"replay": 0.1308,
+"closeup": 0.0138,
+"goal_kick": 0.0013,
+"throw_in": 0.0033,
+"cross": 0.0618,
+"shot": 0.0061,
+"corner": 0.0061,
+"free_kick": 0.0065,
+"offside": 0.1154,
+"substitution": 0.0147,
+"card": 0.0899
+}
+},
+{
+"start": 2862.0,
+"end": 2868.0,
+"p": {
+"none": 0.0077,
+"replay": 0.005,
+"closeup": 0.1759,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0002,
+"shot": 0.0007,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0068,
+"substitution": 0.0144,
+"card": 0.7884
+}
+},
+{
+"start": 2868.0,
+"end": 2874.0,
+"p": {
+"none": 0.1904,
+"replay": 0.1019,
+"closeup": 0.0166,
+"goal_kick": 0.0019,
+"throw_in": 0.0048,
+"cross": 0.0331,
+"shot": 0.0084,
+"corner": 0.0746,
+"free_kick": 0.0746,
+"offside": 0.1155,
+"substitution": 0.0227,
+"card": 0.3557
+}
+},
+{
+"start": 2874.0,
+"end": 2880.0,
+"p": {
+"none": 0.0056,
+"replay": 0.0032,
+"closeup": 0.7851,
+"goal_kick": 0.0002,
+"throw_in": 0.0002,
+"cross": 0.0003,
+"shot": 0.0008,
+"corner": 0.0002,
+"free_kick": 0.0002,
+"offside": 0.0105,
+"substitution": 0.0185,
+"card": 0.1752
+}
+},
+{
+"start": 2880.0,
+"end": 2886.0,
+"p": {
+"none": 0.043,
+"replay": 0.009,
+"closeup": 0.7165,
+"goal_kick": 0.0004,
+"throw_in": 0.0006,
+"cross": 0.001,
+"shot": 0.0008,
+"corner": 0.001,
+"free_kick": 0.0004,
+"offside": 0.008,
+"substitution": 0.014,
+"card": 0.2053
+}
+},
+{
+"start": 2886.0,
+"end": 2892.0,
+"p": {
+"none": 0.0364,
+"replay": 0.0388,
+"closeup": 0.0321,
+"goal_kick": 0.0009,
+"throw_in": 0.0028,
+"cross": 0.0081,
+"shot": 0.0049,
+"corner": 0.6457,
+"free_kick": 0.1272,
+"offside": 0.0126,
+"substitution": 0.003,
+"card": 0.0874
+}
+},
+{
+"start": 2892.0,
+"end": 2898.0,
+"p": {
+"none": 0.078,
+"replay": 0.027,
+"closeup": 0.0041,
+"goal_kick": 0.0007,
+"throw_in": 0.0025,
+"cross": 0.0325,
+"shot": 0.0223,
+"corner": 0.5763,
+"free_kick": 0.1651,
+"offside": 0.0473,
+"substitution": 0.0073,
+"card": 0.0368
+}
+},
+{
+"start": 2898.0,
+"end": 2904.0,
+"p": {
+"none": 0.2269,
+"replay": 0.4239,
+"closeup": 0.0307,
+"goal_kick": 0.0014,
+"throw_in": 0.0015,
+"cross": 0.0042,
+"shot": 0.0042,
+"corner": 0.0025,
+"free_kick": 0.0025,
+"offside": 0.065,
+"substitution": 0.037,
+"card": 0.2002
+}
+},
+{
+"start": 2904.0,
+"end": 2910.0,
+"p": {
+"none": 0.6222,
+"replay": 0.1225,
+"closeup": 0.0227,
+"goal_kick": 0.0019,
+"throw_in": 0.0051,
+"cross": 0.0156,
+"shot": 0.0083,
+"corner": 0.0137,
+"free_kick": 0.0057,
+"offside": 0.0656,
+"substitution": 0.0213,
+"card": 0.0954
+}
+},
+{
+"start": 2910.0,
+"end": 2916.0,
+"p": {
+"none": 0.7316,
+"replay": 0.1271,
+"closeup": 0.0162,
+"goal_kick": 0.001,
+"throw_in": 0.0049,
+"cross": 0.0284,
+"shot": 0.0092,
+"corner": 0.0046,
+"free_kick": 0.0019,
+"offside": 0.0266,
+"substitution": 0.0143,
+"card": 0.0342
+}
+},
+{
+"start": 2916.0,
+"end": 2922.0,
+"p": {
+"none": 0.349,
+"replay": 0.349,
+"closeup": 0.0287,
+"goal_kick": 0.0022,
+"throw_in": 0.0082,
+"cross": 0.0253,
+"shot": 0.0077,
+"corner": 0.0135,
+"free_kick": 0.0127,
+"offside": 0.1133,
+"substitution": 0.0368,
+"card": 0.0535
+}
+},
+{
+"start": 2922.0,
+"end": 2928.0,
+"p": {
+"none": 0.2553,
+"replay": 0.1755,
+"closeup": 0.0472,
+"goal_kick": 0.0044,
+"throw_in": 0.0056,
+"cross": 0.1989,
+"shot": 0.0144,
+"corner": 0.0185,
+"free_kick": 0.0044,
+"offside": 0.0829,
+"substitution": 0.0174,
+"card": 0.1755
+}
+},
+{
+"start": 2928.0,
+"end": 2934.0,
+"p": {
+"none": 0.3914,
+"replay": 0.1737,
+"closeup": 0.0364,
+"goal_kick": 0.0043,
+"throw_in": 0.0092,
+"cross": 0.0439,
+"shot": 0.0235,
+"corner": 0.0564,
+"free_kick": 0.0104,
+"offside": 0.1053,
+"substitution": 0.0183,
+"card": 0.1271
+}
+},
+{
+"start": 2934.0,
+"end": 2940.0,
+"p": {
+"none": 0.0802,
+"replay": 0.0131,
+"closeup": 0.4074,
+"goal_kick": 0.001,
+"throw_in": 0.0024,
+"cross": 0.0014,
+"shot": 0.0019,
+"corner": 0.004,
+"free_kick": 0.0021,
+"offside": 0.0203,
+"substitution": 0.0587,
+"card": 0.4074
+}
+},
+{
+"start": 2940.0,
+"end": 2946.0,
+"p": {
+"none": 0.0202,
+"replay": 0.0054,
+"closeup": 0.6291,
+"goal_kick": 0.0002,
+"throw_in": 0.0003,
+"cross": 0.0004,
+"shot": 0.0009,
+"corner": 0.0003,
+"free_kick": 0.0002,
+"offside": 0.0102,
+"substitution": 0.0355,
+"card": 0.2972
+}
+},
+{
+"start": 2946.0,
+"end": 2952.0,
+"p": {
+"none": 0.3738,
+"replay": 0.114,
+"closeup": 0.0348,
+"goal_kick": 0.0025,
+"throw_in": 0.0064,
+"cross": 0.0113,
+"shot": 0.0154,
+"corner": 0.0506,
+"free_kick": 0.0288,
+"offside": 0.0784,
+"substitution": 0.0271,
+"card": 0.2569
+}
+},
+{
+"start": 2952.0,
+"end": 2958.0,
+"p": {
+"none": 0.1421,
+"replay": 0.1178,
+"closeup": 0.2201,
+"goal_kick": 0.0036,
+"throw_in": 0.008,
+"cross": 0.0071,
+"shot": 0.0071,
+"corner": 0.008,
+"free_kick": 0.2655,
+"offside": 0.0383,
+"substitution": 0.011,
+"card": 0.1714
+}
+},
+{
+"start": 2958.0,
+"end": 2964.0,
+"p": {
+"none": 0.0074,
+"replay": 0.0079,
+"closeup": 0.1021,
+"goal_kick": 0.0003,
+"throw_in": 0.0006,
+"cross": 0.0007,
+"shot": 0.001,
+"corner": 0.0006,
+"free_kick": 0.0005,
+"offside": 0.0228,
+"substitution": 0.1907,
+"card": 0.6655
+}
+},
+{
+"start": 2964.0,
+"end": 2970.0,
+"p": {
+"none": 0.0213,
+"replay": 0.0042,
+"closeup": 0.0155,
+"goal_kick": 0.0002,
+"throw_in": 0.0004,
+"cross": 0.0004,
+"shot": 0.0006,
+"corner": 0.0004,
+"free_kick": 0.0004,
+"offside": 0.0078,
+"substitution": 0.045,
+"card": 0.9037
+}
+},
+{
+"start": 2970.0,
+"end": 2976.0,
+"p": {
+"none": 0.8241,
+"replay": 0.0767,
+"closeup": 0.0097,
+"goal_kick": 0.0007,
+"throw_in": 0.0038,
+"cross": 0.003,
+"shot": 0.0041,
+"corner": 0.0032,
+"free_kick": 0.0017,
+"offside": 0.0249,
+"substitution": 0.0142,
+"card": 0.034
+}
+},
+{
+"start": 2976.0,
+"end": 2982.0,
+"p": {
+"none": 0.7652,
+"replay": 0.0859,
+"closeup": 0.007,
+"goal_kick": 0.0008,
+"throw_in": 0.0035,
+"cross": 0.0075,
+"shot": 0.0046,
+"corner": 0.004,
+"free_kick": 0.0052,
+"offside": 0.0358,
+"substitution": 0.0316,
+"card": 0.0489
+}
+},
+{
+"start": 2982.0,
+"end": 2988.0,
+"p": {
+"none": 0.6288,
+"replay": 0.0585,
+"closeup": 0.0066,
+"goal_kick": 0.001,
+"throw_in": 0.0276,
+"cross": 0.0051,
+"shot": 0.0037,
+"corner": 0.0031,
+"free_kick": 0.0058,
+"offside": 0.0355,
+"substitution": 0.0202,
+"card": 0.2041
+}
+},
+{
+"start": 2988.0,
+"end": 2994.0,
+"p": {
+"none": 0.8917,
+"replay": 0.0444,
+"closeup": 0.0044,
+"goal_kick": 0.0004,
+"throw_in": 0.0034,
+"cross": 0.0013,
+"shot": 0.0028,
+"corner": 0.0018,
+"free_kick": 0.0013,
+"offside": 0.006,
+"substitution": 0.0099,
+"card": 0.0325
+}
+},
+{
+"start": 2994.0,
+"end": 3000.0,
+"p": {
+"none": 0.8452,
+"replay": 0.0786,
+"closeup": 0.0061,
+"goal_kick": 0.0008,
+"throw_in": 0.0039,
+"cross": 0.0025,
+"shot": 0.0035,
+"corner": 0.0037,
+"free_kick": 0.0022,
+"offside": 0.0225,
+"substitution": 0.0145,
+"card": 0.0165
+}
+},
+{
+"start": 3000.0,
+"end": 3006.0,
+"p": {
+"none": 0.6105,
+"replay": 0.1362,
+"closeup": 0.0184,
+"goal_kick": 0.0019,
+"throw_in": 0.0056,
+"cross": 0.1202,
+"shot": 0.0153,
+"corner": 0.0072,
+"free_kick": 0.0032,
+"offside": 0.0286,
+"substitution": 0.0184,
+"card": 0.0344
+}
+},
+{
+"start": 3006.0,
+"end": 3012.0,
+"p": {
+"none": 0.1027,
+"replay": 0.0516,
+"closeup": 0.3585,
+"goal_kick": 0.0009,
+"throw_in": 0.0017,
+"cross": 0.0024,
+"shot": 0.0018,
+"corner": 0.001,
+"free_kick": 0.0014,
+"offside": 0.055,
+"substitution": 0.0168,
+"card": 0.4062
+}
+},
+{
+"start": 3012.0,
+"end": 3018.0,
+"p": {
+"none": 0.3598,
+"replay": 0.17,
+"closeup": 0.0803,
+"goal_kick": 0.0587,
+"throw_in": 0.0075,
+"cross": 0.043,
+"shot": 0.0191,
+"corner": 0.007,
+"free_kick": 0.0066,
+"offside": 0.0625,
+"substitution": 0.0356,
+"card": 0.15
+}
+},
+{
+"start": 3018.0,
+"end": 3024.0,
+"p": {
+"none": 0.8858,
+"replay": 0.0642,
+"closeup": 0.003,
+"goal_kick": 0.0003,
+"throw_in": 0.0008,
+"cross": 0.0017,
+"shot": 0.0018,
+"corner": 0.001,
+"free_kick": 0.0032,
+"offside": 0.0184,
+"substitution": 0.0087,
+"card": 0.0112
+}
+}
+]
+}
